@@ -1,0 +1,37 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-CMIDUUG",
+    "children" : [ {
+      "name" : "14880-MainThread",
+      "children" : [ {
+        "name" : "test_case_02",
+        "uid" : "ee31cd2177248613",
+        "parentUid" : "0ed966f2b1d93cd97ced74483df126b1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1586592014264,
+          "stop" : 1586592014264,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_case_01",
+        "uid" : "5ec6932da2021b68",
+        "parentUid" : "0ed966f2b1d93cd97ced74483df126b1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1586592014230,
+          "stop" : 1586592014261,
+          "duration" : 31
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0ed966f2b1d93cd97ced74483df126b1"
+    } ],
+    "uid" : "85c431231923c5977b330dee51548f19"
+  } ]
+}

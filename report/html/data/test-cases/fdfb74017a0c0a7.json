@@ -1,0 +1,91 @@
+{
+  "uid" : "fdfb74017a0c0a7",
+  "name" : "test_hs4",
+  "fullName" : "TestCase.MarketQuotation.test_stockplanklist.TestClass#test_hs4",
+  "historyId" : "2be027a6d5e71627073a370b8ce98e7e",
+  "time" : {
+    "start" : 1592563054480,
+    "stop" : 1592563054538,
+    "duration" : 58
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1592563054183,
+      "stop" : 1592563054210,
+      "duration" : 27
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1592563055663,
+      "stop" : 1592563055663,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "全部股板行情数据_HS4:成交量"
+  }, {
+    "name" : "feature",
+    "value" : "板快行情"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.MarketQuotation"
+  }, {
+    "name" : "suite",
+    "value" : "test_stockplanklist"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestClass"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-Q3232SO"
+  }, {
+    "name" : "thread",
+    "value" : "158048-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.MarketQuotation.test_stockplanklist"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fdfb74017a0c0a7.json",
+  "parameterValues" : [ ]
+}

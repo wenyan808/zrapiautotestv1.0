@@ -1,0 +1,114 @@
+{
+  "total" : 13,
+  "items" : [ {
+    "uid" : "b01d199bcb609b7562bb0d0d1f6cdb6a",
+    "name" : "板快行情",
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 57,
+      "unknown" : 0,
+      "total" : 59
+    }
+  }, {
+    "uid" : "d62f87d1a3455db0aa92065ab6f02524",
+    "name" : "删除自选股_根据code_All",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "0618614650cb42e7ad7bdef82e8828e3",
+    "name" : "自选股股票列表_SZ",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "0192e41634f70d7de48a99d51d47938f",
+    "name" : "自选股股票列表_SH",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "edcc65504b18f789abd61c0a497b8b89",
+    "name" : "自选股股票列表_HK",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "dd6ee7f6ea73786178bad2ea51ced8f9",
+    "name" : "自选股股票列表_SZ&SH",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "a5d0899404717f131790deeb36ac272f",
+    "name" : "自选股股票列表_SZ&HK",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "6553125422a449947b91e1fe13ee761d",
+    "name" : "自选股股票列表_SH&HK",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "0adf99bdd4991b6444e6fe88533cf849",
+    "name" : "自选股股票列表_SH&HK&SZ",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "a09365fb95066ea15720e8bde0ad1062",
+    "name" : "自选股股票列表_All",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}

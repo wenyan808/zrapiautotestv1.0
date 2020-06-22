@@ -1,0 +1,91 @@
+{
+  "uid" : "59ad25b1d6e7623b",
+  "name" : "test_us",
+  "fullName" : "TestCase.MarketQuotation.test_industrylist.TestClass#test_us",
+  "historyId" : "8552db8b0aeef4ebc8e57c859006b85d",
+  "time" : {
+    "start" : 1592563053265,
+    "stop" : 1592563053294,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1592563053204,
+      "stop" : 1592563053232,
+      "duration" : 28
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1592563053332,
+      "stop" : 1592563053332,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "查询行业板块行情列表_US"
+  }, {
+    "name" : "feature",
+    "value" : "板快行情"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.MarketQuotation"
+  }, {
+    "name" : "suite",
+    "value" : "test_industrylist"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestClass"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-Q3232SO"
+  }, {
+    "name" : "thread",
+    "value" : "158048-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.MarketQuotation.test_industrylist"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "59ad25b1d6e7623b.json",
+  "parameterValues" : [ ]
+}

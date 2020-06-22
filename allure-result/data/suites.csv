@@ -1,0 +1,5 @@
+"Status","Name","Duration in ms","Description"
+"passed","testCase.test_example#test_case_02","0","
+    用例描述：Test case 02
+    "
+"passed","testCase.test_example#test_case_01","31",""

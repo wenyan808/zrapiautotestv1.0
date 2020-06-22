@@ -1,0 +1,37 @@
+{
+  "total" : 3,
+  "items" : [ {
+    "uid" : "d4f1de403b35bebf4f3edf52fd53c493",
+    "name" : "TestCase.MarketQuotation",
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 57,
+      "unknown" : 0,
+      "total" : 59
+    }
+  }, {
+    "uid" : "02a13e2af9aedd65874685402e1de51d",
+    "name" : "TestCase.UserRelatedapi",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "a5a85ce2dc20e3eb247d233ebf66b5a6",
+    "name" : "TestCase.StockQuotation.OptionalStock",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 11,
+      "unknown" : 0,
+      "total" : 11
+    }
+  } ]
+}

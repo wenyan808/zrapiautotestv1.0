@@ -1,0 +1,91 @@
+{
+  "uid" : "6658c1587ceda8da",
+  "name" : "test_uszhonggai",
+  "fullName" : "TestCase.MarketQuotation.test_platequotation.TestClass#test_uszhonggai",
+  "historyId" : "d7c5a4a7516955950ce6280615a7ab7a",
+  "time" : {
+    "start" : 1592563053889,
+    "stop" : 1592563053926,
+    "duration" : 37
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1592563053732,
+      "stop" : 1592563053762,
+      "duration" : 30
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1592563054006,
+      "stop" : 1592563054006,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "获取板数据列表_US中概股"
+  }, {
+    "name" : "feature",
+    "value" : "板快行情"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.MarketQuotation"
+  }, {
+    "name" : "suite",
+    "value" : "test_platequotation"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestClass"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-Q3232SO"
+  }, {
+    "name" : "thread",
+    "value" : "158048-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.MarketQuotation.test_platequotation"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6658c1587ceda8da.json",
+  "parameterValues" : [ ]
+}

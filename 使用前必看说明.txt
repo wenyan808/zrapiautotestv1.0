@@ -1,0 +1,53 @@
+ 本次接口测试针对一下接口进行测试
+查询股票价格数据
+查询股票状态
+自选股股票列表
+查询市场交易状态
+查询股票盘口数据
+查询逐笔成交
+五日查询
+日K查询
+周K查询
+月K查询
+年K查询
+
+
+
+
+
+test_run.py 是运行接口测试用例的py文件
+TestCase 是接口测试用例存放的地方，目前是一个接口为一个方法，一个用例模块的多个数据都会跑同一个接口
+如果需要添加、修改、删除测试用例的数据 请使用example.xlsx(在testdata文件夹里)
+
+Common      公共方法存入的地方
+toos    读取、写入方法存入
+exampleshuju.py  用于读取xlsx测试用例数据的文件
+md5.py     md5加密方式
+read_json.py   读取json文件
+read_write_ini.py   读取、写入ini配置文件
+unique_text.py    根据时间生成唯一手机号以及用户名
+request_library.py 请求方法的封装（目前只封装了get\post方法）以及日志信息
+login_xinxi.py    用于修改用户以及密码
+sign.py   对请求参数进行签名
+bacis.py  公共请求方式
+guide.py
+TestCase
+test_example.py    接口测试用例存放的地方，目前是一个接口为一个方法，一个用例模块的多个数据都会跑同一个接口
+test_login.py    登录模块的py文件，单独存放，目前仅有用户密码登录
+test_run.py     运行接口测试用例的py文件
+TestDate
+example.xlsx  测试用例以及数据
+TestConfig    存放ini配置文件和txt文件
+
+命名规则：
+TestCase文件夹里面的每个接口测试用例均以“test_”开头的方式进行命名，每个接口测试用例必须放在对应的的模块包里面（Python Pakeage）在__init__文件
+中进行备注，备注方式""""""
+TestDate、TestConfig文件夹里除测试用例以及数据外，其他文件命名均跟每个接口测试用例命名一致并加上后缀信息
+test_run.py作为统一的运行路径
+Common文件夹里面每个方法都是公用的，命名方式均能够直接看得懂得比如读取”read_“开头，写入”write_“开头，如果读取写入”read_write_“开头,获取”get_“
+
+
+
+打开cmd命令提示符
+pip install -U allure pytest sys hashlib pyyaml pandas xlrd -i  https://mirrors.aliyun.com/pypi/simple
+pip install -U hashlib -i  https://mirrors.aliyun.com/pypi/simple

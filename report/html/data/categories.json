@@ -1,0 +1,57 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError",
+      "children" : [ {
+        "name" : "test_hs2",
+        "uid" : "80e6a7739f79009c",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1592563054260,
+          "stop" : 1592563054293,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_hk9",
+        "uid" : "d9ebec8ab998bb3d",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1592563055549,
+          "stop" : 1592563055586,
+          "duration" : 37
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a0017ad855102fea08b8682d27fec4ca"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "_pytest.fixtures.FixtureLookupError: ('sheet', <FixtureRequest for <Function test_loginpwd>>)",
+      "children" : [ {
+        "name" : "test_loginpwd",
+        "uid" : "ac668c6d777b6a0d",
+        "parentUid" : "cb3cd703cd6119c21ac3b681e4d5bacc",
+        "status" : "broken",
+        "time" : {
+          "start" : 1592563056280,
+          "stop" : 1592563056280,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cb3cd703cd6119c21ac3b681e4d5bacc"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

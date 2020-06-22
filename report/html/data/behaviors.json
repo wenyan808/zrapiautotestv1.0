@@ -1,0 +1,1137 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "板快行情",
+    "children" : [ {
+      "name" : "查询概念板块行情列表数据_HS",
+      "children" : [ {
+        "name" : "test_hs",
+        "uid" : "87ecff5d1ff71117",
+        "parentUid" : "5cc0ec8bdb7a98ee0632213d694e0274",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053096,
+          "stop" : 1592563053137,
+          "duration" : 41
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5cc0ec8bdb7a98ee0632213d694e0274"
+    }, {
+      "name" : "查询概念板块行情列表数据_US",
+      "children" : [ {
+        "name" : "test_us",
+        "uid" : "652542ba9db84ee9",
+        "parentUid" : "5317aa03732564a9b46990474ac9f683",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053139,
+          "stop" : 1592563053170,
+          "duration" : 31
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5317aa03732564a9b46990474ac9f683"
+    }, {
+      "name" : "查询概念板块行情列表数据_HK",
+      "children" : [ {
+        "name" : "test_uk",
+        "uid" : "142a56b264e68b06",
+        "parentUid" : "230a1dc8c7183a14f7713d484e55653c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053172,
+          "stop" : 1592563053201,
+          "duration" : 29
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "230a1dc8c7183a14f7713d484e55653c"
+    }, {
+      "name" : "查询行业板块行情列表_HS",
+      "children" : [ {
+        "name" : "test_hs",
+        "uid" : "866241f5b5bf3497",
+        "parentUid" : "d45efa6542e2401dd65a94296d89fbe8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053233,
+          "stop" : 1592563053263,
+          "duration" : 30
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d45efa6542e2401dd65a94296d89fbe8"
+    }, {
+      "name" : "查询行业板块行情列表_US",
+      "children" : [ {
+        "name" : "test_us",
+        "uid" : "59ad25b1d6e7623b",
+        "parentUid" : "cd7122c24a24d4e99c498652b6b87732",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053265,
+          "stop" : 1592563053294,
+          "duration" : 29
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cd7122c24a24d4e99c498652b6b87732"
+    }, {
+      "name" : "查询行业板块行情列表_HK",
+      "children" : [ {
+        "name" : "test_uk",
+        "uid" : "a990342d92fb5899",
+        "parentUid" : "cb5def9cef7b245217efe35fa30cf998",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053296,
+          "stop" : 1592563053330,
+          "duration" : 34
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cb5def9cef7b245217efe35fa30cf998"
+    }, {
+      "name" : "新股日历获取已上市列表",
+      "children" : [ {
+        "name" : "test_listpage",
+        "uid" : "33c9bc08eb0ec75a",
+        "parentUid" : "8db23e1da7d394c7a61d00adad48121c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053364,
+          "stop" : 1592563053464,
+          "duration" : 100
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8db23e1da7d394c7a61d00adad48121c"
+    }, {
+      "name" : "新股日历获取可认购、待上市、今日上市数量",
+      "children" : [ {
+        "name" : "test_newstock",
+        "uid" : "305bfa1f8c28e971",
+        "parentUid" : "5e77a117c0e9efe3b27af1e8003724ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053497,
+          "stop" : 1592563053526,
+          "duration" : 29
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5e77a117c0e9efe3b27af1e8003724ac"
+    }, {
+      "name" : "查询板块详情页成分股列表_US行业",
+      "children" : [ {
+        "name" : "test_hs",
+        "uid" : "37659f22238aa1e2",
+        "parentUid" : "3aec9b22253d42c8294f464bbef8dd2e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053557,
+          "stop" : 1592563053590,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3aec9b22253d42c8294f464bbef8dd2e"
+    }, {
+      "name" : "查询板块详情页成分股列表_US概念",
+      "children" : [ {
+        "name" : "test_us",
+        "uid" : "dc7dc2d952c05e50",
+        "parentUid" : "7e3c0c5e958f574013805bcaae78f119",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053592,
+          "stop" : 1592563053638,
+          "duration" : 46
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7e3c0c5e958f574013805bcaae78f119"
+    }, {
+      "name" : "查询板块详情页成分股列表_HS概念",
+      "children" : [ {
+        "name" : "test_uk",
+        "uid" : "914d344c8129b528",
+        "parentUid" : "05e416c93636174f5b5969b64f0e8719",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053639,
+          "stop" : 1592563053668,
+          "duration" : 29
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "05e416c93636174f5b5969b64f0e8719"
+    }, {
+      "name" : "查询板块详情页成分股列表_HS行业",
+      "children" : [ {
+        "name" : "test_canshuwei0",
+        "uid" : "3b1f8d7ef931e249",
+        "parentUid" : "f973c9d0a0c9d1440424fe77d61f1480",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053670,
+          "stop" : 1592563053698,
+          "duration" : 28
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f973c9d0a0c9d1440424fe77d61f1480"
+    }, {
+      "name" : "查询板块详情页成分股列表_HK概念",
+      "children" : [ {
+        "name" : "test_sczdgk",
+        "uid" : "12f630b7c8a62134",
+        "parentUid" : "9af0c4c265a4aef3ce68588e72e852e6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053700,
+          "stop" : 1592563053729,
+          "duration" : 29
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9af0c4c265a4aef3ce68588e72e852e6"
+    }, {
+      "name" : "获取板数据列表_HS科创板",
+      "children" : [ {
+        "name" : "test_hskechuang",
+        "uid" : "6b078c6fa2e056d9",
+        "parentUid" : "fac10ba2d9bf1e00966348edb31ee1ea",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053764,
+          "stop" : 1592563053801,
+          "duration" : 37
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fac10ba2d9bf1e00966348edb31ee1ea"
+    }, {
+      "name" : "获取板数据列表_HS创业板",
+      "children" : [ {
+        "name" : "test_hschuangye",
+        "uid" : "3c963be8f6a120b2",
+        "parentUid" : "9cddf852e9a1581bca9e1d792565097e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053803,
+          "stop" : 1592563053838,
+          "duration" : 35
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9cddf852e9a1581bca9e1d792565097e"
+    }, {
+      "name" : "获取板数据列表_HS主板",
+      "children" : [ {
+        "name" : "test_hszhuban",
+        "uid" : "5314cb43f5a3f17",
+        "parentUid" : "1b27c462a34011761bb26d0759b9d759",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053841,
+          "stop" : 1592563053886,
+          "duration" : 45
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1b27c462a34011761bb26d0759b9d759"
+    }, {
+      "name" : "获取板数据列表_US中概股",
+      "children" : [ {
+        "name" : "test_uszhonggai",
+        "uid" : "6658c1587ceda8da",
+        "parentUid" : "060f71dff25de478977a666e46b06f79",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053889,
+          "stop" : 1592563053926,
+          "duration" : 37
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "060f71dff25de478977a666e46b06f79"
+    }, {
+      "name" : "获取板数据列表_HK创业板",
+      "children" : [ {
+        "name" : "test_hkchuangye",
+        "uid" : "df78c1725929b0f3",
+        "parentUid" : "afeb74195eb1a6703858dcc9812f33b6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053928,
+          "stop" : 1592563053963,
+          "duration" : 35
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "afeb74195eb1a6703858dcc9812f33b6"
+    }, {
+      "name" : "获取板数据列表_HK主板",
+      "children" : [ {
+        "name" : "test_hkzhuban",
+        "uid" : "79ff3fcbbed7bcc3",
+        "parentUid" : "d3ffcb6763b68fca99450609c8118467",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563053965,
+          "stop" : 1592563054005,
+          "duration" : 40
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d3ffcb6763b68fca99450609c8118467"
+    }, {
+      "name" : "查询股票市场涨跌概况_HS",
+      "children" : [ {
+        "name" : "test_hs",
+        "uid" : "1febe6eff976232b",
+        "parentUid" : "ee29276f5098a65cdc299bd1b6d556e8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054035,
+          "stop" : 1592563054063,
+          "duration" : 28
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ee29276f5098a65cdc299bd1b6d556e8"
+    }, {
+      "name" : "test_us",
+      "uid" : "559295d6d118f916",
+      "parentUid" : "b01d199bcb609b7562bb0d0d1f6cdb6a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563054065,
+        "stop" : 1592563054094,
+        "duration" : 29
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "查询股票市场涨跌概况_HK",
+      "children" : [ {
+        "name" : "test_uk",
+        "uid" : "705e8cbc48a0fbdd",
+        "parentUid" : "8155c53353356af14a290b753f1b4d11",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054096,
+          "stop" : 1592563054125,
+          "duration" : 29
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8155c53353356af14a290b753f1b4d11"
+    }, {
+      "name" : "查询股票市场涨跌概况_参数为0",
+      "children" : [ {
+        "name" : "test_canshuwei0",
+        "uid" : "79520347c94d1722",
+        "parentUid" : "d0dfc3501a18e660e99d13dbe0cba5dc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054127,
+          "stop" : 1592563054152,
+          "duration" : 25
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d0dfc3501a18e660e99d13dbe0cba5dc"
+    }, {
+      "name" : "查询股票市场涨跌概况_参数为4",
+      "children" : [ {
+        "name" : "test_sczdgk",
+        "uid" : "1137c9d83464ae71",
+        "parentUid" : "70a13a1735eab19e827a10bd9ad5356f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054154,
+          "stop" : 1592563054180,
+          "duration" : 26
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "70a13a1735eab19e827a10bd9ad5356f"
+    }, {
+      "name" : "全部股板行情数据_HS1:涨跌幅",
+      "children" : [ {
+        "name" : "test_hs1",
+        "uid" : "722a02d4f7816929",
+        "parentUid" : "5fa4e07f5295a033cea4385ae43ead7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054211,
+          "stop" : 1592563054257,
+          "duration" : 46
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5fa4e07f5295a033cea4385ae43ead7b"
+    }, {
+      "name" : "全部股板行情数据_HS2:涨跌价",
+      "children" : [ {
+        "name" : "test_hs2",
+        "uid" : "80e6a7739f79009c",
+        "parentUid" : "fe449cdcb19d86f4e1e128c14686e8fd",
+        "status" : "failed",
+        "time" : {
+          "start" : 1592563054260,
+          "stop" : 1592563054293,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fe449cdcb19d86f4e1e128c14686e8fd"
+    }, {
+      "name" : "全部股板行情数据_HS3:现价",
+      "children" : [ {
+        "name" : "test_hs3",
+        "uid" : "7c47c51edb21a9e8",
+        "parentUid" : "e31dc9a4d6e9d6c44a7ed84f563bd1c4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054437,
+          "stop" : 1592563054477,
+          "duration" : 40
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e31dc9a4d6e9d6c44a7ed84f563bd1c4"
+    }, {
+      "name" : "全部股板行情数据_HS4:成交量",
+      "children" : [ {
+        "name" : "test_hs4",
+        "uid" : "fdfb74017a0c0a7",
+        "parentUid" : "892b7bb8a1ebe13c3e27698276ff297d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054480,
+          "stop" : 1592563054538,
+          "duration" : 58
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "892b7bb8a1ebe13c3e27698276ff297d"
+    }, {
+      "name" : "全部股板行情数据_HS5:成交额",
+      "children" : [ {
+        "name" : "test_hs5",
+        "uid" : "d7d17f2d5c28b00e",
+        "parentUid" : "3a4ec0379247f3eee7eadca7c4c2e7c5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054540,
+          "stop" : 1592563054572,
+          "duration" : 32
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3a4ec0379247f3eee7eadca7c4c2e7c5"
+    }, {
+      "name" : "全部股板行情数据_HS6:市盈率",
+      "children" : [ {
+        "name" : "test_hs6",
+        "uid" : "b07157419009f55a",
+        "parentUid" : "ae8cd10a54a51234ed18d520218ac141",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054574,
+          "stop" : 1592563054612,
+          "duration" : 38
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ae8cd10a54a51234ed18d520218ac141"
+    }, {
+      "name" : "全部股板行情数据_HS7:换手率",
+      "children" : [ {
+        "name" : "test_hs7",
+        "uid" : "233f7ae9d10572e4",
+        "parentUid" : "7620c483c674faa48ea7ff77847e9e38",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054614,
+          "stop" : 1592563054650,
+          "duration" : 36
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7620c483c674faa48ea7ff77847e9e38"
+    }, {
+      "name" : "全部股板行情数据_HS8:振幅",
+      "children" : [ {
+        "name" : "test_hs8",
+        "uid" : "143db81db432bac2",
+        "parentUid" : "f1489d8066a5db7f6b6ac8a3ec14299b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054652,
+          "stop" : 1592563054686,
+          "duration" : 34
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f1489d8066a5db7f6b6ac8a3ec14299b"
+    }, {
+      "name" : "全部股板行情数据_HS9:市值",
+      "children" : [ {
+        "name" : "test_hs9",
+        "uid" : "a2e6a212ef46004f",
+        "parentUid" : "0209c7e3644619788e084214920c74ed",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054688,
+          "stop" : 1592563054721,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0209c7e3644619788e084214920c74ed"
+    }, {
+      "name" : "全部股板行情数据_HS_10:量比",
+      "children" : [ {
+        "name" : "test_hs10",
+        "uid" : "e0dd9f7ba1b0e9c7",
+        "parentUid" : "005d3bd34564ec873e58bfc6ee5befc3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054723,
+          "stop" : 1592563054756,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "005d3bd34564ec873e58bfc6ee5befc3"
+    }, {
+      "name" : "全部股板行情数据_HS11:委比",
+      "children" : [ {
+        "name" : "test_hs11",
+        "uid" : "d3fb9f8463d088b8",
+        "parentUid" : "e730298a38c1a584435f1976cb954d63",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054759,
+          "stop" : 1592563054792,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e730298a38c1a584435f1976cb954d63"
+    }, {
+      "name" : "全部股板行情数据_US1:涨跌幅",
+      "children" : [ {
+        "name" : "test_us1",
+        "uid" : "6b1108d00421aeb6",
+        "parentUid" : "4f853d813cc5cf0793628df54f32dd40",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054795,
+          "stop" : 1592563054844,
+          "duration" : 49
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4f853d813cc5cf0793628df54f32dd40"
+    }, {
+      "name" : "全部股板行情数据_US2:涨跌价",
+      "children" : [ {
+        "name" : "test_us2",
+        "uid" : "bfe88dfbddd4384e",
+        "parentUid" : "6aa84216cf9b3ca7d002402c587247c0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054846,
+          "stop" : 1592563054880,
+          "duration" : 34
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6aa84216cf9b3ca7d002402c587247c0"
+    }, {
+      "name" : "全部股板行情数据_US3:现价",
+      "children" : [ {
+        "name" : "test_us3",
+        "uid" : "843e4e8a6b5ff0b",
+        "parentUid" : "1792d80470ff9b5371821848e0fd32a5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054882,
+          "stop" : 1592563054920,
+          "duration" : 38
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1792d80470ff9b5371821848e0fd32a5"
+    }, {
+      "name" : "全部股板行情数据_US4:成交量",
+      "children" : [ {
+        "name" : "test_us4",
+        "uid" : "6182bfb733722300",
+        "parentUid" : "1360327ad0eafc80b5a281e299a8d961",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054921,
+          "stop" : 1592563054956,
+          "duration" : 35
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1360327ad0eafc80b5a281e299a8d961"
+    }, {
+      "name" : "全部股板行情数据_US5:成交额",
+      "children" : [ {
+        "name" : "test_us5",
+        "uid" : "6bb246e9f06ddf8a",
+        "parentUid" : "97bd5fb3380dbb1fb2920a649b9389a9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054958,
+          "stop" : 1592563054993,
+          "duration" : 35
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "97bd5fb3380dbb1fb2920a649b9389a9"
+    }, {
+      "name" : "全部股板行情数据_US6:市盈率",
+      "children" : [ {
+        "name" : "test_us6",
+        "uid" : "5a98ca2b207ee50d",
+        "parentUid" : "b4297dc001271b399d791055f5d0fa19",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563054997,
+          "stop" : 1592563055033,
+          "duration" : 36
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b4297dc001271b399d791055f5d0fa19"
+    }, {
+      "name" : "全部股板行情数据_US7:换手率",
+      "children" : [ {
+        "name" : "test_us7",
+        "uid" : "d96fd74e50cb2053",
+        "parentUid" : "9e868c8a97f0cbcddcdf1b95f5249c33",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055035,
+          "stop" : 1592563055073,
+          "duration" : 38
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9e868c8a97f0cbcddcdf1b95f5249c33"
+    }, {
+      "name" : "全部股板行情数据_US8:振幅",
+      "children" : [ {
+        "name" : "test_us8",
+        "uid" : "79910db40024360",
+        "parentUid" : "2dfd9ea2969abae839e1c60689cd9f7e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055075,
+          "stop" : 1592563055114,
+          "duration" : 39
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2dfd9ea2969abae839e1c60689cd9f7e"
+    }, {
+      "name" : "全部股板行情数据_US9:市值",
+      "children" : [ {
+        "name" : "test_us9",
+        "uid" : "2dd7fdcc9d438837",
+        "parentUid" : "5749f31f3affa06764e9324de8bde175",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055116,
+          "stop" : 1592563055149,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5749f31f3affa06764e9324de8bde175"
+    }, {
+      "name" : "全部股板行情数据_US_10:量比",
+      "children" : [ {
+        "name" : "test_us10",
+        "uid" : "cc60b1c63ba34759",
+        "parentUid" : "82d99a2e74c4f982f8020d089b676019",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055152,
+          "stop" : 1592563055185,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "82d99a2e74c4f982f8020d089b676019"
+    }, {
+      "name" : "全部股板行情数据_US11:委比",
+      "children" : [ {
+        "name" : "test_us11",
+        "uid" : "6980e9dc8cf9ea38",
+        "parentUid" : "b4d2a9790087a731c95934a9f9315242",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055188,
+          "stop" : 1592563055221,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b4d2a9790087a731c95934a9f9315242"
+    }, {
+      "name" : "全部股板行情数据_HK1:涨跌幅",
+      "children" : [ {
+        "name" : "test_hk1",
+        "uid" : "2271cd2d51e466be",
+        "parentUid" : "65f7f364df24da0a0e116dfbf6196e5a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055223,
+          "stop" : 1592563055288,
+          "duration" : 65
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "65f7f364df24da0a0e116dfbf6196e5a"
+    }, {
+      "name" : "全部股板行情数据_HK2:涨跌价",
+      "children" : [ {
+        "name" : "test_hk2",
+        "uid" : "18b3840603c332f3",
+        "parentUid" : "2ca555a6c6f8c312a961d7fad1068cf7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055290,
+          "stop" : 1592563055323,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2ca555a6c6f8c312a961d7fad1068cf7"
+    }, {
+      "name" : "全部股板行情数据_HK3:现价",
+      "children" : [ {
+        "name" : "test_hk3",
+        "uid" : "dbd7072d1c94dd8f",
+        "parentUid" : "960b2938ce7f42edf8f99a533c3a848b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055325,
+          "stop" : 1592563055360,
+          "duration" : 35
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "960b2938ce7f42edf8f99a533c3a848b"
+    }, {
+      "name" : "全部股板行情数据_HK4:成交量",
+      "children" : [ {
+        "name" : "test_hk4",
+        "uid" : "969bbed0fde131d4",
+        "parentUid" : "56d8203d3ceb3a2929243a7efb7d60d3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055362,
+          "stop" : 1592563055396,
+          "duration" : 34
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "56d8203d3ceb3a2929243a7efb7d60d3"
+    }, {
+      "name" : "全部股板行情数据_HK5:成交额",
+      "children" : [ {
+        "name" : "test_hk5",
+        "uid" : "56e39e38fd54303d",
+        "parentUid" : "c9f640848c4eebfb2a08520419d03cb1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055399,
+          "stop" : 1592563055432,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c9f640848c4eebfb2a08520419d03cb1"
+    }, {
+      "name" : "全部股板行情数据_HK6:市盈率",
+      "children" : [ {
+        "name" : "test_hk6",
+        "uid" : "f990dcc72cbe23c1",
+        "parentUid" : "ae020a62e91416e5aeccbddf5ff15846",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055434,
+          "stop" : 1592563055471,
+          "duration" : 37
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ae020a62e91416e5aeccbddf5ff15846"
+    }, {
+      "name" : "全部股板行情数据_HK7:换手率",
+      "children" : [ {
+        "name" : "test_hk7",
+        "uid" : "b319004126fb7d91",
+        "parentUid" : "229aba98d35310461a8600ea7f2ecbf3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055473,
+          "stop" : 1592563055510,
+          "duration" : 37
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "229aba98d35310461a8600ea7f2ecbf3"
+    }, {
+      "name" : "全部股板行情数据_HK8:振幅",
+      "children" : [ {
+        "name" : "test_hk8",
+        "uid" : "eb303d93ca865300",
+        "parentUid" : "d16f01fc9ee3cab5879812846ff9754c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055513,
+          "stop" : 1592563055547,
+          "duration" : 34
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d16f01fc9ee3cab5879812846ff9754c"
+    }, {
+      "name" : "全部股板行情数据_HK9:市值",
+      "children" : [ {
+        "name" : "test_hk9",
+        "uid" : "d9ebec8ab998bb3d",
+        "parentUid" : "6cde7a267b8b41f3468c44b106a5f63d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1592563055549,
+          "stop" : 1592563055586,
+          "duration" : 37
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6cde7a267b8b41f3468c44b106a5f63d"
+    }, {
+      "name" : "全部股板行情数据_HK_10:量比",
+      "children" : [ {
+        "name" : "test_hk10",
+        "uid" : "5a7cf5018e179919",
+        "parentUid" : "abbb7b58379edc48d409273216398be1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055594,
+          "stop" : 1592563055626,
+          "duration" : 32
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "abbb7b58379edc48d409273216398be1"
+    }, {
+      "name" : "全部股板行情数据_HK11:委比",
+      "children" : [ {
+        "name" : "test_hk11",
+        "uid" : "df37474e0ad88710",
+        "parentUid" : "9fcacc2e1206b430313a4498e8a55134",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055629,
+          "stop" : 1592563055662,
+          "duration" : 33
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9fcacc2e1206b430313a4498e8a55134"
+    }, {
+      "name" : "新股日历获取可认购列表",
+      "children" : [ {
+        "name" : "test_subscribed",
+        "uid" : "8d08de57319f72d4",
+        "parentUid" : "09c018d1989445ab7ae4ce944d2bcd2f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055695,
+          "stop" : 1592563055724,
+          "duration" : 29
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "09c018d1989445ab7ae4ce944d2bcd2f"
+    }, {
+      "name" : "新股日历获取待上市列表",
+      "children" : [ {
+        "name" : "test_tobelist",
+        "uid" : "42fee54b77feab2f",
+        "parentUid" : "6f15de6b2bf8b7cebefcf526c82ab918",
+        "status" : "passed",
+        "time" : {
+          "start" : 1592563055756,
+          "stop" : 1592563055786,
+          "duration" : 30
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6f15de6b2bf8b7cebefcf526c82ab918"
+    } ],
+    "uid" : "b01d199bcb609b7562bb0d0d1f6cdb6a"
+  }, {
+    "name" : "删除自选股_根据code_All",
+    "children" : [ {
+      "name" : "test_code_all",
+      "uid" : "e22181d160304459",
+      "parentUid" : "d62f87d1a3455db0aa92065ab6f02524",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563055818,
+        "stop" : 1592563055875,
+        "duration" : 57
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "d62f87d1a3455db0aa92065ab6f02524"
+  }, {
+    "name" : "自选股股票列表_SZ",
+    "children" : [ {
+      "name" : "test_optional_stock_list_sz",
+      "uid" : "aa6ce1c766ac6f1f",
+      "parentUid" : "0618614650cb42e7ad7bdef82e8828e3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563055906,
+        "stop" : 1592563055939,
+        "duration" : 33
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "0618614650cb42e7ad7bdef82e8828e3"
+  }, {
+    "name" : "自选股股票列表_SH",
+    "children" : [ {
+      "name" : "test_optional_stock_list_sh",
+      "uid" : "acbba13fe8bc35a1",
+      "parentUid" : "0192e41634f70d7de48a99d51d47938f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563055941,
+        "stop" : 1592563055974,
+        "duration" : 33
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "0192e41634f70d7de48a99d51d47938f"
+  }, {
+    "name" : "自选股股票列表_HK",
+    "children" : [ {
+      "name" : "test_optional_stock_list_hk",
+      "uid" : "d55326f10d7fced5",
+      "parentUid" : "edcc65504b18f789abd61c0a497b8b89",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563055976,
+        "stop" : 1592563056009,
+        "duration" : 33
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "edcc65504b18f789abd61c0a497b8b89"
+  }, {
+    "name" : "自选股股票列表_SZ&SH",
+    "children" : [ {
+      "name" : "test_optional_stock_list_szsh",
+      "uid" : "7086fcdfe1d7b1af",
+      "parentUid" : "dd6ee7f6ea73786178bad2ea51ced8f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563056012,
+        "stop" : 1592563056044,
+        "duration" : 32
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "dd6ee7f6ea73786178bad2ea51ced8f9"
+  }, {
+    "name" : "自选股股票列表_SZ&HK",
+    "children" : [ {
+      "name" : "test_optional_stock_list_szhk",
+      "uid" : "2a4d26e5e508486a",
+      "parentUid" : "a5d0899404717f131790deeb36ac272f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563056046,
+        "stop" : 1592563056079,
+        "duration" : 33
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "a5d0899404717f131790deeb36ac272f"
+  }, {
+    "name" : "自选股股票列表_SH&HK",
+    "children" : [ {
+      "name" : "test_optional_stock_list_shhk",
+      "uid" : "50686ed6f4efc219",
+      "parentUid" : "6553125422a449947b91e1fe13ee761d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563056082,
+        "stop" : 1592563056139,
+        "duration" : 57
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "6553125422a449947b91e1fe13ee761d"
+  }, {
+    "name" : "自选股股票列表_SH&HK&SZ",
+    "children" : [ {
+      "name" : "test_optional_stock_list_shhksz",
+      "uid" : "51899ddc02461dd6",
+      "parentUid" : "0adf99bdd4991b6444e6fe88533cf849",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563056141,
+        "stop" : 1592563056175,
+        "duration" : 34
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "0adf99bdd4991b6444e6fe88533cf849"
+  }, {
+    "name" : "自选股股票列表_All",
+    "children" : [ {
+      "name" : "test_optional_stock_list_all",
+      "uid" : "a0e9c61c9a7f2638",
+      "parentUid" : "a09365fb95066ea15720e8bde0ad1062",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563056177,
+        "stop" : 1592563056210,
+        "duration" : 33
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "a09365fb95066ea15720e8bde0ad1062"
+  }, {
+    "name" : "自选股股票列表_ts异常",
+    "children" : [ {
+      "name" : "test_optional_stock_list_notts",
+      "uid" : "a89d4c393114416c",
+      "parentUid" : "7d08eb21b1c0c7159dc7122d10b5d9a5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563056213,
+        "stop" : 1592563056239,
+        "duration" : 26
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "7d08eb21b1c0c7159dc7122d10b5d9a5"
+  }, {
+    "name" : "自选股股票列表_参数为空",
+    "children" : [ {
+      "name" : "test_optional_stock_list_null",
+      "uid" : "839b68437054055b",
+      "parentUid" : "187bdce1492d6389fff376ed2790a51a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1592563056241,
+        "stop" : 1592563056278,
+        "duration" : 37
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "187bdce1492d6389fff376ed2790a51a"
+  }, {
+    "name" : "test_loginpwd",
+    "uid" : "ac668c6d777b6a0d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1592563056280,
+      "stop" : 1592563056280,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ]
+}

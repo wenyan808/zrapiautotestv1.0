@@ -1,0 +1,97 @@
+{
+  "uid" : "80e6a7739f79009c",
+  "name" : "test_hs2",
+  "fullName" : "TestCase.MarketQuotation.test_stockplanklist.TestClass#test_hs2",
+  "historyId" : "b133f905373fbb9ac791629689cbb18d",
+  "time" : {
+    "start" : 1592563054260,
+    "stop" : 1592563054293,
+    "duration" : 33
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <TestCase.MarketQuotation.test_stockplanklist.TestClass object at 0x0000019D0646C370>\n\n    @allure.story('全部股板行情数据_HS2:涨跌价')\n    def test_hs2(self):\n    \tresponse = zhuorui('市场行情','全部股板行情数据_HS2:涨跌价')\n>   \tassert_data(response, '000000', 'ok')\n\nTestCase\\MarketQuotation\\test_stockplanklist.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [200]>, code = '000000', msg = 'ok'\n\n    def assert_data(response, code, msg):\n        assert code == response.json().get(\"code\")\n        assert msg == response.json().get(\"msg\")\n        if \"data\" in response.json():\n>           assert response.json().get(\"data\")\nE           AssertionError\n\nCommon\\assertapi.py:5: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1592563054183,
+      "stop" : 1592563054210,
+      "duration" : 27
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1592563055663,
+      "stop" : 1592563055663,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "全部股板行情数据_HS2:涨跌价"
+  }, {
+    "name" : "feature",
+    "value" : "板快行情"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.MarketQuotation"
+  }, {
+    "name" : "suite",
+    "value" : "test_stockplanklist"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestClass"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-Q3232SO"
+  }, {
+    "name" : "thread",
+    "value" : "158048-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.MarketQuotation.test_stockplanklist"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "80e6a7739f79009c.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,37 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "test_module_01",
+    "children" : [ {
+      "name" : "test_case_01",
+      "uid" : "5ec6932da2021b68",
+      "parentUid" : "023283d5bf38c1bccfdfcafe2dd0afe2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1586592014230,
+        "stop" : 1586592014261,
+        "duration" : 31
+      },
+      "flaky" : true,
+      "parameters" : [ ]
+    } ],
+    "uid" : "023283d5bf38c1bccfdfcafe2dd0afe2"
+  }, {
+    "name" : "test_module_02",
+    "children" : [ {
+      "name" : "test_case_02",
+      "uid" : "ee31cd2177248613",
+      "parentUid" : "42b8e93e9608594053c53db5878a3b8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1586592014264,
+        "stop" : 1586592014264,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "42b8e93e9608594053c53db5878a3b8e"
+  } ]
+}

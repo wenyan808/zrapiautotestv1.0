@@ -1,0 +1,88 @@
+{
+  "uid" : "a89d4c393114416c",
+  "name" : "test_optional_stock_list_notts",
+  "fullName" : "TestCase.StockQuotation.OptionalStock.test_optional_stock_list.TestOptionalStockList#test_optional_stock_list_notts",
+  "historyId" : "5765fcd59ad5ebf46ba5c18d85bd51f1",
+  "time" : {
+    "start" : 1592563056213,
+    "stop" : 1592563056239,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1592563055878,
+      "stop" : 1592563055905,
+      "duration" : 27
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1592563056278,
+      "stop" : 1592563056278,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "自选股股票列表_ts异常"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.OptionalStock"
+  }, {
+    "name" : "suite",
+    "value" : "test_optional_stock_list"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOptionalStockList"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-Q3232SO"
+  }, {
+    "name" : "thread",
+    "value" : "158048-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.OptionalStock.test_optional_stock_list"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a89d4c393114416c.json",
+  "parameterValues" : [ ]
+}
