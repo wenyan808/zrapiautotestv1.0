@@ -10,6 +10,7 @@
 # #  读取多行数据（这里是第1行和第2行）
 # data = df.loc[[1, 2]].values
 # print('第1行和第2行数据: \n', data)
+from copy import copy
 
 import pandas as pd
 from glo import BASE_DIR
@@ -20,6 +21,10 @@ def shuju(sheet):
     data = df.values
     # print(data)
     return data
+
+
+
+
 # for i in data:
 # 	if "登录"  in i:
 # 		# return i[5],i[6],i[7],i[8],i[9]

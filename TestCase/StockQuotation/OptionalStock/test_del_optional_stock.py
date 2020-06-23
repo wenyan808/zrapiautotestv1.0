@@ -1,7 +1,14 @@
 import allure
+import pandas as pd
+import pytest
+
 from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
+from Common.show_sql import OperationSql, MongoDB
+from Common.tools.read_xlsx_exampleshuju import shuju
+from Common.tools.write_xlsx import write_xlsx
+from glo import BASE_DIR
 
 
 class TestDelOptionalStock:
@@ -58,5 +65,23 @@ class TestDelOptionalStock:
     # def test_code_ts_exception2(self):
     #     response = zhuorui('自选股', '删除自选股_根据code_ts异常2')
 
+    @allure.story('删除自选股_All')
+    def test_all(self):
+        q = OperationSql()
+        userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
+        id = MongoDB("userId", userId[2:-3:])
+        id1 = {"ids": [str(id.get('_id'))]}
+        # 写
+        write_xlsx("自选股", str(id1))
+        response = zhuorui('自选股', '删除自选股_All')
+        print(response.json())
+        assert_data(response, '000000', 'ok')
+
+    # @allure.story('删除自选股_参数列表空')
+    # def test_parameter_null(self):
+    #     response = zhuorui('自选股', '删除自选股_参数列表空')
+    #     print(response.json())
+    #     assert_data(response, '000000', 'ok')
+
 # if __name__ == '__main__':
-# #     pytest.main()
+#     pytest.main()

@@ -1,6 +1,8 @@
 # 操作数据库
 import pymysql
 
+from Common.tools.write_xlsx import write_xlsx
+
 
 class OperationSql:
     _conn = None
@@ -10,7 +12,7 @@ class OperationSql:
     @classmethod
     def get_connect_sql(cls):
         if cls._conn is None:
-            cls._conn = pymysql.connect("192.168.1.234", "zhuorui", "123456", "usfs")
+            cls._conn = pymysql.connect("192.168.1.237", "root", "123456", "user_account")
         return cls._conn
 
     # 获取创建游标
@@ -52,5 +54,39 @@ class OperationSql:
 
 # q = OperationSql()
 # print(q.show_sql("select * from m_china_concept where `symbol`= 'BABA';"))
+
+# 使用pymongo模块连接mongoDB数据库
+# coding=utf-8
+from pymongo import MongoClient
+
+
+def MongoDB(key, price):
+    # 建立MongoDB数据库连接
+    client = MongoClient('192.168.1.236', 27017)
+
+    # 连接所需数据库,stock_market为数据库名
+    db = client.stock_market
+
+    # 连接所用集合，也就是我们通常所说的表，t_stock_selected为表名
+    collection = db.t_stock_selected
+
+    # 接下里就可以用collection来完成对数据库表的一些操作
+
+    # 查找集合中所有数据
+    # for item in collection.find():
+    #     print(item)
+
+    # 查找集合中单条数据
+    mydoc = collection.find({key: price}).limit(1)
+
+    for x in mydoc:
+        return x
+
+
+
+
+
+
+
 
 
