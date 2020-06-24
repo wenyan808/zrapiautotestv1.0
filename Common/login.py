@@ -9,19 +9,17 @@ def login():
     json1 = {
         "phone": "18379204795",
         "password": "33791626cdcbbf5b0b834f9d808f3188",
-        "phoneArea": "86",
-        "clientId": "b1e009f1e947c306668b962579fbc498"
+        "phoneArea": "86"
     }
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)
     session = requests.session()
     response_login = session.post("http://192.168.1.241/as_user/api/user_account/v1/user_login_pwd", headers={
-            "Content-Type": "application/json;charset=utf-8",
-            "lang": "zh_CN",
-            "osType": "android",
-            "osVersion": "8.1.0",
-            "appVersion": "1.0.0",
-            "deviceId": "d5744d9b2be20e91"
+            "Content-Type": "application/json",
+            "appVersion": '1.0',
+            "deviceId": "8556915E-DBE1-4476-91DB-CA0119517998",
+            "osType": "ios",
+            "osVersion": '13.4.1'
         }, json=json1)
 
     res = response_login.json().get("data").get("token")
