@@ -77,15 +77,12 @@ def MongoDB(key, price):
     #     print(item)
 
     # 查找集合中单条数据
-    mydoc = collection.find({key: price}).limit(1)
-
+    mydoc = collection.find({key: price})
+    list1 = list()
     for x in mydoc:
-        return x
-
-
-
-
-
+        # print(x)
+        list1.append(x)
+    return list1
 
 
 
