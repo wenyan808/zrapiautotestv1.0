@@ -1,4 +1,6 @@
 import allure
+import pytest
+
 from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
@@ -105,9 +107,8 @@ class TestAddOptionalStock:
     #     assert_data(response, '000000', 'ok')
 
 
-
-
-
+if __name__ == '__main__':
+    pytest.main()
 
 
 
