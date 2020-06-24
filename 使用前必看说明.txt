@@ -51,3 +51,10 @@ Common文件夹里面每个方法都是公用的，命名方式均能够直接�
 打开cmd命令提示符
 pip install -U allure pytest sys hashlib pyyaml pandas xlrd -i  https://mirrors.aliyun.com/pypi/simple
 pip install -U hashlib -i  https://mirrors.aliyun.com/pypi/simple
+
+
+
+
+
+
+使得开发商空间
