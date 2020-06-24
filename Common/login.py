@@ -14,17 +14,14 @@ def login():
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)
     session = requests.session()
-    response_login = session.post("http://192.168.1.241/as_user/api/user_account/v1/user_login_pwd", headers={
-            "Content-Type": "application/json",
-            "appVersion": '1.0',
-            "deviceId": "8556915E-DBE1-4476-91DB-CA0119517998",
-            "osType": "ios",
-            "osVersion": '13.4.1'
-        }, json=json1)
-
+    response_login = session.post("http://192.168.1.241/as_user/api/user_account/v1/user_login_pwd", headers=glo.JSON, json=json1)
     res = response_login.json().get("data").get("token")
     with open(glo.BASE_DIR + r'/TestData/token.yaml', 'w') as file:
         file.write("token: " + res)
     # print(glo.TOKEN)
 
 # login()
+
+
+
+

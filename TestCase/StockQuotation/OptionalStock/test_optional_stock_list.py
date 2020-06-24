@@ -49,10 +49,15 @@ class TestOptionalStockList:
         response = zhuorui('自选股', '自选股股票列表_All')
         assert_data(response, '000000', 'ok')
 
-    @allure.story('自选股股票列表_ts异常')
-    def test_optional_stock_list_notts(self):
-        response = zhuorui('自选股', '自选股股票列表_ts异常')
-        assert_data(response, '000103', '参数校验不通过')
+    # @allure.story('自选股股票列表_ts不正确')
+    # def test_optional_stock_list_notts(self):
+    #     response = zhuorui('自选股', '自选股股票列表_ts不正确')
+    #     assert_data(response, '000103', '参数校验不通过')
+    #
+    # @allure.story('自选股股票列表_ts异常')
+    # def test_optional_stock_list_excets(self):
+    #     response = zhuorui('自选股', '自选股股票列表_ts异常')
+    #     assert_data(response, '000103', '参数校验不通过')
 
     @allure.story('自选股股票列表_参数为空')
     def test_optional_stock_list_null(self):

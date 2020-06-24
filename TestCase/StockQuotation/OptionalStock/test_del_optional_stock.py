@@ -76,7 +76,7 @@ class TestDelOptionalStock:
         _id = {"ids": list1}
         print(_id)
         # 写
-        write_xlsx("自选股", 23, 7, str(_id))
+        write_xlsx("自选股", 24, 7, str(_id))
         response = zhuorui('自选股', '删除自选股_All')
         print(response.json())
         # assert_data(response, '000000', 'ok')
@@ -84,6 +84,18 @@ class TestDelOptionalStock:
     # @allure.story('删除自选股_参数列表空')
     # def test_parameter_null(self):
     #     response = zhuorui('自选股', '删除自选股_参数列表空')
+    #     print(response.json())
+    #     assert_data(response, '000000', 'ok')
+
+    # @allure.story('删除自选股_ids不正确')
+    # def test_ids_error(self):
+    #     response = zhuorui('自选股', '删除自选股_ids不正确')
+    #     print(response.json())
+    #     assert_data(response, '000000', 'ok')
+
+    # @allure.story('删除自选股_ids异常')
+    # def test_ids_exception(self):
+    #     response = zhuorui('自选股', '删除自选股_ids异常')
     #     print(response.json())
     #     assert_data(response, '000000', 'ok')
 
