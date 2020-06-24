@@ -6,13 +6,13 @@ from Common.login import login
 
 
 @allure.feature('k线')
-class TestDayKlineSHtape:
+class TestTimeKlinev1HKshare:
     @classmethod
     def setup_class(cls) -> None:
         login()
 
-    @allure.story('日K查询_SH大盘')
-    def test_dayKline_SHtape(self):
-        response = zhuorui('k线', '日K查询_SH大盘')
+    @allure.story('分时查询_HK个股')
+    def test_timeKlinev1_HKshare(self):
+        response = zhuorui('k线', '分时查询_HK个股')
         assert_data(response, '000000', 'ok')
         # print(response.text)
