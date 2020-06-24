@@ -18,23 +18,33 @@
 test_run.py 是运行接口测试用例的py文件
 TestCase 是接口测试用例存放的地方，目前是一个接口为一个方法，一个用例模块的多个数据都会跑同一个接口
 如果需要添加、修改、删除测试用例的数据 请使用example.xlsx(在testdata文件夹里)
+#代表当前不调用
 
 Common      公共方法存入的地方
-toos    读取、写入方法存入
+toos    读取、写入方法存入的地方
 exampleshuju.py  用于读取xlsx测试用例数据的文件
 md5.py     md5加密方式
-read_json.py   读取json文件
-read_write_ini.py   读取、写入ini配置文件
-unique_text.py    根据时间生成唯一手机号以及用户名
-request_library.py 请求方法的封装（目前只封装了get\post方法）以及日志信息
+#read_json.py   读取json文件
+#read_write_ini.py   读取、写入ini配置文件
+#unique_text.py    根据时间生成唯一手机号以及用户名
+#request_library.py 请求方法的封装（目前只封装了get\post方法）以及日志信息
 login_xinxi.py    用于修改用户以及密码
 sign.py   对请求参数进行签名
 bacis.py  公共请求方式
-guide.py
+guide.py   遍历每个接口用例数据
+login.py   公共的登录方式（统一调取登录方式）
+show_sql.py 统一调取sql数据库
+assertapi.py   公共的/简单的接口断言
 TestCase
-test_example.py    接口测试用例存放的地方，目前是一个接口为一个方法，一个用例模块的多个数据都会跑同一个接口
-test_login.py    登录模块的py文件，单独存放，目前仅有用户密码登录
-test_run.py     运行接口测试用例的py文件
+Account        开户相关
+UserRelatedapi   短信相关接口模块
+StockQuotation   股票行情模块
+SimulatedStock   模拟炒股模块
+MessagesApi      用户相关接口模块
+MarketQuotation    市场行情模块
+#test_example.py    接口测试用例存放的地方，目前是一个接口为一个方法，一个用例模块的多个数据都会跑同一个接口
+test_login.py    登录模块的py文件，单独存放，目前仅有用户密码登录（已经放入UserRelatedapi模块库中）
+test_run.py     运行接口测试用例的py文件（以后作为统一的运行入口）
 TestDate
 example.xlsx  测试用例以及数据
 TestConfig    存放ini配置文件和txt文件
@@ -49,8 +59,10 @@ Common文件夹里面每个方法都是公用的，命名方式均能够直接�
 
 
 打开cmd命令提示符
+多个库从阿里云镜像云盘中下载
 pip install -U allure pytest sys hashlib pyyaml pandas xlrd -i  https://mirrors.aliyun.com/pypi/simple
-pip install -U hashlib -i  https://mirrors.aliyun.com/pypi/simple
+单个库从阿里云镜像云盘中下载
+pip install -U pymongo -i  https://mirrors.aliyun.com/pypi/simple
 
 # pytest --alluredir=./report/xml
 # allure generate ./report/xml -o ./report/html --clean

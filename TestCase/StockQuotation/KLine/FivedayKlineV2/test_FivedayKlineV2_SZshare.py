@@ -6,12 +6,12 @@ from Common.login import login
 
 
 @allure.feature('k线')
-class TestKlinev2SZshareFiveday:
+class TestFivedayKlinev2SZshare:
     @classmethod
     def setup_class(cls) -> None:
         login()
 
     @allure.story('五日查询_优化版本 Version 2.0_SZ个股')
-    def test_Kline_v2SZshare_fiveday(self):
+    def test_fivedayKlinev2_SZshare(self):
         response = zhuorui('k线', '五日查询_优化版本 Version 2.0_SZ个股')
         assert_data(response, '000000', 'ok')
