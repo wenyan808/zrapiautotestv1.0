@@ -1,0 +1,91 @@
+{
+  "uid" : "5046bd43b5e0e49d",
+  "name" : "test_Astock_dividents_list",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_dividends_list.TestAstockDividentsList#test_Astock_dividents_list",
+  "historyId" : "af2bcee5660d0a71bf46772d2cc82b2b",
+  "time" : {
+    "start" : 1593328810670,
+    "stop" : 1593328810696,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1593328810650,
+      "stop" : 1593328810670,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1593328810697,
+      "stop" : 1593328810697,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "分红派息-详情页"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_dividends_list"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockDividentsList"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "38524-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_dividends_list"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5046bd43b5e0e49d.json",
+  "parameterValues" : [ ]
+}

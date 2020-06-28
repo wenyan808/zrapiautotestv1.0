@@ -1,0 +1,91 @@
+{
+  "uid" : "f685880674ea97ab",
+  "name" : "test_MonthKline_SHtape",
+  "fullName" : "TestCase.StockQuotation.KLine.MonthKline.test_MonthKline_SHtape.TestMonthKlineSHtape#test_MonthKline_SHtape",
+  "historyId" : "64fe8fd850f1e1aa4ffb3b73e9fed721",
+  "time" : {
+    "start" : 1593328812447,
+    "stop" : 1593328812480,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1593328812427,
+      "stop" : 1593328812447,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1593328812481,
+      "stop" : 1593328812481,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "月K查询_SH大盘"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.MonthKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_MonthKline_SHtape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMonthKlineSHtape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "38524-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.MonthKline.test_MonthKline_SHtape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f685880674ea97ab.json",
+  "parameterValues" : [ ]
+}

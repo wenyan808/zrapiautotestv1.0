@@ -1,4 +1,6 @@
 import allure
+import pytest
+
 from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
@@ -64,9 +66,6 @@ class TestOptionalStockList:
         response = zhuorui('自选股', '自选股股票列表_参数为空')
         assert_data(response, '000000', 'ok')
 
-# if __name__ == '__main__':
-# #     pytest.main()
 
-
-
-
+if __name__ == '__main__':
+    pytest.main()

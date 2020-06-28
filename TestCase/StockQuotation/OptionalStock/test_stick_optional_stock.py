@@ -55,7 +55,7 @@ class TestStickOptionalStock:
     #     assert_data(response, '000000', 'ok')
 
 
-if __name__ == '__main__':
-    pytest.main()
+# if __name__ == '__main__':
+#     pytest.main()
 
 

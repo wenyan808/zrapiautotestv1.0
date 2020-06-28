@@ -1,0 +1,97 @@
+{
+  "uid" : "2e39227724c380d1",
+  "name" : "test_dayKline_SHshare",
+  "fullName" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_SHshare.TestDayKlineSHshare#test_dayKline_SHshare",
+  "historyId" : "e51a0ff59e0f78de687c959eb37114cf",
+  "time" : {
+    "start" : 1593328811627,
+    "stop" : 1593328811652,
+    "duration" : 25
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <TestCase.StockQuotation.KLine.DayKline.test_DayKline_SHshare.TestDayKlineSHshare object at 0x12432990>\n\n    @allure.story('日K查询_SH个股')\n    def test_dayKline_SHshare(self):\n        response = zhuorui('k线', '日K查询_SH个股')\n>       assert_data(response, '000000', 'ok')\n\nTestCase\\StockQuotation\\KLine\\DayKline\\test_DayKline_SHshare.py:17: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [200]>, code = '000000', msg = 'ok'\n\n    def assert_data(response, code, msg):\n        assert code == response.json().get(\"code\")\n        assert msg == response.json().get(\"msg\")\n>       assert \"data\" in response.json()\nE       AssertionError\n\nCommon\\assertapi.py:4: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1593328811606,
+      "stop" : 1593328811626,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1593328811657,
+      "stop" : 1593328811657,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "日K查询_SH个股"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.DayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_DayKline_SHshare"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDayKlineSHshare"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "38524-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_SHshare"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "2e39227724c380d1.json",
+  "parameterValues" : [ ]
+}

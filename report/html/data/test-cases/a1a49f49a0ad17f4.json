@@ -1,0 +1,91 @@
+{
+  "uid" : "a1a49f49a0ad17f4",
+  "name" : "test_MonthKline_HKshare",
+  "fullName" : "TestCase.StockQuotation.KLine.MonthKline.test_MonthKline_HKshare.TestMonthKlineHKshare#test_MonthKline_HKshare",
+  "historyId" : "74560973ff68e1b0bd20a5d111649fbd",
+  "time" : {
+    "start" : 1593328812280,
+    "stop" : 1593328812313,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1593328812261,
+      "stop" : 1593328812280,
+      "duration" : 19
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1593328812315,
+      "stop" : 1593328812315,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "月K查询_HK个股"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.MonthKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_MonthKline_HKshare"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMonthKlineHKshare"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "38524-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.MonthKline.test_MonthKline_HKshare"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a1a49f49a0ad17f4.json",
+  "parameterValues" : [ ]
+}

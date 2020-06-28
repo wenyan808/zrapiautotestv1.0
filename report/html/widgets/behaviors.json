@@ -1,6 +1,17 @@
 {
-  "total" : 13,
+  "total" : 27,
   "items" : [ {
+    "uid" : "3e72fccbd4681f4e5365a9193067dc72",
+    "name" : "k线",
+    "statistic" : {
+      "failed" : 30,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 32,
+      "unknown" : 0,
+      "total" : 66
+    }
+  }, {
     "uid" : "b01d199bcb609b7562bb0d0d1f6cdb6a",
     "name" : "板快行情",
     "statistic" : {
@@ -12,19 +23,63 @@
       "total" : 59
     }
   }, {
+    "uid" : "49aeaa69fe1f823876202044d9ef16a6",
+    "name" : "A股",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 13,
+      "unknown" : 0,
+      "total" : 15
+    }
+  }, {
     "uid" : "d62f87d1a3455db0aa92065ab6f02524",
     "name" : "删除自选股_根据code_All",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     }
   }, {
-    "uid" : "0618614650cb42e7ad7bdef82e8828e3",
-    "name" : "自选股股票列表_SZ",
+    "uid" : "a2ad55cbe12f0c47241a6006ad336ffb",
+    "name" : "删除自选股_All",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "055f505cbaa54d429420c5e035c20bcf",
+    "name" : "置顶自选股",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "94208ea3ad0e3d02162947a7861baae0",
+    "name" : "置顶自选股_已置顶",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "efade35cda6b466aa8cb65a9b56c914f",
+    "name" : "添加自选股_US大盘",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -34,8 +89,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "0192e41634f70d7de48a99d51d47938f",
-    "name" : "自选股股票列表_SH",
+    "uid" : "a167f2b06898d342557b7b3fb615ba33",
+    "name" : "添加自选股_US个股",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -45,63 +100,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "edcc65504b18f789abd61c0a497b8b89",
-    "name" : "自选股股票列表_HK",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "dd6ee7f6ea73786178bad2ea51ced8f9",
-    "name" : "自选股股票列表_SZ&SH",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "a5d0899404717f131790deeb36ac272f",
-    "name" : "自选股股票列表_SZ&HK",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "6553125422a449947b91e1fe13ee761d",
-    "name" : "自选股股票列表_SH&HK",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "0adf99bdd4991b6444e6fe88533cf849",
-    "name" : "自选股股票列表_SH&HK&SZ",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "a09365fb95066ea15720e8bde0ad1062",
-    "name" : "自选股股票列表_All",
+    "uid" : "b9c0041733fbbeb6b956a42f4c6bf067",
+    "name" : "添加自选股_SH大盘",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

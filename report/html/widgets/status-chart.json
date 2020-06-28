@@ -1,710 +1,1660 @@
 [ {
-  "uid" : "dbd7072d1c94dd8f",
-  "name" : "test_hk3",
-  "time" : {
-    "start" : 1592563055325,
-    "stop" : 1592563055360,
-    "duration" : 35
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "bfe88dfbddd4384e",
-  "name" : "test_us2",
-  "time" : {
-    "start" : 1592563054846,
-    "stop" : 1592563054880,
-    "duration" : 34
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "843e4e8a6b5ff0b",
-  "name" : "test_us3",
-  "time" : {
-    "start" : 1592563054882,
-    "stop" : 1592563054920,
-    "duration" : 38
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "80e6a7739f79009c",
-  "name" : "test_hs2",
-  "time" : {
-    "start" : 1592563054260,
-    "stop" : 1592563054293,
-    "duration" : 33
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "8d08de57319f72d4",
-  "name" : "test_subscribed",
-  "time" : {
-    "start" : 1592563055695,
-    "stop" : 1592563055724,
-    "duration" : 29
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7086fcdfe1d7b1af",
-  "name" : "test_optional_stock_list_szsh",
-  "time" : {
-    "start" : 1592563056012,
-    "stop" : 1592563056044,
-    "duration" : 32
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f990dcc72cbe23c1",
-  "name" : "test_hk6",
-  "time" : {
-    "start" : 1592563055434,
-    "stop" : 1592563055471,
-    "duration" : 37
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "2dd7fdcc9d438837",
-  "name" : "test_us9",
-  "time" : {
-    "start" : 1592563055116,
-    "stop" : 1592563055149,
-    "duration" : 33
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "866241f5b5bf3497",
-  "name" : "test_hs",
-  "time" : {
-    "start" : 1592563053233,
-    "stop" : 1592563053263,
-    "duration" : 30
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "839b68437054055b",
-  "name" : "test_optional_stock_list_null",
-  "time" : {
-    "start" : 1592563056241,
-    "stop" : 1592563056278,
-    "duration" : 37
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6980e9dc8cf9ea38",
-  "name" : "test_us11",
-  "time" : {
-    "start" : 1592563055188,
-    "stop" : 1592563055221,
-    "duration" : 33
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fdfb74017a0c0a7",
-  "name" : "test_hs4",
-  "time" : {
-    "start" : 1592563054480,
-    "stop" : 1592563054538,
-    "duration" : 58
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3c963be8f6a120b2",
-  "name" : "test_hschuangye",
-  "time" : {
-    "start" : 1592563053803,
-    "stop" : 1592563053838,
-    "duration" : 35
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5a98ca2b207ee50d",
-  "name" : "test_us6",
-  "time" : {
-    "start" : 1592563054997,
-    "stop" : 1592563055033,
-    "duration" : 36
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b319004126fb7d91",
-  "name" : "test_hk7",
-  "time" : {
-    "start" : 1592563055473,
-    "stop" : 1592563055510,
-    "duration" : 37
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "142a56b264e68b06",
+  "uid" : "ec1973c46f6ae56d",
   "name" : "test_uk",
   "time" : {
-    "start" : 1592563053172,
-    "stop" : 1592563053201,
-    "duration" : 29
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "50686ed6f4efc219",
-  "name" : "test_optional_stock_list_shhk",
-  "time" : {
-    "start" : 1592563056082,
-    "stop" : 1592563056139,
-    "duration" : 57
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "1febe6eff976232b",
-  "name" : "test_hs",
-  "time" : {
-    "start" : 1592563054035,
-    "stop" : 1592563054063,
+    "start" : 1593328807927,
+    "stop" : 1593328807955,
     "duration" : 28
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "dc7dc2d952c05e50",
-  "name" : "test_us",
+  "uid" : "895c2c4ea33782f2",
+  "name" : "test_listpage",
   "time" : {
-    "start" : 1592563053592,
-    "stop" : 1592563053638,
-    "duration" : 46
+    "start" : 1593328808100,
+    "stop" : 1593328808162,
+    "duration" : 62
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "a990342d92fb5899",
-  "name" : "test_uk",
+  "uid" : "c7736b934b5b41a8",
+  "name" : "test_fivedayKlinev2_SHtape",
   "time" : {
-    "start" : 1592563053296,
-    "stop" : 1592563053330,
-    "duration" : 34
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b07157419009f55a",
-  "name" : "test_hs6",
-  "time" : {
-    "start" : 1592563054574,
-    "stop" : 1592563054612,
-    "duration" : 38
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "e22181d160304459",
-  "name" : "test_code_all",
-  "time" : {
-    "start" : 1592563055818,
-    "stop" : 1592563055875,
-    "duration" : 57
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "37659f22238aa1e2",
-  "name" : "test_hs",
-  "time" : {
-    "start" : 1592563053557,
-    "stop" : 1592563053590,
-    "duration" : 33
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d9ebec8ab998bb3d",
-  "name" : "test_hk9",
-  "time" : {
-    "start" : 1592563055549,
-    "stop" : 1592563055586,
-    "duration" : 37
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "722a02d4f7816929",
-  "name" : "test_hs1",
-  "time" : {
-    "start" : 1592563054211,
-    "stop" : 1592563054257,
-    "duration" : 46
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6bb246e9f06ddf8a",
-  "name" : "test_us5",
-  "time" : {
-    "start" : 1592563054958,
-    "stop" : 1592563054993,
-    "duration" : 35
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "87ecff5d1ff71117",
-  "name" : "test_hs",
-  "time" : {
-    "start" : 1592563053096,
-    "stop" : 1592563053137,
-    "duration" : 41
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "df37474e0ad88710",
-  "name" : "test_hk11",
-  "time" : {
-    "start" : 1592563055629,
-    "stop" : 1592563055662,
-    "duration" : 33
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "559295d6d118f916",
-  "name" : "test_us",
-  "time" : {
-    "start" : 1592563054065,
-    "stop" : 1592563054094,
-    "duration" : 29
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "42fee54b77feab2f",
-  "name" : "test_tobelist",
-  "time" : {
-    "start" : 1592563055756,
-    "stop" : 1592563055786,
+    "start" : 1593328812057,
+    "stop" : 1593328812087,
     "duration" : 30
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "79ff3fcbbed7bcc3",
-  "name" : "test_hkzhuban",
+  "uid" : "357cb36dbe78e44c",
+  "name" : "test_hk11",
   "time" : {
-    "start" : 1592563053965,
-    "stop" : 1592563054005,
+    "start" : 1593328810188,
+    "stop" : 1593328810222,
+    "duration" : 34
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b998836e6a785746",
+  "name" : "test_dayKline_SHtape",
+  "time" : {
+    "start" : 1593328811431,
+    "stop" : 1593328811495,
+    "duration" : 64
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1920f78ffa91ac49",
+  "name" : "test_dayKline_SZshare",
+  "time" : {
+    "start" : 1593328811682,
+    "stop" : 1593328811708,
+    "duration" : 26
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "65314f8f038dfc14",
+  "name" : "test_login",
+  "time" : {
+    "start" : 1593328815774,
+    "stop" : 1593328815843,
+    "duration" : 69
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "89b93af51a86f650",
+  "name" : "test_timeSharev2_SHtape",
+  "time" : {
+    "start" : 1593328813552,
+    "stop" : 1593328813580,
+    "duration" : 28
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "6a8c72cd4aac234f",
+  "name" : "test_hs8",
+  "time" : {
+    "start" : 1593328809228,
+    "stop" : 1593328809264,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "982b0075e46ec715",
+  "name" : "test_us9",
+  "time" : {
+    "start" : 1593328809689,
+    "stop" : 1593328809721,
+    "duration" : 32
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d258f8996adef425",
+  "name" : "test_add_us",
+  "time" : {
+    "start" : 1593328814807,
+    "stop" : 1593328814845,
+    "duration" : 38
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "64021234db845478",
+  "name" : "test_Astock_profit_detail",
+  "time" : {
+    "start" : 1593328810966,
+    "stop" : 1593328810994,
+    "duration" : 28
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d804272981314f9d",
+  "name" : "test_candleMinute_1min_HK",
+  "time" : {
+    "start" : 1593328811279,
+    "stop" : 1593328811305,
+    "duration" : 26
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "67e38d39d2f97505",
+  "name" : "test_Astock_newstcok_listedpage",
+  "time" : {
+    "start" : 1593328810822,
+    "stop" : 1593328810833,
+    "duration" : 11
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e8bf860a40fe526d",
+  "name" : "test_hk7",
+  "time" : {
+    "start" : 1593328810043,
+    "stop" : 1593328810078,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a123db4362432c8",
+  "name" : "test_newstock",
+  "time" : {
+    "start" : 1593328808190,
+    "stop" : 1593328808230,
     "duration" : 40
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "6658c1587ceda8da",
-  "name" : "test_uszhonggai",
+  "uid" : "604f1a7ec862ca1d",
+  "name" : "test_newdayKline_USshare",
   "time" : {
-    "start" : 1592563053889,
-    "stop" : 1592563053926,
-    "duration" : 37
+    "start" : 1593328813069,
+    "stop" : 1593328813095,
+    "duration" : 26
   },
-  "status" : "passed",
+  "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "33c9bc08eb0ec75a",
-  "name" : "test_listpage",
+  "uid" : "6b8800ad0fcc6508",
+  "name" : "test_YearKline_SHshare",
   "time" : {
-    "start" : 1592563053364,
-    "stop" : 1592563053464,
-    "duration" : 100
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5314cb43f5a3f17",
-  "name" : "test_hszhuban",
-  "time" : {
-    "start" : 1592563053841,
-    "stop" : 1592563053886,
-    "duration" : 45
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3b1f8d7ef931e249",
-  "name" : "test_canshuwei0",
-  "time" : {
-    "start" : 1592563053670,
-    "stop" : 1592563053698,
-    "duration" : 28
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d3fb9f8463d088b8",
-  "name" : "test_hs11",
-  "time" : {
-    "start" : 1592563054759,
-    "stop" : 1592563054792,
-    "duration" : 33
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6182bfb733722300",
-  "name" : "test_us4",
-  "time" : {
-    "start" : 1592563054921,
-    "stop" : 1592563054956,
-    "duration" : 35
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6b1108d00421aeb6",
-  "name" : "test_us1",
-  "time" : {
-    "start" : 1592563054795,
-    "stop" : 1592563054844,
-    "duration" : 49
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "df78c1725929b0f3",
-  "name" : "test_hkchuangye",
-  "time" : {
-    "start" : 1592563053928,
-    "stop" : 1592563053963,
-    "duration" : 35
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "233f7ae9d10572e4",
-  "name" : "test_hs7",
-  "time" : {
-    "start" : 1592563054614,
-    "stop" : 1592563054650,
-    "duration" : 36
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6b078c6fa2e056d9",
-  "name" : "test_hskechuang",
-  "time" : {
-    "start" : 1592563053764,
-    "stop" : 1592563053801,
-    "duration" : 37
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d7d17f2d5c28b00e",
-  "name" : "test_hs5",
-  "time" : {
-    "start" : 1592563054540,
-    "stop" : 1592563054572,
+    "start" : 1593328814421,
+    "stop" : 1593328814453,
     "duration" : 32
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "56e39e38fd54303d",
-  "name" : "test_hk5",
+  "uid" : "fedafc728d7cb3aa",
+  "name" : "test_Astock_news_paging_query",
   "time" : {
-    "start" : 1592563055399,
-    "stop" : 1592563055432,
+    "start" : 1593328810772,
+    "stop" : 1593328810799,
+    "duration" : 27
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f74d1f5ada3bfae8",
+  "name" : "test_us2",
+  "time" : {
+    "start" : 1593328809427,
+    "stop" : 1593328809463,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f79d918813409c84",
+  "name" : "test_MonthKline_SZtape",
+  "time" : {
+    "start" : 1593328812559,
+    "stop" : 1593328812592,
     "duration" : 33
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "cc60b1c63ba34759",
-  "name" : "test_us10",
+  "uid" : "459bcfa6edd18577",
+  "name" : "test_timeKline_v2HKtape",
   "time" : {
-    "start" : 1592563055152,
-    "stop" : 1592563055185,
+    "start" : 1593328813780,
+    "stop" : 1593328813813,
     "duration" : 33
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "12f630b7c8a62134",
-  "name" : "test_sczdgk",
+  "uid" : "a4be8af202541059",
+  "name" : "test_optional_stock_list_shhksz",
   "time" : {
-    "start" : 1592563053700,
-    "stop" : 1592563053729,
-    "duration" : 29
+    "start" : 1593328815492,
+    "stop" : 1593328815530,
+    "duration" : 38
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "79910db40024360",
-  "name" : "test_us8",
+  "uid" : "d835e90553fbe609",
+  "name" : "test_candleMinute_HK",
   "time" : {
-    "start" : 1592563055075,
-    "stop" : 1592563055114,
-    "duration" : 39
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d55326f10d7fced5",
-  "name" : "test_optional_stock_list_hk",
-  "time" : {
-    "start" : 1592563055976,
-    "stop" : 1592563056009,
-    "duration" : 33
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "652542ba9db84ee9",
-  "name" : "test_us",
-  "time" : {
-    "start" : 1592563053139,
-    "stop" : 1592563053170,
+    "start" : 1593328811123,
+    "stop" : 1593328811154,
     "duration" : 31
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "7c47c51edb21a9e8",
-  "name" : "test_hs3",
-  "time" : {
-    "start" : 1592563054437,
-    "stop" : 1592563054477,
-    "duration" : 40
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "59ad25b1d6e7623b",
+  "uid" : "47c53cfa8ac1b4e2",
   "name" : "test_us",
   "time" : {
-    "start" : 1592563053265,
-    "stop" : 1592563053294,
-    "duration" : 29
+    "start" : 1593328808287,
+    "stop" : 1593328808314,
+    "duration" : 27
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "51899ddc02461dd6",
-  "name" : "test_optional_stock_list_shhksz",
+  "uid" : "effd83bd498863b0",
+  "name" : "test_hs5",
   "time" : {
-    "start" : 1592563056141,
-    "stop" : 1592563056175,
-    "duration" : 34
+    "start" : 1593328809100,
+    "stop" : 1593328809135,
+    "duration" : 35
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "305bfa1f8c28e971",
-  "name" : "test_newstock",
+  "uid" : "bc23dd3176a19d49",
+  "name" : "test_candleMinute_SH",
   "time" : {
-    "start" : 1592563053497,
-    "stop" : 1592563053526,
-    "duration" : 29
+    "start" : 1593328811189,
+    "stop" : 1593328811217,
+    "duration" : 28
   },
-  "status" : "passed",
+  "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "ac668c6d777b6a0d",
-  "name" : "test_loginpwd",
+  "uid" : "a6109e4b14dba316",
+  "name" : "test_timeSharev2_SZshare",
   "time" : {
-    "start" : 1592563056280,
-    "stop" : 1592563056280,
-    "duration" : 0
+    "start" : 1593328813606,
+    "stop" : 1593328813634,
+    "duration" : 28
   },
-  "status" : "broken",
+  "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "914d344c8129b528",
-  "name" : "test_uk",
+  "uid" : "ff4f12a7a31d2cb7",
+  "name" : "test_timeSharev2_SZtape",
   "time" : {
-    "start" : 1592563053639,
-    "stop" : 1592563053668,
-    "duration" : 29
+    "start" : 1593328813660,
+    "stop" : 1593328813690,
+    "duration" : 30
   },
-  "status" : "passed",
+  "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "a2e6a212ef46004f",
-  "name" : "test_hs9",
+  "uid" : "8a8fb9f3fc6de2d2",
+  "name" : "test_hk9",
   "time" : {
-    "start" : 1592563054688,
-    "stop" : 1592563054721,
-    "duration" : 33
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "acbba13fe8bc35a1",
-  "name" : "test_optional_stock_list_sh",
-  "time" : {
-    "start" : 1592563055941,
-    "stop" : 1592563055974,
-    "duration" : 33
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a89d4c393114416c",
-  "name" : "test_optional_stock_list_notts",
-  "time" : {
-    "start" : 1592563056213,
-    "stop" : 1592563056239,
-    "duration" : 26
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "705e8cbc48a0fbdd",
-  "name" : "test_uk",
-  "time" : {
-    "start" : 1592563054096,
-    "stop" : 1592563054125,
-    "duration" : 29
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a0e9c61c9a7f2638",
-  "name" : "test_optional_stock_list_all",
-  "time" : {
-    "start" : 1592563056177,
-    "stop" : 1592563056210,
-    "duration" : 33
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "969bbed0fde131d4",
-  "name" : "test_hk4",
-  "time" : {
-    "start" : 1592563055362,
-    "stop" : 1592563055396,
-    "duration" : 34
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "18b3840603c332f3",
-  "name" : "test_hk2",
-  "time" : {
-    "start" : 1592563055290,
-    "stop" : 1592563055323,
-    "duration" : 33
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "eb303d93ca865300",
-  "name" : "test_hk8",
-  "time" : {
-    "start" : 1592563055513,
-    "stop" : 1592563055547,
-    "duration" : 34
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d96fd74e50cb2053",
-  "name" : "test_us7",
-  "time" : {
-    "start" : 1592563055035,
-    "stop" : 1592563055073,
-    "duration" : 38
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "2a4d26e5e508486a",
-  "name" : "test_optional_stock_list_szhk",
-  "time" : {
-    "start" : 1592563056046,
-    "stop" : 1592563056079,
-    "duration" : 33
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "2271cd2d51e466be",
-  "name" : "test_hk1",
-  "time" : {
-    "start" : 1592563055223,
-    "stop" : 1592563055288,
-    "duration" : 65
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "143db81db432bac2",
-  "name" : "test_hs8",
-  "time" : {
-    "start" : 1592563054652,
-    "stop" : 1592563054686,
-    "duration" : 34
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "79520347c94d1722",
-  "name" : "test_canshuwei0",
-  "time" : {
-    "start" : 1592563054127,
-    "stop" : 1592563054152,
-    "duration" : 25
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5a7cf5018e179919",
-  "name" : "test_hk10",
-  "time" : {
-    "start" : 1592563055594,
-    "stop" : 1592563055626,
+    "start" : 1593328810118,
+    "stop" : 1593328810150,
     "duration" : 32
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "e0dd9f7ba1b0e9c7",
-  "name" : "test_hs10",
+  "uid" : "4fd86bf341740a2f",
+  "name" : "test_timeSharev2_HKshare",
   "time" : {
-    "start" : 1592563054723,
-    "stop" : 1592563054756,
-    "duration" : 33
+    "start" : 1593328813388,
+    "stop" : 1593328813418,
+    "duration" : 30
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "aa6ce1c766ac6f1f",
-  "name" : "test_optional_stock_list_sz",
+  "uid" : "6d1edd25d51e0c8e",
+  "name" : "test_add_sz",
   "time" : {
-    "start" : 1592563055906,
-    "stop" : 1592563055939,
-    "duration" : 33
+    "start" : 1593328814964,
+    "stop" : 1593328815003,
+    "duration" : 39
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "1137c9d83464ae71",
+  "uid" : "169803c2f2996d9d",
+  "name" : "test_fivedayKlinev2_SHshare",
+  "time" : {
+    "start" : 1593328812004,
+    "stop" : 1593328812034,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "38c7cf9af8e40aac",
+  "name" : "test_Astock_report_details",
+  "time" : {
+    "start" : 1593328811018,
+    "stop" : 1593328811047,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "648ea8e7ba6ba45a",
+  "name" : "test_uszhonggai",
+  "time" : {
+    "start" : 1593328808568,
+    "stop" : 1593328808602,
+    "duration" : 34
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9eaaee50dcf624fd",
+  "name" : "test_Astock_newstcok_count",
+  "time" : {
+    "start" : 1593328810402,
+    "stop" : 1593328810428,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "62630b7a0c5b6a8b",
+  "name" : "test_canshuwei0",
+  "time" : {
+    "start" : 1593328808793,
+    "stop" : 1593328808816,
+    "duration" : 23
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "45cd3780a5512162",
+  "name" : "test_MonthKline_HKtape",
+  "time" : {
+    "start" : 1593328812337,
+    "stop" : 1593328812366,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "edd895771d4144c3",
+  "name" : "test_add_US",
+  "time" : {
+    "start" : 1593328814764,
+    "stop" : 1593328814804,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "85d6d38bcd08a1c2",
   "name" : "test_sczdgk",
   "time" : {
-    "start" : 1592563054154,
-    "stop" : 1592563054180,
+    "start" : 1593328808376,
+    "stop" : 1593328808406,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a191f41ede7ceab7",
+  "name" : "test_optional_stock_list_sh",
+  "time" : {
+    "start" : 1593328815331,
+    "stop" : 1593328815362,
+    "duration" : 31
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3020861b3ce738d0",
+  "name" : "test_MonthKline_UStape",
+  "time" : {
+    "start" : 1593328812682,
+    "stop" : 1593328812724,
+    "duration" : 42
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "2babd703137a7c",
+  "name" : "test_optional_stock_list_shhk",
+  "time" : {
+    "start" : 1593328815460,
+    "stop" : 1593328815489,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "257e44c666b6155a",
+  "name" : "test_hk1",
+  "time" : {
+    "start" : 1593328809795,
+    "stop" : 1593328809839,
+    "duration" : 44
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4d0a77360f460292",
+  "name" : "test_hschuangye",
+  "time" : {
+    "start" : 1593328808475,
+    "stop" : 1593328808512,
+    "duration" : 37
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e5cccbef56a3e228",
+  "name" : "test_weekKline_SHshare",
+  "time" : {
+    "start" : 1593328813957,
+    "stop" : 1593328813992,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2e39227724c380d1",
+  "name" : "test_dayKline_SHshare",
+  "time" : {
+    "start" : 1593328811627,
+    "stop" : 1593328811652,
+    "duration" : 25
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "fecd65a058cee5b3",
+  "name" : "test_add_SH",
+  "time" : {
+    "start" : 1593328814847,
+    "stop" : 1593328814882,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ff7f24c067e85f5",
+  "name" : "test_fivedayKlinev2_HKtape",
+  "time" : {
+    "start" : 1593328811967,
+    "stop" : 1593328811978,
+    "duration" : 11
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "956c876c73c6d1df",
+  "name" : "test_uk",
+  "time" : {
+    "start" : 1593328808765,
+    "stop" : 1593328808791,
     "duration" : 26
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ab534b70c67260f2",
+  "name" : "test_weekKline_HKtape",
+  "time" : {
+    "start" : 1593328813905,
+    "stop" : 1593328813934,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7a5ba779b6466da",
+  "name" : "test_newdayKline_SZtape",
+  "time" : {
+    "start" : 1593328813014,
+    "stop" : 1593328813042,
+    "duration" : 28
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "56f9732af1e68725",
+  "name" : "test_optional_stock_list_szhk",
+  "time" : {
+    "start" : 1593328815428,
+    "stop" : 1593328815457,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a26aa74744adc295",
+  "name" : "test_hs1",
+  "time" : {
+    "start" : 1593328808931,
+    "stop" : 1593328808978,
+    "duration" : 47
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "77fbe369a064ee27",
+  "name" : "test_us1",
+  "time" : {
+    "start" : 1593328809381,
+    "stop" : 1593328809423,
+    "duration" : 42
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c93490dbf2c9d2b3",
+  "name" : "test_hkchuangye",
+  "time" : {
+    "start" : 1593328808605,
+    "stop" : 1593328808641,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7cbe71767bfb0cf1",
+  "name" : "test_YearKline_SZshare",
+  "time" : {
+    "start" : 1593328814536,
+    "stop" : 1593328814568,
+    "duration" : 32
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8cdeab09c8a09f2a",
+  "name" : "test_hs3",
+  "time" : {
+    "start" : 1593328809017,
+    "stop" : 1593328809054,
+    "duration" : 37
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "773531e5f690e2b",
+  "name" : "test_tobelist",
+  "time" : {
+    "start" : 1593328810298,
+    "stop" : 1593328810324,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "83c21a2ab99b8430",
+  "name" : "test_weekKline_USshare",
+  "time" : {
+    "start" : 1593328814196,
+    "stop" : 1593328814231,
+    "duration" : 35
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8c0f428ae677dad3",
+  "name" : "test_weekKline_SHtape",
+  "time" : {
+    "start" : 1593328814017,
+    "stop" : 1593328814039,
+    "duration" : 22
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "a605eab8aa4df364",
+  "name" : "test_optional_stock_list_hk",
+  "time" : {
+    "start" : 1593328815365,
+    "stop" : 1593328815394,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4cd4ea3fce11d086",
+  "name" : "test_newdayKline_SHtape",
+  "time" : {
+    "start" : 1593328812907,
+    "stop" : 1593328812934,
+    "duration" : 27
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f1d83b14fb4ea07f",
+  "name" : "test_dayKline_USshare",
+  "time" : {
+    "start" : 1593328811824,
+    "stop" : 1593328811850,
+    "duration" : 26
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "7ed74c7721f85d82",
+  "name" : "test_Astock_F10get_cashflow_detail",
+  "time" : {
+    "start" : 1593328810619,
+    "stop" : 1593328810647,
+    "duration" : 28
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a3191b0f5a94281",
+  "name" : "test_Astock_newstcok_list",
+  "time" : {
+    "start" : 1593328810862,
+    "stop" : 1593328810888,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2ce77c75b78b823c",
+  "name" : "test_already_stick",
+  "time" : {
+    "start" : 1593328815667,
+    "stop" : 1593328815667,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "65a3ae4dcb5a78e4",
+  "name" : "test_weekKline_HKshare",
+  "time" : {
+    "start" : 1593328813841,
+    "stop" : 1593328813881,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "882aa2ba597913a",
+  "name" : "test_Astock_F10financial_report",
+  "time" : {
+    "start" : 1593328810348,
+    "stop" : 1593328810377,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "85a073cdd3846eb7",
+  "name" : "test_hs",
+  "time" : {
+    "start" : 1593328808709,
+    "stop" : 1593328808734,
+    "duration" : 25
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "569a2363265717e0",
+  "name" : "test_Astock_get_backgroud",
+  "time" : {
+    "start" : 1593328810719,
+    "stop" : 1593328810748,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a2ea1e4bf10a786f",
+  "name" : "test_us4",
+  "time" : {
+    "start" : 1593328809503,
+    "stop" : 1593328809536,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ff7e34cb22b26895",
+  "name" : "test_fivedayKlinev2_SZshare",
+  "time" : {
+    "start" : 1593328812110,
+    "stop" : 1593328812122,
+    "duration" : 12
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b42fca164f7998e6",
+  "name" : "test_Astock_Company_executives_list",
+  "time" : {
+    "start" : 1593328810453,
+    "stop" : 1593328810482,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b094352f5c690733",
+  "name" : "test_MonthKline_USshare",
+  "time" : {
+    "start" : 1593328812617,
+    "stop" : 1593328812654,
+    "duration" : 37
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "2cd4d2d1c60506c7",
+  "name" : "test_YearKline_USshare",
+  "time" : {
+    "start" : 1593328814650,
+    "stop" : 1593328814685,
+    "duration" : 35
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3f94faac61497617",
+  "name" : "test_dayKline_SZtape",
+  "time" : {
+    "start" : 1593328811736,
+    "stop" : 1593328811800,
+    "duration" : 64
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f5f847c155cf556",
+  "name" : "test_YearKline_HKtape",
+  "time" : {
+    "start" : 1593328814366,
+    "stop" : 1593328814397,
+    "duration" : 31
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4fc13863c7444192",
+  "name" : "test_fivedayKlinev2_USshare",
+  "time" : {
+    "start" : 1593328812203,
+    "stop" : 1593328812215,
+    "duration" : 12
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1baaa99a9e031622",
+  "name" : "test_hs7",
+  "time" : {
+    "start" : 1593328809187,
+    "stop" : 1593328809226,
+    "duration" : 39
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "df0ee18697da391b",
+  "name" : "test_us",
+  "time" : {
+    "start" : 1593328808737,
+    "stop" : 1593328808762,
+    "duration" : 25
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5f67fbf5296a0318",
+  "name" : "test_YearKline_SZtape",
+  "time" : {
+    "start" : 1593328814593,
+    "stop" : 1593328814625,
+    "duration" : 32
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "356fa8849b52fadb",
+  "name" : "test_optional_stock_list_all",
+  "time" : {
+    "start" : 1593328815535,
+    "stop" : 1593328815564,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5fdbf94cbbae2ac8",
+  "name" : "test_newdayKline_HKshare",
+  "time" : {
+    "start" : 1593328812751,
+    "stop" : 1593328812777,
+    "duration" : 26
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "56643958335dab3b",
+  "name" : "test_add_sh",
+  "time" : {
+    "start" : 1593328814884,
+    "stop" : 1593328814922,
+    "duration" : 38
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "73f713cfee64a6a4",
+  "name" : "test_us7",
+  "time" : {
+    "start" : 1593328809611,
+    "stop" : 1593328809649,
+    "duration" : 38
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a98b0eaf4e2a529f",
+  "name" : "test_code_all",
+  "time" : {
+    "start" : 1593328815103,
+    "stop" : 1593328815159,
+    "duration" : 56
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "cb82b865a1f163a8",
+  "name" : "test_newdayKline_SHshare",
+  "time" : {
+    "start" : 1593328812855,
+    "stop" : 1593328812881,
+    "duration" : 26
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "e4ea1818be6e0189",
+  "name" : "test_YearKline_HKshare",
+  "time" : {
+    "start" : 1593328814307,
+    "stop" : 1593328814342,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "db391ca337efa18e",
+  "name" : "test_stick",
+  "time" : {
+    "start" : 1593328815598,
+    "stop" : 1593328815598,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "56f4b70eed6444e2",
+  "name" : "test_timeKlinev1_HKshare",
+  "time" : {
+    "start" : 1593328813175,
+    "stop" : 1593328813205,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f51963b8103192b9",
+  "name" : "test_hs9",
+  "time" : {
+    "start" : 1593328809266,
+    "stop" : 1593328809300,
+    "duration" : 34
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "568b909d24d80e3d",
+  "name" : "test_timeKlinev1_USshare",
+  "time" : {
+    "start" : 1593328813281,
+    "stop" : 1593328813307,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fba67a7f3a7d50a1",
+  "name" : "test_timeKlinev1_UStape",
+  "time" : {
+    "start" : 1593328813332,
+    "stop" : 1593328813364,
+    "duration" : 32
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "932b37fa715b6e39",
+  "name" : "test_us11",
+  "time" : {
+    "start" : 1593328809761,
+    "stop" : 1593328809792,
+    "duration" : 31
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "237ac525f2843c6c",
+  "name" : "test_uk",
+  "time" : {
+    "start" : 1593328808317,
+    "stop" : 1593328808345,
+    "duration" : 28
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2778117c539ea5d5",
+  "name" : "test_optional_stock_list_null",
+  "time" : {
+    "start" : 1593328815567,
+    "stop" : 1593328815596,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8682bb2aa6466210",
+  "name" : "test_fivedayKlinev2_SZtape",
+  "time" : {
+    "start" : 1593328812148,
+    "stop" : 1593328812178,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f685880674ea97ab",
+  "name" : "test_MonthKline_SHtape",
+  "time" : {
+    "start" : 1593328812447,
+    "stop" : 1593328812480,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3598f01fa92cc2de",
+  "name" : "test_candleMinute_SZ",
+  "time" : {
+    "start" : 1593328811223,
+    "stop" : 1593328811251,
+    "duration" : 28
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8c426b7b6f262a9b",
+  "name" : "test_hs",
+  "time" : {
+    "start" : 1593328807863,
+    "stop" : 1593328807895,
+    "duration" : 32
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3f9c34fed8bd2918",
+  "name" : "test_syn_type3ETF",
+  "time" : {
+    "start" : 1593328815733,
+    "stop" : 1593328815771,
+    "duration" : 38
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9397602a5ef779ea",
+  "name" : "test_add_SZ",
+  "time" : {
+    "start" : 1593328814924,
+    "stop" : 1593328814962,
+    "duration" : 38
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "747bd7dc90696b56",
+  "name" : "test_add_hk",
+  "time" : {
+    "start" : 1593328815041,
+    "stop" : 1593328815077,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fc486f8ad7529ba7",
+  "name" : "test_hs10",
+  "time" : {
+    "start" : 1593328809303,
+    "stop" : 1593328809337,
+    "duration" : 34
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "318ca19f15b14e58",
+  "name" : "test_weekKline_SZshare",
+  "time" : {
+    "start" : 1593328814067,
+    "stop" : 1593328814101,
+    "duration" : 34
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "60605b17a20b3729",
+  "name" : "test_us5",
+  "time" : {
+    "start" : 1593328809538,
+    "stop" : 1593328809572,
+    "duration" : 34
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1eb7cc0223e4d599",
+  "name" : "test_Astock_report_details_list",
+  "time" : {
+    "start" : 1593328811071,
+    "stop" : 1593328811097,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "26c932bb533d40c2",
+  "name" : "test_Astock_F10_briefing",
+  "time" : {
+    "start" : 1593328810910,
+    "stop" : 1593328810939,
+    "duration" : 29
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "5f6879ebf5a961fa",
+  "name" : "test_us3",
+  "time" : {
+    "start" : 1593328809466,
+    "stop" : 1593328809501,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e1a4288032b5edbd",
+  "name" : "test_newdayKline_UStape",
+  "time" : {
+    "start" : 1593328813121,
+    "stop" : 1593328813147,
+    "duration" : 26
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "6268854ee3efac18",
+  "name" : "test_timeKlinev1_HKtape",
+  "time" : {
+    "start" : 1593328813228,
+    "stop" : 1593328813254,
+    "duration" : 26
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "da0ff70bf389d842",
+  "name" : "test_hs",
+  "time" : {
+    "start" : 1593328807979,
+    "stop" : 1593328808011,
+    "duration" : 32
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "af27fe3632c690bb",
+  "name" : "test_Astock_F10getAssets_liabilities_detail",
+  "time" : {
+    "start" : 1593328810566,
+    "stop" : 1593328810593,
+    "duration" : 27
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f9db4a7d3e13b4bd",
+  "name" : "test_hs4",
+  "time" : {
+    "start" : 1593328809056,
+    "stop" : 1593328809097,
+    "duration" : 41
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b45828bec7e262dc",
+  "name" : "test_optional_stock_list_sz",
+  "time" : {
+    "start" : 1593328815299,
+    "stop" : 1593328815329,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dccd850108f00f72",
+  "name" : "test_hskechuang",
+  "time" : {
+    "start" : 1593328808434,
+    "stop" : 1593328808472,
+    "duration" : 38
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f5165233f85c2cf8",
+  "name" : "test_newdayKline_SZshare",
+  "time" : {
+    "start" : 1593328812961,
+    "stop" : 1593328812988,
+    "duration" : 27
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "def3f4aec2d073aa",
+  "name" : "test_subscribed",
+  "time" : {
+    "start" : 1593328810247,
+    "stop" : 1593328810274,
+    "duration" : 27
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "19d20ccef5d4ef6d",
+  "name" : "test_timeSharev2_SHshare",
+  "time" : {
+    "start" : 1593328813498,
+    "stop" : 1593328813526,
+    "duration" : 28
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "1cd045ae926d5d7d",
+  "name" : "test_hk2",
+  "time" : {
+    "start" : 1593328809841,
+    "stop" : 1593328809877,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "eb5592581f105ba6",
+  "name" : "test_sczdgk",
+  "time" : {
+    "start" : 1593328808881,
+    "stop" : 1593328808904,
+    "duration" : 23
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "5046bd43b5e0e49d",
+  "name" : "test_Astock_dividents_list",
+  "time" : {
+    "start" : 1593328810670,
+    "stop" : 1593328810696,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dbf76df93375be35",
+  "name" : "test_all",
+  "time" : {
+    "start" : 1593328815166,
+    "stop" : 1593328815271,
+    "duration" : 105
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "40b0674516e41ae7",
+  "name" : "test_timeSharev2_HKtape",
+  "time" : {
+    "start" : 1593328813443,
+    "stop" : 1593328813475,
+    "duration" : 32
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c2509022ce1178c9",
+  "name" : "test_Astock_F10_briefing",
+  "time" : {
+    "start" : 1593328810507,
+    "stop" : 1593328810542,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "33fd0d9746495b65",
+  "name" : "test_syn_all",
+  "time" : {
+    "start" : 1593328815694,
+    "stop" : 1593328815731,
+    "duration" : 37
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e7dce276203c6169",
+  "name" : "test_timeShare_v2USshare",
+  "time" : {
+    "start" : 1593328813718,
+    "stop" : 1593328813752,
+    "duration" : 34
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "78e68db527707daf",
+  "name" : "test_fivedayKlinev2_HKtape",
+  "time" : {
+    "start" : 1593328811929,
+    "stop" : 1593328811940,
+    "duration" : 11
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1f0448de252d7c1c",
+  "name" : "test_dayKline_UStape",
+  "time" : {
+    "start" : 1593328811879,
+    "stop" : 1593328811901,
+    "duration" : 22
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "43d9e35f060e66f2",
+  "name" : "test_uk",
+  "time" : {
+    "start" : 1593328808043,
+    "stop" : 1593328808072,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bbbcd5ba9eb8b094",
+  "name" : "test_candleMinute_1min_US",
+  "time" : {
+    "start" : 1593328811312,
+    "stop" : 1593328811338,
+    "duration" : 26
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "623b970c2238087",
+  "name" : "test_hk8",
+  "time" : {
+    "start" : 1593328810081,
+    "stop" : 1593328810116,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "59c84893ba953127",
+  "name" : "test_hs2",
+  "time" : {
+    "start" : 1593328808980,
+    "stop" : 1593328809014,
+    "duration" : 34
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "45cd176d61b79830",
+  "name" : "test_canshuwei0",
+  "time" : {
+    "start" : 1593328808347,
+    "stop" : 1593328808374,
+    "duration" : 27
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a3127771e95b76f4",
+  "name" : "test_us8",
+  "time" : {
+    "start" : 1593328809652,
+    "stop" : 1593328809686,
+    "duration" : 34
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b13e69b49429b890",
+  "name" : "test_hkzhuban",
+  "time" : {
+    "start" : 1593328808644,
+    "stop" : 1593328808685,
+    "duration" : 41
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "34307663fa2ec416",
+  "name" : "test_MonthKline_SHshare",
+  "time" : {
+    "start" : 1593328812390,
+    "stop" : 1593328812423,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "23ce8f0863a5a88a",
+  "name" : "test_us10",
+  "time" : {
+    "start" : 1593328809724,
+    "stop" : 1593328809759,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dd517cc13b24a748",
+  "name" : "test_us",
+  "time" : {
+    "start" : 1593328807897,
+    "stop" : 1593328807925,
+    "duration" : 28
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c7aa7e0c300a8cb2",
+  "name" : "test_candleMinute_1min_SZ",
+  "time" : {
+    "start" : 1593328811376,
+    "stop" : 1593328811403,
+    "duration" : 27
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "d2fb66bc9c10c06f",
+  "name" : "test_candleMinute_US",
+  "time" : {
+    "start" : 1593328811157,
+    "stop" : 1593328811187,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a1a49f49a0ad17f4",
+  "name" : "test_MonthKline_HKshare",
+  "time" : {
+    "start" : 1593328812280,
+    "stop" : 1593328812313,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "33bdfe6329916915",
+  "name" : "test_optional_stock_list_szsh",
+  "time" : {
+    "start" : 1593328815396,
+    "stop" : 1593328815426,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dd63b5b15f0c58db",
+  "name" : "test_hs6",
+  "time" : {
+    "start" : 1593328809138,
+    "stop" : 1593328809184,
+    "duration" : 46
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b2c049fabbdf9201",
+  "name" : "test_dayKline_HKtape",
+  "time" : {
+    "start" : 1593328811574,
+    "stop" : 1593328811602,
+    "duration" : 28
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "891a0d0120dbf65d",
+  "name" : "test_hk3",
+  "time" : {
+    "start" : 1593328809879,
+    "stop" : 1593328809916,
+    "duration" : 37
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8f4056a29fff2a85",
+  "name" : "test_hszhuban",
+  "time" : {
+    "start" : 1593328808515,
+    "stop" : 1593328808563,
+    "duration" : 48
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1f2e2e82d42355a5",
+  "name" : "test_MonthKline_SZshare",
+  "time" : {
+    "start" : 1593328812503,
+    "stop" : 1593328812536,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b9bfcacced3cbf80",
+  "name" : "test_hk10",
+  "time" : {
+    "start" : 1593328810152,
+    "stop" : 1593328810185,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "957cbe15552d756e",
+  "name" : "test_hk4",
+  "time" : {
+    "start" : 1593328809918,
+    "stop" : 1593328809954,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c82a826bf29dbbd7",
+  "name" : "test_hs11",
+  "time" : {
+    "start" : 1593328809340,
+    "stop" : 1593328809376,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2d701799e5d926e8",
+  "name" : "test_us6",
+  "time" : {
+    "start" : 1593328809574,
+    "stop" : 1593328809609,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "58ad2a65dff8be4e",
+  "name" : "test_dayKline_HKshare",
+  "time" : {
+    "start" : 1593328811520,
+    "stop" : 1593328811547,
+    "duration" : 27
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "e912ae827e7b36fa",
+  "name" : "test_hk5",
+  "time" : {
+    "start" : 1593328809957,
+    "stop" : 1593328809993,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e3cc9e373d50f1f1",
+  "name" : "test_YearKline_UStape",
+  "time" : {
+    "start" : 1593328814712,
+    "stop" : 1593328814736,
+    "duration" : 24
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "2147bc80b363b28e",
+  "name" : "test_add_HK",
+  "time" : {
+    "start" : 1593328815006,
+    "stop" : 1593328815039,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "763c43e7320a1af8",
+  "name" : "test_hs",
+  "time" : {
+    "start" : 1593328808257,
+    "stop" : 1593328808285,
+    "duration" : 28
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b435cd84fc64b8c3",
+  "name" : "test_candleMinute_1min_SH",
+  "time" : {
+    "start" : 1593328811344,
+    "stop" : 1593328811370,
+    "duration" : 26
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "d07594e0246e48d9",
+  "name" : "test_fivedayKlinev2_UStape",
+  "time" : {
+    "start" : 1593328812243,
+    "stop" : 1593328812254,
+    "duration" : 11
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9fe079748ee1e7f3",
+  "name" : "test_us",
+  "time" : {
+    "start" : 1593328808014,
+    "stop" : 1593328808041,
+    "duration" : 27
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a1cc9f905e0d5616",
+  "name" : "test_newdayKline_HKtape",
+  "time" : {
+    "start" : 1593328812804,
+    "stop" : 1593328812829,
+    "duration" : 25
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8f0d4d3d6d9c79f",
+  "name" : "test_hk6",
+  "time" : {
+    "start" : 1593328809995,
+    "stop" : 1593328810035,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a81c39fe702b272b",
+  "name" : "test_weekKline_SZtape",
+  "time" : {
+    "start" : 1593328814129,
+    "stop" : 1593328814172,
+    "duration" : 43
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8dfb47b84165ce13",
+  "name" : "test_weekKline_UStape",
+  "time" : {
+    "start" : 1593328814256,
+    "stop" : 1593328814280,
+    "duration" : 24
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "666aad90b2c25364",
+  "name" : "test_YearKline_SHtape",
+  "time" : {
+    "start" : 1593328814477,
+    "stop" : 1593328814509,
+    "duration" : 32
   },
   "status" : "passed",
   "severity" : "normal"
