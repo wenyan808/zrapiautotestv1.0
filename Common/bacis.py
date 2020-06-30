@@ -3,6 +3,7 @@ import requests, json
 from Common.tools.read_yaml import yamltoken
 from Common.sign import get_sign
 from glo import JSON, HTTP
+import logging
 
 
 def common(i):
@@ -12,6 +13,7 @@ def common(i):
     url = http + urll
     # print(url)
     paylo = eval(paylop)
+    # print(paylo)
     sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
     # 调用登录接口通过token传出来
     payload1 = {}
@@ -40,8 +42,30 @@ def common(i):
     # print(data)
 
     response = requests.request(requestmode, url, headers=headers, data=payload)
+    logging.info(
+        f"""请求：
+url:{url}
+method:{requestmode}
+headers:{headers}
+data:{payload}
+"""
+    )
+    if response.encoding:
+        text = response.content.decode(response.encoding)
+    else:
+        text = response.text
+    logging.info(
+        f"""响应：
+url:{response.url}
+status_code:{response.status_code}
+headers:{response.headers}
+cookies:{dict(response.cookies)}
+text:{text.encode("utf-8").decode("unicode_escape")}
+"""
+    )
     # # res = response.json().get("data")
     # # code = response.json().get('code')
+    # print(response.json())
     return response
 
     # print(response.json())
@@ -49,5 +73,3 @@ def common(i):
 # assert code == '000000'
 
 # print(res)
-
-
