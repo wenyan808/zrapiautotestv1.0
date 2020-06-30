@@ -1,0 +1,97 @@
+{
+  "uid" : "89b93af51a86f650",
+  "name" : "test_timeSharev2_SHtape",
+  "fullName" : "TestCase.StockQuotation.KLine.TimeShareV2.test_TimeShareV2_SHtape.TestTimeSharev2SHtape#test_timeSharev2_SHtape",
+  "historyId" : "63423878df69b7fab3146235521bff72",
+  "time" : {
+    "start" : 1593328813552,
+    "stop" : 1593328813580,
+    "duration" : 28
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <TestCase.StockQuotation.KLine.TimeShareV2.test_TimeShareV2_SHtape.TestTimeSharev2SHtape object at 0x12412870>\n\n    @allure.story('分时查询_优化版本 Version 2.0_SH大盘')\n    def test_timeSharev2_SHtape(self):\n        response = zhuorui('k线', '分时查询_优化版本 Version 2.0_SH大盘')\n>       assert_data(response, '000000', 'ok')\n\nTestCase\\StockQuotation\\KLine\\TimeShareV2\\test_TimeShareV2_SHtape.py:17: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [200]>, code = '000000', msg = 'ok'\n\n    def assert_data(response, code, msg):\n        assert code == response.json().get(\"code\")\n        assert msg == response.json().get(\"msg\")\n>       assert \"data\" in response.json()\nE       AssertionError\n\nCommon\\assertapi.py:4: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1593328813533,
+      "stop" : 1593328813552,
+      "duration" : 19
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1593328813584,
+      "stop" : 1593328813584,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "分时查询_优化版本 Version 2.0_SH大盘"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.TimeShareV2"
+  }, {
+    "name" : "suite",
+    "value" : "test_TimeShareV2_SHtape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestTimeSharev2SHtape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "38524-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.TimeShareV2.test_TimeShareV2_SHtape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "89b93af51a86f650.json",
+  "parameterValues" : [ ]
+}

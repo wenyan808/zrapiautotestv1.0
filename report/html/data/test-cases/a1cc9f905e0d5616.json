@@ -1,0 +1,97 @@
+{
+  "uid" : "a1cc9f905e0d5616",
+  "name" : "test_newdayKline_HKtape",
+  "fullName" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_HKtape.TestNewdayKlineHKtape#test_newdayKline_HKtape",
+  "historyId" : "9d1957d884b765335749ad8c34f0e0ab",
+  "time" : {
+    "start" : 1593328812804,
+    "stop" : 1593328812829,
+    "duration" : 25
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_HKtape.TestNewdayKlineHKtape object at 0x1248DAD0>\n\n    @allure.story('最新日K_HK大盘')\n    def test_newdayKline_HKtape(self):\n        response = zhuorui('k线', '最新日K_HK大盘')\n>       assert_data(response, '000000', 'ok')\n\nTestCase\\StockQuotation\\KLine\\NewdayKline\\test_NewdayKline_HKtape.py:17: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [200]>, code = '000000', msg = 'ok'\n\n    def assert_data(response, code, msg):\n        assert code == response.json().get(\"code\")\n        assert msg == response.json().get(\"msg\")\n>       assert \"data\" in response.json()\nE       AssertionError\n\nCommon\\assertapi.py:4: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1593328812783,
+      "stop" : 1593328812803,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1593328812833,
+      "stop" : 1593328812833,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "最新日K_HK大盘"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_NewdayKline_HKtape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewdayKlineHKtape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "38524-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_HKtape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "a1cc9f905e0d5616.json",
+  "parameterValues" : [ ]
+}

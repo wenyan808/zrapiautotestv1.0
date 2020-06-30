@@ -1,0 +1,88 @@
+{
+  "uid" : "3f9c34fed8bd2918",
+  "name" : "test_syn_type3ETF",
+  "fullName" : "TestCase.StockQuotation.OptionalStock.test_syn_optional_stock.TestSynOptionalStock#test_syn_type3ETF",
+  "historyId" : "92d51cc89fd7a7ce3276bed248014587",
+  "time" : {
+    "start" : 1593328815733,
+    "stop" : 1593328815771,
+    "duration" : 38
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1593328815674,
+      "stop" : 1593328815694,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1593328815771,
+      "stop" : 1593328815771,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "同步自选股_type3ETF"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.OptionalStock"
+  }, {
+    "name" : "suite",
+    "value" : "test_syn_optional_stock"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestSynOptionalStock"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "38524-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.OptionalStock.test_syn_optional_stock"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3f9c34fed8bd2918.json",
+  "parameterValues" : [ ]
+}

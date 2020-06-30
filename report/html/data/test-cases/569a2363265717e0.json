@@ -1,0 +1,91 @@
+{
+  "uid" : "569a2363265717e0",
+  "name" : "test_Astock_get_backgroud",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_get_backgroud.TestAstockGetBackgroud#test_Astock_get_backgroud",
+  "historyId" : "e7a6a840637581eaa41fed43fedb284b",
+  "time" : {
+    "start" : 1593328810719,
+    "stop" : 1593328810748,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1593328810700,
+      "stop" : 1593328810719,
+      "duration" : 19
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1593328810748,
+      "stop" : 1593328810748,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "获取高管的简介"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_get_backgroud"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockGetBackgroud"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "38524-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_get_backgroud"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "569a2363265717e0.json",
+  "parameterValues" : [ ]
+}

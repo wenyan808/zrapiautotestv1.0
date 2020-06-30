@@ -1,0 +1,97 @@
+{
+  "uid" : "bbbcd5ba9eb8b094",
+  "name" : "test_candleMinute_1min_US",
+  "fullName" : "TestCase.StockQuotation.KLine.test_candleMinuteV2_1Min.TestCandleMinute1Min#test_candleMinute_1min_US",
+  "historyId" : "91fdeb02eddb781d95fb5e6bfc3254f4",
+  "time" : {
+    "start" : 1593328811312,
+    "stop" : 1593328811338,
+    "duration" : 26
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <TestCase.StockQuotation.KLine.test_candleMinuteV2_1Min.TestCandleMinute1Min object at 0x122A1C50>\n\n    @allure.story('蜡烛图1分钟查询_优化版本 Version 2.0_US')\n    def test_candleMinute_1min_US(self):\n        response = zhuorui('k线', '蜡烛图1分钟查询_优化版本 Version 2.0_US')\n>       assert_data(response, '000000', 'ok')\n\nTestCase\\StockQuotation\\KLine\\test_candleMinuteV2_1Min.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [200]>, code = '000000', msg = 'ok'\n\n    def assert_data(response, code, msg):\n        assert code == response.json().get(\"code\")\n        assert msg == response.json().get(\"msg\")\n>       assert \"data\" in response.json()\nE       AssertionError\n\nCommon\\assertapi.py:4: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1593328811259,
+      "stop" : 1593328811278,
+      "duration" : 19
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1593328811407,
+      "stop" : 1593328811407,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "蜡烛图1分钟查询_优化版本 Version 2.0_US"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine"
+  }, {
+    "name" : "suite",
+    "value" : "test_candleMinuteV2_1Min"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCandleMinute1Min"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "38524-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.test_candleMinuteV2_1Min"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "bbbcd5ba9eb8b094.json",
+  "parameterValues" : [ ]
+}

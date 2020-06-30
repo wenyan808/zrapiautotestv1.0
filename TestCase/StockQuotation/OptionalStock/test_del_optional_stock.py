@@ -68,18 +68,16 @@ class TestDelOptionalStock:
     @allure.story('删除自选股_All')
     def test_all(self):
         q = OperationSql()
-        userId = str(q.show_sql("select id from t_user_account where `zr_no`= '10000038';"))
+        userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
         id = MongoDB("userId", userId[2:-3:])
         list1 = list()
         for id1 in id:
             list1.append(str(id1.get('_id')))
         _id = {"ids": list1}
-        print(_id)
         # 写
         write_xlsx("自选股", 24, 7, str(_id))
         response = zhuorui('自选股', '删除自选股_All')
-        print(response.json())
-        # assert_data(response, '000000', 'ok')
+        assert_data(response, '000000', 'ok')
 
     # @allure.story('删除自选股_参数列表空')
     # def test_parameter_null(self):
@@ -99,7 +97,7 @@ class TestDelOptionalStock:
     #     print(response.json())
     #     assert_data(response, '000000', 'ok')
 
-
-if __name__ == '__main__':
-    pytest.main()
+#
+# if __name__ == '__main__':
+#     pytest.main()
 

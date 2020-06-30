@@ -1,0 +1,91 @@
+{
+  "uid" : "7ed74c7721f85d82",
+  "name" : "test_Astock_F10get_cashflow_detail",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10get_cashflow_detail.TestAstockF10getCashflowDetail#test_Astock_F10get_cashflow_detail",
+  "historyId" : "d9ed17ae76069b9ee6e8bfe8c0e432e7",
+  "time" : {
+    "start" : 1593328810619,
+    "stop" : 1593328810647,
+    "duration" : 28
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1593328810598,
+      "stop" : 1593328810618,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1593328810647,
+      "stop" : 1593328810647,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "A股F10获取现金流量报表详情数据"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10get_cashflow_detail"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getCashflowDetail"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "38524-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10get_cashflow_detail"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7ed74c7721f85d82.json",
+  "parameterValues" : [ ]
+}
