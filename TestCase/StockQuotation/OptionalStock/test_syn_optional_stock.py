@@ -1,4 +1,5 @@
 import allure
+import pytest
 
 from Common.assertapi import assert_data
 from Common.guide import zhuorui
@@ -80,9 +81,12 @@ class TestSynOptionalStock:
     #     response = zhuorui('自选股', '同步自选股_参数为空')
     #     assert_data(response, '000000', 'ok')
 
+    @allure.story('同步自选股无token_All')
+    def test_syn_all_notoken(self):
+        response = zhuorui('自选股', '同步自选股无token_All')
+        # print(response.json())
+        assert_data(response, '000101', 'token不能为空')
+
+#
 # if __name__ == '__main__':
 #     pytest.main()
-
-
-
-

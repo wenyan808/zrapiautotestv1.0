@@ -106,9 +106,57 @@ class TestAddOptionalStock:
     #     response = zhuorui('自选股', '添加自选股_参数为空')
     #     assert_data(response, '000000', 'ok')
 
-#
-# if __name__ == '__main__':
-#     pytest.main()
+    @allure.story('添加自选股无token_US大盘')
+    def test_add_US_notoken(self):
+        response = zhuorui('自选股', '添加自选股无token_US大盘')
+        # print(response.json())
+        assert_data(response, '000101', 'token不能为空')
+
+    @allure.story('添加自选股无token_US个股')
+    def test_add_us_notoken(self):
+        response = zhuorui('自选股', '添加自选股无token_US个股')
+        # print(response.json())
+        assert_data(response, '000101', 'token不能为空')
+
+    @allure.story('添加自选股无token_SH大盘')
+    def test_add_SH_notoken(self):
+        response = zhuorui('自选股', '添加自选股无token_SH大盘')
+        # print(response.json())
+        assert_data(response, '000101', 'token不能为空')
+
+    @allure.story('添加自选股无token_SH个股')
+    def test_add_sh_notoken(self):
+        response = zhuorui('自选股', '添加自选股无token_SH个股')
+        # print(response.json())
+        assert_data(response, '000101', 'token不能为空')
+
+    @allure.story('添加自选股无token_SZ大盘')
+    def test_add_SZ_notoken(self):
+        response = zhuorui('自选股', '添加自选股无token_SZ大盘')
+        # print(response.json())
+        assert_data(response, '000101', 'token不能为空')
+
+    @allure.story('添加自选股无token_SZ个股')
+    def test_add_sz_notoken(self):
+        response = zhuorui('自选股', '添加自选股无token_SZ个股')
+        # print(response.json())
+        assert_data(response, '000101', 'token不能为空')
+
+    @allure.story('添加自选股无token_HK大盘')
+    def test_add_HK_notoken(self):
+        response = zhuorui('自选股', '添加自选股无token_HK大盘')
+        # print(response.json())
+        assert_data(response, '000101', 'token不能为空')
+
+    @allure.story('添加自选股无token_HK个股')
+    def test_add_hk_notoken(self):
+        response = zhuorui('自选股', '添加自选股无token_HK个股')
+        # print(response.json())
+        assert_data(response, '000101', 'token不能为空')
+
+
+if __name__ == '__main__':
+    pytest.main()
 
 
 
