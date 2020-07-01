@@ -15,6 +15,7 @@ class TestAstockF10financialreport:
     def test_Astock_F10financial_report(self):
         response = zhuorui('A股', 'A股获取F10财报信息')
         assert_data(response, '000000', 'ok')
+        # print(response.text)
 
     @allure.story('A股获取F10财报信息_token为0')
     def test_Astock_F10financial_report_notoken(self):
