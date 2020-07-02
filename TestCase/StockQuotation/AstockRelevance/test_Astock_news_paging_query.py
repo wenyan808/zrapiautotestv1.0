@@ -77,12 +77,12 @@ class TestAstockNewsPagingQuery:
         assert_data(response, '000000', 'ok')
         # print(response.text)
 
-    # @allure.story('个股新闻分页查询_currentPage为空')
-    # def test_Astock_news_paging_query_currentPageError(self):
-    #     response = zhuorui('A股', '个股新闻分页查询_currentPage为空')
-    #     # assert_data(response, '000000', 'ok')
-    #     print(response.text)
-
+    @allure.story('个股新闻分页查询_currentPage为空')
+    def test_Astock_news_paging_query_currentPageError(self):
+        response = zhuorui('A股', '个股新闻分页查询_currentPage为空')
+        assert_data(response, '000000', 'ok')
+        # print(response.text)
+    #
     @allure.story('个股新闻分页查询_currentPage为异常')
     def test_Astock_news_paging_query_currentPageException(self):
         response = zhuorui('A股', '个股新闻分页查询_currentPage为异常')
