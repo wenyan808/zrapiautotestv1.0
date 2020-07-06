@@ -6,7 +6,7 @@ from Common.login import login
 
 
 @allure.feature('查询资金统计')
-class TestCandleMinute:
+class TestgetCapitalFlowTime:
     @classmethod
     def setup_class(cls) -> None:
         login()
@@ -41,15 +41,33 @@ class TestCandleMinute:
         assert_data(response, '000000', 'ok')
         # print(response.text)
 
-    @allure.story('按时间查询资金统计数据_USetf10天')
-    def test_getCapitalFlowTime_US_Tendays(self):
-        response = zhuorui('查询资金统计', '按时间查询资金统计数据_USetf10天')
+    @allure.story('按时间查询资金统计数据_USetf5天')
+    def test_getCapitalFlowTime_US_Fivedays(self):
+        response = zhuorui('查询资金统计', '按时间查询资金统计数据_USetf5天')
         assert_data(response, '000000', 'ok')
         # print(response.text)
 
-    @allure.story('按时间查询资金统计数据_USetf10天')
-    def test_getCapitalFlowTime_US_Tendays(self):
-        response = zhuorui('查询资金统计', '按时间查询资金统计数据_USetf10天')
+    @allure.story('按时间查询资金统计数据_SH5天')
+    def test_getCapitalFlowTime_SH_Fivedays(self):
+        response = zhuorui('查询资金统计', '按时间查询资金统计数据_SH5天')
+        assert_data(response, '000000', 'ok')
+        # print(response.text)
+
+    @allure.story('按时间查询资金统计数据_SZ5天')
+    def test_getCapitalFlowTime_SZ_Fivedays(self):
+        response = zhuorui('查询资金统计', '按时间查询资金统计数据_SZ5天')
+        assert_data(response, '000000', 'ok')
+        # print(response.text)
+
+    @allure.story('按时间查询资金统计数据_US5天')
+    def test_getCapitalFlowTime_US_Fivedays(self):
+        response = zhuorui('查询资金统计', '按时间查询资金统计数据_US5天')
+        assert_data(response, '000000', 'ok')
+        # print(response.text)
+
+    @allure.story('按时间查询资金统计数据_HK5天')
+    def test_getCapitalFlowTime_HK_Fivedays(self):
+        response = zhuorui('查询资金统计', '按时间查询资金统计数据_HK5天')
         assert_data(response, '000000', 'ok')
         # print(response.text)
 
