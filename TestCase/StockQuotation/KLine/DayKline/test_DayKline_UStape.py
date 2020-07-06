@@ -12,9 +12,9 @@ class TestDayKlineUStape:
     def setup_class(cls) -> None:
         login()
 
-    @allure.story('日K查询_US大盘')
-    def test_dayKline_UStape(self):
-        response = zhuorui('k线', '日K查询_US大盘')
+    @allure.story('日K查询_US大盘_DIA')
+    def test_dayKline_UStape_DIA(self):
+        response = zhuorui('k线', '日K查询_US大盘_DIA')
         assert_data(response, '000000', 'ok')
         if "data" in response.json():
             # assert response.json().get("data")
@@ -22,7 +22,7 @@ class TestDayKlineUStape:
             if len(response.json().get("data")) != 0:
                 for info in response.json().get("data"):
                     for i in shuju('k线'):
-                        if '日K查询_US大盘' in i:
+                        if '日K查询_US大盘_DIA' in i:
                             calculate1 = i[9]
                             calculate = eval(calculate1)
                             # print(calculate)
@@ -44,6 +44,18 @@ class TestDayKlineUStape:
             else:
 
                 raise TypeError
+
+    @allure.story('日K查询_US大盘_QQQ')
+    def test_dayKline_UStape_QQQ(self):
+        response = zhuorui('k线', '日K查询_US大盘_QQQ')
+        assert_data(response, '000000', 'ok')
+        # print(response.text)
+
+    @allure.story('日K查询_US大盘_SPY')
+    def test_dayKline_UStape_SPY(self):
+        response = zhuorui('k线', '日K查询_US大盘_SPY')
+        assert_data(response, '000000', 'ok')
+        # print(response.text)
 
     @allure.story('日K查询_US大盘_type类型为2（股票）')
     def test_dayKline_UStape_typeOf2(self):

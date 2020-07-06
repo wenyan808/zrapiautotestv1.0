@@ -26,13 +26,13 @@ class TestAstockCompanyExecutivesList:
     @allure.story('公司高管列表-详情页_ts为异常')
     def test_Astock_Company_executives_list_tsException(self):
         response = zhuorui('A股', '公司高管列表-详情页_ts为异常')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('公司高管列表-详情页_ts为错误')
     def test_Astock_Company_executives_list_tsError(self):
         response = zhuorui('A股', '公司高管列表-详情页_ts为错误')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('公司高管列表-详情页_只传值ts')
@@ -50,7 +50,7 @@ class TestAstockCompanyExecutivesList:
     @allure.story('公司高管列表-详情页_code为异常')
     def test_Astock_Company_executives_list_codeException(self):
         response = zhuorui('A股', '公司高管列表-详情页_code为异常')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'code格式有误')
         # print(response.text)
 
     @allure.story('公司高管列表-详情页_code为错误')
@@ -68,7 +68,7 @@ class TestAstockCompanyExecutivesList:
     @allure.story('公司高管列表-详情页_pageSize为空')
     def test_Astock_Company_executives_list_pageSizeNone(self):
         response = zhuorui('A股', '公司高管列表-详情页_pageSize为空')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
         # print(response.text)
 
     @allure.story('公司高管列表-详情页_pageSize为异常')
@@ -80,7 +80,7 @@ class TestAstockCompanyExecutivesList:
     @allure.story('公司高管列表-详情页_pageSize为错误')
     def test_Astock_Company_executives_list_pageSizeError(self):
         response = zhuorui('A股', '公司高管列表-详情页_pageSize为错误')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'pageSize参数不合法1-50')
         # print(response.text)
 
     @allure.story('公司高管列表-详情页_只传值pageSize')
@@ -92,13 +92,13 @@ class TestAstockCompanyExecutivesList:
     @allure.story('公司高管列表-详情页_currentPage为空')
     def test_Astock_Company_executives_list_currentPageNone(self):
         response = zhuorui('A股', '公司高管列表-详情页_currentPage为空')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
         # print(response.text)
 
     @allure.story('公司高管列表-详情页_currentPage为异常')
     def test_Astock_Company_executives_list_currentPageException(self):
         response = zhuorui('A股', '公司高管列表-详情页_currentPage为异常')
-        assert_data(response, '000001', '系统繁忙,请稍候再试')
+        assert_data(response, '000103', 'currentPage参数不合法>1')
         # print(response.text)
 
     @allure.story('公司高管列表-详情页_currentPage为错误')

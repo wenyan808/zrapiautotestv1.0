@@ -39,31 +39,31 @@ class TestAstockDividentsList:
     @allure.story('分红派息-详情页')
     def test_Astock_dividents_list_tsNone(self):
         response = zhuorui('A股', '分红派息-详情页_ts为空')
-        # assert_data(response, '000103', 'ts不能为空')
-        print(response.text)
+        assert_data(response, '000103', 'ts不能为空')
+        # print(response.text)
 
     @allure.story('分红派息-详情页_code为空')
     def test_Astock_dividents_list_codeNone(self):
         response = zhuorui('A股', '分红派息-详情页_code为空')
-        # assert_data(response, '000103', 'code不能为空')
-        print(response.text)
+        assert_data(response, '000103', 'code不能为空')
+        # print(response.text)
 
     @allure.story('分红派息-详情页_ts为错误')
     def test_Astock_dividents_list_tsError(self):
         response = zhuorui('A股', '分红派息-详情页_ts为错误')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('分红派息-详情页_ts为异常')
     def test_Astock_dividents_list_tsException(self):
         response = zhuorui('A股', '分红派息-详情页_ts为异常')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('分红派息-详情页_pageSize为空')
     def test_Astock_dividents_list_pageSizeNone(self):
         response = zhuorui('A股', '分红派息-详情页_pageSize为空')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
         # print(response.text)
 
     @allure.story('分红派息-详情页_pageSize为错误')
@@ -81,7 +81,7 @@ class TestAstockDividentsList:
     @allure.story('分红派息-详情页_currentPage为空')
     def test_Astock_dividents_list_currentPageNone(self):
         response = zhuorui('A股', '分红派息-详情页_currentPage为空')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
         # print(response.text)
 
     @allure.story('分红派息-详情页_currentPage为错误')

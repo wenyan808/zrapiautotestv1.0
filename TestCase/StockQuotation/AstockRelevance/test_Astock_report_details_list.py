@@ -26,31 +26,31 @@ class TestAstockReportDetailsList:
     @allure.story('个股研报分页查询_ts为空')
     def test_Astock_report_details_list_tsNone(self):
         response = zhuorui('A股', '个股研报分页查询_ts为空')
-        assert_data(response, '000103', 'ts不能为空')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('个股研报分页查询_ts为错误')
     def test_Astock_report_details_list_tsError(self):
         response = zhuorui('A股', '个股研报分页查询_ts为错误')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('个股研报分页查询_ts为异常')
     def test_Astock_report_details_list_tsException(self):
         response = zhuorui('A股', '个股研报分页查询_ts为异常')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('个股研报分页查询_code为空')
     def test_Astock_report_details_list_codeNone(self):
         response = zhuorui('A股', '个股研报分页查询_code为空')
-        assert_data(response, '000103', 'code不能为空')
+        assert_data(response, '000103', 'code格式有误')
         # print(response.text)
 
     @allure.story('个股研报分页查询_code为异常')
     def test_Astock_report_details_list_codeException(self):
         response = zhuorui('A股', '个股研报分页查询_code为异常')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'code格式有误')
         # print(response.text)
 
     @allure.story('个股研报分页查询_code为错误')
@@ -62,7 +62,7 @@ class TestAstockReportDetailsList:
     @allure.story('个股研报分页查询_pageSize为空')
     def test_Astock_report_details_list_pageSizeNone(self):
         response = zhuorui('A股', '个股研报分页查询_pageSize为空')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
         # print(response.text)
 
     @allure.story('个股研报分页查询_pageSize为异常')
@@ -80,7 +80,7 @@ class TestAstockReportDetailsList:
     @allure.story('个股研报分页查询_currentPage为空')
     def test_Astock_report_details_list_currentPageNone(self):
         response = zhuorui('A股', '个股研报分页查询_currentPage为空')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
         # print(response.text)
 
     @allure.story('个股研报分页查询_currentPage为错误')

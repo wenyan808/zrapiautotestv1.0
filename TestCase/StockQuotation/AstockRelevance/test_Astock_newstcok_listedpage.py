@@ -52,7 +52,7 @@ class TestAstockNewstcokListpage:
     def test_Astock_newstcok_listedpage_currentPageNone(self):
         response = zhuorui('A股', '新股日历分页获取已上市列表_currentPage为空')
         # print(response.text)
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
 
     @allure.story('新股日历分页获取已上市列表_currentPage为错误')
     def test_Astock_newstcok_listedpage_currentPageError(self):
@@ -75,8 +75,8 @@ class TestAstockNewstcokListpage:
     @allure.story('新股日历分页获取已上市列表_pageSize为空')
     def test_Astock_newstcok_listedpage_pageSizeNone(self):
         response = zhuorui('A股', '新股日历分页获取已上市列表_pageSize为空')
-        # print(response.text)
-        assert_data(response, '000000', 'ok')
+        print(response.text)
+        # assert_data(response, '000103', 'must not be null')
 
     @allure.story('新股日历分页获取已上市列表_pageSize为异常')
     def test_Astock_newstcok_listedpage_pageSizeException(self):
@@ -88,8 +88,8 @@ class TestAstockNewstcokListpage:
     def test_Astock_newstcok_listedpage_pageSizeError(self):
         response = zhuorui('A股', '新股日历分页获取已上市列表_pageSize为错误')
         # print(response.text)
-        # assert_data(response, '000000', 'ok')
-        assert_data(response, '000001', '系统繁忙,请稍候再试')
+        assert_data(response, '000103', 'must be between 1 and 50')
+        # assert_data(response, '000001', '系统繁忙,请稍候再试')
 
     @allure.story('新股日历分页获取已上市列表_只传pageSize')
     def test_Astock_newstcok_listedpage_onlypageSize(self):
@@ -101,13 +101,13 @@ class TestAstockNewstcokListpage:
     def test_Astock_newstcok_listedpage_orderNone(self):
         response = zhuorui('A股', '新股日历分页获取已上市列表_order为空')
         # print(response.text)
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
 
     @allure.story('新股日历分页获取已上市列表_order为异常')
     def test_Astock_newstcok_listedpage_orderException(self):
         response = zhuorui('A股', '新股日历分页获取已上市列表_order为异常')
         # print(response.text)
-        assert_data(response, '000103', 'must be less than or equal to 4')
+        assert_data(response, '000103', '参数不合法')
 
     @allure.story('新股日历分页获取已上市列表_order为错误')
     def test_Astock_newstcok_listedpage_orderError(self):

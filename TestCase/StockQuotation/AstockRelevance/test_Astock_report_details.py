@@ -26,13 +26,13 @@ class TestAstockReportDetails:
     @allure.story('个股研报详情_id为None')
     def test_Astock_report_details_idNone(self):
         response = zhuorui('A股', '个股研报详情_id为None')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'id不能为空')
         # print(response.text)
 
     @allure.story('个股研报详情_不传id')
     def test_Astock_report_details_notpassedonid(self):
         response = zhuorui('A股', '个股研报详情_不传id')
-        assert_data(response,'000000', 'ok')
+        assert_data(response, '000103', 'id不能为空')
         # print(response.text)
     #
     # @allure.story('A股', '个股研报详情')

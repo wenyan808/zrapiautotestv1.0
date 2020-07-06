@@ -15,3 +15,4 @@ class TestTimeSharev2USshare:
     def test_timeShare_v2USshare(self):
         response = zhuorui('k线', '分时查询_优化版本 Version 2.0_US个股')
         assert_data(response, '000000', 'ok')
+        # print(response.text)

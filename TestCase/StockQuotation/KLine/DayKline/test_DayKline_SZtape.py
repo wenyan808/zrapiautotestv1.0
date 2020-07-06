@@ -12,9 +12,9 @@ class TestDayKlineSZtape:
     def setup_class(cls) -> None:
         login()
 
-    @allure.story('日K查询_SZ大盘')
-    def test_dayKline_SZtape(self):
-        response = zhuorui('k线', '日K查询_SZ大盘')
+    @allure.story('日K查询_SZ大盘_深证成指')
+    def test_dayKline_SZtape_szcz(self):
+        response = zhuorui('k线', '日K查询_SZ大盘_深证成指')
         assert_data(response, '000000', 'ok')
         if "data" in response.json():
             # assert response.json().get("data")
@@ -22,7 +22,7 @@ class TestDayKlineSZtape:
             if len(response.json().get("data")) != 0:
                 for info in response.json().get("data"):
                     for i in shuju('k线'):
-                        if '日K查询_SZ大盘' in i:
+                        if '日K查询_SZ大盘_深证成指' in i:
                             calculate1 = i[9]
                             calculate = eval(calculate1)
                             # print(calculate)
@@ -44,6 +44,13 @@ class TestDayKlineSZtape:
             else:
 
                 raise TypeError
+
+    @allure.story('日K查询_SZ大盘_创业板指')
+    def test_dayKline_SZtape_cybz(self):
+        response = zhuorui('k线', '日K查询_SZ大盘_创业板指')
+        assert_data(response, '000000', 'ok')
+        # print(response)
+
 
     @allure.story('日K查询_SZ大盘_type类型为2（股票）')
     def test_dayKline_SZtape_typeOf2(self):

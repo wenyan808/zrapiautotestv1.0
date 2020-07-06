@@ -26,19 +26,19 @@ class TestAstockNewsPagingQuery:
     @allure.story('个股新闻分页查询_ts为空')
     def test_Astock_news_paging_query_tsNone(self):
         response = zhuorui('A股', '个股新闻分页查询_ts为空')
-        # assert_data(response, '000103', 'ts不能为空')
-        print(response.text)
+        assert_data(response, '000103', 'ts格式有误')
+        # print(response.text)
 
     @allure.story('个股新闻分页查询_ts为异常')
     def test_Astock_news_paging_query_tsException(self):
         response = zhuorui('A股', '个股新闻分页查询_ts为异常')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('个股新闻分页查询_ts为错误')
     def test_Astock_news_paging_query_tsError(self):
         response = zhuorui('A股', '个股新闻分页查询_ts为错误')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('个股新闻分页查询_code为空')
@@ -62,19 +62,19 @@ class TestAstockNewsPagingQuery:
     @allure.story('个股新闻分页查询_pageSize为空')
     def test_Astock_news_paging_query_pageSizeNone(self):
         response = zhuorui('A股', '个股新闻分页查询_pageSize为空')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
         # print(response.text)
 
     @allure.story('个股新闻分页查询_pageSize为异常')
     def test_Astock_news_paging_query_pageSizeException(self):
         response = zhuorui('A股', '个股新闻分页查询_pageSize为异常')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', '参数校验不通过')
         # print(response.text)
 
     @allure.story('个股新闻分页查询_pageSize为错误')
     def test_Astock_news_paging_query_pageSizeError(self):
         response = zhuorui('A股', '个股新闻分页查询_pageSize为错误')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', '超过限制')
         # print(response.text)
 
     @allure.story('个股新闻分页查询_currentPage为空')
@@ -86,7 +86,7 @@ class TestAstockNewsPagingQuery:
     @allure.story('个股新闻分页查询_currentPage为异常')
     def test_Astock_news_paging_query_currentPageException(self):
         response = zhuorui('A股', '个股新闻分页查询_currentPage为异常')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', '参数不合法')
         # print(response.text)
 
     @allure.story('个股新闻分页查询_currentPage为错误')

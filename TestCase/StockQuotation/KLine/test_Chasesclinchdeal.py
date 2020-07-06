@@ -38,13 +38,13 @@ class TestChasesClinchDeal:
     @allure.story('查询逐笔成交_US大盘')
     def test_Chasesclinchdeal_UStape(self):
         response = zhuorui('逐笔成交', '查询逐笔成交_US大盘')
-        assert_data(response, '000008', '权限不足')
+        assert_data(response, '000000', 'ok')
         # print(response.text)
 
     @allure.story('查询逐笔成交_US个股')
     def test_Chasesclinchdeal_USshare(self):
         response = zhuorui('逐笔成交', '查询逐笔成交_US个股')
-        assert_data(response, '000008', '权限不足')
+        assert_data(response, '000000', 'ok')
         # print(response.text)
 
     @allure.story('查询逐笔成交_HS大盘')
@@ -62,11 +62,11 @@ class TestChasesClinchDeal:
     @allure.story('查询逐笔成交_HK大盘')
     def test_Chasesclinchdeal_HKtape(self):
         response = zhuorui('逐笔成交', '查询逐笔成交_HK大盘')
-        assert_data(response, '000008', '权限不足')
-        # print(response.text)
+        # assert_data(response, '000008', '权限不足')
+        print(response.text)
 
     @allure.story('查询逐笔成交_HK个股')
     def test_Chasesclinchdeal_HKshare(self):
         response = zhuorui('逐笔成交', '查询逐笔成交_HK个股')
-        assert_data(response, '000008', '权限不足')
+        assert_data(response, '000000', 'ok')
         # print(response.text)

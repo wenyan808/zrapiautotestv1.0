@@ -15,3 +15,4 @@ class TestFivedayKlinev2UStape:
     def test_fivedayKlinev2_UStape(self):
         response = zhuorui('k线', '五日查询_优化版本 Version 2.0_US大盘')
         assert_data(response, '000000', 'ok')
+        # print(response)
