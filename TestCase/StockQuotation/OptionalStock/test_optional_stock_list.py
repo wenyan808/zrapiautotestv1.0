@@ -66,11 +66,11 @@ class TestOptionalStockList:
         response = zhuorui('自选股', '自选股股票列表_参数为空')
         assert_data(response, '000000', 'ok')
 
-    @allure.story('自选股股票列表无token_All')
-    def test_optional_stock_list_all_notoken(self):
-        response = zhuorui('自选股', '自选股股票列表无token_All')
-        # print(response.json())
-        assert_data(response, '000101', 'token不能为空')
+    # @allure.story('自选股股票列表无token_All')
+    # def test_optional_stock_list_all_notoken(self):
+    #     response = zhuorui('自选股', '自选股股票列表无token_All')
+    #     print(response.json())
+    #     # assert_data(response, '000101', 'token不能为空')
 
 
 if __name__ == '__main__':

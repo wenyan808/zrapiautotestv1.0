@@ -62,53 +62,53 @@ class TestNewdayKlineSHshare:
     @allure.story('最新日K_SH个股_ts为空')
     def test_newdayKline_SHshare_tsNone(self):
         response = zhuorui('k线', '最新日K_SH个股_ts为空')
-        assert_data(response, '000103', 'ts is not null')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('最新日K_SH个股_ts为其他string')
     def test_newdayKline_SHshare_tsotherstring(self):
         response = zhuorui('k线', '最新日K_SH个股_ts为其他string')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('最新日K_SH个股_code为空')
     def test_newdayKline_SHshare_codeNone(self):
         response = zhuorui('k线', '最新日K_SH个股_code为空')
-        assert_data(response, '000103', 'code is not null')
+        assert_data(response, '000103', 'code格式有误')
         # print(response.text)
 
     @allure.story('最新日K_SH个股_code异常')
     def test_newdayKline_SHshare_codeException(self):
         response = zhuorui('k线', '最新日K_SH个股_code异常')
-        # assert_data(response, '000000', 'ok')
-        print(response.text)
+        assert_data(response, '000001', '系统繁忙,请稍候再试')
+        # print(response.text)
 
     @allure.story('最新日K_SH个股_code不正确')
     def test_newdayKline_SHshare_codeError(self):
         response = zhuorui('k线', '最新日K_SH个股_code不正确')
-        # assert_data(response, '000000', 'ok')
-        print(response.text)
+        assert_data(response, '000001', '系统繁忙,请稍候再试')
+        # print(response.text)
 
     @allure.story('最新日K_SH个股_只传ts')
     def test_newdayKline_SHshare_onlyts(self):
         response = zhuorui('k线', '最新日K_SH个股_只传ts')
-        assert_data(response, '000103', 'code is not null')
+        assert_data(response, '000103', 'code格式有误')
         # print(response.text)
 
     @allure.story('最新日K_SH个股_只传code')
     def test_newdayKline_SHshare_onlycode(self):
         response = zhuorui('k线', '最新日K_SH个股_只传code')
-        assert_data(response, '000103', 'adjType is empty !')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('最新日K_SH个股_只传type')
     def test_newdayKline_SHshare_onlytype(self):
         response = zhuorui('k线', '最新日K_SH个股_只传type')
-        assert_data(response, '000103', 'code is not null')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('最新日K_SH个股_只传adjType')
     def test_newdayKline_SHshare_onlyadjType(self):
         response = zhuorui('k线', '最新日K_SH个股_只传adjType')
-        assert_data(response, '000103', 'code is not null')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)

@@ -26,7 +26,7 @@ class TestgetConstituentStock:
     @allure.story('查询成份股_必选参数空')
     def test_getConstituentstock_None(self):
         response = zhuorui('成分股', '查询成份股_必选参数空')
-        assert_data(response, '000103', 'code is not null')
+        assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
 
     @allure.story('查询成份股_必选参数沪深')
