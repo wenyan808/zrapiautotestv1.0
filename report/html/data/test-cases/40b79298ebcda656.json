@@ -1,0 +1,123 @@
+{
+  "uid" : "40b79298ebcda656",
+  "name" : "test_Astock_F10getIncomeStatementData_HK",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getIncomeStatementData.TestAstockF10getIncomeStatementData#test_Astock_F10getIncomeStatementData_HK",
+  "historyId" : "e65f5e5180ccbb539e9cb5791a183741",
+  "time" : {
+    "start" : 1594198673627,
+    "stop" : 1594198673664,
+    "duration" : 37
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198672594,
+      "stop" : 1594198672611,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198674264,
+      "stop" : 1594198674264,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "A股F10获取利润表详情页数据_HK"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10getIncomeStatementData"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getIncomeStatementData"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getIncomeStatementData"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a6f2a346ff1168ba",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177048415,
+        "stop" : 1594177048457,
+        "duration" : 42
+      }
+    }, {
+      "uid" : "e985bfa068b18f57",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176787460,
+        "stop" : 1594176787501,
+        "duration" : 41
+      }
+    }, {
+      "uid" : "51713052e850b6f5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176334267,
+        "stop" : 1594176334312,
+        "duration" : 45
+      }
+    }, {
+      "uid" : "265f4b39c1cfd111",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175467563,
+        "stop" : 1594175467605,
+        "duration" : 42
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "40b79298ebcda656.json",
+  "parameterValues" : [ ]
+}

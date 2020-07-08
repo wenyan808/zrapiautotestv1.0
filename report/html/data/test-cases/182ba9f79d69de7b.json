@@ -1,0 +1,89 @@
+{
+  "uid" : "182ba9f79d69de7b",
+  "name" : "test_timeSharev2_SHtape",
+  "fullName" : "TestCase.StockQuotation.KLine.TimeShareV2.test_TimeShareV2_SHtape.TestTimeSharev2SHtape#test_timeSharev2_SHtape",
+  "historyId" : "63423878df69b7fab3146235521bff72",
+  "time" : {
+    "start" : 1594175496661,
+    "stop" : 1594175496735,
+    "duration" : 74
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594175496636,
+      "stop" : 1594175496658,
+      "duration" : 22
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594175496738,
+      "stop" : 1594175496738,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "分时查询_优化版本 Version 2.0_SH大盘"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.TimeShareV2"
+  }, {
+    "name" : "suite",
+    "value" : "test_TimeShareV2_SHtape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestTimeSharev2SHtape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.TimeShareV2.test_TimeShareV2_SHtape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "182ba9f79d69de7b.json",
+  "parameterValues" : [ ]
+}

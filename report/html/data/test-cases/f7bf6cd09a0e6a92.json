@@ -1,0 +1,123 @@
+{
+  "uid" : "f7bf6cd09a0e6a92",
+  "name" : "test_Astock_news_paging_query_required",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_news_paging_query.TestAstockNewsPagingQuery#test_Astock_news_paging_query_required",
+  "historyId" : "d3de4210b91a180a62e0720547f92bb6",
+  "time" : {
+    "start" : 1594198676174,
+    "stop" : 1594198676298,
+    "duration" : 124
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198675389,
+      "stop" : 1594198675405,
+      "duration" : 16
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198676299,
+      "stop" : 1594198676299,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "个股新闻分页查询_必填项"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_news_paging_query"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockNewsPagingQuery"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_news_paging_query"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a3e7699b71bbece5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177051094,
+        "stop" : 1594177051232,
+        "duration" : 138
+      }
+    }, {
+      "uid" : "3ac3d2911c762923",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176789747,
+        "stop" : 1594176789789,
+        "duration" : 42
+      }
+    }, {
+      "uid" : "85c615f4d4551707",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176337093,
+        "stop" : 1594176337247,
+        "duration" : 154
+      }
+    }, {
+      "uid" : "429f1614e8bf4bc5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175469959,
+        "stop" : 1594175470003,
+        "duration" : 44
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f7bf6cd09a0e6a92.json",
+  "parameterValues" : [ ]
+}

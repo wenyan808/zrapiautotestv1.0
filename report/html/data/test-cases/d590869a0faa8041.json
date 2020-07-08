@@ -1,0 +1,124 @@
+{
+  "uid" : "d590869a0faa8041",
+  "name" : "test_getConstituentstock_None",
+  "fullName" : "TestCase.StockQuotation.OptionalStock.test_getConstituentstock.TestgetConstituentStock#test_getConstituentstock_None",
+  "historyId" : "014e11ff0ff33d5922693b32270ccaf6",
+  "time" : {
+    "start" : 1594198704444,
+    "stop" : 1594198704477,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198704308,
+      "stop" : 1594198704326,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198704743,
+      "stop" : 1594198704743,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "成分股"
+  }, {
+    "name" : "story",
+    "value" : "查询成份股_必选参数空"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.OptionalStock"
+  }, {
+    "name" : "suite",
+    "value" : "test_getConstituentstock"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestgetConstituentStock"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.OptionalStock.test_getConstituentstock"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "341917d4b2f0cfda",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177081719,
+        "stop" : 1594177081753,
+        "duration" : 34
+      }
+    }, {
+      "uid" : "688014afe8b70f59",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176819028,
+        "stop" : 1594176819061,
+        "duration" : 33
+      }
+    }, {
+      "uid" : "43bc7748c757d08c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176368518,
+        "stop" : 1594176368551,
+        "duration" : 33
+      }
+    }, {
+      "uid" : "af3464afd8e77cae",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594175500119,
+        "stop" : 1594175500152,
+        "duration" : 33
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d590869a0faa8041.json",
+  "parameterValues" : [ ]
+}

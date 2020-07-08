@@ -1,0 +1,89 @@
+{
+  "uid" : "a34a02989ea8ce91",
+  "name" : "test_Astock_newstcok_listedpage_pageSizeException",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_newstcok_listedpage.TestAstockNewstcokListpage#test_Astock_newstcok_listedpage_pageSizeException",
+  "historyId" : "bb0de869872f3496e110299d4ab5a62f",
+  "time" : {
+    "start" : 1594177051946,
+    "stop" : 1594177051982,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594177051235,
+      "stop" : 1594177051257,
+      "duration" : 22
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594177052485,
+      "stop" : 1594177052486,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "新股日历分页获取已上市列表_pageSize为异常"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_newstcok_listedpage"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockNewstcokListpage"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "5832-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_newstcok_listedpage"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a34a02989ea8ce91.json",
+  "parameterValues" : [ ]
+}

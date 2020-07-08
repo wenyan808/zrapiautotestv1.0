@@ -1,0 +1,89 @@
+{
+  "uid" : "235bb5cc2cf72755",
+  "name" : "test_newdayKline_HKtape_typeof2",
+  "fullName" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_HKtape.TestNewdayKlineHKtape#test_newdayKline_HKtape_typeof2",
+  "historyId" : "aa035b3a753c542ddbc8d3318f92ae87",
+  "time" : {
+    "start" : 1594176811212,
+    "stop" : 1594176811254,
+    "duration" : 42
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594176810992,
+      "stop" : 1594176811013,
+      "duration" : 21
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594176811809,
+      "stop" : 1594176811809,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "最新日K_HK大盘_type类型为2股票"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_NewdayKline_HKtape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewdayKlineHKtape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "19348-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_HKtape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "235bb5cc2cf72755.json",
+  "parameterValues" : [ ]
+}

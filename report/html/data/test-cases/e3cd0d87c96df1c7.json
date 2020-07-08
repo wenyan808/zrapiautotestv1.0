@@ -1,0 +1,89 @@
+{
+  "uid" : "e3cd0d87c96df1c7",
+  "name" : "test_Astock_F10getEarningsinfo_onlyvalcode",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getEarningsinfo.TestAstockF10getEarningsinfo#test_Astock_F10getEarningsinfo_onlyvalcode",
+  "historyId" : "c6a6879cc96d8e3aaf66dcf8f160581e",
+  "time" : {
+    "start" : 1594176333787,
+    "stop" : 1594176333823,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594176333369,
+      "stop" : 1594176333389,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594176333823,
+      "stop" : 1594176333824,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "A股获取F10财报信息_只传值code"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10getEarningsinfo"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getEarningsinfo"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "19992-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getEarningsinfo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e3cd0d87c96df1c7.json",
+  "parameterValues" : [ ]
+}

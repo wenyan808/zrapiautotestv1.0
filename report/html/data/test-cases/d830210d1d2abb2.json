@@ -1,0 +1,89 @@
+{
+  "uid" : "d830210d1d2abb2",
+  "name" : "test_Astock_F10getEarningsinfo_tsException",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getEarningsinfo.TestAstockF10getEarningsinfo#test_Astock_F10getEarningsinfo_tsException",
+  "historyId" : "d038e8259c5fe89ca2c95b84600ae3c7",
+  "time" : {
+    "start" : 1594175466888,
+    "stop" : 1594175466934,
+    "duration" : 46
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594175466687,
+      "stop" : 1594175466707,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594175467140,
+      "stop" : 1594175467140,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "A股获取F10财报信息_ts为异常"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10getEarningsinfo"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getEarningsinfo"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getEarningsinfo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d830210d1d2abb2.json",
+  "parameterValues" : [ ]
+}

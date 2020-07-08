@@ -1,0 +1,123 @@
+{
+  "uid" : "706d8133419627ad",
+  "name" : "test_Astock_F10getIncomeStatementData_tsError",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getIncomeStatementData.TestAstockF10getIncomeStatementData#test_Astock_F10getIncomeStatementData_tsError",
+  "historyId" : "018685a6b0adf29c898526a1ae315b64",
+  "time" : {
+    "start" : 1594198673451,
+    "stop" : 1594198673491,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198672594,
+      "stop" : 1594198672611,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198674264,
+      "stop" : 1594198674264,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "A股F10获取利润表详情页数据_ts为错误"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10getIncomeStatementData"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getIncomeStatementData"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getIncomeStatementData"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "88cb7fb80f998420",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177048229,
+        "stop" : 1594177048273,
+        "duration" : 44
+      }
+    }, {
+      "uid" : "3c77a73801157f5d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176787283,
+        "stop" : 1594176787325,
+        "duration" : 42
+      }
+    }, {
+      "uid" : "bcf39fff45ab64ea",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176334075,
+        "stop" : 1594176334120,
+        "duration" : 45
+      }
+    }, {
+      "uid" : "e25a0d5c736ccf32",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175467387,
+        "stop" : 1594175467428,
+        "duration" : 41
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "706d8133419627ad.json",
+  "parameterValues" : [ ]
+}

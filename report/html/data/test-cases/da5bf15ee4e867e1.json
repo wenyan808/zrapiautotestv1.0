@@ -1,0 +1,123 @@
+{
+  "uid" : "da5bf15ee4e867e1",
+  "name" : "test_Astock_dividents_list_tsNone",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_dividends_list.TestAstockDividentsList#test_Astock_dividents_list_tsNone",
+  "historyId" : "888db808c1955840fbb6a75c8b5e9ed0",
+  "time" : {
+    "start" : 1594198674439,
+    "stop" : 1594198674471,
+    "duration" : 32
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198674267,
+      "stop" : 1594198674285,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198674960,
+      "stop" : 1594198674960,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "分红派息-详情页"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_dividends_list"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockDividentsList"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_dividends_list"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "5820be41a9822c6a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177049291,
+        "stop" : 1594177049326,
+        "duration" : 35
+      }
+    }, {
+      "uid" : "790e562d45237824",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176788288,
+        "stop" : 1594176788324,
+        "duration" : 36
+      }
+    }, {
+      "uid" : "f4800f30a735ae91",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176335139,
+        "stop" : 1594176335181,
+        "duration" : 42
+      }
+    }, {
+      "uid" : "332874f5b207df4b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175468373,
+        "stop" : 1594175468410,
+        "duration" : 37
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "da5bf15ee4e867e1.json",
+  "parameterValues" : [ ]
+}

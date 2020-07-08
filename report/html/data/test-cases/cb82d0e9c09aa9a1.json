@@ -1,0 +1,124 @@
+{
+  "uid" : "cb82d0e9c09aa9a1",
+  "name" : "test_dayKline_SZshare_Onlyvalue_startTime",
+  "fullName" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_SZshare.TestDayKlineSZshare#test_dayKline_SZshare_Onlyvalue_startTime",
+  "historyId" : "3fcd12b158a756723f2fce0df50f42c4",
+  "time" : {
+    "start" : 1594198690018,
+    "stop" : 1594198690053,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198688660,
+      "stop" : 1594198688677,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198690092,
+      "stop" : 1594198690092,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "日K查询_SZ个股_只传值startTime"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.DayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_DayKline_SZshare"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDayKlineSZshare"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_SZshare"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "33b8bcc3ffe342d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177066168,
+        "stop" : 1594177066206,
+        "duration" : 38
+      }
+    }, {
+      "uid" : "fa2ef43989bc7253",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176803651,
+        "stop" : 1594176803686,
+        "duration" : 35
+      }
+    }, {
+      "uid" : "274ec1d9db7acaef",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176352238,
+        "stop" : 1594176352286,
+        "duration" : 48
+      }
+    }, {
+      "uid" : "be08bd76b178deb8",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594175485502,
+        "stop" : 1594175485539,
+        "duration" : 37
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cb82d0e9c09aa9a1.json",
+  "parameterValues" : [ ]
+}

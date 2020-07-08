@@ -1,0 +1,123 @@
+{
+  "uid" : "3308147e4fff90",
+  "name" : "test_hs",
+  "fullName" : "TestCase.MarketQuotation.test_conceptlist.TestClass#test_hs",
+  "historyId" : "e72ccfb55198c3784b009c3c94f6f0e2",
+  "time" : {
+    "start" : 1594198662656,
+    "stop" : 1594198662699,
+    "duration" : 43
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198662628,
+      "stop" : 1594198662656,
+      "duration" : 28
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198662794,
+      "stop" : 1594198662794,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "查询概念板块行情列表数据_HS"
+  }, {
+    "name" : "feature",
+    "value" : "板快行情"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.MarketQuotation"
+  }, {
+    "name" : "suite",
+    "value" : "test_conceptlist"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestClass"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.MarketQuotation.test_conceptlist"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "6c5f82a76c9488fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177040582,
+        "stop" : 1594177040623,
+        "duration" : 41
+      }
+    }, {
+      "uid" : "ecad334d868eb8f4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176779581,
+        "stop" : 1594176779625,
+        "duration" : 44
+      }
+    }, {
+      "uid" : "9c6020623541d7de",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176325991,
+        "stop" : 1594176326037,
+        "duration" : 46
+      }
+    }, {
+      "uid" : "b018fee3ecf68100",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175459568,
+        "stop" : 1594175459609,
+        "duration" : 41
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3308147e4fff90.json",
+  "parameterValues" : [ ]
+}

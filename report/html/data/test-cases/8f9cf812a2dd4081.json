@@ -1,0 +1,124 @@
+{
+  "uid" : "8f9cf812a2dd4081",
+  "name" : "test_Astock_F10_briefing_codeNone",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_notice.TestAstockF10Briefing#test_Astock_F10_briefing_codeNone",
+  "historyId" : "c44d0af0b75a7bca73671a83d338855f",
+  "time" : {
+    "start" : 1594198677961,
+    "stop" : 1594198677997,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198677733,
+      "stop" : 1594198677750,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198678116,
+      "stop" : 1594198678116,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "个股相关分红派息公告查询_code为空"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_notice"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10Briefing"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_notice"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c411ce64c80bcbb7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177052836,
+        "stop" : 1594177052871,
+        "duration" : 35
+      }
+    }, {
+      "uid" : "3c758ee7ffe57dac",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176791398,
+        "stop" : 1594176791434,
+        "duration" : 36
+      }
+    }, {
+      "uid" : "3bc8621b0cbe7cb1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176338992,
+        "stop" : 1594176339029,
+        "duration" : 37
+      }
+    }, {
+      "uid" : "3ecdaf40534abc96",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594175471797,
+        "stop" : 1594175471834,
+        "duration" : 37
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8f9cf812a2dd4081.json",
+  "parameterValues" : [ ]
+}

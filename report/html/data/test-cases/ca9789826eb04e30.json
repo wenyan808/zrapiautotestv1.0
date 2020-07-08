@@ -1,0 +1,123 @@
+{
+  "uid" : "ca9789826eb04e30",
+  "name" : "test_Astock_F10getIncomeStatementData_pageSizeNone",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getIncomeStatementData.TestAstockF10getIncomeStatementData#test_Astock_F10getIncomeStatementData_pageSizeNone",
+  "historyId" : "388a8120b5395b6e763d40c619dfbaba",
+  "time" : {
+    "start" : 1594198673727,
+    "stop" : 1594198673768,
+    "duration" : 41
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198672594,
+      "stop" : 1594198672611,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198674264,
+      "stop" : 1594198674264,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "A股F10获取利润表详情页数据_pageSize为空"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10getIncomeStatementData"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getIncomeStatementData"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getIncomeStatementData"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "16d349458c82c616",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177048508,
+        "stop" : 1594177048552,
+        "duration" : 44
+      }
+    }, {
+      "uid" : "967e6264c3a3c776",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176787550,
+        "stop" : 1594176787589,
+        "duration" : 39
+      }
+    }, {
+      "uid" : "2c7da328ffb6ce19",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176334361,
+        "stop" : 1594176334404,
+        "duration" : 43
+      }
+    }, {
+      "uid" : "24e0a9f0a8cf1051",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175467651,
+        "stop" : 1594175467692,
+        "duration" : 41
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ca9789826eb04e30.json",
+  "parameterValues" : [ ]
+}

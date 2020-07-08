@@ -1,0 +1,123 @@
+{
+  "uid" : "1ecea9767b320d88",
+  "name" : "test_Astock_F10getIncomeStatementData_typeOf4",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getIncomeStatementData.TestAstockF10getIncomeStatementData#test_Astock_F10getIncomeStatementData_typeOf4",
+  "historyId" : "8e2749c1368de16fc2276ca4e896c038",
+  "time" : {
+    "start" : 1594198674169,
+    "stop" : 1594198674215,
+    "duration" : 46
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198672594,
+      "stop" : 1594198672611,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198674264,
+      "stop" : 1594198674264,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "A股F10获取利润表详情页数据_type三季度"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10getIncomeStatementData"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getIncomeStatementData"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getIncomeStatementData"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "7054c50331b1c4a2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177048957,
+        "stop" : 1594177048997,
+        "duration" : 40
+      }
+    }, {
+      "uid" : "3dffc8739fd6521a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176787988,
+        "stop" : 1594176788025,
+        "duration" : 37
+      }
+    }, {
+      "uid" : "8d97bb4bb3969de4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176334813,
+        "stop" : 1594176334857,
+        "duration" : 44
+      }
+    }, {
+      "uid" : "abf8fbf12b079126",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175468094,
+        "stop" : 1594175468135,
+        "duration" : 41
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1ecea9767b320d88.json",
+  "parameterValues" : [ ]
+}

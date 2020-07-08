@@ -1,0 +1,89 @@
+{
+  "uid" : "8bf604acce47b6fb",
+  "name" : "test_newdayKline_HKtape_tsotherstring",
+  "fullName" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_HKtape.TestNewdayKlineHKtape#test_newdayKline_HKtape_tsotherstring",
+  "historyId" : "be3d87debc8c6659c0d932b92377c117",
+  "time" : {
+    "start" : 1594176811493,
+    "stop" : 1594176811531,
+    "duration" : 38
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594176810992,
+      "stop" : 1594176811013,
+      "duration" : 21
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594176811809,
+      "stop" : 1594176811809,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "最新日K_HK大盘_ts为其他string"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_NewdayKline_HKtape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewdayKlineHKtape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "19348-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_HKtape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8bf604acce47b6fb.json",
+  "parameterValues" : [ ]
+}

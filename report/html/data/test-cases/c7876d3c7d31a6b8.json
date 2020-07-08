@@ -1,0 +1,89 @@
+{
+  "uid" : "c7876d3c7d31a6b8",
+  "name" : "test_fivedayKlinev2_UStape",
+  "fullName" : "TestCase.StockQuotation.KLine.FivedayKlineV2.test_FivedayKlineV2_UStape.TestFivedayKlinev2UStape#test_fivedayKlinev2_UStape",
+  "historyId" : "c45abca3b7b003ff56ff1dff78e499a4",
+  "time" : {
+    "start" : 1594176358644,
+    "stop" : 1594176358676,
+    "duration" : 32
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594176358619,
+      "stop" : 1594176358643,
+      "duration" : 24
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594176358676,
+      "stop" : 1594176358677,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "五日查询_优化版本 Version 2.0_US大盘"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.FivedayKlineV2"
+  }, {
+    "name" : "suite",
+    "value" : "test_FivedayKlineV2_UStape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFivedayKlinev2UStape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "19992-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.FivedayKlineV2.test_FivedayKlineV2_UStape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c7876d3c7d31a6b8.json",
+  "parameterValues" : [ ]
+}

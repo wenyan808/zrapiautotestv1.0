@@ -1,0 +1,124 @@
+{
+  "uid" : "fe467c8c072997a9",
+  "name" : "test_Chasesclinchdeal_UStape",
+  "fullName" : "TestCase.StockQuotation.KLine.test_Chasesclinchdeal.TestChasesClinchDeal#test_Chasesclinchdeal_UStape",
+  "historyId" : "0499c485110695db8790754abaafb77b",
+  "time" : {
+    "start" : 1594198680147,
+    "stop" : 1594198680187,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198680045,
+      "stop" : 1594198680070,
+      "duration" : 25
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198680463,
+      "stop" : 1594198680463,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "查询逐笔成交_US大盘"
+  }, {
+    "name" : "feature",
+    "value" : "逐笔成交"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine"
+  }, {
+    "name" : "suite",
+    "value" : "test_Chasesclinchdeal"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestChasesClinchDeal"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.test_Chasesclinchdeal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "eea3d9c1fb03da7a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177055800,
+        "stop" : 1594177055844,
+        "duration" : 44
+      }
+    }, {
+      "uid" : "8120506c606bef22",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176793365,
+        "stop" : 1594176793405,
+        "duration" : 40
+      }
+    }, {
+      "uid" : "5e87ae6590f38888",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176341457,
+        "stop" : 1594176341499,
+        "duration" : 42
+      }
+    }, {
+      "uid" : "1f246f371089c22",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594175473737,
+        "stop" : 1594175473778,
+        "duration" : 41
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fe467c8c072997a9.json",
+  "parameterValues" : [ ]
+}

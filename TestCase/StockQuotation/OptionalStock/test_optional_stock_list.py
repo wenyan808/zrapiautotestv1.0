@@ -73,5 +73,5 @@ class TestOptionalStockList:
     #     # assert_data(response, '000101', 'token不能为空')
 
 
-if __name__ == '__main__':
-    pytest.main()
+# if __name__ == '__main__':
+#     pytest.main()

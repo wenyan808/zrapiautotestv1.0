@@ -1,0 +1,89 @@
+{
+  "uid" : "7bc238ddfcbf0b2a",
+  "name" : "test_Astock_F10financial_report_tsException",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astcok_F10financial_report.TestAstockF10financialreport#test_Astock_F10financial_report_tsException",
+  "historyId" : "e40d8f8a4cd748f3fc4a3dc5d2f9a086",
+  "time" : {
+    "start" : 1594176329583,
+    "stop" : 1594176329649,
+    "duration" : 66
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594176329423,
+      "stop" : 1594176329445,
+      "duration" : 22
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594176329910,
+      "stop" : 1594176329910,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "A股获取F10财报信息_ts为异常"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astcok_F10financial_report"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10financialreport"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "19992-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astcok_F10financial_report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7bc238ddfcbf0b2a.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,91 @@
+{
+  "uid" : "81bef593ce95d372",
+  "name" : "test_newdayKline_SZtape_399006",
+  "fullName" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SZtape.TestNewdayKlineSZtape#test_newdayKline_SZtape_399006",
+  "historyId" : "38b205204d866a276a468c287e9c3b49",
+  "time" : {
+    "start" : 1594176363070,
+    "stop" : 1594176363097,
+    "duration" : 27
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'json'",
+  "statusTrace" : "self = <TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SZtape.TestNewdayKlineSZtape object at 0x131FA7B0>\n\n    @allure.story('最新日K_SZ大盘_399006')\n    def test_newdayKline_SZtape_399006(self):\n        response = zhuorui('k线', '最新日K_SZ大盘_399006')\n>       assert_data(response, '000000', 'ok')\n\nTestCase\\StockQuotation\\KLine\\NewdayKline\\test_NewdayKline_SZtape.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = None, code = '000000', msg = 'ok'\n\n    def assert_data(response: object, code: object, msg: object) -> object:\n>       assert code == response.json().get(\"code\")\nE       AttributeError: 'NoneType' object has no attribute 'json'\n\nCommon\\assertapi.py:2: AttributeError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594176363017,
+      "stop" : 1594176363036,
+      "duration" : 19
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594176363739,
+      "stop" : 1594176363739,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "最新日K_SZ大盘_399006"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_NewdayKline_SZtape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewdayKlineSZtape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "19992-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SZtape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "81bef593ce95d372.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,89 @@
+{
+  "uid" : "4e0a129e779017cb",
+  "name" : "test_gethistoryAktienfond_SH",
+  "fullName" : "TestCase.StockQuotation.KLine.test_Aktienfond.TestAktienfond#test_gethistoryAktienfond_SH",
+  "historyId" : "2d8b74b2bd5710a9dbabd1534f0efbe5",
+  "time" : {
+    "start" : 1594175473456,
+    "stop" : 1594175473530,
+    "duration" : 74
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594175472801,
+      "stop" : 1594175472825,
+      "duration" : 24
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594175473628,
+      "stop" : 1594175473628,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "股票资金"
+  }, {
+    "name" : "story",
+    "value" : "查询股票的历史资金数据_SH"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine"
+  }, {
+    "name" : "suite",
+    "value" : "test_Aktienfond"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAktienfond"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.test_Aktienfond"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4e0a129e779017cb.json",
+  "parameterValues" : [ ]
+}

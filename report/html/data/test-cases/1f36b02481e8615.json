@@ -1,0 +1,120 @@
+{
+  "uid" : "1f36b02481e8615",
+  "name" : "test_optional_stock_list_szhk",
+  "fullName" : "TestCase.StockQuotation.OptionalStock.test_optional_stock_list.TestOptionalStockList#test_optional_stock_list_szhk",
+  "historyId" : "46b719075ea4bee3e63d80de78737897",
+  "time" : {
+    "start" : 1594198704929,
+    "stop" : 1594198704967,
+    "duration" : 38
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198704748,
+      "stop" : 1594198704765,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198705131,
+      "stop" : 1594198705131,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "自选股股票列表_SZ&HK"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.OptionalStock"
+  }, {
+    "name" : "suite",
+    "value" : "test_optional_stock_list"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOptionalStockList"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.OptionalStock.test_optional_stock_list"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "43db671fb11c4eaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177082247,
+        "stop" : 1594177082289,
+        "duration" : 42
+      }
+    }, {
+      "uid" : "389e99adb9c6369a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176819543,
+        "stop" : 1594176819585,
+        "duration" : 42
+      }
+    }, {
+      "uid" : "583d3a60b988c206",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176369114,
+        "stop" : 1594176369163,
+        "duration" : 49
+      }
+    }, {
+      "uid" : "98b84d02e6ed6c8a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175500652,
+        "stop" : 1594175500697,
+        "duration" : 45
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1f36b02481e8615.json",
+  "parameterValues" : [ ]
+}

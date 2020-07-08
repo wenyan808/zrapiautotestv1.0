@@ -1,0 +1,89 @@
+{
+  "uid" : "1f4809449e3c703a",
+  "name" : "test_getCapitalFlowTime_US_Tendays",
+  "fullName" : "TestCase.StockQuotation.KLine.test_getCapitalFlowTime.TestgetCapitalFlowTime#test_getCapitalFlowTime_US_Tendays",
+  "historyId" : "87cbb9c42dbd12c38c28a1994ef8d1e8",
+  "time" : {
+    "start" : 1594175474984,
+    "stop" : 1594175475081,
+    "duration" : 97
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594175474762,
+      "stop" : 1594175474784,
+      "duration" : 22
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594175475474,
+      "stop" : 1594175475474,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "按时间查询资金统计数据_US10天"
+  }, {
+    "name" : "feature",
+    "value" : "查询资金统计"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine"
+  }, {
+    "name" : "suite",
+    "value" : "test_getCapitalFlowTime"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestgetCapitalFlowTime"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.test_getCapitalFlowTime"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1f4809449e3c703a.json",
+  "parameterValues" : [ ]
+}

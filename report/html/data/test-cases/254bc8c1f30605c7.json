@@ -1,0 +1,91 @@
+{
+  "uid" : "254bc8c1f30605c7",
+  "name" : "test_dayKline_SZtape_Onlyvalue_type",
+  "fullName" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_SZtape.TestDayKlineSZtape#test_dayKline_SZtape_Onlyvalue_type",
+  "historyId" : "8b368c5c40557a6cb2cb8461e1878dbb",
+  "time" : {
+    "start" : 1594175488862,
+    "stop" : 1594175488900,
+    "duration" : 38
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <TestCase.StockQuotation.KLine.DayKline.test_DayKline_SZtape.TestDayKlineSZtape object at 0x1307EDB0>\n\n    @allure.story('日K查询_SZ大盘_只传值type')\n    def test_dayKline_SZtape_Onlyvalue_type(self):\n        response = zhuorui('k线', '日K查询_SZ大盘_只传值type')\n>       assert_data(response, '000103', 'adjType is empty !')\n\nTestCase\\StockQuotation\\KLine\\DayKline\\test_DayKline_SZtape.py:203: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [200]>, code = '000103', msg = 'adjType is empty !'\n\n    def assert_data(response: object, code: object, msg: object) -> object:\n        assert code == response.json().get(\"code\")\n>       assert msg == response.json().get(\"msg\")\nE       AssertionError\n\nCommon\\assertapi.py:3: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594175485597,
+      "stop" : 1594175485617,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594175489092,
+      "stop" : 1594175489092,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "日K查询_SZ大盘_只传值type"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.DayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_DayKline_SZtape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDayKlineSZtape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_SZtape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "254bc8c1f30605c7.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,123 @@
+{
+  "uid" : "98649f267c72c283",
+  "name" : "test_hk1",
+  "fullName" : "TestCase.MarketQuotation.test_stockplanklist.TestClass#test_hk1",
+  "historyId" : "20dfc0cc3c33a9868f49a6060158ede9",
+  "time" : {
+    "start" : 1594198665038,
+    "stop" : 1594198665093,
+    "duration" : 55
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198663798,
+      "stop" : 1594198663816,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198665596,
+      "stop" : 1594198665596,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "全部股板行情数据_HK1:涨跌幅"
+  }, {
+    "name" : "feature",
+    "value" : "板快行情"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.MarketQuotation"
+  }, {
+    "name" : "suite",
+    "value" : "test_stockplanklist"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestClass"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.MarketQuotation.test_stockplanklist"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e1d530ffc7fd81b0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177043102,
+        "stop" : 1594177043167,
+        "duration" : 65
+      }
+    }, {
+      "uid" : "12ce4f9e845ddfd8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176782322,
+        "stop" : 1594176782396,
+        "duration" : 74
+      }
+    }, {
+      "uid" : "86aa1b3a497ac76e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176328630,
+        "stop" : 1594176328693,
+        "duration" : 63
+      }
+    }, {
+      "uid" : "f333ae826be2eeb8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175462134,
+        "stop" : 1594175462201,
+        "duration" : 67
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "98649f267c72c283.json",
+  "parameterValues" : [ ]
+}

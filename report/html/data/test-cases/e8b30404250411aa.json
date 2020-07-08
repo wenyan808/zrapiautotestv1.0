@@ -1,0 +1,89 @@
+{
+  "uid" : "e8b30404250411aa",
+  "name" : "test_Astock_newstcok_listedpage_onlycurrentPage",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_newstcok_listedpage.TestAstockNewstcokListpage#test_Astock_newstcok_listedpage_onlycurrentPage",
+  "historyId" : "7f8be9abb41be3a50e4e4b8f002af3ba",
+  "time" : {
+    "start" : 1594177051843,
+    "stop" : 1594177051905,
+    "duration" : 62
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594177051235,
+      "stop" : 1594177051257,
+      "duration" : 22
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594177052485,
+      "stop" : 1594177052486,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "新股日历分页获取已上市列表_只传currentPage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_newstcok_listedpage"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockNewstcokListpage"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "5832-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_newstcok_listedpage"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e8b30404250411aa.json",
+  "parameterValues" : [ ]
+}

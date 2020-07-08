@@ -1,0 +1,123 @@
+{
+  "uid" : "f386996e1507f183",
+  "name" : "test_newdayKline_SHshare_typeOf1",
+  "fullName" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SHshare.TestNewdayKlineSHshare#test_newdayKline_SHshare_typeOf1",
+  "historyId" : "3fa82572c53eb2a66bfc3f06a0e3011c",
+  "time" : {
+    "start" : 1594198697843,
+    "stop" : 1594198697881,
+    "duration" : 38
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198697740,
+      "stop" : 1594198697758,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198698377,
+      "stop" : 1594198698377,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "最新日K_SH个股_type类型为1指数"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_NewdayKline_SHshare"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewdayKlineSHshare"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SHshare"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2634a5c853542fa8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177074477,
+        "stop" : 1594177074517,
+        "duration" : 40
+      }
+    }, {
+      "uid" : "dea5cfdaef742930",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176811919,
+        "stop" : 1594176811958,
+        "duration" : 39
+      }
+    }, {
+      "uid" : "cfdeb0b3c21abb2c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176361033,
+        "stop" : 1594176361076,
+        "duration" : 43
+      }
+    }, {
+      "uid" : "8a927d91983c98cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175493931,
+        "stop" : 1594175493970,
+        "duration" : 39
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f386996e1507f183.json",
+  "parameterValues" : [ ]
+}

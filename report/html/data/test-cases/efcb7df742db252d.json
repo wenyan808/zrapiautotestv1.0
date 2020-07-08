@@ -1,0 +1,123 @@
+{
+  "uid" : "efcb7df742db252d",
+  "name" : "test_Astock_F10getIncomeStatementData_currentPageException",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getIncomeStatementData.TestAstockF10getIncomeStatementData#test_Astock_F10getIncomeStatementData_currentPageException",
+  "historyId" : "c7a037153ab8bfd85879e20cf27afc07",
+  "time" : {
+    "start" : 1594198673930,
+    "stop" : 1594198673966,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198672594,
+      "stop" : 1594198672611,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198674264,
+      "stop" : 1594198674264,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "A股F10获取利润表详情页数据_SZ"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10getIncomeStatementData"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getIncomeStatementData"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getIncomeStatementData"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "d0f492c166bbaf9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177048715,
+        "stop" : 1594177048755,
+        "duration" : 40
+      }
+    }, {
+      "uid" : "fc8f384f6be4dbd2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176787759,
+        "stop" : 1594176787799,
+        "duration" : 40
+      }
+    }, {
+      "uid" : "5775e063dbd633e0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176334588,
+        "stop" : 1594176334632,
+        "duration" : 44
+      }
+    }, {
+      "uid" : "7d9b724884edccdd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175467854,
+        "stop" : 1594175467896,
+        "duration" : 42
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "efcb7df742db252d.json",
+  "parameterValues" : [ ]
+}

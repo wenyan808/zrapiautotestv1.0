@@ -1,0 +1,123 @@
+{
+  "uid" : "d91327810635f1d5",
+  "name" : "test_KeywordSearch_chinesetape",
+  "fullName" : "TestCase.StockQuotation.KLine.test_keywordSearch.TestKeywordSearch#test_KeywordSearch_chinesetape",
+  "historyId" : "a20e6e7dfc54df9e73a72d6969b339b6",
+  "time" : {
+    "start" : 1594198682306,
+    "stop" : 1594198682342,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198681973,
+      "stop" : 1594198681994,
+      "duration" : 21
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198682342,
+      "stop" : 1594198682342,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "关键字查询股票_中文大盘"
+  }, {
+    "name" : "feature",
+    "value" : "搜索"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine"
+  }, {
+    "name" : "suite",
+    "value" : "test_keywordSearch"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestKeywordSearch"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.test_keywordSearch"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "4c0581a1a86fb8ec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177058099,
+        "stop" : 1594177058137,
+        "duration" : 38
+      }
+    }, {
+      "uid" : "7935bd28787159ae",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176795617,
+        "stop" : 1594176795654,
+        "duration" : 37
+      }
+    }, {
+      "uid" : "e292df54883914e8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176343824,
+        "stop" : 1594176343864,
+        "duration" : 40
+      }
+    }, {
+      "uid" : "6c2e26d900ed21b5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175476239,
+        "stop" : 1594175476277,
+        "duration" : 38
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d91327810635f1d5.json",
+  "parameterValues" : [ ]
+}

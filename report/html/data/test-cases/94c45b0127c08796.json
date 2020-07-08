@@ -1,0 +1,123 @@
+{
+  "uid" : "94c45b0127c08796",
+  "name" : "test_Astock_F10getCashflowDeta_pageSizeException",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getCashflowDeta.TestAstockF10getCashflowDetail#test_Astock_F10getCashflowDeta_pageSizeException",
+  "historyId" : "60ebf764957afbc9809284699d6e7596",
+  "time" : {
+    "start" : 1594198671250,
+    "stop" : 1594198671290,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198670050,
+      "stop" : 1594198670069,
+      "duration" : 19
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198672162,
+      "stop" : 1594198672162,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "A股F10获取现金流量报表详情数据_pageSize为异常"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10getCashflowDeta"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getCashflowDetail"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getCashflowDeta"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "d43c3fca6a6af934",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177047099,
+        "stop" : 1594177047135,
+        "duration" : 36
+      }
+    }, {
+      "uid" : "3b37d5de631a74bd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176786128,
+        "stop" : 1594176786164,
+        "duration" : 36
+      }
+    }, {
+      "uid" : "8e4039e5b730028a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176332902,
+        "stop" : 1594176332939,
+        "duration" : 37
+      }
+    }, {
+      "uid" : "326d07806f005d44",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175466223,
+        "stop" : 1594175466258,
+        "duration" : 35
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "94c45b0127c08796.json",
+  "parameterValues" : [ ]
+}

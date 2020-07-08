@@ -1,0 +1,123 @@
+{
+  "uid" : "a0020aafaedf5f35",
+  "name" : "test_Astock_newstcok_listedpage_onlypageSize",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_newstcok_listedpage.TestAstockNewstcokListpage#test_Astock_newstcok_listedpage_onlypageSize",
+  "historyId" : "a6ba9ee761034dc2d380489872e9840e",
+  "time" : {
+    "start" : 1594198677201,
+    "stop" : 1594198677258,
+    "duration" : 57
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198676301,
+      "stop" : 1594198676319,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198677636,
+      "stop" : 1594198677636,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "新股日历分页获取已上市列表_只传pageSize"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_newstcok_listedpage"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockNewstcokListpage"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_newstcok_listedpage"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "44d80af6f947f758",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177052022,
+        "stop" : 1594177052084,
+        "duration" : 62
+      }
+    }, {
+      "uid" : "3b30b039cf996850",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176790598,
+        "stop" : 1594176790660,
+        "duration" : 62
+      }
+    }, {
+      "uid" : "b95edd5b8de6c21f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176338179,
+        "stop" : 1594176338245,
+        "duration" : 66
+      }
+    }, {
+      "uid" : "560625cdfabe6974",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175470912,
+        "stop" : 1594175470979,
+        "duration" : 67
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a0020aafaedf5f35.json",
+  "parameterValues" : [ ]
+}

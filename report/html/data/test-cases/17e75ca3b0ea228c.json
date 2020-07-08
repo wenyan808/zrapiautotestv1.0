@@ -1,0 +1,89 @@
+{
+  "uid" : "17e75ca3b0ea228c",
+  "name" : "test_Chasesclinchdeal_HKshare",
+  "fullName" : "TestCase.StockQuotation.KLine.test_Chasesclinchdeal.TestChasesClinchDeal#test_Chasesclinchdeal_HKshare",
+  "historyId" : "f6afef4b248d2cd6ac3661658bd6d45e",
+  "time" : {
+    "start" : 1594176341682,
+    "stop" : 1594176341726,
+    "duration" : 44
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594176341354,
+      "stop" : 1594176341374,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594176341727,
+      "stop" : 1594176341727,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "查询逐笔成交_HK个股"
+  }, {
+    "name" : "feature",
+    "value" : "逐笔成交"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine"
+  }, {
+    "name" : "suite",
+    "value" : "test_Chasesclinchdeal"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestChasesClinchDeal"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "19992-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.test_Chasesclinchdeal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "17e75ca3b0ea228c.json",
+  "parameterValues" : [ ]
+}

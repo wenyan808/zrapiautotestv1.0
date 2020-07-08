@@ -1,0 +1,124 @@
+{
+  "uid" : "f77138e188bef717",
+  "name" : "test_newdayKline_USshare",
+  "fullName" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_USshare.TestNewdayKlineUSshare#test_newdayKline_USshare",
+  "historyId" : "fcc5da89afc605799df8d656c72a8244",
+  "time" : {
+    "start" : 1594198700288,
+    "stop" : 1594198700321,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198700269,
+      "stop" : 1594198700287,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198700890,
+      "stop" : 1594198700890,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "最新日K_US个股"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_NewdayKline_USshare"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewdayKlineUSshare"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_USshare"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f3ccb361a648b6bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177077083,
+        "stop" : 1594177077109,
+        "duration" : 26
+      }
+    }, {
+      "uid" : "f7ee625ccfb791d6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176814497,
+        "stop" : 1594176814522,
+        "duration" : 25
+      }
+    }, {
+      "uid" : "30644406ea49b9e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176363773,
+        "stop" : 1594176363803,
+        "duration" : 30
+      }
+    }, {
+      "uid" : "28d3cefd15198bea",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'json'",
+      "time" : {
+        "start" : 1594175495389,
+        "stop" : 1594175495415,
+        "duration" : 26
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f77138e188bef717.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,89 @@
+{
+  "uid" : "d1e971053bda9ae5",
+  "name" : "test_candleMinute_1min_HK",
+  "fullName" : "TestCase.StockQuotation.KLine.test_candleMinuteV2_1Min.TestCandleMinute1Min#test_candleMinute_1min_HK",
+  "historyId" : "4a2e1a7a185b11be35b3695ba2fde75f",
+  "time" : {
+    "start" : 1594176793905,
+    "stop" : 1594176793955,
+    "duration" : 50
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594176793882,
+      "stop" : 1594176793904,
+      "duration" : 22
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594176794122,
+      "stop" : 1594176794122,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "蜡烛图1分钟查询_优化版本 Version 2.0_HK"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine"
+  }, {
+    "name" : "suite",
+    "value" : "test_candleMinuteV2_1Min"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCandleMinute1Min"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "19348-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.test_candleMinuteV2_1Min"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d1e971053bda9ae5.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,91 @@
+{
+  "uid" : "11896ad87d492dd4",
+  "name" : "test_newdayKline_SHshare_onlyts",
+  "fullName" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_HKshare.TestNewdayKlineHKshare#test_newdayKline_SHshare_onlyts",
+  "historyId" : "af3a4f2166c47a47c467d8185aee59ae",
+  "time" : {
+    "start" : 1594175493518,
+    "stop" : 1594175493556,
+    "duration" : 38
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_HKshare.TestNewdayKlineHKshare object at 0x12DA5DF0>\n\n    @allure.story('最新日K_HK个股_只传ts')\n    def test_newdayKline_SHshare_onlyts(self):\n        response = zhuorui('k线', '最新日K_HK个股_只传ts')\n>       assert_data(response, '000103', 'code is not null')\n\nTestCase\\StockQuotation\\KLine\\NewdayKline\\test_NewdayKline_HKshare.py:89: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [200]>, code = '000103', msg = 'code is not null'\n\n    def assert_data(response: object, code: object, msg: object) -> object:\n        assert code == response.json().get(\"code\")\n>       assert msg == response.json().get(\"msg\")\nE       AssertionError\n\nCommon\\assertapi.py:3: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594175493003,
+      "stop" : 1594175493024,
+      "duration" : 21
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594175493734,
+      "stop" : 1594175493734,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "最新日K_HK个股_只传ts"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_NewdayKline_HKshare"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewdayKlineHKshare"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_HKshare"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "11896ad87d492dd4.json",
+  "parameterValues" : [ ]
+}

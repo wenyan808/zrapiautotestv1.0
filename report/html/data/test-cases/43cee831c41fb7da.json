@@ -1,0 +1,94 @@
+{
+  "uid" : "43cee831c41fb7da",
+  "name" : "test_optional_stock_list_all_notoken",
+  "fullName" : "TestCase.StockQuotation.OptionalStock.test_optional_stock_list.TestOptionalStockList#test_optional_stock_list_all_notoken",
+  "historyId" : "94550935a9405a70a6fc9d7a6d67369d",
+  "time" : {
+    "start" : 1594175500890,
+    "stop" : 1594175500934,
+    "duration" : 44
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <TestCase.StockQuotation.OptionalStock.test_optional_stock_list.TestOptionalStockList object at 0x12AFCCB0>\n\n    @allure.story('自选股股票列表无token_All')\n    def test_optional_stock_list_all_notoken(self):\n        response = zhuorui('自选股', '自选股股票列表无token_All')\n        # print(response.json())\n>       assert_data(response, '000101', 'token不能为空')\n\nTestCase\\StockQuotation\\OptionalStock\\test_optional_stock_list.py:73: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [200]>, code = '000101', msg = 'token不能为空'\n\n    def assert_data(response: object, code: object, msg: object) -> object:\n>       assert code == response.json().get(\"code\")\nE       AssertionError\n\nCommon\\assertapi.py:2: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594175500444,
+      "stop" : 1594175500464,
+      "duration" : 20
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594175500944,
+      "stop" : 1594175500944,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "自选股股票列表无token_All"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.OptionalStock"
+  }, {
+    "name" : "suite",
+    "value" : "test_optional_stock_list"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOptionalStockList"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.OptionalStock.test_optional_stock_list"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "43cee831c41fb7da.json",
+  "parameterValues" : [ ]
+}

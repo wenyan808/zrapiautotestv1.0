@@ -1,0 +1,123 @@
+{
+  "uid" : "ab89051e1da0d440",
+  "name" : "test_Astock_F10getAssets_liabilities_detail_SH",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getAssets_liabilities_detail.TestAstockF10getAssetsLiabilitiesDetail#test_Astock_F10getAssets_liabilities_detail_SH",
+  "historyId" : "a40b36a88992619801db2befccd79a9e",
+  "time" : {
+    "start" : 1594198669080,
+    "stop" : 1594198669120,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198667643,
+      "stop" : 1594198667664,
+      "duration" : 21
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198670044,
+      "stop" : 1594198670044,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "A股F10获取资产负债详情页数据_SH"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10getAssets_liabilities_detail"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getAssetsLiabilitiesDetail"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getAssets_liabilities_detail"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e541c355e05f76fc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177045614,
+        "stop" : 1594177045655,
+        "duration" : 41
+      }
+    }, {
+      "uid" : "7c842c40cb0a92e4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176784649,
+        "stop" : 1594176784692,
+        "duration" : 43
+      }
+    }, {
+      "uid" : "99f621de90d24369",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176331321,
+        "stop" : 1594176331365,
+        "duration" : 44
+      }
+    }, {
+      "uid" : "4ed65b3eb117574d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175464776,
+        "stop" : 1594175464816,
+        "duration" : 40
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ab89051e1da0d440.json",
+  "parameterValues" : [ ]
+}

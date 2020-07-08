@@ -1,0 +1,123 @@
+{
+  "uid" : "7959510d7271ca6f",
+  "name" : "test_Astock_newstcok_listedpage_notoken",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_newstcok_listedpage.TestAstockNewstcokListpage#test_Astock_newstcok_listedpage_notoken",
+  "historyId" : "cfbaef29ca883f284f8a7fe5e24c87d8",
+  "time" : {
+    "start" : 1594198676379,
+    "stop" : 1594198676436,
+    "duration" : 57
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198676301,
+      "stop" : 1594198676319,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198677636,
+      "stop" : 1594198677636,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "新股日历分页获取已上市列表_token为0"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_newstcok_listedpage"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockNewstcokListpage"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_newstcok_listedpage"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c43b379fa3681ed4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177051322,
+        "stop" : 1594177051383,
+        "duration" : 61
+      }
+    }, {
+      "uid" : "89eac32f0146a9fc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176789877,
+        "stop" : 1594176789938,
+        "duration" : 61
+      }
+    }, {
+      "uid" : "fcfcc77b1fe9c713",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176337344,
+        "stop" : 1594176337437,
+        "duration" : 93
+      }
+    }, {
+      "uid" : "948793c9a27df743",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175470094,
+        "stop" : 1594175470194,
+        "duration" : 100
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7959510d7271ca6f.json",
+  "parameterValues" : [ ]
+}

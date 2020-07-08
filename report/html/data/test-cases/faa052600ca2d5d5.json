@@ -1,0 +1,124 @@
+{
+  "uid" : "faa052600ca2d5d5",
+  "name" : "test_NoticeAccessoryrefer_HK",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Notice_accessory_refer.TestNoticeAccessoryRefer#test_NoticeAccessoryrefer_HK",
+  "historyId" : "91ac2cc4ede17e10647a400c73e3a560",
+  "time" : {
+    "start" : 1594198679055,
+    "stop" : 1594198679077,
+    "duration" : 22
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'text'",
+  "statusTrace" : "self = <TestCase.StockQuotation.AstockRelevance.test_Notice_accessory_refer.TestNoticeAccessoryRefer object at 0x12DA7850>\n\n    @allure.story('公告附件查询_HK')\n    def test_NoticeAccessoryrefer_HK(self):\n        response = zhuorui('A股', '公告附件查询_HK')\n        # assert_data(response, '000000', 'ok')\n>       print(response.text)\nE       AttributeError: 'NoneType' object has no attribute 'text'\n\nTestCase\\StockQuotation\\AstockRelevance\\test_Notice_accessory_refer.py:18: AttributeError",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198679038,
+      "stop" : 1594198679055,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198679249,
+      "stop" : 1594198679249,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "公告附件查询_HK"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Notice_accessory_refer"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNoticeAccessoryRefer"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Notice_accessory_refer"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "afbe45abf8522f02",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'text'",
+      "time" : {
+        "start" : 1594177054660,
+        "stop" : 1594177054683,
+        "duration" : 23
+      }
+    }, {
+      "uid" : "82bc537b74b00e91",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'text'",
+      "time" : {
+        "start" : 1594176792358,
+        "stop" : 1594176792389,
+        "duration" : 31
+      }
+    }, {
+      "uid" : "e68893472f28c20f",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'text'",
+      "time" : {
+        "start" : 1594176340209,
+        "stop" : 1594176340235,
+        "duration" : 26
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "faa052600ca2d5d5.json",
+  "parameterValues" : [ ]
+}

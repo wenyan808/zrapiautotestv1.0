@@ -1,0 +1,123 @@
+{
+  "uid" : "fd1368c926ee5d7b",
+  "name" : "test_Astock_newstcok_listedpage_orderError",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_newstcok_listedpage.TestAstockNewstcokListpage#test_Astock_newstcok_listedpage_orderError",
+  "historyId" : "16d82db6505834e604935d58e776fdec",
+  "time" : {
+    "start" : 1594198677330,
+    "stop" : 1594198677366,
+    "duration" : 36
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198676301,
+      "stop" : 1594198676319,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198677636,
+      "stop" : 1594198677636,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "新股日历分页获取已上市列表_order为错误"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_newstcok_listedpage"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockNewstcokListpage"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_newstcok_listedpage"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "4720d43b175de3d8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177052159,
+        "stop" : 1594177052199,
+        "duration" : 40
+      }
+    }, {
+      "uid" : "f6d3eb06eb801cdd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176790743,
+        "stop" : 1594176790781,
+        "duration" : 38
+      }
+    }, {
+      "uid" : "36484f2f685f7133",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176338328,
+        "stop" : 1594176338366,
+        "duration" : 38
+      }
+    }, {
+      "uid" : "ebbf529adbfb001b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175471083,
+        "stop" : 1594175471119,
+        "duration" : 36
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fd1368c926ee5d7b.json",
+  "parameterValues" : [ ]
+}

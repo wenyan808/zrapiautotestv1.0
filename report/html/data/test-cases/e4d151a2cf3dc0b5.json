@@ -1,0 +1,89 @@
+{
+  "uid" : "e4d151a2cf3dc0b5",
+  "name" : "test_timeKlinev1_USshare",
+  "fullName" : "TestCase.StockQuotation.KLine.TimeShareV1.test_TimeSharev1_USshare.TestTimeKlinev1USshare#test_timeKlinev1_USshare",
+  "historyId" : "7ad6177419e4747cbd8afc9d62ae5960",
+  "time" : {
+    "start" : 1594176815914,
+    "stop" : 1594176815957,
+    "duration" : 43
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594176815888,
+      "stop" : 1594176815913,
+      "duration" : 25
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594176815957,
+      "stop" : 1594176815957,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "分时查询_US个股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.TimeShareV1"
+  }, {
+    "name" : "suite",
+    "value" : "test_TimeSharev1_USshare"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestTimeKlinev1USshare"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "19348-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.TimeShareV1.test_TimeSharev1_USshare"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e4d151a2cf3dc0b5.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,91 @@
+{
+  "uid" : "d134b11ffd0fb04",
+  "name" : "test_Astock_news_paging_query_pageSizeError",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_news_paging_query.TestAstockNewsPagingQuery#test_Astock_news_paging_query_pageSizeError",
+  "historyId" : "e5f4fdf2e17c97cae2f56f48193c5e47",
+  "time" : {
+    "start" : 1594175469837,
+    "stop" : 1594175469873,
+    "duration" : 36
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <TestCase.StockQuotation.AstockRelevance.test_Astock_news_paging_query.TestAstockNewsPagingQuery object at 0x12FAFF90>\n\n    @allure.story('个股新闻分页查询_pageSize为错误')\n    def test_Astock_news_paging_query_pageSizeError(self):\n        response = zhuorui('A股', '个股新闻分页查询_pageSize为错误')\n>       assert_data(response, '000000', 'ok')\n\nTestCase\\StockQuotation\\AstockRelevance\\test_Astock_news_paging_query.py:77: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [200]>, code = '000000', msg = 'ok'\n\n    def assert_data(response: object, code: object, msg: object) -> object:\n>       assert code == response.json().get(\"code\")\nE       AssertionError\n\nCommon\\assertapi.py:2: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594175469374,
+      "stop" : 1594175469395,
+      "duration" : 21
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594175470004,
+      "stop" : 1594175470004,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "个股新闻分页查询_pageSize为错误"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_news_paging_query"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockNewsPagingQuery"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_news_paging_query"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d134b11ffd0fb04.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,94 @@
+{
+  "uid" : "5ab3b4a9ffbf99bc",
+  "name" : "test_add_HK_notoken",
+  "fullName" : "TestCase.StockQuotation.OptionalStock.test_add_optional_stock.TestAddOptionalStock#test_add_HK_notoken",
+  "historyId" : "5653c0f9cf623cb9fdf1f3a512f0fd42",
+  "time" : {
+    "start" : 1594175499272,
+    "stop" : 1594175499325,
+    "duration" : 53
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <TestCase.StockQuotation.OptionalStock.test_add_optional_stock.TestAddOptionalStock object at 0x12AF55D0>\n\n    @allure.story('添加自选股无token_HK大盘')\n    def test_add_HK_notoken(self):\n        response = zhuorui('自选股', '添加自选股无token_HK大盘')\n        # print(response.json())\n>       assert_data(response, '000101', 'token不能为空')\n\nTestCase\\StockQuotation\\OptionalStock\\test_add_optional_stock.py:149: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [200]>, code = '000101', msg = 'token不能为空'\n\n    def assert_data(response: object, code: object, msg: object) -> object:\n>       assert code == response.json().get(\"code\")\nE       AssertionError\n\nCommon\\assertapi.py:2: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594175498375,
+      "stop" : 1594175498394,
+      "duration" : 19
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594175499391,
+      "stop" : 1594175499391,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "添加自选股无token_HK大盘"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.OptionalStock"
+  }, {
+    "name" : "suite",
+    "value" : "test_add_optional_stock"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAddOptionalStock"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.OptionalStock.test_add_optional_stock"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "5ab3b4a9ffbf99bc.json",
+  "parameterValues" : [ ]
+}

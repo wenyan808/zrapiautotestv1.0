@@ -1,0 +1,89 @@
+{
+  "uid" : "7d02faa11705b8c9",
+  "name" : "test_Astock_F10getAssets_liabilities_detail_Notoken",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getAssets_liabilities_detail.TestAstockF10getAssetsLiabilitiesDetail#test_Astock_F10getAssets_liabilities_detail_Notoken",
+  "historyId" : "fc0717f7954a0155dc071841dbcf117d",
+  "time" : {
+    "start" : 1594176784787,
+    "stop" : 1594176784831,
+    "duration" : 44
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594176784578,
+      "stop" : 1594176784603,
+      "duration" : 25
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594176785643,
+      "stop" : 1594176785643,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "A股F10获取资产负债详情页数据_token为0"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10getAssets_liabilities_detail"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getAssetsLiabilitiesDetail"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "19348-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getAssets_liabilities_detail"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7d02faa11705b8c9.json",
+  "parameterValues" : [ ]
+}

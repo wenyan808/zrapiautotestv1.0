@@ -1,0 +1,89 @@
+{
+  "uid" : "acddee1fa5a9d72",
+  "name" : "test_Astock_Company_executives_list_pageSizeError",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_Company_executives_list.TestAstockCompanyExecutivesList#test_Astock_Company_executives_list_pageSizeError",
+  "historyId" : "f8e557516aa0184b0211b30aa76aa991",
+  "time" : {
+    "start" : 1594176330525,
+    "stop" : 1594176330564,
+    "duration" : 39
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594176330036,
+      "stop" : 1594176330054,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594176330810,
+      "stop" : 1594176330810,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "公司高管列表-详情页_pageSize为错误"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_Company_executives_list"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockCompanyExecutivesList"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "19992-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_Company_executives_list"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "acddee1fa5a9d72.json",
+  "parameterValues" : [ ]
+}

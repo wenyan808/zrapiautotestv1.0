@@ -1,0 +1,120 @@
+{
+  "uid" : "ebb2e24471d3258",
+  "name" : "test_us",
+  "fullName" : "TestCase.MarketQuotation.test_situation.TestClass#test_us",
+  "historyId" : "7364bb57f4c872e802cdd2a4c964a975",
+  "time" : {
+    "start" : 1594198663650,
+    "stop" : 1594198663687,
+    "duration" : 37
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198663597,
+      "stop" : 1594198663613,
+      "duration" : 16
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198663796,
+      "stop" : 1594198663796,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "板快行情"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.MarketQuotation"
+  }, {
+    "name" : "suite",
+    "value" : "test_situation"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestClass"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.MarketQuotation.test_situation"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1b1905e90d50b364",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177041644,
+        "stop" : 1594177041680,
+        "duration" : 36
+      }
+    }, {
+      "uid" : "d2ca0e698a48c19e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176780783,
+        "stop" : 1594176780830,
+        "duration" : 47
+      }
+    }, {
+      "uid" : "eb4bd8e6a56814d5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176327171,
+        "stop" : 1594176327210,
+        "duration" : 39
+      }
+    }, {
+      "uid" : "dbbd7326e8124915",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175460651,
+        "stop" : 1594175460688,
+        "duration" : 37
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ebb2e24471d3258.json",
+  "parameterValues" : [ ]
+}

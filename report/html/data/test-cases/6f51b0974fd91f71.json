@@ -1,0 +1,123 @@
+{
+  "uid" : "6f51b0974fd91f71",
+  "name" : "test_dayKline_SHtape_endTime_ms",
+  "fullName" : "TestCase.StockQuotation.KLine.DayKline.test_DaayKline_SHtape.TestDayKlineSHtape#test_dayKline_SHtape_endTime_ms",
+  "historyId" : "5affa39e78d30ba41791b83d72f30acf",
+  "time" : {
+    "start" : 1594198683730,
+    "stop" : 1594198684104,
+    "duration" : 374
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198682346,
+      "stop" : 1594198682364,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198685151,
+      "stop" : 1594198685151,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "日K查询_SH大盘_endTime为ms"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.DayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_DaayKline_SHtape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDayKlineSHtape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.DayKline.test_DaayKline_SHtape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "691661a3d291c9b0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177059551,
+        "stop" : 1594177059914,
+        "duration" : 363
+      }
+    }, {
+      "uid" : "55bd507711e03395",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176797081,
+        "stop" : 1594176797499,
+        "duration" : 418
+      }
+    }, {
+      "uid" : "4aa6fa06df9193ff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176345323,
+        "stop" : 1594176345693,
+        "duration" : 370
+      }
+    }, {
+      "uid" : "65e039bbea3bb89b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175478236,
+        "stop" : 1594175478615,
+        "duration" : 379
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6f51b0974fd91f71.json",
+  "parameterValues" : [ ]
+}

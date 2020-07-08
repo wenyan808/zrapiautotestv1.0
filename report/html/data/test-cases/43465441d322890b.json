@@ -1,0 +1,124 @@
+{
+  "uid" : "43465441d322890b",
+  "name" : "test_dayKline_USshare_Onlyvalue_type",
+  "fullName" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_USshare.TestDayKlineUSshare#test_dayKline_USshare_Onlyvalue_type",
+  "historyId" : "fe2eec574371731503af58eea48ae3a0",
+  "time" : {
+    "start" : 1594198693804,
+    "stop" : 1594198693838,
+    "duration" : 34
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198692789,
+      "stop" : 1594198692807,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198693980,
+      "stop" : 1594198693980,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "日K查询_US个股_只传值type"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.DayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_DayKline_USshare"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDayKlineUSshare"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_USshare"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "98bdc265f86e1a79",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177070284,
+        "stop" : 1594177070323,
+        "duration" : 39
+      }
+    }, {
+      "uid" : "5286869717144512",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176807732,
+        "stop" : 1594176807766,
+        "duration" : 34
+      }
+    }, {
+      "uid" : "bdefde062dd0d578",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176356498,
+        "stop" : 1594176356536,
+        "duration" : 38
+      }
+    }, {
+      "uid" : "bccc8d48c65037e5",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594175490170,
+        "stop" : 1594175490207,
+        "duration" : 37
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "43465441d322890b.json",
+  "parameterValues" : [ ]
+}

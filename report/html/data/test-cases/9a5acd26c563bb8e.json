@@ -1,0 +1,124 @@
+{
+  "uid" : "9a5acd26c563bb8e",
+  "name" : "test_dayKline_UStape_codeNone",
+  "fullName" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_UStape.TestDayKlineUStape#test_dayKline_UStape_codeNone",
+  "historyId" : "effda299187488a9677d16198df5e7af",
+  "time" : {
+    "start" : 1594198694477,
+    "stop" : 1594198694510,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198693983,
+      "stop" : 1594198694001,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198695246,
+      "stop" : 1594198695246,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "日K查询_US大盘_code为空"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.DayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_DayKline_UStape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDayKlineUStape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_UStape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "4f4a2fc41fbb863",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177070998,
+        "stop" : 1594177071032,
+        "duration" : 34
+      }
+    }, {
+      "uid" : "464474a9903e5a3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176808460,
+        "stop" : 1594176808496,
+        "duration" : 36
+      }
+    }, {
+      "uid" : "722dc1158a3c40f6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176357277,
+        "stop" : 1594176357315,
+        "duration" : 38
+      }
+    }, {
+      "uid" : "be6e7f03330c65f9",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594175490904,
+        "stop" : 1594175490941,
+        "duration" : 37
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9a5acd26c563bb8e.json",
+  "parameterValues" : [ ]
+}

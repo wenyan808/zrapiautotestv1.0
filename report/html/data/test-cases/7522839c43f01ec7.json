@@ -1,0 +1,123 @@
+{
+  "uid" : "7522839c43f01ec7",
+  "name" : "test_newdayKline_SHshare_adjTypeError",
+  "fullName" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SHshare.TestNewdayKlineSHshare#test_newdayKline_SHshare_adjTypeError",
+  "historyId" : "7beb0bf8f3245ff143b59aa750eaba23",
+  "time" : {
+    "start" : 1594198697922,
+    "stop" : 1594198697955,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198697740,
+      "stop" : 1594198697758,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198698377,
+      "stop" : 1594198698377,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "最新日K_SH个股_adjType为空"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_NewdayKline_SHshare"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewdayKlineSHshare"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SHshare"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f7c2992532f83e06",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177074555,
+        "stop" : 1594177074589,
+        "duration" : 34
+      }
+    }, {
+      "uid" : "cd981c503b4150fc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176811997,
+        "stop" : 1594176812033,
+        "duration" : 36
+      }
+    }, {
+      "uid" : "49831f42d3dc48dd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176361120,
+        "stop" : 1594176361159,
+        "duration" : 39
+      }
+    }, {
+      "uid" : "c72f1a2fcadf8bf5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175494013,
+        "stop" : 1594175494049,
+        "duration" : 36
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7522839c43f01ec7.json",
+  "parameterValues" : [ ]
+}

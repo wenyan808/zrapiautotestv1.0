@@ -1,35 +1,90 @@
 {
   "total" : 13,
   "items" : [ {
+    "uid" : "a5a85ce2dc20e3eb247d233ebf66b5a6",
+    "name" : "TestCase.StockQuotation.OptionalStock",
+    "statistic" : {
+      "failed" : 12,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 28,
+      "unknown" : 0,
+      "total" : 43
+    }
+  }, {
     "uid" : "1de552e29d4cfe8e35c1a954a3d64e3d",
     "name" : "TestCase.StockQuotation.KLine.NewdayKline",
     "statistic" : {
-      "failed" : 8,
-      "broken" : 0,
+      "failed" : 0,
+      "broken" : 42,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 100,
       "unknown" : 0,
-      "total" : 8
-    }
-  }, {
-    "uid" : "e50ad0097c2050c380059bccf339e76d",
-    "name" : "TestCase.StockQuotation.KLine",
-    "statistic" : {
-      "failed" : 6,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 2,
-      "unknown" : 0,
-      "total" : 8
+      "total" : 142
     }
   }, {
     "uid" : "f632348005c31c1fc6e3c4ec501b031e",
     "name" : "TestCase.StockQuotation.KLine.DayKline",
     "statistic" : {
-      "failed" : 5,
+      "failed" : 0,
+      "broken" : 12,
+      "skipped" : 0,
+      "passed" : 218,
+      "unknown" : 0,
+      "total" : 230
+    }
+  }, {
+    "uid" : "c506a669b2bb8d06d59cc95c33147d14",
+    "name" : "TestCase.StockQuotation.AstockRelevance",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 5,
+      "skipped" : 0,
+      "passed" : 208,
+      "unknown" : 0,
+      "total" : 213
+    }
+  }, {
+    "uid" : "61844d6ec62fd145a4dce2d1c1e72d32",
+    "name" : "TestCase.StockQuotation.KLine.FivedayKlineV2",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 8,
+      "unknown" : 0,
+      "total" : 9
+    }
+  }, {
+    "uid" : "d4f1de403b35bebf4f3edf52fd53c493",
+    "name" : "TestCase.MarketQuotation",
+    "statistic" : {
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 3,
+      "passed" : 59,
+      "unknown" : 0,
+      "total" : 59
+    }
+  }, {
+    "uid" : "e50ad0097c2050c380059bccf339e76d",
+    "name" : "TestCase.StockQuotation.KLine",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 49,
+      "unknown" : 0,
+      "total" : 49
+    }
+  }, {
+    "uid" : "f18d067f2b171c9058ffbf0d160932d6",
+    "name" : "TestCase.StockQuotation.KLine.MonthKline",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 8,
       "unknown" : 0,
       "total" : 8
     }
@@ -37,10 +92,10 @@
     "uid" : "1fa11f3d5305a37c2c682ba10c27f184",
     "name" : "TestCase.StockQuotation.KLine.TimeShareV2",
     "statistic" : {
-      "failed" : 4,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 4,
+      "passed" : 8,
       "unknown" : 0,
       "total" : 8
     }
@@ -48,67 +103,12 @@
     "uid" : "0409b068a2b83473c4378120eb04b1ca",
     "name" : "TestCase.StockQuotation.KLine.WeekKline",
     "statistic" : {
-      "failed" : 3,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 8,
       "unknown" : 0,
       "total" : 8
-    }
-  }, {
-    "uid" : "a5a85ce2dc20e3eb247d233ebf66b5a6",
-    "name" : "TestCase.StockQuotation.OptionalStock",
-    "statistic" : {
-      "failed" : 2,
-      "broken" : 2,
-      "skipped" : 0,
-      "passed" : 19,
-      "unknown" : 0,
-      "total" : 23
-    }
-  }, {
-    "uid" : "d4f1de403b35bebf4f3edf52fd53c493",
-    "name" : "TestCase.MarketQuotation",
-    "statistic" : {
-      "failed" : 2,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 57,
-      "unknown" : 0,
-      "total" : 59
-    }
-  }, {
-    "uid" : "f18d067f2b171c9058ffbf0d160932d6",
-    "name" : "TestCase.StockQuotation.KLine.MonthKline",
-    "statistic" : {
-      "failed" : 2,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 6,
-      "unknown" : 0,
-      "total" : 8
-    }
-  }, {
-    "uid" : "d9cd6c2245200066b59c2d6840df5b52",
-    "name" : "TestCase.StockQuotation.KLine.YearKline",
-    "statistic" : {
-      "failed" : 2,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 6,
-      "unknown" : 0,
-      "total" : 8
-    }
-  }, {
-    "uid" : "c506a669b2bb8d06d59cc95c33147d14",
-    "name" : "TestCase.StockQuotation.AstockRelevance",
-    "statistic" : {
-      "failed" : 1,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 13,
-      "unknown" : 0,
-      "total" : 15
     }
   } ]
 }

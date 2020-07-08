@@ -1,0 +1,123 @@
+{
+  "uid" : "45b73740b8632b8c",
+  "name" : "test_newdayKline_SHshare",
+  "fullName" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SHshare.TestNewdayKlineSHshare#test_newdayKline_SHshare",
+  "historyId" : "3c13ac4ebd4b5215d46b201af764a633",
+  "time" : {
+    "start" : 1594198697759,
+    "stop" : 1594198697798,
+    "duration" : 39
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198697740,
+      "stop" : 1594198697758,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198698377,
+      "stop" : 1594198698377,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "最新日K_SH个股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_NewdayKline_SHshare"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewdayKlineSHshare"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SHshare"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3c8cc73ecd7d1177",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177074388,
+        "stop" : 1594177074427,
+        "duration" : 39
+      }
+    }, {
+      "uid" : "21f4551728a34a9d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176811834,
+        "stop" : 1594176811873,
+        "duration" : 39
+      }
+    }, {
+      "uid" : "ae0e85ba94121736",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176360932,
+        "stop" : 1594176360980,
+        "duration" : 48
+      }
+    }, {
+      "uid" : "2fd1137dfceab887",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175493844,
+        "stop" : 1594175493885,
+        "duration" : 41
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "45b73740b8632b8c.json",
+  "parameterValues" : [ ]
+}

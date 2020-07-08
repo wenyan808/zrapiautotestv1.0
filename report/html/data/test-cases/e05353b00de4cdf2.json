@@ -1,0 +1,89 @@
+{
+  "uid" : "e05353b00de4cdf2",
+  "name" : "test_getConstituentstock_onlyhk",
+  "fullName" : "TestCase.StockQuotation.OptionalStock.test_getConstituentstock.TestgetConstituentStock#test_getConstituentstock_onlyhk",
+  "historyId" : "a5dfdc4af005048396e98c60b3fb1965",
+  "time" : {
+    "start" : 1594177081566,
+    "stop" : 1594177081637,
+    "duration" : 71
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594177081544,
+      "stop" : 1594177081566,
+      "duration" : 22
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594177082032,
+      "stop" : 1594177082032,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "成分股"
+  }, {
+    "name" : "story",
+    "value" : "查询成份股_必选参数港股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.OptionalStock"
+  }, {
+    "name" : "suite",
+    "value" : "test_getConstituentstock"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestgetConstituentStock"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "5832-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.OptionalStock.test_getConstituentstock"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e05353b00de4cdf2.json",
+  "parameterValues" : [ ]
+}

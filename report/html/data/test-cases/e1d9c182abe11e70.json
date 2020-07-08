@@ -1,0 +1,123 @@
+{
+  "uid" : "e1d9c182abe11e70",
+  "name" : "test_candleMinute_SH",
+  "fullName" : "TestCase.StockQuotation.KLine.test_candleMinute.TestCandleMinute#test_candleMinute_SH",
+  "historyId" : "a825e198f6ab426ac44efcde2c292dbf",
+  "time" : {
+    "start" : 1594198680621,
+    "stop" : 1594198680678,
+    "duration" : 57
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198680472,
+      "stop" : 1594198680496,
+      "duration" : 24
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198680727,
+      "stop" : 1594198680727,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "story",
+    "value" : "带蜡烛图的分钟查询_SH"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine"
+  }, {
+    "name" : "suite",
+    "value" : "test_candleMinute"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCandleMinute"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.test_candleMinute"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b13ecaa46f3715a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177056205,
+        "stop" : 1594177056259,
+        "duration" : 54
+      }
+    }, {
+      "uid" : "13a0dbcd01968e52",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176793777,
+        "stop" : 1594176793831,
+        "duration" : 54
+      }
+    }, {
+      "uid" : "3eb60c3691183076",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176341869,
+        "stop" : 1594176341950,
+        "duration" : 81
+      }
+    }, {
+      "uid" : "7c583a6f2fbf10cb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175474268,
+        "stop" : 1594175474395,
+        "duration" : 127
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e1d9c182abe11e70.json",
+  "parameterValues" : [ ]
+}

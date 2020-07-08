@@ -1,0 +1,123 @@
+{
+  "uid" : "13fd93928cffe896",
+  "name" : "test_Astock_F10getCashflowDeta_SH",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getCashflowDeta.TestAstockF10getCashflowDetail#test_Astock_F10getCashflowDeta_SH",
+  "historyId" : "6d1f1a1cf3ff6bb71f075d9b7140d789",
+  "time" : {
+    "start" : 1594198670357,
+    "stop" : 1594198670604,
+    "duration" : 247
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198670050,
+      "stop" : 1594198670069,
+      "duration" : 19
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198672162,
+      "stop" : 1594198672162,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "A股F10获取现金流量报表详情数据_SH"
+  }, {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_F10getCashflowDeta"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockF10getCashflowDetail"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_F10getCashflowDeta"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "59ebc9ab1ecde853",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177046667,
+        "stop" : 1594177046708,
+        "duration" : 41
+      }
+    }, {
+      "uid" : "48bde816f5dc6552",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176785710,
+        "stop" : 1594176785750,
+        "duration" : 40
+      }
+    }, {
+      "uid" : "3e354fb97325cb69",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176332444,
+        "stop" : 1594176332486,
+        "duration" : 42
+      }
+    }, {
+      "uid" : "3eaa9a45410a5d1c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175465781,
+        "stop" : 1594175465823,
+        "duration" : 42
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "13fd93928cffe896.json",
+  "parameterValues" : [ ]
+}

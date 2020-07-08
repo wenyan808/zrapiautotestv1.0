@@ -1,0 +1,124 @@
+{
+  "uid" : "77ef414577651e23",
+  "name" : "test_Astock_news_paging_query_currentPageException",
+  "fullName" : "TestCase.StockQuotation.AstockRelevance.test_Astock_news_paging_query.TestAstockNewsPagingQuery#test_Astock_news_paging_query_currentPageException",
+  "historyId" : "0a24ea6cac0764dedb4535eda30683ad",
+  "time" : {
+    "start" : 1594198676099,
+    "stop" : 1594198676130,
+    "duration" : 31
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198675389,
+      "stop" : 1594198675405,
+      "duration" : 16
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198676299,
+      "stop" : 1594198676299,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "A股"
+  }, {
+    "name" : "story",
+    "value" : "个股新闻分页查询_currentPage为异常"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.AstockRelevance"
+  }, {
+    "name" : "suite",
+    "value" : "test_Astock_news_paging_query"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAstockNewsPagingQuery"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.AstockRelevance.test_Astock_news_paging_query"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "463646e71a405495",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177051017,
+        "stop" : 1594177051052,
+        "duration" : 35
+      }
+    }, {
+      "uid" : "8b771b50095f772e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176789672,
+        "stop" : 1594176789707,
+        "duration" : 35
+      }
+    }, {
+      "uid" : "f46e2e88e946e201",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176337000,
+        "stop" : 1594176337045,
+        "duration" : 45
+      }
+    }, {
+      "uid" : "2bb4be2a825c65f2",
+      "status" : "failed",
+      "statusDetails" : "AssertionError",
+      "time" : {
+        "start" : 1594175469879,
+        "stop" : 1594175469915,
+        "duration" : 36
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "77ef414577651e23.json",
+  "parameterValues" : [ ]
+}

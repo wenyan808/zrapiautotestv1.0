@@ -1,0 +1,124 @@
+{
+  "uid" : "c885aa6a3ba53abc",
+  "name" : "test_newdayKline_SZtape_399001",
+  "fullName" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SZtape.TestNewdayKlineSZtape#test_newdayKline_SZtape_399001",
+  "historyId" : "baf7f279ed873a9e5457a5873c834fc3",
+  "time" : {
+    "start" : 1594198699629,
+    "stop" : 1594198699653,
+    "duration" : 24
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'json'",
+  "statusTrace" : "self = <TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SZtape.TestNewdayKlineSZtape object at 0x122D2D30>\n\n    @allure.story('最新日K_SZ大盘_399001')\n    def test_newdayKline_SZtape_399001(self):\n        response = zhuorui('k线', '最新日K_SZ大盘_399001')\n>       assert_data(response, '000000', 'ok')\n\nTestCase\\StockQuotation\\KLine\\NewdayKline\\test_NewdayKline_SZtape.py:17: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = None, code = '000000', msg = 'ok'\n\n    def assert_data(response: object, code: object, msg: object) -> object:\n>       assert code == response.json().get(\"code\")\nE       AttributeError: 'NoneType' object has no attribute 'json'\n\nCommon\\assertapi.py:2: AttributeError",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198699611,
+      "stop" : 1594198699628,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198700267,
+      "stop" : 1594198700267,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "最新日K_SZ大盘_399001"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_NewdayKline_SZtape"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestNewdayKlineSZtape"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.NewdayKline.test_NewdayKline_SZtape"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b1f5dc166b0a8328",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'json'",
+      "time" : {
+        "start" : 1594177076403,
+        "stop" : 1594177076427,
+        "duration" : 24
+      }
+    }, {
+      "uid" : "32b6b1ef02b74eec",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'json'",
+      "time" : {
+        "start" : 1594176813797,
+        "stop" : 1594176813821,
+        "duration" : 24
+      }
+    }, {
+      "uid" : "5247117f49ef8cc1",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'json'",
+      "time" : {
+        "start" : 1594176363037,
+        "stop" : 1594176363064,
+        "duration" : 27
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "c885aa6a3ba53abc.json",
+  "parameterValues" : [ ]
+}

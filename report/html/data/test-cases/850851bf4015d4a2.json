@@ -1,0 +1,123 @@
+{
+  "uid" : "850851bf4015d4a2",
+  "name" : "test_dayKline_SZshare_pageSizeNone",
+  "fullName" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_SZshare.TestDayKlineSZshare#test_dayKline_SZshare_pageSizeNone",
+  "historyId" : "ef4e248651cb58adb2bf06e08824016e",
+  "time" : {
+    "start" : 1594198688994,
+    "stop" : 1594198689038,
+    "duration" : 44
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1594198688660,
+      "stop" : 1594198688677,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1594198690092,
+      "stop" : 1594198690092,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "日K查询_SH个股_pageSize条数为10000"
+  }, {
+    "name" : "feature",
+    "value" : "k线"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase.StockQuotation.KLine.DayKline"
+  }, {
+    "name" : "suite",
+    "value" : "test_DayKline_SZshare"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDayKlineSZshare"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-7K7NA43"
+  }, {
+    "name" : "thread",
+    "value" : "18740-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.StockQuotation.KLine.DayKline.test_DayKline_SZshare"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c7647e403d10bf04",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594177065195,
+        "stop" : 1594177065246,
+        "duration" : 51
+      }
+    }, {
+      "uid" : "eea7a3500c4961f5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176802652,
+        "stop" : 1594176802700,
+        "duration" : 48
+      }
+    }, {
+      "uid" : "7da16c66c2430a95",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594176351185,
+        "stop" : 1594176351236,
+        "duration" : 51
+      }
+    }, {
+      "uid" : "875d32cbabc63ad3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1594175484451,
+        "stop" : 1594175484498,
+        "duration" : 47
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "850851bf4015d4a2.json",
+  "parameterValues" : [ ]
+}
