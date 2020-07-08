@@ -57,7 +57,7 @@ class TestAstockF10Briefing:
     @allure.story('F10简况_code为错误')
     def test_Astock_F10_briefing_codeError(self):
         response = zhuorui('A股', 'F10简况_code为错误')
-        print(response.text)
+        # print(response.text)
         assert_data(response, '000000', 'ok')
 
 
