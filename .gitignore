@@ -1,0 +1,5 @@
+/report/*
+/allure-result/*
+/TestCase/StockQuotation/OptionalStock/report/*
+/TestCase/StockQuotation/KLine/NewdayKline/report/*
+/TestCase/UserRelatedapi/report/*

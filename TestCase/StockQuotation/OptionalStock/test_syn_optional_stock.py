@@ -86,6 +86,7 @@ class TestSynOptionalStock:
     #     response = zhuorui('自选股', '同步自选股无token_All')
     #     # print(response.json())
     #     assert_data(response, '000101', 'token不能为空')
+    #ceshi
 
 #
 # if __name__ == '__main__':

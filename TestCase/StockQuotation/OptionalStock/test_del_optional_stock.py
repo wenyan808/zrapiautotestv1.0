@@ -98,25 +98,25 @@ class TestDelOptionalStock:
     #     print(response.json())
     #     assert_data(response, '000000', 'ok')
 
-    @allure.story('删除自选股无token_根据code_All')
-    def test_code_all_notoken(self):
-        response = zhuorui('自选股', '删除自选股无token_根据code_All')
-        # print(response.json())
-        assert_data(response, '000101', 'token不能为空')
-
-    @allure.story('删除自选股无token_All')
-    def test_all_notoken(self):
-        q = OperationSql()
-        userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
-        id = MongoDB("userId", userId[2:-3:])
-        list1 = list()
-        for id1 in id:
-            list1.append(str(id1.get('_id')))
-        _id = {"ids": list1}
-        # 写
-        write_xlsx("自选股", 69, 7, str(_id))
-        response = zhuorui('自选股', '删除自选股无token_All')
-        assert_data(response, '000101', 'token不能为空')
+    # @allure.story('删除自选股无token_根据code_All')
+    # def test_code_all_notoken(self):
+    #     response = zhuorui('自选股', '删除自选股无token_根据code_All')
+    #     # print(response.json())
+    #     assert_data(response, '000101', 'token不能为空')
+    #
+    # @allure.story('删除自选股无token_All')
+    # def test_all_notoken(self):
+    #     q = OperationSql()
+    #     userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
+    #     id = MongoDB("userId", userId[2:-3:])
+    #     list1 = list()
+    #     for id1 in id:
+    #         list1.append(str(id1.get('_id')))
+    #     _id = {"ids": list1}
+    #     # 写
+    #     write_xlsx("自选股", 69, 7, str(_id))
+    #     response = zhuorui('自选股', '删除自选股无token_All')
+    #     assert_data(response, '000101', 'token不能为空')
 
 
 # if __name__ == '__main__':
