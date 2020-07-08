@@ -75,8 +75,8 @@ class TestAstockNewstcokListpage:
     @allure.story('新股日历分页获取已上市列表_pageSize为空')
     def test_Astock_newstcok_listedpage_pageSizeNone(self):
         response = zhuorui('A股', '新股日历分页获取已上市列表_pageSize为空')
-        print(response.text)
-        # assert_data(response, '000103', 'must not be null')
+        # print(response.text)
+        assert_data(response, '000103', 'must not be null')
 
     @allure.story('新股日历分页获取已上市列表_pageSize为异常')
     def test_Astock_newstcok_listedpage_pageSizeException(self):

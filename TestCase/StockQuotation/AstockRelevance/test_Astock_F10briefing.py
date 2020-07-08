@@ -27,37 +27,37 @@ class TestAstockF10Briefing:
     @allure.story('F10简况_ts为空')
     def test_Astock_F10_briefing_tsNone(self):
         response = zhuorui('A股', 'F10简况_ts为空')
-        print(response.text)
-        # assert_data(response, '000103', 'ts格式有误')
+        # print(response.text)
+        assert_data(response, '000103', 'ts格式有误')
 
     @allure.story('F10简况_ts为异常')
     def test_Astock_F10_briefing_tsException(self):
         response = zhuorui('A股', 'F10简况_ts为异常')
-        print(response.text)
-        # assert_data(response, '000103', 'ts格式有误')
+        # print(response.text)
+        assert_data(response, '000103', 'ts格式有误')
 
     @allure.story('F10简况_ts为错误')
     def test_Astock_F10_briefing_tsError(self):
         response = zhuorui('A股', 'F10简况_ts为错误')
-        print(response.text)
-        # assert_data(response, '000103', 'ts格式有误')
+        # print(response.text)
+        assert_data(response, '000103', 'ts格式有误')
 
     @allure.story('F10简况_code为空')
     def test_Astock_F10_briefing_codeNone(self):
         response = zhuorui('A股', 'F10简况_code为空')
-        print(response.text)
-        # assert_data(response, '000103', 'code格式有误')
+        # print(response.text)
+        assert_data(response, '000103', 'code格式有误')
 
     @allure.story('F10简况_code为异常')
     def test_Astock_F10_briefing_codeException(self):
         response = zhuorui('A股', 'F10简况_code为异常')
-        print(response.text)
-        # assert_data(response, '000103', 'code格式有误')
+        # print(response.text)
+        assert_data(response, '000103', 'code格式有误')
 
     @allure.story('F10简况_code为错误')
     def test_Astock_F10_briefing_codeError(self):
         response = zhuorui('A股', 'F10简况_code为错误')
-        print(response.text)
-        # assert_data(response, '000103', 'code格式有误')
+        # print(response.text)
+        assert_data(response, '000000', 'ok')
 
 

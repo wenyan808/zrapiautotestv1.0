@@ -158,8 +158,8 @@ class TestDayKlineHKtape:
     @allure.story('日K查询_HK大盘_startTime')
     def test_dayKline_HKtape_startTime(self):
         response = zhuorui('k线', '日K查询_HK大盘_startTime')
-        # assert_data(response, '000000', 'ok')
-        print(response.text)
+        assert_data(response, '000000', 'ok')
+        # print(response.text)
 
     @allure.story('日K查询_HK大盘_startTime为s')
     def test_dayKline_HKtape_startTime_s(self):
