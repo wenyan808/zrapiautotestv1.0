@@ -78,7 +78,6 @@ class TestDelOptionalStock:
         write_xlsx("自选股", 24, 7, str(_id))
         response = zhuorui('自选股', '删除自选股_All')
         assert_data(response, '000000', 'ok')
-        # print(response.json())
 
     # @allure.story('删除自选股_参数列表空')
     # def test_parameter_null(self):

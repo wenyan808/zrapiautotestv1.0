@@ -16,7 +16,7 @@ class TestDayKlineSHtape:
     def test_dayKline_SHtape_szzs(self):
         response = zhuorui('k线', '日K查询_SH大盘_上证指数')
         assert_data(response, '000000', 'ok')
-        # print(response.text)
+        print(response.text)
         if "data" in response.json():
             # assert response.json().get("data")
             # print(response.json().get("data")[1])
