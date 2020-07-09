@@ -58,13 +58,13 @@ class TestStickOptionalStock:
     #     print(response.json())
     #     assert_data(response, '000000', 'ok')
 
-    @allure.story('置顶自选股无token')
-    def test_stick_notoken(self):
-        # 写
-        write_xlsx("自选股", 79, 7, str(self._id))
-        response = zhuorui('自选股', '置顶自选股无token')
-        # print(response.json())
-        assert_data(response, '000101', 'token不能为空')
+    # @allure.story('置顶自选股无token')
+    # def test_stick_notoken(self):
+    #     # 写
+    #     write_xlsx("自选股", 79, 7, str(self._id))
+    #     response = zhuorui('自选股', '置顶自选股无token')
+    #     # print(response.json())
+    #     assert_data(response, '000101', 'token不能为空')
 
 
 if __name__ == '__main__':
