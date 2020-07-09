@@ -17,7 +17,7 @@ class TestLogin:
         response = zhuorui('Sheet1', '用户密码登录')
         assert_data(response, '000000', 'ok')
         resp = response.json().get('code')
-        print(response.json())
+        # print(response.json())
         if resp == "000000":
             res = response.json().get('data').get('token')
             with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
