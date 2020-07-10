@@ -3,3 +3,4 @@
 /TestCase/StockQuotation/OptionalStock/report/*
 /TestCase/StockQuotation/KLine/NewdayKline/report/*
 /TestCase/UserRelatedapi/report/*
+/TestCase/StockQuotation/KLine/AfterPowerFactor/report/*

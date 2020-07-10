@@ -36,6 +36,7 @@ def common(i):
     #     "headers": headers,
     #     "payload": payload
     # }
+    # print(data)
     # with open(BASE_DIR +"/TestConfig/data.ini", "w", encoding="utf-8") as f:
     #     f.write(f"{data}\n")
     # write_config(BASE_DIR +"/TestConfig/data.ini","w",data)

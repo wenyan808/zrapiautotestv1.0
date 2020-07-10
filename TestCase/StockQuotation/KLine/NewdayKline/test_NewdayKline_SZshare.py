@@ -23,11 +23,11 @@ class TestNewdayKlineSZshare:
         assert_data(response, '000000', 'ok')
         # print(response.text)
 
-    @allure.story('最新日K_SZ个股_type类型为1指数')
-    def test_newdayKline_SZshare_typeOf1(self):
-        response = zhuorui('k线', '最新日K_SZ个股_type类型为1指数')
-        assert_data(response, '000000', 'ok')
-        # print(response.text)
+    # @allure.story('最新日K_SZ个股_type类型为1指数')
+    # def test_newdayKline_SZshare_typeOf1(self):
+    #     response = zhuorui('k线', '最新日K_SZ个股_type类型为1指数')
+    #     # assert_data(response, '000000', 'ok')
+    #     print(response.text)
 
     @allure.story('最新日K_SZ个股_type不正确')
     def test_newdayKline_SZshare_typeError(self):

@@ -38,8 +38,8 @@ class TestNewdayKlineUStape:
     @allure.story('最新日K_US大盘_type类型为2股票')
     def test_newdayKline_UStape__typeof2(self):
         response = zhuorui('k线', '最新日K_US大盘_type类型为2股票')
-        # assert_data(response, '000000', 'ok')
-        print(response.json())
+        assert_data(response, '000000', 'ok')
+        # print(response.json())
 
     @allure.story('最新日K_US大盘_type不正确')
     def test_newdayKline_UStape_typeError(self):
@@ -68,14 +68,14 @@ class TestNewdayKlineUStape:
     @allure.story('最新日K_US大盘_code异常')
     def test_newdayKline_UStape_codeException(self):
         response = zhuorui('k线', '最新日K_US大盘_code异常')
-        # assert_data(response, '000000', 'ok')
-        print(response.json())
+        assert_data(response, '000000', 'ok')
+        # print(response.json())
 
     @allure.story('最新日K_US大盘_code不正确')
     def test_newdayKline_UStape_codeError(self):
         response = zhuorui('k线', '最新日K_US大盘_code不正确')
-        # assert_data(response, '000000', 'ok')
-        print(response.json())
+        assert_data(response, '000000', 'ok')
+        # print(response.json())
 
     @allure.story('最新日K_US大盘_只传ts')
     def test_newdayKline_UStape_onlyvalts(self):
@@ -95,11 +95,11 @@ class TestNewdayKlineUStape:
         assert_data(response, '000103', 'ts格式有误')
         # print(response.json())
 
-    @allure.story('最新日K_US大盘只传adjType')
-    def test_newdayKline_UStapeonlyvaladjType(self):
-        response = zhuorui('k线', '最新日K_US大盘只传adjType')
-        # assert_data(response, '000000', 'ok')
-        print(response)
+    # @allure.story('最新日K_US大盘只传adjType')
+    # def test_newdayKline_UStapeonlyvaladjType(self):
+    #     response = zhuorui('k线', '最新日K_US大盘只传adjType')
+    #     # assert_data(response, '000000', 'ok')
+    #     print(response)
 
     @allure.story('最新日K_US大盘_code为空')
     def test_newdayKline_UStape_codeNone(self):
