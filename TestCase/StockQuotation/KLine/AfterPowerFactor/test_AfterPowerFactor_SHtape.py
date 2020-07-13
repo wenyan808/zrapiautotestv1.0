@@ -15,14 +15,14 @@ class TestAfterPowerFactor:
     def test_AfterPowerFactor_SHtape_000001(self):
         response = zhuorui('k线', '查询最新复权因子_SH大盘_000001')
         assert_data(response, '000000', 'ok')
-        # assert response.json().get("data") == 1
+        assert response.json().get("data") == 1
         # print(response.json())
 
     @allure.story('查询最新复权因子_SH大盘_000159')
     def test_AfterPowerFactor_SHtape_000159(self):
         response = zhuorui('k线', '查询最新复权因子_SH大盘_000159')
         assert_data(response, '000000', 'ok')
-        # assert response.json().get("data") == 1
+        assert response.json().get("data") == 1
         # print(response.json())
 
     # @allure.story('查询最新复权因子_SH大盘')

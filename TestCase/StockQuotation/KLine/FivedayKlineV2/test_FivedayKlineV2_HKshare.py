@@ -40,12 +40,12 @@ class TestFivedayKlinev2HKshare:
         assert response.status_code == 200
         # print(response.json())
 
-    @allure.story('五日查询_优化版本 Version 2.0_HK个股_type类型为1指数')
-    def test_fivedayKlinev2_HKshare_typeof1(self):
-        response = zhuorui('k线', '五日查询_优化版本 Version 2.0_HK个股_type类型为1指数')
-        # assert_data(response, '000000', 'ok')
-        # assert response.status_code == 200
-        print(response)
+    # @allure.story('五日查询_优化版本 Version 2.0_HK个股_type类型为1指数')
+    # def test_fivedayKlinev2_HKshare_typeof1(self):
+    #     response = zhuorui('k线', '五日查询_优化版本 Version 2.0_HK个股_type类型为1指数')
+    #     # assert_data(response, '000000', 'ok')
+    #     # assert response.status_code == 200
+    #     print(response)
 
     @allure.story('五日查询_优化版本 Version 2.0_HK个股_type类型为3基金')
     def test_fivedayKlinev2_HKshare_typeof3(self):

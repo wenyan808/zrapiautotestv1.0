@@ -121,11 +121,11 @@ class TestFivedayKlinev2SZshare:
         assert_data(response, '000103', 'ts格式有误')
         # print(response.json())
 
-    @allure.story('五日查询_优化版本 Version 2.0_SZ个股_只传type')
-    def test_fivedayKlinev2_SZshare_onlyvaltype(self):
-        response = zhuorui('k线', '五日查询_优化版本 Version 2.0_SZ股_只传type')
-        # assert_data(response, '000103', 'ts格式有误')
-        print(response)
+    # @allure.story('五日查询_优化版本 Version 2.0_SZ个股_只传type')
+    # def test_fivedayKlinev2_SZshare_onlyvaltype(self):
+    #     response = zhuorui('k线', '五日查询_优化版本 Version 2.0_SZ股_只传type')
+    #     # assert_data(response, '000103', 'ts格式有误')
+    #     print(response)
 
     @allure.story('五日查询_优化版本 Version 2.0_SZ股_只传adjType')
     def test_fivedayKlinev2_SZshare_onlyvaladjType(self):
