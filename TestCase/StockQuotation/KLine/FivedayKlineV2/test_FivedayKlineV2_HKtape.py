@@ -60,12 +60,12 @@ class TestFivedayKlinev2HKtape:
         assert response.status_code == 200
         # print(response.json())
 
-    # @allure.story('五日查询_优化版本 Version 2.0_HK大盘_type类型为3基金')
-    # def test_fivedayKlinev2_HKtape_typeof3(self):
-    #     response = zhuorui('k线', '五日查询_优化版本 Version 2.0_HK大盘_type类型为3基金')
-    #     assert_data(response, '000000', 'ok')
-    #     assert response.status_code == 200
-    #     # print(response.json())
+    @allure.story('五日查询_优化版本 Version 2.0_HK大盘_type类型为3基金')
+    def test_fivedayKlinev2_HKtape_typeof3(self):
+        response = zhuorui('k线', '五日查询_优化版本 Version 2.0_HK大盘_type类型为3基金')
+        assert_data(response, '000000', 'ok')
+        assert response.status_code == 200
+        # print(response.json())
 
     @allure.story('五日查询_优化版本 Version 2.0_HK大盘_adjType类型为2前复权')
     def test_fivedayKlinev2_HKtape_adjTypeof2(self):

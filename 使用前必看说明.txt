@@ -64,7 +64,7 @@ pip install -U allure pytest sys hashlib pyyaml pandas xlrd -i  https://mirrors.
 单个库从阿里云镜像云盘中下载
 pip install -U pymongo -i  https://mirrors.aliyun.com/pypi/simple
 
-# pytest --alluredir=./report/xml
+# pytest
 # allure generate ./report/xml -o ./report/html --clean
 
 
