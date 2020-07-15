@@ -93,7 +93,7 @@ class TestTimeSharev2SHtape:
 
     @allure.story('分时查询_优化版本 Version 2.0_SH大盘_type不正确')
     def test_timeSharev2_SHtape_typeError(self):
-        response = zhuorui('k线', '分时查询_优化版本 Version 2.0_SH盘_type不正确')
+        response = zhuorui('k线', '分时查询_优化版本 Version 2.0_SH大盘_type不正确')
         assert_data(response, '000103', '参数校验不通过')
         # print(response.json())
 

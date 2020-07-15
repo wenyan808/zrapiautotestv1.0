@@ -35,12 +35,14 @@ class TestAfterPowerFactor:
     def test_AfterPowerFactor_USshare_onlyvalts(self):
         response = zhuorui('k线', '查询最新复权因子_US个股_只传ts')
         assert_data(response, '000103', 'code格式有误')
+        assert response.status_code == 200
         # print(response.json())
 
     @allure.story('查询最新复权因子_US个股_code为空')
     def test_AfterPowerFactor_USshare_codeNone(self):
         response = zhuorui('k线', '查询最新复权因子_US个股_code为空')
         assert_data(response, '000103', 'code格式有误')
+        assert response.status_code == 200
         # print(response.json())
 
     @allure.story('查询最新复权因子_US个股_code为中文')
