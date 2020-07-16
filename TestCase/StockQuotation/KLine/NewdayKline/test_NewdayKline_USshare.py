@@ -14,8 +14,8 @@ class TestNewdayKlineUSshare:
     @allure.story('最新日K_US个股')
     def test_newdayKline_USshare(self):
         response = zhuorui('k线', '最新日K_US个股')
-        # assert_data(response, '000000', 'ok')
-        print(response)
+        assert_data(response, '000000', 'ok')
+        # print(response.json())
 
     @allure.story('最新日K_US个股_token为0')
     def test_newdayKline_USshare_notoken(self):
@@ -77,17 +77,17 @@ class TestNewdayKlineUSshare:
         assert_data(response, '000103', 'code格式有误')
         # print(response.text)
 
-    @allure.story('最新日K_US个股_code异常')
-    def test_newdayKline_USshare_codeException(self):
-        response = zhuorui('k线', '最新日K_US个股_code异常')
-        assert_data(response, '000000', 'ok')
-        # print(response.text)
-
-    @allure.story('最新日K_US个股_code不正确')
-    def test_newdayKline_USshare_codeError(self):
-        response = zhuorui('k线', '最新日K_US个股_code不正确')
-        assert_data(response, '000000', 'ok')
-        # print(response.text)
+    # @allure.story('最新日K_US个股_code异常')
+    # def test_newdayKline_USshare_codeException(self):
+    #     response = zhuorui('k线', '最新日K_US个股_code异常')
+    #     # assert_data(response, '000000', 'ok')
+    #     print(response.text)
+    #
+    # @allure.story('最新日K_US个股_code不正确')
+    # def test_newdayKline_USshare_codeError(self):
+    #     response = zhuorui('k线', '最新日K_US个股_code不正确')
+    #     # assert_data(response, '000000', 'ok')
+    #     print(response.text)
 
     @allure.story('最新日K_US个股_只传ts')
     def test_newdayKline_USshare_onlyts(self):

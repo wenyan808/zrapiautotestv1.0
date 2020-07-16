@@ -95,11 +95,11 @@ class TestNewdayKlineUStape:
         assert_data(response, '000103', 'ts格式有误')
         # print(response.json())
 
-    @allure.story('最新日K_US大盘只传adjType')
-    def test_newdayKline_UStapeonlyvaladjType(self):
-        response = zhuorui('k线', '最新日K_US大盘只传adjType')
-        # assert_data(response, '000000', 'ok')
-        print(response)
+    # @allure.story('最新日K_US大盘只传adjType')
+    # def test_newdayKline_UStapeonlyvaladjType(self):
+    #     response = zhuorui('k线', '最新日K_US大盘只传adjType')
+    #     # assert_data(response, '000000', 'ok')
+    #     print(response)
 
     @allure.story('最新日K_US大盘_code为空')
     def test_newdayKline_UStape_codeNone(self):

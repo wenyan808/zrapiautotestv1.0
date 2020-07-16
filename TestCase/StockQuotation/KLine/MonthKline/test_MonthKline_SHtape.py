@@ -1,10 +1,11 @@
 import allure
+import pytest
 
 from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
 
-
+@pytest.mark.skip(reason="该测试用例版本过低，pass")
 @allure.feature('k线')
 class TestMonthKlineSHtape:
     @classmethod

@@ -1,10 +1,12 @@
+import os
+
 import pytest
 import requests
 import sys
-import json 
+import json
 
-#查询股票价格
-# from TestCase.test_example import TestClass
+# 查询股票价格
+# from TestCase.StockQuotation import
 # from TestCase.
 # TestClass().test_cxzjtj()
 # TestGetCapitalFlowTime().test_getCapitalFlowTime()
@@ -16,3 +18,8 @@ import json
 # if __name__ == '__main__':
 #     pytest.main(['-s', '-q', '--alluredir', '../allure-xml'])
 # TestClass1().test_hs()
+
+
+os.system('if exist "report" (rd /s/q report)')
+os.system('pytest --alluredir=./report/xml')
+os.system('allure generate ./report/xml -o ./report/html --clean')
