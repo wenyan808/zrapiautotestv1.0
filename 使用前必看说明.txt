@@ -60,12 +60,11 @@ Common文件夹里面每个方法都是公用的，命名方式均能够直接�
 
 打开cmd命令提示符
 多个库从阿里云镜像云盘中下载
-pip install -U allure pytest sys hashlib pyyaml pandas xlrd -i  https://mirrors.aliyun.com/pypi/simple
+pip install -U allure pytest sys hashlib pyyaml pandas xlrd -i https://mirrors.aliyun.com/pypi/simple
 单个库从阿里云镜像云盘中下载
-pip install -U pymongo -i  https://mirrors.aliyun.com/pypi/simple
+pip install -U pymongo -i https://mirrors.aliyun.com/pypi/simple
 
 # pytest
 # allure generate ./report/xml -o ./report/html --clean
-
 
 
