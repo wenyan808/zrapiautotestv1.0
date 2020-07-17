@@ -14,8 +14,8 @@ class TestStickOptionalStock:
         q = OperationSql()
         userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
         id = MongoDB("userId", userId[2:-3:])
-        print(id)
-        print(id[-1].get('_id'))
+        # print(id)
+        # print(id[-1].get('_id'))
         cls._id = {"id": str(id[-1].get('_id'))}
 
     @allure.story('置顶自选股')
