@@ -67,7 +67,7 @@ class TestTimeSharev2USshare:
 
     @allure.story('分时查询_优化版本 Version 2.0_US个股_code为空')
     def test_timeSharev2_USshare_codeNone(self):
-        response = zhuorui('k线', '分时查询_优化版本 Version 2.0_US个股code为空')
+        response = zhuorui('k线', '分时查询_优化版本 Version 2.0_US个股_code为空')
         assert_data(response, '000103', 'code格式有误')
         # print(response.json())
 

@@ -58,5 +58,5 @@ class TestAstockF10Briefing:
     def test_Astock_F10_briefing_codeError(self):
         response = zhuorui('A股', 'F10简况_code为错误')
         # print(response.text)
-        assert_data(response, '000000', 'ok')
         # assert_data(response, '000103', 'code格式有误')
+        assert_data(response, '000000', 'ok')
