@@ -4,3 +4,4 @@
 /TestCase/StockQuotation/KLine/NewdayKline/report/*
 /TestCase/UserRelatedapi/report/*
 /TestCase/StockQuotation/KLine/AfterPowerFactor/report/*
+/TestCase/StockQuotation/HKstockRelevance/report/*
