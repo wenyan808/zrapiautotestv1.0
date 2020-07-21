@@ -105,8 +105,9 @@ class TestFivedayKlinev2SZshare:
     @allure.story('五日查询_优化版本 Version 2.0_SZ个股_pageSize条数为负数')
     def test_fivedayKlinev2_SZshare_pageSizeofminus(self):
         response = zhuorui('k线', '五日查询_优化版本 Version 2.0_SZ个股_pageSize条数为负数')
-        # assert_data(response, '000000', 'ok')
-        assert_data(response, '000001', '系统繁忙,请稍候再试')
+        assert_data(response, '000000', 'ok')
+        assert response.status_code == 200
+        # assert_data(response, '000001', '系统繁忙,请稍候再试')
         # print(response.json())
 
     @allure.story('五日查询_优化版本 Version 2.0_SZ个股_只传ts')

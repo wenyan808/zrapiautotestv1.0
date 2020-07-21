@@ -80,13 +80,17 @@ class TestNewdayKlineSZshare:
     @allure.story('最新日K_SZ个股_code异常')
     def test_newdayKline_SZshare_codeException(self):
         response = zhuorui('k线', '最新日K_SZ个股_code异常')
-        assert_data(response, '000001', '系统繁忙,请稍候再试')
+        # assert_data(response, '000001', '系统繁忙,请稍候再试')
+        assert response.status_code == 200
+        assert_data(response, '000000', 'ok')
         # print(response.text)
 
     @allure.story('最新日K_SZ个股_code不正确')
     def test_newdayKline_SZshare_codeError(self):
         response = zhuorui('k线', '最新日K_SZ个股_code不正确')
-        assert_data(response, '000001', '系统繁忙,请稍候再试')
+        # assert_data(response, '000001', '系统繁忙,请稍候再试')
+        assert response.status_code == 200
+        assert_data(response, '000000', 'ok')
         # print(response.text)
 
     @allure.story('最新日K_SZ个股_只传ts')

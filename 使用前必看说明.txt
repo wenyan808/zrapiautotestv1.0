@@ -44,7 +44,7 @@ MessagesApi      用户相关接口模块
 MarketQuotation    市场行情模块
 #test_example.py    接口测试用例存放的地方，目前是一个接口为一个方法，一个用例模块的多个数据都会跑同一个接口
 test_login.py    登录模块的py文件，单独存放，目前仅有用户密码登录（已经放入UserRelatedapi模块库中）
-test_run.py     运行接口测试用例的py文件（以后作为统一的运行入口）
+run.py     运行接口测试用例的py文件（以后作为统一的运行入口）
 TestDate
 example.xlsx  测试用例以及数据
 TestConfig    存放ini配置文件和txt文件
@@ -64,6 +64,7 @@ pip install -U allure pytest sys hashlib pyyaml pandas xlrd -i https://mirrors.a
 单个库从阿里云镜像云盘中下载
 pip install -U pymongo -i https://mirrors.aliyun.com/pypi/simple
 
+执行用例和生成HTML报告命令
 # pytest
 # allure generate ./report/xml -o ./report/html --clean
 
