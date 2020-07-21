@@ -23,9 +23,4 @@ os.system('if exist "report" (rd /s/q report)')
 os.system('pytest --alluredir=./report/xml')
 os.system('allure generate ./report/xml -o ./report/html --clean')
 
-
-
 # send_email(filename)
-
-
-
