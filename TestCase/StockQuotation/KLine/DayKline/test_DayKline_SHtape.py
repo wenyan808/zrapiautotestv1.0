@@ -6,7 +6,7 @@ from Common.guide import zhuorui
 from Common.login import login
 from Common.tools.read_xlsx_exampleshuju import shuju
 
-@pytest.mark.skip(reason="该测试用例版本过低，pass")
+@pytest.mark.skip(reason='该用例不进行维护了，跳过')
 @allure.feature('k线')
 class TestDayKlineSHtape:
     @classmethod
@@ -196,9 +196,8 @@ class TestDayKlineSHtape:
         response = zhuorui('k线', '日K查询_SH大盘_只传值ts')
         # assert_data(response, '000103', 'adjType is empty !')
         # if response == None:
-            # raise AttributeError
+        # raise AttributeError
         # print(response.text)
-
 
     @allure.story('日K查询_SH大盘_只传值code')
     def test_dayKline_SHtape_Onlyvalue_code(self):
@@ -235,6 +234,3 @@ class TestDayKlineSHtape:
         response = zhuorui('k线', '日K查询_SH大盘_只传值endTime')
         assert_data(response, '000103', 'ts格式有误')
         # print(response.text)
-
-
-
