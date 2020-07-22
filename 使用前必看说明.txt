@@ -48,6 +48,7 @@ run.py     运行接口测试用例的py文件（以后作为统一的运行入�
 TestDate
 example.xlsx  测试用例以及数据
 TestConfig    存放ini配置文件和txt文件
+把要用到的python库整理到 requirements.txt
 
 命名规则：
 TestCase文件夹里面的每个接口测试用例均以“test_”开头的方式进行命名，每个接口测试用例必须放在对应的的模块包里面（Python Pakeage）在__init__文件
