@@ -5,3 +5,4 @@
 /TestCase/UserRelatedapi/report/*
 /TestCase/StockQuotation/KLine/AfterPowerFactor/report/*
 /TestCase/StockQuotation/HKstockRelevance/report/*
+/TestCase/StockQuotation/KLine/FivedayKlineV2/report/*
