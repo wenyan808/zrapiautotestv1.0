@@ -9,6 +9,13 @@ class OperationSql:
     _cursor = None
 
     def __init__(self, address, user, password, database):
+        """
+
+        :param address: IP地址
+        :param user: 用户名
+        :param password: 密码
+        :param database: 数据库名
+        """
         self.address = address
         self.user = user
         self.password = password
@@ -52,9 +59,8 @@ class OperationSql:
             self.close_sql_connect()
         return data
 
-
-# q = OperationSql("192.168.1.237", "root", "123456", "user_account")
-# print(q.show_sql("select * from t_user_account where `zr_no`= '10000071';"))
+# q = OperationSql()
+# print(q.show_sql("select * from m_china_concept where `symbol`= 'BABA';"))
 
 # 使用pymongo模块连接mongoDB数据库
 # coding=utf-8

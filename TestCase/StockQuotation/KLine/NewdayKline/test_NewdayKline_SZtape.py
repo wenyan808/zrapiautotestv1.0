@@ -74,13 +74,16 @@ class TestNewdayKlineSZtape:
     @allure.story('最新日K_SZ大盘_只传ts')
     def test_newdayKline_SZtape_onlyvalts(self):
         response = zhuorui('k线', '最新日K_SZ大盘_只传ts')
-        assert_data(response, '000103', 'code格式有误')
+        # assert_data(response, '000103', 'code格式有误')
+        assert_data(response, '000103', 'code is not null')
+        assert response.status_code == 200
         # print(response.json())
 
     @allure.story('最新日K_SZ大盘_只传code')
     def test_newdayKline_SZtape_onlyvalcode(self):
         response = zhuorui('k线', '最新日K_SZ大盘_只传code')
         assert_data(response, '000103', 'ts格式有误')
+        assert response.status_code == 200
         # print(response.json())
 
     @allure.story('最新日K_SZ大盘_只传type')
@@ -98,7 +101,9 @@ class TestNewdayKlineSZtape:
     @allure.story('最新日K_SZ大盘_code为空')
     def test_newdayKline_SZtape_codeNone(self):
         response = zhuorui('k线', '最新日K_SZ大盘_code为空')
-        assert_data(response, '000103', 'code格式有误')
+        # assert_data(response, '000103', 'code格式有误')
+        assert_data(response, '000103', 'code is not null')
+        assert response.status_code == 200
         # print(response.json())
 
     @allure.story('最新日K_SZ大盘_ts为其他string')

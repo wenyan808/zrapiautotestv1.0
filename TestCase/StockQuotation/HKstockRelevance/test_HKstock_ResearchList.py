@@ -9,7 +9,7 @@ from Common.login import login
 
 
 @pytest.mark.skip(reason="该接口已被删除，接口地址错误")
-@allure.feature('A股')
+@allure.feature('港股')
 class TestHKstockResearchList:
     @classmethod
     def setup_class(cls) -> None:

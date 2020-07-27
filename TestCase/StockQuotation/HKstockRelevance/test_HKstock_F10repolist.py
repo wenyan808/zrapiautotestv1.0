@@ -1,10 +1,12 @@
 import allure
+import pytest
 
 from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
 
 
+# @pytest.mark.skip(reason='调试中')
 @allure.feature('港股')
 class TestHKstockF10repolist:
     @classmethod
@@ -53,6 +55,8 @@ class TestHKstockF10repolist:
         assert response.status_code == 200
         # print(response.json())
 
+
+
     @allure.story('F10获取回购列表分页_只传ts')
     def test_HKstock_F10repolist_onlyvalts(self):
         response = zhuorui('港股', 'F10获取回购列表分页_只传ts')
@@ -94,6 +98,8 @@ class TestHKstockF10repolist:
         assert_data(response, '000103', '参数校验不通过')
         assert response.status_code == 200
         # print(response.json())
+
+
 
     @allure.story('F10获取回购列表分页_pageSize为空')
     def test_HKstock_F10repolist_pageSizeNone(self):

@@ -7,7 +7,7 @@ from Common.login import login
 
 
 # @pytest.mark.skip(reason="")
-@allure.feature('A股')
+@allure.feature('港股')
 class TestHKstockF10financialreport:
     @classmethod
     def setup_class(cls) -> None:

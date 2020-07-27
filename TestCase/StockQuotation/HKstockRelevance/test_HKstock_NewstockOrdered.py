@@ -5,7 +5,7 @@ from Common.guide import zhuorui
 from Common.login import login
 
 
-@allure.feature('k线')
+@allure.feature('港股')
 class testHKstockNewstockOrdered:
     @classmethod
     def setup_class(cls) -> None:

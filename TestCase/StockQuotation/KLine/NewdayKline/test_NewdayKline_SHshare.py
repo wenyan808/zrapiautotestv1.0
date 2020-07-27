@@ -74,7 +74,9 @@ class TestNewdayKlineSHshare:
     @allure.story('最新日K_SH个股_code为空')
     def test_newdayKline_SHshare_codeNone(self):
         response = zhuorui('k线', '最新日K_SH个股_code为空')
-        assert_data(response, '000103', 'code格式有误')
+        # assert_data(response, '000103', 'code格式有误')
+        assert_data(response, '000103', 'code is not null')
+        assert response.status_code == 200
         # print(response.text)
 
     @allure.story('最新日K_SH个股_code异常')
@@ -96,7 +98,9 @@ class TestNewdayKlineSHshare:
     @allure.story('最新日K_SH个股_只传ts')
     def test_newdayKline_SHshare_onlyts(self):
         response = zhuorui('k线', '最新日K_SH个股_只传ts')
-        assert_data(response, '000103', 'code格式有误')
+        # assert_data(response, '000103', 'code格式有误')
+        assert_data(response, '000103', 'code is not null')
+        assert response.status_code == 200
         # print(response.text)
 
     @allure.story('最新日K_SH个股_只传code')

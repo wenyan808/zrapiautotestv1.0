@@ -5,7 +5,7 @@ from Common.guide import zhuorui
 from Common.login import login
 
 
-@allure.feature('A股')
+@allure.feature('港股')
 class TestHKstockF10dividentlist:
     @classmethod
     def setup_class(cls) -> None:

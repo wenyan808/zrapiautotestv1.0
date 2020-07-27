@@ -27,5 +27,5 @@ def read_txt(file: str) -> list:
 
 
 if __name__ == '__main__':
-    L = read_txt(r"..\..\Test_Data/login_user_password.txt")
+    L = read_txt(r"..\..\Test_Data/stock_ts_code.txt")
     print(L)
