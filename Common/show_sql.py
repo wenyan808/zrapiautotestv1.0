@@ -61,6 +61,14 @@ class OperationSql:
 
 # q = OperationSql()
 # print(q.show_sql("select * from m_china_concept where `symbol`= 'BABA';"))
+# import json
+# q = OperationSql("192.168.1.237", "root", "123456", "stock_market")
+# ts_code = q.show_sql("select ts,code from t_stock_search where ts='SH' or ts='SZ';")
+# ts_code_shuju = json.dumps(list(map(lambda code: {"ts": code[0], "code": code[1]}, ts_code)))
+# # write_json(r"TestData/hsgtis_lgt.json", ts_code_shuju)
+# with open(r"TestData\hsgtis_lgt.json", "w", encoding="utf-8") as f:
+#     json.dump(ts_code_shuju, f, indent=2, ensure_ascii=False)
+
 
 # 使用pymongo模块连接mongoDB数据库
 # coding=utf-8

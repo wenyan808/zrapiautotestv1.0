@@ -7,8 +7,8 @@ from Common.login import login
 
 
 # @pytest.mark.skip(reason="状态显示未完成，目前无法运行")
-@allure.feature('k线')
-class TestCandleMinute1Min:
+@allure.feature('选股器')
+class TestStockSelectionDeviceGetlist:
     @classmethod
     def setup_class(cls) -> None:
         login()
