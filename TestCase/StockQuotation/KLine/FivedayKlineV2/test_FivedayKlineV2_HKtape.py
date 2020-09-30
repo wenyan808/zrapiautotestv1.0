@@ -114,7 +114,8 @@ class TestFivedayKlinev2HKtape:
     @allure.story('五日查询_优化版本 Version 2.0_HK大盘_type为空')
     def test_fivedayKlinev2_HKtape_typeNone(self):
         response = zhuorui('k线', '五日查询_优化版本 Version 2.0_HK大盘_type为空')
-        assert_data(response, '000103', 'type is not null')
+        # assert_data(response, '000103', 'type is not null')
+        assert_data(response, "000000", "ok")
         # print(response.json())
 
     @allure.story('五日查询_优化版本 Version 2.0_HK大盘_adjType为空')

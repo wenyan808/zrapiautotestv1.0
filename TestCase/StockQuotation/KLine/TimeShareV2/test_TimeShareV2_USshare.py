@@ -42,14 +42,14 @@ class TestTimeSharev2USshare:
     @allure.story('分时查询_优化版本 Version 2.0_US个股_adjType类型为2前复权')
     def test_timeSharev2_USshare_adjTypeof2(self):
         response = zhuorui('k线', '分时查询_优化版本 Version 2.0_US个股_adjType类型为2前复权')
-        # assert_data(response, '000000', 'ok')
+        assert_data(response, '000000', 'ok')
         assert response.status_code == 200
         # print(response.json())
 
     @allure.story('分时查询_优化版本 Version 2.0_US个股_adjType类型为3后复权')
     def test_timeSharev2_USshare_adjTypeof3(self):
         response = zhuorui('k线', '分时查询_优化版本 Version 2.0_US个股_adjType类型为3后复权')
-        # assert_data(response, '000000', 'ok')
+        assert_data(response, '000000', 'ok')
         assert response.status_code == 200
         # print(response.json())
 
@@ -87,7 +87,8 @@ class TestTimeSharev2USshare:
     @allure.story('分时查询_优化版本 Version 2.0_US个股_type为空')
     def test_timeSharev2_USshare_typeNone(self):
         response = zhuorui('k线', '分时查询_优化版本 Version 2.0_US个股_type为空')
-        assert_data(response, '000103', 'type is not null')
+        # assert_data(response, '000103', 'type is not null')
+        assert_data(response, "000000", "ok")
         # print(response.json())
 
     @allure.story('分时查询_优化版本 Version 2.0_US个股_adjType为空')

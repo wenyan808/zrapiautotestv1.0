@@ -1,3 +1,5 @@
+import logging
+
 import allure
 # import pytest
 
@@ -19,6 +21,33 @@ class TestHKstockF10profile:
         assert_data(response, '000000', 'ok')
         assert response.status_code == 200
         # print(response.json())
+        if "data" in response.json():
+            if len(response.json().get("data")) != 0:
+                # for i in range(len(response.json().get("data"))):
+                assert "company" in response.json().get("data")
+                assert "shareholderUrl" in response.json().get("data")
+                assert "managerUrl" in response.json().get("data")
+                assert "repoUrl" in response.json().get("data")
+                assert "splits" in response.json().get("data")
+                assert "splitsUrl" in response.json().get("data")
+                assert "listingDate" in response.json().get("data").get("company")
+                assert "name" in response.json().get("data").get("company")
+                assert "industry" in response.json().get("data").get("company")
+                assert "chairman" in response.json().get("data").get("company")
+                assert "issuePrice" in response.json().get("data").get("company")
+                assert "issueNumber" in response.json().get("data").get("company")
+                assert "totalCapitalStock" in response.json().get("data").get("company")
+                assert "equityHK" in response.json().get("data").get("company")
+                assert "business" in response.json().get("data").get("company")
+                assert "financeReportType" in response.json().get("data").get("company")
+
+
+            else:
+                logging.info("data是空的集合")
+
+        else:
+
+            logging.info("无data数据")
 
     @allure.story('港股F10简况_无token')
     def test_HKstock_F10profile_notoken(self):

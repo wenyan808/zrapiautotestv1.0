@@ -100,7 +100,8 @@ class TestTimeSharev2SHtape:
     @allure.story('分时查询_优化版本 Version 2.0_SH大盘_type为空')
     def test_timeSharev2_SHtape_typeNone(self):
         response = zhuorui('k线', '分时查询_优化版本 Version 2.0_SH大盘_type为空')
-        assert_data(response, '000103', 'type is not null')
+        # assert_data(response, '000103', 'type is not null')
+        assert_data(response, "000000", "ok")
         # print(response.json())
 
     @allure.story('分时查询_优化版本 Version 2.0_SH大盘_adjType为空')

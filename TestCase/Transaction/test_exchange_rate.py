@@ -48,7 +48,8 @@ class TestExchangeRate:
     def test_exchange_rate_currencyA(self):
         response = zhuorui('交易', '获取两个货币的汇率比率_currencyA')
         assert response.status_code == 200
-        assert_data(response, '000103', 'currencyB is null')
+        # assert_data(response, '000103', 'currencyB is null')
+        assert_data(response, '000103', 'currencyB is error')
         # print(response.json())
 
 
@@ -63,7 +64,9 @@ class TestExchangeRate:
     def test_exchange_rate(self):
         response = zhuorui('交易', '获取两个货币的汇率比率')
         assert response.status_code == 200
-        assert_data(response, '000103', 'currencyB is null')
+        # assert_data(response, '000103', 'currencyB is null')
+        # assert_data(response, '000103', 'currencyA is error')
+        assert_data(response, '000103', 'currencyB is error')
         # print(response.json())
 
 

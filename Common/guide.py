@@ -7,4 +7,6 @@ def zhuorui(sheet, name):
         if name in i:
             # common(i)
             return common(i)
-# zhuorui('查询股票市场涨跌概况_参数为4')
+# zhuorui("市场行情",'查询股票市场涨跌概况_参数为4')
+# zhuorui('拆合股', '查询更多股票信息')
+# zhuorui('交易', '行情汇率列表')

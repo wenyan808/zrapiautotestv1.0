@@ -1,3 +1,6 @@
+
+
+
 import json
 
 
@@ -18,7 +21,7 @@ def get_json(file: str):
     # return data_list
 
 
-def write_json(file: str, data):
+def write_json(file, data):
     """写入json文件
 
     :param file: 文件路径

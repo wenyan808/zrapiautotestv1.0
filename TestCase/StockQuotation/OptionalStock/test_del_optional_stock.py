@@ -69,7 +69,7 @@ class TestDelOptionalStock:
     def test_all(self):
         q = OperationSql("192.168.1.237", "root", "123456", "user_account")
         userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
-        id = MongoDB("userId", userId[2:-3:])
+        id = MongoDB("192.168.1.236", 27017, "stock_selector", "t_tactic6","userId", userId[3:-5:])
         list1 = list()
         for id1 in id:
             list1.append(str(id1.get('_id')))

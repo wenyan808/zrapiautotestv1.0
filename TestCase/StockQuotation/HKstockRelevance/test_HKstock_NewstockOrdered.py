@@ -1,3 +1,5 @@
+import logging
+
 import allure
 
 from Common.assertapi import assert_data
@@ -17,6 +19,33 @@ class testHKstockNewstockOrdered:
         assert_data(response, '000000', 'ok')
         assert response.status_code == 200
         # print(response.json())
+        if "data" in response.json():
+            if len(response.json().get("data")) != 0:
+                # for i in range(len(response.json().get("data"))):
+                assert "priceLow" in response.json().get("data")
+                assert "priceHigh" in response.json().get("data")
+                assert "volunit" in response.json().get("data")
+                assert "startDate" in response.json().get("data")
+                assert "entranceFee" in response.json().get("data")
+                assert "endDate" in response.json().get("data")
+                assert "listingDate" in response.json().get("data")
+                assert "industry" in response.json().get("data")
+                assert "totalNumber" in response.json().get("data")
+                assert "totalCapitalStock" in response.json().get("data")
+                assert "totalMarketValueLow" in response.json().get("data")
+                assert "totalMarketValueHigh" in response.json().get("data")
+                assert "sponsor" in response.json().get("data")
+                assert "cornerstoneInvestors" in response.json().get("data")
+                assert "companyDesc" in response.json().get("data")
+                assert "mainStockHolders" in response.json().get("data")
+                assert "url" in response.json().get("data")
+
+            else:
+                logging.info("data是空的集合")
+
+        else:
+
+            logging.info("无data数据")
 
     @allure.story('新股可认购-简况_HK_无token')
     def test_HKstock_NewstockOrdered_HK_notoken(self):

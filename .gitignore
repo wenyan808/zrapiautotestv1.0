@@ -6,3 +6,6 @@
 /TestCase/StockQuotation/KLine/AfterPowerFactor/report/*
 /TestCase/StockQuotation/HKstockRelevance/report/*
 /TestCase/StockQuotation/KLine/FivedayKlineV2/report/*
+/TestCase/StockQuotation/HSGTstockRelevance/report/*
+/TestCase/StockQuotation/Allstock/report/*
+/TestCase/Notification/MessageCenter/report/*

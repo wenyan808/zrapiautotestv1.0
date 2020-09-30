@@ -88,7 +88,8 @@ class TestTimeSharev2SHshare:
     @allure.story('分时查询_优化版本 Version 2.0_SH个股_type为空')
     def test_timeSharev2_SHshare_typeNone(self):
         response = zhuorui('k线', '分时查询_优化版本 Version 2.0_SH个股_type为空')
-        assert_data(response, '000103', 'type is not null')
+        # assert_data(response, '000103', 'type is not null')
+        assert_data(response, "000000", "ok")
         # print(response.json())
 
     @allure.story('分时查询_优化版本 Version 2.0_SH个股_adjType为空')

@@ -70,3 +70,5 @@ pip install -U pymongo -i https://mirrors.aliyun.com/pypi/simple
 # allure generate ./report/xml -o ./report/html --clean
 
 
+
+

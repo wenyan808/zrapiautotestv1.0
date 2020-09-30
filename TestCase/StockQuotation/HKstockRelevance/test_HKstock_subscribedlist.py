@@ -6,7 +6,7 @@ from Common.guide import zhuorui
 from Common.login import login
 
 
-# @pytest.mark.skip(reason='调试中')
+@pytest.mark.skip(reason='该接口已被删除，接口地址错误')
 @allure.feature('港股')
 class TestHKstocknewstocklist:
     @classmethod

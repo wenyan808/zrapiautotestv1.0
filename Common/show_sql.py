@@ -51,13 +51,15 @@ class OperationSql:
             # 创建游标
             cursor = self.get_newCursor()
             cursor.execute(sql)
-            data = cursor.fetchone()
+            data = cursor.fetchall()
         except Exception as e:
             raise e
         finally:
             self.close_cursor()
             self.close_sql_connect()
+        # print(data)
         return data
+
 
 # q = OperationSql()
 # print(q.show_sql("select * from m_china_concept where `symbol`= 'BABA';"))
@@ -75,15 +77,25 @@ class OperationSql:
 from pymongo import MongoClient
 
 
-def MongoDB(key, price):
+def MongoDB(address, port, database, surface, key, price):
+    """
+
+    :param address:ip地址
+    :param port: 端口号
+    :param database: 数据名
+    :param surface: 表名
+    :param key: 键
+    :param price:值
+    :return:返回查询的MongoDB数据库里面的符合条件的所有数据
+    """
     # 建立MongoDB数据库连接
-    client = MongoClient('192.168.1.236', 27017)
+    client = MongoClient(address, port)
 
-    # 连接所需数据库,stock_market为数据库名
-    db = client.stock_market
+    # 连接所需数据库,database为数据库名
+    db = client[database]
 
-    # 连接所用集合，也就是我们通常所说的表，t_stock_selected为表名
-    collection = db.t_stock_selected
+    # 连接所用集合，也就是我们通常所说的表，surface为表名
+    collection = db[surface]
 
     # 接下里就可以用collection来完成对数据库表的一些操作
 
@@ -98,6 +110,3 @@ def MongoDB(key, price):
         # print(x)
         list1.append(x)
     return list1
-
-
-

@@ -25,7 +25,6 @@ class TestFivedayKlinev2HKshare:
     #     assert response.status_code == 200
     #     # print(response.json())
 
-
     # @allure.story('五日查询_优化版本 Version 2.0_HK个股')
     # def test_fivedayKlinev2_HKshare(self):
     #     response = zhuorui('k线', '五日查询_优化版本 Version 2.0_HK个股')
@@ -102,7 +101,8 @@ class TestFivedayKlinev2HKshare:
     @allure.story('五日查询_优化版本 Version 2.0_HK个股_type为空')
     def test_fivedayKlinev2_HKshare_typeNone(self):
         response = zhuorui('k线', '五日查询_优化版本 Version 2.0_HK个股_type为空')
-        assert_data(response, '000103', 'type is not null')
+        # assert_data(response, '000103', 'type is not null')
+        assert_data(response, "000000", "ok")
         # print(response.json())
 
     @allure.story('五日查询_优化版本 Version 2.0_HK个股_adjType为空')
