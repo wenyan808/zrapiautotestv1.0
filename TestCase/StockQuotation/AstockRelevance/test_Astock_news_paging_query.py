@@ -15,13 +15,13 @@ class TestAstockNewsPagingQuery:
     def test_Astock_news_paging_query(self):
         response = zhuorui('A股', '个股新闻分页查询')
         assert_data(response, '000000', 'ok')
-        # print(response.text)
+        # print(response.json())
 
     @allure.story('个股新闻分页查询_token为0')
     def test_Astock_news_paging_query_notoken(self):
         response = zhuorui('A股', '个股新闻分页查询_token为0')
         assert_data(response, '000000', 'ok')
-        # print(response.text)
+        # print(response.json())
 
     @allure.story('个股新闻分页查询_ts为空')
     def test_Astock_news_paging_query_tsNone(self):

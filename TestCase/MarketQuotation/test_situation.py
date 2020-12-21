@@ -16,6 +16,7 @@ class TestClass():
 	def test_hs(self):
 		response = zhuorui('市场行情', '查询股票市场涨跌概况_HS')
 		assert_data(response, '000000', 'ok')
+		# print(response.json())
 
 	def test_us(self):
 		response = zhuorui('市场行情','查询股票市场涨跌概况_US')

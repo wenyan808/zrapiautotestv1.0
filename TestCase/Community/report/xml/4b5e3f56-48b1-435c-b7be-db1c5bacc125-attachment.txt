@@ -1,0 +1,3 @@
+INFO     root:data_driven.py:102 args:
+({'articleType': 1, 'content': '【恒指开涨1.76%，复星医药大涨14%】香港恒生指数11月10日（周二）开盘涨1.76%，恒生国企指数涨0.68%，恒生科技指数跌2.14%。航空股上涨，国泰航空涨近15%；科技股下跌，京东跌超7%，美团跌超3%，阿里、腾讯跌超2%。复星医药高开近15%，公司合作研发的新冠mRNA疫苗有效率达90%。\n[tag:000538.SZ][tag:600519.SH]', 'images': [{'name': 'community/images/2020/11/09/16048910709636993.jpg', 'w': 1080, 'h': 1920, 'url': 'http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/community/images/2020/11/09/16048910709636993.jpg'}], 'products': [{'ts': 'SZ', 'code': '000538', 'name': '云南白药', 'type': '2'}, {'ts': 'SH', 'code': '600519', 'name': '贵州茅台', 'type': '2'}]},)
+INFO     root:requests_library.py:19 关闭 session

@@ -110,3 +110,42 @@ def MongoDB(address, port, database, surface, key, price):
         # print(x)
         list1.append(x)
     return list1
+
+
+def MongoDBField(address, port, database, surface, args):
+    """
+
+    :param address: ip地址
+    :param port: 端口号
+    :param database: 数据名
+    :param surface: 表名
+    :param args: 传递类型为list，传递参数用于指定查询字段   type：为0，不显示type     为1，显示type
+    :return:返回查询的MongoDB数据库里面的符合条件的所有数据列表
+    """
+
+    a, b = args
+    # 建立MongoDB数据库连接
+    client = MongoClient(address, port)
+
+    # 连接所需数据库,database为数据库名
+    db = client[database]
+
+    # 连接所用集合，也就是我们通常所说的表，surface为表名
+    collection = db[surface]
+
+    # 接下里就可以用collection来完成对数据库表的一些操作
+
+    # 查找集合中所有数据
+    # for item in collection.find():
+    #     print(item)
+
+    # 查找集合中单条数据
+    mydoc = collection.find(a, b)
+    list1 = list()
+    for x in mydoc:
+        # print(x)
+        list1.append(x)
+    return list1
+
+
+# print(MongoDBField("192.168.1.237", 27017, "community", "t_report", [{}, {"type": 1}]))

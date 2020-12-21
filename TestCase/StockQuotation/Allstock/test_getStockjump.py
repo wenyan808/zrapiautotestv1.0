@@ -54,7 +54,7 @@ class TestgetStockjump:
         headers.update(token)
         # print(headers)
         payload = json.dumps(dict(payload1))
-        time.sleep(1)
+        # time.sleep(1)
         r = requests.post(url=url, headers=headers, data=payload)
         # 断言
         j = r.json()

@@ -14,7 +14,7 @@ class TestAstockF10getCashflowDetail:
     @allure.story('A股F10获取现金流量报表详情数据_SZ')
     def test_Astock_F10getCashflowDeta_SZ(self):
         response = zhuorui('A股', 'A股F10获取现金流量报表详情数据_SZ')
-        # print(response.text)
+        # print(response.json())
         assert_data(response, '000000', 'ok')
 
     @allure.story('A股F10获取现金流量报表详情数据_SH')
@@ -81,7 +81,7 @@ class TestAstockF10getCashflowDetail:
     def test_Astock_F10getCashflowDeta_pageSizeNone(self):
         response = zhuorui('A股', 'A股F10获取现金流量报表详情数据_pageSize为空')
         # print(response.text)
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
 
     @allure.story('A股F10获取现金流量报表详情数据_pageSize为异常')
     def test_Astock_F10getCashflowDeta_pageSizeException(self):

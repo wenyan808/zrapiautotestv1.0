@@ -1,0 +1,4 @@
+INFO     root:requests_library.py:14 获取新session
+INFO     root:data_driven.py:102 args:
+({'articleType': 1, 'content': '中国10月CPI同比增长0.5%，预期增长0.8%，前值增长1.7%。\n中国10月PPI同比下降2.1%，预期下降1.9%，前值下降2.1%。\n'},)
+INFO     root:requests_library.py:19 关闭 session

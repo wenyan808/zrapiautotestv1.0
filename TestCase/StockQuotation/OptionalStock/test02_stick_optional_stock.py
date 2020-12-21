@@ -13,10 +13,9 @@ class TestStickOptionalStock:
         login()
         q = OperationSql("192.168.1.237", "root", "123456", "user_account")
         userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
-        id = MongoDB("192.168.1.236", 27017, "stock_selector", "t_tactic6", "user", userId[3:-5:])
-        # print(id)
-        # print(id[-1].get('_id'))
-        cls._id = {"id": str(id[-1].get('_id'))}
+        # print(userId)
+        id = MongoDB("192.168.1.236", 27017, "stock_market", "t_stock_selected", "userId", userId[3:-5:])
+        cls._id = {"id": str(id[0]["_id"])}
 
     @allure.story('置顶自选股')
     def test_stick(self):

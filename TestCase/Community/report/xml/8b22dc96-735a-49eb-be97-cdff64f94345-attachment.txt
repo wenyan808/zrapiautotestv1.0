@@ -1,0 +1,21 @@
+INFO     root:data_driven.py:102 args:
+({'articleType': 1, 'content': '港股汽车股集体下挫，比亚迪股份跌超10%，长城汽车、吉利汽车跌超4%。电动车概念股雅迪控股跌超12%。\n[tag:01211.HK]', 'products': [{'ts': 'HK', 'code': '01211', 'name': '比亚迪股份', 'type': '2'}]},)
+INFO     root:requests_library.py:76 发送 post 请求：发帖
+INFO     root:requests_library.py:77 请求：
+url:http://192.168.1.241/as_community/api/post/v1/add
+method:post
+params:None
+headers:{'Content-Type': 'application/json', 'appVersion': '0.1.5', 'deviceId': '5502AB11-CCDB-4B78-B139-71618170DE9C', 'osType': 'ios', 'osVersion': '13.4.1', 'token': '01495fcfa71421e232e385edc9f496a6'}
+cookies:None
+timeout:None
+data:{"articleType": 1, "content": "\u6e2f\u80a1\u6c7d\u8f66\u80a1\u96c6\u4f53\u4e0b\u632b\uff0c\u6bd4\u4e9a\u8fea\u80a1\u4efd\u8dcc\u8d8510%\uff0c\u957f\u57ce\u6c7d\u8f66\u3001\u5409\u5229\u6c7d\u8f66\u8dcc\u8d854%\u3002\u7535\u52a8\u8f66\u6982\u5ff5\u80a1\u96c5\u8fea\u63a7\u80a1\u8dcc\u8d8512%\u3002\n[tag:01211.HK]", "products": [{"ts": "HK", "code": "01211", "name": "\u6bd4\u4e9a\u8fea\u80a1\u4efd", "type": "2"}], "sign": "IyL3qeGgFEzZtHM/s/5sP4hU5ioSeVWhgkkguAMyAXBkmdgOmpA3ijGdpbB+gJwnAQB8OZBSNPaepOjdSMA0BQ=="}
+json:None
+
+INFO     root:requests_library.py:98 响应：
+url:http://192.168.1.241/as_community/api/post/v1/add
+status_code:200
+headers:{'Server': 'nginx/1.16.1', 'Date': 'Wed, 02 Dec 2020 03:32:19 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'}
+cookies:{}
+text:{"code":"460300","msg":"æ¨åè¨å¤ªé¢ç¹äºï¼è¯·ç¨ååè¯"}
+
+INFO     root:requests_library.py:19 关闭 session

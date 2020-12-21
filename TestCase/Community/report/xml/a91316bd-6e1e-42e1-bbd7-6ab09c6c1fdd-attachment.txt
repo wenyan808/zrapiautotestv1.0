@@ -1,0 +1,21 @@
+INFO     root:data_driven.py:102 args:
+({'articleType': 1, 'content': '【恒指开涨1.76%，复星医药大涨14%】香港恒生指数11月10日（周二）开盘涨1.76%，恒生国企指数涨0.68%，恒生科技指数跌2.14%。航空股上涨，国泰航空涨近15%；科技股下跌，京东跌超7%，美团跌超3%，阿里、腾讯跌超2%。复星医药高开近15%，公司合作研发的新冠mRNA疫苗有效率达90%。\n[tag:000538.SZ][tag:600519.SH]', 'images': [{'name': 'community/images/2020/11/09/16048910709636993.jpg', 'w': 1080, 'h': 1920, 'url': 'http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/community/images/2020/11/09/16048910709636993.jpg'}], 'products': [{'ts': 'SZ', 'code': '000538', 'name': '云南白药', 'type': '2'}, {'ts': 'SH', 'code': '600519', 'name': '贵州茅台', 'type': '2'}]},)
+INFO     root:requests_library.py:76 发送 post 请求：发帖
+INFO     root:requests_library.py:77 请求：
+url:http://192.168.1.241/as_community/api/post/v1/add
+method:post
+params:None
+headers:{'Content-Type': 'application/json', 'appVersion': '0.1.5', 'deviceId': '5502AB11-CCDB-4B78-B139-71618170DE9C', 'osType': 'ios', 'osVersion': '13.4.1', 'token': '14e6fb2a27b2af1a9083963875f1e922'}
+cookies:None
+timeout:None
+data:{"articleType": 1, "content": "\u3010\u6052\u6307\u5f00\u6da81.76%\uff0c\u590d\u661f\u533b\u836f\u5927\u6da814%\u3011\u9999\u6e2f\u6052\u751f\u6307\u657011\u670810\u65e5\uff08\u5468\u4e8c\uff09\u5f00\u76d8\u6da81.76%\uff0c\u6052\u751f\u56fd\u4f01\u6307\u6570\u6da80.68%\uff0c\u6052\u751f\u79d1\u6280\u6307\u6570\u8dcc2.14%\u3002\u822a\u7a7a\u80a1\u4e0a\u6da8\uff0c\u56fd\u6cf0\u822a\u7a7a\u6da8\u8fd115%\uff1b\u79d1\u6280\u80a1\u4e0b\u8dcc\uff0c\u4eac\u4e1c\u8dcc\u8d857%\uff0c\u7f8e\u56e2\u8dcc\u8d853%\uff0c\u963f\u91cc\u3001\u817e\u8baf\u8dcc\u8d852%\u3002\u590d\u661f\u533b\u836f\u9ad8\u5f00\u8fd115%\uff0c\u516c\u53f8\u5408\u4f5c\u7814\u53d1\u7684\u65b0\u51a0mRNA\u75ab\u82d7\u6709\u6548\u7387\u8fbe90%\u3002\n[tag:000538.SZ][tag:600519.SH]", "images": [{"name": "community/images/2020/11/09/16048910709636993.jpg", "w": 1080, "h": 1920, "url": "http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/community/images/2020/11/09/16048910709636993.jpg"}], "products": [{"ts": "SZ", "code": "000538", "name": "\u4e91\u5357\u767d\u836f", "type": "2"}, {"ts": "SH", "code": "600519", "name": "\u8d35\u5dde\u8305\u53f0", "type": "2"}], "sign": "UpUnhzmw6Po1bMvTtAyohuRkB+Zc7zNNZbY+gIH9cC0/403Hed1UedZjAGgz7u5d7Yp+1vWlNcyJsJdGXG+XPA=="}
+json:None
+
+INFO     root:requests_library.py:98 响应：
+url:http://192.168.1.241/as_community/api/post/v1/add
+status_code:200
+headers:{'Server': 'nginx/1.16.1', 'Date': 'Wed, 02 Dec 2020 03:28:03 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'}
+cookies:{}
+text:{"code":"460300","msg":"æ¨åè¨å¤ªé¢ç¹äºï¼è¯·ç¨ååè¯"}
+
+INFO     root:requests_library.py:19 关闭 session

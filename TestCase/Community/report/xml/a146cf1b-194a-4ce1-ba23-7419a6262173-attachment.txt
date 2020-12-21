@@ -1,0 +1,24 @@
+INFO     root:requests_library.py:14 获取新session
+INFO     root:data_driven.py:102 args:
+({'articleType': 1, 'content': '中国10月CPI同比增长0.5%，预期增长0.8%，前值增长1.7%。\n中国10月PPI同比下降2.1%，预期下降1.9%，前值下降2.1%。\n'},)
+INFO     root:requests_library.py:76 发送 post 请求：发帖
+INFO     root:requests_library.py:77 请求：
+url:http://192.168.1.241/as_community/api/post/v1/add
+method:post
+params:None
+headers:{'Content-Type': 'application/json', 'appVersion': '0.1.5', 'deviceId': '5502AB11-CCDB-4B78-B139-71618170DE9C', 'osType': 'ios', 'osVersion': '13.4.1', 'token': 'c77370e6a0f208161565c3437e5b7346'}
+cookies:None
+timeout:None
+data:{"articleType": 1, "content": "\u4e2d\u56fd10\u6708CPI\u540c\u6bd4\u589e\u957f0.5%\uff0c\u9884\u671f\u589e\u957f0.8%\uff0c\u524d\u503c\u589e\u957f1.7%\u3002\n\u4e2d\u56fd10\u6708PPI\u540c\u6bd4\u4e0b\u964d2.1%\uff0c\u9884\u671f\u4e0b\u964d1.9%\uff0c\u524d\u503c\u4e0b\u964d2.1%\u3002\n", "sign": "HIIyEND0MTLYQWeXGa4ZKhypK8luEizPOFkyWbpc2zZD/rPL0xpF18Hru7ZolXXx4Qy4QeVCF+5CWLpHub2y8w=="}
+json:None
+
+INFO     root:requests_library.py:98 响应：
+url:http://192.168.1.241/as_community/api/post/v1/add
+status_code:200
+headers:{'Server': 'nginx/1.16.1', 'Date': 'Wed, 02 Dec 2020 02:42:33 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'}
+cookies:{}
+text:{"code":"000000","msg":"ok","data":{"postId":"5fc6ff19791d040006299d68","articleType":1,"publishTime":1606876953448,"creator":{"userId":"90106be7c8444dda8f0f5b745b50a08e","nickname":"ZrAutotestè´¦å·","headPhoto":"http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/head_photo/images/2020/09/23/16008475893230331.jpeg","zrNo":"68904140"},"praiseNum":0,"commentNum":0,"firstCommentNum":0,"praise":false,"hot":286001606876953448,"content":"ä¸­å½10æCPIåæ¯å¢é¿0.5%ï¼é¢æå¢é¿0.8%ï¼åå¼å¢é¿1.7%ã
+ä¸­å½10æPPIåæ¯ä¸é2.1%ï¼é¢æä¸é1.9%ï¼åå¼ä¸é2.1%ã
+"}}
+
+INFO     root:requests_library.py:19 关闭 session

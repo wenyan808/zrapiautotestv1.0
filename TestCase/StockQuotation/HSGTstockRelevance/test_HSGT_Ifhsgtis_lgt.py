@@ -78,4 +78,3 @@ class TestHSGTIfhsgtis_lgt:
                     logging.info(f"{paylo}不是陆股通")
                 else:
                     TypeError("超出判断范围，请正确输入code")
-

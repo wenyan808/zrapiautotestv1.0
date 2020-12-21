@@ -58,21 +58,21 @@ class TestHKstockF10assetLiabilitdetail:
     @allure.story('港股F10获取资产负债详情页数据_只传ts')
     def test_HKstock_F10assetLiabilitdetail_onlyvalts(self):
         response = zhuorui('港股', '港股F10获取资产负债详情页数据_只传ts')
-        assert_data(response, '000103', 'code格式有误')
+        assert_data(response, '000103', 'must not be null')
         assert response.status_code == 200
         # print(response.json())
 
     @allure.story('港股F10获取资产负债详情页数据_只传code')
     def test_HKstock_F10assetLiabilitdetail_onlyvalcode(self):
         response = zhuorui('港股', '港股F10获取资产负债详情页数据_只传code')
-        assert_data(response, '000103', 'ts格式有误')
+        assert_data(response, '000103', 'must not be null')
         assert response.status_code == 200
         # print(response.json())
 
     @allure.story('港股F10获取资产负债详情页数据_参数为空')
     def test_HKstock_F10assetLiabilitdetail_bobyNone(self):
         response = zhuorui('港股', '港股F10获取资产负债详情页数据_参数为空')
-        assert_data(response, '000103', 'code格式有误')
+        assert_data(response, '000103', 'must not be null')
         assert response.status_code == 200
         # print(response.json())
 
@@ -164,7 +164,7 @@ class TestHKstockF10assetLiabilitdetail:
     @allure.story('港股F10获取资产负债详情页数据_type为空')
     def test_HKstock_F10assetLiabilitdetail_typeNone(self):
         response = zhuorui('港股', '港股F10获取资产负债详情页数据_type为空')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
         assert response.status_code == 200
         # print(response.json())
 

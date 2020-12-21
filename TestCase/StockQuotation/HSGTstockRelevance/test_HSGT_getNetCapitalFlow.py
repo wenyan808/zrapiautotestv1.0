@@ -1,7 +1,7 @@
 import json
 import logging
 import random
-import time
+# import time
 
 import allure
 import pytest
@@ -29,7 +29,6 @@ class TestgetNetCapitalFlow:
         write_json(BASE_DIR + r"/TestData/getNetCapitalFlow.json", ts_code_data)
         # print(ts_code_data)
 
-
     @allure.story('沪深港通单只证券累计资金净流向')
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/getNetCapitalFlow.json"))
     def test_HSGT_getNetCapitalFlow(self, info):
@@ -55,7 +54,7 @@ class TestgetNetCapitalFlow:
         headers.update(token)
         # print(headers)
         payload = json.dumps(dict(payload1))
-        time.sleep(1)
+        # time.sleep(1)
         r = requests.post(url=url, headers=headers, data=payload)
         # 断言
         j = r.json()

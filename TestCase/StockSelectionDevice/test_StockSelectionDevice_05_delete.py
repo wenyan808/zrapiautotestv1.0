@@ -26,7 +26,7 @@ class TestStockSelectionDeviceDelete:
         # 通过查询语句找到用户id
         userId = q.show_sql("select id from t_user_account where `zr_no`= '68904140';")
         # 传入键key，值price，数据库名database，表名surface到MongoDB数据库
-        id = MongoDB("192.168.1.236", 27017, "stock_market", "t_stock_selected","user_id", str(userId)[3:-5:])
+        id = MongoDB("192.168.1.236", 27017, "stock_selector", "t_tactic6", "user_id", str(userId)[3:-5:])
         # print(str(userId)[3:-5:])
         _id = str(id[-1].get('_id'))
         # print(_id)

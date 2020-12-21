@@ -1,4 +1,3 @@
-
 import logging
 
 import allure
@@ -10,7 +9,7 @@ from Common.login import login
 
 
 # test_HSGT_get60TradeDate
-@pytest.mark.skip(reason="调试中")
+# @pytest.mark.skip(reason="调试中")
 @allure.feature('沪深港股通资金流向排行榜')
 class TestHSGTget60TradeDate:
     @classmethod
@@ -22,14 +21,18 @@ class TestHSGTget60TradeDate:
         response = zhuorui('沪深港通', '查询最近60个交易日期_HKandSH')
         assert_data(response, '000000', 'ok')
         assert response.status_code == 200
-        print(response.json())
+        # print(response.json())
         if "data" in response.json():
             if len(response.json().get("data")) != 0:
-                # assert "date" in response.json().get("data")
-                assert "ts" in response.json().get("data")
-                if len(response.json().get("data").get("date")) != 0:
-                    for i in range(len(response.json().get("data").get("list"))):
-                        pass
+                # print(type(response.json().get("data")[0]))
+                # print(response.json().get("data")[0])
+                # print(response.json().get("data")[1])
+                assert "date" in response.json().get("data")[0]
+                assert "ts" in response.json().get("data")[0]
+                if len(response.json().get("data")[0].get("date")) != 0:
+                    assert response.json().get("data")[0].get("ts") == "HK"
+                    # print(response.json().get("data")[0]["date"][0])
+                    assert len(response.json().get("data")[0]["date"]) == 60
 
             else:
                 logging.info("data是空的集合")

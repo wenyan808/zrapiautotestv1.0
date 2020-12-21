@@ -80,7 +80,7 @@ class TestAstockF10getAssetsLiabilitiesDetail:
     @allure.story('A股F10获取资产负债详情页数据_pageSize为空')
     def test_Astock_F10getAssets_liabilities_detail_pageSizeNone(self):
         response = zhuorui('A股', 'A股F10获取资产负债详情页数据_pageSize为空')
-        assert_data(response, '000000', 'ok')
+        assert_data(response, '000103', 'must not be null')
         # print(response.text)
 
     @allure.story('A股F10获取资产负债详情页数据_pageSize为错误')
@@ -95,14 +95,11 @@ class TestAstockF10getAssetsLiabilitiesDetail:
         assert_data(response, '000103', '参数校验不通过')
         # print(response.text)
 
-
-
     @allure.story('A股F10获取资产负债详情页数据_currentPage为空')
     def test_Astock_F10getAssets_liabilities_detail_currentPageNone(self):
         response = zhuorui('A股', 'A股F10获取资产负债详情页数据_currentPage为空')
         assert_data(response, '000000', 'ok')
         # print(response.text)
-
 
     @allure.story('A股F10获取资产负债详情页数据_currentPage为错误')
     def test_Astock_F10getAssets_liabilities_detail_currentPageError(self):
@@ -115,8 +112,6 @@ class TestAstockF10getAssetsLiabilitiesDetail:
         response = zhuorui('A股', 'A股F10获取资产负债详情页数据_currentPage为异常')
         assert_data(response, '000103', '参数校验不通过')
         # print(response.text)
-
-
 
     @allure.story('A股F10获取资产负债详情页数据_type全部')
     def test_Astock_F10getAssets_liabilities_detail_typeall(self):
@@ -159,4 +154,3 @@ class TestAstockF10getAssetsLiabilitiesDetail:
         response = zhuorui('A股', 'A股F10获取资产负债详情页数据_必传值')
         assert_data(response, '000000', 'ok')
         # print(response.text)
-

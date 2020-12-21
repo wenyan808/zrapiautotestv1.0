@@ -3,22 +3,19 @@ import json
 
 
 def get_sign(payload1):
+    url = "http://192.168.1.209:1130/sign"
 
+    payload = payload1
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    jdata = json.dumps(payload)
+    response = requests.request("POST", url, headers=headers, data=jdata)
 
-	url = "http://192.168.1.209:1130/sign"
-
-	payload = payload1
-	headers = {
-	  'Content-Type': 'application/json'
-	}
-	jdata = json.dumps(payload)
-	response = requests.request("POST", url, headers=headers, data = jdata)
-
-	sign1 = str(response.text.encode('utf8'))
-	sign = sign1[2:-1:]
-	# print(response)
-	return sign
-
+    sign1 = str(response.text.encode('utf8'))
+    sign = sign1[2:-1:]
+    # print(response)
+    return sign
 
 # get_sign({
 #   "handicap": {

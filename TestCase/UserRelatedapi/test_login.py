@@ -8,11 +8,12 @@ from Common.tools.md5 import get_md5
 from Common.tools.write_xlsx import write_xlsx
 from glo import BASE_DIR, pwd, phone
 
-@pytest.mark.skip(reason='调试中')
+# @pytest.mark.skip(reason='调试中')
 class TestLogin:
     @allure.story('用户密码登录')
+    # print("nidaye")
     def test_login(self):
-        paylo = login_xinxi(phone, get_md5(pwd), '86')
+        paylo = login_xinxi(phone, pwd, '86')
         # 写
         write_xlsx("Sheet1", 1, 7, str(paylo))
         response = zhuorui('Sheet1', '用户密码登录')

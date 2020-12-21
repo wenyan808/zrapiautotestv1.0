@@ -69,15 +69,18 @@ class TestDelOptionalStock:
     def test_all(self):
         q = OperationSql("192.168.1.237", "root", "123456", "user_account")
         userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
-        id = MongoDB("192.168.1.236", 27017, "stock_selector", "t_tactic6","userId", userId[3:-5:])
+        # print(userId)
+        id = MongoDB("192.168.1.236", 27017, "stock_market", "t_stock_selected", "userId", userId[3:-5:])
         list1 = list()
         for id1 in id:
             list1.append(str(id1.get('_id')))
         _id = {"ids": list1}
+        # print(_id)
         # 写
         write_xlsx("自选股", 24, 7, str(_id))
         response = zhuorui('自选股', '删除自选股_All')
         assert_data(response, '000000', 'ok')
+        # print(response.json())
 
     # @allure.story('删除自选股_参数列表空')
     # def test_parameter_null(self):
@@ -117,7 +120,5 @@ class TestDelOptionalStock:
     #     response = zhuorui('自选股', '删除自选股无token_All')
     #     assert_data(response, '000101', 'token不能为空')
 
-
 # if __name__ == '__main__':
 #     pytest.main()
-
