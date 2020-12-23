@@ -61,7 +61,7 @@ class TestCommunityaddreport():
         # }
         paylo = {
 
-            "reportedId": "5fb22c84791d040006a931fd",
+            "reportedId": "5fe2b0b1791d040006ec7ed1",
             "type": 2
         }
         # print(paylo)

@@ -22,5 +22,4 @@ class TestMCgetsetting:
         assert response.json().get("data").get('noticeColumn') == True
         assert response.json().get("data").get("sound") == True
         assert response.json().get("data").get("shock") == True
-        assert response.json().get("data").get("orderDeal") == True
-        assert response.json().get("data").get("stockPrice") == True
+        assert "shutOffs" in response.json().get("data")

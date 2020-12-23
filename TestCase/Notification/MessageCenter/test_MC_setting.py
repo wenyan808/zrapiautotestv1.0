@@ -6,16 +6,16 @@ from Common.login import login
 
 
 # test_MC_setting
-
+# @pytest.mark.skip(reason="调试中 ")
 @allure.feature('消息通知')
 class TestMCsetting:
     @classmethod
     def setup_class(cls) -> None:
         login()
 
-    @allure.story('推送设置_全部为True')
+    @allure.story('推送设置_all')
     def test_MC_setting_allofTrue(self):
-        response = zhuorui('消息通知', '推送设置_全部为True')
+        response = zhuorui('消息通知', '推送设置_all')
         assert response.status_code == 200
         assert_data(response, '000000', 'ok')
         # print(response.json())
