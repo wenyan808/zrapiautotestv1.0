@@ -1,10 +1,10 @@
 import os
-
 import allure
 from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
 import pytest
+
 @allure.feature('开户')
 class TestClass():
 
@@ -110,10 +110,11 @@ class TestClass():
         response = zhuorui("开户", "上传电子签名")
         # print(response.json())
         assert_data(response, "000000", "ok")
+
+
 # if __name__ == '__main__':
-#     # pytest.main()
-#     pytest.main(['pytest --alluredir=report/xml'])
-#     os.system('allure generate D:/zrapiautotestv1.0/TestCase/Account/report/xml -o D:/zrapiautotestv1.0/TestCase/Account/report/html --clean')
+    # os.system('pytest --aluredir = ./report/xml')
+    # os.system('allure generate ./report/xml -o ./report/html --clean')
 
 
 

@@ -1,267 +1,107 @@
 [
   {
-    "ts": "HK",
-    "code": "00857"
-  },
-  {
-    "ts": "HK",
-    "code": "01050"
+    "ts": "US",
+    "code": "CLPT"
   },
   {
     "ts": "US",
-    "code": "NGMS"
-  },
-  {
-    "ts": "US",
-    "code": "RSP"
-  },
-  {
-    "ts": "US",
-    "code": "IGAC"
-  },
-  {
-    "ts": "US",
-    "code": "OC"
-  },
-  {
-    "ts": "US",
-    "code": "SCHR"
-  },
-  {
-    "ts": "US",
-    "code": "CF"
-  },
-  {
-    "ts": "US",
-    "code": "ETON"
-  },
-  {
-    "ts": "US",
-    "code": "APEN"
-  },
-  {
-    "ts": "US",
-    "code": "MRTN"
-  },
-  {
-    "ts": "US",
-    "code": "DCRB"
-  },
-  {
-    "ts": "US",
-    "code": "ASPS"
-  },
-  {
-    "ts": "US",
-    "code": "OCFC"
-  },
-  {
-    "ts": "US",
-    "code": "NMFC"
-  },
-  {
-    "ts": "US",
-    "code": "SPNV"
-  },
-  {
-    "ts": "US",
-    "code": "KSM"
+    "code": "MGM"
   },
   {
     "ts": "HK",
-    "code": "00297"
-  },
-  {
-    "ts": "US",
-    "code": "FCAU"
-  },
-  {
-    "ts": "US",
-    "code": "CCMP"
-  },
-  {
-    "ts": "US",
-    "code": "IEIH"
-  },
-  {
-    "ts": "US",
-    "code": "URBN"
-  },
-  {
-    "ts": "US",
-    "code": "PBEE"
+    "code": "00556"
   },
   {
     "ts": "HK",
-    "code": "01323"
+    "code": "00607"
   },
   {
     "ts": "US",
-    "code": "CROC"
+    "code": "AVAN"
+  },
+  {
+    "ts": "US",
+    "code": "SYKE"
+  },
+  {
+    "ts": "US",
+    "code": "MARA"
   },
   {
     "ts": "HK",
-    "code": "00095"
+    "code": "00475"
+  },
+  {
+    "ts": "US",
+    "code": "FRTA"
+  },
+  {
+    "ts": "US",
+    "code": "ASLN"
+  },
+  {
+    "ts": "US",
+    "code": "RTRX"
   },
   {
     "ts": "HK",
-    "code": "01094"
+    "code": "CES100"
   },
   {
     "ts": "US",
-    "code": "SLG-I"
+    "code": "KURA"
   },
   {
     "ts": "US",
-    "code": "CLVR"
+    "code": "HYAC"
   },
   {
     "ts": "US",
-    "code": "NML"
-  },
-  {
-    "ts": "US",
-    "code": "XIN"
-  },
-  {
-    "ts": "US",
-    "code": "XLU"
-  },
-  {
-    "ts": "US",
-    "code": "AIO"
-  },
-  {
-    "ts": "US",
-    "code": "TOTL"
-  },
-  {
-    "ts": "US",
-    "code": "MINC"
-  },
-  {
-    "ts": "US",
-    "code": "DS-D"
-  },
-  {
-    "ts": "US",
-    "code": "WFC-Q"
-  },
-  {
-    "ts": "US",
-    "code": "OCX"
-  },
-  {
-    "ts": "US",
-    "code": "RNEM"
-  },
-  {
-    "ts": "US",
-    "code": "EXPCU"
+    "code": "RFDA"
   },
   {
     "ts": "HK",
-    "code": "00646"
+    "code": "00271"
+  },
+  {
+    "ts": "US",
+    "code": "SBPH"
   },
   {
     "ts": "HK",
-    "code": "08169"
+    "code": "09081"
   },
   {
     "ts": "US",
-    "code": "MTRN"
+    "code": "PAYC"
   },
   {
     "ts": "US",
-    "code": "BOWX"
+    "code": "HWCPL"
   },
   {
     "ts": "US",
-    "code": "AUY"
+    "code": "FMF"
+  },
+  {
+    "ts": "US",
+    "code": "UZE"
+  },
+  {
+    "ts": "US",
+    "code": "FLOT"
   },
   {
     "ts": "HK",
-    "code": "03302"
+    "code": "02022"
   },
   {
     "ts": "US",
-    "code": "SE"
-  },
-  {
-    "ts": "HK",
-    "code": "03339"
-  },
-  {
-    "ts": "HK",
-    "code": "08272"
+    "code": "SIGA"
   },
   {
     "ts": "US",
-    "code": "OCFT"
-  },
-  {
-    "ts": "US",
-    "code": "DWSN"
-  },
-  {
-    "ts": "US",
-    "code": "ATCX"
-  },
-  {
-    "ts": "HK",
-    "code": "00397"
-  },
-  {
-    "ts": "US",
-    "code": "HSIC"
-  },
-  {
-    "ts": "US",
-    "code": "IYG"
-  },
-  {
-    "ts": "HK",
-    "code": "01251"
-  },
-  {
-    "ts": "US",
-    "code": "ETM"
-  },
-  {
-    "ts": "US",
-    "code": "DBAW"
-  },
-  {
-    "ts": "US",
-    "code": "KBWD"
-  },
-  {
-    "ts": "US",
-    "code": "IXP"
-  },
-  {
-    "ts": "HK",
-    "code": "07226"
-  },
-  {
-    "ts": "US",
-    "code": "CET"
-  },
-  {
-    "ts": "US",
-    "code": "ENTR"
-  },
-  {
-    "ts": "HK",
-    "code": "00272"
-  },
-  {
-    "ts": "HK",
-    "code": "09906"
-  },
-  {
-    "ts": "US",
-    "code": "IJAN"
+    "code": "STIM"
   },
   {
     "ts": "US",
@@ -269,383 +109,183 @@
   },
   {
     "ts": "US",
-    "code": "ZNTEU"
+    "code": "MTCH"
   },
   {
     "ts": "US",
-    "code": "MKC"
+    "code": "IIIV"
   },
   {
     "ts": "US",
-    "code": "DGL"
+    "code": "GOODM"
   },
   {
     "ts": "US",
-    "code": "PROF"
-  },
-  {
-    "ts": "US",
-    "code": "LEGN"
-  },
-  {
-    "ts": "US",
-    "code": "AMK"
-  },
-  {
-    "ts": "US",
-    "code": "AGE"
-  },
-  {
-    "ts": "US",
-    "code": "ITAC"
+    "code": "USMC"
   },
   {
     "ts": "HK",
-    "code": "08218"
+    "code": "00817"
   },
   {
     "ts": "US",
-    "code": "FCOR"
+    "code": "HCACU"
   },
   {
     "ts": "US",
-    "code": "SHAK"
-  },
-  {
-    "ts": "US",
-    "code": "RFI"
-  },
-  {
-    "ts": "US",
-    "code": "APTX"
-  },
-  {
-    "ts": "US",
-    "code": "DFEB"
-  },
-  {
-    "ts": "US",
-    "code": "CTBI"
-  },
-  {
-    "ts": "US",
-    "code": "CNNB"
-  },
-  {
-    "ts": "US",
-    "code": "NBEV"
-  },
-  {
-    "ts": "US",
-    "code": "VTAQU"
-  },
-  {
-    "ts": "US",
-    "code": "TRT"
-  },
-  {
-    "ts": "US",
-    "code": "ALYA"
-  },
-  {
-    "ts": "US",
-    "code": "PHM"
-  },
-  {
-    "ts": "US",
-    "code": "WIFI"
+    "code": "FRC-H"
   },
   {
     "ts": "HK",
-    "code": "08130"
+    "code": "00241"
   },
   {
     "ts": "US",
-    "code": "PSB-X"
+    "code": "DFAI"
+  },
+  {
+    "ts": "US",
+    "code": "NVS"
+  },
+  {
+    "ts": "US",
+    "code": "FTCS"
+  },
+  {
+    "ts": "US",
+    "code": "EWBC"
   },
   {
     "ts": "HK",
-    "code": "01746"
+    "code": "08333"
   },
   {
     "ts": "HK",
-    "code": "08031"
+    "code": "01010"
   },
   {
     "ts": "US",
-    "code": "MLPY"
+    "code": "CC"
+  },
+  {
+    "ts": "US",
+    "code": "APPN"
+  },
+  {
+    "ts": "US",
+    "code": "KNDI"
+  },
+  {
+    "ts": "US",
+    "code": "XJH"
+  },
+  {
+    "ts": "US",
+    "code": "MCBS"
   },
   {
     "ts": "HK",
-    "code": "00895"
+    "code": "08326"
+  },
+  {
+    "ts": "US",
+    "code": "AIW"
+  },
+  {
+    "ts": "US",
+    "code": "WRB-D"
+  },
+  {
+    "ts": "US",
+    "code": "SLCT"
+  },
+  {
+    "ts": "US",
+    "code": "PBLA"
+  },
+  {
+    "ts": "US",
+    "code": "MFC"
   },
   {
     "ts": "HK",
-    "code": "06198"
+    "code": "00846"
   },
   {
     "ts": "HK",
-    "code": "08181"
-  },
-  {
-    "ts": "US",
-    "code": "STIC"
-  },
-  {
-    "ts": "US",
-    "code": "HPK"
+    "code": "09913"
   },
   {
     "ts": "HK",
-    "code": "00530"
+    "code": "00144"
   },
   {
     "ts": "US",
-    "code": "FXNC"
+    "code": "RWVG"
   },
   {
     "ts": "US",
-    "code": "OCIO"
+    "code": "FORK"
   },
   {
     "ts": "US",
-    "code": "LOKB="
+    "code": "BXP-B"
   },
   {
     "ts": "HK",
-    "code": "06865"
+    "code": "01338"
   },
   {
     "ts": "US",
-    "code": "GRMN"
+    "code": "THMO"
   },
   {
     "ts": "HK",
-    "code": "00645"
+    "code": "09633"
   },
   {
     "ts": "US",
-    "code": "SAGE"
+    "code": "HPE"
+  },
+  {
+    "ts": "US",
+    "code": "EXFO"
+  },
+  {
+    "ts": "US",
+    "code": "PBFS"
   },
   {
     "ts": "HK",
-    "code": "06060"
+    "code": "00007"
   },
   {
     "ts": "US",
-    "code": "EYLD"
+    "code": "FWRD"
   },
   {
     "ts": "US",
-    "code": "HMC"
+    "code": "BSMR"
   },
   {
     "ts": "US",
-    "code": "IIIIU"
+    "code": "CEY"
   },
   {
     "ts": "HK",
-    "code": "06677"
+    "code": "00935"
   },
   {
     "ts": "US",
-    "code": "PY"
+    "code": "NDP"
   },
   {
     "ts": "HK",
-    "code": "01037"
+    "code": "02601"
   },
   {
     "ts": "US",
-    "code": "NMR"
-  },
-  {
-    "ts": "US",
-    "code": "JMP"
-  },
-  {
-    "ts": "US",
-    "code": "BATRA"
-  },
-  {
-    "ts": "US",
-    "code": "FLAU"
-  },
-  {
-    "ts": "US",
-    "code": "MUX"
-  },
-  {
-    "ts": "US",
-    "code": "IGEB"
-  },
-  {
-    "ts": "US",
-    "code": "PSA-E"
-  },
-  {
-    "ts": "US",
-    "code": "MXDE"
-  },
-  {
-    "ts": "HK",
-    "code": "03032"
-  },
-  {
-    "ts": "HK",
-    "code": "03813"
-  },
-  {
-    "ts": "US",
-    "code": "TVE"
-  },
-  {
-    "ts": "US",
-    "code": "AIC"
-  },
-  {
-    "ts": "HK",
-    "code": "07299"
-  },
-  {
-    "ts": "US",
-    "code": "GOAC="
-  },
-  {
-    "ts": "HK",
-    "code": "00908"
-  },
-  {
-    "ts": "US",
-    "code": "IHY"
-  },
-  {
-    "ts": "US",
-    "code": "FV"
-  },
-  {
-    "ts": "HK",
-    "code": "06168"
-  },
-  {
-    "ts": "US",
-    "code": "SEPZ"
-  },
-  {
-    "ts": "US",
-    "code": "NEPT"
-  },
-  {
-    "ts": "US",
-    "code": "MEIP"
-  },
-  {
-    "ts": "US",
-    "code": "MORN"
-  },
-  {
-    "ts": "US",
-    "code": "UBOT"
-  },
-  {
-    "ts": "US",
-    "code": "NOVA"
-  },
-  {
-    "ts": "HK",
-    "code": "09966"
-  },
-  {
-    "ts": "US",
-    "code": "EAOA"
-  },
-  {
-    "ts": "US",
-    "code": "TAWK"
-  },
-  {
-    "ts": "US",
-    "code": "MVV"
-  },
-  {
-    "ts": "US",
-    "code": "MJJ"
-  },
-  {
-    "ts": "US",
-    "code": "IPKW"
-  },
-  {
-    "ts": "US",
-    "code": "IRBO"
-  },
-  {
-    "ts": "US",
-    "code": "CNRG"
-  },
-  {
-    "ts": "US",
-    "code": "GOAU"
-  },
-  {
-    "ts": "US",
-    "code": "OVB"
-  },
-  {
-    "ts": "US",
-    "code": "XTL"
-  },
-  {
-    "ts": "US",
-    "code": "GTO"
-  },
-  {
-    "ts": "US",
-    "code": "EWO"
-  },
-  {
-    "ts": "US",
-    "code": "ACIW"
-  },
-  {
-    "ts": "US",
-    "code": "PFH"
-  },
-  {
-    "ts": "US",
-    "code": "KJUL"
-  },
-  {
-    "ts": "US",
-    "code": "CMTL"
-  },
-  {
-    "ts": "US",
-    "code": "VOLT"
-  },
-  {
-    "ts": "US",
-    "code": "ABUS"
-  },
-  {
-    "ts": "HK",
-    "code": "01897"
-  },
-  {
-    "ts": "US",
-    "code": "CUB"
-  },
-  {
-    "ts": "US",
-    "code": "JRVR"
-  },
-  {
-    "ts": "US",
-    "code": "MTOR"
-  },
-  {
-    "ts": "HK",
-    "code": "08411"
+    "code": "GSEE"
   },
   {
     "ts": "HK",
@@ -653,791 +293,691 @@
   },
   {
     "ts": "US",
-    "code": "DADA"
-  },
-  {
-    "ts": "US",
-    "code": "SYN"
-  },
-  {
-    "ts": "US",
-    "code": "BFAM"
-  },
-  {
-    "ts": "US",
-    "code": "FJNK"
+    "code": "RUBY"
   },
   {
     "ts": "HK",
-    "code": "02223"
+    "code": "00988"
   },
   {
     "ts": "US",
-    "code": "MWK"
-  },
-  {
-    "ts": "US",
-    "code": "PBIP"
-  },
-  {
-    "ts": "US",
-    "code": "CMC"
+    "code": "NGHCN"
   },
   {
     "ts": "HK",
-    "code": "02869"
-  },
-  {
-    "ts": "US",
-    "code": "FCPT"
-  },
-  {
-    "ts": "US",
-    "code": "LIND"
-  },
-  {
-    "ts": "US",
-    "code": "JULZ"
-  },
-  {
-    "ts": "US",
-    "code": "HLAL"
-  },
-  {
-    "ts": "US",
-    "code": "VBFC"
-  },
-  {
-    "ts": "US",
-    "code": "EWG"
-  },
-  {
-    "ts": "US",
-    "code": "GRNV"
-  },
-  {
-    "ts": "US",
-    "code": "VICE"
+    "code": "01733"
   },
   {
     "ts": "HK",
-    "code": "08526"
+    "code": "03993"
+  },
+  {
+    "ts": "US",
+    "code": "BKCC"
   },
   {
     "ts": "HK",
-    "code": "00750"
+    "code": "08107"
+  },
+  {
+    "ts": "US",
+    "code": "TANH"
   },
   {
     "ts": "HK",
-    "code": "03187"
+    "code": "02336"
   },
   {
     "ts": "US",
-    "code": "AFGH"
+    "code": "SYNC"
   },
   {
     "ts": "US",
-    "code": "MGM"
+    "code": "QRTEP"
   },
   {
     "ts": "US",
-    "code": "CHAQ"
+    "code": "LEND"
   },
   {
     "ts": "US",
-    "code": "OFSSZ"
+    "code": "SMMU"
   },
   {
     "ts": "US",
-    "code": "YYY"
+    "code": "BLU"
   },
   {
     "ts": "US",
-    "code": "SPYV"
-  },
-  {
-    "ts": "US",
-    "code": "SCON"
-  },
-  {
-    "ts": "US",
-    "code": "SEE"
+    "code": "INAQU"
   },
   {
     "ts": "HK",
-    "code": "01657"
-  },
-  {
-    "ts": "US",
-    "code": "IBM"
+    "code": "00196"
   },
   {
     "ts": "HK",
-    "code": "03626"
-  },
-  {
-    "ts": "US",
-    "code": "PIZ"
+    "code": "03019"
   },
   {
     "ts": "HK",
-    "code": "01015"
+    "code": "00620"
   },
   {
     "ts": "US",
-    "code": "AZAL"
+    "code": "SCE-B"
   },
   {
     "ts": "US",
-    "code": "CHII"
+    "code": "GMRE-A"
   },
   {
     "ts": "US",
-    "code": "NUMV"
+    "code": "RVNU"
   },
   {
     "ts": "US",
-    "code": "GASS"
-  },
-  {
-    "ts": "HK",
-    "code": "00768"
+    "code": "DLX"
   },
   {
     "ts": "US",
-    "code": "RRR"
-  },
-  {
-    "ts": "US",
-    "code": "FTSM"
-  },
-  {
-    "ts": "US",
-    "code": "NOVN"
-  },
-  {
-    "ts": "US",
-    "code": "HMTV"
-  },
-  {
-    "ts": "US",
-    "code": "MYRG"
+    "code": "CARE"
   },
   {
     "ts": "HK",
-    "code": "02262"
+    "code": "00379"
   },
   {
     "ts": "US",
-    "code": "CLRO"
+    "code": "IVR-B"
   },
   {
     "ts": "US",
-    "code": "QQQ"
-  },
-  {
-    "ts": "US",
-    "code": "ISR"
+    "code": "LPRO"
   },
   {
     "ts": "HK",
-    "code": "01859"
+    "code": "01387"
   },
   {
     "ts": "US",
-    "code": "EVX"
+    "code": "RNDM"
   },
   {
     "ts": "US",
-    "code": "FCAN"
+    "code": "FBMS"
   },
   {
     "ts": "US",
-    "code": "TMP"
+    "code": "BHAT"
   },
   {
     "ts": "US",
-    "code": "COR"
+    "code": "SBOW"
   },
   {
     "ts": "US",
-    "code": "STE"
+    "code": "FFSG"
   },
   {
     "ts": "US",
-    "code": "AQUA"
+    "code": "DFNL"
+  },
+  {
+    "ts": "US",
+    "code": "BMTC"
+  },
+  {
+    "ts": "US",
+    "code": "SHLD"
+  },
+  {
+    "ts": "US",
+    "code": "ABCL"
+  },
+  {
+    "ts": "US",
+    "code": "BKE"
+  },
+  {
+    "ts": "US",
+    "code": "WIT"
+  },
+  {
+    "ts": "US",
+    "code": "BRO"
+  },
+  {
+    "ts": "US",
+    "code": "WTFCP"
+  },
+  {
+    "ts": "US",
+    "code": "UHS"
   },
   {
     "ts": "HK",
-    "code": "00292"
+    "code": "00179"
   },
   {
     "ts": "HK",
-    "code": "00157"
+    "code": "01847"
   },
   {
     "ts": "US",
-    "code": "PWV"
+    "code": "UFCS"
+  },
+  {
+    "ts": "US",
+    "code": "VRNS"
+  },
+  {
+    "ts": "US",
+    "code": "QD"
+  },
+  {
+    "ts": "US",
+    "code": "HBIO"
+  },
+  {
+    "ts": "US",
+    "code": "MFINL"
+  },
+  {
+    "ts": "US",
+    "code": "JVAL"
+  },
+  {
+    "ts": "US",
+    "code": "NAD"
+  },
+  {
+    "ts": "US",
+    "code": "QID"
+  },
+  {
+    "ts": "US",
+    "code": "FUV"
   },
   {
     "ts": "HK",
-    "code": "00033"
-  },
-  {
-    "ts": "US",
-    "code": "AVUV"
+    "code": "01771"
   },
   {
     "ts": "HK",
-    "code": "08446"
-  },
-  {
-    "ts": "HK",
-    "code": "03067"
-  },
-  {
-    "ts": "US",
-    "code": "QQD"
-  },
-  {
-    "ts": "HK",
-    "code": "03690"
-  },
-  {
-    "ts": "HK",
-    "code": "03628"
-  },
-  {
-    "ts": "US",
-    "code": "HAS"
-  },
-  {
-    "ts": "US",
-    "code": "EP-C"
-  },
-  {
-    "ts": "US",
-    "code": "TCRR"
-  },
-  {
-    "ts": "HK",
-    "code": "01195"
-  },
-  {
-    "ts": "HK",
-    "code": "01967"
-  },
-  {
-    "ts": "US",
-    "code": "ADPT"
-  },
-  {
-    "ts": "US",
-    "code": "VEL"
-  },
-  {
-    "ts": "US",
-    "code": "UROV"
-  },
-  {
-    "ts": "HK",
-    "code": "02356"
-  },
-  {
-    "ts": "US",
-    "code": "WABC"
-  },
-  {
-    "ts": "US",
-    "code": "DFHY"
-  },
-  {
-    "ts": "US",
-    "code": "G"
-  },
-  {
-    "ts": "US",
-    "code": "CSF"
-  },
-  {
-    "ts": "HK",
-    "code": "08436"
-  },
-  {
-    "ts": "HK",
-    "code": "02300"
-  },
-  {
-    "ts": "HK",
-    "code": "00052"
-  },
-  {
-    "ts": "US",
-    "code": "BBMC"
-  },
-  {
-    "ts": "US",
-    "code": "SAII"
-  },
-  {
-    "ts": "US",
-    "code": "CHWY"
-  },
-  {
-    "ts": "US",
-    "code": "KRKR"
-  },
-  {
-    "ts": "HK",
-    "code": "00420"
-  },
-  {
-    "ts": "US",
-    "code": "VMAR"
-  },
-  {
-    "ts": "US",
-    "code": "KNSL"
-  },
-  {
-    "ts": "US",
-    "code": "LQDH"
-  },
-  {
-    "ts": "US",
-    "code": "PRTS"
-  },
-  {
-    "ts": "HK",
-    "code": "00004"
-  },
-  {
-    "ts": "US",
-    "code": "NATH"
-  },
-  {
-    "ts": "US",
-    "code": "JKS"
-  },
-  {
-    "ts": "US",
-    "code": "MVIS"
-  },
-  {
-    "ts": "US",
-    "code": "EES"
-  },
-  {
-    "ts": "US",
-    "code": "IDHD"
-  },
-  {
-    "ts": "US",
-    "code": "NNA"
-  },
-  {
-    "ts": "US",
-    "code": "BKTI"
-  },
-  {
-    "ts": "US",
-    "code": "PEBO"
-  },
-  {
-    "ts": "US",
-    "code": "EFX"
-  },
-  {
-    "ts": "HK",
-    "code": "02360"
-  },
-  {
-    "ts": "US",
-    "code": "RL"
-  },
-  {
-    "ts": "US",
-    "code": "HEWW"
-  },
-  {
-    "ts": "US",
-    "code": "MOON"
-  },
-  {
-    "ts": "US",
-    "code": "LMHA"
-  },
-  {
-    "ts": "US",
-    "code": "KMDA"
-  },
-  {
-    "ts": "US",
-    "code": "CARV"
-  },
-  {
-    "ts": "US",
-    "code": "EMCB"
-  },
-  {
-    "ts": "HK",
-    "code": "01683"
-  },
-  {
-    "ts": "US",
-    "code": "DGRS"
-  },
-  {
-    "ts": "US",
-    "code": "GSAT"
-  },
-  {
-    "ts": "US",
-    "code": "TAIT"
-  },
-  {
-    "ts": "US",
-    "code": "DHF"
-  },
-  {
-    "ts": "HK",
-    "code": "01872"
-  },
-  {
-    "ts": "US",
-    "code": "FELE"
-  },
-  {
-    "ts": "US",
-    "code": "SUNW"
-  },
-  {
-    "ts": "US",
-    "code": "INTG"
-  },
-  {
-    "ts": "US",
-    "code": "C-J"
-  },
-  {
-    "ts": "HK",
-    "code": "00240"
-  },
-  {
-    "ts": "HK",
-    "code": "H11110"
-  },
-  {
-    "ts": "US",
-    "code": "INN-D"
-  },
-  {
-    "ts": "HK",
-    "code": "01388"
-  },
-  {
-    "ts": "US",
-    "code": "AGI"
-  },
-  {
-    "ts": "US",
-    "code": "VSH"
-  },
-  {
-    "ts": "US",
-    "code": "CDAK"
-  },
-  {
-    "ts": "HK",
-    "code": "01596"
-  },
-  {
-    "ts": "HK",
-    "code": "08132"
-  },
-  {
-    "ts": "US",
-    "code": "AINC"
-  },
-  {
-    "ts": "US",
-    "code": "CMPX"
-  },
-  {
-    "ts": "US",
-    "code": "SAFT"
-  },
-  {
-    "ts": "US",
-    "code": "FXF"
-  },
-  {
-    "ts": "US",
-    "code": "VOE"
-  },
-  {
-    "ts": "US",
-    "code": "EDZ"
+    "code": "08495"
   },
   {
     "ts": "US",
     "code": "WD"
   },
   {
-    "ts": "US",
-    "code": "LFACU"
+    "ts": "HK",
+    "code": "03308"
   },
   {
     "ts": "HK",
-    "code": "06989"
+    "code": "01723"
   },
   {
     "ts": "US",
-    "code": "DXGE"
+    "code": "FLSW"
+  },
+  {
+    "ts": "US",
+    "code": "GLTO"
+  },
+  {
+    "ts": "US",
+    "code": "HTA"
+  },
+  {
+    "ts": "US",
+    "code": "GGG"
   },
   {
     "ts": "HK",
-    "code": "03323"
+    "code": "01019"
   },
   {
     "ts": "US",
-    "code": "FCBP"
+    "code": "MNRL"
+  },
+  {
+    "ts": "US",
+    "code": "TAT"
+  },
+  {
+    "ts": "US",
+    "code": "KWAC.U"
   },
   {
     "ts": "HK",
-    "code": "09047"
+    "code": "09933"
+  },
+  {
+    "ts": "US",
+    "code": "AOM"
+  },
+  {
+    "ts": "US",
+    "code": "CPK"
+  },
+  {
+    "ts": "US",
+    "code": "IONS"
+  },
+  {
+    "ts": "US",
+    "code": "ALTY"
+  },
+  {
+    "ts": "US",
+    "code": "LX"
+  },
+  {
+    "ts": "US",
+    "code": "TRTN"
+  },
+  {
+    "ts": "US",
+    "code": "EUDG"
   },
   {
     "ts": "HK",
-    "code": "06093"
+    "code": "01415"
   },
   {
     "ts": "US",
-    "code": "RBKB"
+    "code": "WTRG"
   },
   {
     "ts": "US",
-    "code": "AEL-B"
-  },
-  {
-    "ts": "US",
-    "code": "F-B"
-  },
-  {
-    "ts": "US",
-    "code": "SYTA"
-  },
-  {
-    "ts": "US",
-    "code": "VACQU"
-  },
-  {
-    "ts": "US",
-    "code": "SXI"
-  },
-  {
-    "ts": "US",
-    "code": "TRWH"
-  },
-  {
-    "ts": "US",
-    "code": "PREF"
+    "code": "ARKR"
   },
   {
     "ts": "HK",
-    "code": "01315"
-  },
-  {
-    "ts": "US",
-    "code": "FMBIO"
-  },
-  {
-    "ts": "US",
-    "code": "GECCN"
-  },
-  {
-    "ts": "US",
-    "code": "SSUS"
+    "code": "06036"
   },
   {
     "ts": "HK",
-    "code": "00073"
+    "code": "08631"
   },
   {
     "ts": "US",
-    "code": "DEN"
+    "code": "PLC"
   },
   {
     "ts": "US",
-    "code": "SLT"
+    "code": "PSLV"
   },
   {
     "ts": "US",
-    "code": "EIDX"
+    "code": "RIGS"
   },
   {
     "ts": "US",
-    "code": "TDSC"
+    "code": "BTZ"
+  },
+  {
+    "ts": "US",
+    "code": "BATT"
+  },
+  {
+    "ts": "US",
+    "code": "XLF"
+  },
+  {
+    "ts": "US",
+    "code": "HSRT"
+  },
+  {
+    "ts": "US",
+    "code": "DEM"
+  },
+  {
+    "ts": "US",
+    "code": "FDMT"
   },
   {
     "ts": "HK",
-    "code": "01753"
+    "code": "08285"
   },
   {
     "ts": "US",
-    "code": "ALGT"
+    "code": "HHS"
+  },
+  {
+    "ts": "US",
+    "code": "LAZ"
+  },
+  {
+    "ts": "US",
+    "code": "BFT="
   },
   {
     "ts": "HK",
-    "code": "01381"
+    "code": "01181"
   },
   {
     "ts": "US",
-    "code": "SFM"
+    "code": "COLM"
+  },
+  {
+    "ts": "US",
+    "code": "FRBA"
+  },
+  {
+    "ts": "US",
+    "code": "GMDA"
+  },
+  {
+    "ts": "US",
+    "code": "ITM"
+  },
+  {
+    "ts": "US",
+    "code": "WDR"
+  },
+  {
+    "ts": "US",
+    "code": "EMQQ"
+  },
+  {
+    "ts": "US",
+    "code": "TBLU"
   },
   {
     "ts": "HK",
-    "code": "00871"
+    "code": "01883"
   },
   {
     "ts": "US",
-    "code": "XRAY"
+    "code": "BXP"
   },
   {
     "ts": "US",
-    "code": "PAI"
+    "code": "FORR"
+  },
+  {
+    "ts": "US",
+    "code": "LSST"
+  },
+  {
+    "ts": "US",
+    "code": "GCV"
   },
   {
     "ts": "HK",
-    "code": "01675"
+    "code": "01697"
   },
   {
     "ts": "US",
-    "code": "TLS"
+    "code": "ALIM"
   },
   {
     "ts": "US",
-    "code": "CRK"
+    "code": "MGI"
   },
   {
     "ts": "US",
-    "code": "ENZ"
+    "code": "LTBR"
   },
   {
     "ts": "US",
-    "code": "WHLM"
+    "code": "BPMC"
   },
   {
     "ts": "US",
-    "code": "ZLAB"
+    "code": "PJT"
   },
   {
     "ts": "US",
-    "code": "DCP-B"
+    "code": "KBWR"
   },
   {
     "ts": "US",
-    "code": "CAL"
+    "code": "IMV"
   },
   {
     "ts": "US",
-    "code": "EWBC"
-  },
-  {
-    "ts": "US",
-    "code": "LEGH"
-  },
-  {
-    "ts": "US",
-    "code": "TRMK"
-  },
-  {
-    "ts": "US",
-    "code": "FLHK"
-  },
-  {
-    "ts": "US",
-    "code": "TTWO"
+    "code": "DAUG"
   },
   {
     "ts": "HK",
-    "code": "00079"
+    "code": "01455"
   },
   {
     "ts": "US",
-    "code": "IGLB"
+    "code": "UEC"
   },
   {
     "ts": "US",
-    "code": "HOOK"
-  },
-  {
-    "ts": "US",
-    "code": "TSC"
-  },
-  {
-    "ts": "US",
-    "code": "VAW"
-  },
-  {
-    "ts": "US",
-    "code": "MSEX"
-  },
-  {
-    "ts": "US",
-    "code": "ENB"
-  },
-  {
-    "ts": "US",
-    "code": "INSE"
-  },
-  {
-    "ts": "US",
-    "code": "CPF"
-  },
-  {
-    "ts": "US",
-    "code": "EINC"
-  },
-  {
-    "ts": "US",
-    "code": "BMA"
-  },
-  {
-    "ts": "US",
-    "code": "CEMB"
-  },
-  {
-    "ts": "US",
-    "code": "MDRX"
-  },
-  {
-    "ts": "US",
-    "code": "TFIV"
+    "code": "BEN"
   },
   {
     "ts": "HK",
-    "code": "00244"
+    "code": "00143"
   },
   {
     "ts": "US",
-    "code": "ATCO-G"
+    "code": "BUI"
   },
   {
     "ts": "US",
-    "code": "INVH"
+    "code": "ALK"
   },
   {
     "ts": "US",
-    "code": "CHIR"
+    "code": "MOON"
+  },
+  {
+    "ts": "HK",
+    "code": "00638"
   },
   {
     "ts": "US",
-    "code": "PRPO"
+    "code": "VRRM"
   },
   {
     "ts": "US",
-    "code": "ATI"
+    "code": "MET-E"
+  },
+  {
+    "ts": "US",
+    "code": "TMPMU"
+  },
+  {
+    "ts": "US",
+    "code": "SCPL"
+  },
+  {
+    "ts": "US",
+    "code": "NOACU"
+  },
+  {
+    "ts": "US",
+    "code": "GTS"
+  },
+  {
+    "ts": "US",
+    "code": "CLGX"
+  },
+  {
+    "ts": "HK",
+    "code": "00269"
+  },
+  {
+    "ts": "US",
+    "code": "DUOT"
+  },
+  {
+    "ts": "HK",
+    "code": "08277"
+  },
+  {
+    "ts": "HK",
+    "code": "07228"
+  },
+  {
+    "ts": "US",
+    "code": "GBCI"
+  },
+  {
+    "ts": "US",
+    "code": "MBI"
+  },
+  {
+    "ts": "US",
+    "code": "SEEL"
+  },
+  {
+    "ts": "US",
+    "code": "TNP-D"
+  },
+  {
+    "ts": "US",
+    "code": "XTLB"
+  },
+  {
+    "ts": "HK",
+    "code": "03618"
+  },
+  {
+    "ts": "US",
+    "code": "BBW"
+  },
+  {
+    "ts": "US",
+    "code": "DRTT"
+  },
+  {
+    "ts": "US",
+    "code": "FULTP"
+  },
+  {
+    "ts": "HK",
+    "code": "00278"
+  },
+  {
+    "ts": "US",
+    "code": "CCRC"
+  },
+  {
+    "ts": "US",
+    "code": "MDJH"
+  },
+  {
+    "ts": "US",
+    "code": "MTH"
+  },
+  {
+    "ts": "US",
+    "code": "GLT"
+  },
+  {
+    "ts": "US",
+    "code": "BSA"
+  },
+  {
+    "ts": "US",
+    "code": "MFD"
+  },
+  {
+    "ts": "US",
+    "code": "APEI"
+  },
+  {
+    "ts": "US",
+    "code": "HAL"
+  },
+  {
+    "ts": "US",
+    "code": "SLYG"
+  },
+  {
+    "ts": "US",
+    "code": "FST="
+  },
+  {
+    "ts": "HK",
+    "code": "00837"
+  },
+  {
+    "ts": "US",
+    "code": "LIZI"
+  },
+  {
+    "ts": "HK",
+    "code": "02222"
+  },
+  {
+    "ts": "US",
+    "code": "CAKE"
+  },
+  {
+    "ts": "HK",
+    "code": "02689"
+  },
+  {
+    "ts": "US",
+    "code": "CIM-D"
+  },
+  {
+    "ts": "US",
+    "code": "GEOS"
+  },
+  {
+    "ts": "HK",
+    "code": "02807"
+  },
+  {
+    "ts": "HK",
+    "code": "08087"
+  },
+  {
+    "ts": "US",
+    "code": "XDIV"
+  },
+  {
+    "ts": "US",
+    "code": "BATRK"
+  },
+  {
+    "ts": "US",
+    "code": "SGMA"
+  },
+  {
+    "ts": "US",
+    "code": "MCS"
+  },
+  {
+    "ts": "US",
+    "code": "JHMI"
+  },
+  {
+    "ts": "US",
+    "code": "UGBP"
+  },
+  {
+    "ts": "HK",
+    "code": "HSMOGI"
+  },
+  {
+    "ts": "US",
+    "code": "OSH"
+  },
+  {
+    "ts": "US",
+    "code": "APO"
+  },
+  {
+    "ts": "US",
+    "code": "ACVF"
+  },
+  {
+    "ts": "US",
+    "code": "ADES"
   },
   {
     "ts": "HK",
@@ -1445,67 +985,287 @@
   },
   {
     "ts": "US",
-    "code": "GPMT"
+    "code": "AIZ"
   },
   {
     "ts": "US",
-    "code": "SCE-K"
+    "code": "PFH"
   },
   {
     "ts": "US",
-    "code": "CAPE"
+    "code": "FDLO"
+  },
+  {
+    "ts": "US",
+    "code": "PTBD"
+  },
+  {
+    "ts": "US",
+    "code": "F-C"
+  },
+  {
+    "ts": "US",
+    "code": "BSV"
+  },
+  {
+    "ts": "US",
+    "code": "JHME"
+  },
+  {
+    "ts": "US",
+    "code": "IZRL"
+  },
+  {
+    "ts": "US",
+    "code": "OBLG"
+  },
+  {
+    "ts": "US",
+    "code": "UNVR"
+  },
+  {
+    "ts": "US",
+    "code": "BCAB"
+  },
+  {
+    "ts": "US",
+    "code": "ASPS"
+  },
+  {
+    "ts": "US",
+    "code": "BNL"
+  },
+  {
+    "ts": "US",
+    "code": "RFIL"
   },
   {
     "ts": "HK",
-    "code": "08357"
+    "code": "01230"
   },
   {
     "ts": "HK",
-    "code": "01528"
+    "code": "03300"
   },
   {
     "ts": "US",
-    "code": "WFC-P"
+    "code": "FEUL"
   },
   {
     "ts": "US",
-    "code": "ROKU"
+    "code": "MDLX"
   },
   {
     "ts": "US",
-    "code": "JNCE"
+    "code": "TGI"
   },
   {
     "ts": "US",
-    "code": "TBIO"
+    "code": "FULC"
   },
   {
     "ts": "HK",
-    "code": "08091"
+    "code": "00474"
+  },
+  {
+    "ts": "US",
+    "code": "FELE"
+  },
+  {
+    "ts": "US",
+    "code": "ONDS"
+  },
+  {
+    "ts": "US",
+    "code": "ZCMD"
+  },
+  {
+    "ts": "US",
+    "code": "TWO-B"
+  },
+  {
+    "ts": "US",
+    "code": "UBOT"
+  },
+  {
+    "ts": "US",
+    "code": "EQIX"
+  },
+  {
+    "ts": "US",
+    "code": "DON"
+  },
+  {
+    "ts": "US",
+    "code": "ASB-F"
+  },
+  {
+    "ts": "US",
+    "code": "UNF"
   },
   {
     "ts": "HK",
-    "code": "03663"
+    "code": "06110"
   },
   {
     "ts": "US",
-    "code": "CATC"
+    "code": "STAA"
+  },
+  {
+    "ts": "US",
+    "code": "ZSL"
+  },
+  {
+    "ts": "US",
+    "code": "ECON"
+  },
+  {
+    "ts": "US",
+    "code": "RORO"
+  },
+  {
+    "ts": "US",
+    "code": "NORW"
   },
   {
     "ts": "HK",
-    "code": "06083"
+    "code": "00831"
   },
   {
     "ts": "US",
-    "code": "DCF"
+    "code": "NEOS"
+  },
+  {
+    "ts": "HK",
+    "code": "03055"
   },
   {
     "ts": "US",
-    "code": "EWK"
+    "code": "IDEX"
   },
   {
     "ts": "US",
-    "code": "LABD"
+    "code": "BPOP"
+  },
+  {
+    "ts": "US",
+    "code": "BZH"
+  },
+  {
+    "ts": "HK",
+    "code": "08331"
+  },
+  {
+    "ts": "US",
+    "code": "NCV"
+  },
+  {
+    "ts": "US",
+    "code": "IVRA"
+  },
+  {
+    "ts": "US",
+    "code": "VIXM"
+  },
+  {
+    "ts": "US",
+    "code": "ECL"
+  },
+  {
+    "ts": "US",
+    "code": "OFSSI"
+  },
+  {
+    "ts": "US",
+    "code": "VIHAU"
+  },
+  {
+    "ts": "HK",
+    "code": "08135"
+  },
+  {
+    "ts": "US",
+    "code": "ALL-H"
+  },
+  {
+    "ts": "US",
+    "code": "ATAC="
+  },
+  {
+    "ts": "HK",
+    "code": "08176"
+  },
+  {
+    "ts": "HK",
+    "code": "01290"
+  },
+  {
+    "ts": "US",
+    "code": "BSX-A"
+  },
+  {
+    "ts": "US",
+    "code": "ABR"
+  },
+  {
+    "ts": "US",
+    "code": "VUSE"
+  },
+  {
+    "ts": "US",
+    "code": "NSTG"
+  },
+  {
+    "ts": "US",
+    "code": "AOS"
+  },
+  {
+    "ts": "US",
+    "code": "VGLT"
+  },
+  {
+    "ts": "US",
+    "code": "CWEB"
+  },
+  {
+    "ts": "US",
+    "code": "BOSC"
+  },
+  {
+    "ts": "HK",
+    "code": "03181"
+  },
+  {
+    "ts": "US",
+    "code": "CVM"
+  },
+  {
+    "ts": "US",
+    "code": "PPC"
+  },
+  {
+    "ts": "US",
+    "code": "DDLS"
+  },
+  {
+    "ts": "US",
+    "code": "XME"
+  },
+  {
+    "ts": "US",
+    "code": "DIT"
+  },
+  {
+    "ts": "US",
+    "code": "LYB"
+  },
+  {
+    "ts": "US",
+    "code": "MOTO"
+  },
+  {
+    "ts": "HK",
+    "code": "03998"
   },
   {
     "ts": "US",
@@ -1513,87 +1273,191 @@
   },
   {
     "ts": "US",
-    "code": "HUYA"
+    "code": "CRK"
   },
   {
     "ts": "US",
-    "code": "REZ"
+    "code": "SE"
   },
   {
     "ts": "US",
-    "code": "IEX"
+    "code": "ACTC"
   },
   {
     "ts": "US",
-    "code": "TAP"
+    "code": "STIP"
   },
   {
     "ts": "US",
-    "code": "TYL"
+    "code": "CLIR"
   },
   {
     "ts": "US",
-    "code": "LRGF"
+    "code": "PBB"
   },
   {
     "ts": "US",
-    "code": "USLM"
+    "code": "SCIX"
   },
   {
     "ts": "US",
-    "code": "LGND"
+    "code": "HEWG"
   },
   {
     "ts": "US",
-    "code": "JBT"
+    "code": "UNOV"
+  },
+  {
+    "ts": "US",
+    "code": "FPX"
+  },
+  {
+    "ts": "US",
+    "code": "WRAP"
+  },
+  {
+    "ts": "US",
+    "code": "INSG"
+  },
+  {
+    "ts": "US",
+    "code": "VG"
+  },
+  {
+    "ts": "US",
+    "code": "HMTV"
+  },
+  {
+    "ts": "US",
+    "code": "PNQI"
+  },
+  {
+    "ts": "US",
+    "code": "SECT"
   },
   {
     "ts": "HK",
-    "code": "83140"
+    "code": "01190"
   },
   {
     "ts": "US",
-    "code": "VLDR"
+    "code": "HOMB"
   },
   {
     "ts": "US",
-    "code": "NOBL"
+    "code": "SUNS"
   },
   {
     "ts": "HK",
-    "code": "01766"
+    "code": "00250"
   },
   {
     "ts": "US",
-    "code": "NBR"
+    "code": "EFA"
   },
   {
     "ts": "US",
-    "code": "CHRA"
+    "code": "FUE"
   },
   {
     "ts": "US",
-    "code": "UTMD"
+    "code": "VEGN"
   },
   {
     "ts": "US",
-    "code": "ROLL"
+    "code": "ZM"
+  },
+  {
+    "ts": "US",
+    "code": "HOLUU"
+  },
+  {
+    "ts": "US",
+    "code": "PBCT"
+  },
+  {
+    "ts": "US",
+    "code": "TTT"
   },
   {
     "ts": "HK",
-    "code": "00105"
-  },
-  {
-    "ts": "HK",
-    "code": "00953"
+    "code": "00162"
   },
   {
     "ts": "US",
-    "code": "MUB"
+    "code": "PSFF"
+  },
+  {
+    "ts": "US",
+    "code": "TXAC"
+  },
+  {
+    "ts": "US",
+    "code": "SNP"
+  },
+  {
+    "ts": "US",
+    "code": "WMC"
   },
   {
     "ts": "HK",
-    "code": "01442"
+    "code": "00978"
+  },
+  {
+    "ts": "US",
+    "code": "CHSCP"
+  },
+  {
+    "ts": "US",
+    "code": "AVNT"
+  },
+  {
+    "ts": "US",
+    "code": "CATO"
+  },
+  {
+    "ts": "HK",
+    "code": "02369"
+  },
+  {
+    "ts": "HK",
+    "code": "01022"
+  },
+  {
+    "ts": "US",
+    "code": "URG"
+  },
+  {
+    "ts": "HK",
+    "code": "01362"
+  },
+  {
+    "ts": "US",
+    "code": "FAII="
+  },
+  {
+    "ts": "US",
+    "code": "DLPH"
+  },
+  {
+    "ts": "US",
+    "code": "MYOK"
+  },
+  {
+    "ts": "US",
+    "code": "KOS"
+  },
+  {
+    "ts": "US",
+    "code": "INN"
+  },
+  {
+    "ts": "US",
+    "code": "CHN"
+  },
+  {
+    "ts": "US",
+    "code": "VIAC"
   },
   {
     "ts": "HK",
@@ -1601,402 +1465,538 @@
   },
   {
     "ts": "US",
-    "code": "DCO"
+    "code": "AZBA"
   },
   {
     "ts": "US",
-    "code": "TAXF"
-  },
-  {
-    "ts": "HK",
-    "code": "00293"
+    "code": "OPES"
   },
   {
     "ts": "US",
-    "code": "GDNA"
+    "code": "GLPI"
   },
   {
     "ts": "US",
-    "code": "ZUO"
-  },
-  {
-    "ts": "US",
-    "code": "TQQQ"
-  },
-  {
-    "ts": "US",
-    "code": "FEN"
-  },
-  {
-    "ts": "US",
-    "code": "ALOT"
+    "code": "NFTY"
   },
   {
     "ts": "HK",
-    "code": "02115"
+    "code": "03898"
+  },
+  {
+    "ts": "US",
+    "code": "LI"
   },
   {
     "ts": "HK",
-    "code": "00368"
-  },
-  {
-    "ts": "US",
-    "code": "MH-D"
-  },
-  {
-    "ts": "US",
-    "code": "ATTO"
+    "code": "00916"
   },
   {
     "ts": "HK",
-    "code": "01527"
+    "code": "01857"
   },
   {
     "ts": "US",
-    "code": "FURY"
+    "code": "AERI"
   },
   {
     "ts": "US",
-    "code": "ONTO"
+    "code": "NXC"
   },
   {
     "ts": "US",
-    "code": "BOKF"
+    "code": "WST"
+  },
+  {
+    "ts": "US",
+    "code": "JHMS"
   },
   {
     "ts": "HK",
-    "code": "01230"
+    "code": "03302"
   },
   {
     "ts": "US",
-    "code": "BRBS"
+    "code": "IBMQ"
+  },
+  {
+    "ts": "US",
+    "code": "KFVG"
+  },
+  {
+    "ts": "US",
+    "code": "NEWT"
   },
   {
     "ts": "HK",
-    "code": "00201"
+    "code": "08216"
   },
   {
     "ts": "US",
-    "code": "CTAC="
+    "code": "PSB-X"
+  },
+  {
+    "ts": "US",
+    "code": "STOR"
   },
   {
     "ts": "HK",
-    "code": "03999"
+    "code": "06818"
   },
   {
     "ts": "US",
-    "code": "PRTC"
+    "code": "USIO"
   },
   {
     "ts": "US",
-    "code": "QPX"
+    "code": "AVUV"
   },
   {
     "ts": "US",
-    "code": "TBB"
+    "code": "VVNT"
   },
   {
     "ts": "US",
-    "code": "QTS-A"
-  },
-  {
-    "ts": "US",
-    "code": "CPZ"
-  },
-  {
-    "ts": "US",
-    "code": "AAPL"
-  },
-  {
-    "ts": "US",
-    "code": "PEB-C"
-  },
-  {
-    "ts": "US",
-    "code": "OPCH"
-  },
-  {
-    "ts": "US",
-    "code": "CBSHP"
-  },
-  {
-    "ts": "US",
-    "code": "AEGN"
-  },
-  {
-    "ts": "US",
-    "code": "RHI"
+    "code": "AL-A"
   },
   {
     "ts": "HK",
-    "code": "01888"
+    "code": "00202"
   },
   {
     "ts": "HK",
-    "code": "08635"
+    "code": "00193"
   },
   {
     "ts": "US",
-    "code": "JQUA"
-  },
-  {
-    "ts": "US",
-    "code": "KBAL"
-  },
-  {
-    "ts": "US",
-    "code": "SPUU"
+    "code": "STK"
   },
   {
     "ts": "HK",
-    "code": "01063"
+    "code": "08051"
   },
   {
     "ts": "HK",
-    "code": "08540"
+    "code": "09022"
   },
   {
     "ts": "US",
-    "code": "WEBS"
+    "code": "TECK"
   },
   {
     "ts": "US",
-    "code": "WPF="
-  },
-  {
-    "ts": "US",
-    "code": "EFIV"
-  },
-  {
-    "ts": "US",
-    "code": "MAAX"
+    "code": "VIIAU"
   },
   {
     "ts": "HK",
-    "code": "01997"
+    "code": "06138"
   },
   {
     "ts": "US",
-    "code": "IVA"
+    "code": "ISSC"
   },
   {
     "ts": "US",
-    "code": "OCGN"
+    "code": "ABEO"
   },
   {
     "ts": "US",
-    "code": "DVAX"
+    "code": "BLI"
   },
   {
     "ts": "US",
-    "code": "GBDV"
+    "code": "TOTL"
   },
   {
     "ts": "US",
-    "code": "EDUT"
+    "code": "MFUS"
   },
   {
     "ts": "US",
-    "code": "CGEN"
+    "code": "RWK"
   },
   {
     "ts": "US",
-    "code": "VXX"
+    "code": "OLB"
+  },
+  {
+    "ts": "US",
+    "code": "TDSC"
+  },
+  {
+    "ts": "US",
+    "code": "ONCY"
+  },
+  {
+    "ts": "US",
+    "code": "NGHC"
+  },
+  {
+    "ts": "US",
+    "code": "NMIH"
+  },
+  {
+    "ts": "US",
+    "code": "QDEL"
   },
   {
     "ts": "HK",
-    "code": "02196"
-  },
-  {
-    "ts": "US",
-    "code": "ANGI"
-  },
-  {
-    "ts": "US",
-    "code": "CHCO"
+    "code": "00975"
   },
   {
     "ts": "HK",
-    "code": "03316"
+    "code": "01171"
+  },
+  {
+    "ts": "US",
+    "code": "PUK-"
+  },
+  {
+    "ts": "US",
+    "code": "AXTI"
   },
   {
     "ts": "HK",
-    "code": "01466"
+    "code": "00165"
   },
   {
     "ts": "US",
-    "code": "PTVCA"
+    "code": "BXS-A"
   },
   {
     "ts": "US",
-    "code": "WAB"
+    "code": "QEFA"
   },
   {
     "ts": "US",
-    "code": "HOLI"
+    "code": "CLAR"
   },
   {
     "ts": "US",
-    "code": "IBDT"
+    "code": "CHMA"
   },
   {
     "ts": "US",
-    "code": "MTGP"
+    "code": "JAAA"
   },
   {
     "ts": "HK",
-    "code": "01139"
+    "code": "00301"
   },
   {
     "ts": "US",
-    "code": "RISN"
+    "code": "SHLL"
   },
   {
     "ts": "US",
-    "code": "ARCM"
+    "code": "PIC="
   },
   {
     "ts": "HK",
-    "code": "02718"
+    "code": "01831"
+  },
+  {
+    "ts": "US",
+    "code": "PACQ"
+  },
+  {
+    "ts": "US",
+    "code": "UJPY"
+  },
+  {
+    "ts": "US",
+    "code": "OPTN"
+  },
+  {
+    "ts": "US",
+    "code": "IEV"
   },
   {
     "ts": "HK",
-    "code": "00532"
+    "code": "00718"
   },
   {
     "ts": "US",
-    "code": "SGG"
+    "code": "BLKB"
   },
   {
     "ts": "US",
-    "code": "ESGN"
+    "code": "CG"
   },
   {
     "ts": "US",
-    "code": "IBOC"
-  },
-  {
-    "ts": "US",
-    "code": "VWID"
-  },
-  {
-    "ts": "US",
-    "code": "AWF"
-  },
-  {
-    "ts": "US",
-    "code": "LCY"
-  },
-  {
-    "ts": "US",
-    "code": "TDOC"
-  },
-  {
-    "ts": "US",
-    "code": "SPDW"
+    "code": "DWMF"
   },
   {
     "ts": "HK",
-    "code": "83122"
-  },
-  {
-    "ts": "HK",
-    "code": "08270"
+    "code": "01188"
   },
   {
     "ts": "US",
-    "code": "NSSC"
-  },
-  {
-    "ts": "HK",
-    "code": "00542"
+    "code": "CFACU"
   },
   {
     "ts": "US",
-    "code": "SUP"
-  },
-  {
-    "ts": "HK",
-    "code": "01432"
-  },
-  {
-    "ts": "HK",
-    "code": "00703"
+    "code": "SBLK"
   },
   {
     "ts": "US",
-    "code": "GIGE"
+    "code": "BNO"
   },
   {
     "ts": "US",
-    "code": "FMN"
-  },
-  {
-    "ts": "HK",
-    "code": "01059"
+    "code": "INSE"
   },
   {
     "ts": "US",
-    "code": "RBC"
+    "code": "MATW"
   },
   {
     "ts": "HK",
-    "code": "01523"
-  },
-  {
-    "ts": "HK",
-    "code": "00367"
-  },
-  {
-    "ts": "HK",
-    "code": "00075"
-  },
-  {
-    "ts": "HK",
-    "code": "02102"
+    "code": "03966"
   },
   {
     "ts": "US",
-    "code": "VGSH"
+    "code": "CCNEP"
+  },
+  {
+    "ts": "US",
+    "code": "FCNCA"
+  },
+  {
+    "ts": "US",
+    "code": "DTH"
+  },
+  {
+    "ts": "US",
+    "code": "HDV"
   },
   {
     "ts": "HK",
-    "code": "01790"
+    "code": "03311"
+  },
+  {
+    "ts": "US",
+    "code": "EMX"
   },
   {
     "ts": "HK",
-    "code": "03182"
-  },
-  {
-    "ts": "US",
-    "code": "BKI"
+    "code": "83186"
   },
   {
     "ts": "HK",
-    "code": "03163"
+    "code": "00218"
+  },
+  {
+    "ts": "US",
+    "code": "FNDX"
+  },
+  {
+    "ts": "US",
+    "code": "IMGN"
+  },
+  {
+    "ts": "US",
+    "code": "SHO"
+  },
+  {
+    "ts": "US",
+    "code": "XELB"
   },
   {
     "ts": "HK",
-    "code": "01760"
+    "code": "H11143"
   },
   {
     "ts": "US",
-    "code": "AUTL"
+    "code": "INFU"
   },
   {
     "ts": "US",
-    "code": "CGBD"
+    "code": "DXCM"
   },
   {
     "ts": "US",
-    "code": "ADCT"
+    "code": "JACK"
+  },
+  {
+    "ts": "HK",
+    "code": "09906"
   },
   {
     "ts": "US",
-    "code": "RRD"
+    "code": "PII"
+  },
+  {
+    "ts": "HK",
+    "code": "00859"
   },
   {
     "ts": "US",
-    "code": "SHYG"
+    "code": "SCE-K"
+  },
+  {
+    "ts": "HK",
+    "code": "00563"
+  },
+  {
+    "ts": "US",
+    "code": "PSCD"
+  },
+  {
+    "ts": "HK",
+    "code": "08132"
+  },
+  {
+    "ts": "US",
+    "code": "ACMR"
+  },
+  {
+    "ts": "US",
+    "code": "WPP"
+  },
+  {
+    "ts": "US",
+    "code": "ABEQ"
+  },
+  {
+    "ts": "US",
+    "code": "TNP-F"
+  },
+  {
+    "ts": "US",
+    "code": "CINF"
+  },
+  {
+    "ts": "US",
+    "code": "MNP"
+  },
+  {
+    "ts": "HK",
+    "code": "01690"
+  },
+  {
+    "ts": "US",
+    "code": "BWEN"
+  },
+  {
+    "ts": "HK",
+    "code": "00729"
+  },
+  {
+    "ts": "US",
+    "code": "PZZA"
+  },
+  {
+    "ts": "US",
+    "code": "TSI"
+  },
+  {
+    "ts": "US",
+    "code": "IYC"
+  },
+  {
+    "ts": "HK",
+    "code": "03813"
+  },
+  {
+    "ts": "HK",
+    "code": "03918"
+  },
+  {
+    "ts": "US",
+    "code": "PIN"
+  },
+  {
+    "ts": "US",
+    "code": "WU"
+  },
+  {
+    "ts": "US",
+    "code": "SOCL"
+  },
+  {
+    "ts": "US",
+    "code": "AUDC"
+  },
+  {
+    "ts": "HK",
+    "code": "01586"
+  },
+  {
+    "ts": "HK",
+    "code": "09918"
+  },
+  {
+    "ts": "US",
+    "code": "GSHD"
+  },
+  {
+    "ts": "HK",
+    "code": "01243"
+  },
+  {
+    "ts": "US",
+    "code": "MVV"
+  },
+  {
+    "ts": "HK",
+    "code": "00784"
+  },
+  {
+    "ts": "HK",
+    "code": "03869"
+  },
+  {
+    "ts": "HK",
+    "code": "06869"
+  },
+  {
+    "ts": "US",
+    "code": "GJO"
+  },
+  {
+    "ts": "HK",
+    "code": "82828"
+  },
+  {
+    "ts": "US",
+    "code": "EVGBC"
+  },
+  {
+    "ts": "US",
+    "code": "ABTX"
+  },
+  {
+    "ts": "US",
+    "code": "EWW"
+  },
+  {
+    "ts": "US",
+    "code": "BUFR"
+  },
+  {
+    "ts": "US",
+    "code": "REG"
+  },
+  {
+    "ts": "US",
+    "code": "BRBR"
+  },
+  {
+    "ts": "HK",
+    "code": "08075"
+  },
+  {
+    "ts": "US",
+    "code": "OLN"
+  },
+  {
+    "ts": "US",
+    "code": "IECS"
+  },
+  {
+    "ts": "US",
+    "code": "ENOB"
   }
 ]

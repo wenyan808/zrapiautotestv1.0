@@ -24,8 +24,6 @@ def shuju(sheet):
     return data
 
 
-
-
 # for i in data:
 # 	if "登录"  in i:
 # 		# return i[5],i[6],i[7],i[8],i[9]
