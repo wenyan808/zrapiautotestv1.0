@@ -10,7 +10,7 @@ from Common.login import login
 # test_getFundAccount
 from Common.show_sql import OperationSql
 
-
+@pytest.mark.skip(reason="调试中 ")
 class TestgetFundAccount:
     @classmethod
     def setup_class(cls) -> None:
