@@ -6,7 +6,7 @@ from Common.guide import zhuorui
 from Common.login import login
 import pytest
 @allure.feature('开户')
-class TestClass():
+class TestOpen():
 
     @classmethod
     def setup_class(cls):
