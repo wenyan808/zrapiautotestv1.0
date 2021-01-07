@@ -7,7 +7,7 @@ from Common.login import login
 # test_getCommonInfo
 # @pytest.mark.skip(reason="调试中}")
 @allure.feature('公共基本信息')
-class TestgetCommonInfo:
+class TestGetCommonInfo:
     @classmethod
     def setup_class(cls) -> None:
         login()
