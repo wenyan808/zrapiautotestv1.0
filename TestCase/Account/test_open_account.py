@@ -6,7 +6,7 @@ from Common.login import login
 import pytest
 
 @allure.feature('开户')
-class TestClass():
+class TestOpen():
 
     @classmethod
     def setup_class(cls):
@@ -16,6 +16,7 @@ class TestClass():
     def test_open_info(self):
         response = zhuorui("开户", "获取开户信息")
         assert_data(response, "000000", "ok")
+        # print(response.json())
 
     @allure.story("身份证正面OCR")
     def test_card_front(self):
@@ -64,6 +65,7 @@ class TestClass():
     def test_get_live_code(self):
         response = zhuorui("开户", "获取数字验证码")
         assert_data(response, "000000", "ok")
+        # print(response.json())
 
     @allure.story("活体人脸核身")
     def test_live_recognition(self):
@@ -83,6 +85,7 @@ class TestClass():
     def test_risk_assessment(self):
         response = zhuorui("开户", "风险测评")
         assert_data(response, "000000", "ok")
+        # print(response.json())
 
     @allure.story("其它资料披露")
     def test_other_info_disclosure(self):
@@ -93,17 +96,20 @@ class TestClass():
     def test_other_select_open_account(self):
         response = zhuorui("开户", "选择开通账户")
         assert_data(response, "000000", "ok")
+        # print(response.json())
 
     @allure.story("风险披露语音")
     def test_other_risk_disclosure_voice(self):
         response = zhuorui("开户", "风险披露语音")
         assert_data(response, "000000", "ok")
+        # print(response.json())
 
 
     @allure.story("风险披露")
     def test_other_risk_disclosure(self):
         response = zhuorui("开户", "风险披露")
         assert_data(response, "000000", "ok")
+        # print(response.json())
 
     @allure.story("上传电子签名")
     def test_other_signature(self):

@@ -22,7 +22,7 @@ class TestMessagesApi:
         elif response.json().get("code") == "030002":
             assert_data(response, '030002', '当天短信验证码超过次数')
         else:
-            raise AssertionError("当天短信验证码超过次数")
+            raise AssertionError("您已超出今日验证次数，请明日再试")
         # print(response.json())
 
     # @pytest.mark.skip(reason="等待功能实现")
