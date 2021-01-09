@@ -137,7 +137,7 @@ class TestCommunitycommentdetail():
                 assert "commentId" in h.get("data")
                 assert "commentTime" in h.get("data")
                 q = OperationSql("192.168.1.237", "root", "123456", "user_account")
-                userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
+                userId = str(q.show_sql("select user_id from t_user_account where `zr_no`= '68904140';"))
                 if "fromUser" in h.get("data"):
                     assert h.get("data").get("fromUser").get("userId") == userId[3:-5:]
                     assert h.get("data").get("fromUser").get("nickname") == glo.nickname

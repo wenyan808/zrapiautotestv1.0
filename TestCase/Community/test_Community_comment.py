@@ -123,7 +123,7 @@ class TestCommunitycomment():
                 assert "commentId" in j.get("data")
                 assert "commentTime" in j.get("data")
                 q = OperationSql("192.168.1.237", "root", "123456", "user_account")
-                userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
+                userId = str(q.show_sql("select user_id from t_user_account where `zr_no`= '68904140';"))
                 if "fromUser" in j.get("data"):
                     if j.get("data").get("fromUser") == j.get("data").get("toUser"):
                         assert j.get("data").get("fromUser").get("userId") == j.get("data").get("toUser").get(

@@ -113,7 +113,7 @@ class TestCommunitydetail():
                     assert j.get("data").get("images") == paylo.get("images")
                 assert "publishTime" in j.get("data")
                 q = OperationSql("192.168.1.237", "root", "123456", "user_account")
-                userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
+                userId = str(q.show_sql("select user_id from t_user_account where `zr_no`= '68904140';"))
                 assert j.get("data").get("creator").get("userId") == userId[3:-5:]
                 assert j.get("data").get("creator").get("nickname") == glo.nickname
                 assert j.get("data").get("creator").get("headPhoto") == glo.headPhoto
