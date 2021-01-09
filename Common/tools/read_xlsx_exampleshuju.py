@@ -17,13 +17,11 @@ from glo import BASE_DIR
 
 
 def shuju(sheet):
-    df = pd.read_excel(BASE_DIR + r'/TestData/example.xlsx', sheet_name=sheet, encoding="utf-8")
+    df = pd.read_excel(BASE_DIR + r'/TestData/example.xlsx', sheet_name=sheet)
     # df = pd.read_excel(r'TestData/example.xlsx', sheet_name=sheet)     #直接copy   example.xlsx的相对路径
     data = df.values
     # print(data)
     return data
-
-
 
 
 # for i in data:
