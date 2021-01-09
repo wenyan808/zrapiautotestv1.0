@@ -12,7 +12,7 @@ from Common.tools.read_yaml import yamltoken
 from glo import HTTP, JSON
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="调试中 ")
 @allure.feature('社区列表-讨论区列表')
 class TestCommunitycommentdiscuss_list():
     @classmethod
