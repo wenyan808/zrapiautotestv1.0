@@ -20,13 +20,14 @@ class TestCommunitycommentpraise():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        login()  # 调用登录接口通过token传出来
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_postpraise(self):
-        login()  # 调用登录接口通过token传出来
+        # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
         headers = JSON
 
@@ -69,42 +70,49 @@ class TestCommunitycommentpraise():
         )
         y = r.json()
         # print(y)
-        postId = y.get("data").get("postId")
-        # print(postId)
-        body = {'postId': f"{postId}"}
-        sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-        body1 = {}
-        body1.update(body)
-        body1.update(sign1)
-        body = json.dumps(dict(body1))
-        postId_praise_url = HTTP + "/as_community/api/praise/v1/add"
-        r = Requests(self.session).post(
-            url=postId_praise_url, headers=headers, data=body, title="帖子点赞"
-        )
-        # print(r.json())
-        # 断言
-        assert r.status_code == 200
-        assert r.json().get("code") == "000000"
-        assert r.json().get("msg") == "ok"
-        postId = y.get("data").get("postId")
-        # print(postId)
-        body = {'postId': f"{postId}"}
-        sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-        body1 = {}
-        body1.update(body)
-        body1.update(sign1)
-        # print(body1)
-        delete_url = HTTP + "/as_community/api/post/v1/delete"
+        if y.get("code") == "000000":
+            postId = y.get("data").get("postId")
+            # print(postId)
+            body = {'postId': f"{postId}"}
+            sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
+            body1 = {}
+            body1.update(body)
+            body1.update(sign1)
+            body = json.dumps(dict(body1))
+            postId_praise_url = HTTP + "/as_community/api/praise/v1/add"
+            r = Requests(self.session).post(
+                url=postId_praise_url, headers=headers, data=body, title="帖子点赞"
+            )
+            # print(r.json())
+            # 断言
+            assert r.status_code == 200
+            assert r.json().get("code") == "000000"
+            assert r.json().get("msg") == "ok"
+            postId = y.get("data").get("postId")
+            # print(postId)
+            body = {'postId': f"{postId}"}
+            sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
+            body1 = {}
+            body1.update(body)
+            body1.update(sign1)
+            # print(body1)
+            delete_url = HTTP + "/as_community/api/post/v1/delete"
 
-        r = Requests(self.session).post(
-            url=delete_url, headers=headers, json=body1, title="删帖"
-        )
-        j = r.json()
-        # print(j)
-        # 断言
-        assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
+            r = Requests(self.session).post(
+                url=delete_url, headers=headers, json=body1, title="删帖"
+            )
+            j = r.json()
+            # print(j)
+            # 断言
+            assert r.status_code == 200
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+        elif y.get("code") == "460301":
+            raise AssertionError("请不要发布重复内容")
+        elif y.get("code") == "460300":
+            raise AssertionError("您发言太频繁了，请稍后再试")
+        elif y.get("code") == "460404":
+            raise AssertionError("内容含有敏感词，请修改后发送")
 
 
 

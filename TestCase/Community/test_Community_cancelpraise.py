@@ -21,13 +21,14 @@ class TestCommunitycancelpraise():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        login()  # 调用登录接口通过token传出来
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_cancelpostpraise(self):
-        login()  # 调用登录接口通过token传出来
+        # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
         headers = JSON
 
@@ -128,7 +129,7 @@ class TestCommunitycancelpraise():
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_cancelcommentpraise(self):
-        login()  # 调用登录接口通过token传出来
+        # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
         headers = JSON
 

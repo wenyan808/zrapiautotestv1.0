@@ -18,13 +18,14 @@ class TestCommunitycommenthot_list():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        login()  # 调用登录接口通过token传出来
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_hot_list(self):
-        login()  # 调用登录接口通过token传出来
+        # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/community/v1/hot_list"
         headers = JSON
 

@@ -22,6 +22,7 @@ class TestCommunityaddreport():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        login()  # 调用登录接口通过token传出来
         # # 传入键key，值price，数据库名database，表名surface到MongoDB数据库
         # _paylo = MongoDBField("192.168.1.237", 27017, "community", "t_report", [{}, {"type": 1}])
         # print(_paylo)
@@ -45,7 +46,7 @@ class TestCommunityaddreport():
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_addreport(self):
-        login()  # 调用登录接口通过token传出来
+        # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/report/v1/add"
         headers = JSON
         # q = OperationSql("192.168.1.237", "root", "123456", "user_account")

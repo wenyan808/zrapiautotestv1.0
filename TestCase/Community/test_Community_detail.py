@@ -22,12 +22,13 @@ class TestCommunitydetail():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        login()  # 调用登录接口通过token传出来
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     def test_Community_detail(self):
-        login()  # 调用登录接口通过token传出来
+        # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
         headers = JSON
 
