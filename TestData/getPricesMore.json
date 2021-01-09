@@ -1,6 +1,5 @@
 [
   {
-<<<<<<< HEAD
     "ts": "US",
     "code": "CLPT"
   },
@@ -1999,7 +1998,8 @@
   {
     "ts": "US",
     "code": "ENOB"
-=======
+  },
+  {
     "ts": "HK",
     "code": "08245"
   },
@@ -3998,6 +3998,5 @@
   {
     "ts": "US",
     "code": "GRVY"
->>>>>>> origin/master
   }
 ]

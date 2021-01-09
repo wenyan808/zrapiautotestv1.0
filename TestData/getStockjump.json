@@ -1,7 +1,7 @@
 [
   {
     "ts": "US",
-<<<<<<< HEAD
+
     "code": "NEM"
   },
   {
@@ -1999,7 +1999,9 @@
   {
     "ts": "US",
     "code": "SH"
-=======
+  },
+  {
+    "ts": "US",
     "code": "ORA"
   },
   {
@@ -3997,6 +3999,5 @@
   {
     "ts": "US",
     "code": "RWO"
->>>>>>> origin/master
   }
 ]
