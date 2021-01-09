@@ -24,7 +24,7 @@ class TestStockSelectionDeviceList:
         # 通过传入数据库的IP地址address，用户名user，密码password，数据库名database连接到后台数据库
         # q = OperationSql("192.168.1.237", "root", "123456", "user_account")
         # 通过查询语句找到用户id
-        # userId = q.show_sql("select id from t_user_account where `zr_no`= '68904140';")
+        # userId = q.show_sql("select user_id from t_user_account where `zr_no`= '68904140';")
         # 传入键key，值price，数据库名database，表名surface到MongoDB数据库
         # id = MongoDB("user_id", str(userId)[3:-5:], "stock_selector", "t_tactic6")
         # print(str(userId)[3:-5:])
