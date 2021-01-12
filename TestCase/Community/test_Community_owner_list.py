@@ -6,7 +6,7 @@ import pytest
 
 from Common.get_time_stamp import get_time_stamp13
 from Common.login import login
-from Common.show_sql import OperationSql
+from Common.show_sql import showsql
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -14,7 +14,7 @@ from Common.tools.read_yaml import yamltoken
 from glo import HTTP, JSON
 
 
-@pytest.mark.skip(reason="调试中 ")
+# @pytest.mark.skip(reason="调试中 ")
 @allure.feature('个人主页-用户主贴查询')
 class TestCommunitycommentowner_list():
     @classmethod
@@ -30,8 +30,10 @@ class TestCommunitycommentowner_list():
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/owner_list"
         headers = JSON
-        q = OperationSql("192.168.1.237", "root", "123456", "user_account")
-        userId = str(q.show_sql("select user_id from t_user_account where `zr_no`= '68904140';"))
+        userId = showsql(
+            '192.168.1.237', 'root', '123456', "user_account",
+            "select user_id from t_user_account where `zr_no`= '68904140';"
+        )
         # 拼装参数
         paylo = {
 

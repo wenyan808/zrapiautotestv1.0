@@ -3,7 +3,7 @@ import pytest
 from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
-from Common.show_sql import OperationSql, MongoDB
+from Common.show_sql import MongoDB, showsql
 from Common.tools.write_xlsx import write_xlsx
 
 
@@ -11,10 +11,13 @@ class TestStickOptionalStock:
     @classmethod
     def setup_class(cls) -> None:
         login()
-        q = OperationSql("192.168.1.237", "root", "123456", "user_account")
-        userId = str(q.show_sql("select user_id from t_user_account where `zr_no`= '68904140';"))
+        userId = showsql(
+            '192.168.1.237', 'root', '123456', "user_account",
+            "select user_id from t_user_account where `zr_no`= '68904140';"
+        )
         # print(userId)
-        id = MongoDB("192.168.1.236", 27017, "stock_market", "t_stock_selected", "userId", userId[3:-5:])
+        id = MongoDB("192.168.1.236", 27017, "stock_market", "t_stock_selected", "userId", list(list(userId)[0])[0])
+        # print(id)
         cls._id = {"id": str(id[0]["_id"])}
 
     @allure.story('置顶自选股')

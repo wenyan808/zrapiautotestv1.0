@@ -1,65 +1,38 @@
 # 操作数据库
-import pymysql
+from os.path import join
 
+from pymysql import *
 from Common.tools.write_xlsx import write_xlsx
 
 
-class OperationSql:
-    _conn = None
-    _cursor = None
+def showsql(host, user, password, database, sql):
+    """
 
-    def __init__(self, address, user, password, database):
-        """
+    :param host: ip地址
+    :param user: mysql用户名
+    :param password: mysql密码
+    :param database: 数据表名
+    :param sql: 查询语句
+    :return: 查询的数据
+    """
+    conn = connect(
+        host=host,
+        port=3306, user=user,
+        password=password,
+        database=database,
+        charset='utf8')
 
-        :param address: IP地址
-        :param user: 用户名
-        :param password: 密码
-        :param database: 数据库名
-        """
-        self.address = address
-        self.user = user
-        self.password = password
-        self.database = database
-
-    # 获取连接数据库
-    def get_connect_sql(self):
-        if self._conn is None:
-            self._conn = pymysql.connect(self.address, self.user, self.password, self.database)
-        return self._conn
-
-    # 获取创建游标
-    def get_newCursor(self):
-        if self._cursor is None:
-            self._cursor = self.get_connect_sql().cursor()
-        return self._cursor
-
-    # 关闭数据库连接
-    def close_sql_connect(self):
-        if self._conn is not None:
-            self.get_connect_sql().close()
-            self._conn = None
-
+    # 创建游标
+    c = conn.cursor()
+    # 执行sql语句
+    c.execute(sql)
+    # 查询一行数据
+    result = c.fetchall()
     # 关闭游标
-    def close_cursor(self):
-        if self._cursor is not None:
-            self.get_newCursor().close()
-            self._cursor = None
-
-    # 操作数据库
-    def show_sql(self, sql):
-        try:
-            # 创建游标
-            cursor = self.get_newCursor()
-            cursor.execute(sql)
-            data = cursor.fetchall()
-        except Exception as e:
-            raise e
-        finally:
-            self.close_cursor()
-            self.close_sql_connect()
-        # print(data)
-        return data
-
+    c.close()
+    # 关闭数据库连接
+    conn.close()
+    return result
 
 # q = OperationSql()
 # print(q.show_sql("select * from m_china_concept where `symbol`= 'BABA';"))
@@ -149,3 +122,13 @@ def MongoDBField(address, port, database, surface, args):
 
 
 # print(MongoDBField("192.168.1.237", 27017, "community", "t_report", [{}, {"type": 1}]))
+# ts_code = show_sql('192.168.1.237','root','123456','stock_market',
+#                    "select ts,code from t_stock_search where ts='HK' or ts='SH' or ts='SZ';")
+# print(ts_code)
+# a = showsql(
+#             '192.168.1.237', 'root', '123456', "user_account",
+#             "select user_id from t_user_account where `zr_no`= '68904140';"
+#         )
+# print((list(list(a)[0])[0]))
+# id = MongoDB("192.168.1.236", 27017, "stock_market", "t_stock_selected", "userId", '90106be7c8444dda8f0f5b745b50a08e')
+# print(id)

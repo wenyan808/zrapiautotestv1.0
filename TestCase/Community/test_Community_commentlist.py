@@ -7,7 +7,7 @@ import pytest
 
 import glo
 from Common.login import login
-from Common.show_sql import OperationSql
+from Common.show_sql import showsql
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -136,8 +136,10 @@ class TestCommunitycommentlist():
                     assert h.get("data")[0].get("commentId") == commentId
                     assert "commentId" in h.get("data")[0]
                     assert "commentTime" in h.get("data")[0]
-                    q = OperationSql("192.168.1.237", "root", "123456", "user_account")
-                    userId = str(q.show_sql("select user_id from t_user_account where `zr_no`= '68904140';"))
+                    userId = showsql(
+                        '192.168.1.237', 'root', '123456', "user_account",
+                        "select user_id from t_user_account where `zr_no`= '68904140';"
+                    )
                     if "fromUser" in h.get("data")[0]:
                         assert h.get("data")[0].get("fromUser").get("userId") == userId[3:-5:]
                         assert h.get("data")[0].get("fromUser").get("nickname") == glo.nickname

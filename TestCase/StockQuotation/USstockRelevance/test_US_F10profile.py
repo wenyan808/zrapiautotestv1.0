@@ -7,7 +7,7 @@ import pytest
 import requests
 
 from Common.login import login
-from Common.show_sql import OperationSql
+from Common.show_sql import showsql
 from Common.sign import get_sign
 from Common.tools.read_write_json import get_json, write_json
 from Common.tools.read_yaml import yamltoken
@@ -21,8 +21,10 @@ class test_USF10profile:
     @classmethod
     def setup_class(cls) -> None:
         login()
-        q = OperationSql("192.168.1.237", "root", "123456", "stock_market")
-        ts_code = q.show_sql("select ts,code from t_stock_search where ts='US';")
+        ts_code = showsql(
+            "192.168.1.237", "root", "123456", "stock_market",
+            "select ts,code from t_stock_search where ts='US';"
+        )
         # print(ts_code)
         random_stock = random.sample(ts_code, 1)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))

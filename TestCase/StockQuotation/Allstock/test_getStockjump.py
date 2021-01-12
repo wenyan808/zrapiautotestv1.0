@@ -9,7 +9,8 @@ import requests
 
 
 from Common.login import login
-from Common.show_sql import OperationSql
+from Common.show_sql import showsql
+
 from Common.sign import get_sign
 from Common.tools.read_write_json import write_json, get_json
 from Common.tools.read_yaml import yamltoken
@@ -22,8 +23,10 @@ class TestgetStockjump:
     @classmethod
     def setup_class(cls) -> None:
         login()
-        q = OperationSql("192.168.1.237", "root", "123456", "stock_market")
-        ts_code = q.show_sql("select ts,code from t_stock_search where ts='HK' or ts='US';")
+        ts_code = showsql(
+            '192.168.1.237', 'root', '123456', 'stock_market',
+            "select ts,code from t_stock_search where ts='HK' or ts='US';"
+            )
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
         write_json(BASE_DIR + r"/TestData/getStockjump.json", ts_code_data)

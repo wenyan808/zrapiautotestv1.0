@@ -8,7 +8,7 @@ import pytest
 import glo
 from Common.login import login
 from Common.requests_library import Requests
-from Common.show_sql import OperationSql, MongoDB
+from Common.show_sql import MongoDB, showsql
 from Common.sign import get_sign
 from Common.tools.read_write_json import get_json
 from Common.tools.read_yaml import yamltoken
@@ -80,8 +80,10 @@ class TestCommunityPosted:
                         assert type(j.get("data").get("images")) == type(info.get("images"))
                         assert j.get("data").get("images") == info.get("images")
                     assert "publishTime" in j.get("data")
-                    q = OperationSql("192.168.1.237", "root", "123456", "user_account")
-                    userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
+                    userId = showsql(
+                        '192.168.1.237', 'root', '123456', "user_account",
+                        "select user_id from t_user_account where `zr_no`= '68904140';"
+                    )
                     assert j.get("data").get("creator").get("userId") == userId[3:-5:]
                     assert j.get("data").get("creator").get("nickname") == glo.nickname
                     assert j.get("data").get("creator").get("headPhoto") == glo.headPhoto

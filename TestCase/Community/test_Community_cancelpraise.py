@@ -7,7 +7,7 @@ import pytest
 
 import glo
 from Common.login import login
-from Common.show_sql import OperationSql
+from Common.show_sql import showsql
 from Common.sign import get_sign
 
 from Common.requests_library import Requests

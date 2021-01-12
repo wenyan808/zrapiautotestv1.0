@@ -8,7 +8,8 @@ from Common.guide import zhuorui
 from Common.login import login
 
 # test_getFundAccount
-from Common.show_sql import OperationSql
+from Common.show_sql import showsql
+
 
 @pytest.mark.skip(reason="调试中 ")
 class TestgetFundAccount:
@@ -25,8 +26,10 @@ class TestgetFundAccount:
 
     @allure.story('查询资金账户接口_1-港股')
     def test_getFundAccount_HK(self):
-        q = OperationSql("192.168.1.237", "root", "123456", "user_account")
-        userId = q.show_sql("select id from t_user_account where `zr_no`= '68904140';")
+        userId = showsql(
+            '192.168.1.237', 'root', '123456', "user_account",
+            "select user_id from t_user_account where `zr_no`= '68904140';"
+        )
         # print(userId)
         response = zhuorui('模拟炒股', '查询资金账户接口_1-港股')
         assert response.status_code == 200

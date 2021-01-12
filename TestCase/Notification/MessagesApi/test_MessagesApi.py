@@ -17,6 +17,7 @@ class TestMessagesApi:
     def test_MessagesApi01_send_login_code(self):
         response = zhuorui('消息通知', '发送登陆短信验证码')
         assert response.status_code == 200
+        # print(response.json())
         if response.json().get("code") == "000000":
             assert_data(response, '000000', 'ok')
         elif response.json().get("code") == "030002":

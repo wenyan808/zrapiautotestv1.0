@@ -7,7 +7,7 @@ import pytest
 
 from Common.get_time_stamp import get_time_stamp13
 from Common.login import login
-from Common.show_sql import OperationSql, MongoDBField
+from Common.show_sql import MongoDBField, showsql
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -49,8 +49,10 @@ class TestCommunityaddreport():
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/report/v1/add"
         headers = JSON
-        # q = OperationSql("192.168.1.237", "root", "123456", "user_account")
-        # userId = str(q.show_sql("select id from t_user_account where `zr_no`= '68904140';"))
+        # userId = showsql(
+        #     '192.168.1.237', 'root', '123456', "user_account",
+        #     "select user_id from t_user_account where `zr_no`= '68904140';"
+        # )
         # print(userId[3:-5:])
         # 拼装参数
         # paylo = {

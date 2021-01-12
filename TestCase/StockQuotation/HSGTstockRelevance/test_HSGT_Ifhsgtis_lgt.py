@@ -7,7 +7,7 @@ import pytest
 import requests
 
 from Common.login import login
-from Common.show_sql import OperationSql
+from Common.show_sql import showsql
 from Common.sign import get_sign
 from Common.tools.read_write_json import get_json, write_json
 from Common.tools.read_yaml import yamltoken
@@ -21,15 +21,19 @@ class TestHSGTIfhsgtis_lgt:
     @classmethod
     def setup_class(cls) -> None:
         login()
-        # q = OperationSql("192.168.1.237", "root", "123456", "stock_market")
-        # ts_code = q.show_sql("select ts,code from t_stock_search where ts='SH' or ts='SZ';")
+        # ts_code = showsql(
+        #     "192.168.1.237", "root", "123456", "stock_market",
+        #     "select ts,code from t_stock_search where ts='HK' or ts='SH' or ts='SZ';"
+        # )
         # random_stock = random.sample(ts_code, 2)
         # cls.ts_code_data = json.dumps(list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock)))
         # print(cls.ts_code_data)
         # write_json(BASE_DIR + r"/TestData/hsgtis_lgt.json", cls.ts_code_data)
 
-        q = OperationSql("192.168.1.237", "root", "123456", "stock_market")
-        ts_code = q.show_sql("select ts,code from t_stock_search where ts='SH' or ts='SZ';")
+        ts_code = showsql(
+            "192.168.1.237", "root", "123456", "stock_market",
+            "select ts,code from t_stock_search where ts='HK' or ts='SH' or ts='SZ';"
+        )
         # print(ts_code)
         random_stock = random.sample(ts_code, 1)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
