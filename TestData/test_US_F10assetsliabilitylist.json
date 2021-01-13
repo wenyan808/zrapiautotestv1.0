@@ -1,0 +1,32 @@
+[
+  {
+    "ts": "US",
+    "code": "GOOG",
+    "type": 0,
+    "pageSize": 15
+  },
+  {
+    "ts": "US",
+    "code": "GOOG",
+    "type": 1,
+    "pageSize": 15
+  },
+  {
+    "ts": "US",
+    "code": "GOOG",
+    "type": 2,
+    "pageSize": 15
+  },
+  {
+    "ts": "US",
+    "code": "GOOG",
+    "type": 3,
+    "pageSize": 15
+  },
+  {
+    "ts": "US",
+    "code": "GOOG",
+    "type": 4,
+    "pageSize": 15
+  }
+]

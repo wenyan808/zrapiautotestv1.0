@@ -1,43 +1,36 @@
+# test_US_newsstockcount
 import json
 import logging
-import random
 
 import allure
 import pytest
 import requests
 
 from Common.login import login
-from Common.show_sql import showsql
+
 from Common.sign import get_sign
-from Common.tools.read_write_json import get_json, write_json
+
 from Common.tools.read_yaml import yamltoken
-from glo import HTTP, JSON, BASE_DIR
+from glo import HTTP, JSON
 
 
-# @pytest.mark.skip(reason="调试中 ")
+# @pytest.mark.skip(reason="调试中")
 @allure.feature('美股相关')
-class test_USF10profile:
+class TestUSNewsstockcount:
     @classmethod
     def setup_class(cls) -> None:
         login()
-        ts_code = showsql(
-            "192.168.1.237", "root", "123456", "stock_market",
-            "select ts,code from t_stock_search where ts='US';"
-        )
-        # print(ts_code)
-        random_stock = random.sample(ts_code, 1)
-        ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/US_F10profile.json", ts_code_data)
 
-    @allure.story('F10简况')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/hsgtis_lgt.json"))
-    def test_US_f10profile(self, info):
-        url = HTTP + "/as_market/api/us/f10/v1/profile"
+    @allure.story('美股F10财报')
+    def test_US_newsstockcount(self):
+        # pass
+        url = HTTP + "/as_market/api/us/new_stock/v1/count"
         headers = JSON
 
         # 拼装参数
-
-        paylo = info
+        paylo = {
+        }
+        # paylo = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         # 调用登录接口通过token传出来
@@ -53,7 +46,7 @@ class test_USF10profile:
         headers.update(token)
         # print(headers)
         payload = json.dumps(dict(payload1))
-
+        # time.sleep(1)
         r = requests.post(url=url, headers=headers, data=payload)
         # 断言
         j = r.json()
@@ -62,3 +55,12 @@ class test_USF10profile:
         assert r.status_code == 200
         assert j.get("code") == "000000"
         assert j.get("msg") == "ok"
+        if "data" in j:
+            if len(j.get("data")) != 0:
+                assert "toBeListed" in j.get("data")
+                assert "listed" in j.get("data")
+            else:
+                logging.info("data为空，无数据")
+
+        else:
+            logging.info("无data字段")

@@ -2,7 +2,7 @@ import os
 from typing import Union
 
 FALG = True  # 社区，如果为True则不执行time.sleep(),反之则执行
-headPhoto = 'http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/head_photo/images/2020/09/23/16008475893230331.jpeg'  # 用户头像发生变化，请在这里修改头像地址
+headPhoto = 'http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/head_photo/images/2021/01/11/16103477341540274.jpeg'  # 用户头像发生变化，请在这里修改头像地址
 BASE_DIR: Union[bytes, str] = os.path.dirname(os.path.abspath(__file__))
 HTTP = "http://192.168.1.241"
 console_HTTP = "http://192.168.1.239:8080"

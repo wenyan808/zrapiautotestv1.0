@@ -1,0 +1,32 @@
+[
+  {
+    "ts": "US",
+    "code": "NIO",
+    "type": 0,
+    "pageSize": 15
+  },
+  {
+    "ts": "US",
+    "code": "MSFT",
+    "type": 1,
+    "pageSize": 15
+  },
+  {
+    "ts": "US",
+    "code": "LI",
+    "type": 2,
+    "pageSize": 15
+  },
+  {
+    "ts": "US",
+    "code": "PDD",
+    "type": 3,
+    "pageSize": 15
+  },
+  {
+    "ts": "US",
+    "code": "JD",
+    "type": 4,
+    "pageSize": 15
+  }
+]
