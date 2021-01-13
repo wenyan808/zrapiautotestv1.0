@@ -15,7 +15,7 @@ from Common.tools.read_yaml import yamltoken
 from glo import HTTP, JSON, BASE_DIR
 
 
-@pytest.mark.skip(reason="调试中 ")
+# @pytest.mark.skip(reason="调试中 ")
 @allure.feature('社区')
 class TestCommunityPosted:
     @classmethod
@@ -118,4 +118,4 @@ class TestCommunityPosted:
         elif j.get("code") == "460404":
             raise AssertionError("内容含有敏感词，请修改后发送")
         else:
-            raise AssertionError("其他类型错误")
+            raise AssertionError(f"{print(j.get('code'))}")

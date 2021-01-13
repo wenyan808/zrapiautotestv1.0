@@ -15,7 +15,7 @@ from Common.tools.read_yaml import yamltoken
 from glo import HTTP, JSON
 
 
-@pytest.mark.skip(reason="调试中 ")
+# @pytest.mark.skip(reason="调试中 ")
 @allure.feature('社区-查询一级评论下的更多评论')
 class TestCommunitycommentmore_list():
     @classmethod

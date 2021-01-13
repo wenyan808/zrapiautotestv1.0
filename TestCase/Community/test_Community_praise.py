@@ -14,7 +14,7 @@ from Common.tools.read_yaml import yamltoken
 from glo import HTTP, JSON
 
 
-@pytest.mark.skip(reason="调试中 ")
+# @pytest.mark.skip(reason="调试中 ")
 @allure.feature('社区-点赞')
 class TestCommunitycommentpraise():
     @classmethod
@@ -113,6 +113,8 @@ class TestCommunitycommentpraise():
             raise AssertionError("您发言太频繁了，请稍后再试")
         elif y.get("code") == "460404":
             raise AssertionError("内容含有敏感词，请修改后发送")
+        else:
+            raise AssertionError(f"{print(y.get('code'))}")
 
 
 
