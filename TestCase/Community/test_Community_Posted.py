@@ -15,7 +15,7 @@ from Common.tools.read_yaml import yamltoken
 from glo import HTTP, JSON, BASE_DIR
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="调试中 ")
 @allure.feature('社区')
 class TestCommunityPosted:
     @classmethod
