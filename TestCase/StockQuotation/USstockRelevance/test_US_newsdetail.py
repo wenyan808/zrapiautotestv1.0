@@ -51,7 +51,26 @@ class TestUSNewsdetail:
         # 断言
         j = r.json()
         # print(j)
-
+        # 通过盘口接口查询昨收价last和diffRate
+        url_last = HTTP + "/as_market/api/handicap/v1/get_handicap"
+        boby = {
+            "stockList": [
+                {
+                    "ts": "US",
+                    "code": "TSLA",
+                    "type": "2"
+                }
+            ]
+        }
+        sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
+        # 调用登录接口通过token传出来
+        boby1 = {}
+        boby1.update(boby)
+        boby1.update(sign1)
+        boby = json.dumps(dict(boby1))
+        r = requests.post(url=url_last, headers=headers, data=boby)
+        y=r.json()
+        # print(y)
         assert r.status_code == 200
         assert j.get("code") == "000000"
         assert j.get("msg") == "ok"
@@ -65,8 +84,10 @@ class TestUSNewsdetail:
                 assert j.get("data").get("relateStock")[0].get("ts") == "US"
                 assert j.get("data").get("relateStock")[0].get("code") == "TSLA"
                 assert j.get("data").get("relateStock")[0].get("name") == "特斯拉"
-                assert j.get("data").get("relateStock")[0].get("last") == 705.67
-                assert j.get("data").get("relateStock")[0].get("diffRate") == 0.015674
+                assert "last" in j.get("data").get("relateStock")[0]
+                assert "diffRate" in j.get("data").get("relateStock")[0]
+                assert j.get("data").get("relateStock")[0].get("last") == y.get("data")[0].get("last")
+                assert j.get("data").get("relateStock")[0].get("diffRate") == y.get("data")[0].get("diffRate")
                 assert j.get("data").get("relateStock")[0].get("type") == 2
                 # print(j.get("data"))
 

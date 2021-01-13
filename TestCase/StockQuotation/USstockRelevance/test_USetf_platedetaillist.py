@@ -56,22 +56,19 @@ class TestUSetfplatelist:
         assert j.get("msg") == "ok"
         if "data" in j:
             if len(j.get("data")) != 0:
-                assert "sectionTitle" in j.get("data")
-                assert "data" in j.get("data")
-                for i in range(len(j.get("data").get("data"))):
-                    assert "plateName" in j.get("data").get("data")[i]
-                    assert "plateDiffRate" in j.get("data").get("data")[i]
-                    assert "name" in j.get("data").get("data")[i]
-                    assert "diffRate" in j.get("data").get("data")[i]
-                    assert "delay" in j.get("data").get("data")[i]
-                    if str(j.get("data").get("data")[i].get("delay")) == "true":
-                        logging.info("实时数据")
-                    else:
-                        logging.info("延时数据")
-                # assert j.get("data").get("total") == 65
-                # assert j.get("data").get("pageSize") == 15
-                # assert j.get("data").get("currentPage") == 1
-                # print(j.get("data"))
+                for i in range(len(j.get("data"))):
+                    assert "sectionTitle" in j.get("data")[i]
+                    assert "data" in j.get("data")[i]
+                    for h in range(len(j.get("data")[i].get("data"))):
+                        assert "plateName" in j.get("data")[i].get("data")[h]
+                        assert "plateDiffRate" in j.get("data")[i].get("data")[h]
+                        assert "plateCode" in j.get("data")[i].get("data")[h]
+                        # assert "diffRate" in j.get("data")[i].get("data")[h]
+                        assert "delay" in j.get("data")[i].get("data")[h]
+                        if str(j.get("data")[i].get("data")[h].get("delay")) == "true":
+                            logging.info("实时数据")
+                        else:
+                            logging.info("延时数据")
 
             else:
                 logging.info("data为空，无数据")

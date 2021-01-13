@@ -49,24 +49,29 @@ class TestUSetfplatelist:
         r = requests.post(url=url, headers=headers, data=payload)
         # 断言
         j = r.json()
-        # print(j)
+        print(j)
 
         assert r.status_code == 200
         assert j.get("code") == "000000"
         assert j.get("msg") == "ok"
         if "data" in j:
             if len(j.get("data")) != 0:
-                assert "plateCode" in j.get("data")
-                assert "plateName" in j.get("data")
-                assert "plateDiffRate" in j.get("data")
-                assert "name" in j.get("data")
-                assert "diffRate" in j.get("data")
-                assert "last" in j.get("data")
-                assert "delay" in j.get("data")
-                if str(j.get("data").get("delay")) == "true":
-                    logging.info("实时数据")
-                else:
-                    logging.info("延时数据")
+                for i in range(len( j.get("data"))):
+                    assert "ts" in j.get("data")[i]
+                    assert "code" in j.get("data")[i]
+                    assert "type" in j.get("data")[i]
+                    assert "plateCode" in j.get("data")[i]
+                    assert "name" in j.get("data")[i]
+                    assert "plateName" in j.get("data")[i]
+                    assert "plateDiffRate" in j.get("data")[i]
+                    assert "name" in j.get("data")[i]
+                    assert "diffRate" in j.get("data")[i]
+                    assert "last" in j.get("data")[i]
+                    assert "delay" in j.get("data")[i]
+                    if str(j.get("data")[i].get("delay")) == "true":
+                        logging.info("实时数据")
+                    else:
+                        logging.info("延时数据")
                 # assert j.get("data").get("total") == 65
                 # assert j.get("data").get("pageSize") == 15
                 # assert j.get("data").get("currentPage") == 1
