@@ -49,7 +49,7 @@ class TestUSetfplatelist:
         r = requests.post(url=url, headers=headers, data=payload)
         # 断言
         j = r.json()
-        print(j)
+        # print(j)
 
         assert r.status_code == 200
         assert j.get("code") == "000000"
