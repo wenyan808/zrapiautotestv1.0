@@ -43,7 +43,7 @@ from pymongo import MongoClient
 
 
 def MongoDB(address, port, database, surface, key, price):
-    """
+    """查询指定条件的所有字段
 
     :param address:ip地址
     :param port: 端口号
@@ -78,7 +78,7 @@ def MongoDB(address, port, database, surface, key, price):
 
 
 def MongoDBField(address, port, database, surface, args):
-    """
+    """查询指定条件的多个字段
 
     :param address: ip地址
     :param port: 端口号
