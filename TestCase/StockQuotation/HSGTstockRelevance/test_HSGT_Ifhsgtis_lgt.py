@@ -35,7 +35,7 @@ class TestHSGTIfhsgtis_lgt:
             "select ts,code from t_stock_search where ts='HK' or ts='SH' or ts='SZ';"
         )
         # print(ts_code)
-        random_stock = random.sample(ts_code, 1)
+        random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
         write_json(BASE_DIR + r"/TestData/hsgtis_lgt.json", ts_code_data)
 
