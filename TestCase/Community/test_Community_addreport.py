@@ -49,19 +49,9 @@ class TestCommunityaddreport():
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/report/v1/add"
         headers = JSON
-        # userId = showsql(
-        #     '192.168.1.237', 'root', '123456', "user_account",
-        #     "select user_id from t_user_account where `zr_no`= '68904140';"
-        # )
-        # print(userId[3:-5:])
+
         # 拼装参数
-        # paylo = {
-        #
-        #     "reportedId": "5fb22c84791d040006a931fd",
-        #     "type": 2,
-        #     "reportedType": 3
-        #
-        # }
+
         paylo = {
 
             "reportedId": "5fe2b0b1791d040006ec7ed1",

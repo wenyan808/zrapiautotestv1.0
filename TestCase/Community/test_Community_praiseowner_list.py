@@ -34,7 +34,7 @@ class TestCommunitypraiseowner_list():
         #     '192.168.1.237', 'root', '123456', "user_account",
         #     "select user_id from t_user_account where `zr_no`= '68904140';"
         # )
-        # print(userId[3:-5:])
+        # print(list(list(userId)[0])[0])
         # 拼装参数
         paylo = {
 

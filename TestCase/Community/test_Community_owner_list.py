@@ -37,7 +37,7 @@ class TestCommunitycommentowner_list():
         # 拼装参数
         paylo = {
 
-            "userId": str(userId[3:-5:]),
+            "userId": str(list(list(userId)[0])[0]),
             "publishTime": get_time_stamp13(),
             "pageSize": 20
 

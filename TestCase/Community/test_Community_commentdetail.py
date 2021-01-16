@@ -141,7 +141,7 @@ class TestCommunitycommentdetail():
                     "select user_id from t_user_account where `zr_no`= '68904140';"
                 )
                 if "fromUser" in h.get("data"):
-                    assert h.get("data").get("fromUser").get("userId") == userId[3:-5:]
+                    assert h.get("data").get("fromUser").get("userId") == list(list(userId)[0])[0]
                     assert h.get("data").get("fromUser").get("nickname") == glo.nickname
                     assert h.get("data").get("fromUser").get("headPhoto") == glo.headPhoto
                     assert h.get("data").get("fromUser").get("zrNo") == glo.zrNo

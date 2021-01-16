@@ -116,7 +116,7 @@ class TestCommunitydetail():
                     '192.168.1.237', 'root', '123456', "user_account",
                     "select user_id from t_user_account where `zr_no`= '68904140';"
                 )
-                assert j.get("data").get("creator").get("userId") == userId[3:-5:]
+                assert j.get("data").get("creator").get("userId") == list(list(userId)[0])[0]
                 assert j.get("data").get("creator").get("nickname") == glo.nickname
                 assert j.get("data").get("creator").get("headPhoto") == glo.headPhoto
                 assert j.get("data").get("creator").get("zrNo") == glo.zrNo
