@@ -1,4 +1,4 @@
-# test_Kline_selectfiveday
+# test_Kline_selectminute1
 import json
 import random
 
@@ -19,7 +19,7 @@ from glo import HTTP, JSON, BASE_DIR
 
 # @pytest.mark.skip(reason="调试中")
 @allure.feature('K线')
-class TestKlineSelectfiveday:
+class TestKlineSelectminute1:
     @classmethod
     def setup_class(cls) -> None:
         login()
@@ -29,13 +29,13 @@ class TestKlineSelectfiveday:
         )  # 可以添加条件筛选：where ts='HK' or ts='SH' or ts='SZ' or ts='US'
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/test_Kline_selectfiveday.json", ts_code_data)
+        write_json(BASE_DIR + r"/TestData/test_Kline_selectminute1.json", ts_code_data)
 
-    @allure.story('查询五日')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_Kline_selectfiveday.json"))
-    def test_Kline_selectfiveday(self, info):
+    @allure.story('查询1分钟')
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_Kline_selectminute1.json"))
+    def test_Kline_selectminute1(self, info):
         # pass
-        url = HTTP + "/as_market/api/kline/v1/select_five_day"
+        url = HTTP + "/as_market/api/kline/v1/select_minute1"
         headers = JSON
 
         # 拼装参数
@@ -77,8 +77,6 @@ class TestKlineSelectfiveday:
                 assert j.get("data").get("ts") == info.get("ts")
                 assert "code" in j.get("data")
                 assert j.get("data").get("code") == info.get("code")
-                if "preClose" in j.get("data"):
-                    assert "preClose" in j.get("data")
                 assert "adj" in j.get("data")
                 if "list" in j.get("data"):
                     for i in range(len(j.get("data").get("list"))):
@@ -89,5 +87,11 @@ class TestKlineSelectfiveday:
                             assert "sharestraded" in j.get("data").get("list")[i]
                         if "turnover" in j.get("data").get("list")[i]:
                             assert "turnover" in j.get("data").get("list")[i]
-                        if "vwap" in j.get("data").get("list")[i]:
-                            assert "vwap" in j.get("data").get("list")[i]
+                        if "preClose" in j.get("data").get("list")[i]:
+                            assert "preClose" in j.get("data").get("list")[i]
+                        if "open" in j.get("data").get("list")[i]:
+                            assert "open" in j.get("data").get("list")[i]
+                        if "high" in j.get("data").get("list")[i]:
+                            assert "high" in j.get("data").get("list")[i]
+                        if "low" in j.get("data").get("list")[i]:
+                            assert "low" in j.get("data").get("list")[i]

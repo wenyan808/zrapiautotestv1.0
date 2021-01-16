@@ -1,4 +1,4 @@
-# test_Kline_selectfiveday
+# test_Kline_selectminute
 import json
 import random
 
@@ -19,7 +19,7 @@ from glo import HTTP, JSON, BASE_DIR
 
 # @pytest.mark.skip(reason="调试中")
 @allure.feature('K线')
-class TestKlineSelectfiveday:
+class TestKlineSelectminute:
     @classmethod
     def setup_class(cls) -> None:
         login()
@@ -29,13 +29,13 @@ class TestKlineSelectfiveday:
         )  # 可以添加条件筛选：where ts='HK' or ts='SH' or ts='SZ' or ts='US'
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/test_Kline_selectfiveday.json", ts_code_data)
+        write_json(BASE_DIR + r"/TestData/test_Kline_selectminute.json", ts_code_data)
 
-    @allure.story('查询五日')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_Kline_selectfiveday.json"))
-    def test_Kline_selectfiveday(self, info):
+    @allure.story('查询分时')
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_Kline_selectminute.json"))
+    def test_Kline_selectminute(self, info):
         # pass
-        url = HTTP + "/as_market/api/kline/v1/select_five_day"
+        url = HTTP + "/as_market/api/kline/v1/select_minute"
         headers = JSON
 
         # 拼装参数
