@@ -72,10 +72,18 @@ class TestUSNewslist:
         assert j.get("msg") == "ok"
         if "data" in j:
             if len(j.get("data")) != 0:
-                assert "list" in j.get("data")
+                if "list" in j.get("data"):
+                    for i in range(len(j.get("data").get("list"))):
+                        assert "newsId" in j.get("data").get("list")[i]
+                        assert "createTime" in j.get("data").get("list")[i]
+                        assert "newsTitle" in j.get("data").get("list")[i]
+                        assert "detailUrl" in j.get("data").get("list")[i]
+                        assert "http://192.168.1.239:8080/zhuorui_h5/newsDetail" \
+                               in j.get("data").get("list")[i].get("detailUrl")
                 assert "total" in j.get("data")
                 assert "pageSize" in j.get("data")
                 assert "currentPage" in j.get("data")
+                assert j.get("data").get("pageSize") == 15
                 assert j.get("data").get("currentPage") == 1
 
             else:
@@ -126,7 +134,14 @@ class TestUSNewslist:
         assert j.get("msg") == "ok"
         if "data" in j:
             if len(j.get("data")) != 0:
-                assert "list" in j.get("data")
+                if "list" in j.get("data"):
+                    for i in range(len(j.get("data").get("list"))):
+                        assert "newsId" in j.get("data").get("list")[i]
+                        assert "createTime" in j.get("data").get("list")[i]
+                        assert "newsTitle" in j.get("data").get("list")[i]
+                        assert "detailUrl" in j.get("data").get("list")[i]
+                        assert "http://192.168.1.239:8080/zhuorui_h5/newsDetail" \
+                               in j.get("data").get("list")[i].get("detailUrl")
                 assert "total" in j.get("data")
                 assert "pageSize" in j.get("data")
                 assert "currentPage" in j.get("data")
