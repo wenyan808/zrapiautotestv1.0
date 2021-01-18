@@ -1,0 +1,582 @@
+[
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 2,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 2,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 3,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 4,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 5,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 6,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 7,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 8,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 9,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 10,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 11,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 2,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 3,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 4,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 5,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 6,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 7,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 8,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 8,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 9,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 10,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 2,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 11,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 2,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 3,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 4,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 5,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 6,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 7,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 8,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 9,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 10,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 11,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 2,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 3,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 4,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 5,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 6,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 7,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 8,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 8,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 9,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 10,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 4,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 11,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": true,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 1,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 1,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 2,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 3,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 4,
+    "markValueFilter": 2,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 3,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 1,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 0,
+    "peRatioFilter": 0
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 1
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 0,
+    "markValueFilter": 2,
+    "peRatioFilter": 2
+  },
+  {
+    "type": 3,
+    "currentPage": 1,
+    "pageSize": 20,
+    "sortItem": 1,
+    "ascending": false,
+    "priceFilter": 1,
+    "markValueFilter": 2,
+    "peRatioFilter": 2
+  }
+]
