@@ -5,7 +5,7 @@ from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
 
-
+@allure.feature('查询股票价格数据')
 class TestBroker:
     @classmethod
     def setup_class(cls) -> None:
