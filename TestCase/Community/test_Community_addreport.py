@@ -5,7 +5,6 @@ import random
 import allure
 import pytest
 
-from Common.get_time_stamp import get_time_stamp13
 from Common.login import login
 from Common.show_sql import MongoDBField, showsql
 from Common.sign import get_sign
@@ -25,38 +24,21 @@ class TestCommunityaddreport():
         login()  # 调用登录接口通过token传出来
         # # 传入键key，值price，数据库名database，表名surface到MongoDB数据库
         # _paylo = MongoDBField("192.168.1.237", 27017, "community", "t_report", [{}, {"type": 1}])
-        # print(_paylo)
-        # # paylo = []
-        # # for i in range(len(_paylo)):
-        # #     _id = _paylo[i].get("_id")
-        # #     _id = re.search("[^ObjectId]",_id.text)
-        # #     type = _paylo[i].get("type")
-        # #     paylo1 = {"_id": _id, "type": type}
-        # #     paylo.append(paylo1)
-        # # print(paylo)
-        #
         # # print(MongoDBField("192.168.1.237", 27017, "community", "t_report", [{}, {"type": 1}]))
         # # random_paylo = random.sample(_paylo, 50)
         # # paylo_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_paylo))
         # # write_json(BASE_DIR + r"/TestData/Communityaddreport.json", paylo)
-
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_addreport(self):
-        # login()  # 调用登录接口通过token传出来
-        url = HTTP + "/as_community/api/report/v1/add"
+        url_hostlist = HTTP + "/as_community/api/community/v1/hot_list"
         headers = JSON
 
         # 拼装参数
-
-        paylo = {
-
-            "reportedId": "5fe2b0b1791d040006ec7ed1",
-            "type": 2
-        }
+        paylo = {}
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
@@ -73,7 +55,32 @@ class TestCommunityaddreport():
         # time.sleep(60.01)
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="举报"
+            url=url_hostlist, headers=headers, data=payload, title="热门列表"
+        )
+        j = r.json()
+        # print(j)
+        # print(j.get("data")[0].get("postId"))
+
+        url = HTTP + "/as_community/api/report/v1/add"
+        headers = JSON
+
+        # 拼装参数
+
+        paylo = {
+
+            "reportedId": f"{j.get('data')[0].get('postId')}",
+            "reportedType": 6,
+            "type": 1
+        }
+        # print(paylo)
+        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+        payload1 = {}
+        payload1.update(paylo)
+        payload1.update(sign1)
+        payload = json.dumps(dict(payload1))
+
+        r = Requests(self.session).post(
+            url=url, headers=headers, data=payload, title="举报(帖子)"
         )
         y = r.json()
         # print(y)
@@ -82,6 +89,8 @@ class TestCommunityaddreport():
         if y.get("code") == "000000":
             assert y.get("code") == "000000"
             assert y.get("msg") == "ok"
-        else:
+        elif y.get("code") == "460600":
             assert y.get("code") == "460600"
             assert y.get("msg") == "举报已提交"
+        else:
+            raise AssertionError(print(y))
