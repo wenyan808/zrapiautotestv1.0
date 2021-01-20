@@ -26,6 +26,7 @@ class TestgetPricesMore:
             '192.168.1.237', 'root', '123456', 'stock_market',
             "select ts,code from t_stock_search where ts='HK' or ts='US';"
             )
+        # print(ts_code)
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
         write_json(BASE_DIR + r"/TestData/getPricesMore.json", ts_code_data)

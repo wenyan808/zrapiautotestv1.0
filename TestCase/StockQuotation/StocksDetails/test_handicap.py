@@ -4,7 +4,7 @@ from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
 
-
+@allure.feature("查看股票盘口数据")
 class TestHandicap:
     @classmethod
     def setup_class(cls) -> None:

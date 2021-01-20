@@ -17,7 +17,7 @@ from glo import HTTP, JSON, BASE_DIR
 
 # @pytest.mark.skip(reason="调试中")
 @allure.feature('ETF相关')
-class TestETF_planklist:
+class TestETFplanklist:
     @classmethod
     def setup_class(cls) -> None:
         login()

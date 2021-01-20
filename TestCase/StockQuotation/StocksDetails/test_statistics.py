@@ -5,7 +5,7 @@ from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
 
-
+@allure.feature("查看逐笔成交统计")
 class TestStatistics:
     @classmethod
     def setup_class(cls) -> None:
