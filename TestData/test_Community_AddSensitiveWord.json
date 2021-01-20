@@ -1,0 +1,63 @@
+[
+  {
+    "name": "中国共产党",
+    "type": 1,
+    "sensitiveType": 2
+  },
+  {
+    "name": "毛泽东",
+    "type": 1,
+    "sensitiveType": 1
+  },
+  {
+    "name": "习近平",
+    "type": 1,
+    "sensitiveType": 1
+  },
+  {
+    "name": "反共反中",
+    "type": 1,
+    "sensitiveType": 1
+  }
+  ,
+  {
+    "name": "法轮功",
+    "type": 1,
+    "sensitiveType": 0
+  },
+  {
+    "name": "反社会反人类",
+    "type": 1,
+    "sensitiveType": 2
+  },
+  {
+    "name": "社会恐怖主义",
+    "type": 2,
+    "sensitiveType": 0
+  },
+  {
+    "name": "毛泽东",
+    "type": 2,
+    "sensitiveType": 1
+  },
+  {
+    "name": "习近平",
+    "type": 2,
+    "sensitiveType": 2
+  },
+  {
+    "name": "反社会主义制度",
+    "type": 3,
+    "sensitiveType": 0
+  },
+  {
+    "name": "新冠肺炎",
+    "type": 3,
+    "sensitiveType": 1
+  },
+  {
+    "name": "反民主社会",
+    "type": 3,
+    "sensitiveType": 2
+  }
+]
