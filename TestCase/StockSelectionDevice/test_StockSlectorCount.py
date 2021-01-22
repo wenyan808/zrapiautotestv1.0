@@ -504,7 +504,7 @@ class TestClass():
 
     @allure.story('根据选择查询结果数量_港股财务指标资产负债率10%-30%')
     def test_selectorroe2(self):
-        response = zhuorui('选股器', '根根据选择查询结果数量_港股财务指标资产负债率10%-30%')
+        response = zhuorui('选股器', '根据选择查询结果数量_港股财务指标资产负债率10%-30%')
         assert_data(response, '000000', 'ok')
 
     @allure.story('根据选择查询结果数量_港股财务指标资产负债率30%-50%')

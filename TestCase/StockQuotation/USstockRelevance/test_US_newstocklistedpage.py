@@ -54,7 +54,7 @@ class TestUSNewsstocklistedpage:
         r = requests.post(url=url, headers=headers, data=payload)
         # 断言
         j = r.json()
-        # print(j)
+        print(j)
 
         assert r.status_code == 200
         assert j.get("code") == "000000"
@@ -69,7 +69,8 @@ class TestUSNewsstocklistedpage:
                     assert "name" in j.get("data").get("list")[i]
                     assert "listingTime" in j.get("data").get("list")[i]
                     assert "issuePrice" in j.get("data").get("list")[i]
-                    assert "last" in j.get("data").get("list")[i]
+                    if j.get("data").get("list")[i] == "last":
+                        assert "last" in j.get("data").get("list")[i]
                     assert "delay" in j.get("data").get("list")[i]
                 assert "total" in j.get("data")
                 assert j.get("data").get("pageSize") == paylo.get("pageSize")
