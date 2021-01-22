@@ -6,7 +6,8 @@ import allure
 import pytest
 
 from Common.getConsoleLogin import getConsoleLogin_token
-from Common.login import login
+from Common.get_time_stamp import TimeTostamp, get_time_stamp13
+
 
 from Common.sign import get_sign
 
@@ -17,12 +18,11 @@ from glo import console_JSON, console_HTTP, BASE_DIR
 
 
 # @pytest.mark.skip(reason="调试中 ")
-@allure.feature('社区console_添加敏感词')
+@allure.feature('社区console_修改敏感词')
 class TestCommunityUpdateSensitiveWord():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
-        login()  # 调用登录接口通过token传出来
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
@@ -30,12 +30,31 @@ class TestCommunityUpdateSensitiveWord():
     # @pytest.mark.skip(reason="调试中 ")
     # @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_Community_AddSensitiveWord.json"))
     def test_Community_UpdateSensitiveWord(self):
-        url = console_HTTP + "/api/con_sensitive_word/v1/update"
+        url_list = console_HTTP + "/api/con_sensitive_word/v1/list"
         headers = console_JSON
+        token = {"token": getConsoleLogin_token()}
+        headers.update(token)  # 将token更新到headers
+        # print(headers)
+        paylo_list = {
+            "startTime": TimeTostamp(),
+            "endTime": get_time_stamp13()
+        }
+        sign1 = {"sign": get_sign(paylo_list)}  # 把参数签名后通过sign1传出来
+        payload1 = {}
+        payload1.update(paylo_list)
+        payload1.update(sign1)
+        payload = json.dumps(dict(payload1))
+        r_list = Requests(self.session).post(
+            url=url_list, headers=headers, data=payload, title="敏感词列表"
+        )
+        j_list = r_list.json()
+        # print(j_list)
+        # print(j_list.get('data').get('list')[0].get(id))
+        url = console_HTTP + "/api/con_sensitive_word/v1/update"
 
         # 拼装参数
         paylo = {
-            "id": "58d5cd983d884f31a3daaaf779b73071",
+            "id": f"{j_list.get('data').get('list')[0].get(id)}",
             "sensitiveType": 1
         }
         # paylo = info
@@ -45,16 +64,11 @@ class TestCommunityUpdateSensitiveWord():
         payload1.update(paylo)
         payload1.update(sign1)
         headers = headers
-        # print(token)
-        # print(type(token))
-        token = {"token": getConsoleLogin_token()}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
         payload = json.dumps(dict(payload1))
-        # time.sleep(60.01)
+
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="添加敏感词"
+            url=url, headers=headers, data=payload, title="修改敏感词"
         )
 
         j = r.json()
