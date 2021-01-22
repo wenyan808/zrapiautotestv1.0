@@ -39,7 +39,6 @@ class TestBroker:
     @allure.story('查询股票状态_港股个股')
     def test_stock_statushktype2(self):
         response = zhuorui('个股详情公共接口', '查询股票状态_港股个股')
-        # print(response.json())
         assert_data(response, '000000', 'ok')
 
     @allure.story('查询股票状态_美股个股')
