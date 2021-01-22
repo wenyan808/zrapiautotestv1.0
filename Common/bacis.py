@@ -9,27 +9,23 @@ import logging
 def common(i):
     http = HTTP
     header = JSON
+    headers = {}
+    headers.update(header)
     token2, urll, requestmode, paylop = i[3], i[5], i[6], i[7]
     url = http + urll
-    # print(url)
     paylo = eval(paylop)
-    # print(paylo)
     sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
     # 调用登录接口通过token传出来
     payload1 = {}
     payload1.update(paylo)
     payload1.update(sign1)
-    headers = header
-    # print(token)
-    # print(type(token))
     if token2 == 1:
         token1 = yamltoken()
-        # print(TOKEN)
         token = {"token": token1}
+        # asdad = {"123": "sd"}
         headers.update(token)
-    # print(headers)
-    payload = json.dumps(dict(payload1))
 
+    payload = json.dumps(dict(payload1))
     # data = {
     #     "url": url,
     #     "requestmode": requestmode,
