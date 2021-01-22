@@ -80,7 +80,7 @@ class TestCommunityConReportHandleHistory():
         )
 
         jhistory = r.json()
-        print(jhistory)
+        # print(jhistory)
 
         assert r.status_code == 200
         if jhistory.get("code") == "000000":
