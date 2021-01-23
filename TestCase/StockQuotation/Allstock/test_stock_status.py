@@ -5,6 +5,7 @@ from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
 
+
 @allure.feature('查询股票状态')
 class TestBroker:
     @classmethod
@@ -45,16 +46,19 @@ class TestBroker:
     def test_stock_statusustype2(self):
         response = zhuorui('个股详情公共接口', '查询股票状态_美股个股')
         assert_data(response, '000000', 'ok')
+        # print(response.json())
 
     @allure.story('查询股票状态_港股ETF')
     def test_stock_statushktype3(self):
         response = zhuorui('个股详情公共接口', '查询股票状态_港股ETF')
         assert_data(response, '000000', 'ok')
+        # print(response.json())
 
     @allure.story('查询股票状态_美股ETF')
     def test_stock_statusustype3(self):
         response = zhuorui('个股详情公共接口', '查询股票状态_美股ETF')
         assert_data(response, '000000', 'ok')
+        # print(response.json())
 
     @allure.story('查询股票状态_参数空列表')
     def test_stock_statusnull(self):
@@ -66,9 +70,5 @@ class TestBroker:
         response = zhuorui('个股详情公共接口', '查询股票状态_All')
         assert_data(response, '000000', 'ok')
 
-
 # if __name__ == '__main__':
 #     pytest.main()
-
-
-

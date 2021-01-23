@@ -6,7 +6,7 @@ import allure
 import pytest
 
 from Common.getConsoleLogin import getConsoleLogin_token
-from Common.login import login
+
 
 from Common.sign import get_sign
 
@@ -22,7 +22,7 @@ class TestCommunityAddSensitiveWord():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
-        login()  # 调用登录接口通过token传出来
+
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
