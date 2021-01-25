@@ -8,7 +8,6 @@ import pytest
 from Common.getConsoleLogin import getConsoleLogin_token
 from Common.get_time_stamp import TimeTostamp, get_time_stamp13
 
-
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -28,10 +27,13 @@ class TestCommunityUpdateSensitiveWord():
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    # @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_Community_AddSensitiveWord.json"))
-    def test_Community_UpdateSensitiveWord(self):
+    @pytest.mark.parametrize('info', get_json(
+        BASE_DIR + r"/TestData/testCommunityData/test_Community_UpdateSensitiveWord.json"))
+    def test_Community_UpdateSensitiveWord(self, info):
         url_list = console_HTTP + "/api/con_sensitive_word/v1/list"
-        headers = console_JSON
+        header = console_JSON
+        headers = {}
+        headers.update(header)
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         # print(headers)
@@ -54,18 +56,16 @@ class TestCommunityUpdateSensitiveWord():
 
         # 拼装参数
         paylo = {
-            "id": f"{j_list.get('data').get('list')[0].get(id)}",
-            "sensitiveType": 1
+            "id": f"{j_list.get('data').get('list')[0].get(id)}"
         }
-        # paylo = info
+        paylo1 = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo)
+        payload1.update(paylo1)
         payload1.update(sign1)
-        headers = headers
         payload = json.dumps(dict(payload1))
-
 
         r = Requests(self.session).post(
             url=url, headers=headers, data=payload, title="修改敏感词"

@@ -1,12 +1,12 @@
 # test_Community_UserForbidList
 import json
+import logging
 import random
 
 import allure
 import pytest
 
 from Common.getConsoleLogin import getConsoleLogin_token
-
 
 from Common.sign import get_sign
 
@@ -27,20 +27,22 @@ class TestCommunityUserForbidList():
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    # @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_Community_AddSensitiveWord.json"))
-    def test_Community_UserForbidList(self):
+    @pytest.mark.parametrize('info',
+                             get_json(BASE_DIR + r"/TestData/testCommunityData/test_Community_UserForbidList.json"))
+    def test_Community_UserForbidList(self, info):
         url = console_HTTP + "/api/con_user_forbid/v1/list"
-        headers = console_JSON
+        header = console_JSON
 
         # 拼装参数
-        paylo = {}
-        # paylo = info
+        # paylo = {}
+        paylo = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+        headers = {}
+        headers.update(header)
         # print(token)
         # print(type(token))
         token = {"token": getConsoleLogin_token()}
@@ -81,4 +83,7 @@ class TestCommunityUserForbidList():
                     assert "limitFlowBehavior" in j.get("data").get("list")[i]
                     assert "duplicateBehavior" in j.get("data").get("list")[i]
                     assert "blockBehavior" in j.get("data").get("list")[i]
-
+            else:
+                logging.info("list为空list")
+        else:
+            logging.info("data不在j中")

@@ -1,0 +1,22 @@
+[
+  {
+    "type": 0,
+    "timeInterval": 1800
+  },
+  {
+    "type": 1,
+    "timeInterval": 3600
+  },
+  {
+    "type": 2,
+    "timeInterval": 108000
+  },
+  {
+    "type": 3,
+    "timeInterval": 43200
+  },
+  {
+    "type": 4,
+    "timeInterval": null
+  }
+]

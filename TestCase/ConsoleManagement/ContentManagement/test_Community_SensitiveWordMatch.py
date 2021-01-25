@@ -24,7 +24,8 @@ class TestCommunitySensitiveWordMatch():
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_Community_SensitiveWordMatch.json"))
+    @pytest.mark.parametrize('info',
+                             get_json(BASE_DIR + r"/TestData/testCommunityData/test_Community_SensitiveWordMatch.json"))
     def test_Community_SensitiveWordMatch(self, info):
         url = "http://192.168.1.161:1230"
         url_Match = url + "/api/sensitive_word/v1/match"

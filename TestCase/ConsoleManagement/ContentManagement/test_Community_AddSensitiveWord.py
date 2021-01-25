@@ -7,7 +7,6 @@ import pytest
 
 from Common.getConsoleLogin import getConsoleLogin_token
 
-
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -23,12 +22,12 @@ class TestCommunityAddSensitiveWord():
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
 
-
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_Community_AddSensitiveWord.json"))
+    @pytest.mark.parametrize('info',
+                             get_json(BASE_DIR + r"/TestData/testCommunityData/test_Community_AddSensitiveWord.json"))
     def test_Community_AddSensitiveWord(self, info):
         url = console_HTTP + "/api/con_sensitive_word/v1/add"
         headers = console_JSON

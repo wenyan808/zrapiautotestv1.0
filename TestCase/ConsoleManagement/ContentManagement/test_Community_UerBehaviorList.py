@@ -7,7 +7,6 @@ import pytest
 
 from Common.getConsoleLogin import getConsoleLogin_token
 
-
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -27,10 +26,11 @@ class TestCommunityUerBehaviorList():
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_Community_UerBehaviorList.json"))
+    @pytest.mark.parametrize('info',
+                             get_json(BASE_DIR + r"/TestData/testCommunityData/test_Community_UerBehaviorList.json"))
     def test_Community_UerBehaviorList(self, info):
         url = console_HTTP + "/api/con_user_forbid/v1/list"
-        headers = console_JSON
+        header = console_JSON
 
         # 拼装参数
         paylo = {}
@@ -40,9 +40,10 @@ class TestCommunityUerBehaviorList():
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
         # print(token)
         # print(type(token))
+        headers = {}
+        headers.update(header)
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         # print(headers)
@@ -67,7 +68,6 @@ class TestCommunityUerBehaviorList():
         payload1.update(paylo_list)
         payload1.update(paylolist)
         payload1.update(sign1)
-        headers = headers
         payload = json.dumps(dict(payload1))
 
         r_list = Requests(self.session).post(

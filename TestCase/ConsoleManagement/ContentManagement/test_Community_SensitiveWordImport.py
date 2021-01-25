@@ -25,7 +25,9 @@ class TestCommunitySensitiveWordImport():
     def test_Community_SensitiveWordImport(self):
         # url = "http://192.168.1.161:1230"
         url_Match = console_HTTP + "/api/con_sensitive_word/v1/import"
-        headers = console_JSON
+        header = console_JSON
+        headers = {}
+        headers.update(header)
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         # print(headers)
