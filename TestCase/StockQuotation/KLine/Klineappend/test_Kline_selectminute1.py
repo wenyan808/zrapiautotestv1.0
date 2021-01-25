@@ -36,7 +36,7 @@ class TestKlineSelectminute1:
     def test_Kline_selectminute1(self, info):
         # pass
         url = HTTP + "/as_market/api/kline/v1/select_minute1"
-        headers = JSON
+        header = JSON
 
         # 拼装参数
         paylo = {
@@ -52,7 +52,8 @@ class TestKlineSelectminute1:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+        headers = {}
+        headers.update(header)
         # print(token)
         # print(type(token))
 
