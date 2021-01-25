@@ -26,7 +26,7 @@ class TestKlineSelectfiveday:
         login()
         ts_code = showsql(
             "192.168.1.237", "root", "123456", "stock_market",
-            "select ts,code from t_stock_search;"
+            "select ts,code from t_stock_search where ts='HK';"
         )  # 可以添加条件筛选：where ts='HK' or ts='SH' or ts='SZ' or ts='US'
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
@@ -63,7 +63,6 @@ class TestKlineSelectfiveday:
         headers.update(token)
         # print(headers)
         payload = json.dumps(dict(payload1))
-        # time.sleep(1)
         r = requests.post(url=url, headers=headers, data=payload)
         # 断言
         j = r.json()
@@ -99,4 +98,5 @@ class TestKlineSelectfiveday:
             else:
                 logging.info("data在j不存在")
         else:
+            # raise AssertionError(payload)
             raise AssertionError(j)
