@@ -8,11 +8,9 @@ import pytest
 
 from Common.getConsoleLogin import getConsoleLogin_token
 
-
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-
 
 from glo import console_JSON, console_HTTP
 
@@ -89,4 +87,4 @@ class TestCommunityConReportHandle():
 
 
         else:
-            raise AssertionError(print(jhandle))
+            raise AssertionError(jhandle)

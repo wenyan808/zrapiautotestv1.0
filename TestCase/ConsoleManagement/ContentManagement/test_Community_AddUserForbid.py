@@ -96,4 +96,4 @@ class TestCommunityAddUserForbid():
             assert r_Cancel.json().get("msg") == "ok"
 
         else:
-            raise AssertionError("r_Cancel.json()")
+            raise AssertionError(r_Cancel.json())
