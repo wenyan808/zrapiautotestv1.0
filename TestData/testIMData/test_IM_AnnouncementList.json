@@ -1,0 +1,166 @@
+[
+  {
+    "pageSize": 20,
+    "currentPage": 1
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "65209",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 4
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "65209",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 5
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "65209",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 3
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "65209",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 2
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "65209",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 1
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "startTime": 1579509032000,
+    "endTime": 1580027432000
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "65209"
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "category": 4
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "65209",
+    "status": 0,
+    "category": 1
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "65209",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 4
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "腾讯控股",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 3
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "00700",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 2
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "阿里巴巴",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 1
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 2,
+    "category": 4
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "63231",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 4
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 4
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "65209",
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": null
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": "",
+    "startTime": null,
+    "endTime": null,
+    "status": 0,
+    "category": 4
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1,
+    "code": null,
+    "startTime": 1579509032000,
+    "endTime": 1580027432000,
+    "status": 0,
+    "category": 4
+  }
+]
