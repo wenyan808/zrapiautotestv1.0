@@ -37,7 +37,7 @@ class TestUSNewslist:
     def test_US_newslist(self):
         # pass
         url = HTTP + "/as_market/api/us/news/v1/list"
-        headers = JSON
+        header = JSON
 
         # 拼装参数
 
@@ -52,7 +52,8 @@ class TestUSNewslist:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+        headers = {}
+        headers.update(header)
         # print(token)
         # print(type(token))
 
@@ -97,7 +98,7 @@ class TestUSNewslist:
     def test_US_newslist_all(self):
         # pass
         url = HTTP + "/as_market/api/us/news/v1/list"
-        headers = JSON
+        header = JSON
 
         # 拼装参数
 
@@ -114,7 +115,8 @@ class TestUSNewslist:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+        headers = {}
+        headers.update(header)
         # print(token)
         # print(type(token))
 

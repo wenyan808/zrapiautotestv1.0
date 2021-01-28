@@ -66,7 +66,7 @@ class TestCommunityCancelUserForbid():
         payload1.update(sign1)
         payload = json.dumps(dict(payload1))
         r_add = Requests(self.session).post(
-            url=url_add, headers=headers, data=payload, title="取消禁言用户"
+            url=url_add, headers=headers, data=payload, title="禁言用户"
         )
         # print(r_add.json())
         url_Cancel = console_HTTP + "/api/con_user_forbid/v1/cancel"
@@ -79,7 +79,7 @@ class TestCommunityCancelUserForbid():
         payload1.update(sign1)
         payload = json.dumps(dict(payload1))
         r_Cancel = Requests(self.session).post(
-            url=url_Cancel, headers=headers, data=payload, title="禁言用户"
+            url=url_Cancel, headers=headers, data=payload, title="取消禁言用户"
         )
         # print(r_Cancel.json())
         assert r_Cancel.status_code == 200

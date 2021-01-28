@@ -8,11 +8,9 @@ import pytest
 
 from Common.getConsoleLogin import getConsoleLogin_token
 
-
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-
 
 from glo import console_JSON, console_HTTP
 
@@ -30,7 +28,7 @@ class TestCommunityConReportHandle():
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_conReportHandle(self):
         url = console_HTTP + "/api/con_report/v1/list"
-        headers = console_JSON
+        header = console_JSON
 
         # 拼装参数
         paylo = {
@@ -44,7 +42,8 @@ class TestCommunityConReportHandle():
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+        headers = {}
+        headers.update(header)
         # print(token)
         # print(type(token))
         token = {"token": getConsoleLogin_token()}
@@ -88,4 +87,4 @@ class TestCommunityConReportHandle():
 
 
         else:
-            raise AssertionError(print(jhandle))
+            raise AssertionError(jhandle)

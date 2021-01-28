@@ -61,7 +61,7 @@ class TestExchangeRate:
     def test_exchange_rate(self):
         response = zhuorui('交易', '获取两个货币的汇率比率')
         assert response.status_code == 200
-        assert_data(response, '000103', 'currencyOrigin is error')
+        assert_data(response, '000103', 'currencyCompare is null')
         # print(response.json())
 
     # @allure.story('获取两个货币的汇率比率_currencyOrigin不正确')

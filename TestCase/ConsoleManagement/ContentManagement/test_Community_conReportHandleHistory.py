@@ -30,7 +30,7 @@ class TestCommunityConReportHandleHistory():
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_conReportHandleHistory(self):
         url = console_HTTP + "/api/con_report/v1/list"
-        headers = console_JSON
+        header = console_JSON
 
         # 拼装参数
         paylo = {
@@ -44,7 +44,8 @@ class TestCommunityConReportHandleHistory():
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+        headers = {}
+        headers.update(header)
         # print(token)
         # print(type(token))
         token = {"token": getConsoleLogin_token()}

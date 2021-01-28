@@ -59,7 +59,7 @@ class TestCommunityDeleteSensitiveWord():
         )
 
         j = r.json()
-        logging.info(print(j))
+        logging.info(j)
         url_list = console_HTTP + "/api/con_sensitive_word/v1/list"
         paylo_list = {
             "name": paylo.get("name"),

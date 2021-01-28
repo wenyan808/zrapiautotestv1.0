@@ -30,7 +30,9 @@ class TestCommunitySensitiveWordList():
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_SensitiveWordList(self):
         url_list = console_HTTP + "/api/con_sensitive_word/v1/list"
-        headers = console_JSON
+        header = console_JSON
+        headers = {}
+        headers.update(header)
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         # print(headers)

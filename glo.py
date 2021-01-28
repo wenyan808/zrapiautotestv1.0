@@ -16,7 +16,8 @@ console_JSON = {
                   "AppleWebKit/537.36 (KHTML, like Gecko)"
                   " Chrome/86.0.4240.183 Safari/537.36",
     "Accept-Encoding": "gzip, deflate",
-    "Accept-Language": "zh-CN,zh;q=0.9"
+    "Accept-Language": "zh-CN,zh;q=0.9",
+    "Cache-Control": "no-cache"
 }
 # 测试环境192.168.1.241（iOS）('18379204795', '102522ql', '86')
 phone = "18379204795"
@@ -36,7 +37,7 @@ nickname = 'ZrAutotest账号'  # 卓锐用户昵称
 # 内网预发布环境192.168.1.121（Android）('15989434843', '123456QAZ', '86')
 # phone="15989434843"
 # pwd="123456QAZ"
-JSON= {
+JSON = {
     "Content-Type": "application/json",
     "appVersion": '0.1.3',
     "deviceId": "d41b071ca83ece28",
