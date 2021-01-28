@@ -13,7 +13,6 @@ class TestMessage:
     def setup_class(cls):
         login()
 
-
     def teardown(cls):
         pass
 
