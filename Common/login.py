@@ -1,3 +1,5 @@
+import json
+
 import pytest
 import requests
 
@@ -28,6 +30,12 @@ def login():
             "phone": phone,
             "countryCode": "86"
         }
+        sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
+        payload1 = {}
+        payload1.update(boby)
+        payload1.update(sign1)
+
+        boby = json.dumps(dict(payload1))
         response_getdata = requests.post(http + "/as_notification/api/sms/v1/send_device_code", headers=headers,
                                          json=boby)
         verificationCode = response_getdata.json().get("data")
@@ -36,6 +44,13 @@ def login():
             "verificationCode": verificationCode,
             "phoneArea": "86"
         }
+
+        sign1 = {"sign": get_sign(data)}  # 把参数签名后通过sign1传出来
+        payload1 = {}
+        payload1.update(data)
+        payload1.update(sign1)
+
+        data = json.dumps(dict(payload1))
         response_gettoken = requests.post(http + "/as_user/api/user_account/v1/device_next", headers=headers,
                                          json=data)
         res=response_gettoken.json().get("data").get("token")
