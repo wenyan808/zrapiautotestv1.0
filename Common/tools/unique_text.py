@@ -1,7 +1,7 @@
 import datetime
 import threading
 
-now = datetime.datetime.now().strftime("%m%d%H%M")
+now = datetime.datetime.now().strftime("%d%H%M%S")
 
 count_username = 0
 lock_username = threading.Lock()
@@ -29,7 +29,7 @@ count_phone = 0
 lock_phone = threading.Lock()
 
 
-def get_unique_phone(prefix="133"):
+def get_unique_phone(prefix="158"):
     """获取不重复手机号码
 
     :param prefix: 前缀
