@@ -70,10 +70,12 @@ class TestIMNewsList():
                     assert "newsId" in j.get("data")[i]
                     assert "title" in j.get("data")[i]
                     assert "source" in j.get("data")[i]
-                    assert "themeImg" in j.get("data")[i]
+                    if "themeImg" in j.get("data")[i]:
+                        assert "themeImg" in j.get("data")[i]
                     assert "pubTime" in j.get("data")[i]
                     assert "readCount" in j.get("data")[i]
-                    assert "codes" in j.get("data")[i]
+                    if "codes" in j.get("data")[i]:
+                        assert "codes" in j.get("data")[i]
                     if "stockNameVo" in j.get("data")[i]:
                         assert "ts" in j.get("data")[i].get("stockNameVo")
                         assert "code" in j.get("data")[i].get("stockNameVo")

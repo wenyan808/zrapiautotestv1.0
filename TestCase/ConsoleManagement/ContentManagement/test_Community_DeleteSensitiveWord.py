@@ -9,7 +9,6 @@ import pytest
 from Common.getConsoleLogin import getConsoleLogin_token
 from Common.get_time_stamp import TimeTostamp, get_time_stamp13
 
-
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -23,7 +22,6 @@ class TestCommunityDeleteSensitiveWord():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
-
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
@@ -77,8 +75,8 @@ class TestCommunityDeleteSensitiveWord():
         )
         j_list = r_list.json()
         # print(j_list)
-        url_delete = console_HTTP + "/api/con_sensitive_word/v1/delete"
-        if len(j_list.get("data").get("list"))!=0:
+        if len(j_list.get("data").get("list")) != 0:
+            url_delete = console_HTTP + "/api/con_sensitive_word/v1/delete"
             paylo_delete = {
                 "id": j_list.get("data").get("list")[0].get("id")
             }
@@ -96,4 +94,4 @@ class TestCommunityDeleteSensitiveWord():
             assert j_delete.get("code") == "000000"
             assert j_delete.get("msg") == "ok"
         else:
-            raise ValueError(j_list.get("data").get("list"))
+            logging.info(j_list.get("data").get("list"))

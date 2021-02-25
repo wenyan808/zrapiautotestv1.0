@@ -37,10 +37,10 @@ class TestHSGTIfhsgtis_lgt:
         # print(ts_code)
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/hsgtis_lgt.json", ts_code_data)
+        write_json(BASE_DIR + r"/TestData/test_HSGTData/hsgtis_lgt.json", ts_code_data)
 
     @allure.story('判断股票是否是陆股通')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/hsgtis_lgt.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_HSGTData/hsgtis_lgt.json"))
     def test_HSGT_Ifhsgtis_lgt(self, info):
         url = HTTP + "/as_market/api/stock_market_data/v1/hsgt/is_lgt"
         headers = JSON

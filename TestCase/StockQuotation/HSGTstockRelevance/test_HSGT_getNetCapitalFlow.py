@@ -28,11 +28,11 @@ class TestgetNetCapitalFlow:
         )
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/getNetCapitalFlow.json", ts_code_data)
+        write_json(BASE_DIR + r"/TestData/test_HSGTData/getNetCapitalFlow.json", ts_code_data)
         # print(ts_code_data)
 
     @allure.story('沪深港通单只证券累计资金净流向')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/getNetCapitalFlow.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_HSGTData/getNetCapitalFlow.json"))
     def test_HSGT_getNetCapitalFlow(self, info):
         # pass
         url = HTTP + "/as_market/api/hsgt/v1/get_net_capital_flow"

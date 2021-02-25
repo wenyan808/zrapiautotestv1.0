@@ -23,7 +23,7 @@ class TestHSGThsgtstocklist:
         login()
 
     @allure.story('沪股通/深股通/港股通(沪)/港股通(深)-成分股列表')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_HSGT_hsgtstocklist.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_HSGTData/test_HSGT_hsgtstocklist.json"))
     def test_HSGT_hsgtstocklist(self, info):
         # pass
         url = HTTP + "/as_market/api/hsgt/v1/stock/list"
