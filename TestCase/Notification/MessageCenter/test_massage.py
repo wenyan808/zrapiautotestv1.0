@@ -5,21 +5,20 @@ from Common.guide import zhuorui
 from Common.login import login
 import pytest
 
-
 @allure.feature('消息通知')
 class TestMessage:
-
     @classmethod
-    def setup_class(cls):
+    def setup(cls):
         login()
+        pass
 
     def teardown(cls):
         pass
-
     @allure.story("查询最新一条消息无token")
     def test_message_01last1(self):
         response = zhuorui("消息通知", "查询最新一条消息无token")
-        assert_data(response, "000101", "token不能为空")
+        # print(response.json())
+        assert_data(response, '000101', 'token不能为空')
 
     @allure.story("查询最新一条消息")
     def test_message_01last2(self):
@@ -74,13 +73,13 @@ class TestMessage:
     @allure.story("推送设置参数为string")
     def test_message_setting4(self):
         response = zhuorui("消息通知", "推送设置参数为string")
+
         assert_data(response, '000103', '参数校验不通过')
 
     @allure.story("获取用户推送设置")
     def test_message_getsetting1(self):
         response = zhuorui("消息通知", "获取用户推送设置")
         assert_data(response, "000000", "ok")
-
     @allure.story("获取用户推送设置无token")
     def test_message_getsetting2(self):
         response = zhuorui("消息通知", "获取用户推送设置无token")

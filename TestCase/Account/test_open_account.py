@@ -6,7 +6,7 @@ from Common.login import login
 import pytest
 
 @allure.feature('开户')
-class TestOpen():
+class TestOpen:
 
     @classmethod
     def setup_class(cls):
@@ -32,7 +32,7 @@ class TestOpen():
         response = zhuorui("开户", "身份证背面OCR")
         # print(response.json())
         if response.json().get("code") == '000000':
-            assert_data(response,"000000","ok")
+            assert_data(response, "000000", "ok")
         else:
             assert_data(response, "000301", "今日上传次数已到达上限")
 
@@ -41,9 +41,9 @@ class TestOpen():
         response = zhuorui("开户", "银行卡OCR")
         # print(response.json())
         if response.json().get("code") == "000000":
-            assert_data(response,"000000","ok")
+            assert_data(response, "000000", "ok")
         else:
-            assert_data(response,"000301","今日银行卡上传次数已达到上限")
+            assert_data(response, "000301", "今日银行卡上传次数已达到上限")
 
 
     @allure.story("资料和OCR识别是否一致")
@@ -55,9 +55,9 @@ class TestOpen():
     def test_identity(self):
         response = zhuorui("开户", "上传身份信息")
         if response.json().get("code") == "000000":
-            assert_data(response,"000000","ok")
+            assert_data(response, "000000", "ok")
         else:
-            assert_data(response,"000301","今日上传次数已到达上限")
+            assert_data(response, "000301", "今日上传次数已到达上限")
         # print(response.json())
 
 
@@ -71,9 +71,9 @@ class TestOpen():
     def test_live_recognition(self):
         response = zhuorui("开户", "活体人脸核身")
         if response.json().get("code") == "000000":
-            assert_data(response,"000000","ok")
+            assert_data(response, "000000", "ok")
         else:
-            assert_data(response,"000301","今日上传次数已到达上限")
+            assert_data(response, "000301", "今日上传次数已到达上限")
         # print(response.json())
 
     @allure.story("上传工作资料")
