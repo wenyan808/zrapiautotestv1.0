@@ -16,7 +16,7 @@ from glo import JSON, HTTP, BASE_DIR
 
 
 # @pytest.mark.skip(reason="调试中 ")
-@allure.feature('用户相关接口-用户密码登陆')
+@allure.feature('用户相关接口-修改手机号-新手机号验证')
 class TestModifyLoginPassword02():
     @classmethod
     def setup_class(cls) -> None:
@@ -30,15 +30,12 @@ class TestModifyLoginPassword02():
                              get_json(BASE_DIR + r"/TestData/UserRelatedapiData/oldPassword.json"))
     def test_ModifyLoginPassword02(self, oldpassword):
         # 拼装参数
-        header = JSON
-        headers = {}
-        headers.update(header)
-        token = {"token": yamltoken()}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
+        headers = JSON
 
-        phone = "15809433400"
-        oldLoginPassword = password = oldpassword.get("password")
+        phone = "15810433000"
+        oldLoginPassword = oldpassword.get("Password")
+        password = oldLoginPassword
+
 
         newLoginPassword = get_unique_username(1)[0]  # 通过获取用户名做为账号的密码，get_unique_username(1)获取的结果是一个列表
 
@@ -67,7 +64,7 @@ class TestModifyLoginPassword02():
         # 获取登录的token
         headers_token = j.get("data").get("token")
         headers1 = {}
-        headers1.update(header)
+        headers1.update(headers)
         token = {"token": headers_token}
         # print(type(token))
         headers1.update(token)  # 将token更新到headers参数中

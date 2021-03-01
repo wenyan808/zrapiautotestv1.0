@@ -26,7 +26,7 @@ class TestDeviceNext():
     # @pytest.mark.skip(reason="调试中 ")
     def test_DeviceNext(self):
         # 拼装参数
-        header = {
+        headers = {
             "Content-Type": "application/json",
             "appVersion": "0.2.4",
             "deviceId": "A109B58C-D9C4-474A-87B5-878091E317AC",
@@ -34,11 +34,6 @@ class TestDeviceNext():
             "osVersion": "13.1.1",
             "lang": "zh_CN"
         }
-        headers = {}
-        headers.update(header)
-        token = {"token": yamltoken()}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
 
         phone = "15811365600"
         password = "zr123456"

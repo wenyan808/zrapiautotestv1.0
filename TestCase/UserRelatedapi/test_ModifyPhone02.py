@@ -30,11 +30,7 @@ class TestModifyPhone02():
                              get_json(BASE_DIR + r"/TestData/UserRelatedapiData/oldPhone.json"))
     def test_ModifyPhone02(self, oldphone):
         # 拼装参数
-        header = JSON
-        headers = {}
-        headers.update(header)
-        token = {"token": yamltoken()}
-        headers.update(token)  # 将token更新到headers
+        headers = JSON
 
         phone = oldphone.get("phone")
 

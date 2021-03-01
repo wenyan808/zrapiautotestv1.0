@@ -14,7 +14,7 @@ from glo import JSON, HTTP
 
 
 # @pytest.mark.skip(reason="调试中 ")
-@allure.feature('用户相关接口-用户密码登陆')
+@allure.feature('用户相关接口-修改手机号-当前使用手机号验证')
 class TestModifyLoginPassword01():
     @classmethod
     def setup_class(cls) -> None:
@@ -27,11 +27,6 @@ class TestModifyLoginPassword01():
     def test_ModifyLoginPassword01(self):
         # 拼装参数
         header = JSON
-        headers = {}
-        headers.update(header)
-        token = {"token": yamltoken()}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
 
         phone = "15823174100"
         password = "zr123456"
@@ -50,7 +45,7 @@ class TestModifyLoginPassword01():
         payload = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="用户密码登陆"
+            url=url, headers=header, data=payload, title="用户密码登陆"
         )
 
         j = r.json()

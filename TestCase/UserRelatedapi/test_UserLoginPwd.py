@@ -26,12 +26,7 @@ class TestUserLoginPwd():
     # @pytest.mark.skip(reason="调试中 ")
     def test_UserLoginPwd(self):
         # 拼装参数
-        header = JSON
-        headers = {}
-        headers.update(header)
-        token = {"token": yamltoken()}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
+        headers = JSON
 
         phone = "13321165200"
         password = "zr123456"

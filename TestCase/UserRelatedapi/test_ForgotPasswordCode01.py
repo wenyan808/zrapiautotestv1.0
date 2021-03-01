@@ -26,12 +26,7 @@ class TestForgotPasswordCode01():
     # @pytest.mark.skip(reason="调试中 ")
     def test_ForgotPasswordCode01(self):
         # 拼装参数
-        header = JSON
-        headers = {}
-        headers.update(header)
-        token = {"token": yamltoken()}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
+        headers = JSON
 
         phone = "15816262885"
         boby = {

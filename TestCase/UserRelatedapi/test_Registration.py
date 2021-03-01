@@ -26,15 +26,9 @@ class TestRegistration():
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Registration(self):
-        header = JSON
-        headers = {}
-        headers.update(header)
-        token = {"token": yamltoken()}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
 
         # 拼装参数
-
+        headers = JSON
         phone = get_unique_phone()
         boby = {
             "phone": phone,
