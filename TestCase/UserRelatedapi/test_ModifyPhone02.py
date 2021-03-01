@@ -9,7 +9,7 @@ from Common.sign import get_sign
 from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
 from Common.tools.read_write_json import get_json, write_json
-from Common.tools.read_yaml import yamltoken
+
 from Common.tools.unique_text import get_unique_phone
 
 from glo import JSON, HTTP, BASE_DIR
@@ -64,6 +64,7 @@ class TestModifyPhone02():
         # print(j)
         # 获取登录的token
         headers_token = j.get("data").get("token")
+        header = JSON
         headers1 = {}
         headers1.update(header)
         token = {"token": headers_token}

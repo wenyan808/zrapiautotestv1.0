@@ -7,8 +7,7 @@ import pytest
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.md5 import get_md5
-from Common.tools.read_yaml import yamltoken
+
 
 from glo import JSON, HTTP
 
@@ -68,10 +67,6 @@ class TestForgotPasswordCode01():
         assert r.status_code == 200
         if j.get("code") == "000000":
             assert j.get("msg") == "ok"
-            # if "data" in j:
-            #     assert j.get("data").get("phone") == paylo.get("phone")
-            #     assert j.get("data").get("phoneArea") == paylo.get("phoneArea")
-            #     assert "token" in j.get("data")
-            #     assert "userId" in j.get("data")
+
         else:
             raise ValueError(f"{j}")

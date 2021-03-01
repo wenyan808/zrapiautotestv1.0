@@ -8,7 +8,7 @@ from Common.sign import get_sign
 
 from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
-from Common.tools.read_yaml import yamltoken
+
 from Common.tools.unique_text import get_unique_phone
 
 from glo import JSON, HTTP, BASE_DIR
@@ -77,7 +77,7 @@ class TestRegistration():
                 assert "token" in j.get("data")
                 assert "userId" in j.get("data")
 
-            with open(BASE_DIR + r"/TestData/正常的手机号与密码.txt", "a", encoding="utf-8") as f:
+            with open(BASE_DIR + r"/TestData/UserRelatedapiData/正常的手机号与密码.txt", "a", encoding="utf-8") as f:
                 f.write(f"{paylo.get('phone')}|{password}\n")
 
         else:

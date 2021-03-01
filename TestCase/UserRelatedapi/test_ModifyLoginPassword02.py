@@ -9,7 +9,7 @@ from Common.sign import get_sign
 from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
 from Common.tools.read_write_json import get_json, write_json
-from Common.tools.read_yaml import yamltoken
+
 from Common.tools.unique_text import get_unique_username
 
 from glo import JSON, HTTP, BASE_DIR
@@ -35,7 +35,6 @@ class TestModifyLoginPassword02():
         phone = "15810433000"
         oldLoginPassword = oldpassword.get("Password")
         password = oldLoginPassword
-
 
         newLoginPassword = get_unique_username(1)[0]  # 通过获取用户名做为账号的密码，get_unique_username(1)获取的结果是一个列表
 

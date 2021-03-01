@@ -8,7 +8,7 @@ from Common.sign import get_sign
 
 from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
-from Common.tools.read_yaml import yamltoken
+
 
 from glo import JSON, HTTP
 
@@ -49,6 +49,7 @@ class TestModifyPhone01():
         j = r.json()
         # print(j)
         headers_token = j.get("data").get("token")
+        header = JSON
         headers1 = {}
         headers1.update(header)
         token = {"token": headers_token}
