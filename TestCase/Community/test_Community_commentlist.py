@@ -43,7 +43,8 @@ class TestCommunitycommentlist():
                 "name": "community/images/2020/12/04/16070706185435230.png",
                 "w": 1000,
                 "h": 563,
-                "url": "http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/community/images/2020/12/04/16070706185435230.png"
+                "url": "http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/"
+                       "community/images/2020/12/04/16070706185435230.png"
             }],
             "products": [
                 {

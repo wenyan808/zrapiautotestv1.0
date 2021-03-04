@@ -9,7 +9,7 @@ from Common.sign import get_sign
 from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
 
-from glo import JSON, HTTP
+from glo import JSON1, HTTP
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -25,7 +25,7 @@ class TestSMSSendUpdatePasswordCode():
     # @pytest.mark.skip(reason="调试中 ")
     def test_SMS_SendUpdatePasswordCode(self):
         # 拼装参数
-        headers = JSON
+        headers = JSON1
         phone = "15816354900"
         password = "zr123456"
         url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"

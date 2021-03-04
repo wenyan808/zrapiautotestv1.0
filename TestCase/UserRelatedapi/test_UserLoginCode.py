@@ -27,7 +27,7 @@ class TestUserLoginCode():
 
         # 拼装参数
         headers = JSON
-        phone = "15816262884"
+        phone = "15816262890"
         boby = {
             "phone": phone,
             "countryCode": "86"

@@ -12,7 +12,7 @@ from Common.tools.read_write_json import get_json, write_json
 
 from Common.tools.unique_text import get_unique_username
 
-from glo import JSON, HTTP, BASE_DIR
+from glo import JSON1, HTTP, BASE_DIR
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -30,7 +30,7 @@ class TestModifyLoginPassword02():
                              get_json(BASE_DIR + r"/TestData/UserRelatedapiData/oldPassword.json"))
     def test_ModifyLoginPassword02(self, oldpassword):
         # 拼装参数
-        headers = JSON
+        headers = JSON1
 
         phone = "15810433000"
         oldLoginPassword = oldpassword.get("Password")

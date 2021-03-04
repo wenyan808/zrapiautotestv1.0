@@ -9,7 +9,7 @@ from Common.sign import get_sign
 from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
 
-from glo import JSON, HTTP
+from glo import JSON1, HTTP
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -25,7 +25,7 @@ class TestModifyLoginPassword01():
     # @pytest.mark.skip(reason="调试中 ")
     def test_ModifyLoginPassword01(self):
         # 拼装参数
-        header = JSON
+        header = JSON1
 
         phone = "15823174100"
         password = "zr123456"

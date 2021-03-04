@@ -11,7 +11,7 @@ from Common.tools.md5 import get_md5
 
 from Common.tools.unique_text import get_unique_phone
 
-from glo import JSON, HTTP, BASE_DIR
+from glo import JSON1, HTTP, BASE_DIR
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -28,7 +28,7 @@ class TestRegistration():
     def test_Registration(self):
 
         # 拼装参数
-        headers = JSON
+        headers = JSON1
         phone = get_unique_phone()
         boby = {
             "phone": phone,
@@ -44,7 +44,7 @@ class TestRegistration():
             url=HTTP + "/as_notification/api/sms/v1/send_login_code",
             headers=headers, data=payload, title="发送登陆短信验证码"
         )
-        if response_getdata.json().get("code") =="000000":
+        if response_getdata.json().get("code") == "000000":
             verificationCode = response_getdata.json().get("data")
             url = HTTP + "/as_user/api/user_account/v1/set_login_password"
             password = "zr123456"
