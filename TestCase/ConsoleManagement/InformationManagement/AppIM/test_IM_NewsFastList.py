@@ -6,7 +6,7 @@ import allure
 import pytest
 
 from Common.getConsoleLogin import getConsoleLogin_token
-
+from Common.login import login
 
 from Common.sign import get_sign
 

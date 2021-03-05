@@ -11,8 +11,9 @@ from Common.getConsoleLogin import getConsoleLogin_token
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
+from Common.tools.read_write_json import get_json
 
-from glo import console_JSON, console_HTTP
+from glo import console_JSON, console_HTTP, BASE_DIR
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -26,7 +27,9 @@ class TestCommunityConReportHandle():
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    def test_Community_conReportHandle(self):
+    @pytest.mark.parametrize('info',
+                             get_json(BASE_DIR + r"/TestData/test_communitydata/test_Community_conReportHandle.json"))
+    def test_Community_conReportHandle(self, info):
         url = console_HTTP + "/api/con_report/v1/list"
         header = console_JSON
 
@@ -62,13 +65,13 @@ class TestCommunityConReportHandle():
 
         # 拼装参数
         paylohandle = {
-            "handleStatus": 1,
             "reportedId": f"{j.get('data').get('list')[0].get('reportedId')}"
         }
-        # paylo = info
+        paylo1 = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylohandle)}  # 把参数签名后通过sign1传出来
         payload1 = {}
+        payload1.update(paylo1)
         payload1.update(paylohandle)
         payload1.update(sign1)
         payload = json.dumps(dict(payload1))
@@ -84,7 +87,8 @@ class TestCommunityConReportHandle():
         if jhandle.get("code") == "000000":
             assert jhandle.get("code") == "000000"
             assert jhandle.get("msg") == "ok"
-
+        elif jhandle.get("code") == "460403":
+            assert jhandle.get("msg") == "内容已被处理"
 
         else:
             raise AssertionError(jhandle)

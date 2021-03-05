@@ -9,7 +9,6 @@ import pytest
 from Common.getConsoleLogin import getConsoleLogin_token
 from Common.get_time_stamp import TimeTostamp, get_time_stamp13
 
-
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -23,7 +22,6 @@ class TestCommunityDeleteSensitiveWord():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
-
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
@@ -59,7 +57,7 @@ class TestCommunityDeleteSensitiveWord():
         )
 
         j = r.json()
-        logging.info(j)
+        # logging.info(j)
         url_list = console_HTTP + "/api/con_sensitive_word/v1/list"
         paylo_list = {
             "name": paylo.get("name"),
@@ -77,19 +75,23 @@ class TestCommunityDeleteSensitiveWord():
         )
         j_list = r_list.json()
         # print(j_list)
-        url_delete = console_HTTP + "/api/con_sensitive_word/v1/delete"
-        paylo_delete = {
-            "id": j_list.get("data").get("list")[0].get("id")
-        }
-        sign1 = {"sign": get_sign(paylo_delete)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(paylo_delete)
-        payload1.update(sign1)
-        payload = json.dumps(dict(payload1))
-        r_delete = Requests(self.session).post(
-            url=url_delete, headers=headers, data=payload, title="删除敏感词"
-        )
-        j_delete = r_delete.json()
-        # print(j_delete)
-        assert j_delete.get("code") == "000000"
-        assert j_delete.get("msg") == "ok"
+        if len(j_list.get("data").get("list")) != 0:
+            url_delete = console_HTTP + "/api/con_sensitive_word/v1/delete"
+            paylo_delete = {
+                "id": j_list.get("data").get("list")[0].get("id")
+            }
+            # print(j_list.get("data").get("list")[0].get("id"))
+            sign1 = {"sign": get_sign(paylo_delete)}  # 把参数签名后通过sign1传出来
+            payload1 = {}
+            payload1.update(paylo_delete)
+            payload1.update(sign1)
+            payload = json.dumps(dict(payload1))
+            r_delete = Requests(self.session).post(
+                url=url_delete, headers=headers, data=payload, title="删除敏感词"
+            )
+            j_delete = r_delete.json()
+            # print(j_delete)
+            assert j_delete.get("code") == "000000"
+            assert j_delete.get("msg") == "ok"
+        else:
+            logging.info(j_list.get("data").get("list"))

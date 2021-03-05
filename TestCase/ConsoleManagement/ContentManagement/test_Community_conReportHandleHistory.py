@@ -94,10 +94,9 @@ class TestCommunityConReportHandleHistory():
                 if "list" in jhistory.get("data"):
                     if len(jhistory.get("data").get("list")) != 0:
                         for i in range(len(jhistory.get("data").get("list"))):
-                            assert "reportUser" in jhistory.get("data").get("list")[i]
                             assert "createTime" in jhistory.get("data").get("list")[i]
-                            assert "reportUserType" in jhistory.get("data").get("list")[i]
-                            assert "reportType" in jhistory.get("data").get("list")[i]
+                            assert "handleStatus" in jhistory.get("data").get("list")[i]
+                            assert "operator" in jhistory.get("data").get("list")[i]
 
                     else:
                         logging.info("list为空list")

@@ -20,23 +20,19 @@ console_JSON = {
     "Cache-Control": "no-cache"
 }
 # 测试环境192.168.1.241（iOS）('18379204795', '102522ql', '86')
-phone = "18379204795"
-pwd = "102522ql"
+phone = "18379204795"  # 手机号
+pwd = "102522ql"  # 密码
 zrNo = '68904140'  # 卓锐号
 nickname = 'ZrAutotest账号'  # 卓锐用户昵称
-# phone = "13525219777"
-# pwd = "a12345"
-# JSON = {
-#     "Content-Type": "application/json",
-#     "appVersion": '0.1.5',
-#     "deviceId": "5502AB11-CCDB-4B78-B139-71618170DE9C",
-#     "osType": "ios",
-#     "osVersion": '13.4.1'
-# }
-# print(BASE_DIR)
-# 内网预发布环境192.168.1.121（Android）('15989434843', '123456QAZ', '86')
-# phone="15989434843"
-# pwd="123456QAZ"
+
+JSON1 = {
+    "Content-Type": "application/json",
+    "appVersion": '0.1.5',
+    "deviceId": "5502AB11-CCDB-4B78-B139-71618170DE9C",
+    "osType": "ios",
+    "osVersion": '13.4.1'
+}
+
 JSON = {
     "Content-Type": "application/json",
     "appVersion": '0.1.3',
@@ -45,3 +41,7 @@ JSON = {
     "osVersion": '7.1.2',
     "lang": "zh_CN"
 }
+
+# 内网预发布环境192.168.1.121（Android）('15989434843', '123456QAZ', '86')
+# phone="15989434843"
+# pwd="123456QAZ"

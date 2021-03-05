@@ -8,14 +8,14 @@ import pytest
 import glo
 from Common.login import login
 from Common.requests_library import Requests
-from Common.show_sql import MongoDB, showsql
+from Common.show_sql import showsql
 from Common.sign import get_sign
 from Common.tools.read_write_json import get_json
 from Common.tools.read_yaml import yamltoken
 from glo import HTTP, JSON, BASE_DIR
 
 
-@pytest.mark.skip(reason="调试中 ")
+# @pytest.mark.skip(reason="调试中 ")
 @allure.feature('社区')
 class TestCommunityPosted:
     @classmethod
@@ -27,11 +27,11 @@ class TestCommunityPosted:
         Requests(self.session).close_session()
 
     @allure.story('社区-发帖(短文/长文)')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_CommunityPosted.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_communitydata/test_CommunityPosted.json"))
     def test_Community_Posted(self, info):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        headers = JSON
+        header = JSON
 
         # 拼装参数
         paylo = info
@@ -40,10 +40,8 @@ class TestCommunityPosted:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
-        # print(token)
-        # print(type(token))
-
+        headers = {}
+        headers.update(header)
         token1 = yamltoken()
         token = {"token": token1}
         headers.update(token)  # 将token更新到headers
@@ -118,4 +116,4 @@ class TestCommunityPosted:
         elif j.get("code") == "460404":
             raise AssertionError("内容含有敏感词，请修改后发送")
         else:
-            raise AssertionError(f"{print(j.get('code'))}")
+            raise AssertionError(f"{j}")

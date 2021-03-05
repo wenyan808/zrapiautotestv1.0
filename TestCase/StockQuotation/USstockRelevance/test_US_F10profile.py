@@ -30,7 +30,7 @@ class test_USF10profile:
         write_json(BASE_DIR + r"/TestData/US_F10profile.json", ts_code_data)
 
     @allure.story('F10简况')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/hsgtis_lgt.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/US_F10profile.json"))
     def test_US_f10profile(self, info):
         url = HTTP + "/as_market/api/us/f10/v1/profile"
         headers = JSON
