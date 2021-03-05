@@ -95,7 +95,7 @@ class TestModifyPhone01():
         if j1.get("code") == "000000":
             assert j1.get("msg") == "ok"
             if "data" in j1:
-                assert j1.get("data").get("phone") == paylo.get("phone")
+                assert j1.get("data") == paylo.get("phone")
 
         else:
             raise ValueError(f"{j1}")

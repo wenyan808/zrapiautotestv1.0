@@ -12,7 +12,7 @@ from Common.tools.read_write_json import get_json, write_json
 
 from Common.tools.unique_text import get_unique_phone
 
-from glo import JSON, HTTP, BASE_DIR
+from glo import JSON1, HTTP, BASE_DIR
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -30,7 +30,7 @@ class TestModifyPhone02():
                              get_json(BASE_DIR + r"/TestData/UserRelatedapiData/oldPhone.json"))
     def test_ModifyPhone02(self, oldphone):
         # 拼装参数
-        headers = JSON
+        headers = JSON1
 
         phone = oldphone.get("phone")
 
@@ -64,7 +64,7 @@ class TestModifyPhone02():
         # print(j)
         # 获取登录的token
         headers_token = j.get("data").get("token")
-        header = JSON
+        header = JSON1
         headers1 = {}
         headers1.update(header)
         token = {"token": headers_token}
