@@ -31,7 +31,8 @@ class TestIMANoticeDetails():
         header = JSON
 
         # 拼装参数
-        paylo = {"pageSize": 20}
+        paylo = {"pageSize": 20,
+                 "market": 1}
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
@@ -53,8 +54,9 @@ class TestIMANoticeDetails():
         url_details = HTTP + "/as_stock_information/api/announcement/v1/content"
 
         # 拼装参数
-        paylo_details = {"id": f"{j_list.get('data')[0].get('annexId')}"}
-        # print(paylo)
+        paylo_details = {"lineId": f"{j_list.get('data')[0].get('lineId')}",
+                         "market": 1}
+        print(paylo_details)
         sign1 = {"sign": get_sign(paylo_details)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo_details)
@@ -72,13 +74,14 @@ class TestIMANoticeDetails():
         assert j.get("msg") == "ok"
         if "data" in j:
             if len(j.get("data")) != 0:
-                assert "annexId" in j.get("data")
-                assert j.get("data").get("annexId") == int(paylo_details.get("id"))
+                # assert "annexId" in j.get("data")
+                # assert j.get("data").get("annexId") == int(paylo_details.get("id"))
                 assert "announceName" in j.get("data")
                 assert "pubDate" in j.get("data")
                 assert "announceContent" in j.get("data")
                 assert "code" in j.get("data")
                 assert "market" in j.get("data")
+                assert j.get("data").get("market") == paylo_details.get("market")
                 assert "ts" in j.get("data")
 
             else:

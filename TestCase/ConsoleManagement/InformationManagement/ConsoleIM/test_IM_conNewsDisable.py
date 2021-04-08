@@ -38,7 +38,6 @@ class TestIMConNewsDisable():
         paylo = {
             "pageSize": 20,
             "currentPage": 1,
-            "type": 1,
             "startTime": TimeTostamp(),
             "endTime": get_time_stamp13()
         }

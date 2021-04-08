@@ -64,7 +64,7 @@ class TestETFplanklist:
                         assert "type" in j.get("data")[i]
                         assert "delay" in j.get("data")[i]
                         assert "name" in j.get("data")[i]
-                        assert "last" in j.get("data")[i]
+                        # assert "last" in j.get("data")[i]
                         if "preClose" in j.get("data")[i]:
                             assert "preClose" in j.get("data")[i]
                         elif "turnover" in j.get("data")[i]:
@@ -81,7 +81,7 @@ class TestETFplanklist:
                             assert "diffPrice" in j.get("data")[i]
                         elif "comparison" in j.get("data")[i]:
                             assert "comparison" in j.get("data")[i]
-                        assert "totalMarkValue" in j.get("data")[i]
+                        # assert "totalMarkValue" in j.get("data")[i]
                         if info.get("market") == 2 and "direction" in j.get("data")[i]:
                             assert "direction" in j.get("data")[i]
                             assert "lever" in j.get("data")[i]
