@@ -47,46 +47,7 @@ class TestSMSSendOldReplaceCode():
 
         j = r.json()
         # print(j)
-        response_login = Requests(self.session).post(url=url, headers=headers,
-                                                 json=json1)
 
-        if response_login.json().get("code") == "010007" \
-                or response_login.json().get("msg") == "用户登陆的设备和以前不一样":
-
-            boby = {
-                "phone": phone_dev,
-                "countryCode": phoneArea
-            }
-            sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
-            payload1 = {}
-            payload1.update(boby)
-            payload1.update(sign1)
-
-            boby = json.dumps(dict(payload1))
-            response_getdata = requests.session().post(url=url1, headers=headers,
-                                                       json=boby)
-
-            verificationCode = response_getdata.json().get("data")
-            data = {
-                "phone": phone_dev,
-                "verificationCode": verificationCode,
-                "phoneArea": phoneArea
-            }
-
-            sign1 = {"sign": get_sign(data)}  # 把参数签名后通过sign1传出来
-            payload1 = {}
-            payload1.update(data)
-            payload1.update(sign1)
-
-            data = json.dumps(dict(payload1))
-            response_gettoken = requests.session().post(url=url2, headers=headers,
-                                                        json=data)
-
-            res = response_gettoken.json().get("data").get("token")
-            return res
-
-        else:
-            return response_login.json().get("data").get("token")
 
         headers_token = j.get("data").get("token")
         header = JSON1
