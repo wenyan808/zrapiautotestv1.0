@@ -4,12 +4,13 @@ import json
 import allure
 import pytest
 
+from Common.getdevLoginToken import getlogintoken
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.md5 import get_md5
 
-from glo import JSON1, HTTP
+
+from glo import HTTP, JSON2
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -25,31 +26,14 @@ class TestModifyLoginPassword01():
     # @pytest.mark.skip(reason="调试中 ")
     def test_ModifyLoginPassword01(self):
         # 拼装参数
-        header = JSON1
+        header = JSON2
 
         phone = "15823174100"
         password = "zr123456"
         phoneArea = "86"
-        url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"
-        paylo = {
-            "password": get_md5(password),
-            "phone": phone,
-            "phoneArea": "86"
-        }
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
 
-        payload = json.dumps(dict(payload1))
-
-        r = Requests(self.session).post(
-            url=url, headers=header, data=payload, title="用户密码登陆"
-        )
-
-        j = r.json()
         # 获取登录的token
-        headers_token = j.get("data").get("token")
+        headers_token = getlogintoken(phone, password, phoneArea)
         headers1 = {}
         headers1.update(header)
         token = {"token": headers_token}
