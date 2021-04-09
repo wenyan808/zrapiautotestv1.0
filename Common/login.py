@@ -37,7 +37,7 @@ def login():
 
         boby = json.dumps(dict(payload1))
         response_getdata = requests.post(http + "/as_notification/api/sms/v1/send_device_code", headers=headers,
-                                         json=boby)
+                                         data=boby)
         verificationCode = response_getdata.json().get("data")
         data = {
             "phone": phone,
@@ -52,10 +52,12 @@ def login():
 
         data = json.dumps(dict(payload1))
         response_gettoken = requests.post(http + "/as_user/api/user_account/v1/device_next", headers=headers,
-                                         json=data)
+                                         data=data)
         res=response_gettoken.json().get("data").get("token")
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
             file.write("token: " + res)
+        # return res
+
 
 
 
@@ -64,7 +66,7 @@ def login():
         res = response_login.json().get("data").get("token")
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
             file.write("token: " + res)
-    # print(res)
-#     print(response_login.json())
-#
-# login()
+        # return res
+
+
+# print(login())
