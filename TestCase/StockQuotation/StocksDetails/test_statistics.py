@@ -15,6 +15,7 @@ class TestStatistics:
     def test_statistics_US(self):
         response = zhuorui('个股详情公共接口', '查询逐笔成交统计_US大盘')
         assert_data(response, '000000', 'ok')
+        # print(response.json())
 
     @allure.story('查询逐笔成交统计_US个股')
     def test_statistics_us(self):
