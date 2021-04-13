@@ -4,10 +4,66 @@ from typing import Union
 FALG = True  # 社区，如果为True则不执行time.sleep(),反之则执行
 headPhoto = 'http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/head_photo/images/2021/01/11/16103477341540274.jpeg'  # 用户头像发生变化，请在这里修改头像地址
 BASE_DIR: Union[bytes, str] = os.path.dirname(os.path.abspath(__file__))
+
+# 测试环境地址管理：
 HTTP = "http://192.168.1.241"
-console_HTTP = "http://192.168.1.239:8080/apisC"  # http://192.168.1.241:1216/
+http = "http://192.168.1.241"
+
+console_HTTP = "http://192.168.1.239:8080/apisC"
+# 测试环境账户管理：
 loginAccount = "test@123.com"
 password = "abcd1234567"
+# 测试环境未开户帐号（手机号密码管理）：
+phone = "18379204795"  # 手机号
+pwd = "102522ql"  # 密码
+zrNo = '68904140'  # 卓锐号
+nickname = 'ZrAutotest账号'  # 卓锐用户昵称
+
+# 测试环境开户登录账号（修改）
+loginAccount_phone = "15989434843"
+Accountlogin_password = "zr123456"
+
+# 测试环境已开户账号管理
+# 手机号1用于变更（修改）密码
+phone1 = "15816263998"  # login手机号
+pwd1 = "zr123456"  # login密码
+clientId1 = "3023121393"
+# passwords1 = "123456"  # 卓锐行情交易密码（已变）  密码已经放入json文件中 test_HSCustomerInfo_ChangeTradePwddata.json
+zrNo1 = '23121393'  # 卓锐号
+nickname1 = '卓锐测试一号'  # 卓锐用户昵称
+userId1 = "f3d9c946caf842fdbddd1c748ce7163a"
+
+# 手机号2用于公用的登录认证
+phone2 = "15816263996"  # login手机号
+pwd2 = "zr123456"  # login密码
+clientId2 = "3090959308"
+passwords2 = "123456"  # 卓锐行情交易密码
+zrNo2 = '90959308'  # 卓锐号
+nickname2 = '卓锐测试二号'  # 卓锐用户昵称
+userId2 = "e17f8fd374334995ac02df1ad6cc7872"
+
+phone3 = "15816263997"  # login手机号
+pwd3 = "zr123456"  # login密码
+clientId3 = "3078791478"
+passwords3 = "123456"  # 卓锐行情交易密码
+zrNo3 = '78791478'  # 卓锐号
+nickname3 = '卓锐测试三号'  # 卓锐用户昵称
+userId3 = "cf7999ea09f34657a870a2d44e3c026a"
+
+phone4 = "15816263999"  # login手机号
+pwd4 = "zr123456"  # login密码
+clientId4 = "3052877539"
+passwords4 = "123456"  # 卓锐行情交易密码
+zrNo4 = '52877539'  # 卓锐号
+nickname4 = '卓锐测试四号'  # 卓锐用户昵称
+userId4 = "5497496d0450408484e18f39aac10ae9"
+
+
+phone5 = "15814213200"
+pwd5 = "zr123456"
+phoneArea = "86"
+
+# header管理：
 console_JSON = {
     "Content-Type": "application/json;charset=UTF-8",
     "Connection": "keep-alive",
@@ -19,19 +75,6 @@ console_JSON = {
     "Accept-Language": "zh-CN,zh;q=0.9",
     "Cache-Control": "no-cache"
 }
-# 测试环境192.168.1.241（iOS）('18379204795', '102522ql', '86')
-phone = "18379204795"  # 手机号
-pwd = "102522ql"  # 密码
-zrNo = '68904140'  # 卓锐号
-nickname = 'ZrAutotest账号'  # 卓锐用户昵称
-
-JSON1 = {
-    "Content-Type": "application/json",
-    "appVersion": '0.1.5',
-    "deviceId": "5502AB11-CCDB-4B78-B139-71618170DE9C",
-    "osType": "ios",
-    "osVersion": '13.4.1'
-}
 
 JSON = {
     "Content-Type": "application/json",
@@ -42,14 +85,22 @@ JSON = {
     "lang": "zh_CN"
 }
 
-# 测试环境开户登录账号
-loginAccount_phone = "15816262899"
-Accountlogin_password = "zr1234567"
+JSON1 = {
+    "Content-Type": "application/json",
+    "appVersion": '0.1.5',
+    "deviceId": "5502AB11-CCDB-4B78-B139-71618170DE9C",
+    "osType": "ios",
+    "osVersion": '13.4.1'
+}
 
-# 内网预发布环境192.168.1.121（Android）('15989434843', '123456QAZ', '86')
-# phone="15989434843"
-# pwd="123456QAZ"
-
+JSON2 = {
+    "Content-Type": "application/json",
+    "appVersion": '0.2.5',
+    "deviceId": "58CAB9A3-172A-43CB-9750-AAA6E45F2043",
+    "osType": "ios",
+    "osVersion": '14.4',
+    "lang": "zh_CN"
+}
 
 # 内网开发环境（dev）192.168.1.181（Android）
 http_dev = "http://192.168.1.181"
@@ -82,14 +133,4 @@ consoledev_JSON = {
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q=0.9",
     "Cache-Control": "no-cache"
-}
-
-
-JSON2 = {
-    "Content-Type": "application/json",
-    "appVersion": '0.2.5',
-    "deviceId": "58CAB9A3-172A-43CB-9750-AAA6E45F2043",
-    "osType": "ios",
-    "osVersion": '14.4',
-    "lang": "zh_CN"
 }

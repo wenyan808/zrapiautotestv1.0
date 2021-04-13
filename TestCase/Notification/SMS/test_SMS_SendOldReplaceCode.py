@@ -4,7 +4,7 @@ import json
 import allure
 import pytest
 
-from Common.getdevLoginToken import getlogintoken
+from Common.getTestLoginToken import getlogintoken
 from Common.sign import get_sign
 
 from Common.requests_library import Requests

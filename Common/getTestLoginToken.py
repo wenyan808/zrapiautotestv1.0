@@ -5,23 +5,23 @@ import pytest
 import requests
 
 from Common.tools.md5 import get_md5
-from glo import http_dev, phone_dev, pwd_dev, JSON_dev, HTTP, JSON2
+from glo import http, phone2, pwd2, JSON_dev, HTTP, JSON2
 from Common.sign import get_sign
 
 
-def getdevLoginToken():
-    """开发环境 用户手机号密码登录
+def gettestLoginToken():
+    """TEST环境 用户手机号密码登录
 
     :return: 返回登录token
     """
-    url = http_dev + "/as_user/api/user_account/v1/user_login_pwd"
-    url1 = http_dev + "/as_notification/api/sms/v1/send_device_code"
-    url2 = http_dev + "/as_user/api/user_account/v1/device_next"
+    url = http + "/as_user/api/user_account/v1/user_login_pwd"
+    url1 = http + "/as_notification/api/sms/v1/send_device_code"
+    url2 = http + "/as_user/api/user_account/v1/device_next"
     phoneArea = "86"
-    password = get_md5(pwd_dev)
+    password = get_md5(pwd2)
 
     json1 = {
-        "phone": phone_dev,
+        "phone": phone2,
         "password": password,
         "phoneArea": phoneArea
     }
@@ -36,7 +36,7 @@ def getdevLoginToken():
             or response_login.json().get("msg") == "用户登陆的设备和以前不一样":
 
         boby = {
-            "phone": phone_dev,
+            "phone": phone2,
             "countryCode": phoneArea
         }
         sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
@@ -50,7 +50,7 @@ def getdevLoginToken():
 
         verificationCode = response_getdata.json().get("data")
         data = {
-            "phone": phone_dev,
+            "phone": phone2,
             "verificationCode": verificationCode,
             "phoneArea": phoneArea
         }
@@ -75,12 +75,12 @@ def getdevLoginToken():
 
 
 def getUserLogincodeToken(phone: str):
-    """开发环境 获取手机验证登录的token
+    """TEST环境 获取手机验证登录的token
 
     :param phone: 手机号
     :return: token
     """
-    HTTP = http_dev
+    HTTP = http
     JSON = JSON_dev
     headers = JSON
     # phone = "13418923886"
@@ -126,7 +126,7 @@ def getUserLogincodeToken(phone: str):
 
 
 def getlogintoken(phone: str, password: str, phoneArea: str):
-    """获取登录token
+    """test 获取登录token
 
     :param phone:   手机号
     :param password:   未加密的密码
