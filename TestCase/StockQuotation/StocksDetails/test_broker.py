@@ -85,8 +85,8 @@ class TestBroker:
     @allure.story('查询买卖经纪_参数为空')
     def test_broker_parameter_null(self):
         response = zhuorui('个股详情公共接口', '查询买卖经纪_参数为空')
-        assert_data(response, '000103', 'code格式有误')
-
+        assert_data(response, '000103', 'ts格式有误')
+        # print(response.json())
 #
 # if __name__ == '__main__':
 #     pytest.main()
