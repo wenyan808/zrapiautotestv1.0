@@ -1,3 +1,4 @@
+# test_getExchangeRateList
 import logging
 
 import allure
@@ -8,13 +9,9 @@ from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
 
-
-# test_getExchangeRateList
-
-# @pytest.mark.skip(reason="调试中")
 from TestAssertions.test_exchange_rate.test_assertions_exchangerate import resultschema
 
-
+# @pytest.mark.skip(reason="调试中")
 class TestgetExchangeRateList:
     @classmethod
     def setup_class(cls) -> None:
@@ -25,7 +22,7 @@ class TestgetExchangeRateList:
         response = zhuorui('交易', '行情汇率列表')
         assert_data(response, '000000', 'ok')
         assert response.status_code == 200
-        print(response.json())
+        # print(response.json())
         if "data" in response.json():
             if len(response.json().get("data")) != 0:
                 for i in range(len(response.json().get("data"))):

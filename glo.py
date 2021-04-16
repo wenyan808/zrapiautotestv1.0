@@ -2,7 +2,10 @@ import os
 from typing import Union
 
 FALG = True  # 社区，如果为True则不执行time.sleep(),反之则执行
-headPhoto = 'http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/head_photo/images/2021/01/11/16103477341540274.jpeg'  # 用户头像发生变化，请在这里修改头像地址
+# headPhoto = "http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/" \
+#             "head_photo/images/2021/01/11/16103477341540274.jpeg"
+headPhoto = 'http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/' \
+            'head_photo/images/2021/01/11/16103477341540274.jpeg'  # 用户头像发生变化，请在这里修改头像地址
 BASE_DIR: Union[bytes, str] = os.path.dirname(os.path.abspath(__file__))
 
 # 测试环境地址管理：
@@ -24,7 +27,7 @@ loginAccount_phone = "15989434843"
 Accountlogin_password = "zr123456"
 
 # 测试环境已开户账号管理
-# 手机号1用于变更（修改）密码
+# 手机号1用于变更（修改）密码   警告不要乱动
 phone1 = "15816263998"  # login手机号
 pwd1 = "zr123456"  # login密码
 clientId1 = "3023121393"
@@ -57,7 +60,6 @@ passwords4 = "123456"  # 卓锐行情交易密码
 zrNo4 = '52877539'  # 卓锐号
 nickname4 = '卓锐测试四号'  # 卓锐用户昵称
 userId4 = "5497496d0450408484e18f39aac10ae9"
-
 
 phone5 = "15814213200"
 pwd5 = "zr123456"
