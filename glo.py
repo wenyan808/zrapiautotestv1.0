@@ -26,6 +26,14 @@ nickname = 'ZrAutotest账号'  # 卓锐用户昵称
 loginAccount_phone = "15989434843"
 Accountlogin_password = "zr123456"
 
+# 测试环境开户(初审列表)进度暂未通过审核登录账号
+testphone = ""
+testpassword = ""
+
+# 测试环境开户(终审列表)进度暂未通过审核登录账号
+testendphone = ""
+testendpassword = ""
+
 # 测试环境已开户账号管理
 # 手机号1用于变更（修改）密码   警告不要乱动
 phone1 = "15816263998"  # login手机号

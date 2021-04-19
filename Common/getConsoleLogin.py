@@ -35,6 +35,31 @@ def getConsoleLogin_token():
 
 # print(getConsoleLogin_token())
 
+def getConsoleLogin_token01(consoleloginAccount, consolepwd):
+    """测试环境   获取console登录token
+
+    :param consoleloginAccount: console登录账户
+    :param pwd: console密码
+    :return: 返回console登录token
+    """
+    url = console_HTTP + "/api/sys_user/v1/login"
+    headers = console_JSON
+
+    loginAccount = consoleloginAccount
+    password = consolepwd
+    paylo = {
+        "loginAccount": f"{loginAccount}",
+        "password": f"{get_md5(password)}"
+    }
+
+    rlogintoken = requests.session().post(
+        url=url, headers=headers, json=paylo
+    )
+
+    j = rlogintoken.json()
+    # print(j)
+    token = j.get("data").get("token")
+    return token
 
 
 def getConsoledevLogin_token():
