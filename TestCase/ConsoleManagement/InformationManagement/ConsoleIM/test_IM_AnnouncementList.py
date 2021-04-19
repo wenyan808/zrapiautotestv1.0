@@ -33,6 +33,7 @@ class TestIMAnnouncementList():
     def test_IM_AnnouncementList(self):
         url = console_HTTP + "/api/con_stock_announcement/v1/list"
         header = console_JSON
+        header = header
 
         # 拼装参数
         paylo = {

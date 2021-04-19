@@ -32,6 +32,7 @@ class TestIMConNewsList():
     def test_IM_conNewsList(self, info):
         url = console_HTTP + "/api/con_news/v1/list"
         header = console_JSON
+        header = header
 
         # 拼装参数
         # paylo = {
