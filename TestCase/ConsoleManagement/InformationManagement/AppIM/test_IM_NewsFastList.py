@@ -62,8 +62,10 @@ class TestIMNewsFastList():
                     assert "newsId" in j.get("data")[i]
                     assert "title" in j.get("data")[i]
                     assert "content" in j.get("data")[i]
-                    assert "source" in j.get("data")[i]
-                    assert "pubTime" in j.get("data")[i]
+                    if "source" in j.get("data")[i]:
+                        logging.info(f"{j.get('data')[i].get('source')}")
+                    if "pubTime" in j.get("data")[i]:
+                        logging.info(f"{j.get('data')[i].get('pubTime')}")
                     assert "readCount" in j.get("data")[i]
                     assert "important" in j.get("data")[i]
 
