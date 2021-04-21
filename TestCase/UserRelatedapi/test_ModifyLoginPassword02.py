@@ -32,7 +32,7 @@ class TestModifyLoginPassword02():
         # 拼装参数
         headers = JSON1
 
-        phone = "15810042100"
+        phone = "15811154000"
         oldLoginPassword = oldpassword.get("Password")
         password = oldLoginPassword
 
