@@ -29,10 +29,10 @@ class TestGetBltById:
         )
         random_stock = random.sample(ts_code, 10)
         stock_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/test_getBltById.json", stock_data)
+        write_json(BASE_DIR + r"/TestData/AllStockData/test_getBltById.json", stock_data)
 
     @allure.story('公告获得公告列表分页')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_getBltById.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/test_getBltById.json"))
     def test_getBltById(self, info):
         # pass
         url = HTTP + "/as_market/api/announcement/v1/get_blt_by_id"

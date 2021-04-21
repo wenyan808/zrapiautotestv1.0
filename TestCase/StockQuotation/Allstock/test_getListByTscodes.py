@@ -29,10 +29,10 @@ class TestGetListByTscodes:
         )
         random_stock = random.sample(ts_code, 100)
         stock_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/test_getListByTscodes.json", stock_data)
+        write_json(BASE_DIR + r"/TestData/AllStockData/test_getListByTscodes.json", stock_data)
 
     @allure.story('获取多支股票详情')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_getListByTscodes.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/test_getListByTscodes.json"))
     def test_getListByTscodes(self, info):
         # pass
         url = HTTP + "/as_market/api/stock_basic/v1/get_list_by_tscodes"

@@ -30,10 +30,10 @@ class TestNowSrverinfo:
         )
         random_stock = random.sample(ts_code, 500)
         stock_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/test_StockTradingSearch.json", stock_data)
+        write_json(BASE_DIR + r"/TestData/AllStockData/test_StockTradingSearch.json", stock_data)
 
     @allure.story('交易时的股票搜索')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_StockTradingSearch.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/test_StockTradingSearch.json"))
     def test_nowSrverinfo(self, info):
         # pass
         url = HTTP + "/as_market/api/stock/view/v1/trading_search"

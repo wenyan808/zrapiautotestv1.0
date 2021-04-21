@@ -23,7 +23,7 @@ class TestETFplanklist:
         login()
 
     @allure.story('etf板块成分股')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_ETF_planklist.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/test_ETF_planklist.json"))
     def test_ETF_planklist(self, info):
         # pass
         url = HTTP + "/as_market/api/etf_plank/v1/list"
