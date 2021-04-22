@@ -71,8 +71,10 @@ class TestHSGThsgtstocklist:
                     assert "diffPrice" in j.get("data")[i]
                 if "turnoverRate" in j.get("data")[i]:
                     assert "turnoverRate" in j.get("data")[i]
-                assert "totalMarkValue" in j.get("data")[i]
-                assert "peRatioStatic" in j.get("data")[i]
+                if "totalMarkValue" in j.get("data")[i]:
+                    assert "totalMarkValue" in j.get("data")[i]
+                if "peRatioStatic" in j.get("data")[i]:
+                    assert "peRatioStatic" in j.get("data")[i]
                 if "comparison" in j.get("data")[i]:
                     assert "comparison" in j.get("data")[i]
                 if "sharestraded" in j.get("data")[i]:

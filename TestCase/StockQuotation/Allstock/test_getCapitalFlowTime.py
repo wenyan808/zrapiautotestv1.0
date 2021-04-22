@@ -30,10 +30,10 @@ class TestGetCapitalFlowTime:
         )
         random_stock = random.sample(ts_code, 100)
         stock_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/test_getCapitalFlowTime.json", stock_data)
+        write_json(BASE_DIR + r"/TestData/AllStockData/test_getCapitalFlowTime.json", stock_data)
 
     @allure.story('按时间查询资金统计数据')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_getCapitalFlowTime.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/test_getCapitalFlowTime.json"))
     def test_getCapitalFlowTime(self, info):
         # pass
         url = HTTP + "/as_market/api/stock/view/v1/getCapitalFlowTime"

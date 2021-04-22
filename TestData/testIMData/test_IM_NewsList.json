@@ -1,71 +1,88 @@
 [
   {
     "pageSize": 10,
-    "selectedCodes": "HK_00700"
+    "selectedCodes": "HK_00700",
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 0
+    "type": 0,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 1
+    "type": 1,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 2
+    "type": 2,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 3
+    "type": 3,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 4
+    "type": 4,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 5
+    "type": 5,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 6
+    "type": 6,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 7
+    "type": 7,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 8
+    "type": 8,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 9
+    "type": 9,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 10
+    "type": 10,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 11
+    "type": 11,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 12
+    "type": 12,
+    "market": 1
   },
   {
     "pageSize": 10,
-    "type": 13
+    "type": 13,
+    "market": 1
   },
   {
     "pageSize": 20,
-    "pubTime": 1611726329000
+    "pubTime": 1611726329000,
+    "market": 1
   },
   {
     "pageSize": 20,
-    "newsId": 19503
+    "newsId": 19503,
+    "market": 2
   },
   {
     "pageSize": 10,

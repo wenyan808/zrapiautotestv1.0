@@ -23,7 +23,7 @@ class TestETFplanklist:
         login()
 
     @allure.story('etf板块成分股')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_ETF_planklist.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/test_ETF_planklist.json"))
     def test_ETF_planklist(self, info):
         # pass
         url = HTTP + "/as_market/api/etf_plank/v1/list"
@@ -64,7 +64,7 @@ class TestETFplanklist:
                         assert "type" in j.get("data")[i]
                         assert "delay" in j.get("data")[i]
                         assert "name" in j.get("data")[i]
-                        assert "last" in j.get("data")[i]
+                        # assert "last" in j.get("data")[i]
                         if "preClose" in j.get("data")[i]:
                             assert "preClose" in j.get("data")[i]
                         elif "turnover" in j.get("data")[i]:
@@ -81,7 +81,7 @@ class TestETFplanklist:
                             assert "diffPrice" in j.get("data")[i]
                         elif "comparison" in j.get("data")[i]:
                             assert "comparison" in j.get("data")[i]
-                        assert "totalMarkValue" in j.get("data")[i]
+                        # assert "totalMarkValue" in j.get("data")[i]
                         if info.get("market") == 2 and "direction" in j.get("data")[i]:
                             assert "direction" in j.get("data")[i]
                             assert "lever" in j.get("data")[i]

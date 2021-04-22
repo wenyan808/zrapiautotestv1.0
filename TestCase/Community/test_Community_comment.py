@@ -47,7 +47,7 @@ class TestCommunitycomment():
             }],
             "products": [
                 {
-                    "ts": "Hk",
+                    "ts": "HK",
                     "code": "00700",
                     "name": "腾讯控股",
                     "type": "2"

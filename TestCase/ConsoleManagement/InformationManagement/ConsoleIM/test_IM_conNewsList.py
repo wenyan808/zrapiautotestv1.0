@@ -32,6 +32,7 @@ class TestIMConNewsList():
     def test_IM_conNewsList(self, info):
         url = console_HTTP + "/api/con_news/v1/list"
         header = console_JSON
+        header = header
 
         # 拼装参数
         # paylo = {
@@ -82,7 +83,7 @@ class TestIMConNewsList():
                             assert "status" in j.get("data").get("list")[i]
                             assert "types" in j.get("data").get("list")[i]
                             assert "codes" in j.get("data").get("list")[i]
-                            assert "stockNameVo" in j.get("data").get("list")[i]
+                            assert "stockNameVos" in j.get("data").get("list")[i]
                             assert "important" in j.get("data").get("list")[i]
                             assert "url" in j.get("data").get("list")[i]
                     else:

@@ -4,12 +4,12 @@ import json
 import allure
 import pytest
 
+from Common.getTestLoginToken import getlogintoken
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.md5 import get_md5
 
-from glo import JSON1, HTTP
+from glo import JSON1, HTTP, phone5, pwd5, phoneArea
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -25,38 +25,16 @@ class TestSMSSendUpdatePasswordCode():
     # @pytest.mark.skip(reason="调试中 ")
     def test_SMS_SendUpdatePasswordCode(self):
         # 拼装参数
-        headers = JSON1
-        phone = "15816354900"
-        password = "zr123456"
-        url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"
-        paylo = {
-            "password": get_md5(password),
-            "phone": phone,
-            "phoneArea": "86"
-        }
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
-
-        payload = json.dumps(dict(payload1))
-
-        r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="用户密码登陆"
-        )
-
-        j = r.json()
-        # print(j)
-        headers_token = j.get("data").get("token")
-        header = JSON
+        headers_token = getlogintoken(phone5, pwd5, phoneArea)
+        header = JSON1
         headers1 = {}
         headers1.update(header)
         token = {"token": headers_token}
         # print(type(token))
         headers1.update(token)  # 将token更新到headers
         boby = {
-            "phone": phone,
-            "countryCode": "86"
+            "phone": phone5,
+            "countryCode": phoneArea
         }
         sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
         payload1 = {}

@@ -29,12 +29,12 @@ class TestgetPricesMore:
         # print(ts_code)
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/getPricesMore.json", ts_code_data)
+        write_json(BASE_DIR + r"/TestData/AllStockData/getPricesMore.json", ts_code_data)
 
 
 
     @allure.story('查询更多股票信息')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/getPricesMore.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/getPricesMore.json"))
     def test_getPricesMore_all(self,info):
         # pass
         url = HTTP + "/as_market/api/stock_splits/v1/list"

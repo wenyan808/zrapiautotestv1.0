@@ -60,7 +60,8 @@ class TestIMAnnounceList():
         if "data" in j:
             if len(j.get("data")) != 0:
                 for i in range(len(j.get("data"))):
-                    assert "annexId" in j.get("data")[i]
+                    assert "id" in j.get("data")[i]
+                    assert "lineId" in j.get("data")[i]
                     assert "announceName" in j.get("data")[i]
                     assert "pubDate" in j.get("data")[i]
                     if "announceContent" in j.get("data")[i]:

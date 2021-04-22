@@ -24,7 +24,7 @@ class TestGetMarketStatus:
         login()
 
     @allure.story('查询市场交易状态')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_GetMarketStatus.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/test_GetMarketStatus.json"))
     def test_GetMarketStatus(self, info):
         # pass
         url = HTTP + "/as_market/api/market_trade_status/v1/get_market_status"

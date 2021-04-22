@@ -79,8 +79,11 @@ class TestUSNewslist:
                         assert "createTime" in j.get("data").get("list")[i]
                         assert "newsTitle" in j.get("data").get("list")[i]
                         assert "detailUrl" in j.get("data").get("list")[i]
-                        assert "http://192.168.1.239:8080/zhuorui_h5/newsDetail" \
-                               in j.get("data").get("list")[i].get("detailUrl")
+                        assert j.get("data").get("list")[i].get(
+                            "detailUrl") == "http://192.168.1.239:8080/zhuorui_h5/newsDetail" + "?" + \
+                               f"id={j.get('data').get('list')[i].get('newsId')}" + \
+                               "&" + f"ts={paylo.get('ts')}"
+
                 assert "total" in j.get("data")
                 assert "pageSize" in j.get("data")
                 assert "currentPage" in j.get("data")
@@ -142,8 +145,10 @@ class TestUSNewslist:
                         assert "createTime" in j.get("data").get("list")[i]
                         assert "newsTitle" in j.get("data").get("list")[i]
                         assert "detailUrl" in j.get("data").get("list")[i]
-                        assert "http://192.168.1.239:8080/zhuorui_h5/newsDetail" \
-                               in j.get("data").get("list")[i].get("detailUrl")
+                        assert j.get("data").get("list")[i].get(
+                            "detailUrl") == "http://192.168.1.239:8080/zhuorui_h5/newsDetail" + "?" + \
+                               f"id={j.get('data').get('list')[i].get('newsId')}" + \
+                               "&" + f"ts={paylo.get('ts')}"
                 assert "total" in j.get("data")
                 assert "pageSize" in j.get("data")
                 assert "currentPage" in j.get("data")
