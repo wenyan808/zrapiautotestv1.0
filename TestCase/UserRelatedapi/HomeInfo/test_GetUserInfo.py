@@ -70,7 +70,5 @@ class TestGetUserInfo():
                 assert "stockSelectedCount" in j.get("data")
 
 
-
-
         else:
             raise ValueError(f"{j}")
