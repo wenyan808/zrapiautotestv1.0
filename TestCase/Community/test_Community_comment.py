@@ -15,7 +15,7 @@ from Common.tools.read_yaml import yamltoken
 from glo import HTTP, JSON
 
 
-@pytest.mark.skip(reason="调试中 ")
+# @pytest.mark.skip(reason="调试中 ")
 @allure.feature('社区-发表评论')
 class TestCommunitycomment():
     @classmethod
@@ -47,7 +47,7 @@ class TestCommunitycomment():
             }],
             "products": [
                 {
-                    "ts": "Hk",
+                    "ts": "HK",
                     "code": "00700",
                     "name": "腾讯控股",
                     "type": "2"

@@ -27,10 +27,10 @@ class test_USF10profile:
         # print(ts_code)
         random_stock = random.sample(ts_code, 1)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/US_F10profile.json", ts_code_data)
+        write_json(BASE_DIR + r"/TestData/USStockData/US_F10profile.json", ts_code_data)
 
     @allure.story('F10简况')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/US_F10profile.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/USStockData/US_F10profile.json"))
     def test_US_f10profile(self, info):
         url = HTTP + "/as_market/api/us/f10/v1/profile"
         headers = JSON

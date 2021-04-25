@@ -29,11 +29,11 @@ class TestgetStockjump:
             )
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/getStockjump.json", ts_code_data)
+        write_json(BASE_DIR + r"/TestData/AllStockData/getStockjump.json", ts_code_data)
         # print(ts_code_data)
 
     @allure.story('股票跳转信息adr&拆合股')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/getStockjump.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/getStockjump.json"))
     def test_getStockjump_adrandStocksplits(self,info):
         # pass
         url = HTTP + "/as_market/api/stock_jump/v1/get"

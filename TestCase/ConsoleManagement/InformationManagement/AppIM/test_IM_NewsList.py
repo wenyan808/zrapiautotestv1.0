@@ -33,6 +33,7 @@ class TestIMNewsList():
     def test_IM_NewsList(self,info):
         url = HTTP + "/as_stock_information/api/news/v1/list"
         header = JSON
+        header = header
 
         # 拼装参数
         # paylo = {

@@ -30,10 +30,10 @@ class TestHkstockSplitsjump:
 
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        write_json(BASE_DIR + r"/TestData/HkstockSplitsjump.json", ts_code_data)
+        write_json(BASE_DIR + r"/TestData/AllStockData/HkstockSplitsjump.json", ts_code_data)
 
     @allure.story('拆合股-横幅(跳转)')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/HkstockSplitsjump.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/HkstockSplitsjump.json"))
     def test_Hkstock_Splitsjumpp(self, info):
         url = HTTP + "/as_market/api/hk/splits/v1/jump"
         headers = JSON

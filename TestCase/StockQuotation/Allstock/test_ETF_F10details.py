@@ -29,10 +29,10 @@ class TestETFF10details:
         # )
         # random_stock = random.sample(ts_code, 500)
         # ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        # write_json(BASE_DIR + r" /TestData/test_ETF_F10details.json", ts_code_data)
+        # write_json(BASE_DIR + r" /TestData/AllStockData/test_ETF_F10details.json", ts_code_data)
 
     @allure.story('港美股etf简况F10')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_ETF_F10details.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/test_ETF_F10details.json"))
     def test_ETF_F10details(self, info):
         # pass
         url = HTTP + "/as_market/api/etf/f10/v1/details"
@@ -76,57 +76,60 @@ class TestETFF10details:
                 assert "dividendsUrl" in j.get("data")
                 if "currency" in j.get("data"):
                     assert "currency" in j.get("data")
-                if paylo.get("ts") == "US" and "dividends" in j.get("data"):
-                    for i in range(len(j.get("data").get("dividends"))):
-                        if "engName" in j.get("data").get("dividends")[i]:
-                            assert "engName" in j.get("data").get("dividends")[i]
-                        if "rate" in j.get("data").get("dividends")[i]:
-                            assert "rate" in j.get("data").get("dividends")[i]
-                        assert "exDividendDate" in j.get("data").get("dividends")[i]
-                        if "lever" in j.get("data").get("dividends")[i]:
-                            assert "lever" in j.get("data").get("dividends")[i]
-                        if "direction" in j.get("data").get("dividends")[i]:
-                            assert "direction" in j.get("data").get("dividends")[i]
-                        assert "allocationScheme" in j.get("data").get("dividends")[i]
-                        assert "每股分配" in j.get("data").get("dividends")[i].get("allocationScheme")
-                        if j.get("data").get("dividends")[i].get("direction") == 1:
-                            logging.info("做多")
-                        elif j.get("data").get("dividends")[i].get("direction") == 1:
-                            logging.info("做空")
+                if j.get("data").get("dividends") != None:
+                    if paylo.get("ts") == "US" and "dividends" in j.get("data"):
+                        for i in range(len(j.get("data").get("dividends"))):
+                            # if "engName" in j.get("data").get("dividends")[i]:
+                            #     assert "engName" in j.get("data").get("dividends")[i]
+                            # if "rate" in j.get("data").get("dividends")[i]:
+                            #     assert "rate" in j.get("data").get("dividends")[i]
+                            assert "exDividendDate" in j.get("data").get("dividends")[i]
+                            # if "lever" in j.get("data").get("dividends")[i]:
+                            #     assert "lever" in j.get("data").get("dividends")[i]
+                            # if "direction" in j.get("data").get("dividends")[i]:
+                            #     assert "direction" in j.get("data").get("dividends")[i]
+                            assert "allocationScheme" in j.get("data").get("dividends")[i]
+                            assert "每股分配" in j.get("data").get("dividends")[i].get("allocationScheme")
+                            if j.get("data").get("dividends")[i].get("direction") == 1:
+                                logging.info("做多")
+                            elif j.get("data").get("dividends")[i].get("direction") == 1:
+                                logging.info("做空")
+                            else:
+                                logging.info("direction为空")
+                    elif paylo.get("ts") == "HK":
+                        if j.get("data").get("currency") == "港币":
+                            assert j.get("data").get("currency") == "港币"
                         else:
-                            logging.info("direction为空")
-                elif paylo.get("ts") == "HK":
-                    if j.get("data").get("currency") == "港币":
-                        assert j.get("data").get("currency") == "港币"
-                    else:
-                        logging.info(f'{j.get("data").get("currency")}')
-                    if j.get("data").get("adminFinanceUnit") == "HKD":
-                        assert j.get("data").get("adminFinanceUnit") == "HKD"
-                    else:
-                        logging.info(f'{j.get("data").get("adminFinanceUnit")}')
-                    assert "trackingIndex" in j.get("data")
-                    assert "issueNumber" in j.get("data")
-                    assert "adminFinance" in j.get("data")
-                    assert "adminFinanceUnit" in j.get("data")
-                    if "dividendPolicy" in j.get("data"):
-                        assert "dividendPolicy" in j.get("data")
-                    if "dividends" in j.get("data"):
-                        if len(j.get("data").get("dividends")) != 0:
-                            # pass
-                            assert "dividendDate" in j.get("data").get("dividends")[0]
-                            assert "exDividendDate" in j.get("data").get("dividends")[0]
-                            assert "allocationScheme" in j.get("data").get("dividends")[0]
-                            assert "每股分配" in j.get("data").get("dividends")[0].get("allocationScheme")
+                            logging.info(f'{j.get("data").get("currency")}')
+                        if j.get("data").get("adminFinanceUnit") == "HKD":
+                            assert j.get("data").get("adminFinanceUnit") == "HKD"
                         else:
-                            assert j.get("data").get("dividends") == []
-                            logging.info("dividends为空的list")
+                            logging.info(f'{j.get("data").get("adminFinanceUnit")}')
+                        assert "trackingIndex" in j.get("data")
+                        assert "issueNumber" in j.get("data")
+                        assert "adminFinance" in j.get("data")
+                        assert "adminFinanceUnit" in j.get("data")
+                        if "dividendPolicy" in j.get("data"):
+                            assert "dividendPolicy" in j.get("data")
+                        if "dividends" in j.get("data"):
+                            if len(j.get("data").get("dividends")) != 0:
+                                # pass
+                                assert "dividendDate" in j.get("data").get("dividends")[0]
+                                assert "exDividendDate" in j.get("data").get("dividends")[0]
+                                assert "allocationScheme" in j.get("data").get("dividends")[0]
+                                assert "每股分配" in j.get("data").get("dividends")[0].get("allocationScheme")
+                            else:
+                                assert j.get("data").get("dividends") == []
+                                logging.info("dividends为空的list")
+
+                        else:
+                            logging.info("dividends不在data中")
 
                     else:
-                        logging.info("dividends不在data中")
+                        raise AssertionError("typeerror")
 
                 else:
-                    raise AssertionError("typeerror")
-
+                    assert j.get("data").get("dividends") == None
 
             else:
                 logging.info("data为空，无数据")

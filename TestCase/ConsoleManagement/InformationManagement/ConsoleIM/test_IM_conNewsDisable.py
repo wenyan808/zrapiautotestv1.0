@@ -33,12 +33,12 @@ class TestIMConNewsDisable():
     def test_IM_conNewsDisable(self,info):
         url = console_HTTP + "/api/con_news/v1/list"
         header = console_JSON
+        header = header
 
         # 拼装参数
         paylo = {
             "pageSize": 20,
             "currentPage": 1,
-            "type": 1,
             "startTime": TimeTostamp(),
             "endTime": get_time_stamp13()
         }

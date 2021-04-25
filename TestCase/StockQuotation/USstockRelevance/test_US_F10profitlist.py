@@ -23,7 +23,7 @@ class TestUSF10profitlist:
         login()
 
     @allure.story('美股F10获取利润表详情页信息')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_US_F10profitlist.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/USStockData/test_US_F10profitlist.json"))
     def test_US_F10profitlist(self, info):
         # pass
         url = HTTP + "/as_market/api/us/f10/v1/profit_list"
