@@ -16,7 +16,7 @@ class TestHKstockF10repolist:
         response = zhuorui('港股', '全部论证-窝轮牛熊列表涨跌幅排序')
         assert_data(response, '000000', 'ok')
         # assert response.status_code == 200
-        print(response.json())
+        # print(response.json())
     @allure.story('全部论证-窝轮牛熊列表涨跌价排序')
     def test_HKstock_warrantzdj(self):
         response = zhuorui('港股', '全部论证-窝轮牛熊列表涨跌价排序')
@@ -46,7 +46,7 @@ class TestHKstockF10repolist:
         response = zhuorui('港股', '全部论证-窝轮牛熊列表溢价率排序')
         # assert_data(response, '000000', 'ok')
         # assert response.status_code == 200
-        print(response.json())
+        # print(response.json())
     @allure.story('全部论证-窝轮牛熊列表到期日排序')
     def test_HKstock_warrantdqr(self):
         response = zhuorui('港股', '全部论证-窝轮牛熊列表到期日排序')
