@@ -8,6 +8,7 @@ import pytest
 
 from Common.OSS import oss_file
 from Common.getConsoleLogin import getConsoleLogin_token
+from Common.get_time_stamp import get_time_stamp16
 
 from Common.sign import get_sign
 
@@ -41,7 +42,7 @@ class TestIMConTopicAdd():
 
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
-        name = "自动化测试专题"
+        name = "自动化测试专题"+str(get_time_stamp16())
         description = "本次接口已测试为主，不可胡乱添加到前端，请谨慎添加或者关联到前端"
         categoryId = 0
         catalog = "/Business/Img/"
