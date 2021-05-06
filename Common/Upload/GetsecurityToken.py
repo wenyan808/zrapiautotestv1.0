@@ -1,8 +1,8 @@
 import requests
 
-from Common.getTestLoginToken import gettestLoginToken
+
 from Common.sign import get_sign
-from glo import JSON
+
 
 
 def getsecurityToken(url: str, header: dict):
