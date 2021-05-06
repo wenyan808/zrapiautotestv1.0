@@ -6,6 +6,7 @@ import random
 import allure
 import pytest
 
+from Common.ConTopic_common.Deletes import delete_AddConNews, list_connews
 from Common.OSS import oss_file
 from Common.getConsoleLogin import getConsoleLogin_token
 
@@ -60,7 +61,7 @@ class TestIMConNewsList():
         themeImg = list(oss_file("information", "buffett02.png", catalog, url1, headers))[-1]  # 主题封面图url
         subTypes = [4]  # 快讯类型下使用(子类型):1, "异动",2, "港股",3, "美股",4, "A股"
         important = 0  # 是否重要资讯(0,重要 1,非重要)
-        id = ""  # 增不带id 修改带id
+        # id = ""  # 增不带id 修改带id
         paylo = {
             "title": title,
             "content": content,
@@ -76,7 +77,7 @@ class TestIMConNewsList():
             "types": types,
             "themeImg": themeImg,
             "subTypes": subTypes,
-            "id": id,
+            # "id": id,
             "important": important
         }
         # paylo = info
@@ -94,6 +95,7 @@ class TestIMConNewsList():
 
         j = r.json()
         # print(j)
+        delete_AddConNews(list_connews(title))
         assert r.status_code == 200
         assert j.get("code") == "000000"
         assert j.get("msg") == "ok"
