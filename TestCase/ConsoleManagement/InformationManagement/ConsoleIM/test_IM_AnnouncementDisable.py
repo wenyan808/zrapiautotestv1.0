@@ -18,7 +18,7 @@ from glo import console_JSON, console_HTTP, BASE_DIR
 
 
 # @pytest.mark.skip(reason="调试中 ")
-@allure.feature('资讯console_删除恢复资讯')
+@allure.feature('资讯console_删除恢复公告')
 class TestIMAnnouncementDisable():
     @classmethod
     def setup_class(cls) -> None:
