@@ -9,7 +9,7 @@ from glo import BASE_DIR
 
 def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, url: str, headers: dict):
     """上传图片到OSS()
-
+    在调用这个方法时，请参照http://192.168.1.203:3001/project/54/interface/api/5072的说明进行参考
     :param Storage_directory:存放目录
     :param img_name: 图片的名字
     :param userId: 用户的userid
@@ -18,7 +18,7 @@ def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, ur
     :param headers: headers参数(里面包含登录的token)
     :return: 图片的url
     """
-    local_img_path = BASE_DIR + '/' + catalog + '/' + img_name
+    local_img_path = BASE_DIR + catalog + img_name
     # print(local_img_path)
     name = Storage_directory + '/' + userId + '/{}'
     oss_img_path = imgURL(name) + img_name
@@ -47,37 +47,38 @@ def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, ur
         jpg_url = bucket.sign_url('GET', oss_img_path, 6000)  # 阿里返回一个关于Zabbix_Graph.jpg的url地址 60是链接60秒有效
         jpg_url = json.dumps(jpg_url)
         # print(jpg_url)
-        return jpg_url
+        return jpg_url, oss_img_path
     else:
         print("上传失败")
 
 
-def oss_file(Storage_directory: str, file_name: str, url: str, headers: dict):
+def oss_file(Storage_directory: str, file_name: str, catalog: str, url: str, headers: dict):
     """上传文件到oss
-
+    在调用这个方法时，请参照http://192.168.1.203:3001/project/54/interface/api/5072的说明进行参考
     :param Storage_directory:存放目录
     :param file_name: 文件名字
+    :param catalog: 存放路径 如：/Business/UserFileUp/
     :param url: url地址
     :param headers: headers参数(里面包含登录的token)
     :return: 返回文件的url
     """
-    local_file_path = BASE_DIR + '/TestData/' + file_name
+    local_file_path = BASE_DIR + catalog + file_name
     # print(local_file_path)
     name = Storage_directory + '/{}'
     oss_file_path = fileURL(name) + file_name
     # print(oss_file_path)
     url = url
     header = headers
-
-    AccessKeyId = getsecurityToken(url, header).get("accessKeyId")
-    AccessKeySecret = getsecurityToken(url, header).get("accessKeySecret")
-    SecurityToken = getsecurityToken(url, header).get("securityToken")
+    j = getsecurityToken(url, header)
+    AccessKeyId = j.get("accessKeyId")
+    AccessKeySecret = j.get("accessKeySecret")
+    SecurityToken = j.get("securityToken")
     if Storage_directory == "open":
-        Endpoint = getsecurityToken(url, header).get("bucketNames")[0].get("endpoint")
-        BucketName = getsecurityToken(url, header).get("bucketNames")[0].get("bucketName")
+        Endpoint = j.get("bucketNames")[0].get("endpoint")
+        BucketName = j.get("bucketNames")[0].get("bucketName")
     else:
-        Endpoint = getsecurityToken(url, header).get("bucketNames")[1].get("endpoint")
-        BucketName = getsecurityToken(url, header).get("bucketNames")[1].get("bucketName")
+        Endpoint = j.get("bucketNames")[1].get("endpoint")
+        BucketName = j.get("bucketNames")[1].get("bucketName")
     auth = oss2.StsAuth(AccessKeyId, AccessKeySecret, SecurityToken)
     endpoint = 'http://' + Endpoint
     # print(endpoint)
@@ -90,7 +91,19 @@ def oss_file(Storage_directory: str, file_name: str, url: str, headers: dict):
         # print(file_url)
         return file_url, oss_file_path
 
+
 # print(oss_file("sensitive_word", "敏感词.xlsx"))
+# url1 = console_HTTP + "/api/con_sts/v1/token"
+# catalog = "/Business/Img/"
+# header = console_JSON
+# header = header
+# headers = {}
+# headers.update(header)
+# # print(token)
+# # print(type(token))
+# token = {"token": getConsoleLogin_token()}
+# headers.update(token)
+# print(oss_file("information", "buffett01.png", catalog, url1, headers))
 # 参考链接：https://www.cnblogs.com/coolops/p/12841334.html
 
 

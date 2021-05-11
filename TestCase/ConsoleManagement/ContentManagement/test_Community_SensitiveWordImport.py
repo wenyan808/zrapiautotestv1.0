@@ -34,7 +34,7 @@ class TestCommunitySensitiveWordImport():
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         # print(headers)
-        url_xlsx = list(oss_file("sensitive_word", "敏感词.xlsx", url, headers))[-1]
+        url_xlsx = list(oss_file("sensitive_word", "敏感词.xlsx", '/TestData/', url, headers))[-1]
         # print(url_xlsx)
         payload = {
             "types": [1, 2],
