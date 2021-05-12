@@ -29,8 +29,7 @@ class DingDing(object):
 
     def run(self):
         # 群机器人
-        url = 'https://oapi.dingtalk.com/robot/send?access_token=0e34bb96fce56dc7a8e65be148a0083b8a502b78b2cb6f3a281294dc0986bf16'
-
+        url = "https://oapi.dingtalk.com/robot/send?access_token=09acd5ad506d0c05e0c5760d0eeefc1cf381ad53df5940d4248d1d8eae491fc2"
         with open('./allure-report/history/history-trend.json', 'r', encoding='utf8')as fp:
             json_data = json.load(fp)
             buildOrder = "#"+ str(json_data[0]["buildOrder"])
