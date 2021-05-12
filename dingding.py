@@ -31,7 +31,7 @@ class DingDing(object):
         # 群机器人
         url = 'https://oapi.dingtalk.com/robot/send?access_token=0e34bb96fce56dc7a8e65be148a0083b8a502b78b2cb6f3a281294dc0986bf16'
 
-        with open('./var/lib/jenkins/workspace/脚本/allure-report/history/history-trend.json', 'r', encoding='utf8')as fp:
+        with open('./allure-report/history/history-trend.json', 'r', encoding='utf8')as fp:
             json_data = json.load(fp)
             buildOrder = "#"+ str(json_data[0]["buildOrder"])
             failed = json_data[0]["data"]["failed"]
