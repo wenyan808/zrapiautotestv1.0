@@ -70,7 +70,7 @@ def gettestLoginToken():
         return response_login.json().get("data").get("token")
 
 
-print(gettestLoginToken())
+# print(gettestLoginToken())
 
 
 def getUserLogincodeToken(phone: str):
@@ -162,7 +162,7 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
     pwd = get_md5(password)
     json1 = {
         "phone": phone,
-        "password": pwd,
+        "loginPassword": pwd,
         "phoneArea": phoneArea
     }
     sign1 = {"sign": get_sign(json1)}
