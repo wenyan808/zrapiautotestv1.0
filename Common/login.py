@@ -14,7 +14,7 @@ def login():
     http = HTTP
     json1 = {
         "phone": phone,
-        "password": password,
+        "loginPassword": password,
         "phoneArea": "86"
     }
     sign1 = {"sign": get_sign(json1)}

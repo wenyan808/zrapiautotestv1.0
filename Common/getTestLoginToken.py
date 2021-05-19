@@ -5,7 +5,7 @@ import pytest
 import requests
 
 from Common.tools.md5 import get_md5
-from glo import http, phone2, pwd2, JSON_dev, HTTP, JSON2
+from glo import http, phone2, pwd2, JSON_dev, HTTP, JSON2, phoneArea
 from Common.sign import get_sign
 
 
@@ -17,12 +17,11 @@ def gettestLoginToken():
     url = http + "/as_user/api/user_account/v1/user_login_pwd"
     url1 = http + "/as_notification/api/sms/v1/send_device_code"
     url2 = http + "/as_user/api/user_account/v1/device_next"
-    phoneArea = "86"
     password = get_md5(pwd2)
 
     json1 = {
         "phone": phone2,
-        "password": password,
+        "loginPassword": password,
         "phoneArea": phoneArea
     }
     sign1 = {"sign": get_sign(json1)}
@@ -71,11 +70,11 @@ def gettestLoginToken():
         return response_login.json().get("data").get("token")
 
 
-# print(getdevLoginToken())
+# print(gettestLoginToken())
 
 
 def getUserLogincodeToken(phone: str):
-    """TEST环境 获取手机验证登录的token
+    """TEST环境 获取手机验证登录的token(可以直接用手机号注册并登录)
 
     :param phone: 手机号
     :return: token
@@ -85,7 +84,6 @@ def getUserLogincodeToken(phone: str):
     headers = JSON
     # phone = "13418923886"
     phone = phone
-    phoneArea = "86"
     boby = {
         "phone": phone,
         "countryCode": phoneArea
@@ -105,7 +103,7 @@ def getUserLogincodeToken(phone: str):
     paylo = {
         "verificationCode": verificationCode,
         "phone": phone,
-        "phoneArea": "86"
+        "phoneArea": phoneArea
     }
     sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
     payload1 = {}
@@ -119,10 +117,34 @@ def getUserLogincodeToken(phone: str):
     )
 
     j = r.json()
-    return j.get("data").get("token")
+    # print(j)
+    if j.get("code") == "010003" \
+            or j.get("msg") == "第一次登录，设置登录密码":
+        password = "zr123456"
+        pwd = get_md5(password)
+        businessAccessToken = j.get("data").get("businessAccessToken")
+        url = HTTP + "/as_user/api/user_account/v1/set_login_password"
+        paylo = {
+            "loginPassword": pwd,
+            "businessAccessToken": businessAccessToken
+        }
+        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+        payload1 = {}
+        payload1.update(paylo)
+        payload1.update(sign1)
+
+        payload = json.dumps(dict(payload1))
+
+        response = requests.session().post(
+            url=url, headers=headers, data=payload
+        )
+        return response.json().get("data").get("token")
+
+    else:
+        return j.get("data").get("token")
 
 
-# print(getUserLogincodeToken())
+# print(getUserLogincodeToken("15816265000"))
 
 
 def getlogintoken(phone: str, password: str, phoneArea: str):
@@ -138,10 +160,9 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
     url2 = HTTP + "/as_user/api/user_account/v1/device_next"
 
     pwd = get_md5(password)
-
     json1 = {
         "phone": phone,
-        "password": pwd,
+        "loginPassword": pwd,
         "phoneArea": phoneArea
     }
     sign1 = {"sign": get_sign(json1)}
@@ -190,4 +211,4 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
         return res_login.json().get("data").get("token")
 
 
-
+# print(getlogintoken("15816262887", "zr123456", "86"))
