@@ -134,10 +134,13 @@ def list_connews(title):
     headers.update(token)  # 将token更新到headers
     pageSize = 20
     currentPage = 1
+    status = 0
     paylo = {
         "pageSize": pageSize,
-        "status": currentPage,
-        "title": title
+        "currentPage": currentPage,
+        "status": status,
+        "title": title,
+        "code": None
     }
     sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
     payload1 = {}
@@ -150,4 +153,7 @@ def list_connews(title):
     )
 
     j_list = r_list.json()
-    return j_list.get("data").get("list")[0].get("newsId")
+    if len(j_list.get("data").get("list")) != 0:
+        return j_list.get("data").get("list")[0].get("newsId")
+    else:
+        raise ValueError(f'{j_list.get("data").get("list")}')
