@@ -12,7 +12,7 @@ from Common.tools.read_write_json import get_json, write_json
 
 from Common.tools.unique_text import get_unique_phone
 
-from glo import JSON1, HTTP, BASE_DIR
+from glo import JSON1, HTTP, BASE_DIR, countryCode, pwd1
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -34,7 +34,7 @@ class TestModifyPhone02():
 
         phone = oldphone.get("phone")
 
-        password = "zr123456"
+        password = pwd1
         newPhone = get_unique_phone()
 
         paylonewname = [{"phone": newPhone}]
@@ -70,9 +70,13 @@ class TestModifyPhone02():
         token = {"token": headers_token}
         # print(type(token))
         headers1.update(token)  # 将token更新到headers参数中
+        smsCode = "3"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
+        # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
+        # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
         boby = {
             "phone": phone,
-            "countryCode": phoneArea
+            "countryCode": countryCode,
+            "smsCode": smsCode
         }
         sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
         payload1 = {}
@@ -81,13 +85,17 @@ class TestModifyPhone02():
 
         payload = json.dumps(dict(payload1))
         response_getdata = Requests(self.session).post(
-            url=HTTP + "/as_notification/api/sms/v1/send_old_replace_code",
-            headers=headers1, data=payload, title="修改手机号发送短信验证码-当前手机号"
+            url=HTTP + "/as_notification/api/sms/v1/send_code",
+            headers=headers1, data=payload, title="发送短信-当前手机号"
         )
         verificationCode = response_getdata.json().get("data")
+        smsCode = "4"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
+        # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
+        # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
         boby1 = {
-            "phone": newPhone,
-            "countryCode": phoneArea
+            "phone": phone,
+            "countryCode": countryCode,
+            "smsCode": smsCode
         }
         sign1 = {"sign": get_sign(boby1)}  # 把参数签名后通过sign1传出来
         payload2 = {}
@@ -96,8 +104,8 @@ class TestModifyPhone02():
 
         payload3 = json.dumps(dict(payload2))
         response1_getdata = Requests(self.session).post(
-            url=HTTP + "/as_notification/api/sms/v1/send_new_replace_code",
-            headers=headers1, data=payload3, title="修改手机号发送短信验证码-新手机号"
+            url=HTTP + "/as_notification/api/sms/v1/send_code",
+            headers=headers1, data=payload3, title="发送短信-新手机号"
         )
         newVerificationCode = response1_getdata.json().get("data")
 
