@@ -9,7 +9,7 @@ from Common.sign import get_sign
 from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
 
-from glo import JSON, HTTP
+from glo import JSON, HTTP, countryCode
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -32,7 +32,7 @@ class TestSMSSendNewReplaceCode():
         paylo = {
             "password": get_md5(password),
             "phone": phone,
-            "phoneArea": "86"
+            "phoneArea": countryCode
         }
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
@@ -56,7 +56,7 @@ class TestSMSSendNewReplaceCode():
         headers1.update(token)  # 将token更新到headers
         boby = {
             "phone": phone,
-            "countryCode": "86"
+            "countryCode": countryCode
         }
         sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
         payload1 = {}
