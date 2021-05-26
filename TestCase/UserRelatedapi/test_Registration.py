@@ -11,7 +11,7 @@ from Common.tools.md5 import get_md5
 
 from Common.tools.unique_text import get_unique_phone
 
-from glo import JSON2, HTTP, BASE_DIR, phoneArea, countryCode, pwd1
+from glo import JSON1, HTTP, BASE_DIR, phoneArea, countryCode, pwd1
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -28,7 +28,7 @@ class TestRegistration():
     def test_Registration(self):
 
         # 拼装参数
-        headers = JSON2
+        headers = JSON1
         phone = get_unique_phone()
         smsCode = "1"    # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
         # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),

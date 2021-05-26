@@ -37,7 +37,7 @@ testendpassword = ""
 # 测试环境已开户账号管理
 # 登录密码管理
 pwd1 = pwd2 = pwd3 = pwd4 = pwd5 = "zr123456"  # login密码(统一密码)
-phoneArea = "86"  # 手机号地区
+newPhoneArea = phoneArea = "86"  # 手机号地区
 countryCode = "86"  # 国家码 CH("86", "内地"),HK("852", "香港"),MACAO("853", "澳门"),TAIWAN("886", "台湾"),
 # SINGAPORE("65", "新加坡"), MALAYSIA("60", "马来西亚"),THAILAND("66", "泰国");
 
