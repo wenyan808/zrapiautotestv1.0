@@ -4,6 +4,7 @@ import json
 import allure
 import pytest
 
+from Common.getTestLoginToken import getlogintoken
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -32,36 +33,17 @@ class TestModifyLoginPassword02():
         # 拼装参数
         headers = JSON1
 
-        phone = "15811154000"
-        oldLoginPassword = oldpassword.get("Password")
+        phone = "15817373000"
+        oldLoginPassword = oldpassword.get("LoginPassword")
         password = oldLoginPassword
 
         newLoginPassword = get_unique_username(1)[0]  # 通过获取用户名做为账号的密码，get_unique_username(1)获取的结果是一个列表
 
-        pwd = [{"Password": newLoginPassword}]
+        pwd = [{"LoginPassword": newLoginPassword}]
 
         write_json(BASE_DIR + r"/TestData/UserRelatedapiData/oldPassword.json", pwd)
 
-        url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"
-        paylo = {
-            "password": get_md5(password),
-            "phone": phone,
-            "phoneArea": phoneArea
-        }
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
-
-        payload = json.dumps(dict(payload1))
-
-        r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="用户密码登陆"
-        )
-
-        j = r.json()
-        # 获取登录的token
-        headers_token = j.get("data").get("token")
+        headers_token = getlogintoken(phone, password, phoneArea)
         headers1 = {}
         headers1.update(headers)
         token = {"token": headers_token}
@@ -86,12 +68,28 @@ class TestModifyLoginPassword02():
             headers=headers1, data=payload, title="发送短信"
         )
         verificationCode = response_getdata.json().get("data")
+        url1 = HTTP + "/as_user/api/user_account/v1/modify_login_password_v1"
+        paylo = {
+            "verificationCode": verificationCode,
+            "phone": phone,
+            "phoneArea": phoneArea
+        }
+        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+        payload1 = {}
+        payload1.update(paylo)
+        payload1.update(sign1)
+
+        payload = json.dumps(dict(payload1))
+
+        r = Requests(self.session).post(
+            url=url1, headers=headers1, data=payload, title="修改登录密码-第一步（验证修改密码验证码）"
+        )
+        j = r.json()
+        businessAccessToken = j.get("data").get('businessAccessToken')
         url1 = HTTP + "/as_user/api/user_account/v1/modify_login_password_v2"
         paylo = {
             "oldLoginPassword": get_md5(oldLoginPassword),
-            "verificationCode": verificationCode,
-            "phone": phone,
-            "phoneArea": phoneArea,
+            "businessAccessToken": businessAccessToken,
             "newLoginPassword": get_md5(newLoginPassword)
         }
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来

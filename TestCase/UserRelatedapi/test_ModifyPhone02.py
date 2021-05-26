@@ -108,12 +108,29 @@ class TestModifyPhone02():
             headers=headers1, data=payload3, title="发送短信-新手机号"
         )
         newVerificationCode = response1_getdata.json().get("data")
-
-        url = HTTP + "/as_user/api/user_account/v1/modify_phone_v2"
+        url = HTTP + "/as_user/api/user_account/v1/modify_phone_v1"
         paylo = {
             "verificationCode": verificationCode,
             "phone": phone,
-            "oldPhoneArea": oldPhoneArea,
+            "phoneArea": phoneArea
+        }
+        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+        payload1 = {}
+        payload1.update(paylo)
+        payload1.update(sign1)
+
+        payload = json.dumps(dict(payload1))
+
+        r = Requests(self.session).post(
+            url=url, headers=headers1, data=payload, title="修改手机号-当前使用手机号验证"
+        )
+
+        j = r.json()
+        # print(j1)
+        businessAccessToken = j.get("data").get('businessAccessToken')
+        url = HTTP + "/as_user/api/user_account/v1/modify_phone_v2"
+        paylo = {
+            "businessAccessToken": businessAccessToken,
             "newPhone": newPhone,
             "newVerificationCode": newVerificationCode,
             "newPhoneArea": newPhoneArea
