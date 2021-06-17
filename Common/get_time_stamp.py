@@ -144,8 +144,20 @@ def timetostamp13(data: str, format_string='%Y-%m-%d'):
     time_stamp = int(datetime.datetime.timestamp(time_array) * 1000)
     return time_stamp
 
-
-# print(timetostamp13("2021-05-17"))
+def getTimeTostamp(day:int):
+    """获取指定时间的时间格式转换为13位时间戳
+    :param day
+    :return:时间戳值
+    """
+    # 先获得时间数组格式的日期
+    OneMonthAgo = (datetime.datetime.now() + datetime.timedelta(days=day))
+    # 10位，时间点相当于从UNIX TIME的纪元时间开始的当年时间编号
+    date_stamp = str(int(time.mktime(OneMonthAgo.timetuple())))
+    # 3位，微秒
+    data_microsecond = str("%d" % OneMonthAgo.microsecond)[0:3]
+    date_stampday = date_stamp + data_microsecond
+    return int(date_stampday)
+# print(getTimeTostamp(30))
 
 def gettoday():
     today = datetime.date.today()

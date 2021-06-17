@@ -6,6 +6,7 @@ import allure
 import pytest
 
 import glo
+from Common.Community_common.Community_post import Communitypostdelete
 from Common.login import login
 from Common.show_sql import showsql
 from Common.sign import get_sign
@@ -37,15 +38,7 @@ class TestCommunitycommentlist():
             "articleType": 2,
             "content": "美股周一（12月7日），特斯拉大涨7.13%，股价再创新高，市值突破6000亿美元；"
                        "台积电涨2.56%，股价再创新高，市值突破5500亿美元。台积电市值首次超过伯克希尔。"
-                       "截至周一收盘，全球上市公司市值TOP10，科技股占了9家。[tag:00700.HK][tag:09988.HK]"
-                       "[img:community/images/2020/12/04/16070706185435230.png]",
-            "images": [{
-                "name": "community/images/2020/12/04/16070706185435230.png",
-                "w": 1000,
-                "h": 563,
-                "url": "http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/"
-                       "community/images/2020/12/04/16070706185435230.png"
-            }],
+                       "截至周一收盘，全球上市公司市值TOP10，科技股占了9家。[tag:00700.HK][tag:09988.HK]",
             "products": [
                 {
                     "ts": "Hk",
@@ -83,7 +76,7 @@ class TestCommunitycommentlist():
         if y.get("code") == "000000":
             postId = y.get("data").get("postId")
             # print(postId)
-            body = {'postId': f"{postId}"}
+            body4 = {'postId': f"{postId}"}
             body2 = {
                 "content": " 未来是科技的世界，直接买买买[tag:00700.HK][tag:09988.HK]",
                 "products": [
@@ -102,7 +95,7 @@ class TestCommunitycommentlist():
                 ]
             }
             body1 = {}
-            body1.update(body)
+            body1.update(body4)
             body1.update(body2)
             sign1 = {"sign": get_sign(body1)}  # 把参数签名后通过sign1传出来
             body1.update(sign1)
@@ -116,18 +109,24 @@ class TestCommunitycommentlist():
             j = r.json()
             # print(j)
             commentId = j.get("data").get("commentId")
-            body = {'postId': f"{postId}"}
+            # body5 = {'postId': f"{postId}"}
             body1 = {}
-            body1.update(body)
+            body1.update(body4)
             sign1 = {"sign": get_sign(body1)}
             body1.update(sign1)
-            body = json.dumps(dict(body1))
+            body6 = json.dumps(dict(body1))
             commentlist_url = HTTP + "/as_community/api/comment/v1/list"
             r = Requests(self.session).post(
-                url=commentlist_url, headers=headers, data=body, title="查询帖子的评论"
+                url=commentlist_url, headers=headers, data=body6, title="查询帖子的评论"
             )
             h = r.json()
             # print(h)
+            # 删帖社区帖子
+            delete_url = HTTP + "/as_community/api/post/v1/delete"
+            # postId = y.get("data").get("postId")
+            # print(postId)
+            # body = {'postId': f"{postId}"}
+            Communitypostdelete(delete_url, headers, body4)
             # # 断言
             assert r.status_code == 200
             assert h.get("code") == "000000"
@@ -144,7 +143,7 @@ class TestCommunitycommentlist():
                     if "fromUser" in h.get("data")[0]:
                         assert h.get("data")[0].get("fromUser").get("userId") == list(list(userId)[0])[0]
                         assert h.get("data")[0].get("fromUser").get("nickname") == glo.nickname
-                        assert h.get("data")[0].get("fromUser").get("headPhoto") == glo.headPhoto
+                        # assert h.get("data")[0].get("fromUser").get("headPhoto") == glo.headPhoto
                         # assert h.get("data")[0].get("fromUser").get("zrNo") == glo.zrNo
                     assert h.get("data")[0].get("content") == body2.get("content")
                     assert "products" in h.get("data")[0]
@@ -156,25 +155,6 @@ class TestCommunitycommentlist():
                     assert "praise" in h.get("data")[0]
                     assert "praiseNum" in h.get("data")[0]
                     assert "commentNum" in h.get("data")[0]
-                    postId = y.get("data").get("postId")
-                    # print(postId)
-                    body = {'postId': f"{postId}"}
-                    sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-                    body1 = {}
-                    body1.update(body)
-                    body1.update(sign1)
-                    # print(body1)
-                    delete_url = HTTP + "/as_community/api/post/v1/delete"
-
-                    r = Requests(self.session).post(
-                        url=delete_url, headers=headers, json=body1, title="删帖"
-                    )
-                    j = r.json()
-                    # print(j)
-                    # 断言
-                    assert r.status_code == 200
-                    assert j.get("code") == "000000"
-                    assert j.get("msg") == "ok"
 
         elif y.get("code") == "460301":
             raise AssertionError("请不要发布重复内容")

@@ -4,7 +4,12 @@ import oss2
 from Common.Upload.GetsecurityToken import getsecurityToken
 
 from Common.Upload.img_file_path import imgURL, fileURL
-from glo import BASE_DIR
+
+from Common.getTestLoginToken import getlogintoken
+from Common.login import login
+from Common.show_sql import showsql
+from Common.tools.read_yaml import yamltoken
+from glo import BASE_DIR, phone2, HTTP, JSON, phoneArea, pwd, phone
 
 
 def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, url: str, headers: dict):
@@ -26,15 +31,20 @@ def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, ur
     url = url
     header = headers
 
-    AccessKeyId = getsecurityToken(url, header).get("accessKeyId")
-    AccessKeySecret = getsecurityToken(url, header).get("accessKeySecret")
-    SecurityToken = getsecurityToken(url, header).get("securityToken")
+    rj = getsecurityToken(url, header)
+    # print(rj)
+    AccessKeyId = rj.get("accessKeyId")
+    # print(AccessKeyId)
+    AccessKeySecret = rj.get("accessKeySecret")
+    # print(AccessKeySecret)
+    SecurityToken = rj.get("securityToken")
+    # print(SecurityToken)
     if Storage_directory == "open":
-        Endpoint = getsecurityToken(url, header).get("bucketNames")[0].get("endpoint")
-        BucketName = getsecurityToken(url, header).get("bucketNames")[0].get("bucketName")
+        Endpoint = rj.get("bucketNames")[0].get("endpoint")
+        BucketName = rj.get("bucketNames")[0].get("bucketName")
     else:
-        Endpoint = getsecurityToken(url, header).get("bucketNames")[1].get("endpoint")
-        BucketName = getsecurityToken(url, header).get("bucketNames")[1].get("bucketName")
+        Endpoint = rj.get("bucketNames")[1].get("endpoint")
+        BucketName = rj.get("bucketNames")[1].get("bucketName")
     auth = oss2.StsAuth(AccessKeyId, AccessKeySecret, SecurityToken)
     endpoint = 'http://' + Endpoint
     # print(endpoint)
@@ -93,17 +103,22 @@ def oss_file(Storage_directory: str, file_name: str, catalog: str, url: str, hea
 
 
 # print(oss_file("sensitive_word", "敏感词.xlsx"))
-# url1 = console_HTTP + "/api/con_sts/v1/token"
-# catalog = "/Business/Img/"
-# header = console_JSON
-# header = header
-# headers = {}
-# headers.update(header)
-# # print(token)
-# # print(type(token))
-# token = {"token": getConsoleLogin_token()}
-# headers.update(token)
-# print(oss_file("information", "buffett01.png", catalog, url1, headers))
+# userId1 = showsql(
+#     '192.168.1.237', 'root', '123456', "user_account",
+#     f"select user_id from t_user_account where 'phone'= '{phone}';"
+# )
+# userId = list(list(userId1)[0])[0]
+# catalog = r"/Business/Img/community/"
+# url1 = HTTP + "/as_common/api/sts/v1/token"
+# header = JSON
+# login()
+# token1 = yamltoken()
+# token = {"token": token1}
+# header.update(token)
+# print(header)
+#
+# # print(list(oss_img("community", "zhurong.png", userId, catalog, url1, headers)))
+# print(oss_img("community", "zhurong.png", userId, catalog, url1, header))
 # 参考链接：https://www.cnblogs.com/coolops/p/12841334.html
 
 

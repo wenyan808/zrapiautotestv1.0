@@ -20,7 +20,7 @@ from glo import console_JSON, console_HTTP, BASE_DIR
 
 # @pytest.mark.skip(reason="调试中 ")
 @allure.feature('资讯console_新建修改资讯信息')
-class TestIMConNewsList():
+class TestIMConNewsAdd():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
@@ -31,7 +31,7 @@ class TestIMConNewsList():
     # @pytest.mark.skip(reason="调试中 ")
     # @pytest.mark.parametrize('info',
     #                          get_json(BASE_DIR + r"/TestData/testIMData/test_IM_conNewsList.json"))
-    def test_IM_conNewsList(self):
+    def test_IM_conNewsAdd(self):
         url = console_HTTP + "/api/con_news/v1/add"
         url1 = console_HTTP + "/api/con_sts/v1/token"
         header = console_JSON
@@ -95,6 +95,7 @@ class TestIMConNewsList():
 
         j = r.json()
         # print(j)
+        # 通过资讯标题获取资讯列表并删除新增资讯
         delete_AddConNews(list_connews(title))
         assert r.status_code == 200
         assert j.get("code") == "000000"

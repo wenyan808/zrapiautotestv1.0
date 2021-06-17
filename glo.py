@@ -20,7 +20,7 @@ password = "abcd1234567"
 phone = "18379204795"  # 手机号
 pwd = "102522ql"  # 密码
 zrNo = '68904140'  # 卓锐号
-nickname = 'ZrAutotest账号'  # 卓锐用户昵称
+nickname = '卓锐用户68904140'  # 卓锐用户昵称
 
 # 测试环境开户登录账号（修改）
 loginAccount_phone = "15989434843"
@@ -115,14 +115,13 @@ JSON2 = {
     "osVersion": '14.4',
     "lang": "zh_CN"
 }
-# JSON2 = {
-#     "Content-Type": "application/json",
-#     "appVersion": '0.1.3',
-#     "deviceId": "d41b071ca83ece28",
-#     "osType": "android",
-#     "osVersion": '7.1.2',
-#     "lang": "zh_CN"
-# }
+JSON3 = {
+        "Content-Type": "application/json",
+        "appVersion": '0.2.0(00004)',
+        "deviceId": "8556915E-DBE1-4476-91DB-CA0119517998",
+        "osType": "ios",
+        "osVersion": '13.5.1'
+    }
 
 
 # 内网开发环境（dev）192.168.1.181（Android）

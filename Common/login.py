@@ -52,8 +52,8 @@ def login():
 
         data = json.dumps(dict(payload1))
         response_gettoken = requests.post(http + "/as_user/api/user_account/v1/device_next", headers=headers,
-                                         data=data)
-        res=response_gettoken.json().get("data").get("token")
+                                          data=data)
+        res = response_gettoken.json().get("data").get("token")
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
             file.write("token: " + res)
         # return res
@@ -70,3 +70,43 @@ def login():
 
 
 # print(login())
+
+
+def login_all(key, value, password, url, file_name):
+    """
+
+    :param key: 键
+    :param value: 值
+    :param password: 未加密的密码
+    :param url: url链接
+    :param file_name:  写入文件名字
+    :return:
+    """
+    # header = {
+    #     "Content-Type": "application/json",
+    #     "appVersion": '0.2.0(00004)',
+    #     "deviceId": "8556915E-DBE1-4476-91DB-CA0119517998",
+    #     "osType": "ios",
+    #     "osVersion": '13.5.1'
+    # }
+    header = JSON
+    json = {
+        "loginPassword": get_md5(password),
+        "phoneArea": "86"
+    }
+    loginAccount = {key: value}
+    json.update(loginAccount)
+    sign1 = {"sign": get_sign(json)}
+    json.update(sign1)
+    session = requests.session()
+    response_login = session.post(url, headers=header,
+                                  json=json)
+    # print(response_login.json())
+    res = response_login.json().get("data").get("token")
+    with open(BASE_DIR + "/" + file_name + ".yaml", 'w') as file:
+        file.write("token: " + res)
+    return response_login.json()
+
+# login("loginAccount", "test@123.com", "abcd1234567", "http://192.168.1.239:8080/apisC/api/sys_user/v1/login",
+# # "token_console")
+# login_all("phone", "18379204795", "102522ql", "http://192.168.1.241/as_user/api/user_account/v1/user_login_pwd", "token")

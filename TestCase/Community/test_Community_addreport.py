@@ -93,4 +93,4 @@ class TestCommunityaddreport():
             assert y.get("code") == "460600"
             assert y.get("msg") == "举报已提交"
         else:
-            raise AssertionError(print(y))
+            raise AssertionError(y)

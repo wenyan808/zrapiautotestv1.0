@@ -1,8 +1,8 @@
 import requests
 
-
+from Common.getTestLoginToken import gettestLoginToken
 from Common.sign import get_sign
-
+from glo import JSON
 
 
 def getsecurityToken(url: str, header: dict):
@@ -18,7 +18,7 @@ def getsecurityToken(url: str, header: dict):
     json = {
         "sign": get_sign(body)
     }
-
+    # print(json)
     response = requests.session().post(url, headers=headers, json=json)
 
     res = response.json().get("data")
@@ -28,7 +28,8 @@ def getsecurityToken(url: str, header: dict):
 
 # url = "http://192.168.1.241/as_common/api/sts/v1/token"
 # header = JSON
-# body = {}
+# # body = {}
 # token = {"token": gettestLoginToken()}
+# header.update(token)
 #
-# print(getsecurityToken(url, header, body, token))
+# print(getsecurityToken(url,header))

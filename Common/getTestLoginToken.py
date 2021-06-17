@@ -5,7 +5,7 @@ import pytest
 import requests
 
 from Common.tools.md5 import get_md5
-from glo import http, phone2, pwd2, JSON_dev, HTTP, JSON2, phoneArea, countryCode
+from glo import http, phone2, pwd2, JSON_dev, HTTP, JSON2, phoneArea, countryCode, BASE_DIR
 from Common.sign import get_sign
 
 
@@ -30,7 +30,7 @@ def gettestLoginToken():
 
     response_login = requests.session().post(url=url, headers=headers,
                                              json=json1)
-
+    # print(response_login.json())
     if response_login.json().get("code") == "010007" \
             or response_login.json().get("msg") == "用户登陆的设备和以前不一样":
 
@@ -179,7 +179,7 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
 
     res_login = requests.session().post(url=url, headers=headers,
                                         json=json1)
-
+    # print(res_login.json())
     if res_login.json().get("code") == "010007" \
             or res_login.json().get("msg") == "用户登陆的设备和以前不一样":
         smsCode = "6"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
@@ -216,10 +216,15 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
         response_gettoken = requests.session().post(url=url2, headers=headers,
                                                     data=data)
 
-        res = response_gettoken.json().get("data").get("token")
+        res = res_login.json().get("data").get("token")
+        with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
+            file.write("token: " + res)
         return res
 
     else:
-        return res_login.json().get("data").get("token")
+        res = res_login.json().get("data").get("token")
+        with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
+            file.write("token: " + res)
+        return res
 
 # print(getlogintoken("15811354200", "zr123456", "86"))

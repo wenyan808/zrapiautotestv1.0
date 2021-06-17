@@ -1,0 +1,16 @@
+[
+  {
+    "parentCardId": null,
+    "parentCardName": null,
+    "updateStartTime": null,
+    "updateEndTime": null,
+    "showStatus": 0,
+    "pageSize": "20",
+    "currentPage": "1",
+    "sort": 1,
+    "receiveType": 1,
+    "receiveMode": 1
+  },
+  {
+  }
+]

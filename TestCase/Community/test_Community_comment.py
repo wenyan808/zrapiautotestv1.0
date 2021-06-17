@@ -6,6 +6,7 @@ import allure
 import pytest
 
 import glo
+from Common.Community_common.Community_post import Communitypostdelete
 from Common.login import login
 from Common.show_sql import showsql
 from Common.sign import get_sign
@@ -37,14 +38,7 @@ class TestCommunitycomment():
             "articleType": 2,
             "content": "12月7日消息，据国外媒体报道，香港金管局总裁余伟文(Eddie Yue)上周五在一份声明中表示，"
                        "香港金管局正与中国人民银行数字货币研究所研究使用数字人民币进行跨境支付的技术测试，并作相应的技术准备。"
-                       "[tag:00700.HK][tag:600519.SH][img:community/images/2020/12/04/16070706185435230.png]",
-            "images": [{
-                "name": "community/images/2020/12/04/16070706185435230.png",
-                "w": 1000,
-                "h": 563,
-                "url": "http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/"
-                       "community/images/2020/12/04/16070706185435230.png"
-            }],
+                       "[tag:00700.HK][tag:600519.SH]",
             "products": [
                 {
                     "ts": "HK",
@@ -104,15 +98,21 @@ class TestCommunitycomment():
         body1.update(body2)
         sign1 = {"sign": get_sign(body1)}  # 把参数签名后通过sign1传出来
         body1.update(sign1)
-        body = json.dumps(dict(body1))
+        body3 = json.dumps(dict(body1))
         # print(body)
         comment_url = HTTP + "/as_community/api/comment/v1/add"
         # print(comment_url)
         r = Requests(self.session).post(
-            url=comment_url, headers=headers, data=body, title="发表评论"
+            url=comment_url, headers=headers, data=body3, title="发表评论"
         )
         j = r.json()
         # print(j)
+        # 删帖社区发帖
+        delete_url = HTTP + "/as_community/api/post/v1/delete"
+        # postId = y.get("data").get("postId")
+        # print(postId)
+        # body = {'postId': f"{postId}"}
+        Communitypostdelete(delete_url, headers, body)
         # 断言
         assert r.status_code == 200
         assert j.get("code") == "000000"
@@ -137,7 +137,7 @@ class TestCommunitycomment():
                     else:
                         assert j.get("data").get("fromUser").get("userId") == list(list(userId)[0])[0]
                         assert j.get("data").get("fromUser").get("nickname") == glo.nickname
-                        assert j.get("data").get("fromUser").get("headPhoto") == glo.headPhoto
+                        # assert j.get("data").get("fromUser").get("headPhoto") == glo.headPhoto
                         # assert j.get("data").get("toUser").get("userId")
                         # assert j.get("data").get("toUser").get("nickname")
                         # assert j.get("data").get("toUser").get("headPhoto")
@@ -146,22 +146,3 @@ class TestCommunitycomment():
                     assert "commentType" in j.get("data")
                     assert "praiseNum" in j.get("data")
                     assert "commentNum" in j.get("data")
-                    postId = y.get("data").get("postId")
-                    # print(postId)
-                    body = {'postId': f"{postId}"}
-                    sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-                    body1 = {}
-                    body1.update(body)
-                    body1.update(sign1)
-                    # print(body1)
-                    delete_url = HTTP + "/as_community/api/post/v1/delete"
-
-                    r = Requests(self.session).post(
-                        url=delete_url, headers=headers, json=body1, title="删帖"
-                    )
-                    j = r.json()
-                    # print(j)
-                    # 断言
-                    assert r.status_code == 200
-                    assert j.get("code") == "000000"
-                    assert j.get("msg") == "ok"

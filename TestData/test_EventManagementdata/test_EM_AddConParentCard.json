@@ -1,0 +1,21 @@
+[
+  {
+    "parentCardName": "开通美股账户即可赠送一年VIP服务",
+    "type": 1,
+    "voucherIds": [
+      "HQUS079446400627"
+    ],
+    "parentCardTotalNum": 1000,
+    "activationType": 1,
+    "activationStartTime": "2021-06-01 00:00:00",
+    "activationEndTime": "2021-06-30 23:59:59",
+    "validType": 2,
+    "validDays": 30,
+    "validStartTime": "2021-06-01 00:00:00",
+    "alidEndTime": "2021-06-30 23:59:59",
+    "receiveType": 1,
+    "receiveMode": 1,
+    "receiveNum": 1,
+    "receiveInterval": 1
+  }
+]

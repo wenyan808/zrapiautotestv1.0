@@ -1,0 +1,16 @@
+[
+  {
+    "type": 0,
+    "description": "高级行情-美股LV1活动卡券",
+    "applyType": 1,
+    "applyNum": 100,
+    "stop": false
+  },
+  {
+    "type": 0,
+    "description": "高级行情-美股LV1活动卡券+1",
+    "applyType": 2,
+    "applyNum": 900,
+    "stop": false
+  }
+]
