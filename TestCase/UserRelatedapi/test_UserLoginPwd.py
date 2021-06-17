@@ -10,7 +10,7 @@ from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
 
 
-from glo import JSON, HTTP
+from glo import JSON, HTTP, phoneArea, pwd1
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -29,12 +29,12 @@ class TestUserLoginPwd():
         headers = JSON
 
         phone = "13321165200"
-        password = "zr123456"
+        password = pwd1
         url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"
         paylo = {
-            "password": get_md5(password),
+            "loginPassword": get_md5(password),
             "phone": phone,
-            "phoneArea": "86"
+            "phoneArea": phoneArea
         }
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}

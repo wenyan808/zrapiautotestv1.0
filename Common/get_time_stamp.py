@@ -132,6 +132,25 @@ def timeTostamp13(data: str, format_string='%Y-%m-%d %H:%M:%S.%f'):
     time_stamp = int(datetime.datetime.timestamp(time_array) * 1000)
     return time_stamp
 
+
+def timetostamp13(data: str, format_string='%Y-%m-%d'):
+    """将时间字符串转换为13位时间戳，时间字符串默认为 2021-05-08格式
+
+    :param data:时间字符串
+    :param format_string:时间字符串(毫秒)默认为 2021-05-08格式
+    :return:13位时间戳
+    """
+    time_array = datetime.datetime.strptime(data, format_string)
+    time_stamp = int(datetime.datetime.timestamp(time_array) * 1000)
+    return time_stamp
+
+
+# print(timetostamp13("2021-05-17"))
+
+def gettoday():
+    today = datetime.date.today()
+    return today
+
 # if __name__ == '__main__':
 #     a1 = get_time_stamp16()
 #     print(a1)

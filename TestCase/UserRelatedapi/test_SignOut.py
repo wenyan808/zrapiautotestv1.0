@@ -10,7 +10,7 @@ from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
 
 
-from glo import JSON, HTTP
+from glo import JSON, HTTP, phoneArea
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -34,7 +34,7 @@ class TestSignOut():
         paylo = {
             "password": get_md5(password),
             "phone": phone,
-            "phoneArea": "86"
+            "phoneArea": phoneArea
         }
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}

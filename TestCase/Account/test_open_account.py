@@ -5,8 +5,10 @@ from Common.guide import zhuorui
 from Common.login import login
 import pytest
 
+
+@pytest.mark.skip(reason="关闭")
 @allure.feature('开户')
-class TestOpen:
+class TestOpen():
 
     @classmethod
     def setup_class(cls):
@@ -45,7 +47,6 @@ class TestOpen:
         else:
             assert_data(response, "000301", "今日银行卡上传次数已达到上限")
 
-
     @allure.story("资料和OCR识别是否一致")
     def test_identity_valid(self):
         response = zhuorui("开户", "资料和OCR识别是否一致")
@@ -59,7 +60,6 @@ class TestOpen:
         else:
             assert_data(response, "000301", "今日上传次数已到达上限")
         # print(response.json())
-
 
     @allure.story("获取数字验证码")
     def test_get_live_code(self):
@@ -80,6 +80,7 @@ class TestOpen:
     def test_work_info(self):
         response = zhuorui("开户", "上传工作资料")
         assert_data(response, "000000", "ok")
+
     #
     @allure.story("风险测评")
     def test_risk_assessment(self):
@@ -91,6 +92,7 @@ class TestOpen:
     def test_other_info_disclosure(self):
         response = zhuorui("开户", "其它资料披露")
         assert_data(response, "000000", "ok")
+
     #
     @allure.story("选择开通账户")
     def test_other_select_open_account(self):
@@ -104,7 +106,6 @@ class TestOpen:
         assert_data(response, "000000", "ok")
         # print(response.json())
 
-
     @allure.story("风险披露")
     def test_other_risk_disclosure(self):
         response = zhuorui("开户", "风险披露")
@@ -117,12 +118,6 @@ class TestOpen:
         # print(response.json())
         assert_data(response, "000000", "ok")
 
-
 # if __name__ == '__main__':
-    # os.system('pytest --aluredir = ./report/xml')
-    # os.system('allure generate ./report/xml -o ./report/html --clean')
-
-
-
-
-
+# os.system('pytest --aluredir = ./report/xml')
+# os.system('allure generate ./report/xml -o ./report/html --clean')

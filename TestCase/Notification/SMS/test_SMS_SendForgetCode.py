@@ -8,7 +8,7 @@ from Common.sign import get_sign
 
 from Common.requests_library import Requests
 
-from glo import JSON, HTTP
+from glo import JSON, HTTP, countryCode
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -29,7 +29,7 @@ class TestSMSSendForgetCode():
         type = 1
         boby = {
             "phone": phone,
-            "countryCode": "86",
+            "countryCode": countryCode,
             "type": type
         }
         sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来

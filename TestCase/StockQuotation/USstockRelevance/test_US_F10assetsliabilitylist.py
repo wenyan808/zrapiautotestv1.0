@@ -79,14 +79,17 @@ class TestUSF10profitlist:
                     assert "otherAssets" in j.get("data").get("list")[i]
                     assert "totalCurrentAssets" in j.get("data").get("list")[i]
                     assert "totalLiabilities" in j.get("data").get("list")[i]
-                    assert "shortTermLoan" in j.get("data").get("list")[i]
+                    if "shortTermLoan" in j.get("data").get("list")[i]:
+                        assert "shortTermLoan" in j.get("data").get("list")[i]
                     assert "accountsPayable" in j.get("data").get("list")[i]
                     assert "totalCurrentLiabilities" in j.get("data").get("list")[i]
                     assert "longTermLiabilities" in j.get("data").get("list")[i]
                     assert "deferredTax" in j.get("data").get("list")[i]
                     assert "totalOwnerEquity" in j.get("data").get("list")[i]
-                    assert "preferredStock" in j.get("data").get("list")[i]
-                    assert "minorityInterest" in j.get("data").get("list")[i]
+                    if "preferredStock" in j.get("data").get("list")[i]:
+                        assert "preferredStock" in j.get("data").get("list")[i]
+                    if "minorityInterest" in j.get("data").get("list")[i]:
+                        assert "minorityInterest" in j.get("data").get("list")[i]
                 assert "total" in j.get("data")
                 assert j.get("data").get("pageSize") == 15
                 assert j.get("data").get("currentPage") == 1
