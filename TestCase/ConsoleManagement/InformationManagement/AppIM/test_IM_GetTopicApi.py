@@ -34,13 +34,6 @@ class TestIMGetTopicApi():
         url = HTTP + "/as_stock_information/api/topic/v1/get"
         header = JSON
         header = header
-
-        paylo = info
-        # print(paylo)
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
         headers = {}
         headers.update(header)
         # print(token)
@@ -48,6 +41,12 @@ class TestIMGetTopicApi():
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         # print(headers)
+        paylo = info
+        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+        payload1 = {}
+        payload1.update(paylo)
+        payload1.update(sign1)
+
         payload = json.dumps(dict(payload1))
         # time.sleep(60.01)
 
@@ -69,8 +68,11 @@ class TestIMGetTopicApi():
                 if "backgroundImg" in j.get("data"):
                     assert "https://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/information/" \
                            in j.get("data").get("backgroundImg")
+                elif "headImg" in j.get("data"):
+                    assert "https://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/information/" \
+                           in j.get("data").get("headImg")
                 else:
-                    raise AssertionError(j.get("data").get("backgroundImg"))
+                    raise AssertionError(j.get("data"))
             else:
                 logging.info("data为空")
         else:
