@@ -34,11 +34,13 @@
   },
   {
     "pageSize": 20,
-    "market": 2
+    "market": 2,
+    "code": "002594"
   },
   {
     "pageSize": 20,
-    "market": 3
+    "market": 3,
+    "code": "603259"
   },
   {
     "pageSize": 20,
@@ -50,7 +52,8 @@
   },
   {
     "pageSize": 20,
-    "category": 5
+    "category": 5,
+    "market": 2
   },
   {
     "pageSize": 20,

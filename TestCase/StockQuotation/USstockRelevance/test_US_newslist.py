@@ -23,17 +23,8 @@ class TestUSNewslist:
     @classmethod
     def setup_class(cls) -> None:
         login()
-        # ts_code = showsql(
-        #     '192.168.1.237', 'root', '123456', 'stock_market',
-        #     "select ts,code from t_stock_search where ts='US';"
-        # )
-        # random_stock = random.sample(ts_code, 500)
-        # ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        # write_json(BASE_DIR + r"/TestData/getnewslist.json", ts_code_data)
-        # print(ts_code_data)
 
     @allure.story('个股新闻分页查询')
-    # @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/getnewslist.json"))
     def test_US_newslist(self):
         # pass
         url = HTTP + "/as_market/api/us/news/v1/list"

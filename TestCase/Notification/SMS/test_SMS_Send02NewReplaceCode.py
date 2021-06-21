@@ -30,7 +30,7 @@ class TestSMSSendNewReplaceCode():
         password = "zr123456"
         url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"
         paylo = {
-            "password": get_md5(password),
+            "loginPassword": get_md5(password),
             "phone": phone,
             "phoneArea": countryCode
         }

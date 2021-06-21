@@ -85,8 +85,8 @@ class TestETFplanklist:
                         if info.get("market") == 2 and "direction" in j.get("data")[i]:
                             assert "direction" in j.get("data")[i]
                             assert "lever" in j.get("data")[i]
-                        elif info.get("market") == 1:
-                            assert "totalCapitalStock" in j.get("data")[i]
+                        # elif info.get("market") == 1:
+                        #     assert "totalCapitalStock" in j.get("data")[i]
 
                         elif str(j.get("data")[i].get("delay")) == "true":
                             logging.info("实时数据")

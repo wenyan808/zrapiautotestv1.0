@@ -34,7 +34,7 @@ class TestEMConDistributeUpdateStatus():
                              get_json(
                                  BASE_DIR + r"/TestData/test_EventManagementdata/test_EM_ConDistributeUpdateStatus.json"))
     def test_EM_ConDistributeUpdateStatus(self, info):
-        url = console_HTTP + "/api/con_distribute/v1/add"
+        url = console_HTTP + "/api/con_distribute/v1/update_status"
         header = console_JSON
         headers = {}
         headers.update(header)
@@ -46,10 +46,10 @@ class TestEMConDistributeUpdateStatus():
         paylo1 = {
             "distributeId": distributeId
         }
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+        paylo1.update(paylo)
+        sign1 = {"sign": get_sign(paylo1)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo1)
-        payload1.update(paylo)
         payload1.update(sign1)
 
         payload = json.dumps(dict(payload1))
@@ -59,7 +59,7 @@ class TestEMConDistributeUpdateStatus():
         )
 
         j = r.json()
-        # print(j)
+        print(j)
         assert r.status_code == 200
         assert j.get("code") == "000000"
         assert j.get("msg") == "ok"
