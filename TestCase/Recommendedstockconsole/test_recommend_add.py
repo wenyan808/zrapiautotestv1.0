@@ -3,6 +3,7 @@ import requests
 from jsonschema import SchemaError, validate, draft7_format_checker, ValidationError
 from Common import getConsoleLogin
 from Common.getConsoleLogin import getConsoleLogin_token
+from Common.get_time_stamp import get_time_stamp13
 from TestAssertions.test_assertions_Recommendedstcokdata.test_recommend_addschem import addresultschema
 from glo import console_JSON, http
 
@@ -15,7 +16,7 @@ class Testrecommendadd():
             "ts": "HK",
             "code": "00700",
             "operationType": 1,
-            "recommendedTime": 1622442420000,
+            "recommendedTime": get_time_stamp13(),
             "recommendedPrice": "601.500",
             "referrerReason": "[{\"type\":\"消息面\",\"list\":[{\"title\":\"市场机会\",\"desc"
                               "\":\"/api/con_stock_recommend/v1/add\"}]}]",

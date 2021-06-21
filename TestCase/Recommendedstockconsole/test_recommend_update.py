@@ -3,6 +3,7 @@ import requests
 from jsonschema import SchemaError, validate, draft7_format_checker, ValidationError
 from Common import getConsoleLogin
 from Common.getConsoleLogin import getConsoleLogin_token
+from Common.get_time_stamp import get_time_stamp13
 from TestAssertions.test_assertions_Recommendedstcokdata.test_recommend_addschem import addresultschema
 from glo import console_JSON, http
 
@@ -17,7 +18,7 @@ class Testupdate():
             "id": "224",
             "name": "腾讯控股",
             "operationType": 1,
-            "recommendedTime": 1622102280000,
+            "recommendedTime": get_time_stamp13(),
             "recommendedPrice": "612.000",
             "referrerReason": "[{\"type\":\"消息面\",\""
                               "list\":[{\"title\":\"市场机会\",\"desc\":\"adsfdasfagdsagag\"}]}]"
