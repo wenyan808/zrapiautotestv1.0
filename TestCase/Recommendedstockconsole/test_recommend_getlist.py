@@ -28,7 +28,7 @@ class Testgetlist():
         response = requests.request("POST", url, headers=headers, data=payload)
 
         r = response.json()
-        print(r)
+        # print(r)
 
         assert response.status_code == 200
         if r.get("code") == "000000":

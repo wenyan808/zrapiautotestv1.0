@@ -69,7 +69,7 @@ class TestEMConActivityRelationList():
         )
 
         j = r.json()
-        print(j)
+        # print(j)
         assert r.status_code == 200
         assert j.get("code") == "000000"
         assert j.get("msg") == "ok"
