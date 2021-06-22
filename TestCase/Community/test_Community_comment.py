@@ -130,13 +130,13 @@ class TestCommunitycomment():
                     if j.get("data").get("fromUser") == j.get("data").get("toUser"):
                         assert j.get("data").get("fromUser").get("userId") == j.get("data").get("toUser").get(
                             "userId") == list(list(userId)[0])[0]
-                        assert j.get("data").get("fromUser").get("nickname") == j.get("data").get("toUser").get(
-                            "nickname") == glo.nickname
+                        # assert j.get("data").get("fromUser").get("nickname") == j.get("data").get("toUser").get(
+                        #     "nickname") == glo.nickname
                         assert j.get("data").get("fromUser").get("headPhoto") == j.get("data").get("toUser").get(
                             "headPhoto") == glo.headPhoto
-                    else:
-                        assert j.get("data").get("fromUser").get("userId") == list(list(userId)[0])[0]
-                        assert j.get("data").get("fromUser").get("nickname") == glo.nickname
+                    # else:
+                    #     assert j.get("data").get("fromUser").get("userId") == list(list(userId)[0])[0]
+                    #     assert j.get("data").get("fromUser").get("nickname") == glo.nickname
                         # assert j.get("data").get("fromUser").get("headPhoto") == glo.headPhoto
                         # assert j.get("data").get("toUser").get("userId")
                         # assert j.get("data").get("toUser").get("nickname")

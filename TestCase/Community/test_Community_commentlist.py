@@ -140,9 +140,9 @@ class TestCommunitycommentlist():
                         '192.168.1.237', 'root', '123456', "user_account",
                         "select user_id from t_user_account where `zr_no`= '68904140';"
                     )
-                    if "fromUser" in h.get("data")[0]:
-                        assert h.get("data")[0].get("fromUser").get("userId") == list(list(userId)[0])[0]
-                        assert h.get("data")[0].get("fromUser").get("nickname") == glo.nickname
+                    # if "fromUser" in h.get("data")[0]:
+                    #     assert h.get("data")[0].get("fromUser").get("userId") == list(list(userId)[0])[0]
+                    #     assert h.get("data")[0].get("fromUser").get("nickname") == glo.nickname
                         # assert h.get("data")[0].get("fromUser").get("headPhoto") == glo.headPhoto
                         # assert h.get("data")[0].get("fromUser").get("zrNo") == glo.zrNo
                     assert h.get("data")[0].get("content") == body2.get("content")

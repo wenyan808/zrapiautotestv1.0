@@ -26,4 +26,6 @@
 /TestCase/Counter/HSIPORelevant/report/*
 /TestCase/Counter/HSMoneyExchange/report/*
 /TestCase/Counter/HSMoneyExchangeConsole/report/*
-/TestCase/
+/TestCase/Console/report/*
+/TestCase/Console/get_ConUserInfo/report/*
+/TestCase/StockQuotation/KLine/report/*

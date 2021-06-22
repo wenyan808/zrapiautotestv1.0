@@ -172,8 +172,8 @@ class TestCommunitycommentmore_list():
                 if k.get("data")[0].get("fromUser") == k.get("data")[0].get("toUser"):
                     assert k.get("data")[0].get("fromUser").get("userId") == k.get("data")[0].get("toUser").get(
                         "userId") == list(list(userId)[0])[0]
-                    assert k.get("data")[0].get("fromUser").get("nickname") == k.get("data")[0].get("toUser").get(
-                        "nickname") == glo.nickname
+                    # assert k.get("data")[0].get("fromUser").get("nickname") == k.get("data")[0].get("toUser").get(
+                    #     "nickname") == glo.nickname
                     # assert k.get("data")[0].get("fromUser").get("headPhoto") == k.get("data")[0].get("toUser").get(
                     #     "headPhoto") == glo.headPhoto
                     # assert k.get("data")[0].get("fromUser").get("zrNo") == glo.zrNo
