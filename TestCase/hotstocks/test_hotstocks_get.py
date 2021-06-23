@@ -10,7 +10,7 @@ class Testhotstockget():
 
     def test_hotstock_get(self):
         url = HTTP+"/as_recommend/api/hot_stocks/v1/get"
-        print(url)
+        # print(url)
 
         paylo = {"timeStamp": get_time_stamp13()}
         sign1 = {"sign": get_sign(paylo)}
@@ -27,7 +27,7 @@ class Testhotstockget():
             assert r.get("msg") == "ok"
             assert r.get("data") != None
         else:
-            raise AssertionError()
+            raise AssertionError(r)
 
         schema = r
         try:
