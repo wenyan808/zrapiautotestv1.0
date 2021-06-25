@@ -1,0 +1,62 @@
+[{
+  "zrNo": "10000666"
+},
+{
+  "phone": "15362628333"
+},
+{
+  "zrNo": "47661884",
+  "phone": "15816262810"
+},
+{
+  "riskLevel": "C1"
+},
+  {
+  "riskLevel": "C2"
+},
+{
+  "riskLevel": "C3"
+},
+{
+  "riskLevel": "C4"
+},
+{
+  "riskLevel": "C5"
+},
+{
+  "openStatusAlias": 1
+},{
+  "openStatusAlias": 2
+},{
+  "openStatusAlias": 3
+},{
+  "openStatusAlias": 4
+},
+{
+  "nickname": "卓锐号75590891",
+  "cardName": null
+},{
+  "nickname": "卓锐号42940642"
+},
+{
+  "registerStartTime": 1619145097000,
+  "registerEndTime":null
+},
+{
+  "zrNo": "",
+  "phone": "",
+  "riskLevel": "",
+  "openStatusAlias": null,
+  "registerStartTime": null,
+  "registerEndTime":null,
+  "openStartTime": null,
+  "openEndTime": null,
+  "nickname": "",
+  "cardName": ""
+},{
+  "zrNo": "31065054",
+  "phone": "19902914097",
+  "nickname": "卓锐号31065054",
+  "cardName": ""
+}
+]

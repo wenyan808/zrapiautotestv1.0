@@ -9,6 +9,11 @@ from glo import console_HTTP, console_JSON
 
 
 def getvoucherId(n: int):
+    """获取权益id
+
+    :param n: 下标
+    :return: 返回权益id
+    """
     url = console_HTTP + "/api/con_voucher/v1/add"
     url1 = console_HTTP + "/api/con_voucher/v1/list"
     header = console_JSON
@@ -59,6 +64,11 @@ def getvoucherId(n: int):
 # print(getvoucherId())
 
 def delvoucherId(voucherId):
+    """删除权益
+
+    :param voucherId: 权益id
+    :return:
+    """
     url1 = console_HTTP + "/api/con_voucher/v1/update"
     header = console_JSON
     header = header

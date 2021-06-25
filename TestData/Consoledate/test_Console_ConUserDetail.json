@@ -1,0 +1,24 @@
+[
+  {
+    "selectBaseUser": false,
+    "selectMarket": false
+  },
+  {
+    "selectBaseUser": true,
+    "selectMarket": true
+  },
+  {
+    "selectBaseUser": false
+  },
+  {
+    "selectBaseUser": true
+  },
+  {
+    "selectMarket": false
+  },
+  {
+    "selectMarket": true
+  },
+  {
+  }
+]
