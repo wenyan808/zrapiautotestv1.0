@@ -30,3 +30,4 @@
 /TestCase/Console/get_ConUserInfo/report/*
 /TestCase/StockQuotation/KLine/report/*
 /TestCase/Console/usersystem/report/*
+/TestCase/report/*

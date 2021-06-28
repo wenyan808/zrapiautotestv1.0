@@ -28,9 +28,7 @@ class TestConsoleConOpenPassList():
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    @pytest.mark.parametrize('info',
-                             get_json(BASE_DIR + r"/TestData/Consoledate/test_Console_ConOpenPassList.json"))
-    def test_Console_ConOpenPassList(self, info):
+    def test_Console_ConOpenPassList(self):
         url = console_HTTP + "/api/con_open/v1/pass_list"
         header = console_JSON
         header = header
@@ -39,12 +37,12 @@ class TestConsoleConOpenPassList():
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
 
-        paylo1 = info
+        # paylo1 = info
         paylo = {
             "pageSize": 20,
             "currentPage": 1
         }
-        paylo.update(paylo1)
+        # paylo.update(paylo1)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo)
