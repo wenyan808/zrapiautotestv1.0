@@ -5,7 +5,7 @@ import pytest
 import requests
 
 from Common.tools.md5 import get_md5
-from glo import http, phone2, pwd2, JSON_dev, HTTP, JSON2, phoneArea, countryCode, BASE_DIR
+from glo import http, phone2, user_pwd, JSON_dev, HTTP, JSON2, phoneArea, countryCode, BASE_DIR
 from Common.sign import get_sign
 
 
@@ -17,7 +17,7 @@ def gettestLoginToken():
     url = http + "/as_user/api/user_account/v1/user_login_pwd"
     url1 = http + "/as_notification/api/sms/v1/send_code"
     url2 = http + "/as_user/api/user_account/v1/device_next"
-    password = get_md5(pwd2)
+    password = get_md5(user_pwd)
 
     json1 = {
         "phone": phone2,
@@ -87,7 +87,7 @@ def getUserLogincodeToken(phone: str):
     JSON = JSON_dev
     headers = JSON
     # phone = "13418923886"
-    phone = phone
+    # phone = phone
     smsCode = "1"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
     # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
     # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
@@ -128,7 +128,7 @@ def getUserLogincodeToken(phone: str):
     # print(j)
     if j.get("code") == "010003" \
             or j.get("msg") == "第一次登录，设置登录密码":
-        password = "zr123456"
+        password = user_pwd
         pwd = get_md5(password)
         businessAccessToken = j.get("data").get("businessAccessToken")
         url = HTTP + "/as_user/api/user_account/v1/set_login_password"

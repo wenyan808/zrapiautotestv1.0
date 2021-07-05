@@ -69,7 +69,7 @@ class TestFollowList():
                 # assert j.get("data")[0].get("headPhoto") == \
                 #        "http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/" \
                 #        "head_photo/images/2021/01/11/16103503765420494.jpeg"
-                assert j.get("data")[0].get("nickname") == "小熊二"
+                assert j.get("data")[0].get("nickname") == "Laughing哥"
                 assert j.get("data")[0].get("fansCount") == 12
                 assert j.get("data")[0].get("createTime") == 1614217895000
                 assert j.get("data")[0].get("zrNo") == "10000039"

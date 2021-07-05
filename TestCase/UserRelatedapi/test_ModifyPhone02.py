@@ -13,7 +13,7 @@ from Common.tools.read_write_json import get_json, write_json
 
 from Common.tools.unique_text import get_unique_phone
 
-from glo import JSON1, HTTP, BASE_DIR, countryCode, pwd1, phoneArea, newPhoneArea
+from glo import JSON1, HTTP, BASE_DIR, countryCode, user_pwd, phoneArea, newPhoneArea
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -33,7 +33,7 @@ class TestModifyPhone02():
 
         phone = oldphone.get("phone")
 
-        password = pwd1
+        password = user_pwd
         newPhone = get_unique_phone()
 
         paylonewname = [{"phone": newPhone}]

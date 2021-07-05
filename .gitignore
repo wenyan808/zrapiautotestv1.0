@@ -11,7 +11,7 @@
 /TestCase/Notification/MessageCenter/report/*
 /TestCase/Community/report/*
 /TestCase/SharesOfRemind/report/*
-/TestCase/Account/repor/*
+/TestCase/Account/report/*
 /TestCase/Account/AccountConsole/report/*
 /TestCase/Account/AccountUpdata/report/*
 /TestCase/Account/OpenAccount/report/*
@@ -19,6 +19,15 @@
 /TestCase/ConsoleManagement/ContentManagement/report/*
 /TestCase/ConsoleManagement/EventManagement/report/*
 /TestCase/ConsoleManagement/InformationManagement/report/*
+/TestCase/ConsoleManagement/EventManagement/VoucherRights/report/*
+/TestCase/ConsoleManagement/EventManagement/VoucherRights/ConActivity/report/*
+/TestCase/ConsoleManagement/EventManagement/VoucherRights/ConCard/report/*
+/TestCase/ConsoleManagement/EventManagement/VoucherRights/ConDistribute/report/*
+/TestCase/ConsoleManagement/EventManagement/VoucherRights/ConParentCard/report/*
+/TestCase/ConsoleManagement/EventManagement/VoucherRights/conUserGroupImport/report/*
+/TestCase/Counter/HSOrder/report/*
+/TestCase/Counter/HSTradingRecord/report/*
+/TestCase/Counter/RInvestmentStrategyInvestment/report/*
 /TestCase/Counter/HSAccountAnalysis/report/*
 /TestCase/Counter/HSChuRuJin/report/*
 /TestCase/Counter/HSCommon/report/*
@@ -30,4 +39,6 @@
 /TestCase/Console/get_ConUserInfo/report/*
 /TestCase/StockQuotation/KLine/report/*
 /TestCase/Console/usersystem/report/*
+/TestCase/Console/Conopen/report/*
+/TestCase/Console/ConOpenActive/report/*
 /TestCase/report/*

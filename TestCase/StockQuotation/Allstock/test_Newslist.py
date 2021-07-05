@@ -26,7 +26,7 @@ class TestNewslist:
         login()
         ts_code = showsql(
             '192.168.1.237', 'root', '123456', 'stock_market',
-            "select ts,code from t_stock_search;"
+            "select ts,code from t_stock_search where ts='HK' or ts='SH' or ts='SZ';"
         )
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
@@ -44,6 +44,8 @@ class TestNewslist:
             "currentPage": 1,
             "pageSize": 15
         }
+        ts = info.get('ts')
+        # ts = "HK"
         paylo1 = {
             "code": f'{info.get("code")}'
         }
@@ -67,7 +69,8 @@ class TestNewslist:
         r = requests.post(url=url, headers=headers, data=payload)
         # 断言
         j = r.json()
-        # print(j)
+        print(payload)
+        print(j)
         assert r.status_code == 200
         assert j.get("code") == "000000"
         assert j.get("msg") == "ok"
@@ -85,7 +88,7 @@ class TestNewslist:
                     b = j.get("data").get("list")[i].get("newsFlag")
                     assert j.get("data").get("list")[i].get("detailUrl") == \
                            "http://192.168.1.239:8080/zhuorui_h5/newsDetail" \
-                           + f"?id={a}&newsFlag={b}&ts={info.get('ts')}"
+                           + f"?id={a}&newsFlag={b}&ts={ts}"
             assert "total" in j.get("data")
             assert j.get("data").get("pageSize") == paylo.get("pageSize")
             assert j.get("data").get("currentPage") == paylo.get("currentPage")

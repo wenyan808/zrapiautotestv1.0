@@ -5,5 +5,12 @@
     "activityType": 2,
     "ad": 0,
     "groupId": "all"
+  },
+  {
+    "activityName": "美股LV1活动卡券活动 +1",
+    "virtual": 1,
+    "activityType": 2,
+    "ad": 0,
+    "groupId": "all"
   }
 ]

@@ -2,11 +2,12 @@ import os
 from typing import Union
 
 FALG = True  # 社区，如果为True则不执行time.sleep(),反之则执行
+BASE_DIR: Union[bytes, str] = os.path.dirname(os.path.abspath(__file__))
 # headPhoto = "http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/" \
 #             "head_photo/images/2021/01/11/16103477341540274.jpeg"
 headPhoto = 'http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/' \
             'head_photo/images/2021/01/11/16103477341540274.jpeg'  # 用户头像发生变化，请在这里修改头像地址
-BASE_DIR: Union[bytes, str] = os.path.dirname(os.path.abspath(__file__))
+
 
 # 测试环境地址管理：
 HTTP = http = "http://192.168.1.241"
@@ -22,9 +23,15 @@ pwd = "102522ql"  # 密码
 zrNo = '68904140'  # 卓锐号
 nickname = '卓锐用户68904140'  # 卓锐用户昵称
 
+
+# 登录密码管理
+user_pwd = Accountlogin_password = "zr123456"  # login密码(统一密码)
+# 交易密码管理
+user_password = "123456"  # 卓锐行情交易密码(统一交易密码)
+
 # 测试环境开户登录账号（修改）
 loginAccount_phone = "15989434843"
-Accountlogin_password = "zr123456"
+
 
 # 测试环境开户(初审列表)进度暂未通过审核登录账号
 testphone = ""
@@ -35,8 +42,6 @@ testendphone = ""
 testendpassword = ""
 
 # 测试环境已开户账号管理
-# 登录密码管理
-pwd1 = pwd2 = pwd3 = pwd4 = pwd5 = "zr123456"  # login密码(统一密码)
 newPhoneArea = phoneArea = "86"  # 手机号地区
 countryCode = "86"  # 国家码 CH("86", "内地"),HK("852", "香港"),MACAO("853", "澳门"),TAIWAN("886", "台湾"),
 # SINGAPORE("65", "新加坡"), MALAYSIA("60", "马来西亚"),THAILAND("66", "泰国");
@@ -54,7 +59,7 @@ userId1 = "f3d9c946caf842fdbddd1c748ce7163a"
 phone2 = "15816263996"  # login手机号
 # pwd2 = "zr123456"  # login密码
 clientId2 = "3090959308"
-passwords2 = "123456"  # 卓锐行情交易密码
+# passwords2 = "123456"  # 卓锐行情交易密码
 zrNo2 = '90959308'  # 卓锐号
 nickname2 = '卓锐测试二号'  # 卓锐用户昵称
 userId2 = "e17f8fd374334995ac02df1ad6cc7872"
@@ -62,7 +67,7 @@ userId2 = "e17f8fd374334995ac02df1ad6cc7872"
 phone3 = "15816263997"  # login手机号
 # pwd3 = "zr123456"  # login密码
 clientId3 = "3078791478"
-passwords3 = "123456"  # 卓锐行情交易密码
+# passwords3 = "123456"  # 卓锐行情交易密码
 zrNo3 = '78791478'  # 卓锐号
 nickname3 = '卓锐测试三号'  # 卓锐用户昵称
 userId3 = "cf7999ea09f34657a870a2d44e3c026a"
@@ -70,7 +75,7 @@ userId3 = "cf7999ea09f34657a870a2d44e3c026a"
 phone4 = "15816263999"  # login手机号
 # pwd4 = "zr123456"  # login密码
 clientId4 = "3052877539"
-passwords4 = "123456"  # 卓锐行情交易密码
+# passwords4 = "123456"  # 卓锐行情交易密码
 zrNo4 = '52877539'  # 卓锐号
 nickname4 = '卓锐测试四号'  # 卓锐用户昵称
 userId4 = "5497496d0450408484e18f39aac10ae9"
@@ -116,13 +121,12 @@ JSON2 = {
     "lang": "zh_CN"
 }
 JSON3 = {
-        "Content-Type": "application/json",
-        "appVersion": '0.2.0(00004)',
-        "deviceId": "8556915E-DBE1-4476-91DB-CA0119517998",
-        "osType": "ios",
-        "osVersion": '13.5.1'
-    }
-
+    "Content-Type": "application/json",
+    "appVersion": '0.2.0(00004)',
+    "deviceId": "8556915E-DBE1-4476-91DB-CA0119517998",
+    "osType": "ios",
+    "osVersion": '13.5.1'
+}
 
 # 内网开发环境（dev）192.168.1.181（Android）
 http_dev = "http://192.168.1.181"
@@ -161,10 +165,18 @@ consoledev_JSON = {
 # headPhoto = 'http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/' \
 #             'head_photo/images/2021/01/11/16103477341540274.jpeg'  # 用户头像发生变化，请在这里修改头像地址
 # # 预发布环境地址管理：
-# HTTP = "https://ngpre.zr66.com"
-# http = "https://ngpre.zr66.com"
-#
+# HTTP = http = "https://ngpre.zr66.com"
+# # http = "https://ngpre.zr66.com"
 # console_HTTP = "https://h5pre.zr66.com/zhuorui_console_pre"
+# # 登录密码管理
+# user_pwd = Accountlogin_password = "zr123456"  # login密码(统一密码)
+# # 交易密码管理
+# user_password = "123456"  # 卓锐行情交易密码(统一交易密码)
+# # 地区码/国家码管理
+# newPhoneArea = phoneArea = "86"  # 手机号地区
+# countryCode = "86"  # 国家码 CH("86", "内地"),HK("852", "香港"),MACAO("853", "澳门"),TAIWAN("886", "台湾"),
+# # SINGAPORE("65", "新加坡"), MALAYSIA("60", "马来西亚"),THAILAND("66", "泰国");
+#
 # # 预发布环境账户管理：
 # loginAccount = "yishouquan"
 # password = "abcd123456"
@@ -176,7 +188,7 @@ consoledev_JSON = {
 #
 # # 预发布环境开户登录账号（修改）
 # loginAccount_phone = ""
-# Accountlogin_password = ""
+# # Accountlogin_password = ""
 #
 # # 预发布环境开户(初审列表)进度暂未通过审核登录账号
 # testphone = ""
@@ -189,7 +201,7 @@ consoledev_JSON = {
 # # 预发布环境已开户账号管理
 # # 手机号1用于变更（修改）密码   警告不要乱动
 # phone1 = "15989434843"  # login手机号
-# pwd1 = "zr123456"  # login密码
+# # pwd1 = "zr123456"  # login密码
 # clientId1 = "4082562186"
 # # passwords1 = "123456"  # 卓锐行情交易密码（已变）  密码已经放入json文件中 test_HSCustomerInfo_ChangeTradePwddata.json
 # zrNo1 = '82562186'  # 卓锐号
@@ -198,28 +210,30 @@ consoledev_JSON = {
 #
 # # 手机号2用于公用的登录认证
 # phone2 = "18379204795"  # login手机号
-# pwd2 = "zr123456"  # login密码
+# # pwd2 = "zr123456"  # login密码
 # clientId2 = "4091705632"
-# passwords2 = "123456"  # 卓锐行情交易密码
+# # passwords2 = "123456"  # 卓锐行情交易密码
 # zrNo2 = '91705632'  # 卓锐号
 # nickname2 = '卓锐测试二号'  # 卓锐用户昵称
 # userId2 = "2be061d66c8f4a699519140f58a98232"
 #
 # phone3 = "13714248993"  # login手机号
-# pwd3 = "zr123456"  # login密码
+# # pwd3 = "zr123456"  # login密码
 # clientId3 = "4098897306"
-# passwords3 = "123456"  # 卓锐行情交易密码
+# # passwords3 = "123456"  # 卓锐行情交易密码
 # zrNo3 = '98897306'  # 卓锐号
 # nickname3 = '卓锐测试三号'  # 卓锐用户昵称
 # userId3 = "ae7b4b5f2af74ec492eeb4ed9de2ea67"
 #
 # phone4 = "13570475245"  # login手机号
-# pwd4 = "zr123456"  # login密码
+# # pwd4 = "zr123456"  # login密码
 # clientId4 = "4022920974"
-# passwords4 = "123456"  # 卓锐行情交易密码
+# # passwords4 = "123456"  # 卓锐行情交易密码
 # zrNo4 = '22920974'  # 卓锐号
 # nickname4 = '卓锐测试四号'  # 卓锐用户昵称
 # userId4 = "51537871e9f74855b03a22896cd92da0"
+#
+# phone5 = 15816263199
 # # 18379204795  zr123456  123456
 # # 13714248993  zr123456  123456
 # # 15989434843  zr123456  123456

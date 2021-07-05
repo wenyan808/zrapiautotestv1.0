@@ -62,8 +62,9 @@ def login():
 
 
     else:
-        # pass
+        # print(response_login.json())
         res = response_login.json().get("data").get("token")
+        # print(res)
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
             file.write("token: " + res)
         # return res

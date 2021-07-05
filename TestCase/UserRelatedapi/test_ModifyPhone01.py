@@ -10,8 +10,7 @@ from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
 
 
-from glo import JSON, HTTP, phoneArea, countryCode, pwd1
-
+from glo import JSON, HTTP, phoneArea, countryCode, user_pwd
 
 # @pytest.mark.skip(reason="调试中 ")
 @allure.feature('用户相关接口-修改手机号-当前使用手机号验证')
@@ -28,7 +27,7 @@ class TestModifyPhone01():
         # 拼装参数
         headers = JSON
         phone = "13321165200"
-        password = pwd1
+        password = user_pwd
         url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"
         paylo = {
             "password": get_md5(password),

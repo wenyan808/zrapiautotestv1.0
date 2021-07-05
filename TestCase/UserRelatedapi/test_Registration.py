@@ -11,7 +11,7 @@ from Common.tools.md5 import get_md5
 
 from Common.tools.unique_text import get_unique_phone
 
-from glo import JSON1, HTTP, BASE_DIR, phoneArea, countryCode, pwd1
+from glo import JSON1, HTTP, BASE_DIR, phoneArea, countryCode, user_pwd
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -75,7 +75,7 @@ class TestRegistration():
             # print(j)
             if j.get("code") == "010003" \
                     or j.get("msg") == "第一次登录，设置登录密码":
-                password = pwd1
+                password = user_pwd
                 pwd = get_md5(password)
                 businessAccessToken = j.get("data").get("businessAccessToken")
                 url1 = HTTP + "/as_user/api/user_account/v1/set_login_password"

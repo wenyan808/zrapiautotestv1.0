@@ -10,7 +10,7 @@ from Common.sign import get_sign
 
 from Common.requests_library import Requests
 
-from glo import JSON1, HTTP, phoneArea, countryCode, phone5, pwd5
+from glo import JSON1, HTTP, phoneArea, countryCode, phone5, user_pwd
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -26,7 +26,7 @@ class TestSMSSendUpdatePasswordCode():
     # @pytest.mark.skip(reason="调试中 ")
     def test_SMS_SendUpdatePasswordCode(self):
         # 拼装参数
-        headers_token = getlogintoken(phone5, pwd5, phoneArea)
+        headers_token = getlogintoken(phone5, user_pwd, phoneArea)
         header = JSON1
         headers1 = {}
         headers1.update(header)
