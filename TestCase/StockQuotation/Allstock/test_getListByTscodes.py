@@ -77,8 +77,10 @@ class TestGetListByTscodes:
                     for i in range(len(j.get("data"))):
                         assert "name" in j.get("data")[i]
                         assert j.get("data")[i].get("ts") == paylo.get("requstList")[0].get("ts")
-                        assert "hands" in j.get("data")[i]
-                        assert "last" in j.get("data")[i]
+                        if "hands" in j.get("data")[i]:
+                            assert "hands" in j.get("data")[i]
+                        if "last" in j.get("data")[i]:
+                            assert "last" in j.get("data")[i]
                         assert j.get("data")[i].get("code") == paylo.get("requstList")[0].get("code")
                         assert "type" in j.get("data")[i]
                         assert "suspension" in j.get("data")[i]

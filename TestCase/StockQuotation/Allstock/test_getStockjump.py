@@ -7,7 +7,6 @@ import allure
 import pytest
 import requests
 
-
 from Common.login import login
 from Common.show_sql import showsql
 
@@ -15,6 +14,7 @@ from Common.sign import get_sign
 from Common.tools.read_write_json import write_json, get_json
 from Common.tools.read_yaml import yamltoken
 from glo import BASE_DIR, HTTP, JSON
+
 
 # test_getStockjump
 # @pytest.mark.skip(reason="调试中，返回的结果是404")
@@ -26,7 +26,7 @@ class TestgetStockjump:
         ts_code = showsql(
             '192.168.1.237', 'root', '123456', 'stock_market',
             "select ts,code from t_stock_search where ts='HK' or ts='US';"
-            )
+        )
         random_stock = random.sample(ts_code, 500)
         ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
         write_json(BASE_DIR + r"/TestData/AllStockData/getStockjump.json", ts_code_data)
@@ -34,7 +34,7 @@ class TestgetStockjump:
 
     @allure.story('股票跳转信息adr&拆合股')
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/getStockjump.json"))
-    def test_getStockjump_adrandStocksplits(self,info):
+    def test_getStockjump_adrandStocksplits(self, info):
         # pass
         url = HTTP + "/as_market/api/stock_jump/v1/get"
         headers = JSON
@@ -66,10 +66,27 @@ class TestgetStockjump:
         assert r.status_code == 200
         assert j.get("code") == "000000"
         assert j.get("msg") == "ok"
-        if "data" in j:
-            if len(j.get("data")) != 0:
-                # pass
-                assert "splits" in j.get("data") or "adr" in j.get("data")
+        # if "data" in j:
+        if len(j.get("data")) != 0:
+            # pass
+            if "relatedAsset" in j.get("data"):
+                assert "ts" in j.get("data").get("relatedAsset")
+                assert "code" in j.get("data").get("relatedAsset")
+                assert "type" in j.get("data").get("relatedAsset")
+                assert "last" in j.get("data").get("relatedAsset")
+                assert "name" in j.get("data").get("relatedAsset")
+                assert "diffRate" in j.get("data").get("relatedAsset")
+                assert "diffPrice" in j.get("data").get("relatedAsset")
+            elif "adr" in j.get("data"):
+                assert "ts" in j.get("data").get("adr")
+                assert "code" in j.get("data").get("adr")
+                assert "type" in j.get("data").get("adr")
+                assert "last" in j.get("data").get("adr")
+                assert "name" in j.get("data").get("adr")
+                assert "diffRate" in j.get("data").get("adr")
+                assert "diffPrice" in j.get("data").get("adr")
+
+
 
             else:
                 logging.info("data是空的集合")

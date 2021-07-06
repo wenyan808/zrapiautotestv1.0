@@ -14,7 +14,7 @@
 /TestCase/Account/report/*
 /TestCase/Account/AccountConsole/report/*
 /TestCase/Account/AccountUpdata/report/*
-/TestCase/Account/OpenAccount/report/*
+/TestCase/Account/AccountOpen/report/*
 /TestCase/CommonInfo/report/*
 /TestCase/ConsoleManagement/ContentManagement/report/*
 /TestCase/ConsoleManagement/EventManagement/report/*
