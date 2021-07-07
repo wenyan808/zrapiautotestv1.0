@@ -3,7 +3,7 @@ import random
 import requests
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 from Common.getConsoleLogin import getConsoleLogin_token
-from Common.get_time_stamp import get_time_stamp13
+from Common.get_time_stamp import get_time_stamp13, getTimeTostamp
 from Common.show_sql import showsql
 from TestAssertions.test_assertions_Recommendedstcokdata.test_recommend_addschem import addresultschema
 from glo import console_JSON, http
@@ -22,7 +22,7 @@ class Testhotstockadd():
         tsCode = ts_code_data[0].get("code")+"."+ts_code_data[0].get("ts")
 
         payload1 = {"tsCode": tsCode,
-                   "recommendTime": get_time_stamp13()}
+                    "recommendTime": getTimeTostamp(1)}
 
         payload = json.dumps(dict(payload1))
 
@@ -41,7 +41,7 @@ class Testhotstockadd():
             assert "msg" == "ok"
             assert "data" == True
         else:
-            raise AssertionError()
+            raise AssertionError(r)
 
         schema = r
         try:
