@@ -3,7 +3,7 @@ import random
 import requests
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 from Common.getConsoleLogin import getConsoleLogin_token
-from Common.get_time_stamp import get_time_stamp13, getTimeTostamp
+from Common.get_time_stamp import getTimeTostamp
 from Common.show_sql import showsql
 from TestAssertions.test_assertions_Recommendedstcokdata.test_recommend_addschem import addresultschema
 from glo import console_JSON, http
@@ -22,7 +22,7 @@ class Testhotstockadd():
         tsCode = ts_code_data[0].get("code")+"."+ts_code_data[0].get("ts")
 
         payload1 = {"tsCode": tsCode,
-                    "recommendTime": getTimeTostamp(1)}
+                   "recommendTime": getTimeTostamp(1)}
 
         payload = json.dumps(dict(payload1))
 
@@ -34,7 +34,7 @@ class Testhotstockadd():
 
         response = requests.request("POST", url, headers=headers, data=payload)
         r = response.json()
-        print(r)
+        # print(r)
 
         assert response.status_code == 200
         if r.get("code") == "000000":
@@ -52,5 +52,3 @@ class Testhotstockadd():
             return 1, f"json数据不符合schema规定：\n出错字段：{'-->'.join([i for i in e.path])}\n提示信息：{e.message}"
         else:
             return 0, "success!"
-
-
