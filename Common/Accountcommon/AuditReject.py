@@ -37,7 +37,7 @@ def first_audit_reject(userId: str, auditFails: list, headers: dict, remark: str
     return k
 
 
-def end_audit_back(userId: str, auditFails: list, headers: dict, remark: str = None):
+def end_audit_back(headers: dict, userId: str, auditFails: list, remark: str = None):
     """打回初审
 
     :param userId:用户id
@@ -68,11 +68,11 @@ def end_audit_back(userId: str, auditFails: list, headers: dict, remark: str = N
     return k
 
 
-def apply_ca(userId=None, headers=None):
+def apply_ca(userId: str = None, headers: dict = None):
     """申请ca认证
 
-    :param userId:
-    :param headers:
+    :param userId:用户id
+    :param headers:带token的请求头
     :return:
     """
     url1 = console_HTTP + "/api/con_cn_open/v1/apply_ca"
@@ -88,7 +88,7 @@ def apply_ca(userId=None, headers=None):
     payload = json.dumps(dict(payload1))
 
     r1 = requests.session().post(
-        url=url1, headers=headers, data=payload, title="申请ca认证"
+        url=url1, headers=headers, data=payload
     )
 
     j1 = r1.json()

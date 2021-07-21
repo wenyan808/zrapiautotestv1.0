@@ -7,9 +7,10 @@ from Common.get_time_stamp import get_time_stamp13
 from TestAssertions.test_assertions_Recommendedstcokdata.test_recommend_addschem import addresultschema
 from glo import console_JSON, http
 
-class Testrecommendadd():
+
+class TestRecommendAdd():
     def test_add(self):
-        url = http+":1216/api/con_stock_recommend/v1/add"
+        url = http + ":1216/api/con_stock_recommend/v1/add"
 
         payload1 = {
             "type": 2,
@@ -37,13 +38,12 @@ class Testrecommendadd():
         # print(r)
 
         assert response.status_code == 200
-        if r.get("code") == "000000":
+        try:
+            assert r.get("code") == "000000"
             assert r.get("msg") == "ok"
-            assert r.get("data") == False
-        elif r.get("code") == "000000":
-            assert r.get("msg") == "ok"
-            assert r.get("data") == True
-        else:
+            assert r.get("data") == False or True
+
+        except:
             raise AssertionError(r)
 
         schema = r
@@ -55,4 +55,3 @@ class Testrecommendadd():
             return 1, f"json数据不符合schema规定：\n出错字段：{'-->'.join([i for i in e.path])}\n提示信息：{e.message}"
         else:
             return 0, "success!"
-

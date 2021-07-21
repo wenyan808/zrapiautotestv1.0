@@ -9,7 +9,7 @@ from Common.sign import get_sign
 
 from Common.requests_library import Requests
 
-from glo import JSON1, HTTP, countryCode, phoneArea
+from glo import JSON1, HTTP, countryCode, phoneArea, pwd1
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -24,10 +24,10 @@ class TestSMSSendOldReplaceCode():
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_SMS_SendOldReplaceCode(self):
-        # 拼装参数
+        url = HTTP + "/as_notification/api/sms/v1/send_old_replace_code"
         phone = "15816144700"
-        password = "zr123456"
-
+        # password = "zr123456"
+        password = pwd1
         headers_token = getlogintoken(phone, password, phoneArea)
         header = JSON1
         headers1 = {}
@@ -46,7 +46,7 @@ class TestSMSSendOldReplaceCode():
 
         payload = json.dumps(dict(payload1))
         response_getdata = Requests(self.session).post(
-            url=HTTP + "/as_notification/api/sms/v1/send_old_replace_code",
+            url=url,
             headers=headers1, data=payload, title="修改手机号发送短信验证码-当前手机号"
         )
         j = response_getdata.json()
@@ -55,4 +55,9 @@ class TestSMSSendOldReplaceCode():
             assert j.get("msg") == "ok"
 
         else:
-            raise ValueError(f"{j}")
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers1}"
+                f"\n返回数据结果：{j}"
+            )

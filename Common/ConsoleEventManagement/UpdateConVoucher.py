@@ -8,7 +8,7 @@ from glo import console_HTTP, console_JSON
 
 
 def updateconvoucher(voucherId: str, applyType: int, applyNum: int, stop: bool):
-    """
+    """修改权益状态
 
     :param voucherId:卡券ID
     :param applyType:申请类型:1、增加库存 2、减少库存

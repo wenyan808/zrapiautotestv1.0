@@ -7,9 +7,10 @@ from Common.get_time_stamp import get_time_stamp13
 from TestAssertions.test_assertions_Recommendedstcokdata.test_recommend_addschem import addresultschema
 from glo import console_JSON, http
 
+
 class Testupdate():
     def test_recommend_update(self):
-        url = http+":1216/api/con_stock_recommend/v1/update"
+        url = http + ":1216/api/con_stock_recommend/v1/update"
 
         payload1 = {
             "ts": "HK",
@@ -35,7 +36,7 @@ class Testupdate():
         response = requests.request("POST", url, headers=headers, data=payload)
 
         r = response.json()
-        print(r)
+        # print(r)
 
         assert response.status_code == 200
         if r.get("code") == "000000":
@@ -43,7 +44,12 @@ class Testupdate():
         elif r.get("code") == "000200":
             assert r.get("msg") == "数据不存在，操作失败"
         else:
-            raise AssertionError(r)
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{r}"
+            )
             # assert r.get("data") != False
 
         # assert response.status_code == 200

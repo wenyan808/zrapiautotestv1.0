@@ -18,7 +18,7 @@ from Common.tools.read_yaml import yamltoken
 from glo import HTTP, JSON, BASE_DIR
 
 
-# @pytest.mark.skip(reason="调试中")
+@pytest.mark.skip(reason="该接口已废除")
 @allure.feature('公共分类')
 class TestNewslist:
     @classmethod
@@ -85,7 +85,7 @@ class TestNewslist:
                     b = j.get("data").get("list")[i].get("newsFlag")
                     assert j.get("data").get("list")[i].get("detailUrl") == \
                            "http://192.168.1.239:8080/zhuorui_h5/newsDetail" \
-                           + f"?id={a}&newsFlag={b}&ts={info.get('ts')}"
+                           + f"?id={a}&newsFlag={b}&ts=HK"
             assert "total" in j.get("data")
             assert j.get("data").get("pageSize") == paylo.get("pageSize")
             assert j.get("data").get("currentPage") == paylo.get("currentPage")

@@ -81,3 +81,43 @@ def Add_ParentCard(headers: dict, voucherIds: list):
     j = r.json()
     # print(j)
     return j
+
+
+def add_activity(headers: dict, parentCardId: str):
+    """新增活动
+
+    :param headers:带token的headers
+    :param parentCardId: 母卡券id
+    :return:
+    """
+    url = console_HTTP + "/api/con_activity/v1/add"
+
+    publishStartTime = int(getTimeTostamp(1))  # 活动发布开始时间
+    publishEndTime = int(getTimeTostamp(30))  # 活动发布结束时间
+
+    paylo = {
+        "activityName": "新用户开通美股账户即可赠送一年VIP服务",
+        "virtual": 1,
+        "activityType": 1,
+        "groupId": list(ImportConUserGroup("user_group", "groupid_phone.xlsx", headers))[0],
+        "ad": 0,
+        "publishStartTime": publishStartTime,
+        "publishEndTime": publishEndTime,
+        "activityParentCard": [{
+            "parentCardId": parentCardId,
+            "totalNum": 1000,
+        }],
+    }
+    sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+    payload1 = {}
+    payload1.update(paylo)
+    payload1.update(sign1)
+
+    payload = json.dumps(dict(payload1))
+
+    r = requests.session().post(
+        url=url, headers=headers, data=payload
+    )
+    j = r.json()
+    # print(j)
+    return j

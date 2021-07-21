@@ -27,11 +27,13 @@
 /TestCase/Account/AccountConsole/AccountConsoleAudit/report/*
 /TestCase/Account/AccountConsole/AccountConsoleList/report/*
 /TestCase/Account/AccountConsole/AccountConsoleEndAudit/report/*
+/TestCase/Account/AccountConsole/AccountConsoleFirstAudit/report/*
 /TestCase/Account/AccountOpen/report/*
 /TestCase/CommonInfo/report/*
 /TestCase/Console/report/*
 /TestCase/Console/ConOpenActive/report/*
 /TestCase/Console/Conopen/report/*
+/TestCase/Console/usersystem/report/*
 /TestCase/StockSelectionDevice/report/*
 /TestCase/SimulatedStock/report/*
 

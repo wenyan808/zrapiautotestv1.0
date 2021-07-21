@@ -50,7 +50,7 @@ def first_audit_list01(phone: str):
     :param phone: 手机号
     :param consoleloginAccount: console登录账户
     :param consolepwd: console密码
-    :return: 返回初审列表json数据，header,phone
+    :return: 返回初审列表json数据，请求头header,手机号phone
     """
     url = console_HTTP + "/api/con_open/v1/first_audit_list"
     # 拼装参数

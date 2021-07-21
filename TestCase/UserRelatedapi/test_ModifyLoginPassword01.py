@@ -10,12 +10,12 @@ from Common.sign import get_sign
 from Common.requests_library import Requests
 
 
-from glo import HTTP, JSON2, countryCode
+from glo import HTTP, JSON2, countryCode, pwd1, phoneArea
 
 
 # @pytest.mark.skip(reason="调试中 ")
 @allure.feature('用户相关接口-修改手机号-当前使用手机号验证')
-class TestModifyLoginPassword02():
+class TestModifyLoginPassword01():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
@@ -24,21 +24,21 @@ class TestModifyLoginPassword02():
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    def test_ModifyLoginPassword02(self):
+    def test_ModifyLoginPassword01(self):
         # 拼装参数
         header = JSON2
 
-        phone = "15823174100"
-        password = "zr123456"
-        phoneArea = "86"
+        phone = "15817384000"
+        password = pwd1
 
         # 获取登录的token
         headers_token = getlogintoken(phone, password, phoneArea)
+        # print(headers_token)
         headers1 = {}
         headers1.update(header)
         token = {"token": headers_token}
         # print(type(token))
-        headers1.update(token)  # 将token更新到headers参数中
+        headers1.update(token)  # 将token更新到headers1参数中
         smsCode = "5"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
         # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
         # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
@@ -79,7 +79,6 @@ class TestModifyLoginPassword02():
         assert r1.status_code == 200
         if j1.get("code") == "000000":
             assert j1.get("msg") == "ok"
-
 
         else:
             raise ValueError(f"{j1}")

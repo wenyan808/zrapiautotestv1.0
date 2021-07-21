@@ -6,14 +6,16 @@ import random
 import allure
 import pytest
 
+from Common.ConTopic_common.add_contopic_category import add_category
 from Common.ConTopic_common.get_ConTopicCategoryId import get_ConTopicCategoryId
+from Common.getConsoleLogin import getConsoleLogin_token
 
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
 from Common.tools.read_write_json import get_json
 
-from glo import console_HTTP, BASE_DIR
+from glo import console_HTTP, BASE_DIR, console_JSON
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -31,10 +33,17 @@ class TestIMConTopicDeleteCategory():
     #                          get_json(BASE_DIR + r"/TestData/testIMData/test_IM_conNewsList.json"))
     def test_IM_ConTopicDeleteCategory(self):
         url = console_HTTP + "/api/con_topic/v1/delete_category"
-        list1 = list(get_ConTopicCategoryId())
-        header = list1[1]
-        headers = header
-        categoryId = list1[0]
+        header = console_JSON
+        header = header
+
+        headers = {}
+        headers.update(header)
+
+        token = {"token": getConsoleLogin_token()}
+        headers.update(token)  # 将token更新到headers
+        # list1 = list(get_ConTopicCategoryId())
+        add_category(headers, "自动化测试分类移除")
+        categoryId = get_ConTopicCategoryId(headers, 0)
         paylo = {
             "categoryId": categoryId
         }

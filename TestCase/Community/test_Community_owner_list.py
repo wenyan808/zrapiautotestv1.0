@@ -4,6 +4,7 @@ import json
 import allure
 import pytest
 
+from Common.Community_common.Community_post import Communitypostdelete, Communityaddpost
 from Common.get_time_stamp import get_time_stamp13
 from Common.login import login
 from Common.show_sql import showsql
@@ -62,6 +63,41 @@ class TestCommunitycommentowner_list():
         )
         y = r.json()
         # print(y)
+        if "data" in y:
+            if len(y.get("data")) != 0:
+                for i in range(len(y.get("data"))):
+                    postId = y.get("data")[i].get("postId")
+                    # print(postId)
+                    body = {'postId': f"{postId}"}
+                    # 删帖url
+                    delete_url = HTTP + "/as_community/api/post/v1/delete"
+                    # 删除社区发帖
+                    Communitypostdelete(delete_url, headers, body)
+            elif len(y.get("data")) == 0:
+
+                # 新增url
+                add_url = HTTP + "/as_community/api/post/v1/add"
+                body = {
+                    "articleType": "",
+                    "content": "蔡徐坤“鸡你太美”指的是《只因你太美》这首歌。"
+                               "\n蔡徐坤的“鸡你太美”这首的原歌曲名叫《只因你太美》，因为谐音的问题，许多网友形象的将歌名叫做了“鸡你太美”。\n"
+                               "据悉，这首歌之所以会火，全凭一段蔡徐坤打球的视频，视频中蔡徐坤用篮球结合舞蹈，同时自己演唱了《只因你太美》的"
+                               "一段歌曲部分，被录制成了一段视频，而这段篮球舞视频也被网友们广为乐道，火爆全网，“鸡你太美”也成了火热的梗。"
+                }
+                # 新增社区发帖
+                a = Communityaddpost(add_url, headers, body)
+                for i in range(len(a.get("data"))):
+                    postId = a.get("data")[i].get("postId")
+                    # print(postId)
+                    body = {'postId': f"{postId}"}
+                    # 删帖url
+                    delete_url = HTTP + "/as_community/api/post/v1/delete"
+                    # 删除社区发帖
+                    Communitypostdelete(delete_url, headers, body)
+            else:
+                raise AssertionError(y.get("data"))
+        else:
+            return y
         # 断言
         assert r.status_code == 200
         assert y.get("code") == "000000"

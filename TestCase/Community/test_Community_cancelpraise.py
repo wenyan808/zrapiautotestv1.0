@@ -232,7 +232,7 @@ class TestCommunitycancelpraise():
             url=cancelcommentpraise_url, headers=headers, data=body8, title="取消评论点赞"
         )
         # print(r.json())
-        # 删帖
+        # 删帖url
         delete_url = HTTP + "/as_community/api/post/v1/delete"
 
         # 删除社区发帖

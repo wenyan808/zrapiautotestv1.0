@@ -27,7 +27,7 @@ class TestSMSSendCode():
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/testSMSData/test_SMS_SendCode.json"))
     def test_SMS_SendCode(self, info):
 
-        # 拼装参数
+        url = HTTP + "/as_notification/api/sms/v1/send_code"
         headers = {
             "Content-Type": "application/json",
             "appVersion": "0.2.4",
@@ -63,15 +63,21 @@ class TestSMSSendCode():
 
         payload = json.dumps(dict(payload1))
         r = Requests(self.session).post(
-            url=HTTP + "/as_notification/api/sms/v1/send_code",
+            url=url,
             headers=headers, data=payload, title="发送短信"
         )
         j = r.json()
         # print(j)
         assert r.status_code == 200
-        if j.get("code") == "000000":
+        try:
+            assert j.get("code") == "000000"
             assert j.get("msg") == "ok"
             assert "data" in j
 
-        else:
-            raise AssertionError(f"{j}")
+        except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}"
+            )

@@ -15,7 +15,7 @@ def ImportConUserGroup(uploads: str, group_name: str, headers: dict):
     :param uploads: 存放目录   如 user_group
     :param group_name:文件名 如 groupid_phone.xlsx
     :param headers
-    :return:url
+    :return:groupId
     """
     url = console_HTTP + "/api/con_user_group/v1/import"
     url1 = console_HTTP + "/api/con_sts/v1/token"
@@ -42,4 +42,4 @@ def ImportConUserGroup(uploads: str, group_name: str, headers: dict):
 
     j_import = r_import.json()
 
-    return j_import.get("data").get("groupId"), headers, j_import
+    return j_import.get("data").get("groupId")

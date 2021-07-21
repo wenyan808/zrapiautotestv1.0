@@ -59,20 +59,24 @@ class TestFansList():
         j = r.json()
         # print(j)
         assert r.status_code == 200
-        if j.get("code") == "000000":
+        try:
+            assert j.get("code") == "000000"
             assert j.get("msg") == "ok"
             if "data" in j:
                 userId = showsql(
                     '192.168.1.237', 'root', '123456', "user_account",
-                    "select user_id from t_user_account where `zr_no`= '10000102';"
+                    "select user_id from t_user_account where `zr_no`= '48066661';"
                 )
+                assert j.get("data")[0].get("userId") == list(list(userId)[0])[0]
+                assert j.get("data")[0].get("nickname") == "卓锐用户48066661"
+                assert j.get("data")[0].get("fansCount") == 0
+                assert j.get("data")[0].get("createTime") == 1626775927000
+                assert j.get("data")[0].get("zrNo") == "48066661"
 
-                assert j.get("data")[-1].get("userId") == list(list(userId)[0])[0]
-                assert j.get("data")[-1].get("nickname") == "卓锐用户10000102"
-                assert j.get("data")[-1].get("fansCount") == 13
-                assert j.get("data")[-1].get("createTime") == 1604471779000
-                assert j.get("data")[-1].get("zrNo") == "10000102"
-
-
-        else:
-            raise ValueError(f"{j}")
+        except:
+            raise ValueError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}"
+            )

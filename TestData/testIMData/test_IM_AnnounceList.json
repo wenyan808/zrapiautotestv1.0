@@ -1,9 +1,11 @@
 [
   {
+    "assert_type": 1,
     "pageSize": 20,
     "code": "1"
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "code": "",
     "id": 64241,
@@ -13,55 +15,85 @@
     "category": null
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "pubTime": 1606812280000
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
-    "code": "747",
     "pubTime": 1606812252000,
     "market": 1
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "selectedCodes": "00700",
     "market": 1,
     "category": null
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "market": 1
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "market": 2
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "market": 3
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "category": 2
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "category": 4
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "category": 5
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "selectedCodes": "00700,BABA"
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "pubTime": 1611788223000
   },
   {
+    "assert_type": 0,
     "pageSize": 20,
     "selectedCodes": "00700,BABA,PDD"
+  },
+  {
+    "assert_type": 1,
+    "pageSize": 20,
+    "code": "1",
+    "id": 64241,
+    "pubTime": 1606812314000,
+    "selectedCodes": "",
+    "market": 1,
+    "category": null
+  },
+  {
+    "assert_type": 1,
+    "pageSize": 20,
+    "code": "00700",
+    "pubTime": 1606812314000,
+    "selectedCodes": null,
+    "market": 1,
+    "category": null
   }
 ]

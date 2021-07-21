@@ -13,7 +13,7 @@ from Common.tools.read_write_json import get_json, write_json
 
 from Common.tools.unique_text import get_unique_username
 
-from glo import JSON1, HTTP, BASE_DIR, phoneArea, countryCode
+from glo import JSON2, HTTP, BASE_DIR, phoneArea, countryCode
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -31,9 +31,9 @@ class TestModifyLoginPassword02():
                              get_json(BASE_DIR + r"/TestData/UserRelatedapiData/oldPassword.json"))
     def test_ModifyLoginPassword02(self, oldpassword):
         # 拼装参数
-        headers = JSON1
+        headers = JSON2
 
-        phone = "15817373000"
+        phone = "15817523700"
         oldLoginPassword = oldpassword.get("LoginPassword")
         password = oldLoginPassword
 
@@ -44,6 +44,7 @@ class TestModifyLoginPassword02():
         write_json(BASE_DIR + r"/TestData/UserRelatedapiData/oldPassword.json", pwd)
 
         headers_token = getlogintoken(phone, password, phoneArea)
+        # print(headers_token)
         headers1 = {}
         headers1.update(headers)
         token = {"token": headers_token}
@@ -86,7 +87,8 @@ class TestModifyLoginPassword02():
         )
         j = r.json()
         businessAccessToken = j.get("data").get('businessAccessToken')
-        url1 = HTTP + "/as_user/api/user_account/v1/modify_login_password_v2"
+        # print(businessAccessToken)
+        url2 = HTTP + "/as_user/api/user_account/v1/modify_login_password_v2"
         paylo = {
             "oldLoginPassword": get_md5(oldLoginPassword),
             "businessAccessToken": businessAccessToken,
@@ -100,13 +102,19 @@ class TestModifyLoginPassword02():
         payload = json.dumps(dict(payload1))
 
         r1 = Requests(self.session).post(
-            url=url1, headers=headers1, data=payload, title="修改登录密码-第二步"
+            url=url2, headers=headers1, data=payload, title="修改登录密码-第二步"
         )
         j1 = r1.json()
         # print(j1)
         assert r1.status_code == 200
-        if j1.get("code") == "000000":
+        try:
+            assert j1.get("code") == "000000"
             assert j1.get("msg") == "ok"
 
-        else:
-            raise ValueError(f"{j1}")
+        except:
+            raise ValueError(
+                f"\n请求地址：{url2}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers1}"
+                f"\n返回数据结果：{j1}"
+            )

@@ -104,4 +104,4 @@ class TestETFplanklist:
             assert j.get("msg") == "sortItem out of range"
 
         else:
-            raise AssertionError("其他错误")
+            raise AssertionError(j)

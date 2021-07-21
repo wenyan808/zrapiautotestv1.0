@@ -4,13 +4,12 @@ import json
 import allure
 import pytest
 
+from Common.getTestLoginToken import getlogintoken
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.md5 import get_md5
 
-
-from glo import JSON, HTTP, phoneArea
+from glo import JSON2, HTTP, phoneArea, pwd1
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -26,33 +25,16 @@ class TestSignOut():
     # @pytest.mark.skip(reason="调试中 ")
     def test_SignOut(self):
         # 拼装参数
-        headers = JSON
+        headers = JSON2
 
-        phone = "13321165200"
-        password = "zr123456"
-        url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"
-        paylo = {
-            "password": get_md5(password),
-            "phone": phone,
-            "phoneArea": phoneArea
-        }
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
+        phone = "15817235000"
+        # password = "zr123456"
+        password = pwd1
 
-        payload = json.dumps(dict(payload1))
+        headers_token = getlogintoken(phone, password, phoneArea)
 
-        r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="用户密码登陆"
-        )
-
-        j = r.json()
-        # print(j)
-        headers_token = j.get("data").get("token")
-        header = JSON
         headers1 = {}
-        headers1.update(header)
+        headers1.update(headers)
         token = {"token": headers_token}
         # print(type(token))
         headers1.update(token)  # 将token更新到headers

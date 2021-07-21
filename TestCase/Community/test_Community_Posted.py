@@ -59,15 +59,18 @@ class TestCommunityPosted:
         r = Requests(self.session).post(
             url=url, headers=headers, data=payload, title=title
         )
-        # r = requests.post(url=url, headers=headers, data=payload)
-        # 断言
+
         j = r.json()
         # print(j)
-        # 删帖社区帖子
+        # 删帖社区帖子url
         delete_url = HTTP + "/as_community/api/post/v1/delete"
-        postId = j.get("data").get("postId")
-        # print(postId)
+        if "data" in j and len(j.get("data")) != 0:
+            postId = j.get("data").get("postId")
+            # print(postId)
+        else:
+            raise AssertionError(j)
         body = {'postId': f"{postId}"}
+        # 删帖社区帖子
         Communitypostdelete(delete_url, headers, body)
         assert r.status_code == 200
         if j.get("code") == "000000":
@@ -91,7 +94,7 @@ class TestCommunityPosted:
                     )
                     assert j.get("data").get("creator").get("userId") == list(list(userId)[0])[0]
                     assert j.get("data").get("creator").get("nickname") == glo.nickname
-                    # assert j.get("data").get("creator").get("headPhoto") == glo.headPhoto
+                    assert j.get("data").get("creator").get("headPhoto") == glo.headPhoto
                     assert j.get("data").get("creator").get("zrNo") == glo.zrNo
                     assert "praiseNum" in j.get("data")
                     assert "commentNum" in j.get("data")

@@ -199,7 +199,7 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
         boby = json.dumps(dict(payload1))
         response_getdata = requests.session().post(url=url1, headers=headers,
                                                    data=boby)
-
+        # print(response_getdata.json())
         verificationCode = response_getdata.json().get("data")
         data = {
             "phone": phone,
@@ -215,16 +215,17 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
         data = json.dumps(dict(payload1))
         response_gettoken = requests.session().post(url=url2, headers=headers,
                                                     data=data)
-
+        # print(response_gettoken.json())
         res = res_login.json().get("data").get("token")
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
-            file.write("token: " + res)
+            file.write("token: " + str(res))
         return res
 
     else:
         res = res_login.json().get("data").get("token")
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
-            file.write("token: " + res)
+            file.write("token: " + str(res))
         return res
 
-# print(getlogintoken("15811354200", "zr123456", "86"))
+
+# print(getlogintoken("15816543400", "zr123456", "86"))

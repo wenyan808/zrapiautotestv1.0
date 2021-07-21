@@ -6,17 +6,18 @@ import random
 import allure
 import pytest
 
+from Common.ConTopic_common.add_contopic_category import add_ConTopic, add_category
 from Common.ConTopic_common.get_ConTopicCategoryId import get_ConTopicCategoryId
 from Common.ConTopic_common.get_ConTopicID import get_ConTopicID
-from Common.OSS import oss_file
 
+from Common.getConsoleLogin import getConsoleLogin_token
 
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.read_write_json import get_json
 
-from glo import console_HTTP, BASE_DIR
+
+from glo import console_HTTP, BASE_DIR, console_JSON
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -34,12 +35,19 @@ class TestIMConTopicOperateCategory():
     #                          get_json(BASE_DIR + r"/TestData/testIMData/test_IM_conNewsList.json"))
     def test_IM_ConTopicOperateCategory(self):
         url = console_HTTP + "/api/con_topic/v1/update"
+        header = console_JSON
+        header = header
 
-        list1 =list(get_ConTopicID())
-        topicId = list1[0]
-        list2 = list(get_ConTopicCategoryId())
-        categoryId = list2[0]
-        headers = list2[1]
+        headers = {}
+        headers.update(header)
+
+        token = {"token": getConsoleLogin_token()}
+        headers.update(token)  # 将token更新到headers
+        add_ConTopic(headers,"自动化测试专题")
+        topicId = get_ConTopicID(headers, 0)
+        add_category(headers,"自动化测试分类")
+        categoryId = get_ConTopicCategoryId(headers, 0)
+
         paylo = {
             "topicId": topicId,
             "categoryId": categoryId
