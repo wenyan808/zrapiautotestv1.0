@@ -7,7 +7,7 @@ from glo import console_HTTP
 
 
 def UpdateStatus_conparentcard(headers: dict, parentCardId: str, status: int):
-    """
+    """修改卡券状态
 
     :param headers: 请求头
     :param parentCardId: 母卡券id

@@ -6,7 +6,7 @@ from Common.sign import get_sign
 from glo import console_HTTP
 
 
-def get_ConParentCardId(headers, n: int):
+def get_ConParentCardId(headers: dict, n: int):
     """获取parentCardId
 
     :param headers:请求头
@@ -57,7 +57,7 @@ def get_distributeIdlist(headers, n: int):
     return j.get("data").get("list")[n].get("distributeId")
 
 
-def getconCardid(headers, n: int):
+def getconCardid(headers: dict, n: int):
     """获取子卡券id
 
     :param headers: 请求头带token
@@ -81,15 +81,16 @@ def getconCardid(headers, n: int):
     return j.get("data").get("list")[n].get("cardId")
 
 
-def get_voucherId(headers: dict, n: int):
-    """获取voucherId
+def get_voucherId(headers: dict, voucherName: str, n: int):
+    """获取voucherId（权益ID）
 
     :param headers: 请求头带token
+    :param voucherName: 权益名称
     :param n: 从列表中下标值，一般从0开始
     :return: voucherId
     """
     url = console_HTTP + "/api/con_voucher/v1/list"
-    paylo = {}
+    paylo = {"voucherName": voucherName}
     sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
     payload1 = {}
     payload1.update(paylo)
@@ -105,9 +106,21 @@ def get_voucherId(headers: dict, n: int):
     return j.get("data").get("list")[n].get("voucherId")
 
 
-def get_activityId(headers: dict, n: int):
+def get_activityId(headers: dict, activityName: str, showStatus: int, n: int):
+    """获取活动id
+
+    :param headers:带token的headers
+    :param activityName:活动名称
+    :param showStatus:状态（全部-0  等待中-1 执行中-2 已结束-3 已停用-4 终止派发-5）
+    :param n:下标
+    :return:活动id
+    """
     url = console_HTTP + "/api/con_activity/v1/list"
-    paylo = {}
+
+    paylo = {
+        "activityName": activityName,
+        "showStatus": showStatus
+    }
     sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
     payload1 = {}
     payload1.update(paylo)
