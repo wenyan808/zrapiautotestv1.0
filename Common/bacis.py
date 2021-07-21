@@ -26,17 +26,11 @@ def common(i):
         headers.update(token)
 
     payload = json.dumps(dict(payload1))
-    # data = {
-    #     "url": url,
-    #     "requestmode": requestmode,
-    #     "headers": headers,
-    #     "payload": payload
-    # }
-    # print(data)
-    # with open(BASE_DIR +"/TestConfig/data.ini", "w", encoding="utf-8") as f:
-    #     f.write(f"{data}\n")
-    # write_config(BASE_DIR +"/TestConfig/data.ini","w",data)
-    # print(data)
+    # print(
+    #     f"\n请求地址：{url}"
+    #     f"\nbody参数：{payload}"
+    #     f"\n请求头部参数：{headers}"
+    # )
 
     response = requests.request(requestmode, url, headers=headers, data=payload)
     logging.info(
