@@ -7,13 +7,14 @@ import allure
 import pytest
 
 from Common.ConTopic_common.get_ConTopicID import get_ConTopicID
+from Common.getConsoleLogin import getConsoleLogin_token
 
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
 from Common.tools.read_write_json import get_json
 
-from glo import console_HTTP, BASE_DIR
+from glo import console_HTTP, BASE_DIR, console_JSON
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -31,10 +32,13 @@ class TestIMGetConTopic():
     #                          get_json(BASE_DIR + r"/TestData/testIMData/test_IM_conNewsList.json"))
     def test_IM_GetConTopic(self):
         url = console_HTTP + "/api/con_topic/v1/get"
-        list1 = list(get_ConTopicID())
-        header = list1[1]
-        headers = header
-        Id = list1[0]
+
+        header = console_JSON
+        headers = {}
+        headers.update(header)
+        token = {"token": getConsoleLogin_token()}
+        headers.update(token)  # 将token更新到headers
+        Id = get_ConTopicID(headers, 1)
         paylo = {
             "id": Id
         }
@@ -64,10 +68,10 @@ class TestIMGetConTopic():
             assert "type" in j.get("data")
             assert "headImg" in j.get("data")
             assert "backgroundImg" in j.get("data")
-            if j.get("data").get("id") == list1[-1].get("data").get("list")[0].get("id"):
-                assert j.get("data").get("categoryId") == list1[-1].get("data").get("list")[0].get("categoryId")
-                assert j.get("data").get("name") == list1[-1].get("data").get("list")[0].get("name")
-                assert j.get("data").get("description") == list1[-1].get("data").get("list")[0].get("description")
+            if j.get("data").get("id") == Id:
+                # assert j.get("data").get("categoryId") == list1[-1].get("data").get("list")[0].get("categoryId")
+                # assert j.get("data").get("name") == list1[-1].get("data").get("list")[0].get("name")
+                # assert j.get("data").get("description") == list1[-1].get("data").get("list")[0].get("description")
                 assert j.get("data").get("categoryName") == None
                 assert j.get("data").get("isHot") == None
                 assert j.get("data").get("sort") == None
@@ -76,3 +80,10 @@ class TestIMGetConTopic():
                        in j.get("data").get("headImg")
                 assert "https://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/information/" \
                        in j.get("data").get("backgroundImg")
+            else:
+                raise AssertionError(
+                    f"\n请求地址：{url}"
+                    f"\nbody参数：{payload}"
+                    f"\n请求头部参数：{headers}"
+                    f"\n返回数据结果：{j}"
+                )

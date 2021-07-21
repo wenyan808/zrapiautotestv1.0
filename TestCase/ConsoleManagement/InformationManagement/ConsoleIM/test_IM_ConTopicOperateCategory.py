@@ -16,7 +16,6 @@ from Common.sign import get_sign
 
 from Common.requests_library import Requests
 
-
 from glo import console_HTTP, BASE_DIR, console_JSON
 
 
@@ -43,9 +42,9 @@ class TestIMConTopicOperateCategory():
 
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
-        add_ConTopic(headers,"自动化测试专题")
+        add_ConTopic(headers, "自动化测试专题")
         topicId = get_ConTopicID(headers, 0)
-        add_category(headers,"自动化测试分类")
+        add_category(headers, "自动化测试分类")
         categoryId = get_ConTopicCategoryId(headers, 0)
 
         paylo = {

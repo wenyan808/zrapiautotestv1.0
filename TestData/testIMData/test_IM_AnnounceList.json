@@ -95,5 +95,14 @@
     "selectedCodes": null,
     "market": 1,
     "category": null
+  },
+  {
+    "assert_type": 1,
+    "pageSize": 20,
+    "code": "00700",
+    "pubTime": null,
+    "selectedCodes": null,
+    "market": 1,
+    "category": null
   }
 ]

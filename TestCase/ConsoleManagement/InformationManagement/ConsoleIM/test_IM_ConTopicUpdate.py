@@ -8,14 +8,14 @@ import pytest
 
 from Common.ConTopic_common.get_ConTopicID import get_ConTopicID
 from Common.OSS import oss_file
-
+from Common.getConsoleLogin import getConsoleLogin_token
 
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
 from Common.tools.read_write_json import get_json
 
-from glo import console_HTTP, BASE_DIR
+from glo import console_HTTP, BASE_DIR, console_JSON
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -34,9 +34,12 @@ class TestIMConTopicUpdate():
     def test_IM_ConTopicUpdate(self):
         url = console_HTTP + "/api/con_topic/v1/update"
         url1 = console_HTTP + "/api/con_sts/v1/token"
-        list1 =list(get_ConTopicID())
-        headers = list1[1]
-        id = list1[0]
+        header = console_JSON
+        headers = {}
+        headers.update(header)
+        token = {"token": getConsoleLogin_token()}
+        headers.update(token)  # 将token更新到headers
+        id = get_ConTopicID(headers, 0)
         name = "自动化测试专题01"
         description = "本次接口已测试为主，不可胡乱添加到前端，请谨慎添加或者关联到前端,可以删除"
         category_id = 1

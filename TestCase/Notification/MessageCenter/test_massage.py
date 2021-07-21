@@ -170,8 +170,8 @@ class TestMessage:
     @allure.story("消息列表参数不存在")
     def test_message_list4(self):
         response = zhuorui("消息通知", "消息列表参数不存在")
-        # assert_data(response, '000000', 'ok')
-        print(response.json())
+        assert_data(response, '000000', 'ok')
+        # print(response.json())
 
     @allure.story("删除消息")
     def test_message_delete1(self):

@@ -8,13 +8,14 @@ import allure
 import pytest
 
 from Common.ConTopic_common.get_ConTopicID import get_ConTopicID
+from Common.getConsoleLogin import getConsoleLogin_token
 
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
 from Common.tools.read_write_json import get_json
 
-from glo import console_HTTP, BASE_DIR
+from glo import console_HTTP, BASE_DIR, console_JSON
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -32,10 +33,12 @@ class TestIMConTopicDelete():
     #                          get_json(BASE_DIR + r"/TestData/testIMData/test_IM_conNewsList.json"))
     def test_IM_ConTopicDelete(self):
         url = console_HTTP + "/api/con_topic/v1/delete"
-
-        list1 = list(get_ConTopicID())
-        headers = list1[1]
-        id = list1[0]
+        header = console_JSON
+        headers = {}
+        headers.update(header)
+        token = {"token": getConsoleLogin_token()}
+        headers.update(token)  # 将token更新到headers
+        id = get_ConTopicID(headers, 0)
 
         paylo = {
             "id": id

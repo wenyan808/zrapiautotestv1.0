@@ -39,9 +39,11 @@ class Testupdate():
         # print(r)
 
         assert response.status_code == 200
-        if r.get("code") == "000000":
+        try:
+            assert r.get("code") == "000000"
             assert r.get("msg") == "ok"
-        elif r.get("code") == "000200":
+        except:
+            assert r.get("code") == "000200"
             assert r.get("msg") == "数据不存在，操作失败"
         else:
             raise AssertionError(

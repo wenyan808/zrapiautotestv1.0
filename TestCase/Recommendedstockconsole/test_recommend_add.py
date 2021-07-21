@@ -44,7 +44,12 @@ class TestRecommendAdd():
             assert r.get("data") == False or True
 
         except:
-            raise AssertionError(r)
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{r}"
+            )
 
         schema = r
         try:
