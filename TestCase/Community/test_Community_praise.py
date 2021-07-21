@@ -6,6 +6,7 @@ import allure
 import pytest
 
 import glo
+from Common.Community_common.Community_post import Communitypostdelete
 from Common.login import login
 from Common.sign import get_sign
 
@@ -33,22 +34,27 @@ class TestCommunitycommentpraise():
 
         # 拼装参数
         paylo = {
-            "title": "国家海洋预报台：台湾地区海域地震不会引发海啸",
+            "title": "神舟十二号载人飞船发射圆满成功",
             "articleType": 2,
-            "content": "本文转自【中国海洋预报网】；\n\n"
-                       "据国家海洋预报台10日晚消息，2020年12月10日21时19分（北京时间），"
-                       "中国台湾地区海域（24.79 N,122.00 E）发生6.3级地震，震源深度为46.9千米。"
-                       "自然资源部海啸预警中心根据初步地震参数判断，本次地震不会引发海啸。"
-                       "[img:community/images/2020/12/11/16076533986972449.JPG]",
-            "images": [
-                {
-                    "name": "community/images/2020/12/11/16076533986972449.JPG",
-                    "w": 640,
-                    "h": 417,
-                    "url": "http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/"
-                           "community/images/2020/12/11/16076533986972449.JPG"
-                }
-            ],
+            "content": "　来源：中国新闻网\n\n中新网酒泉6月17日电(郭超凯)据中国载人航天工程办公室消息，北京时间2021年6月17日9时22分，"
+                       "搭载神舟十二号载人飞船的长征二号F遥十二运载火箭，在酒泉卫星发射中心准时点火发射，约573秒后，"
+                       "神舟十二号载人飞船与火箭成功分离，进入预定轨道，顺利将聂海胜、刘伯明、汤洪波3名航天员送入太空，"
+                       "飞行乘组状态良好，发射取得圆满成功。这是我国载人航天工程立项实施以来的第19次飞行任务，"
+                       "也是空间站阶段的首次载人飞行任务。飞船入轨后，将按照预定程序，与天和核心舱进行自主快速交会对接。"
+                       "组合体飞行期间，航天员将进驻天和核心舱，完成为期3个月的在轨驻留，开展机械臂操作、出舱活动等工作，"
+                       "验证航天员长期在轨驻留、再生生保等一系列关键技术。目前，天和核心舱与天舟二号的组合体运行在约390km"
+                       "的近圆对接轨道，状态良好，满足与神舟十二号交会对接的任务要求和航天员进驻条件。[tag:000601.SH][tag:00031.HK]",
+            "products": [{
+                    "ts": "HK",
+                    "code": "00031",
+                    "name": "航天控股",
+                    "type": "2"
+                }, {
+                    "ts": "SH",
+                    "code": "000601",
+                    "name": "航天科技",
+                    "type": "2"
+                }]
         }
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
@@ -78,35 +84,23 @@ class TestCommunitycommentpraise():
             body1 = {}
             body1.update(body)
             body1.update(sign1)
-            body = json.dumps(dict(body1))
+            body2 = json.dumps(dict(body1))
             postId_praise_url = HTTP + "/as_community/api/praise/v1/add"
             r = Requests(self.session).post(
-                url=postId_praise_url, headers=headers, data=body, title="帖子点赞"
+                url=postId_praise_url, headers=headers, data=body2, title="帖子点赞"
             )
             # print(r.json())
+            # 删帖社区帖子
+            delete_url = HTTP + "/as_community/api/post/v1/delete"
+            # postId = y.get("data").get("postId")
+            # # print(postId)
+            # body = {'postId': f"{postId}"}
+            Communitypostdelete(delete_url, headers, body)
             # 断言
             assert r.status_code == 200
             assert r.json().get("code") == "000000"
             assert r.json().get("msg") == "ok"
-            postId = y.get("data").get("postId")
-            # print(postId)
-            body = {'postId': f"{postId}"}
-            sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-            body1 = {}
-            body1.update(body)
-            body1.update(sign1)
-            # print(body1)
-            delete_url = HTTP + "/as_community/api/post/v1/delete"
 
-            r = Requests(self.session).post(
-                url=delete_url, headers=headers, json=body1, title="删帖"
-            )
-            j = r.json()
-            # print(j)
-            # 断言
-            assert r.status_code == 200
-            assert j.get("code") == "000000"
-            assert j.get("msg") == "ok"
         elif y.get("code") == "460301":
             raise AssertionError("请不要发布重复内容")
         elif y.get("code") == "460300":
@@ -224,26 +218,14 @@ class TestCommunitycommentpraise():
             url=commentId_praise_url, headers=headers, data=body, title="评论点赞"
         )
         # print(r.json())
+        # 删帖
+        delete_url = HTTP + "/as_community/api/post/v1/delete"
+        postId = y.get("data").get("postId")
+        # print(postId)
+        body = {'postId': f"{postId}"}
+        Communitypostdelete(delete_url, headers, body)
         # 断言
         assert r.status_code == 200
         assert r.json().get("code") == "000000"
         assert r.json().get("msg") == "ok"
-        postId = y.get("data").get("postId")
-        # print(postId)
-        body = {'postId': f"{postId}"}
-        sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-        body1 = {}
-        body1.update(body)
-        body1.update(sign1)
-        # print(body1)
-        delete_url = HTTP + "/as_community/api/post/v1/delete"
 
-        r = Requests(self.session).post(
-            url=delete_url, headers=headers, json=body1, title="删帖"
-        )
-        j = r.json()
-        # print(j)
-        # 断言
-        assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"

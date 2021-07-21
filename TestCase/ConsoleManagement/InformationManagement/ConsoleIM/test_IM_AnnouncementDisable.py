@@ -30,7 +30,7 @@ class TestIMAnnouncementDisable():
     # @pytest.mark.skip(reason="调试中 ")
     @pytest.mark.parametrize('info',
                              get_json(BASE_DIR + r"/TestData/testIMData/test_IM_AnnouncementDisable.json"))
-    def test_IM_AnnouncementDisable(self,info):
+    def test_IM_AnnouncementDisable(self, info):
         url = console_HTTP + "/api/con_stock_announcement/v1/list"
         header = console_JSON
         header = header

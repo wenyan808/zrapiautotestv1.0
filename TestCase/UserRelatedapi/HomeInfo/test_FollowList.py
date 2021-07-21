@@ -57,23 +57,29 @@ class TestFollowList():
         j = r.json()
         # print(j)
         assert r.status_code == 200
-        if j.get("code") == "000000":
+        try:
+            assert j.get("code") == "000000"
             assert j.get("msg") == "ok"
             if "data" in j:
                 userId = showsql(
                     '192.168.1.237', 'root', '123456', "user_account",
-                    "select user_id from t_user_account where `zr_no`= '10000039';"
+                    "select user_id from t_user_account where `zr_no`= '48066661';"
                 )
 
                 assert j.get("data")[0].get("userId") == list(list(userId)[0])[0]
                 assert j.get("data")[0].get("headPhoto") == \
                        "http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/" \
-                       "head_photo/images/2021/01/11/16103503765420494.jpeg"
-                assert j.get("data")[0].get("nickname") == "小熊二"
-                assert j.get("data")[0].get("fansCount") == 12
-                assert j.get("data")[0].get("createTime") == 1614217895000
-                assert j.get("data")[0].get("zrNo") == "10000039"
+                       "head_photo/fef4a889f81c4c778afc07b9b15f7e5b/16267765146200448.jpg"
 
+                assert j.get("data")[0].get("nickname") == "卓锐用户48066661"
+                assert j.get("data")[0].get("fansCount") == 1
+                assert j.get("data")[0].get("createTime") == 1626776457000
+                assert j.get("data")[0].get("zrNo") == "48066661"
 
-        else:
-            raise ValueError(f"{j}")
+        except:
+            raise ValueError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}"
+            )

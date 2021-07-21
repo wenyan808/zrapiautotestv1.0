@@ -1,3 +1,0 @@
-INFO     root:data_driven.py:102 args:
-({'articleType': 1, 'content': '港股汽车股集体下挫，比亚迪股份跌超10%，长城汽车、吉利汽车跌超4%。电动车概念股雅迪控股跌超12%。\n[tag:01211.HK]', 'products': [{'ts': 'HK', 'code': '01211', 'name': '比亚迪股份', 'type': '2'}]},)
-INFO     root:requests_library.py:19 关闭 session

@@ -7,6 +7,7 @@ import allure
 import pytest
 
 import glo
+from Common.Community_common.Community_post import Communitypostdelete
 from Common.login import login
 from Common.show_sql import showsql
 from Common.sign import get_sign
@@ -42,15 +43,7 @@ class TestCommunitycommentmore_list():
                        "平台整体ARPU提升。\n\n在海外业务方面，该行估计腾讯在未来数年将继续扩张，而公司透过自家培育及股权投资等成功建立世界级的游戏开发能力，"
                        "估计来自五至六款国际游戏的单季收入占整体收入25%，或手游收入的30-35%，并预计海外占比到2023年将升至40-50%。在本地市场方面，"
                        "该行指出公司在内地市占约五成，渗透不同类型的游戏，不过在变现比例较高的游戏中腾讯市占率则少于两成，反映公司有潜力发掘机遇提升平台ARPU。\n\n"
-                       "该行维持对腾讯「增持」评级，目标价655港元。截至发稿，腾讯涨0.6%，报587港元，总市值5.6万亿港元。[tag:00700.HK]"
-                       "[img:community/images/2020/12/04/16070706185435230.png]",
-            "images": [{
-                "name": "community/images/2020/12/04/16070706185435230.png",
-                "w": 1000,
-                "h": 563,
-                "url": "http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/"
-                       "community/images/2020/12/04/16070706185435230.png"
-            }],
+                       "该行维持对腾讯「增持」评级，目标价655港元。截至发稿，腾讯涨0.6%，报587港元，总市值5.6万亿港元。[tag:00700.HK]",
             "products": [
                 {
                     "ts": "HK",
@@ -82,7 +75,7 @@ class TestCommunitycommentmore_list():
         # print(y)
         postId = y.get("data").get("postId")
         # print(postId)
-        body = {'postId': f"{postId}"}
+        body4 = {'postId': f"{postId}"}
         body2 = {
             "content": " [tag:00700.HK]买入[tag:09988.HK]买入",
             "products": [
@@ -101,7 +94,7 @@ class TestCommunitycommentmore_list():
             ]
         }
         body1 = {}
-        body1.update(body)
+        body1.update(body4)
         body1.update(body2)
         sign1 = {"sign": get_sign(body1)}  # 把参数签名后通过sign1传出来
         body1.update(sign1)
@@ -138,25 +131,31 @@ class TestCommunitycommentmore_list():
         body1.update(body3)
         sign1 = {"sign": get_sign(body1)}
         body1.update(sign1)
-        body = json.dumps(dict(body1))
+        body5 = json.dumps(dict(body1))
         commentadd_url = HTTP + "/as_community/api/comment/v1/add"
         r = Requests(self.session).post(
-            url=commentadd_url, headers=headers, data=body, title="发表评论的评论"
+            url=commentadd_url, headers=headers, data=body5, title="发表评论的评论"
         )
         h = r.json()
         # print(h)
-        body = {'commentId': f"{commentId}"}
+        body6 = {'commentId': f"{commentId}"}
         body1 = {}
-        body1.update(body)
+        body1.update(body6)
         sign1 = {"sign": get_sign(body1)}
         body1.update(sign1)
-        body = json.dumps(dict(body1))
+        body7 = json.dumps(dict(body1))
         commentmore_list_url = HTTP + "/as_community/api/comment/v1/more_list"
         r = Requests(self.session).post(
-            url=commentmore_list_url, headers=headers, data=body, title="查询一级评论下的更多评论"
+            url=commentmore_list_url, headers=headers, data=body7, title="查询一级评论下的更多评论"
         )
         k = r.json()
         # print(k)
+        # 删帖社区帖子
+        delete_url = HTTP + "/as_community/api/post/v1/delete"
+        # postId = y.get("data").get("postId")
+        # print(postId)
+        # body8 = {'postId': f"{postId}"}
+        Communitypostdelete(delete_url, headers, body4)
         # # 断言
         assert r.status_code == 200
         assert h.get("code") == "000000"
@@ -175,8 +174,8 @@ class TestCommunitycommentmore_list():
                         "userId") == list(list(userId)[0])[0]
                     assert k.get("data")[0].get("fromUser").get("nickname") == k.get("data")[0].get("toUser").get(
                         "nickname") == glo.nickname
-                    assert k.get("data")[0].get("fromUser").get("headPhoto") == k.get("data")[0].get("toUser").get(
-                        "headPhoto") == glo.headPhoto
+                    # assert k.get("data")[0].get("fromUser").get("headPhoto") == k.get("data")[0].get("toUser").get(
+                    #     "headPhoto") == glo.headPhoto
                     # assert k.get("data")[0].get("fromUser").get("zrNo") == glo.zrNo
                 else:
                     logging.info("不是自已评论自己（fromUser和toUser不一致）")
@@ -190,22 +189,3 @@ class TestCommunitycommentmore_list():
                 assert "praise" in k.get("data")[0]
                 assert "commentType" in k.get("data")[0]
                 assert "praiseNum" in k.get("data")[0]
-                postId = y.get("data").get("postId")
-                # print(postId)
-                body = {'postId': f"{postId}"}
-                sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-                body1 = {}
-                body1.update(body)
-                body1.update(sign1)
-                # print(body1)
-                delete_url = HTTP + "/as_community/api/post/v1/delete"
-
-                r = Requests(self.session).post(
-                    url=delete_url, headers=headers, json=body1, title="删帖"
-                )
-                j = r.json()
-                # print(j)
-                # 断言
-                assert r.status_code == 200
-                assert j.get("code") == "000000"
-                assert j.get("msg") == "ok"

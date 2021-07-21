@@ -4,12 +4,13 @@ import json
 import allure
 import pytest
 
+
 from Common.getTestLoginToken import getlogintoken
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
 
-from glo import JSON1, HTTP, phone5, pwd5, phoneArea
+from glo import JSON1, HTTP, phoneArea, countryCode, phone5, pwd5
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -34,7 +35,7 @@ class TestSMSSendUpdatePasswordCode():
         headers1.update(token)  # 将token更新到headers
         boby = {
             "phone": phone5,
-            "countryCode": phoneArea
+            "countryCode": countryCode
         }
         sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
         payload1 = {}

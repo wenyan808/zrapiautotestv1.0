@@ -1,0 +1,28 @@
+[
+  {
+    "smsCode": "1"
+  },
+  {
+    "smsCode": "2"
+  },
+  {
+    "smsCode": "3"
+  },
+  {
+    "smsCode": "4"
+  },
+  {
+    "smsCode": "5"
+  },
+  {
+    "smsCode": "6"
+  },
+  {
+    "smsCode": "7",
+    "type": 1
+  },
+  {
+    "smsCode": "7",
+    "type": 2
+  }
+]

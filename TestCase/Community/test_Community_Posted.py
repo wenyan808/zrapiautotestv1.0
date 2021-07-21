@@ -6,6 +6,7 @@ import allure
 import pytest
 
 import glo
+from Common.Community_common.Community_post import Communitypostdelete
 from Common.login import login
 from Common.requests_library import Requests
 from Common.show_sql import showsql
@@ -58,10 +59,19 @@ class TestCommunityPosted:
         r = Requests(self.session).post(
             url=url, headers=headers, data=payload, title=title
         )
-        # r = requests.post(url=url, headers=headers, data=payload)
-        # 断言
+
         j = r.json()
         # print(j)
+        # 删帖社区帖子url
+        delete_url = HTTP + "/as_community/api/post/v1/delete"
+        if "data" in j and len(j.get("data")) != 0:
+            postId = j.get("data").get("postId")
+            # print(postId)
+        else:
+            raise AssertionError(j)
+        body = {'postId': f"{postId}"}
+        # 删帖社区帖子
+        Communitypostdelete(delete_url, headers, body)
         assert r.status_code == 200
         if j.get("code") == "000000":
             assert j.get("code") == "000000"
@@ -90,25 +100,7 @@ class TestCommunityPosted:
                     assert "commentNum" in j.get("data")
                     assert "firstCommentNum" in j.get("data")
                     assert "praise" in j.get("data")
-                    postId = j.get("data").get("postId")
-                    # print(postId)
-                    body = {'postId': f"{postId}"}
-                    sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-                    body1 = {}
-                    body1.update(body)
-                    body1.update(sign1)
-                    # print(body1)
-                    delete_url = HTTP + "/as_community/api/post/v1/delete"
 
-                    r = Requests(self.session).post(
-                        url=delete_url, headers=headers, json=body1, title="删帖"
-                    )
-                    j = r.json()
-                    # print(j)
-                    # 断言
-                    assert r.status_code == 200
-                    assert j.get("code") == "000000"
-                    assert j.get("msg") == "ok"
         elif j.get("code") == "460301":
             raise AssertionError("请不要发布重复内容")
         elif j.get("code") == "460300":

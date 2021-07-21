@@ -30,7 +30,7 @@ class TestETFplanklist:
         headers = JSON
 
         # 拼装参数
-        paylo = {"market":1}
+        # paylo = {"market":1}
         paylo = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
@@ -82,10 +82,10 @@ class TestETFplanklist:
                         elif "comparison" in j.get("data")[i]:
                             assert "comparison" in j.get("data")[i]
                         # assert "totalMarkValue" in j.get("data")[i]
-                        if info.get("market") == 2 and "direction" in j.get("data")[i]:
+                        if "direction" in j.get("data")[i]:
                             assert "direction" in j.get("data")[i]
                             assert "lever" in j.get("data")[i]
-                        elif info.get("market") == 1:
+                        elif "totalCapitalStock" in j.get("data")[i]:
                             assert "totalCapitalStock" in j.get("data")[i]
 
                         elif str(j.get("data")[i].get("delay")) == "true":
@@ -104,4 +104,4 @@ class TestETFplanklist:
             assert j.get("msg") == "sortItem out of range"
 
         else:
-            raise AssertionError("其他错误")
+            raise AssertionError(j)

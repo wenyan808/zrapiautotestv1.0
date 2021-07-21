@@ -16,7 +16,7 @@ def login_xinxi(phone, pwd, area):
     # 加密
     pwd_md5 = get_md5(pwd)
 
-    return {"phone": phone, "password": pwd_md5, "phoneArea": area}
+    return {"phone": phone, "loginPassword": pwd_md5, "phoneArea": area}
 # print(pwd1)
 
 

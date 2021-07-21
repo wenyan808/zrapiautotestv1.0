@@ -3,6 +3,7 @@ from os.path import join
 
 from pymysql import *
 from Common.tools.write_xlsx import write_xlsx
+from glo import phone
 
 
 def showsql(host, user, password, database, sql):

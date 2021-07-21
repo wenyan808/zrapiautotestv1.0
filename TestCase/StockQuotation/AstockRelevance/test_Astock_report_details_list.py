@@ -21,7 +21,7 @@ class TestAstockReportDetailsList:
     def test_Astock_report_details_list_notoken(self):
         response = zhuorui('A股', '个股研报分页查询_token为0')
         assert_data(response, '000000', 'ok')
-        # print(response.text)
+        # print(response.json())
 
     @allure.story('个股研报分页查询_ts为空')
     def test_Astock_report_details_list_tsNone(self):

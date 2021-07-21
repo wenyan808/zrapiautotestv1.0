@@ -53,33 +53,42 @@ class TestIMAnnounceList():
         )
 
         j = r.json()
-        # print(j)
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
-        if "data" in j:
-            if len(j.get("data")) != 0:
-                for i in range(len(j.get("data"))):
-                    assert "id" in j.get("data")[i]
-                    assert "lineId" in j.get("data")[i]
-                    assert "announceName" in j.get("data")[i]
-                    assert "pubDate" in j.get("data")[i]
-                    if "announceContent" in j.get("data")[i]:
-                        assert "announceContent" in j.get("data")[i]
-                    assert "code" in j.get("data")[i]
-                    assert "market" in j.get("data")[i]
-                    if "ts" in j.get("data")[i]:
-                        assert "ts" in j.get("data")[i]
-                    if "stockNameVo" in j.get("data")[i]:
-                        assert "ts" in j.get("data")[i].get("stockNameVo")
-                        assert "code" in j.get("data")[i].get("stockNameVo")
-                        assert "type" in j.get("data")[i].get("stockNameVo")
-                        assert "name" in j.get("data")[i].get("stockNameVo")
-                    else:
-                        logging.info("stockNameVo不在data中")
-                    assert "url" in j.get("data")[i]
+        if info.get("assert_type") == 1:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+            if "data" in j:
+                if len(j.get("data")) != 0:
+                    for i in range(len(j.get("data"))):
+                        assert "id" in j.get("data")[i]
+                        assert "lineId" in j.get("data")[i]
+                        assert "announceName" in j.get("data")[i]
+                        assert "pubDate" in j.get("data")[i]
+                        if "announceContent" in j.get("data")[i]:
+                            assert "announceContent" in j.get("data")[i]
+                        assert "code" in j.get("data")[i]
+                        assert "market" in j.get("data")[i]
+                        if "ts" in j.get("data")[i]:
+                            assert "ts" in j.get("data")[i]
+                        if "stockNameVo" in j.get("data")[i]:
+                            assert "ts" in j.get("data")[i].get("stockNameVo")
+                            assert "code" in j.get("data")[i].get("stockNameVo")
+                            assert "type" in j.get("data")[i].get("stockNameVo")
+                            assert "name" in j.get("data")[i].get("stockNameVo")
+                        else:
+                            logging.info("stockNameVo不在data中")
+                        assert "url" in j.get("data")[i]
 
+                else:
+                    logging.info("data为空")
             else:
-                logging.info("data为空")
+                logging.info("data不在j中")
+        elif info.get("assert_type") == 0:
+            assert j.get("code") == "000103"
+            assert j.get("msg") == "参数校验不通过"
         else:
-            logging.info("data不在j中")
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{r}")

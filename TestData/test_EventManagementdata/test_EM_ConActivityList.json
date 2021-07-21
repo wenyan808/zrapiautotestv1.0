@@ -1,0 +1,108 @@
+[{
+    "pageSize": 100,
+    "currentPage": 1
+  },
+  {
+    "pageSize": 20,
+    "currentPage": 1
+  },
+  {
+    "activityId": "",
+    "activityName": "",
+    "virtual":1,
+    "showStatus":0,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 1
+  },{
+    "activityId": "",
+    "activityName": "",
+    "virtual":1,
+    "showStatus":1,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 1
+  },{
+    "activityId": "",
+    "activityName": "",
+    "virtual":1,
+    "showStatus":2,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 1
+  },{
+    "activityId": "",
+    "activityName": "",
+    "virtual":1,
+    "showStatus":3,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 1
+  },{
+    "activityId": "",
+    "activityName": "",
+    "virtual":1,
+    "showStatus":4,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 1
+  },{
+    "activityId": "",
+    "activityName": "",
+    "virtual":1,
+    "showStatus":5,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 1
+  },
+  {
+    "activityId": "",
+    "activityName": "",
+    "virtual":1,
+    "showStatus":5,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 1
+  },{
+    "activityId": "",
+    "activityName": "",
+    "virtual":0,
+    "showStatus":0,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 1
+  },{
+    "activityId": "",
+    "activityName": "",
+    "virtual":1,
+    "showStatus":0,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 2
+  },{
+    "activityId": "",
+    "activityName": "",
+    "virtual":1,
+    "showStatus":0,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 1
+  },{
+    "activityId": "9e184685f2344e369d84c8186a856ffc",
+    "activityName": "",
+    "virtual":1,
+    "showStatus":0,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 1
+  },
+  {
+    "activityId": null,
+    "activityName": "美股LV1活动卡券活动",
+    "virtual":1,
+    "showStatus":0,
+    "pageSize":20,
+    "currentPage":1,
+    "sort": 2
+  }
+]

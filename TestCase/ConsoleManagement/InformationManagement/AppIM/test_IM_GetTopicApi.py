@@ -69,8 +69,12 @@ class TestIMGetTopicApi():
                 if "backgroundImg" in j.get("data"):
                     assert "https://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/information/" \
                            in j.get("data").get("backgroundImg")
+                elif "headImg" in j.get("data"):
+                    assert j.get("data").get("headImg") == \
+                           "https://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/" \
+                           "information/20210621/13bd8850-d25a-11eb-94bb-5904ce8ea223.jpg"
                 else:
-                    raise AssertionError(j.get("data").get("backgroundImg"))
+                    raise AssertionError(j.get("data"))
             else:
                 logging.info("data为空")
         else:

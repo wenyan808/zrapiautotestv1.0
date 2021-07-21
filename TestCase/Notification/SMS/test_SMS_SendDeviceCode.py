@@ -9,7 +9,7 @@ from Common.sign import get_sign
 from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
 
-from glo import HTTP
+from glo import HTTP, countryCode
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -36,10 +36,10 @@ class TestSMSSendDeviceCode():
         }
 
         phone = "15817293400"
-        phoneArea = "86"
+
         boby = {
             "phone": phone,
-            "countryCode": phoneArea
+            "countryCode": countryCode
         }
         sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
         payload1 = {}
@@ -57,4 +57,4 @@ class TestSMSSendDeviceCode():
             assert j.get("msg") == "ok"
 
         else:
-            raise ValueError(f"{j}")
+            raise AssertionError(f"{j}")

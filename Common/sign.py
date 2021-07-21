@@ -16,7 +16,8 @@ def get_sign(payload1):
     sign = sign1[2:-1:]
     # print(response)
     return sign
-
+# print(get_sign({"password": "372003d405088971640c0b6bfd6a7346", "phone": "15816263996", "phoneArea": "86"}))
+# print(get_sign({}))
 # get_sign({
 #   "handicap": {
 #       "stockList": [{"ts":"SH","type":"2","code":"688466"}],

@@ -7,7 +7,7 @@ count_username = 0
 lock_username = threading.Lock()
 
 
-def get_unique_username(n: int, prefix="t") -> list:
+def get_unique_username(n: int, prefix="zr") -> list:
     """获取不重复用户名
 
     :param n: 数量

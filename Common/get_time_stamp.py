@@ -132,6 +132,37 @@ def timeTostamp13(data: str, format_string='%Y-%m-%d %H:%M:%S.%f'):
     time_stamp = int(datetime.datetime.timestamp(time_array) * 1000)
     return time_stamp
 
+
+def timetostamp13(data: str, format_string='%Y-%m-%d'):
+    """将时间字符串转换为13位时间戳，时间字符串默认为 2021-05-08格式
+
+    :param data:时间字符串
+    :param format_string:时间字符串(毫秒)默认为 2021-05-08格式
+    :return:13位时间戳
+    """
+    time_array = datetime.datetime.strptime(data, format_string)
+    time_stamp = int(datetime.datetime.timestamp(time_array) * 1000)
+    return time_stamp
+
+def getTimeTostamp(day:int):
+    """获取指定时间的时间格式转换为13位时间戳
+    :param day
+    :return:时间戳值
+    """
+    # 先获得时间数组格式的日期
+    OneMonthAgo = (datetime.datetime.now() + datetime.timedelta(days=day))
+    # 10位，时间点相当于从UNIX TIME的纪元时间开始的当年时间编号
+    date_stamp = str(int(time.mktime(OneMonthAgo.timetuple())))
+    # 3位，微秒
+    data_microsecond = str("%d" % OneMonthAgo.microsecond)[0:3]
+    date_stampday = date_stamp + data_microsecond
+    return int(date_stampday)
+# print(getTimeTostamp(30))
+
+def gettoday():
+    today = datetime.date.today()
+    return today
+
 # if __name__ == '__main__':
 #     a1 = get_time_stamp16()
 #     print(a1)

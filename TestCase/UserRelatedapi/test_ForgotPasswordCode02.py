@@ -9,12 +9,12 @@ from Common.sign import get_sign
 from Common.requests_library import Requests
 from Common.tools.md5 import get_md5
 
-from glo import JSON, HTTP
+from glo import JSON, HTTP, countryCode, phoneArea
 
 
 # @pytest.mark.skip(reason="调试中 ")
 @allure.feature('用户相关接口-忘记登录密码-第二步')
-class TestForgotPasswordCode01():
+class TestForgotPasswordCode02():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
@@ -23,15 +23,19 @@ class TestForgotPasswordCode01():
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    def test_ForgotPasswordCode01(self):
+    def test_ForgotPasswordCode02(self):
         # 拼装参数
         headers = JSON
 
         phone = "15816262885"
         password = "zr1234567"
+        smsCode = "2"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
+        # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
+        # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
         boby = {
             "phone": phone,
-            "countryCode": "86"
+            "countryCode": countryCode,
+            "smsCode": smsCode
         }
         sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
         payload1 = {}
@@ -40,8 +44,8 @@ class TestForgotPasswordCode01():
 
         payload = json.dumps(dict(payload1))
         response_getdata = Requests(self.session).post(
-            url=HTTP + "/as_notification/api/sms/v1/send_forget_code",
-            headers=headers, data=payload, title="发送登陆短信验证码"
+            url=HTTP + "/as_notification/api/sms/v1/send_code",
+            headers=headers, data=payload, title="发送短信"
         )
         verificationCode = response_getdata.json().get("data")
 
@@ -50,7 +54,7 @@ class TestForgotPasswordCode01():
             "newLoginPassword": get_md5(password),
             "verificationCode": verificationCode,
             "phone": phone,
-            "phoneArea": "86"
+            "phoneArea": phoneArea
         }
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}

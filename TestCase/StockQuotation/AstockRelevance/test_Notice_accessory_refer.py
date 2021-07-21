@@ -18,8 +18,6 @@ class TestNoticeAccessoryRefer:
         # print(response.text)
         assert response.status_code == 200
         if "data" in response.json():
-            # print(response.json().get("data")[0])
-            # print(response.json().get("data")[1].get("code"))
             if len(response.json().get("data")) != 0:
                 for info in response.json().get("data"):
                     # print(info)

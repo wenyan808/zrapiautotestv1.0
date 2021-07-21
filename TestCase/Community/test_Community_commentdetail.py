@@ -6,6 +6,7 @@ import allure
 import pytest
 
 import glo
+from Common.Community_common.Community_post import Communitypostdelete
 from Common.login import login
 from Common.show_sql import showsql
 from Common.sign import get_sign
@@ -37,14 +38,7 @@ class TestCommunitycommentdetail():
             "articleType": 2,
             "content": "12月6日凌晨，嫦娥五号上升器成功与轨道器和返回器组合体交会对接，并将样品容器安全转移至返回器中。"
                        "这是我国首次实现月球轨道交会对接，也是人类首次在月球轨道进行无人交会对接。按计划，嫦娥五号将于12月中下旬返回地球。"
-                       "[tag:00700.HK][tag:600519.SH]"
-                       "[img:community/images/2020/12/04/16070706185435230.png]",
-            "images": [{
-                "name": "community/images/2020/12/04/16070706185435230.png",
-                "w": 1000,
-                "h": 563,
-                "url": "http://zhuorui-public.oss-cn-shenzhen.aliyuncs.com/community/images/2020/12/04/16070706185435230.png"
-            }],
+                       "[tag:00700.HK][tag:600519.SH]",
             "products": [
                 {
                     "ts": "Hk",
@@ -105,28 +99,34 @@ class TestCommunitycommentdetail():
         body1.update(body2)
         sign1 = {"sign": get_sign(body1)}  # 把参数签名后通过sign1传出来
         body1.update(sign1)
-        body = json.dumps(dict(body1))
+        body3 = json.dumps(dict(body1))
         # print(body)
         comment_url = HTTP + "/as_community/api/comment/v1/add"
         # print(comment_url)
         r = Requests(self.session).post(
-            url=comment_url, headers=headers, data=body, title="发表评论"
+            url=comment_url, headers=headers, data=body3, title="发表评论"
         )
         j = r.json()
         # print(j)
         commentId = j.get("data").get("commentId")
-        body = {'commentId': f"{commentId}"}
+        body4 = {'commentId': f"{commentId}"}
         body1 = {}
-        body1.update(body)
+        body1.update(body4)
         sign1 = {"sign": get_sign(body1)}
         body1.update(sign1)
-        body = json.dumps(dict(body1))
+        body5 = json.dumps(dict(body1))
         commentdetail_url = HTTP + "/as_community/api/comment/v1/detail"
         r = Requests(self.session).post(
-            url=commentdetail_url, headers=headers, data=body, title="查看评论详情"
+            url=commentdetail_url, headers=headers, data=body5, title="查看评论详情"
         )
         h = r.json()
         # print(h)
+        # 删帖社区发帖
+        delete_url = HTTP + "/as_community/api/post/v1/delete"
+        # postId = y.get("data").get("postId")
+        # print(postId)
+        # body = {'postId': f"{postId}"}
+        Communitypostdelete(delete_url, headers, body)
         # # 断言
         assert r.status_code == 200
         assert h.get("code") == "000000"
@@ -143,7 +143,7 @@ class TestCommunitycommentdetail():
                 if "fromUser" in h.get("data"):
                     assert h.get("data").get("fromUser").get("userId") == list(list(userId)[0])[0]
                     assert h.get("data").get("fromUser").get("nickname") == glo.nickname
-                    assert h.get("data").get("fromUser").get("headPhoto") == glo.headPhoto
+                    # assert h.get("data").get("fromUser").get("headPhoto") == glo.headPhoto
                     assert h.get("data").get("fromUser").get("zrNo") == glo.zrNo
                 assert h.get("data").get("content") == body2.get("content")
                 assert "products" in h.get("data")
@@ -151,22 +151,3 @@ class TestCommunitycommentdetail():
                 assert "commentType" in h.get("data")
                 assert "praiseNum" in h.get("data")
                 assert "commentNum" in h.get("data")
-                postId = y.get("data").get("postId")
-                # print(postId)
-                body = {'postId': f"{postId}"}
-                sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-                body1 = {}
-                body1.update(body)
-                body1.update(sign1)
-                # print(body1)
-                delete_url = HTTP + "/as_community/api/post/v1/delete"
-
-                r = Requests(self.session).post(
-                    url=delete_url, headers=headers, json=body1, title="删帖"
-                )
-                j = r.json()
-                # print(j)
-                # 断言
-                assert r.status_code == 200
-                assert j.get("code") == "000000"
-                assert j.get("msg") == "ok"
