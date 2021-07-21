@@ -30,7 +30,7 @@ class TestETFplanklist:
         headers = JSON
 
         # 拼装参数
-        paylo = {"market":1}
+        # paylo = {"market":1}
         paylo = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
