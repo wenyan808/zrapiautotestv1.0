@@ -6,7 +6,8 @@ import random
 import allure
 import pytest
 
-from Common.ConsoleEventManagement.ConParentCardList import get_distributeIdlist, get_ConParentCardId
+from Common.ConsoleEventManagement.Add_Voucher_ParentCard import Add_ParentCard, Add_Voucher, add_distribute
+from Common.ConsoleEventManagement.ConParentCardList import get_distributeIdlist, get_ConParentCardId, get_voucherId
 
 from Common.getConsoleLogin import getConsoleLogin_token
 from Common.get_time_stamp import timetostamp13, gettoday
@@ -41,9 +42,14 @@ class TestEMConDistributeUpdate():
         headers.update(header)
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
+        Add_Voucher(headers)  # 新增权益
+        voucherIds = [str(get_voucherId(headers, "高级行情-美股LV1权益", 0))]  # 获取权益ids
+        # print(voucherIds)
+        Add_ParentCard(headers, voucherIds)  # 新增母卡券
+        parentCardId = get_ConParentCardId(headers, 0)  # 获取母卡券id
+        add_distribute(headers, parentCardId)
+        distributeId = get_distributeIdlist(headers, 0)  # 获取定向派发id
 
-        distributeId = get_distributeIdlist(headers, 0)
-        parentCardId = get_ConParentCardId(headers, 0)
         applyType = info.get("applyType")
         applyNum = info.get("applyNum")
         reason = info.get("reason")
@@ -70,7 +76,7 @@ class TestEMConDistributeUpdate():
         )
 
         j = r.json()
-        print(j)
+        # print(j)
         assert r.status_code == 200
         try:
             assert j.get("code") == "000000"
