@@ -34,11 +34,11 @@ def get_ConParentCardId(headers: dict, n: int):
 
 
 def get_distributeIdlist(headers, n: int):
-    """获取distributeId
+    """获取distributeId（定向派发id）
 
     :param headers: 请求头带token
     :param n: 从列表中获取distributeId的下标值，一般从0开始
-    :return: 返回distributeId
+    :return: 返回distributeId（定向派发id）
     """
     url = console_HTTP + "/api/con_distribute/v1/list"
     paylo = {}
