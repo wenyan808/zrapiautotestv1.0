@@ -71,4 +71,9 @@ class TestGetUserInfo():
 
 
         else:
-            raise ValueError(f"{j}")
+            raise ValueError(
+                f"\n请求地址：{url1}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}"
+            )

@@ -34,7 +34,7 @@ class TestEMConDistributeUpdateStatus():
                              get_json(
                                  BASE_DIR + r"/TestData/test_EventManagementdata/test_EM_ConDistributeUpdateStatus.json"))
     def test_EM_ConDistributeUpdateStatus(self, info):
-        url = console_HTTP + "/api/con_distribute/v1/add"
+        url = console_HTTP + "/api/con_distribute/v1/update_status"
         header = console_JSON
         headers = {}
         headers.update(header)
@@ -61,5 +61,17 @@ class TestEMConDistributeUpdateStatus():
         j = r.json()
         # print(j)
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+
+        except:
+            assert j.get("code") == "530401"
+            assert j.get("msg") == "当前定向派发不能修改"
+
+        else:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}")

@@ -1,16 +1,18 @@
 # test_IM_ANoticeDetails
 import json
 import logging
+import random
 
 import allure
 import pytest
 
 from Common.getConsoleLogin import getConsoleLogin_token
+from Common.show_sql import showsql
 
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.read_write_json import get_json
+from Common.tools.read_write_json import get_json, write_json
 
 from glo import BASE_DIR, HTTP, JSON
 
@@ -21,18 +23,28 @@ class TestIMANoticeDetails():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        # code = showsql(
+        #     '192.168.1.237', 'root', '123456', 'stock_market',
+        #     "select code from t_stock_search where ts='HK';"
+        # )
+        # random_stock = random.sample(code, 5)
+        # code_data = list(map(lambda code: {"code": code[0]}, random_stock))
+        # write_json(BASE_DIR + r"/TestData/testIMData/test_IM_ANoticeDetails.json", code_data)
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
+    # @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/testIMData/test_IM_ANoticeDetails.json"))
     def test_IM_ANoticeDetails(self):
         url = HTTP + "/as_stock_information/api/announcement/v1/list"
         header = JSON
 
-        # 拼装参数
-        paylo = {"pageSize": 20,
-                 "market": 1}
+        code = "00700"
+        paylo = {
+            "code": code,
+            "pageSize": 20,
+            "market": 1}
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
@@ -53,8 +65,8 @@ class TestIMANoticeDetails():
         # print(j_list)
         url_details = HTTP + "/as_stock_information/api/announcement/v1/content"
 
-        # 拼装参数
-        paylo_details = {"lineId": f"{j_list.get('data')[0].get('lineId')}",
+        lineId = j_list.get('data')[0].get('lineId')
+        paylo_details = {"lineId": lineId,
                          "market": 1}
         # print(paylo_details)
         sign1 = {"sign": get_sign(paylo_details)}  # 把参数签名后通过sign1传出来

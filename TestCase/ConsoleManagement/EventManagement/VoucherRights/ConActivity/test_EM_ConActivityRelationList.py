@@ -6,6 +6,7 @@ import random
 import allure
 import pytest
 
+from Common.ConsoleEventManagement.Add_Voucher_ParentCard import Add_Voucher
 from Common.ConsoleEventManagement.ConParentCardList import get_activityId, get_ConParentCardId
 
 from Common.getConsoleLogin import getConsoleLogin_token
@@ -44,8 +45,8 @@ class TestEMConActivityRelationList():
         activityName = int(getTimeTostamp(10))
         parentCardName = int(getTimeTostamp(40))
         virtual = info.get("virtual")
-
-        activityId = get_activityId(headers, 0)  # 活动id
+        Add_Voucher(headers)
+        activityId = get_activityId(headers, "美股LV1活动卡券活动", 0, 0)  # 活动id
         pageSize = info.get("pageSize")
 
         currentPage = info.get("currentPage")

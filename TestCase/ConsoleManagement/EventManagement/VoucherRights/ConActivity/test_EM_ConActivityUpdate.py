@@ -46,7 +46,7 @@ class TestEMConActivityUpdate():
         parentCardId = get_ConParentCardId(headers, 0)
         applyType = info.get("applyType")
         applyNum = info.get("applyNum")
-        activityId = get_activityId(headers, 0)  # 活动id
+        activityId = get_activityId(headers, "美股LV1活动卡券活动", 0, 0)  # 活动id
 
         paylo = {"activityId": activityId,
                  "publishStartTime": publishStartTime,
@@ -72,5 +72,17 @@ class TestEMConActivityUpdate():
         j = r.json()
         # print(j)
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+
+        except:
+            assert j.get("code") == "530304"
+            assert j.get("msg") == "活动已停用"
+
+        else:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}")

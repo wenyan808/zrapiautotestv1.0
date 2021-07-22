@@ -43,15 +43,14 @@ class TestEMConActivityAdd():
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         Add_Voucher(headers)  # 新增权益
-        voucherIds = [str(get_voucherId(headers, 0))]  # 获取权益id
+        voucherIds = [str(get_voucherId(headers,"高级行情-美股LV1权益", 0))]  # 获取权益id
         # print(voucherIds)
         Add_ParentCard(headers, voucherIds)  # 新增母卡券
 
         paylo = info
         publishStartTime = int(getTimeTostamp(1))  # 活动发布开始时间
         publishEndTime = int(getTimeTostamp(30))  # 活动发布结束时间
-        # groupId = list(ImportConUserGroup("user_group", "groupid_phone.xlsx", headers))[0]  # 用户组id
-        # groupId = "all"
+
         parentCardId = get_ConParentCardId(headers, 0)  # 获取母卡券id
         totalNum = "20"  # 总数
         # position = 2  # 广告位置 ff1、活动-热门活动 2、活动-普通活动
@@ -60,7 +59,6 @@ class TestEMConActivityAdd():
         # accessUrl = "http://zr66.com"  # 广告连接地址
         paylo1 = {"publishStartTime": publishStartTime,
                   "publishEndTime": publishEndTime,
-                  # "groupId": groupId,
                   "activityParentCard": [{
                       "parentCardId": parentCardId,
                       "totalNum": totalNum

@@ -6,7 +6,8 @@ import random
 import allure
 import pytest
 
-from Common.ConsoleEventManagement.ConParentCardList import get_ConParentCardId
+from Common.ConsoleEventManagement.Add_Voucher_ParentCard import Add_ParentCard, Add_Voucher, add_activity
+from Common.ConsoleEventManagement.ConParentCardList import get_ConParentCardId, get_voucherId
 from Common.ConsoleEventManagement.ImportConUserGroup import ImportConUserGroup
 from Common.getConsoleLogin import getConsoleLogin_token
 from Common.get_time_stamp import TimeToStamp13, gettoday
@@ -39,9 +40,16 @@ class TestEMConDistributeAdd():
         headers.update(header)
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
-        groupId = list(ImportConUserGroup("user_group", "groupid_phone.xlsx", headers))[0]
-        distributeTime = int(TimeToStamp13(str(gettoday())+' '+"11:00:00"))
-        parentCardId = get_ConParentCardId(headers, 0)
+        # 新增权益
+        Add_Voucher(headers)
+        # 获取权益id
+        voucherId = get_voucherId(headers, "高级行情-美股LV1权益", 0)
+        voucherIds = [voucherId]  # 复数权益id，可以多个（权益ids string[]）
+        Add_ParentCard(headers, voucherIds)  # 新增母卡券
+
+        groupId = list(ImportConUserGroup("user_group", "groupid_phone.xlsx", headers))[0]  # 用户组id
+        distributeTime = int(TimeToStamp13(str(gettoday()) + ' ' + "11:00:00"))  # 派发开始时间
+        parentCardId = get_ConParentCardId(headers, 0)  # 母卡券id
         totalNum = "20"
         paylo = info
         paylo1 = {
@@ -68,5 +76,17 @@ class TestEMConDistributeAdd():
         j = r.json()
         # print(j)
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+
+        except:
+            assert j.get("code") == "530114"
+            assert j.get("msg") == "母卡券应为自动激活"
+
+        else:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}")

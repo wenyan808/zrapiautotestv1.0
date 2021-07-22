@@ -13,7 +13,7 @@ from Common.tools.read_write_json import get_json, write_json
 
 from Common.tools.unique_text import get_unique_phone
 
-from glo import JSON1, HTTP, BASE_DIR, countryCode, pwd1, phoneArea, newPhoneArea
+from glo import JSON2, HTTP, BASE_DIR, countryCode, pwd1, phoneArea, newPhoneArea
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -42,7 +42,7 @@ class TestModifyPhone02():
 
         # 获取登录的token
         headers_token = getlogintoken(phone, password, phoneArea)
-        header = JSON1
+        header = JSON2
         headers1 = {}
         headers1.update(header)
         token = {"token": headers_token}
@@ -107,6 +107,7 @@ class TestModifyPhone02():
         )
         newVerificationCode = response1_getdata1.json().get("data")
         businessAccessToken = j.get("data").get('businessAccessToken')
+        # print(businessAccessToken)
         url1 = HTTP + "/as_user/api/user_account/v1/modify_phone_v2"
         paylo = {
             "businessAccessToken": businessAccessToken,
@@ -129,8 +130,14 @@ class TestModifyPhone02():
         # print(j1)
 
         assert r1.status_code == 200
-        if j1.get("code") == "000000":
+        try:
+            assert j1.get("code") == "000000"
             assert j1.get("msg") == "ok"
 
-        else:
-            raise AssertionError(f"{j1}")
+        except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers1}"
+                f"\n返回数据结果：{j}"
+            )

@@ -6,16 +6,14 @@ import random
 import allure
 import pytest
 
-
-from Common.ConsoleEventManagement.ConParentCardList import get_activityId
+from Common.ConsoleEventManagement.Add_Voucher_ParentCard import add_activity
+from Common.ConsoleEventManagement.ConParentCardList import get_activityId, get_ConParentCardId
 
 from Common.getConsoleLogin import getConsoleLogin_token
-
 
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-
 
 from glo import console_JSON, console_HTTP
 
@@ -39,8 +37,9 @@ class TestEMConActivityDetail():
         headers.update(header)
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
-
-        activityId = get_activityId(headers, 0)  # 活动id
+        parentCardId = get_ConParentCardId(headers, 0)
+        add_activity(headers, parentCardId)
+        activityId = get_activityId(headers, "美股LV1活动卡券活动", 0, 0)  # 活动id
 
         paylo = {"activityId": activityId}
 

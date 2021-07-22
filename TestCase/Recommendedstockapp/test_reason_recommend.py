@@ -1,3 +1,4 @@
+# 查询推荐理由
 import json
 import requests as requests
 from Common.getTestLoginToken import gettestLoginToken
@@ -33,10 +34,20 @@ class Testreasoncommend():
         # print(r)
 
         assert response.status_code == 200
-        assert r.get("code") == "000000"
-        assert r.get("msg") == "ok"
-        if "data" in r:
-            assert type(r.get("data")) == list
-            # if len(j.get("data").get("list") != 0:
-            #     for i in range(len(j.get("data").get("list"))):
-        #     assert r.get("data").get("yesterday") == True
+        try:
+            assert r.get("code") == "000000"
+            assert r.get("msg") == "ok"
+            if "data" in r:
+                for i in range(len(r.get("data"))):
+                    assert "type" in r.get("data")[i]
+                    for j in range(len(r.get("data")[i].get("list"))):
+                        assert "title" in r.get("data")[i].get("list")[j]
+                        assert "desc" in r.get("data")[i].get("list")[j]
+        except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{r}"
+            )
+

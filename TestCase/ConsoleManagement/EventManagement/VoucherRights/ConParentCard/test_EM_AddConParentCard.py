@@ -10,7 +10,7 @@ from Common.ConsoleEventManagement.ConParentCardList import get_ConParentCardId
 from Common.ConsoleEventManagement.ConParentCardUpdateStatus import UpdateStatus_conparentcard
 from Common.ConsoleEventManagement.ImportConUserGroup import ImportConUserGroup
 from Common.getConsoleLogin import getConsoleLogin_token
-from Common.get_time_stamp import TimeToStamp13, gettoday
+from Common.get_time_stamp import TimeToStamp13, gettoday, TimeTostamp, getTimeTostamp
 
 from Common.sign import get_sign
 
@@ -46,14 +46,19 @@ class TestEMAddConParentCard():
         voucherIds = info.get("voucherIds")  # 权益ids
         parentCardTotalNum = info.get("parentCardTotalNum")  # 母卡券总数数量
         activationType = info.get("activationType")  # 激活方式:1、自动激活 2、手动激活
-        activationStartTime = int(TimeToStamp13(info.get("activationStartTime")))  # 激活开始时间
-        activationEndTime = int(TimeToStamp13(info.get("activationEndTime")))  # 激活结束时间
+        # activationStartTime = int(TimeToStamp13(info.get("activationStartTime")))  # 激活开始时间
+        activationStartTime = getTimeTostamp(0)
+        # activationEndTime = int(TimeToStamp13(info.get("activationEndTime")))  # 激活结束时间
+        activationEndTime = getTimeTostamp(30)
         validType = info.get("validType")  # 权益时间类型1、天数2、时间范围
         validDays = info.get("validDays")  # 权益有效期天数
-        validStartTime = int(TimeToStamp13(info.get("validStartTime")))
+
         # 权益时间段开始时间
-        alidEndTime = int(TimeToStamp13(info.get("alidEndTime")))
+        # validStartTime = int(TimeToStamp13(info.get("validStartTime")))
+        validStartTime = getTimeTostamp(1)
         # 权益时间段结束时间
+        # alidEndTime = int(TimeToStamp13(info.get("alidEndTime")))
+        alidEndTime = getTimeTostamp(30)
         receiveType = info.get("receiveType")  # 领取方式:1、自动领取 2、手动领取
         receiveMode = info.get("receiveMode")  # 领取模式 1、一人一次 2、一人多次
         receiveNum = info.get("receiveNum")  # 可领取次数
@@ -99,5 +104,17 @@ class TestEMAddConParentCard():
         # 母卡券停用
         UpdateStatus_conparentcard(headers, parentCardId, 5)
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+
+        except:
+            assert j.get("code") == "530106"
+            assert j.get("msg") == "激活结束时间必须在激活开始时间之后"
+
+        # else:
+        #     raise AssertionError(
+        #         f"\n请求地址：{url}"
+        #         f"\nbody参数：{payload}"
+        #         f"\n请求头部参数：{headers}"
+        #         f"\n返回数据结果：{j}")

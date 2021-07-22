@@ -69,7 +69,7 @@ class TestFansList():
                 )
                 assert j.get("data")[0].get("userId") == list(list(userId)[0])[0]
                 assert j.get("data")[0].get("nickname") == "卓锐用户48066661"
-                assert j.get("data")[0].get("fansCount") == 0
+                assert j.get("data")[0].get("fansCount") == 1
                 assert j.get("data")[0].get("createTime") == 1626775927000
                 assert j.get("data")[0].get("zrNo") == "48066661"
 
