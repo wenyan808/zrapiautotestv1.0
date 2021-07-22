@@ -37,7 +37,7 @@ class TestIMAnnouncementList():
 
         # 拼装参数
         paylo = {
-            "pageSize": 100,
+            "pageSize": 20,
             "currentPage": 1
         }
         # paylo = info
@@ -62,12 +62,12 @@ class TestIMAnnouncementList():
 
         j = r.json()
         # print(j)
-        print(
-            f"\n请求地址：{url}"
-            f"\nbody参数：{payload}"
-            f"\n请求头部参数：{headers}"
-            f"\n返回数据结果：{j}"
-        )
+        # print(
+        #     f"\n请求地址：{url}"
+        #     f"\nbody参数：{payload}"
+        #     f"\n请求头部参数：{headers}"
+        #     f"\n返回数据结果：{j}"
+        # )
         assert r.status_code == 200
         assert j.get("code") == "000000"
         assert j.get("msg") == "ok"

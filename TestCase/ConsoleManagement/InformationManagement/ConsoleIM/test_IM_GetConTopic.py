@@ -76,10 +76,12 @@ class TestIMGetConTopic():
                 assert j.get("data").get("isHot") == None
                 assert j.get("data").get("sort") == None
                 assert j.get("data").get("type") == None
-                assert "https://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/information/" \
-                       in j.get("data").get("headImg")
+                # assert "https://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/information/" \
+                #        in j.get("data").get("headImg")
+                assert j.get("data").get("headImg") == None
                 assert "https://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/information/" \
                        in j.get("data").get("backgroundImg")
+                assert j.get("data").get("topicUrl") == None
             else:
                 raise AssertionError(
                     f"\n请求地址：{url}"
