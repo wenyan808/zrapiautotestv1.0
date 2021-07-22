@@ -219,12 +219,14 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
         res = res_login.json().get("data").get("token")
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
             file.write("token: " + str(res))
+        # print(res)
         return res
 
     else:
         res = res_login.json().get("data").get("token")
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
             file.write("token: " + str(res))
+        # print(res)
         return res
 
 
