@@ -7,7 +7,7 @@ from glo import console_HTTP
 
 
 def get_ConParentCardId(headers: dict, n: int):
-    """获取parentCardId
+    """获取parentCardId（母卡券id）
 
     :param headers:请求头
     :param n: 从列表中获取parentCardId的下标值，一般从0开始
