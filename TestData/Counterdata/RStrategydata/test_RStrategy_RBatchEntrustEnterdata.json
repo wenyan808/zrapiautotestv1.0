@@ -1,0 +1,16 @@
+[
+  {
+    "type_n": 0,
+    "type_m": 0,
+    "entrustAmount": 1000,
+    "entrustBs": "1",
+    "entrustProp": "MO"
+  },
+  {
+    "type_n": 1,
+    "type_m": 1,
+    "entrustAmount": 1000,
+    "entrustBs": "1",
+    "entrustProp": "MO"
+  }
+]

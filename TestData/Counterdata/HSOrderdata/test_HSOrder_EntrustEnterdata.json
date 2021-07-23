@@ -1,0 +1,51 @@
+[
+  {
+    "ts": "HK",
+    "code": "00700",
+    "type": 2,
+    "assert_type": "0"
+  },
+  {
+    "ts": "SZ",
+    "code": "000639",
+    "type": 2,
+    "assert_type": "5"
+  },
+  {
+    "ts": "SZ",
+    "code": "300224",
+    "type": 2,
+    "assert_type": "2"
+  },
+  {
+    "ts": "SH",
+    "code": "600655",
+    "type": 2,
+    "assert_type": "3"
+  },
+  {
+    "ts": "SZ",
+    "code": "003033",
+    "type": 2,
+    "assert_type": "4"
+  },
+  {
+    "ts": "SZ",
+    "code": "002801",
+    "type": 2,
+    "assert_type": "5"
+  },
+  {
+    "ts": "SZ",
+    "code": "000333",
+    "type": 2,
+    "assert_type": "4"
+  }
+  ,
+  {
+    "ts": "SH",
+    "code": "603259",
+    "type": 2,
+    "assert_type": "5"
+  }
+]
