@@ -1,0 +1,22 @@
+[
+  {
+    "ts": "US",
+    "code": "AAPL",
+    "entrustProp": "ELO"
+  },
+  {
+    "ts": "HK",
+    "code": "00700",
+    "entrustProp": "ELO"
+  },
+    {
+    "ts": "SH",
+    "code": "603288",
+    "entrustProp": "ELO"
+  },
+    {
+    "ts": "SZ",
+    "code": "000333",
+    "entrustProp": "ELO"
+  }
+]
