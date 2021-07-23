@@ -28,19 +28,19 @@ class TestIMAnnouncementList():
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    # @pytest.mark.parametrize('info',
-    #                          get_json(BASE_DIR + r"/TestData/testIMData/test_IM_AnnouncementList.json"))
-    def test_IM_AnnouncementList(self):
+    @pytest.mark.parametrize('info',
+                             get_json(BASE_DIR + r"/TestData/testIMData/test_IM_AnnouncementList.json"))
+    def test_IM_AnnouncementList(self,info):
         url = console_HTTP + "/api/con_stock_announcement/v1/list"
         header = console_JSON
         header = header
 
         # 拼装参数
-        paylo = {
-            "pageSize": 20,
-            "currentPage": 1
-        }
-        # paylo = info
+        # paylo = {
+        #     "pageSize": 20,
+        #     "currentPage": 1
+        # }
+        paylo = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
@@ -62,42 +62,47 @@ class TestIMAnnouncementList():
 
         j = r.json()
         # print(j)
-        # print(
-        #     f"\n请求地址：{url}"
-        #     f"\nbody参数：{payload}"
-        #     f"\n请求头部参数：{headers}"
-        #     f"\n返回数据结果：{j}"
-        # )
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
-        if "data" in j:
-            if len(j.get("data")) != 0:
-                assert "list" in j.get("data")
-                if "list" in j.get("data"):
-                    if j.get("data").get("list") != None:
-                        for i in range(len(j.get("data").get("list"))):
-                            assert "annexId" in j.get("data").get("list")[i]
-                            assert "announceId" in j.get("data").get("list")[i]
-                            assert "announceName" in j.get("data").get("list")[i]
-                            assert "pubDate" in j.get("data").get("list")[i]
-                            assert "annexName" in j.get("data").get("list")[i]
-                            assert "annexFormat" in j.get("data").get("list")[i]
-                            assert "annexUrl" in j.get("data").get("list")[i]
-                            assert "announceContent" in j.get("data").get("list")[i]
-                            assert "code" in j.get("data").get("list")[i]
-                            assert "category" in j.get("data").get("list")[i]
-                            assert "market" in j.get("data").get("list")[i]
-                            assert "status" in j.get("data").get("list")[i]
-                            assert "url" in j.get("data").get("list")[i]
-                            assert "stockNameVo" in j.get("data").get("list")[i]
-                            assert "ts" in j.get("data").get("list")[i]
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+            if "data" in j:
+                if len(j.get("data")) != 0:
+                    assert "list" in j.get("data")
+                    if "list" in j.get("data"):
+                        if j.get("data").get("list") != None:
+                            for i in range(len(j.get("data").get("list"))):
+                                assert "annexId" in j.get("data").get("list")[i]
+                                assert "announceId" in j.get("data").get("list")[i]
+                                assert "announceName" in j.get("data").get("list")[i]
+                                assert "pubDate" in j.get("data").get("list")[i]
+                                assert "annexName" in j.get("data").get("list")[i]
+                                assert "annexFormat" in j.get("data").get("list")[i]
+                                assert "annexUrl" in j.get("data").get("list")[i]
+                                assert "announceContent" in j.get("data").get("list")[i]
+                                assert "code" in j.get("data").get("list")[i]
+                                assert "category" in j.get("data").get("list")[i]
+                                assert "market" in j.get("data").get("list")[i]
+                                assert "status" in j.get("data").get("list")[i]
+                                assert "url" in j.get("data").get("list")[i]
+                                assert "stockNameVo" in j.get("data").get("list")[i]
+                                assert "ts" in j.get("data").get("list")[i]
 
+                        else:
+                            logging.info("list为空")
                     else:
-                        logging.info("list为空")
+                        logging.info("list不在data中")
                 else:
-                    logging.info("list不在data中")
+                    logging.info("data为空")
             else:
-                logging.info("data为空")
-        else:
-            logging.info("data不在j中")
+                logging.info("data不在j中")
+        except:
+            assert j.get("code") == "000103"
+            assert j.get("msg") == "参数校验不通过"
+        # else:
+        #     raise AssertionError(
+        #         f"\n请求地址：{url}"
+        #         f"\nbody参数：{payload}"
+        #         f"\n请求头部参数：{headers}"
+        #         f"\n返回数据结果：{j}"
+        #     )

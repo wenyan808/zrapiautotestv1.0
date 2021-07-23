@@ -34,34 +34,34 @@ class TestIMAnnouncementDisable():
         url = console_HTTP + "/api/con_stock_announcement/v1/list"
         header = console_JSON
         header = header
-
-        # 拼装参数
+        headers = {}
+        headers.update(header)
+        token = {"token": getConsoleLogin_token()}
+        headers.update(token)  # 将token更新到headers
+        # print(headers)
         paylo = {
+            "code":"00968",
             "pageSize": 20,
             "currentPage": 1,
             "startTime": TimeTostamp(),
             "endTime": get_time_stamp13()
         }
-        # paylo = info
+        # paylo1 = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo)
+        # payload1.update(paylo1)
         payload1.update(sign1)
-        headers = {}
-        headers.update(header)
-        # print(token)
-        # print(type(token))
-        token = {"token": getConsoleLogin_token()}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
+
         payload = json.dumps(dict(payload1))
 
-        r = Requests(self.session).post(
+        r0 = Requests(self.session).post(
             url=url, headers=headers, data=payload, title="查询资讯列表"
         )
 
-        j = r.json()
+        j = r0.json()
+
         # print(j)
         # print(j.get('data').get('list')[0].get('annexId'))
         url_disable = console_HTTP + "/api/con_stock_announcement/v1/disable"
