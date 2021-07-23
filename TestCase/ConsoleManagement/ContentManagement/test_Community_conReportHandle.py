@@ -84,11 +84,11 @@ class TestCommunityConReportHandle():
         # print(jhandle)
 
         assert r.status_code == 200
-        if jhandle.get("code") == "000000":
+        try:
+
             assert jhandle.get("code") == "000000"
             assert jhandle.get("msg") == "ok"
-        elif jhandle.get("code") == "460403":
-            assert jhandle.get("msg") == "内容已被处理"
+        except:
 
-        else:
-            raise AssertionError(jhandle)
+            assert jhandle.get("code") == "460403"
+            assert jhandle.get("msg") == "内容已被处理"
