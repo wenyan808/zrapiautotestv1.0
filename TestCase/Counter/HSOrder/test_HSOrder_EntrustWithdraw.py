@@ -16,16 +16,16 @@ class TestHSOrderEntrustWithdraw():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        cls.http = list(AccountAuth())[-1]
+        cls.url = cls.http + "/as_trade/api/order/v1/entrust_enter"
+        cls.url1 = cls.http + "/as_market/api/stock_price/v1/get_prices"
+        cls.url2 = cls.http + "/as_trade/api/order/v1/entrust_withdraw"
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_HSOrder_EntEntrustWithdraw(self):
-        http = list(AccountAuth())[-1]
-        url = http + "/as_trade/api/order/v1/entrust_enter"
-        url1 = http + "/as_market/api/stock_price/v1/get_prices"
-        url2 = http + "/as_trade/api/order/v1/entrust_withdraw"
         # 拼装参数
         headers = list(AccountAuth())[1]  # 将柜台token赋值到headers
         # print(headers)
@@ -52,7 +52,7 @@ class TestHSOrderEntrustWithdraw():
         payload9 = json.dumps(dict(payload8))
 
         r_price = Requests(self.session).post(
-            url=url1, headers=headers, data=payload9, title="查询股票价格数据"
+            url=self.url1, headers=headers, data=payload9, title="查询股票价格数据"
         )
 
         k_price = r_price.json()
@@ -78,7 +78,7 @@ class TestHSOrderEntrustWithdraw():
         payload2 = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload2, title="下单"
+            url=self.url, headers=headers, data=payload2, title="下单"
         )
 
         k_order = r.json()
@@ -96,7 +96,7 @@ class TestHSOrderEntrustWithdraw():
         payload7 = json.dumps(dict(payload6))
 
         r_data = Requests(self.session).post(
-            url=url2, headers=headers, data=payload7, title="撤单"
+            url=self.url2, headers=headers, data=payload7, title="撤单"
         )
 
         j = r_data.json()

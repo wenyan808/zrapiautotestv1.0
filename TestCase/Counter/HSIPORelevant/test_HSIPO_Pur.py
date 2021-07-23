@@ -5,7 +5,7 @@ import allure
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 
 from Common.Accountcommon.accountAuth import AccountAuth
-from Common.assertapi import assert_data
+from Common.assertapi import assert_data, jsonschema_assert
 
 from Common.sign import get_sign
 
@@ -95,7 +95,7 @@ class TestHSIPOGearList():
                 # print(g)
                 assert r.status_code == 200
                 if g.get("code") == "000000":
-                    if assert_data(g.get("code"), g.get("msg"), g, PurSchema) is not (0, "success!"):
+                    if jsonschema_assert(g.get("code"), g.get("msg"), g, PurSchema) is not (0, "success!"):
                         if len(k.get("data")) != 0:
                             sign2 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
                             body2 = {}
@@ -114,7 +114,7 @@ class TestHSIPOGearList():
                             if j.get("code") == "000000":
                                 assert j.get("data").get("ts") == body.get("ts")
                                 assert j.get("data").get("data") == body.get("code")
-                                assert_data(j.get("code"), j.get("msg"), j, PurRecordDetailSchema)
+                                jsonschema_assert(j.get("code"), j.get("msg"), j, PurRecordDetailSchema)
                             else:
                                 raise AssertionError(j)
 

@@ -5,6 +5,7 @@ import allure
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 
 from Common.Accountcommon.accountAuth import AccountAuth
+from Common.assertapi import jsonschema_assert
 from Common.get_time_stamp import TimeTostamp, get_time_stamp13
 
 from Common.sign import get_sign
@@ -61,16 +62,6 @@ class TestHSMoneyExchangeList():
         # print(j)
         assert r.status_code == 200
         if j.get("code") == "000000":
-            assert j.get("code") == "000000"
-            assert j.get("msg") == "ok"
-            schema = j
-            try:
-                validate(instance=ListSchema, schema=schema, format_checker=draft7_format_checker)
-            except SchemaError as e:
-                return 1, f"验证模式schema出错：\n出错位置：{'--> '.join([i for i in e.path])}\n提示信息：{e.message}"
-            except ValidationError as e:
-                return 1, f"json数据不符合schema规定：\n出错字段：{'-->'.join([i for i in e.path])}\n提示信息：{e.message}"
-            else:
-                return 0, "success!"
+            jsonschema_assert(j.get("code"), j.get("msg"), j, ListSchema)
         else:
             raise AssertionError(j)
