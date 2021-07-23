@@ -8,6 +8,7 @@ from Common.tools.md5 import get_md5
 from Common.tools.write_xlsx import write_xlsx
 from glo import BASE_DIR, pwd, phone
 
+
 # @pytest.mark.skip(reason='调试中')
 class TestLogin:
     @allure.story('用户密码登录')
@@ -29,8 +30,3 @@ class TestLogin:
 
 if __name__ == '__main__':
     pytest.main()
-
-
-
-
-

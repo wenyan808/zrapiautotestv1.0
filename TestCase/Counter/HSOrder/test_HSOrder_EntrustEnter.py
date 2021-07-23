@@ -109,28 +109,32 @@ class TestHSOrderEntrustEnter():
 
         elif info.get("assert_type") == "1":
             # print(k)
-            assert k.get("code") == "350001"
             assert k.get("msg") == "下单失败"
+            assert k.get("code") == "350001"
 
         elif info.get("assert_type") == "2":
             # print(k)
-            assert k.get("code") == "932155"
             assert k.get("msg") == "客户存在创业板交易控制，不允许委托"
+            assert k.get("code") == "932155"
 
         elif info.get("assert_type") == "3":
             # print(k)
-            assert k.get("code") == "935012"
             assert k.get("msg") == "价格信息不存在"
+            assert k.get("code") == "935012"
 
         elif info.get("assert_type") == "4":
             # print(k)
-            assert k.get("code") == "935006"
             assert k.get("msg") == "证券代码信息不存在"
+            assert k.get("code") == "935006"
 
         elif info.get("assert_type") == "5":
             # print(k)
-            assert k.get("code") == "932132"
             assert k.get("msg") == "该账户绑定的BCAN码状态不正确"
+            assert k.get("code") == "932132"
+        elif info.get("assert_type") == "6":
+            # print(k)
+            assert k.get("msg") == "该股票不属于陆股通标的范围"
+            assert k.get("code") == "350405"
         # elif info.get("assert_type") == "1":
         #     assert k.get("code") == "932103"
         #     assert k.get("msg") == "当前时间不允许此类证券交易"

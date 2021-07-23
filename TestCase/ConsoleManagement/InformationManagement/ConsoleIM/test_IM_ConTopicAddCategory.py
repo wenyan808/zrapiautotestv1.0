@@ -6,7 +6,6 @@ import random
 import allure
 import pytest
 
-
 from Common.getConsoleLogin import getConsoleLogin_token
 
 from Common.sign import get_sign
@@ -61,3 +60,5 @@ class TestIMConTopicAddCategory():
         assert j.get("code") == "000000"
         assert j.get("msg") == "ok"
         assert j.get("data") == True
+
+

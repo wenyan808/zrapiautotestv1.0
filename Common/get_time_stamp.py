@@ -7,6 +7,8 @@ def get_float_time_stamp():
     return datetime_now.timestamp()
 
 
+print(int(get_float_time_stamp()))
+
 def get_time_stamp16():
     """获取当前时间转换成16位的时间戳
 

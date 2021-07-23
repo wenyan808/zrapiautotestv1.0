@@ -5,6 +5,7 @@ import allure
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 
 from Common.Accountcommon.accountAuth import UserLoginAuth
+from Common.assertapi import assert_data
 
 from Common.sign import get_sign
 
@@ -56,18 +57,7 @@ class TestHSCustomerInfoToResetPwd01():
 
         assert r.status_code == 200
         if k.get("code") == "000000":
-            assert k.get("code") == "000000"
-            assert k.get("msg") == "ok"
-
-            schema = k
-            try:
-                validate(instance=ToResetPwd01Schema, schema=schema, format_checker=draft7_format_checker)
-            except SchemaError as e:
-                return 1, f"验证模式schema出错：\n出错位置：{'--> '.join([i for i in e.path])}\n提示信息：{e.message}"
-            except ValidationError as e:
-                return 1, f"json数据不符合schema规定：\n出错字段：{'-->'.join([i for i in e.path])}\n提示信息：{e.message}"
-            else:
-                return 0, "success!"
+            assert_data(k.get("code"), k.get("msg"), k, ToResetPwd01Schema)
 
         else:
             raise AssertionError(k)
