@@ -5,6 +5,7 @@ import allure
 import pytest
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 
+from Common.assertapi import assert_data
 from Common.getTestLoginToken import gettestLoginToken
 from Common.sign import get_sign
 
@@ -20,14 +21,14 @@ class TestHSCustomerInfoAuth():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        cls.url = http + "/as_trade/api/account/v1/auth"
+        cls.url1 = http + "/as_trade/api/account/v1/info"
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_HSCustomerInfo_Auth(self):
-        url = http + "/as_trade/api/account/v1/auth"
-        url1 = http + "/as_trade/api/account/v1/info"
         # 拼装参数
         headers = JSON_dev
         headers = headers
@@ -46,7 +47,7 @@ class TestHSCustomerInfoAuth():
         payload2 = json.dumps(dict(payload1))
 
         r_info = Requests(self.session).post(
-            url=url1, headers=headers1, data=payload2, title="获取客户证券等信息"
+            url=self.url1, headers=headers1, data=payload2, title="获取客户证券等信息"
         )
 
         k = r_info.json()
@@ -66,28 +67,16 @@ class TestHSCustomerInfoAuth():
         payload = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=url, headers=headers1, data=payload, title="登录认证"
+            url=self.url, headers=headers1, data=payload, title="登录认证"
         )
 
         j = r.json()
         # print(j)
         assert r.status_code == 200
         if j.get("code") == "000000":
-            assert j.get("code") == "000000"
-            assert j.get("msg") == "ok"
             if len(j.get("data")) != 0:
                 assert j.get("data").get("userId") == userId2
                 assert j.get("data").get("forceChangePwd") == 0
-
-            schema = j
-            try:
-                validate(instance=authSchema, schema=schema, format_checker=draft7_format_checker)
-            except SchemaError as e:
-                return 1, f"验证模式schema出错：\n出错位置：{'--> '.join([i for i in e.path])}\n提示信息：{e.message}"
-            except ValidationError as e:
-                return 1, f"json数据不符合schema规定：\n出错字段：{'-->'.join([i for i in e.path])}\n提示信息：{e.message}"
-            else:
-                return 0, "success!"
-
+            assert_data(j.get("code"), j.get("msg"), j, authSchema)
         else:
             raise AssertionError(j)

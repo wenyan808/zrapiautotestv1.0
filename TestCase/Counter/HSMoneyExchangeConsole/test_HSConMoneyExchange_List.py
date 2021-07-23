@@ -22,13 +22,13 @@ class TestHSConMoneyExchangeList():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        cls.url = console_HTTP + "/api/con_money_exchange/v1/list"
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_HSConMoneyExchange_List(self):
-        url = console_HTTP + "/api/con_money_exchange/v1/list"
         # 拼装参数
         header = console_JSON
         header = header
@@ -67,7 +67,7 @@ class TestHSConMoneyExchangeList():
         payload = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="列表"
+            url=self.url, headers=headers, data=payload, title="列表"
         )
 
         j = r.json()

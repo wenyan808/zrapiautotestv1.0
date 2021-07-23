@@ -19,13 +19,13 @@ class TestHSConMoneyExchangeMoneyTypeList():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        cls.url = console_HTTP + "/api/con_rate/v1/money_type_list"
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_HSConMoneyExchange_MoneyTypeList(self):
-        url = console_HTTP + "/api/con_rate/v1/money_type_list"
         # 拼装参数
         header = console_JSON
         header = header
@@ -46,7 +46,7 @@ class TestHSConMoneyExchangeMoneyTypeList():
         payload = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="获取币种汇率列表"
+            url=self.url, headers=headers, data=payload, title="获取币种汇率列表"
         )
 
         j = r.json()

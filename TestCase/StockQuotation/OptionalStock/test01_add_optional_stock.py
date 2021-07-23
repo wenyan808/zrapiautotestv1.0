@@ -151,12 +151,12 @@ class TestAddOptionalStock:
     @allure.story('添加自选股无token_HK个股')
     def test_add_hk_notoken(self):
         response = zhuorui('自选股', '添加自选股无token_HK个股')
-        print(response.json())
-        # assert_data(response, '000101', 'token不能为空')
+        # print(response.json())
+        assert_data(response, '000101', 'token不能为空')
 
-#
-# if __name__ == '__main__':
-#     pytest.main()
+
+if __name__ == '__main__':
+    pytest.main()
 
 
 

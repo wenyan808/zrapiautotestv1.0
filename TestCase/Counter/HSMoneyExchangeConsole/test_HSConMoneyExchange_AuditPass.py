@@ -21,13 +21,15 @@ class TestHSConMoneyExchangeAuditPass():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        cls.url = console_HTTP + "/api/con_money_exchange/v1/list"
+        cls.url1 = console_HTTP + "/api/con_money_exchange/v1/audit_pass"
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_HSConMoneyExchange_AuditPass(self):
-        url = console_HTTP + "/api/con_money_exchange/v1/list"
+
         # 拼装参数
         header = console_JSON
         header = header
@@ -55,31 +57,34 @@ class TestHSConMoneyExchangeAuditPass():
         payload = json.dumps(dict(payload1))
 
         r_data = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="列表"
+            url=self.url, headers=headers, data=payload, title="列表"
         )
 
         j = r_data.json()
-        # print(j)
-        url1 = console_HTTP + "/api/con_money_exchange/v1/audit_pass"
-        exchangeId = j.get("data").get("list")[0].get("exchangeId")
-        body = {
-            "exchangeId": exchangeId
-        }
-        sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-        payload2 = {}
-        payload2.update(body)
-        payload2.update(sign1)
+        assert j.get("msg") == "ok"
+        assert j.get("code") == "000000"
+        if "data" in j:
+            exchangeId = j.get("data").get("list")[0].get("exchangeId")
+            body = {
+                "exchangeId": exchangeId
+            }
+            sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
+            payload2 = {}
+            payload2.update(body)
+            payload2.update(sign1)
 
-        payload3 = json.dumps(dict(payload2))
-        r = Requests(self.session).post(
-            url=url1, headers=headers, data=payload3, title="通过"
-        )
+            payload3 = json.dumps(dict(payload2))
+            r = Requests(self.session).post(
+                url=self.url1, headers=headers, data=payload3, title="通过"
+            )
 
-        k = r.json()
-        # print(k)
-        assert r.status_code == 200
-        if k.get("code") == "000000":
-            assert k.get("code") == "000000"
-            assert k.get("msg") == "ok"
+            k = r.json()
+            # print(k)
+            assert r.status_code == 200
+            if k.get("code") == "000000":
+                assert k.get("code") == "000000"
+                assert k.get("msg") == "ok"
+            else:
+                raise AssertionError(k)
         else:
-            raise AssertionError(k)
+            print("兑换列表为空")

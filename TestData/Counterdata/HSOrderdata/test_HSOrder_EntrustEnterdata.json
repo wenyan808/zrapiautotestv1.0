@@ -37,11 +37,17 @@
   },
   {
     "ts": "SZ",
-    "code": "000333",
+    "code": "300353",
     "type": 2,
     "assert_type": "4"
   }
   ,
+  {
+    "ts": "SH",
+    "code": "600570",
+    "type": 2,
+    "assert_type": "5"
+  },
   {
     "ts": "SH",
     "code": "603259",
