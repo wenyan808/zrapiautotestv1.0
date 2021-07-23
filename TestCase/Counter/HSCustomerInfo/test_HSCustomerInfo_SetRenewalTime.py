@@ -5,7 +5,7 @@ import allure
 import pytest
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 
-from Common.assertapi import assert_data
+from Common.assertapi import assert_data, jsonschema_assert
 from Common.get_time_stamp import get_time_stamp13
 from Common.getTestLoginToken import gettestLoginToken
 from Common.sign import get_sign
@@ -66,6 +66,6 @@ class TestHSCustomerInfoSetRenewalTime():
         assert r.status_code == 200
         if j.get("code") == "000000":
             assert j.get("data") == True
-            assert_data(j.get("code"), j.get("msg"), j, SetRenewalTimeSchema)
+            jsonschema_assert(j.get("code"), j.get("msg"), j, SetRenewalTimeSchema)
         else:
             raise AssertionError(j)

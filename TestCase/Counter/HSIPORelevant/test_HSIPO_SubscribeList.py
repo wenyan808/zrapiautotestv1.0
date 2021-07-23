@@ -5,7 +5,7 @@ import allure
 import pytest
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 
-from Common.assertapi import assert_data
+from Common.assertapi import assert_data, jsonschema_assert
 from Common.getTestLoginToken import gettestLoginToken
 from Common.sign import get_sign
 
@@ -55,6 +55,6 @@ class TestHSIPOSubscribeList():
         assert r.status_code == 200
         if "data" in j:
             if j.get("code") == "000000":
-                assert_data(j.get("code"), j.get("msg"), j, SubscribeListSchema)
+                jsonschema_assert(j.get("code"), j.get("msg"), j, SubscribeListSchema)
         else:
             raise AssertionError("可认购列表为空")

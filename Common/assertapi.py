@@ -1,7 +1,12 @@
-from jsonschema import draft7_format_checker, validate, SchemaError, ValidationError
+from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 
 
-def assert_data(code, msg, schema, jsonSchema):
+def assert_data(response: object, code: object, msg: object) -> object:
+    assert code == response.json().get("code")
+    assert msg == response.json().get("msg")
+
+
+def jsonschema_assert(code, msg, schema, jsonSchema):
     assert code == "000000"
     assert msg == "ok"
     try:
@@ -12,3 +17,7 @@ def assert_data(code, msg, schema, jsonSchema):
         return 1, f"json数据不符合schema规定：\n出错字段：{'-->'.join([i for i in e.path])}\n提示信息：{e.message}"
     else:
         return 0, "success!"
+
+
+
+

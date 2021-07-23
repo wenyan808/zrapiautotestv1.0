@@ -5,7 +5,7 @@ import allure
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 
 from Common.Accountcommon.accountAuth import AccountAuth
-from Common.assertapi import assert_data
+from Common.assertapi import assert_data, jsonschema_assert
 
 from Common.sign import get_sign
 
@@ -75,7 +75,7 @@ class TestHSIPOGearList():
                 # print(j)
                 assert r.status_code == 200
                 if j.get("code") == "000000":
-                    assert_data(j.get("code"), j.get("msg"), j, GearListSchema)
+                    jsonschema_assert(j.get("code"), j.get("msg"), j, GearListSchema)
                 else:
                     raise AssertionError(j)
             else:

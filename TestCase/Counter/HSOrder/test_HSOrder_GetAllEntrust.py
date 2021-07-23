@@ -17,14 +17,15 @@ class TestHSOrderGetAllEntrust():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        cls.http = list(AccountAuth())[-1]
+        cls.url = cls.http + "/as_trade/api/order/v1/get_all_entrust"
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_HSOrder_GetAllEntrust(self):
-        http = list(AccountAuth())[-1]
-        url = http + "/as_trade/api/order/v1/get_all_entrust"
+
 
         # 拼装参数
         headers = list(AccountAuth())[1]  # 将柜台token赋值到headers
@@ -44,7 +45,7 @@ class TestHSOrderGetAllEntrust():
         payload7 = json.dumps(dict(payload6))
 
         r_data = Requests(self.session).post(
-            url=url, headers=headers, data=payload7, title="查询所有委托"
+            url=self.url, headers=headers, data=payload7, title="查询所有委托"
         )
 
         j = r_data.json()

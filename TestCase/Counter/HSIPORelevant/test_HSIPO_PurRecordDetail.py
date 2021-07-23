@@ -5,7 +5,7 @@ import allure
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 
 from Common.Accountcommon.accountAuth import AccountAuth
-from Common.assertapi import assert_data
+from Common.assertapi import assert_data, jsonschema_assert
 
 from Common.sign import get_sign
 
@@ -54,7 +54,7 @@ class TestHSIPOPurRecordDetail():
 
             assert j.get("data").get("ts") == body.get("ts")
             assert j.get("data").get("code") == body.get("code")
-            assert_data(j.get("code"), j.get("msg"), j, PurRecordDetailSchema)
+            jsonschema_assert(j.get("code"), j.get("msg"), j, PurRecordDetailSchema)
         else:
             raise AssertionError(j)
 

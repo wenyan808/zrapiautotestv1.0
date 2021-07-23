@@ -19,6 +19,8 @@ class TestHSOrderGetHoldDetail():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        cls.http = list(AccountAuth())[-1]
+        cls.url = cls.http + "/as_trade/api/order/v1/get_hold_detail"
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
@@ -29,8 +31,7 @@ class TestHSOrderGetHoldDetail():
                                       r"/TestData/Counterdata/HSOrderdata/"
                                       r"test_HSOrder_GetHoldDetaildata.json"))
     def test_HSOrder_GetHoldDetail(self, info):
-        http = list(AccountAuth())[-1]
-        url = http + "/as_trade/api/order/v1/get_hold_detail"
+
 
         # 拼装参数
         headers = list(AccountAuth())[1]  # 将柜台token更新到headers
@@ -52,7 +53,7 @@ class TestHSOrderGetHoldDetail():
         payload2 = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload2, title="持仓明细"
+            url=self.url, headers=headers, data=payload2, title="持仓明细"
         )
 
         k = r.json()

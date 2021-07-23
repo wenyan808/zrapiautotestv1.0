@@ -5,7 +5,7 @@ import allure
 import pytest
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 
-from Common.assertapi import assert_data
+from Common.assertapi import assert_data, jsonschema_assert
 from Common.getTestLoginToken import gettestLoginToken
 from Common.sign import get_sign
 
@@ -77,6 +77,6 @@ class TestHSCustomerInfoAuth():
             if len(j.get("data")) != 0:
                 assert j.get("data").get("userId") == userId2
                 assert j.get("data").get("forceChangePwd") == 0
-            assert_data(j.get("code"), j.get("msg"), j, authSchema)
+            jsonschema_assert(j.get("code"), j.get("msg"), j, authSchema)
         else:
             raise AssertionError(j)

@@ -50,8 +50,14 @@
   },
   {
     "ts": "SH",
-    "code": "603259",
+    "code": "600570",
     "type": 2,
-    "assert_type": "5"
+    "assert_type": "6"
+  },
+  {
+    "ts": "SZ",
+    "code": "300353",
+    "type": 2,
+    "assert_type": "7"
   }
 ]
