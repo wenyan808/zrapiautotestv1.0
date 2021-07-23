@@ -2,6 +2,8 @@ import json
 import random
 import requests
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
+
+from Common.assertapi import jsonschema_assert
 from Common.getConsoleLogin import getConsoleLogin_token
 from Common.get_time_stamp import getTimeTostamp
 from Common.show_sql import showsql
@@ -38,8 +40,7 @@ class Testhotstockadd():
 
         assert response.status_code == 200
         try:
-            assert r.get("code") == "000000"
-            assert r.get("msg") == "ok"
+            jsonschema_assert(r.get("code"), r.get("msg"), r, addresultschema)
             assert r.get("data") == True
         except:
             raise AssertionError(
@@ -49,12 +50,12 @@ class Testhotstockadd():
                 f"\n返回数据结果：{r}"
             )
 
-        schema = r
-        try:
-            validate(instance=addresultschema, schema=schema, format_checker=draft7_format_checker)
-        except SchemaError as e:
-            return 1, f"验证模式schema出错：\n出错位置：{'--> '.join([i for i in e.path])}\n提示信息：{e.message}"
-        except ValidationError as e:
-            return 1, f"json数据不符合schema规定：\n出错字段：{'-->'.join([i for i in e.path])}\n提示信息：{e.message}"
-        else:
-            return 0, "success!"
+        # schema = r
+        # try:
+        #     validate(instance=addresultschema, schema=schema, format_checker=draft7_format_checker)
+        # except SchemaError as e:
+        #     return 1, f"验证模式schema出错：\n出错位置：{'--> '.join([i for i in e.path])}\n提示信息：{e.message}"
+        # except ValidationError as e:
+        #     return 1, f"json数据不符合schema规定：\n出错字段：{'-->'.join([i for i in e.path])}\n提示信息：{e.message}"
+        # else:
+        #     return 0, "success!"
