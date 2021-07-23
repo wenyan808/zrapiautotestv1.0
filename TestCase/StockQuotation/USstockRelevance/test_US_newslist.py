@@ -23,29 +23,29 @@ class TestUSNewslist:
     @classmethod
     def setup_class(cls) -> None:
         login()
-        # ts_code = showsql(
-        #     '192.168.1.237', 'root', '123456', 'stock_market',
-        #     "select ts,code from t_stock_search where ts='US';"
-        # )
-        # random_stock = random.sample(ts_code, 500)
-        # ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
-        # write_json(BASE_DIR + r"/TestData/getnewslist.json", ts_code_data)
+        ts_code = showsql(
+            '192.168.1.237', 'root', '123456', 'stock_market',
+            "select ts,code from t_stock_search where ts='US';"
+        )
+        random_stock = random.sample(ts_code, 50)
+        ts_code_data = list(map(lambda code: {"ts": code[0], "code": code[1]}, random_stock))
+        write_json(BASE_DIR + r"/TestData/USStockData/getnewslist.json", ts_code_data)
         # print(ts_code_data)
 
     @allure.story('个股新闻分页查询')
-    # @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/getnewslist.json"))
-    def test_US_newslist(self):
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/USStockData/getnewslist.json"))
+    def test_US_newslist(self,info):
         # pass
         url = HTTP + "/as_market/api/us/news/v1/list"
         header = JSON
 
         # 拼装参数
 
-        paylo = {
-            "ts": "US",
-            "code": "TSLA"
-        }
-        # paylo = info
+        # paylo = {
+        #     "ts": "US",
+        #     "code": "TSLA"
+        # }
+        paylo = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         # 调用登录接口通过token传出来
@@ -69,36 +69,44 @@ class TestUSNewslist:
         # print(j)
 
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
-        if "data" in j:
-            if len(j.get("data")) != 0:
-                if "list" in j.get("data"):
-                    for i in range(len(j.get("data").get("list"))):
-                        assert "newsId" in j.get("data").get("list")[i]
-                        assert "createTime" in j.get("data").get("list")[i]
-                        assert "newsTitle" in j.get("data").get("list")[i]
-                        assert "detailUrl" in j.get("data").get("list")[i]
-                        assert j.get("data").get("list")[i].get(
-                            "detailUrl") == "http://192.168.1.239:8080/zhuorui_h5/newsDetail" + "?" + \
-                               f"id={j.get('data').get('list')[i].get('newsId')}" + \
-                               "&" + f"ts={paylo.get('ts')}"
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+            if "data" in j:
+                if len(j.get("data")) != 0:
+                    if "list" in j.get("data"):
+                        for i in range(len(j.get("data").get("list"))):
+                            assert "newsId" in j.get("data").get("list")[i]
+                            assert "createTime" in j.get("data").get("list")[i]
+                            assert "newsTitle" in j.get("data").get("list")[i]
+                            assert "detailUrl" in j.get("data").get("list")[i]
+                            assert j.get("data").get("list")[i].get(
+                                "detailUrl") == "http://192.168.1.239:8080/zhuorui_h5/newsDetail" + "?" + \
+                                   f"id={j.get('data').get('list')[i].get('newsId')}" + \
+                                   "&" + f"ts={paylo.get('ts')}"
 
-                assert "total" in j.get("data")
-                assert "pageSize" in j.get("data")
-                assert "currentPage" in j.get("data")
-                assert j.get("data").get("pageSize") == 15
-                assert j.get("data").get("currentPage") == 1
+                    assert "total" in j.get("data")
+                    assert "pageSize" in j.get("data")
+                    assert "currentPage" in j.get("data")
+                    assert j.get("data").get("pageSize") == 15
+                    assert j.get("data").get("currentPage") == 1
+
+                else:
+                    logging.info("data是空的集合")
 
             else:
-                logging.info("data是空的集合")
-
-        else:
-            logging.info("无data数据")
+                logging.info("无data数据")
+        except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}"
+            )
 
     @allure.story('个股新闻分页查询_all')
-    # @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/getnewslist.json"))
-    def test_US_newslist_all(self):
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/USStockData/getnewslist.json"))
+    def test_US_newslist_all(self,info):
         # pass
         url = HTTP + "/as_market/api/us/news/v1/list"
         header = JSON
@@ -106,16 +114,17 @@ class TestUSNewslist:
         # 拼装参数
 
         paylo = {
-            "ts": "US",
-            "code": "TSLA",
+            # "ts": "US",
+            # "code": "TSLA",
             "pageSize": 15,
             "currentPage": 2
         }
-        # paylo = info
+        paylo1 = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         # 调用登录接口通过token传出来
         payload1 = {}
+        payload1.update(paylo1)
         payload1.update(paylo)
         payload1.update(sign1)
         headers = {}
@@ -135,27 +144,35 @@ class TestUSNewslist:
         # print(j)
 
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
-        if "data" in j:
-            if len(j.get("data")) != 0:
-                if "list" in j.get("data"):
-                    for i in range(len(j.get("data").get("list"))):
-                        assert "newsId" in j.get("data").get("list")[i]
-                        assert "createTime" in j.get("data").get("list")[i]
-                        assert "newsTitle" in j.get("data").get("list")[i]
-                        assert "detailUrl" in j.get("data").get("list")[i]
-                        assert j.get("data").get("list")[i].get(
-                            "detailUrl") == "http://192.168.1.239:8080/zhuorui_h5/newsDetail" + "?" + \
-                               f"id={j.get('data').get('list')[i].get('newsId')}" + \
-                               "&" + f"ts={paylo.get('ts')}"
-                assert "total" in j.get("data")
-                assert "pageSize" in j.get("data")
-                assert "currentPage" in j.get("data")
-                assert j.get("data").get("currentPage") == paylo.get("currentPage")
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+            if "data" in j:
+                if len(j.get("data")) != 0:
+                    if "list" in j.get("data"):
+                        for i in range(len(j.get("data").get("list"))):
+                            assert "newsId" in j.get("data").get("list")[i]
+                            assert "createTime" in j.get("data").get("list")[i]
+                            assert "newsTitle" in j.get("data").get("list")[i]
+                            assert "detailUrl" in j.get("data").get("list")[i]
+                            assert j.get("data").get("list")[i].get(
+                                "detailUrl") == "http://192.168.1.239:8080/zhuorui_h5/newsDetail" + "?" + \
+                                   f"id={j.get('data').get('list')[i].get('newsId')}" + \
+                                   "&" + f"ts={paylo.get('ts')}"
+                    assert "total" in j.get("data")
+                    assert "pageSize" in j.get("data")
+                    assert "currentPage" in j.get("data")
+                    assert j.get("data").get("currentPage") == paylo.get("currentPage")
+
+                else:
+                    logging.info("data是空的集合")
 
             else:
-                logging.info("data是空的集合")
-
-        else:
-            logging.info("无data数据")
+                logging.info("无data数据")
+        except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}"
+            )
