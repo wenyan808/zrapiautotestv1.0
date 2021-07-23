@@ -42,7 +42,7 @@ class TestEMConActivityStatusUpdate():
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         status = info.get("status")
-        activityId = get_activityId(headers, 0)  # 活动id
+        activityId = get_activityId(headers, "美股LV1活动卡券活动", 0, 0)  # 活动id
 
         paylo = {"activityId": activityId,
                  "status": status

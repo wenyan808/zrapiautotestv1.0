@@ -6,6 +6,8 @@ import random
 import allure
 import pytest
 
+from Common.ConsoleEventManagement.Add_Voucher_ParentCard import Add_Voucher
+from Common.conVoucher_common.add_conVoucher import add_conVoucher
 from Common.conVoucher_common.get_Voucherid import getvoucherId, delvoucherId
 from Common.getConsoleLogin import getConsoleLogin_token
 from Common.get_time_stamp import gettoday
@@ -34,8 +36,14 @@ class TestEMconVoucherUpdate():
     def test_EM_conVoucherUpdate(self, info):
         url = console_HTTP + "/api/con_voucher/v1/update"
         header = console_JSON
+        headers = {}
+        headers.update(header)
+        token = {"token": getConsoleLogin_token()}
+        headers.update(token)  # 将token更新到headers
 
-        voucherId = getvoucherId(info.get("type"))
+        Add_Voucher(headers)  # 新增权益
+
+        voucherId = getvoucherId(headers, info.get("type"))
         paylo1 = {
             "description": info.get("description") + str(gettoday()),
             "applyType": info.get("applyType"),
@@ -51,10 +59,6 @@ class TestEMconVoucherUpdate():
         payload1.update(paylo)
         payload1.update(paylo1)
         payload1.update(sign1)
-        headers = {}
-        headers.update(header)
-        token = {"token": getConsoleLogin_token()}
-        headers.update(token)  # 将token更新到headers
 
         payload = json.dumps(dict(payload1))
 
@@ -66,5 +70,17 @@ class TestEMconVoucherUpdate():
         # print(j)
         delvoucherId(voucherId)
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+
+        except:
+            assert j.get("code") == "530204"
+            assert j.get("msg") == "权益已停用"
+
+        # else:
+        #     raise AssertionError(
+        #         f"\n请求地址：{url}"
+        #         f"\nbody参数：{payload}"
+        #         f"\n请求头部参数：{headers}"
+        #         f"\n返回数据结果：{j}")

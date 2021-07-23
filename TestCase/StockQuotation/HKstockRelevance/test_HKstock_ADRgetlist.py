@@ -96,8 +96,8 @@ class testHKstockADRgetlist:
     @allure.story('ADR列表-港股ADR_只传currentPage')
     def test_HKstock_ADRgetlist_onlyvalcurrentPage(self):
         response = zhuorui('港股', 'ADR列表-港股ADR_只传currentPage')
-        # assert_data(response, '000103', 'asc is null')
-        assert_data(response, '000103', 'pageSize is null')
+        assert_data(response, '000103', 'asc is null')
+        # assert_data(response, '000103', 'pageSize is null')
         assert response.status_code == 200
         # print(response.json())
 

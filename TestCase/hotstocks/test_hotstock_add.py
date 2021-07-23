@@ -37,11 +37,17 @@ class Testhotstockadd():
         # print(r)
 
         assert response.status_code == 200
-        if r.get("code") == "000000":
-            assert "msg" == "ok"
-            assert "data" == True
-        else:
-            raise AssertionError(r)
+        try:
+            assert r.get("code") == "000000"
+            assert r.get("msg") == "ok"
+            assert r.get("data") == True
+        except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{r}"
+            )
 
         schema = r
         try:

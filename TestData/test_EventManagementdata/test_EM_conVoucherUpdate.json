@@ -11,6 +11,6 @@
     "description": "高级行情-美股LV1活动卡券+1",
     "applyType": 2,
     "applyNum": 900,
-    "stop": false
+    "stop": true
   }
 ]

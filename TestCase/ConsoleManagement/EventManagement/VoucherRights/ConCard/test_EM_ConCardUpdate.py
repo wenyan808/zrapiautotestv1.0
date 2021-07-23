@@ -41,7 +41,8 @@ class TestEMConCardUpdate():
         headers.update(header)
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
-        cardId = getconCardid(headers, 0)  # 子卡券id
+
+        cardId = getconCardid(headers, 1)  # 子卡券id
         status = info.get("status")
         paylo = {
             "cardId": cardId,
@@ -61,5 +62,18 @@ class TestEMConCardUpdate():
         j = r.json()
         # print(j)
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+
+        except:
+            assert j.get("code") == "530503"
+            assert j.get("msg") == "子卡券已结束"
+
+
+        else:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}")

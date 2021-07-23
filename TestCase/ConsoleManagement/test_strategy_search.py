@@ -21,8 +21,10 @@ class TestClass():
     @allure.story('关键字查询股票,type为空')
     def test_hktypenull(self):
         response = zhuorui('console', '关键字查询股票,type为空')
-        assert_data(response, '000000', 'ok')
-        # print(f"返回数据结果：{response.json()}")
+        try:
+            assert_data(response, '000000', 'ok')
+        except:
+            raise AssertionError(f"返回数据结果：{response.json()}")
 
     @allure.story('关键字查询股票,type为1')
     def test_hktype1(self):

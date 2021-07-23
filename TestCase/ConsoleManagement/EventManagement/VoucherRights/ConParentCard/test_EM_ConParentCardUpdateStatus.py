@@ -56,5 +56,17 @@ class TestEMConParentCardUpdateStatus():
         j = r.json()
         # print(j)
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+
+        except:
+            assert j.get("code") == "530100"
+            assert j.get("msg") == "母卡券已停用"
+
+        else:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}")

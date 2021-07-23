@@ -46,7 +46,7 @@ class TestEMConActivityUserGroupList():
 
         currentPage = info.get("currentPage")
 
-        activityId = get_activityId(headers, info.get("n"))  # 活动id
+        activityId = get_activityId(headers, "美股LV1活动卡券活动", 0, info.get("n"))  # 活动id
 
         paylo = {"activityId": activityId,
                  "currentPage": currentPage,
@@ -66,5 +66,17 @@ class TestEMConActivityUserGroupList():
         j = r.json()
         # print(j)
         assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == "ok"
+
+        except:
+            assert j.get("code") == "530304"
+            assert j.get("msg") == "活动已停用"
+
+        else:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}")

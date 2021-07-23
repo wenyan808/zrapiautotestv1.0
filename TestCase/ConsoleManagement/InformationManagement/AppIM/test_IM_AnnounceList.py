@@ -53,8 +53,14 @@ class TestIMAnnounceList():
         )
 
         j = r.json()
+        # print(
+        #     f"\n请求地址：{url}"
+        #     f"\nbody参数：{payload}"
+        #     f"\n请求头部参数：{headers}"
+        #     f"\n返回数据结果：{j}"
+        # )
         assert r.status_code == 200
-        if info.get("assert_type") == 1:
+        try:
             assert j.get("code") == "000000"
             assert j.get("msg") == "ok"
             if "data" in j:
@@ -83,12 +89,12 @@ class TestIMAnnounceList():
                     logging.info("data为空")
             else:
                 logging.info("data不在j中")
-        elif info.get("assert_type") == 0:
+        except:
             assert j.get("code") == "000103"
             assert j.get("msg") == "参数校验不通过"
-        else:
-            raise AssertionError(
-                f"\n请求地址：{url}"
-                f"\nbody参数：{payload}"
-                f"\n请求头部参数：{headers}"
-                f"\n返回数据结果：{r}")
+        # finally:
+        #     raise AssertionError(
+        #         f"\n请求地址：{url}"
+        #         f"\nbody参数：{payload}"
+        #         f"\n请求头部参数：{headers}"
+        #         f"\n返回数据结果：{j}")

@@ -121,3 +121,45 @@ def add_activity(headers: dict, parentCardId: str):
     j = r.json()
     # print(j)
     return j
+
+
+def add_distribute(headers: dict, parentCardId: str):
+    """新增定向派发
+
+    :param headers:带token的headers
+    :param parentCardId:母卡券id
+    :return:
+    """
+    url = console_HTTP + "/api/con_distribute/v1/add"
+
+    distributeTime = int(getTimeTostamp(1))  # 派发开始时间
+
+    paylo = {
+        "distributeTime": distributeTime,
+        "groupId": ImportConUserGroup("user_group", "groupid_phone.xlsx", headers),
+        "reason": "自动化测试运营补发",
+        "activityParentCard": [{
+            "parentCardId": parentCardId,
+            "totalNum": "1000",
+        }],
+        "type": 1
+    }
+    sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+    payload1 = {}
+    payload1.update(paylo)
+    payload1.update(sign1)
+
+    payload = json.dumps(dict(payload1))
+
+    r = requests.session().post(
+        url=url, headers=headers, data=payload
+    )
+    j = r.json()
+    # print(j)
+    # print(
+    #     f"\n请求地址：{url}"
+    #     f"\nbody参数：{payload}"
+    #     f"\n请求头部参数：{headers}"
+    #     f"\n返回数据结果：{j}"
+    # )
+    return j
