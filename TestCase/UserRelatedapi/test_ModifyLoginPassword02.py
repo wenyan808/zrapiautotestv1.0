@@ -1,4 +1,10 @@
 # test_ModifyLoginPassword02
+"""
+@File  ：test_ModifyLoginPassword02.py
+@Author: yishouquan
+@Time  : 2020/7/26
+@Desc  :  修改手机号-新手机号验证
+"""
 import json
 
 import allure
@@ -33,7 +39,7 @@ class TestModifyLoginPassword02():
         # 拼装参数
         headers = JSON2
 
-        phone = "15810484100"
+        phone = "15816152000"
         oldLoginPassword = oldpassword.get("LoginPassword")
         password = oldLoginPassword
 

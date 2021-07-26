@@ -1,4 +1,12 @@
 # test_ModifyPhone02
+
+"""
+@File  ：test_Registration.py
+@Author: yishouquan
+@Time  : 2020/7/26
+@Desc  : 第一次登陆注册系统账户
+"""
+
 import json
 
 import allure
