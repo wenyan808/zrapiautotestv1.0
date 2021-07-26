@@ -63,7 +63,7 @@ class TestHSConMoneyExchangeAuditPass():
         j = r_data.json()
         assert j.get("msg") == "ok"
         assert j.get("code") == "000000"
-        if "data" in j:
+        if "data" in j and j.get("data").get("list"):
             exchangeId = j.get("data").get("list")[0].get("exchangeId")
             body = {
                 "exchangeId": exchangeId

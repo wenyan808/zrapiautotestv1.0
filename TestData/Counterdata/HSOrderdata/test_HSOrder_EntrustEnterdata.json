@@ -7,6 +7,12 @@
   },
   {
     "ts": "SZ",
+    "code": "002649",
+    "type": 2,
+    "assert_type": "6"
+  },
+  {
+    "ts": "SZ",
     "code": "000639",
     "type": 2,
     "assert_type": "5"
@@ -27,7 +33,7 @@
     "ts": "SZ",
     "code": "003033",
     "type": 2,
-    "assert_type": "4"
+    "assert_type": "6"
   },
   {
     "ts": "SZ",
@@ -39,7 +45,7 @@
     "ts": "SZ",
     "code": "300353",
     "type": 2,
-    "assert_type": "4"
+    "assert_type": "2"
   }
   ,
   {
@@ -52,12 +58,6 @@
     "ts": "SH",
     "code": "600570",
     "type": 2,
-    "assert_type": "6"
-  },
-  {
-    "ts": "SZ",
-    "code": "300353",
-    "type": 2,
-    "assert_type": "7"
+    "assert_type": "5"
   }
 ]

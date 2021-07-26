@@ -133,7 +133,7 @@ class TestHSOrderEntrustEnter():
             assert k.get("code") == "932132"
         elif info.get("assert_type") == "6":
             # print(k)
-            assert k.get("msg") == "该股票不属于陆股通标的范围"
+            assert k.get("msg") == "该股票不属于陆股通标的范围，暂不支持交易"
             assert k.get("code") == "350405"
         # elif info.get("assert_type") == "1":
         #     assert k.get("code") == "932103"
