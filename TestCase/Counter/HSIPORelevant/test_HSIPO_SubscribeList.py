@@ -12,7 +12,7 @@ from Common.sign import get_sign
 from Common.requests_library import Requests
 from TestAssertions.CounterJsonSchemadata.HSIPORelevantSchema.SubscribeListSchema import SubscribeListSchema
 
-from glo import http_dev, JSON_dev
+from glo import http_dev, JSON_dev, http
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -21,7 +21,7 @@ class TestHSIPOSubscribeList():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
-        cls.url = http_dev + "/as_trade/api/ipo/v1/subscribe_list"
+        cls.url = http + "/as_trade/api/ipo/v1/subscribe_list"
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
@@ -51,7 +51,6 @@ class TestHSIPOSubscribeList():
         )
 
         j = r.json()
-        # print(j)
         assert r.status_code == 200
         if "data" in j:
             if j.get("code") == "000000":

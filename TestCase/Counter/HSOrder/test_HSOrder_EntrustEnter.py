@@ -70,8 +70,7 @@ class TestHSOrderEntrustEnter():
         k_price = r_price.json()
         # print(k_price)
 
-        entrustPrice = round(k_price.get("data")[0].get("last") - 0.5,
-                             3)  # 价格,保留小数点后三位  舍入运算，使用内置的 round(value, ndigits) 函数
+        entrustPrice = round(k_price.get("data")[0].get("last"), 3)  # 价格,保留小数点后三位  舍入运算，使用内置的 round(value, ndigits) 函数
         # print(entrustPrice)
 
         entrustProp = "LO"  # 委托属性，港股支持 LO,ELO 美股和A股支持LO AO("AO", "竞价单"),
@@ -95,6 +94,7 @@ class TestHSOrderEntrustEnter():
         payload1.update(sign1)
 
         payload2 = json.dumps(dict(payload1))
+        print(payload2)
 
         r = Requests(self.session).post(
             url=url, headers=headers, data=payload2, title="下单"
@@ -104,8 +104,9 @@ class TestHSOrderEntrustEnter():
         # print(k)
         assert r.status_code == 200
         if info.get("assert_type") == "0":
-            assert k.get("code") == "000000"
             assert k.get("msg") == "ok"
+            assert k.get("code") == "000000"
+
 
         elif info.get("assert_type") == "1":
             # print(k)
