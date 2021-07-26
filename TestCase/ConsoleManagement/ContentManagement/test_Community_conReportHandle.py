@@ -1,4 +1,10 @@
 # test_Community_conReportHandle
+"""
+@File  ：test_Community_conReportHandle.py
+@Author: yishouquan
+@Time  : 2020/7/26
+@Desc  :  社区console_举报处理
+"""
 import json
 import logging
 import random
@@ -90,5 +96,5 @@ class TestCommunityConReportHandle():
             assert jhandle.get("msg") == "ok"
         except:
 
-            assert jhandle.get("code") == "460403"
+            assert jhandle.get("code") == "460603"
             assert jhandle.get("msg") == "内容已被处理"
