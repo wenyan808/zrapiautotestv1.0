@@ -9,6 +9,6 @@ def zhuorui(sheet, name):
             return common(i)
 
 
-zhuorui('自选股', '自选股股票列表_SH')
+# zhuorui('自选股', '自选股股票列表_SH')
+# # zhuorui('自选股', '置顶自选股无token')
 # zhuorui('自选股', '置顶自选股无token')
-zhuorui('自选股', '置顶自选股无token')
