@@ -13,9 +13,6 @@ class TestMessage:
         login()
         pass
 
-    def teardown(cls):
-        pass
-
     @allure.story("查询最新一条消息无token")
     def test_message_01last1(self):
         response = zhuorui("消息通知", "查询最新一条消息无token")
