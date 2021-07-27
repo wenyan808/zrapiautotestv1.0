@@ -11,7 +11,7 @@ class Testgetlist():
         url = http+":1216/api/con_stock_recommend/v1/get_list"
 
         payload1 = {
-            "id": 360,
+            "id": 363,
             "sort": "1",
             "currentPage": 1,
             "pageSize": 20
