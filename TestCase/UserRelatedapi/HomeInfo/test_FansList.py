@@ -79,7 +79,7 @@ class TestFansList():
                         assert j.get("data")[i].get("zrNo") == "48066661"
 
         except:
-            raise ValueError(
+            raise AssertionError(
                 f"\n请求地址：{url}"
                 f"\nbody参数：{payload}"
                 f"\n请求头部参数：{headers}"
