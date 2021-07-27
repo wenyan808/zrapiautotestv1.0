@@ -29,28 +29,28 @@ class TestRecommendAdd():
             # 新增
             add(payloadHK,self.token)
             # 删除
-            delete1(self.token)
+            delete1(0,self.token)
 
     def test_addSH(self):
         if get_market_status(3) != 8:
             # 新增
             add(payloadSH,self.token)
             # 删除
-            delete1(self.token)
+            delete1(0,self.token)
 
     def test_adSZ(self):
         if get_market_status(3) != 8:
             # 新增
             add(payloadSZ,self.token)
             # 删除
-            delete1(self.token)
+            delete1(0,self.token)
 
     def test_adUS(self):
         if get_market_status(2) != 8:
             # 新增
             add(payloadUS,self.token)
             # 删除
-            delete1(self.token)
+            delete1(2,self.token)
 
 payloadHK = {
     "type": 2,
@@ -138,6 +138,7 @@ AFTER_DISC("150000","153000",10,"科创板盘后交易");
 
 
 def add(payload1,token):
+    # 新增荐股
     url = http + ":1216/api/con_stock_recommend/v1/add"
     payload = json.dumps(dict(payload1))
 
@@ -150,24 +151,21 @@ def add(payload1,token):
     response = requests.request("POST", url=url, headers=headers, data=payload)
 
     r = response.json()
-    # print(r)
-    # print(payload1.get("recommendedTime"))
 
+    assert response.status_code == 200
+    try:
+        assert r.get("code") == "000000"
+        assert r.get("msg") == "ok"
+        assert r.get("data") == False or True
 
-    # assert response.status_code == 200
-    # try:
-    #     assert r.get("code") == "000000"
-    #     assert r.get("msg") == "ok"
-    #     assert r.get("data") == False or True
-    #
-    # except:
-    #     raise AssertionError(
-    #         f"\n请求地址：{url}"
-    #         f"\nbody参数：{payload}"
-    #         f"\n请求头部参数：{headers}"
-    #         f"\n返回数据结果：{r}"
-    #     )
-    #
+    except:
+        raise AssertionError(
+            f"\n请求地址：{url}"
+            f"\nbody参数：{payload}"
+            f"\n请求头部参数：{headers}"
+            f"\n返回数据结果：{r}"
+        )
+
     # schema = r
     # try:
     #     validate(instance=addresultschema, schema=schema, format_checker=draft7_format_checker)

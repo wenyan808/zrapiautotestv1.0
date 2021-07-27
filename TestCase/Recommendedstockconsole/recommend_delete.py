@@ -13,9 +13,10 @@ from Common.getConsoleLogin import getConsoleLogin_token
 from TestAssertions.test_assertions_Recommendedstcokdata.test_recommend_addschem import addresultschema
 from glo import console_JSON, http
 
-
-def delete1(token):
-    id,ts,code = recommend_getlist(0,token)
+# 删除荐股的方法
+def delete1(i,token):
+    # 获取id,ts,code
+    id,ts,code = recommend_getlist(i,token)
     url = http+":1216/api/con_stock_recommend/v1/delete"
 
     payload1 = {
@@ -56,10 +57,10 @@ def delete1(token):
         return 0, "success!"
 
 
-
+# 获取荐股列表
 def recommend_getlist(i,token):
     url = http+":1216/api/con_stock_recommend/v1/get_list"
-
+    # 传参 id sort currentPage pageSize
     payload1 = {
         "id": 363,
         "sort": "1",
@@ -76,7 +77,7 @@ def recommend_getlist(i,token):
     headers = head
 
     response = requests.request("POST", url, headers=headers, data=payload)
-
+    # get到荐股列表的下标
     r = response.json().get("data").get("list")[i]
 
     return r.get("id"),r.get("ts"),r.get("code")
