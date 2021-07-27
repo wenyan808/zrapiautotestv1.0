@@ -48,6 +48,7 @@ class TestHSOrderGetAllEntrust():
             url=self.url, headers=headers, data=payload7, title="查询所有委托"
         )
         # print(j)
+        j = r_data.json()
         assert r_data.status_code == 200
         if j.get("code") == "000000":
             assert j.get("code") == "000000"

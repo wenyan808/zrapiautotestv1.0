@@ -94,7 +94,7 @@ class TestHSOrderEntrustEnter():
         payload1.update(sign1)
 
         payload2 = json.dumps(dict(payload1))
-        print(payload2)
+        # print(payload2)
 
         r = Requests(self.session).post(
             url=url, headers=headers, data=payload2, title="下单"
