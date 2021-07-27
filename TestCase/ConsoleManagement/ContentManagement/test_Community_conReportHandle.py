@@ -66,7 +66,11 @@ class TestCommunityConReportHandle():
         )
 
         j = r.json()
-        # print(j)
+        # print(
+        # f"\n请求地址：{url}"
+        # f"\nbody参数：{payload}"
+        # f"\n请求头部参数：{headers}"
+        # f"\n返回数据结果：{j}")
         handleurl = console_HTTP + "/api/con_report/v1/handle"
 
         # 拼装参数
