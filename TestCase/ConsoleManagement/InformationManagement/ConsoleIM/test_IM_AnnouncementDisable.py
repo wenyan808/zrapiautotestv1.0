@@ -39,15 +39,19 @@ class TestIMAnnouncementDisable():
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         # print(headers)
+        market = info.get("market")  # 股票市场(1, "港股"), (2, "美股"), (3, "沪深")
+        code = info.get("code")
+        # category = 1
         paylo = {
-            "code":"00968",
+            "code": code,
             "pageSize": 20,
             "currentPage": 1,
-            "startTime": TimeTostamp(),
-            "endTime": get_time_stamp13()
+            # "category":category,
+            # "startTime": TimeTostamp(),
+            # "endTime": get_time_stamp13(),
+            "market": market
         }
-        # paylo1 = info
-        # print(paylo)
+
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo)
@@ -62,13 +66,16 @@ class TestIMAnnouncementDisable():
 
         j = r0.json()
 
-        # print(j)
+        # print(f"\n请求地址：{url}"
+        #       f"\nbody参数：{payload}"
+        #       f"\n请求头部参数：{headers}"
+        #       f"\n返回数据结果：{j}")
         # print(j.get('data').get('list')[0].get('annexId'))
         url_disable = console_HTTP + "/api/con_stock_announcement/v1/disable"
         paylo_disable = {
             "annexId": f"{j.get('data').get('list')[0].get('annexId')}"
         }
-        paylo_disable1 = info
+        paylo_disable1 = {"status": info.get("status")}
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo_disable)
@@ -79,7 +86,10 @@ class TestIMAnnouncementDisable():
         r = Requests(self.session).post(
             url=url_disable, headers=headers, data=payload2, title="删除恢复公告"
         )
-        # print(r.json())
+        # print(f"\n请求地址：{url}"
+        #       f"\nbody参数：{payload}"
+        #       f"\n请求头部参数：{headers}"
+        #       f"\n返回数据结果：{r.json()}")
         assert r.status_code == 200
         assert r.json().get("code") == "000000"
         assert r.json().get("msg") == "ok"

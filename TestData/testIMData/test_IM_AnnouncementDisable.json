@@ -1,8 +1,22 @@
 [
   {
-    "status": 1
+    "market": 3,
+    "code": "603899",
+    "status": 0
   },
   {
+    "market": 2,
+    "code": "TSLA",
+    "status": 0
+  },
+  {
+    "market": 1,
+    "code": "00700",
+    "status": 0
+  },
+  {
+    "market": 2,
+    "code": "TSLA",
     "status": 0
   }
 ]
