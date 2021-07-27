@@ -160,7 +160,7 @@ def add(payload1,token):
 
     except:
         raise AssertionError(
-            f"\n请求地址：{url}"
+            f"\n请求地址：{url}" 
             f"\nbody参数：{payload}"
             f"\n请求头部参数：{headers}"
             f"\n返回数据结果：{r}"
