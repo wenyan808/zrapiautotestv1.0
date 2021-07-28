@@ -1,4 +1,10 @@
 # test_HSAccountAnalysis_HoldPreference            持仓偏好        /as_trade/api/analysis/v1/hold_preference
+"""
+@File  ：test_HSAccountAnalysis_HoldPreference.py
+@Author: yishouquan
+@Time  : 2020/7/28
+@Desc  :  柜台app_持仓偏好
+"""
 import json
 
 import allure
@@ -57,6 +63,13 @@ class TestHSAccountAnalysisIncomeCurve():
         j = r_info.json()
         # print(j)
         assert r_info.status_code == 200
-
-        assert j.get("code") == "000000"
-        assert j.get("msg") == 'ok'
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == 'ok'
+        except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload2}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}"
+            )

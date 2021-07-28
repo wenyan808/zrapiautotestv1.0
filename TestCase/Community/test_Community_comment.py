@@ -1,4 +1,11 @@
 # test_Community_comment
+"""
+@File  ：test_Community_comment.py
+@Author: yishouquan
+@Time  : 2020/7/28
+@Desc  :  app社区-发表评论
+"""
+
 import json
 import time
 
@@ -31,8 +38,12 @@ class TestCommunitycomment():
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
         headers = JSON
+        headers = headers
 
-        # 拼装参数
+        token1 = yamltoken()
+        token = {"token": token1}
+        headers.update(token)  # 将token更新到headers
+        # print(headers)
         paylo = {
             "title": "香港金管局与中国人民银行就人民币数字化跨境支付试点进行磋商",
             "articleType": 2,
@@ -59,13 +70,7 @@ class TestCommunitycomment():
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
-        # print(token)
-        # print(type(token))
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
+
         payload = json.dumps(dict(payload1))
         time.sleep(60.01)
 

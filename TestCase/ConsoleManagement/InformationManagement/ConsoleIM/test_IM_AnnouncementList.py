@@ -1,4 +1,10 @@
 # test_IM_AnnouncementList
+"""
+@File  ：test_IM_AnnouncementList.py
+@Author: yishouquan
+@Time  : 2020/7/28
+@Desc  :  资讯console_查询公告列表
+"""
 import json
 import logging
 import random

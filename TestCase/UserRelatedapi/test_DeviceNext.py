@@ -1,4 +1,10 @@
 # test_DeviceNext
+"""
+@File  ：test_DeviceNext.py
+@Author: yishouquan
+@Time  : 2020/7/27
+@Desc  :  用户相关-设备验证
+"""
 import json
 
 import allure
@@ -54,7 +60,10 @@ class TestDeviceNext():
             url=HTTP + "/as_notification/api/sms/v1/send_code",
             headers=headers, data=payload, title="发送短信"
         )
-        verificationCode = response_getdata.json().get("data")
+        if "data" in response_getdata.json():
+            verificationCode = response_getdata.json().get("data")
+        else:
+            verificationCode = "123456"
         url1 = HTTP + "/as_user/api/user_account/v1/device_next"
         paylo = {
             "verificationCode": verificationCode,
@@ -74,13 +83,21 @@ class TestDeviceNext():
         j1 = r1.json()
         # print(j1)
         assert r1.status_code == 200
-        if j1.get("code") == "000000":
+        try:
+            assert j1.get("code") == "000000"
             assert j1.get("msg") == "ok"
             assert "userId" in j1.get("data")
             assert "token" in j1.get("data")
             assert j1.get("data").get("phone") == phone
             assert j1.get("data").get("phoneArea") == phoneArea
 
+        except:
+            assert j1.get("code") == "010001"
+            assert j1.get("msg") == "您输入的验证码不正确"
 
         else:
-            raise ValueError(f"{j1}")
+            raise ValueError(
+                f"\n请求地址：{url1}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j1}")

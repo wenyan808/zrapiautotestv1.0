@@ -60,4 +60,7 @@ class TestHSCustomerInfoToResetPwd01():
             jsonschema_assert(k.get("code"), k.get("msg"), k, ToResetPwd01Schema)
 
         else:
-            raise AssertionError(k)
+            raise AssertionError(f"\n请求地址：{url2}"
+                                 f"\nbody参数：{payload2}"
+                                 f"\n请求头部参数：{headers}"
+                                 f"\n返回数据结果：{k}")

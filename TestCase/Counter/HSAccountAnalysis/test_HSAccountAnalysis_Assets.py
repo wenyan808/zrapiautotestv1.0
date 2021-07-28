@@ -1,4 +1,10 @@
 # test_HSAccountAnalysis_Assets     资产走势          /as_trade/api/analysis/v1/assets
+"""
+@File  ：test_HSAccountAnalysis_Assets.py
+@Author: yishouquan
+@Time  : 2020/7/28
+@Desc  :  柜台app_资产走势
+"""
 import json
 
 import allure
@@ -94,6 +100,13 @@ class TestHSAccountAnalysisAssets():
         j = r_info.json()
         # print(j)
         assert r_info.status_code == 200
-
-        assert j.get("code") == "000000"
-        assert j.get("msg") == 'ok'
+        try:
+            assert j.get("code") == "000000"
+            assert j.get("msg") == 'ok'
+        except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload2}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}"
+            )

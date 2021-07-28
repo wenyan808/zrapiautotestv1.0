@@ -1,4 +1,10 @@
 # test_Community_commentdetail
+"""
+@File  ：test_Community_commentdetail.py
+@Author: yishouquan
+@Time  : 2020/7/28
+@Desc  :  社区-查看评论详情
+"""
 import json
 import time
 
@@ -31,8 +37,11 @@ class TestCommunitycommentdetail():
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
         headers = JSON
-
-        # 拼装参数
+        headers = headers
+        token1 = yamltoken()
+        token = {"token": token1}
+        headers.update(token)  # 将token更新到headers
+        # print(headers)
         paylo = {
             "title": "38万公里之外的亲密“牵手”",
             "articleType": 2,
@@ -59,13 +68,7 @@ class TestCommunitycommentdetail():
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
-        # print(token)
-        # print(type(token))
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
+
         payload = json.dumps(dict(payload1))
         time.sleep(60.01)
 

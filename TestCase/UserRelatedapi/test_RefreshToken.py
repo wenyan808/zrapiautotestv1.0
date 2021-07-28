@@ -1,4 +1,11 @@
 # test_RefreshToken
+"""
+@File  ：test_RefreshToken.py
+@Author: yishouquan
+@Time  : 2020/7/27
+@Desc  :  用户相关接口-token刷新
+"""
+
 import json
 
 import allure

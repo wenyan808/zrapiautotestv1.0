@@ -1,4 +1,10 @@
 # test_Community_addreport
+"""
+@File  ：test_Community_addreport.py
+@Author: yishouquan
+@Time  : 2020/7/28
+@Desc  :  app社区_举报
+"""
 import json
 import random
 
@@ -36,21 +42,18 @@ class TestCommunityaddreport():
     def test_Community_addreport(self):
         url_hostlist = HTTP + "/as_community/api/community/v1/hot_list"
         headers = JSON
-
-        # 拼装参数
+        headers = headers
+        token1 = yamltoken()
+        token = {"token": token1}
+        headers.update(token)  # 将token更新到headers
+        # print(headers)
         paylo = {}
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
-        # print(token)
-        # print(type(token))
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
+
         payload = json.dumps(dict(payload1))
         # time.sleep(60.01)
 
@@ -62,9 +65,6 @@ class TestCommunityaddreport():
         # print(j.get("data")[0].get("postId"))
 
         url = HTTP + "/as_community/api/report/v1/add"
-        headers = JSON
-
-        # 拼装参数
 
         paylo = {
 
@@ -86,10 +86,10 @@ class TestCommunityaddreport():
         # print(y)
         # 断言
         assert r.status_code == 200
-        if y.get("code") == "000000":
+        try:
             assert y.get("code") == "000000"
             assert y.get("msg") == "ok"
-        elif y.get("code") == "460600":
+        except:
             assert y.get("code") == "460600"
             assert y.get("msg") == "举报已提交"
         else:
