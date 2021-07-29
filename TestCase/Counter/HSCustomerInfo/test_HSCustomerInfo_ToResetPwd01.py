@@ -56,10 +56,11 @@ class TestHSCustomerInfoToResetPwd01():
         # print(k)
 
         assert r.status_code == 200
-        if k.get("code") == "000000":
+        try:
+            # assert k.get("code") == "000000"
             jsonschema_assert(k.get("code"), k.get("msg"), k, ToResetPwd01Schema)
 
-        else:
+        except:
             raise AssertionError(f"\n请求地址：{url2}"
                                  f"\nbody参数：{payload2}"
                                  f"\n请求头部参数：{headers}"

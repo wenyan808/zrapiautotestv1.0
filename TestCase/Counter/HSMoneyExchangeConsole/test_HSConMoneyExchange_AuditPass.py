@@ -81,10 +81,15 @@ class TestHSConMoneyExchangeAuditPass():
             k = r.json()
             # print(k)
             assert r.status_code == 200
-            if k.get("code") == "000000":
+            try:
                 assert k.get("code") == "000000"
                 assert k.get("msg") == "ok"
-            else:
-                raise AssertionError(k)
+            except:
+                raise AssertionError(
+                    f"\n请求地址：{self.url}"
+                    f"\nbody参数：{payload}"
+                    f"\n请求头部参数：{headers}"
+                    f"\n返回数据结果：{j}"
+                )
         else:
             print("兑换列表为空")

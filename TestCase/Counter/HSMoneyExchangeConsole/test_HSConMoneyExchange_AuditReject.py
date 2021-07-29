@@ -85,6 +85,11 @@ class TestHSConMoneyExchangeAuditReject():
                 assert k.get("code") == "000000"
                 assert k.get("msg") == "ok"
             else:
-                raise AssertionError(k)
+                raise AssertionError(
+                    f"\n请求地址：{self.url1}"
+                    f"\nbody参数：{payload}"
+                    f"\n请求头部参数：{headers}"
+                    f"\n返回数据结果：{j}"
+                )
         else:
             print("兑换列表为空")

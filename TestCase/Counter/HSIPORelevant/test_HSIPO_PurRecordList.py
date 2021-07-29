@@ -48,7 +48,13 @@ class TestHSIPOPurRecordList():
         k = r.json()
         # print(k)
         assert r.status_code == 200
-        if k.get("code") == "000000":
+        try:
+            # assert k.get("code") == "000000"
             jsonschema_assert(k.get("code"), k.get("msg"), k, PurRecordListSchema)
-        else:
-            raise AssertionError(k)
+        except:
+            raise AssertionError(
+                f"\n请求地址：{self.url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{k}"
+            )

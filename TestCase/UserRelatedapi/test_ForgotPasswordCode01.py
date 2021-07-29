@@ -86,9 +86,9 @@ class TestForgotPasswordCode01():
             assert j.get("code") == "010001"
             assert j.get("msg") == "您输入的验证码不正确"
 
-        else:
-            raise ValueError(
-                f"\n请求地址：{url}"
-                f"\nbody参数：{payload}"
-                f"\n请求头部参数：{headers}"
-                f"\n返回数据结果：{j}")
+        # else:
+        #     raise ValueError(
+        #         f"\n请求地址：{url}"
+        #         f"\nbody参数：{payload}"
+        #         f"\n请求头部参数：{headers}"
+        #         f"\n返回数据结果：{j}")
