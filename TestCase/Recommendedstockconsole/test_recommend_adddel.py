@@ -52,6 +52,7 @@ class TestRecommendAdd():
         if get_market_status(2) != 8:
             # 新增
             add(payloadUS,self.token)
+            # print(payloadUS)
             # 删除
             delete1(0,self.token)
 
@@ -95,7 +96,7 @@ payloadUS = {
     "ts": "US",
     "code": "SNAP",
     "operationType": 1,
-    "recommendedTime": str(int(get_time_stamp13())-43200000),
+    "recommendedTime": str(int(get_time_stamp13())-43200000+180000),
     "recommendedPrice": "77.970",
     "referrerReason": "[{\"type\":\"消息面\",\"list\":[{\"title\":\"市场机会\",\"desc"
                       "\":\"/api/con_stock_recommend/v1/add\"}]}]",
