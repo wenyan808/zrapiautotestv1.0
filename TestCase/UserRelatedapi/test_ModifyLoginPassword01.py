@@ -14,7 +14,7 @@ from Common.getTestLoginToken import getlogintoken
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-
+from TestCase.UserRelatedapi.redisfuction import deviceOR, phoneOR
 
 from glo import HTTP, JSON2, countryCode, pwd1, phoneArea
 
@@ -33,10 +33,10 @@ class TestModifyLoginPassword01():
     def test_ModifyLoginPassword01(self):
         # 拼装参数
         header = JSON2
-
+        deviceOR(1,JSON2.get("deviceId"))
         phone = "15817384000"
         password = pwd1
-
+        phoneOR(5,phoneArea,phone)
         # 获取登录的token
         headers_token = getlogintoken(phone, password, phoneArea)
         # print(headers_token)

@@ -12,7 +12,9 @@ import requests
 
 from Common.getConsoleLogin import getConsoleLogin_token
 from Common.get_time_stamp import get_time_stamp13
+from Common.login import login
 from Common.sign import get_sign
+from Common.tools.read_yaml import yamltoken
 from TestCase.Recommendedstockconsole.recommend_delete import delete1
 from glo import console_JSON, http,JSON
 
@@ -20,6 +22,7 @@ from glo import console_JSON, http,JSON
 class TestRecommendAdd():
     def setup(self):
         # 获取console端token
+        login()
         self.token = getConsoleLogin_token()
     def teardowm(self):
         pass
@@ -50,7 +53,7 @@ class TestRecommendAdd():
             # 新增
             add(payloadUS,self.token)
             # 删除
-            delete1(2,self.token)
+            delete1(0,self.token)
 
 payloadHK = {
     "type": 2,
@@ -127,6 +130,7 @@ RESET_BEFORE_OPEN("083000","090000",9,"盘前清零");
 AFTER_DISC("150000","153000",10,"科创板盘后交易");
     """
 
+    JSON.update({"token": yamltoken()})
     response = requests.request("POST", http + "/as_market/api/market_trade_status/v1/get_market_status", headers=JSON, data=json.dumps({"sign": get_sign({})})).json()
     # 1 - HK,2 - US,3 -（SH,SZ)
     if market == 1:

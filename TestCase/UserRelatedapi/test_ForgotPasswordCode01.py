@@ -13,7 +13,7 @@ import pytest
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-
+from TestCase.UserRelatedapi.redisfuction import deviceOR, phoneOR
 
 from glo import JSON, HTTP, countryCode, phoneArea
 
@@ -32,8 +32,9 @@ class TestForgotPasswordCode01():
     def test_ForgotPasswordCode01(self):
         # 拼装参数
         headers = JSON
-
+        deviceOR(2,JSON.get("deviceId"))
         phone = "15816262885"
+        phoneOR(2,phoneArea,phone)
         smsCode = "2"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
         # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
         # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
