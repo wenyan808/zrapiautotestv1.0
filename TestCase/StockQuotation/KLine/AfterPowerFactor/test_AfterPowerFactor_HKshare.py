@@ -10,7 +10,7 @@ from Common.login import login
 from Common.requests_library import Requests
 from Common.sign import get_sign
 from Common.tools.read_write_json import get_json
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import JSON, HTTP, BASE_DIR
 
 

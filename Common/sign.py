@@ -11,7 +11,6 @@ def get_sign(payload1):
     }
     jdata = json.dumps(payload)
     response = requests.request("POST", url, headers=headers, data=jdata)
-
     sign1 = str(response.text.encode('utf8'))
     sign = sign1[2:-1:]
     # print(response)

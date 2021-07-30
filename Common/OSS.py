@@ -8,7 +8,7 @@ from Common.Upload.img_file_path import imgURL, fileURL
 from Common.getTestLoginToken import getlogintoken
 from Common.login import login
 from Common.show_sql import showsql
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import BASE_DIR, phone2, HTTP, JSON, phoneArea, pwd, phone
 
 

@@ -9,4 +9,9 @@ def get_md5(s: str):
     raise TypeError("传入参数不能为空")
 
 
-print(get_md5("zr123456"))
+# print(get_md5("zr123456"))
+
+
+
+
+

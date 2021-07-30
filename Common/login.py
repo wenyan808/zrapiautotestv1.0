@@ -4,18 +4,18 @@ import pytest
 import requests
 
 from Common.tools.md5 import get_md5
-from glo import HTTP, BASE_DIR, JSON, phone, pwd
+from glo import HTTP, BASE_DIR, JSON, phone, pwd, phone2, phoneArea, pwd2
 from Common.sign import get_sign
 
 
 def login():
     # print(phone)
-    password = get_md5(pwd)
+    password = get_md5(pwd2)
     http = HTTP
     json1 = {
-        "phone": phone,
+        "phone": phone2,
         "loginPassword": password,
-        "phoneArea": "86"
+        "phoneArea": phoneArea
     }
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)

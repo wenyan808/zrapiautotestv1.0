@@ -5,7 +5,8 @@ import requests
 from Common.getTestLoginToken import gettestLoginToken, getlogintoken
 
 from Common.sign import get_sign
-from glo import http, JSON_dev, user_password
+from TestCase.UserRelatedapi.redisfuction import deviceOR
+from glo import http, JSON_dev, user_password, JSON2
 
 
 def AccountAuth():
@@ -53,7 +54,6 @@ def AccountAuth():
     payload1.update(sign1)
 
     payload = json.dumps(dict(payload1))
-
     r_auth = requests.session().post(
         url=url, headers=headers1, data=payload
     )

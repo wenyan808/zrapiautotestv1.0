@@ -13,7 +13,7 @@ from Common.sign import get_sign
 
 from Common.requests_library import Requests
 
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 
 from glo import JSON, HTTP
 

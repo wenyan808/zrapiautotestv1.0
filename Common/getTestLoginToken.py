@@ -11,14 +11,12 @@ from Common.sign import get_sign
 
 def gettestLoginToken():
     """TEST环境 用户手机号密码登录
-
     :return: 返回登录token
     """
     url = http + "/as_user/api/user_account/v1/user_login_pwd"
     url1 = http + "/as_notification/api/sms/v1/send_code"
     url2 = http + "/as_user/api/user_account/v1/device_next"
     password = get_md5(pwd2)
-
     json1 = {
         "phone": phone2,
         "loginPassword": password,
@@ -27,7 +25,6 @@ def gettestLoginToken():
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)
     headers = JSON_dev
-
     response_login = requests.session().post(url=url, headers=headers,
                                              json=json1)
     # print(response_login.json())

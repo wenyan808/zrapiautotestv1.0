@@ -1,6 +1,6 @@
 # 字段说明：url路径，paylo接受参数，sign1可以自动生成签名，headers为头部信息，response为返回报文
 import requests, json
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from Common.sign import get_sign
 from glo import JSON, HTTP
 import logging

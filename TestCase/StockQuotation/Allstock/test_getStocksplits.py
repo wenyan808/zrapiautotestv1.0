@@ -12,7 +12,7 @@ from Common.login import login
 from Common.show_sql import showsql
 from Common.sign import get_sign
 from Common.tools.read_write_json import write_json, get_json
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import BASE_DIR, JSON, HTTP
 
 

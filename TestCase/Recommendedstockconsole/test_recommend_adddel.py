@@ -14,7 +14,7 @@ from Common.getConsoleLogin import getConsoleLogin_token
 from Common.get_time_stamp import get_time_stamp13
 from Common.login import login
 from Common.sign import get_sign
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from TestCase.Recommendedstockconsole.recommend_delete import delete1
 from glo import console_JSON, http,JSON
 
