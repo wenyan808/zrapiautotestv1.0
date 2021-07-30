@@ -27,7 +27,8 @@ class TestCommunitycommentdiscuss_list():
     def test_Community_discuss_list(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/community/v1/discuss_list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
         stocks = [
             {
                 "ts": "HK",
@@ -45,7 +46,7 @@ class TestCommunitycommentdiscuss_list():
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
         token1 = yamltoken()

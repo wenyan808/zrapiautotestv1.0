@@ -35,7 +35,8 @@ class TestRegistration():
     def test_Registration(self):
 
         # 拼装参数
-        headers = JSON3
+        headers = {}
+        headers.update(JSON3)
         phone = get_unique_phone()
         smsCode = "1"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
         # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),

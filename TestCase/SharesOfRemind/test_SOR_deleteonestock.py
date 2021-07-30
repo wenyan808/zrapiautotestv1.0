@@ -25,7 +25,8 @@ class TestSORDeleteonestock:
     def test_SOR_deleteonestock(self):
         # pass
         url = HTTP + "/as_market/api/price_notify/v1/delete_one_stock"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -39,7 +40,7 @@ class TestSORDeleteonestock:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
 
         token1 = yamltoken()

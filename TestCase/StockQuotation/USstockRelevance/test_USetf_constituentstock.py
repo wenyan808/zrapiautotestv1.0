@@ -25,7 +25,8 @@ class TestUSetfConstituentstock:
     def test_USetf_constituentstock(self):
         # pass
         url = HTTP + "/as_market/api/us/etf/v1/constituent/stock"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -39,7 +40,7 @@ class TestUSetfConstituentstock:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

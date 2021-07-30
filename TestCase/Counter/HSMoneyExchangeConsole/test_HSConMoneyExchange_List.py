@@ -31,7 +31,7 @@ class TestHSConMoneyExchangeList():
     def test_HSConMoneyExchange_List(self):
         # 拼装参数
         header = console_JSON
-        header = header
+
         headers = {}
         headers.update(header)
 

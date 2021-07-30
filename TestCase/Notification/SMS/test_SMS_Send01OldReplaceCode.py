@@ -29,7 +29,8 @@ class TestSMSSendOldReplaceCode():
         # password = "zr123456"
         password = pwd1
         headers_token = getlogintoken(phone, password, phoneArea)
-        header = JSON1
+        header = {}
+        header.update(JSON1)
         headers1 = {}
         headers1.update(header)
         token = {"token": headers_token}

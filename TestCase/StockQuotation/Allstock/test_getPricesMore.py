@@ -38,7 +38,8 @@ class TestgetPricesMore:
     def test_getPricesMore_all(self,info):
         # pass
         url = HTTP + "/as_market/api/stock_splits/v1/list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
 
@@ -49,7 +50,7 @@ class TestgetPricesMore:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

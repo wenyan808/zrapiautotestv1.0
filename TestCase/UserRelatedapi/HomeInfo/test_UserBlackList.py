@@ -32,7 +32,8 @@ class TestUserBlackList():
     # @pytest.mark.skip(reason="调试中 ")
     def test_UserBlackList(self):
         # 拼装参数
-        header = JSON
+        header = {}
+        header.update(JSON)
         headers = {}
         headers.update(header)
         token = {"token": yamltoken()}

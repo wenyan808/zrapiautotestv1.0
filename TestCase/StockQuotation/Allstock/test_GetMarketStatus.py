@@ -28,7 +28,8 @@ class TestGetMarketStatus:
     def test_GetMarketStatus(self, info):
         # pass
         url = HTTP + "/as_market/api/market_trade_status/v1/get_market_status"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         # paylo = {}
@@ -39,7 +40,7 @@ class TestGetMarketStatus:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

@@ -37,7 +37,8 @@ class TestGetCapitalFlowTime:
     def test_getCapitalFlowTime(self, info):
         # pass
         url = HTTP + "/as_market/api/stock/view/v1/getCapitalFlowTime"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -52,7 +53,7 @@ class TestGetCapitalFlowTime:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

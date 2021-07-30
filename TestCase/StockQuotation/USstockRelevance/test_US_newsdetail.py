@@ -23,7 +23,8 @@ class TestUSNewsdetail:
     def test_US_newsdetail(self):
         # pass
         url = HTTP + "/as_market/api/us/news/v1/detail"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
 
@@ -37,7 +38,7 @@ class TestUSNewsdetail:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

@@ -43,7 +43,8 @@ class TestHSGTIfhsgtis_lgt:
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_HSGTData/hsgtis_lgt.json"))
     def test_HSGT_Ifhsgtis_lgt(self, info):
         url = HTTP + "/as_market/api/stock_market_data/v1/hsgt/is_lgt"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
 
@@ -54,7 +55,7 @@ class TestHSGTIfhsgtis_lgt:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

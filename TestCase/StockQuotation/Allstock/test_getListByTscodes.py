@@ -36,7 +36,8 @@ class TestGetListByTscodes:
     def test_getListByTscodes(self, info):
         # pass
         url = HTTP + "/as_market/api/stock_basic/v1/get_list_by_tscodes"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -54,7 +55,7 @@ class TestGetListByTscodes:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

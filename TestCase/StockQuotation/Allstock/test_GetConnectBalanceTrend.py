@@ -26,7 +26,8 @@ class TestNowSrverinfo:
     def test_nowSrverinfo(self):
         # pass
         url = HTTP + "/as_market/api/connect_balance/v1/get_connect_balance_trend"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -39,7 +40,7 @@ class TestNowSrverinfo:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

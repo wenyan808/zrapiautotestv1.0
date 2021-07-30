@@ -33,7 +33,7 @@ class TestIMConTopicList():
     def test_IM_ConTopicList(self):
         url = console_HTTP + "/api/con_topic/v1/list"
         header = console_JSON
-        header = header
+
 
         headers = {}
         headers.update(header)

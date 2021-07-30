@@ -25,7 +25,8 @@ class TestUSetfdividendslist:
     def test_USetf_dividendslist(self):
         # pass
         url = HTTP + "/as_market/api/us/etf/v1/f10/dividends/list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
 
@@ -42,7 +43,7 @@ class TestUSetfdividendslist:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

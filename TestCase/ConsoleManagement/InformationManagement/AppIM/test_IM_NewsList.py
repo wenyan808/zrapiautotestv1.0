@@ -32,8 +32,9 @@ class TestIMNewsList():
                              get_json(BASE_DIR + r"/TestData/testIMData/test_IM_NewsList.json"))
     def test_IM_NewsList(self,info):
         url = HTTP + "/as_stock_information/api/news/v1/list"
-        header = JSON
-        header = header
+        header = {}
+        header.update(JSON)
+
 
         # 拼装参数
         # paylo = {

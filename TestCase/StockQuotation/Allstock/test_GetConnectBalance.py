@@ -28,7 +28,8 @@ class TestGetConnectBalance:
     def test_GetConnectBalance(self):
         # pass
         url = HTTP + "/as_market/api/connect_balance/v1/get_connect_balance"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -40,7 +41,7 @@ class TestGetConnectBalance:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 
@@ -68,7 +69,8 @@ class TestGetConnectBalance:
     def test_GetConnectBalance_SB(self):
         # pass
         url = HTTP + "/as_market/api/connect_balance/v1/get_connect_balance"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -80,7 +82,7 @@ class TestGetConnectBalance:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

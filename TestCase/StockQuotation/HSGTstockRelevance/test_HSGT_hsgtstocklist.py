@@ -27,7 +27,8 @@ class TestHSGThsgtstocklist:
     def test_HSGT_hsgtstocklist(self, info):
         # pass
         url = HTTP + "/as_market/api/hsgt/v1/stock/list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = info
@@ -37,7 +38,7 @@ class TestHSGThsgtstocklist:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

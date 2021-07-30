@@ -31,7 +31,8 @@ class TestForgotPasswordCode01():
     # @pytest.mark.skip(reason="调试中 ")
     def test_ForgotPasswordCode01(self):
         # 拼装参数
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
         deviceOR(2,JSON.get("deviceId"))
         phone = "15816262885"
         phoneOR(2,phoneArea,phone)

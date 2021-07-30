@@ -26,7 +26,8 @@ class TestUSF10shareholder:
     def test_US_F10shareholder(self):
         # pass
         url = HTTP + "/as_market/api/us/f10/v1/share_holder"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -40,7 +41,7 @@ class TestUSF10shareholder:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

@@ -19,7 +19,8 @@ def login():
     }
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)
-    headers = JSON
+    headers = {}
+    headers.update(JSON)
     session = requests.session()
     response_login = session.post(http + "/as_user/api/user_account/v1/user_login_pwd", headers=headers,
                                   json=json1)
@@ -89,7 +90,8 @@ def login_all(key, value, password, url, file_name):
     #     "osType": "ios",
     #     "osVersion": '13.5.1'
     # }
-    header = JSON
+    header = {}
+    header.update(JSON)
     json = {
         "loginPassword": get_md5(password),
         "phoneArea": "86"

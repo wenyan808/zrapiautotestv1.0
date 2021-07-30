@@ -17,8 +17,9 @@ def AccountAuth():
     url = http + "/as_trade/api/account/v1/auth"
     url1 = http + "/as_trade/api/account/v1/info"
     # 拼装参数
-    headers = JSON_dev
-    headers = headers
+    headers = {}
+    headers.update(JSON_dev)
+
     headers1 = {}
     token = {"token": gettestLoginToken()}
     # print(token)
@@ -79,8 +80,8 @@ def UserLoginAuth(phone: str, password: str, phoneArea: str, authpwd: str):
     url = http + "/as_trade/api/account/v1/auth"
     url1 = http + "/as_trade/api/account/v1/info"
     # 拼装参数
-    headers = JSON_dev
-    headers = headers
+    headers = {}
+    headers.update(JSON_dev)
     headers1 = {}
     token = {"token": getlogintoken(phone, password, phoneArea)}
     # print(token)

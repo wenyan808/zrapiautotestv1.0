@@ -27,7 +27,8 @@ class TestSMSSendUpdatePasswordCode():
     def test_SMS_SendUpdatePasswordCode(self):
         # 拼装参数
         headers_token = getlogintoken(phone5, pwd5, phoneArea)
-        header = JSON1
+        header = {}
+        header.update(JSON1)
         headers1 = {}
         headers1.update(header)
         token = {"token": headers_token}

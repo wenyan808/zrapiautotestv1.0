@@ -25,7 +25,8 @@ class TestSMSSendNewReplaceCode():
     # @pytest.mark.skip(reason="调试中 ")
     def test_SMS_SendNewReplaceCode(self):
         # 拼装参数
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
         phone = "15816144700"
         # password = "zr123456"
         password = pwd1
@@ -49,7 +50,8 @@ class TestSMSSendNewReplaceCode():
         j = r.json()
         # print(j)
         headers_token = j.get("data").get("token")
-        header = JSON
+        header = {}
+        header.update(JSON)
         headers1 = {}
         headers1.update(header)
         token = {"token": headers_token}

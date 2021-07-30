@@ -36,7 +36,8 @@ class TestgetNetCapitalFlow:
     def test_HSGT_getNetCapitalFlow(self, info):
         # pass
         url = HTTP + "/as_market/api/hsgt/v1/get_net_capital_flow"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
 
@@ -47,7 +48,7 @@ class TestgetNetCapitalFlow:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

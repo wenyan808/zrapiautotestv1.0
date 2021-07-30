@@ -36,8 +36,9 @@ class TestCommunitycommentdetail():
     def test_Community_commentdetail(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        headers = JSON
-        headers = headers
+        headers = {}
+        headers.update(JSON)
+
         token1 = yamltoken()
         token = {"token": token1}
         headers.update(token)  # 将token更新到headers

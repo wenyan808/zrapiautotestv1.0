@@ -37,7 +37,8 @@ class TestgetStockjump:
     def test_getStockjump_adrandStocksplits(self,info):
         # pass
         url = HTTP + "/as_market/api/stock_jump/v1/get"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
 
@@ -48,7 +49,7 @@ class TestgetStockjump:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

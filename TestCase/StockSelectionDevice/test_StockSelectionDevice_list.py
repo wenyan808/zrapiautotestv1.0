@@ -33,7 +33,8 @@ class TestStockSelectionDeviceList:
         # _id = str(id[-1].get('_id'))
         # print(_id)
         url = HTTP + "/as_market/api/stock_selector/v1/tactic/list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         # name = get_unique_username(1)[0]
@@ -46,7 +47,7 @@ class TestStockSelectionDeviceList:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

@@ -30,8 +30,9 @@ class TestHSCustomerInfoAuth():
     # @pytest.mark.skip(reason="调试中 ")
     def test_HSCustomerInfo_Auth(self):
         # 拼装参数
-        headers = JSON_dev
-        headers = headers
+        headers = {}
+        headers.update(JSON_dev)
+
         headers1 = {}
         token = {"token": gettestLoginToken()}
         headers1.update(headers)

@@ -33,7 +33,7 @@ class TestIMAnnouncementDisable():
     def test_IM_AnnouncementDisable(self, info):
         url = console_HTTP + "/api/con_stock_announcement/v1/list"
         header = console_JSON
-        header = header
+
         headers = {}
         headers.update(header)
         token = {"token": getConsoleLogin_token()}

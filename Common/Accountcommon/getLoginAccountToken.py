@@ -13,7 +13,8 @@ def GetLoginAccountToken():
     loginAccount = loginAccount_phone
     password = Accountlogin_password
     url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"
-    headers = JSON
+    headers = {}
+    headers.update(JSON)
 
     # 拼装参数
     paylo = {
@@ -47,7 +48,8 @@ def getLoginAccountToken(phone: str, password: str):
     loginAccount = phone
     password = password
     url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"
-    headers = JSON
+    headers = {}
+    headers.update(JSON)
 
     # 拼装参数
     paylo = {

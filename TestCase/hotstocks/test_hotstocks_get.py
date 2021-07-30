@@ -19,7 +19,8 @@ class Testhotstockget():
         paylo.update(sign1)
         payload = json.dumps(dict(paylo))
 
-        headers = JSON1
+        headers = {}
+        headers.update(JSON1)
 
         response = requests.request("POST", url, headers=headers, data=payload)
         r = response.json()

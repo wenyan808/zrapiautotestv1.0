@@ -41,8 +41,9 @@ class TestCommunityaddreport():
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_addreport(self):
         url_hostlist = HTTP + "/as_community/api/community/v1/hot_list"
-        headers = JSON
-        headers = headers
+        headers = {}
+        headers.update(JSON)
+
         token1 = yamltoken()
         token = {"token": token1}
         headers.update(token)  # 将token更新到headers

@@ -25,7 +25,8 @@ class TestUSUSetfStockpage:
     def test_USetf_stockpage(self):
         # pass
         url = HTTP + "/as_market/api/us/etf/v1/stock/page"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -41,7 +42,7 @@ class TestUSUSetfStockpage:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

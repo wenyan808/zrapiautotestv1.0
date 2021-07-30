@@ -35,7 +35,8 @@ class TestHkstockSplitsjump:
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/HkstockSplitsjump.json"))
     def test_Hkstock_Splitsjumpp(self, info):
         url = HTTP + "/as_market/api/hk/splits/v1/jump"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
 
@@ -46,7 +47,7 @@ class TestHkstockSplitsjump:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

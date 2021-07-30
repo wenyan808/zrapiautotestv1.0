@@ -38,7 +38,8 @@ class TestIMANoticeDetails():
     # @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/testIMData/test_IM_ANoticeDetails.json"))
     def test_IM_ANoticeDetails(self):
         url = HTTP + "/as_stock_information/api/announcement/v1/list"
-        header = JSON
+        header = {}
+        header.update(JSON)
 
         code = "00700"
         paylo = {

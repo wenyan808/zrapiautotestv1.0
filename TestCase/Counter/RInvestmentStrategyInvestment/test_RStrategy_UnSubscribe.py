@@ -28,8 +28,9 @@ class TestRStrategyUnSubscribe():
         url1 = http + "/as_trade/api/strategy/v1/subscribe"
         url2 = http + "/as_trade/api/strategy/v1/un_subscribe"
         # 拼装参数
-        headers = JSON_dev
-        headers = headers
+        headers = {}
+        headers.update(JSON_dev)
+
         headers1 = {}
         token = {"token": gettestLoginToken()}
         headers1.update(headers)

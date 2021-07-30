@@ -33,7 +33,8 @@ class TestAfterPowerFactor:
     @allure.story('查询最新复权因子_HK个股')
     def test_AfterPowerFactor_HKshare(self):
         # url = HTTP + "/as_market/api/newest_adj/v1/get"
-        # headers = JSON
+        # headers = {}
+        # headers.update(JSON)
         #
         # # 拼装参数
         #
@@ -47,7 +48,7 @@ class TestAfterPowerFactor:
         # payload1 = {}
         # payload1.update(paylo)
         # payload1.update(sign1)
-        # headers = headers
+        #
         # # print(token)
         # # print(type(token))
         #

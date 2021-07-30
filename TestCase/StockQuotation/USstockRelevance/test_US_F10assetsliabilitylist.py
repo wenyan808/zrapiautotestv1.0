@@ -27,7 +27,8 @@ class TestUSF10profitlist:
     def test_US_F10assetsliabilitylist(self, info):
         # pass
         url = HTTP + "/as_market/api/us/f10/v1/assets_liability_list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
 
@@ -44,7 +45,7 @@ class TestUSF10profitlist:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

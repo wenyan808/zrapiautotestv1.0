@@ -110,7 +110,7 @@ def oss_file(Storage_directory: str, file_name: str, catalog: str, url: str, hea
 # userId = list(list(userId1)[0])[0]
 # catalog = r"/Business/Img/community/"
 # url1 = HTTP + "/as_common/api/sts/v1/token"
-# header = JSON
+# header = {} header.update(JSON)
 # login()
 # token1 = yamltoken()
 # token = {"token": token1}

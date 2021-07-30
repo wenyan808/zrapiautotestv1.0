@@ -32,7 +32,8 @@ class TestIMAnnounceList():
                              get_json(BASE_DIR + r"/TestData/testIMData/test_IM_AnnounceList.json"))
     def test_IM_AnnounceList(self, info):
         url = HTTP + "/as_stock_information/api/announcement/v1/list"
-        header = JSON
+        header = {}
+        header.update(JSON)
 
         # 拼装参数
         paylo = info

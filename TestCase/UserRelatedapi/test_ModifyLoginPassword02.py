@@ -41,7 +41,8 @@ class TestModifyLoginPassword02():
                              get_json(BASE_DIR + r"/TestData/UserRelatedapiData/oldPassword.json"))
     def test_ModifyLoginPassword02(self, oldpassword):
         # 拼装参数
-        headers = JSON2
+        headers = {}
+        headers.update(JSON2)
         phone = "15816152000"
         oldLoginPassword = oldpassword.get("LoginPassword")
         password = oldLoginPassword

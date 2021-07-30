@@ -32,7 +32,8 @@ class TestModifyLoginPassword01():
     # @pytest.mark.skip(reason="调试中 ")
     def test_ModifyLoginPassword01(self):
         # 拼装参数
-        header = JSON2
+        header = {}
+        header.update(JSON2)
         deviceOR(1,JSON2.get("deviceId"))
         phone = "15817384000"
         password = pwd1

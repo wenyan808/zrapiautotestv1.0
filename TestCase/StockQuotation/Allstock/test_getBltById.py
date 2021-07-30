@@ -36,7 +36,8 @@ class TestGetBltById:
     def test_getBltById(self, info):
         # pass
         url = HTTP + "/as_market/api/announcement/v1/get_blt_by_id"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -52,7 +53,7 @@ class TestGetBltById:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

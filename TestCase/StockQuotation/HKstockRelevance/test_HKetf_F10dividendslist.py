@@ -36,7 +36,8 @@ class TestHKetfF10dividendslist:
     def test_HKetf_F10dividendslist(self, info):
         # pass
         url = HTTP + "/as_market/api/etf/f10/v1/dividends/list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         # paylo = {}
@@ -47,7 +48,7 @@ class TestHKetfF10dividendslist:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

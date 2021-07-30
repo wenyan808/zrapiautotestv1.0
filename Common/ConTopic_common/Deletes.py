@@ -16,7 +16,7 @@ def delete_ConTopicID(ID: int):
     url = console_HTTP + "/api/con_topic/v1/delete"
 
     header = console_JSON
-    header = header
+
 
     headers = {}
     headers.update(header)
@@ -53,7 +53,7 @@ def delete_ConTopiccategory(categoryId: int):
     url = console_HTTP + "/api/con_topic/v1/delete"
 
     header = console_JSON
-    header = header
+
 
     headers = {}
     headers.update(header)
@@ -90,7 +90,7 @@ def delete_AddConNews(newsId: int):
     url = console_HTTP + "/api/con_news/v1/disable"
 
     header = console_JSON
-    header = header
+
 
     headers = {}
     headers.update(header)
@@ -125,7 +125,7 @@ def list_connews(title):
     url = console_HTTP + "/api/con_news/v1/list"
 
     header = console_JSON
-    header = header
+
 
     headers = {}
     headers.update(header)

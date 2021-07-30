@@ -49,7 +49,8 @@ class TestModifyPhone02():
         write_json(BASE_DIR + r"/TestData/UserRelatedapiData/oldPhone.json", paylonewname)
         # 获取登录的token
         headers_token = getlogintoken(phone, password, phoneArea)
-        header = JSON2
+        header = {}
+        header.update(JSON2)
         headers1 = {}
         headers1.update(header)
         token = {"token": headers_token}

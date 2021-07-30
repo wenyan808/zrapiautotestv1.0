@@ -30,7 +30,8 @@ class TestIMNewsContent():
     # @pytest.mark.skip(reason="调试中 ")
     def test_IM_NewsContent(self):
         url = HTTP + "/as_stock_information/api/news/v1/list"
-        header = JSON
+        header = {}
+        header.update(JSON)
         headers = {}
         headers.update(header)
         # print(token)

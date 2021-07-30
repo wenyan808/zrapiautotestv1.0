@@ -25,7 +25,8 @@ class TestUSNewsstocklistedpage:
     def test_US_newsstocklistedpage(self):
         # pass
         url = HTTP + "/as_market/api/us/new_stock/v1/listed/page"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -41,7 +42,7 @@ class TestUSNewsstocklistedpage:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

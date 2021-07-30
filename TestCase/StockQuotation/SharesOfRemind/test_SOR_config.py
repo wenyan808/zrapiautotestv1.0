@@ -35,7 +35,8 @@ class TestSORconfig:
     def test_SOR_config(self, info):
         # pass
         url = HTTP + "/as_market/api/price_notify/v1/config"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         # paylo = {}
@@ -46,7 +47,7 @@ class TestSORconfig:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

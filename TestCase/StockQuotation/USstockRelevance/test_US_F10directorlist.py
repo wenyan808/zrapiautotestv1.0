@@ -25,7 +25,8 @@ class TestUSF10directorlist:
     def test_US_F10directorlist(self):
         # pass
         url = HTTP + "/as_market/api/us/f10/v1/director/list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
 
@@ -42,7 +43,7 @@ class TestUSF10directorlist:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

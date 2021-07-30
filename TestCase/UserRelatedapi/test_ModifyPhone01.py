@@ -34,7 +34,8 @@ class TestModifyPhone01():
     # @pytest.mark.skip(reason="调试中 ")
     def test_ModifyPhone01(self):
         # 拼装参数
-        headers = JSON2
+        headers = {}
+        headers.update(JSON2)
         phone = "13321165200"
         password = pwd1
         headers_token = getlogintoken(phone, password, phoneArea)

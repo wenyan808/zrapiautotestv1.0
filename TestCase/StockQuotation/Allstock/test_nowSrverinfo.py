@@ -26,7 +26,8 @@ class TestNowSrverinfo:
     def test_nowSrverinfo(self):
         # pass
         url = HTTP + "/as_market/api/server_info/v1/now"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {}
@@ -37,7 +38,7 @@ class TestNowSrverinfo:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 
@@ -62,7 +63,8 @@ class TestNowSrverinfo:
     def test_nowSrverinfo_newYork(self):
         # pass
         url = HTTP + "/as_market/api/server_info/v1/now"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {"newYork": "true"}
@@ -73,7 +75,7 @@ class TestNowSrverinfo:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

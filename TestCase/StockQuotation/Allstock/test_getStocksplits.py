@@ -33,7 +33,8 @@ class TestgetStocksplitsH5:
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/stock_splits.json"))
     def test_getStocksplitsH5_HKandUS(self, info):
         url = HTTP + "/as_market/api/stock_splits/v1/list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
 
@@ -44,7 +45,7 @@ class TestgetStocksplitsH5:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

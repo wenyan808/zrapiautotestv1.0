@@ -32,7 +32,8 @@ class TestCommunityPosted:
     def test_Community_Posted(self, info):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        header = JSON
+        header = {}
+        header.update(JSON)
 
         # 拼装参数
         paylo = info

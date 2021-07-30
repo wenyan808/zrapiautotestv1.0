@@ -25,7 +25,8 @@ class TestUSF10dividendlist:
     def test_US_F10dividendlist_all(self):
         # pass
         url = HTTP + "/as_market/api/us/f10/v1/dividend/list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -41,7 +42,7 @@ class TestUSF10dividendlist:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 
@@ -80,7 +81,8 @@ class TestUSF10dividendlist:
     def test_US_F10dividendlist_tscode(self):
         # pass
         url = HTTP + "/as_market/api/us/f10/v1/dividend/list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -94,7 +96,7 @@ class TestUSF10dividendlist:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

@@ -34,7 +34,8 @@ class TestStockSelectionDeviceModify:
         _id = {"id": str(id[-1].get('_id'))}
         # print(_id)
         url = HTTP + "/as_market/api/stock_selector/v1/tactic/modify"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         name = get_unique_username(1)[0]
@@ -54,7 +55,7 @@ class TestStockSelectionDeviceModify:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)  # 把字典sign1的键/值对更新到payload1里
-        headers = headers
+
         # print(token)
         # print(type(token))
 

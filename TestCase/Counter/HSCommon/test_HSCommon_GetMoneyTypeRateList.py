@@ -28,8 +28,9 @@ class TestHSCommonGetMoneyTypeRateList():
         http = list(AccountAuth())[-1]
         url = http + "/as_trade/api/rate/v1/money_type_list"
         # 拼装参数
-        headers = JSON_dev
-        headers = headers
+        headers = {}
+        headers.update(JSON_dev)
+
         headers1 = {}
         token = {"token": gettestLoginToken()}
         headers1.update(headers)

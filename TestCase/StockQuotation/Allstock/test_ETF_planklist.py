@@ -27,7 +27,8 @@ class TestETFplanklist:
     def test_ETF_planklist(self, info):
         # pass
         url = HTTP + "/as_market/api/etf_plank/v1/list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         # paylo = {"market":1}
@@ -38,7 +39,7 @@ class TestETFplanklist:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

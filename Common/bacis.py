@@ -8,7 +8,8 @@ import logging
 
 def common(i):
     http = HTTP
-    header = JSON
+    header = {}
+    header.update(JSON)
     headers = {}
     headers.update(header)
     token2, urll, requestmode, paylop = i[3], i[5], i[6], i[7]

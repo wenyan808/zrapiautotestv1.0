@@ -31,7 +31,8 @@ class TestForgotPasswordCode02():
     # @pytest.mark.skip(reason="调试中 ")
     def test_ForgotPasswordCode02(self):
         # 拼装参数
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         phone = "15816262885"
         password = "zr1234567"

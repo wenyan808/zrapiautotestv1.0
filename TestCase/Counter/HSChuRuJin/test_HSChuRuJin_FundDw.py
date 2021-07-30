@@ -28,8 +28,9 @@ class TestHSChuRuJinFundDw():
         http = list(AccountAuth())[-1]
         url = http + "/as_trade/api/remit_bank/v1/list"
         # 拼装参数
-        headers = JSON_dev
-        headers = headers
+        headers = {}
+        headers.update(JSON_dev)
+
         headers1 = {}
         token = {"token": gettestLoginToken()}
         headers1.update(headers)

@@ -24,7 +24,8 @@ class TestSMSSendForgetCode():
     # @pytest.mark.skip(reason="调试中 ")
     def test_SMS_SendForgetCode(self):
         # 拼装参数
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
         phone = "15809433400"
         type = 1
         boby = {

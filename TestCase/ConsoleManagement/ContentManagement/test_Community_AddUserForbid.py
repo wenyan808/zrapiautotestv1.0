@@ -40,7 +40,7 @@ class TestCommunityAddUserForbid():
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
         token = {"token": getConsoleLogin_token()}

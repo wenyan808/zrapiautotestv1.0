@@ -33,7 +33,8 @@ class test_USF10profile:
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/USStockData/US_F10profile.json"))
     def test_US_f10profile(self, info):
         url = HTTP + "/as_market/api/us/f10/v1/profile"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
 
@@ -44,7 +45,7 @@ class test_USF10profile:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

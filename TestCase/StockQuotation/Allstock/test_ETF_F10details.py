@@ -36,7 +36,8 @@ class TestETFF10details:
     def test_ETF_F10details(self, info):
         # pass
         url = HTTP + "/as_market/api/etf/f10/v1/details"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         # paylo = {}
@@ -47,7 +48,7 @@ class TestETFF10details:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
 

@@ -24,7 +24,8 @@ def gettestLoginToken():
     }
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)
-    headers = JSON_dev
+    headers = {}
+    headers.update(JSON_dev)
     response_login = requests.session().post(url=url, headers=headers,
                                              json=json1)
     # print(response_login.json())
@@ -82,7 +83,8 @@ def getUserLogincodeToken(phone: str):
     """
     HTTP = http
     JSON = JSON_dev
-    headers = JSON
+    headers = {}
+    headers.update(JSON)
     # phone = "13418923886"
     phone = phone
     smsCode = "1"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
@@ -172,7 +174,8 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
     }
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)
-    headers = JSON2
+    headers = {}
+    headers.update(JSON2)
 
     res_login = requests.session().post(url=url, headers=headers,
                                         json=json1)

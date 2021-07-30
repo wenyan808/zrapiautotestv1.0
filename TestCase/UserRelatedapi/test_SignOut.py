@@ -25,7 +25,8 @@ class TestSignOut():
     # @pytest.mark.skip(reason="调试中 ")
     def test_SignOut(self):
         # 拼装参数
-        headers = JSON2
+        headers = {}
+        headers.update(JSON2)
 
         phone = "15817235000"
         # password = "zr123456"
