@@ -5,8 +5,9 @@ import requests
 from Common.getTestLoginToken import gettestLoginToken, getlogintoken
 
 from Common.sign import get_sign
+from Common.tools.read_write_yaml import yamlconfig
 from TestCase.UserRelatedapi.redisfuction import deviceOR
-from glo import http, JSON_dev, user_password, JSON2
+from glo import http, JSON_dev
 
 
 def AccountAuth():
@@ -42,7 +43,10 @@ def AccountAuth():
     K = r_info.json()
     # print(K)
     clientId = K.get("data").get("clientId")
-    password = user_password
+    if yamlconfig("flag"):
+        password = "123456"
+    else:
+        password = "111111"
 
     body = {
         "clientId": clientId,

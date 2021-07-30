@@ -17,7 +17,7 @@ from glo import phone3, pwd3, phoneArea, user_password
 
 
 # @pytest.mark.skip(reason="调试中 ")
-@allure.feature('柜台app_重置交易密码-步骤一')
+@allure.feature('柜台app_忘记交易密码-步骤一')
 class TestHSCustomerInfoToResetPwd01():
     @classmethod
     def setup_class(cls) -> None:
@@ -49,7 +49,7 @@ class TestHSCustomerInfoToResetPwd01():
         payload2 = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=url2, headers=headers, data=payload2, title="重置交易密码-步骤一"
+            url=url2, headers=headers, data=payload2, title="忘记交易密码-步骤一"
         )
 
         k = r.json()

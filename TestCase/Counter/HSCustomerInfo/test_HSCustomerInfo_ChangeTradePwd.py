@@ -53,10 +53,10 @@ class TestHSCustomerInfoChangeTradePwd():
         r = Requests(self.session).post(
             url=self.url, headers=headers, data=payload, title="修改交易密码"
         )
-        # k = r.json()
-        # print(k)
-        # print(f"\n请求地址：{self.url}"
-        #       f"\nbody参数：{payload}"
-        #       f"\n请求头部参数：{headers}")
-        assert r.status_code == 200
-        assert_data(r, "000000", "ok")
+        k = r.json()
+        print(k)
+        # # print(f"\n请求地址：{self.url}"
+        # #       f"\nbody参数：{payload}"
+        # #       f"\n请求头部参数：{headers}")
+        # assert r.status_code == 200
+        # assert_data(r, "000000", "ok")

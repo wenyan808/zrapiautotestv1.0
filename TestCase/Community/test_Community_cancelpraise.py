@@ -112,9 +112,8 @@ class TestCommunitycancelpraise():
     def test_Community_cancelcommentpraise(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        headers = {}
-        headers.update(JSON)
-
+        headers = JSON
+        headers = headers
         # print(token)
         # print(type(token))
         token1 = yamltoken()

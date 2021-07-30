@@ -62,6 +62,25 @@ def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, ur
         print("上传失败")
 
 
+headers = {}
+headers.update(JSON)
+# print(token)
+# print(type(token))
+token1 = yamltoken()
+token = {"token": token1}
+headers.update(token)  # 将token更新到headers
+print(headers)
+userId1 = showsql(
+    '192.168.1.237', 'root', '123456', "user_account",
+    f"select user_id from t_user_account where `zr_no`= '68904140';"
+)
+userId = list(list(userId1)[0])[0]
+print(userId)
+catalog = r"/Business/Img/community/"
+url1 = HTTP + "/as_common/api/sts/v1/token"
+url_path = list(oss_img("community", "01.jpg", userId, catalog, url1, headers))
+
+
 def oss_file(Storage_directory: str, file_name: str, catalog: str, url: str, headers: dict):
     """上传文件到oss
     在调用这个方法时，请参照http://192.168.1.203:3001/project/54/interface/api/5072的说明进行参考
@@ -100,7 +119,6 @@ def oss_file(Storage_directory: str, file_name: str, catalog: str, url: str, hea
         file_url = json.dumps(file_url)
         # print(file_url)
         return file_url, oss_file_path
-
 
 # print(oss_file("sensitive_word", "敏感词.xlsx"))
 # userId1 = showsql(
