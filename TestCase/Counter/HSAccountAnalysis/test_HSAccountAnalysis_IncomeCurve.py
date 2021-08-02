@@ -94,6 +94,6 @@ class TestHSAccountAnalysisIncomeCurve():
         j = r_info.json()
         # print(j)
         assert r_info.status_code == 200
-
-        assert j.get("code") == "000000"
         assert j.get("msg") == 'ok'
+        assert j.get("code") == "000000"
+
