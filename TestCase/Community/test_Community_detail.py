@@ -25,7 +25,7 @@ class TestCommunitydetail():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
-        login()  # 调用登录接口通过token传出来
+        # login()  # 调用登录接口通过token传出来
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
@@ -33,10 +33,9 @@ class TestCommunitydetail():
     def test_Community_detail(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        headers1 = JSON
-        header = headers1
+
         headers = {}
-        headers.update(header)
+        headers.update(JSON)
         # token = {"token": getlogintoken(phone, pwd, phoneArea)}
         token1 = yamltoken()
         token = {"token": token1}

@@ -6,7 +6,7 @@ from Common.getTestLoginToken import gettestLoginToken, getlogintoken
 
 from Common.sign import get_sign
 from Common.tools.read_write_yaml import yamlconfig
-from TestCase.UserRelatedapi.redisfuction import deviceOR
+# from TestCase.UserRelatedapi.redisfuction import deviceOR
 from glo import http, JSON_dev
 
 

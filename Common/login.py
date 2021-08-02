@@ -10,10 +10,10 @@ from Common.sign import get_sign
 
 def login():
     # print(phone)
-    password = get_md5(pwd2)
+    password = get_md5(pwd)
     http = HTTP
     json1 = {
-        "phone": phone2,
+        "phone": phone,
         "loginPassword": password,
         "phoneArea": phoneArea
     }

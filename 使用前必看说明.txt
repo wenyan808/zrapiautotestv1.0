@@ -64,8 +64,9 @@ Common文件夹里面每个方法都是公用的，命名方式均能够直接�
 pip install -U allure pytest sys hashlib pyyaml pandas xlrd -i https://mirrors.aliyun.com/pypi/simple
 单个库从阿里云镜像云盘中下载
 pip install -U pymongo -i https://mirrors.aliyun.com/pypi/simple
-
-
+安装Redis库
+pip install redis-py-cluster==1.3.5
+pip install redis==2.10.6
 
 执行用例和生成HTML报告命令
 # pytest

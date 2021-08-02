@@ -31,6 +31,11 @@ class TestCommunitycommentowner_list():
         url = HTTP + "/as_community/api/comment/v1/owner_list"
         headers = {}
         headers.update(JSON)
+
+        token1 = yamltoken()
+        token = {"token": token1}
+        headers.update(token)  # 将token更新到headers
+        # print(headers)
         # userId = showsql(
         #     '192.168.1.237', 'root', '123456', "user_account",
         #     "select user_id from t_user_account where `zr_no`= '68904140';"
@@ -48,12 +53,6 @@ class TestCommunitycommentowner_list():
         payload1.update(paylo)
         payload1.update(sign1)
 
-        # print(token)
-        # print(type(token))
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
         payload = json.dumps(dict(payload1))
         # time.sleep(60.01)
 

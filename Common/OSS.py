@@ -28,10 +28,10 @@ def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, ur
     name = Storage_directory + '/' + userId + '/{}'
     oss_img_path = imgURL(name) + img_name
     # print(oss_img_path)
-    url = url
-    header = headers
+    # url = url
+    # header = headers
 
-    rj = getsecurityToken(url, header)
+    rj = getsecurityToken(url, headers)
     # print(rj)
     AccessKeyId = rj.get("accessKeyId")
     # print(AccessKeyId)
@@ -61,24 +61,24 @@ def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, ur
     else:
         print("上传失败")
 
-
-headers = {}
-headers.update(JSON)
-# print(token)
-# print(type(token))
-token1 = yamltoken()
-token = {"token": token1}
-headers.update(token)  # 将token更新到headers
-print(headers)
-userId1 = showsql(
-    '192.168.1.237', 'root', '123456', "user_account",
-    f"select user_id from t_user_account where `zr_no`= '68904140';"
-)
-userId = list(list(userId1)[0])[0]
-print(userId)
-catalog = r"/Business/Img/community/"
-url1 = HTTP + "/as_common/api/sts/v1/token"
-url_path = list(oss_img("community", "01.jpg", userId, catalog, url1, headers))
+# login()
+# headers = {}
+# headers.update(JSON)
+#
+# token1 = yamltoken()
+# token = {"token": token1}
+# headers.update(token)  # 将token更新到headers
+# # print(headers)
+# userId1 = showsql(
+#     '192.168.1.237', 'root', '123456', "user_account",
+#     f"select user_id from t_user_account where `zr_no`= '68904140';"
+# )
+# userId = list(list(userId1)[0])[0]
+# img_name = "01.jpg"
+# catalog = r"/Business/Img/community/"
+# url1 = HTTP + "/as_common/api/sts/v1/token"
+# url_path = list(oss_img("community", img_name, userId, catalog, url1, headers))
+# print(url_path)
 
 
 def oss_file(Storage_directory: str, file_name: str, catalog: str, url: str, headers: dict):

@@ -29,6 +29,12 @@ class TestCommunitycommentdiscuss_list():
         url = HTTP + "/as_community/api/community/v1/discuss_list"
         headers = {}
         headers.update(JSON)
+
+        token1 = yamltoken()
+        token = {"token": token1}
+        headers.update(token)  # 将token更新到headers
+        # print(headers)
+
         stocks = [
             {
                 "ts": "HK",
@@ -47,12 +53,6 @@ class TestCommunitycommentdiscuss_list():
         payload1.update(paylo)
         payload1.update(sign1)
 
-        # print(token)
-        # print(type(token))
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
         payload = json.dumps(dict(payload1))
         # time.sleep(60.01)
 
