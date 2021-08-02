@@ -230,4 +230,4 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
         return res
 
 
-# print(getlogintoken("15816543400", "zr123456", "86"))
+# print(getlogintoken("15818031100", "zr123456", "86"))

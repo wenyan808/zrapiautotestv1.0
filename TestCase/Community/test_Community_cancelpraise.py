@@ -14,6 +14,7 @@ import pytest
 import glo
 from Common.Community_common.Community_post import Communitypostdelete
 from Common.OSS import oss_img
+from Common.Upload.img_file_path import imgSize
 from Common.login import login
 from Common.show_sql import showsql
 from Common.sign import get_sign
@@ -40,7 +41,6 @@ class TestCommunitycancelpraise():
         url = HTTP + "/as_community/api/post/v1/add"
         headers = {}
         headers.update(JSON)
-
 
         token1 = yamltoken()
         token = {"token": token1}
@@ -105,17 +105,23 @@ class TestCommunitycancelpraise():
         Communitypostdelete(delete_url, headers, body)
         # 断言
         assert r.status_code == 200
-        assert r.json().get("code") == "000000"
-        assert r.json().get("msg") == "ok"
+        try:
+            assert r.json().get("code") == "000000"
+            assert r.json().get("msg") == "ok"
+        except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{r.json()}")
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_cancelcommentpraise(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        headers = JSON
-        headers = headers
-        # print(token)
-        # print(type(token))
+        headers = {}
+        headers.update(JSON)
+
         token1 = yamltoken()
         token = {"token": token1}
         headers.update(token)  # 将token更新到headers
@@ -125,12 +131,15 @@ class TestCommunitycancelpraise():
             f"select user_id from t_user_account where `zr_no`= '68904140';"
         )
         userId = list(list(userId1)[0])[0]
+        img_name = "01.jpg"
         catalog = r"/Business/Img/community/"
         url1 = HTTP + "/as_common/api/sts/v1/token"
-        url_path = list(oss_img("community", "01.jpg", userId, catalog, url1, headers))
+        url_path = list(oss_img("community", img_name, userId, catalog, url1, headers))
         url0 = url_path[0]
         path0 = url_path[-1]
         a0 = "[img:" + path0 + "]"
+        local_img_path = glo.BASE_DIR + '\\' + img_name
+        long, wide = imgSize(local_img_path)
 
         paylo = {
             "title": "关系人类永续发展的伟大事业 习近平念兹在兹",
@@ -148,8 +157,8 @@ class TestCommunitycancelpraise():
             "images": [
                 {
                     "name": path0,
-                    "w": 700,
-                    "h": 989,
+                    "w": wide,
+                    "h": long,
                     "url": url0
                 }
             ],
@@ -244,5 +253,12 @@ class TestCommunitycancelpraise():
         Communitypostdelete(delete_url, headers, body)
         # 断言
         assert r.status_code == 200
-        assert r.json().get("code") == "000000"
-        assert r.json().get("msg") == "ok"
+        try:
+            assert r.json().get("code") == "000000"
+            assert r.json().get("msg") == "ok"
+        except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{r.json()}")
