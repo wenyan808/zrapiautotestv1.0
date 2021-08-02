@@ -1,7 +1,7 @@
 import json
 import allure
 from Common.assertapi import assert_data
-from Common.login import login
+from Common.login import login, login_all
 from Common.sign import get_sign
 from Common.requests_library import Requests
 from Common.tools.read_write_yaml import yamltoken, yamlconfig, write_yaml
@@ -16,8 +16,9 @@ class TestHSCustomerInfoChangeTradePwd():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
-        login()
         http = glo.HTTP
+        url = http + "/as_user/api/user_account/v1/user_login_pwd"
+        login_all("phone", "15816263996", "zr123456", url, "/TestData/token")
         cls.url = http + "/as_trade/api/account/v1/change_trade_pwd"
 
     def tearDown(self) -> None:

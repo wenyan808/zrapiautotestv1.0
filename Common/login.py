@@ -21,14 +21,13 @@ def login():
     json1.update(sign1)
     headers = {}
     headers.update(JSON)
-    session = requests.session()
-    response_login = session.post(http + "/as_user/api/user_account/v1/user_login_pwd", headers=headers,
+    response_login = requests.post(http + "/as_user/api/user_account/v1/user_login_pwd", headers=headers,
                                   json=json1)
     if response_login.json().get("code") == "010007" \
             or response_login.json().get("msg") == "用户登陆的设备和以前不一样":
         # pass
         boby = {
-            "phone": phone,
+            "phone": phone2,
             "countryCode": "86"
         }
         sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
@@ -57,6 +56,7 @@ def login():
         res = response_gettoken.json().get("data").get("token")
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
             file.write("token: " + res)
+        return response_gettoken.json().get("data").get("userId")
         # return res
 
 
@@ -67,6 +67,7 @@ def login():
         res = response_login.json().get("data").get("token")
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
             file.write("token: " + res)
+        return response_login.json().get("data").get("userId")
         # return res
 
 
@@ -107,8 +108,9 @@ def login_all(key, value, password, url, file_name):
     res = response_login.json().get("data").get("token")
     with open(BASE_DIR + "/" + file_name + ".yaml", 'w') as file:
         file.write("token: " + res)
-    return response_login.json()
+    return response_login.json().get("data").get("userId")
 
 # login("loginAccount", "test@123.com", "abcd1234567", "http://192.168.1.239:8080/apisC/api/sys_user/v1/login",
-# # "token_console")
-# login_all("phone", "18379204795", "102522ql", "http://192.168.1.241/as_user/api/user_account/v1/user_login_pwd", "token")
+# "token_console")
+# print(login_all("phone", "18379204795", "102522ql",
+#                 "http://192.168.1.241/as_user/api/user_account/v1/user_login_pwd", "token"))
