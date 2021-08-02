@@ -84,7 +84,7 @@ payloadSZ = {
     "ts": "SZ",
     "code": "300059",
     "operationType": 1,
-    "recommendedTime": get_time_stamp13(),
+    "recommendedTime": (int(get_time_stamp13())+180000),
     "recommendedPrice": "32.82",
     "referrerReason": "[{\"type\":\"消息面\",\"list\":[{\"title\":\"市场机会\",\"desc"
                       "\":\"/api/con_stock_recommend/v1/add\"}]}]",
