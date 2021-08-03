@@ -80,14 +80,13 @@ def returnFunction(response_login):
 
     """
     res = response_login.json().get("data").get("token")
-    print(res)
     with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
         file.write("token: " + res)
     return response_login.json().get("data").get("userId")
 
 
 
-login()
+
 
 def login_all(key, value, password, url, file_name):
     """
