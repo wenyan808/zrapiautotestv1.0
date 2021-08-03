@@ -61,7 +61,7 @@ payloadHK = {
     "ts": "HK",
     "code": "00175",
     "operationType": 1,
-    "recommendedTime": get_time_stamp13(),
+    "recommendedTime": (int(get_time_stamp13())+120000),
     "recommendedPrice": "601.500",
     "referrerReason": "[{\"type\":\"消息面\",\"list\":[{\"title\":\"市场机会\",\"desc"
                       "\":\"/api/con_stock_recommend/v1/add\"}]}]",
@@ -70,13 +70,13 @@ payloadHK = {
 payloadSH = {
     "type": 2,
     "ts": "SH",
-    "code": "688981",
+    "code": "600031",
     "operationType": 1,
-    "recommendedTime": get_time_stamp13(),
+    "recommendedTime": (int(get_time_stamp13())+120000),
     "recommendedPrice": "57.40",
     "referrerReason": "[{\"type\":\"消息面\",\"list\":[{\"title\":\"市场机会\",\"desc"
                       "\":\"/api/con_stock_recommend/v1/add\"}]}]",
-    "name": "中芯国际"
+    "name": "三一重工"
 }
 
 payloadSZ = {
@@ -84,7 +84,7 @@ payloadSZ = {
     "ts": "SZ",
     "code": "300059",
     "operationType": 1,
-    "recommendedTime": (int(get_time_stamp13())+180000),
+    "recommendedTime": (int(get_time_stamp13())+120000),
     "recommendedPrice": "32.82",
     "referrerReason": "[{\"type\":\"消息面\",\"list\":[{\"title\":\"市场机会\",\"desc"
                       "\":\"/api/con_stock_recommend/v1/add\"}]}]",
@@ -96,7 +96,7 @@ payloadUS = {
     "ts": "US",
     "code": "SNAP",
     "operationType": 1,
-    "recommendedTime": str(int(get_time_stamp13())-43200000+180000),
+    "recommendedTime": str(int(get_time_stamp13())-43200000+120000),
     "recommendedPrice": "77.970",
     "referrerReason": "[{\"type\":\"消息面\",\"list\":[{\"title\":\"市场机会\",\"desc"
                       "\":\"/api/con_stock_recommend/v1/add\"}]}]",
