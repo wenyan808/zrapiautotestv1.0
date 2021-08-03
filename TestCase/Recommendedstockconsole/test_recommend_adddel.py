@@ -130,8 +130,9 @@ RESET_BEFORE_OPEN("083000","090000",9,"盘前清零");
 沪深科创板没有盘后竞价时间段，增加了盘后交易时间段 状态码为 10，其他的状态码与上面一致
 AFTER_DISC("150000","153000",10,"科创板盘后交易");
     """
-
-    JSON.update({"token": yamltoken()})
+    header = {}
+    header.update(JSON)
+    header.update({"token": yamltoken()})
     response = requests.request("POST", http + "/as_market/api/market_trade_status/v1/get_market_status", headers=JSON, data=json.dumps({"sign": get_sign({})})).json()
     # 1 - HK,2 - US,3 -（SH,SZ)
     if market == 1:
