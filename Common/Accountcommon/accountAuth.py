@@ -68,8 +68,8 @@ def AccountAuth():
     return l, headers1, http
 
 
-print(AccountAuth())
-print(list(AccountAuth())[1])
+# print(AccountAuth())
+# print(list(AccountAuth())[1])
 
 
 def UserLoginAuth(phone: str, password: str, phoneArea: str, authpwd: str):
