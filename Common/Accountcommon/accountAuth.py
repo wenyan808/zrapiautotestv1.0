@@ -43,14 +43,14 @@ def AccountAuth():
     K = r_info.json()
     # print(K)
     clientId = K.get("data").get("clientId")
-    if yamlconfig("flag"):
-        password = "123456"
-    else:
-        password = "111111"
+    # if yamlconfig("flag"):
+    #     password = "123456"
+    # else:
+    #     password = "111111"
 
     body = {
         "clientId": clientId,
-        "password": password
+        "password": "123456"
     }
 
     sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来

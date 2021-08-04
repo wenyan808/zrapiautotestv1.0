@@ -79,7 +79,7 @@ class TestHSIPOGearList():
                 else:
                     raise AssertionError(j)
             else:
-                raise AssertionError("data为空")
+                print("IPO可认购列表为空")
 
         else:
-            print("IPO可认购列表为空")
+            raise AssertionError("data为空")
