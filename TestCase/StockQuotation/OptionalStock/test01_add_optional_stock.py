@@ -112,7 +112,7 @@ class TestAddOptionalStock:
     @allure.story('添加自选股无token_SH大盘')
     def test_add_SH_notoken(self):
         response = zhuorui('自选股', '添加自选股无token_SH大盘')
-        # assert_data(response, '000101', 'token不能为空')
+        assert_data(response, '000101', 'token不能为空')
 
     @allure.story('添加自选股无token_SH个股')
     def test_add_sh_notoken(self):
