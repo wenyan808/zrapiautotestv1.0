@@ -6,6 +6,8 @@ import allure
 import pytest
 import requests
 
+from Common.assertapi import assert_data
+from Common.guide import zhuorui
 from Common.login import login
 from Common.show_sql import showsql
 from Common.sign import get_sign
@@ -42,44 +44,21 @@ class TestHSGTIfhsgtis_lgt:
     @allure.story('判断股票是否是陆股通')
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_HSGTData/hsgtis_lgt.json"))
     def test_HSGT_Ifhsgtis_lgt(self, info):
-        url = HTTP + "/as_market/api/stock_market_data/v1/hsgt/is_lgt"
-        headers = {}
-        headers.update(JSON)
 
-        # 拼装参数
+        response = zhuorui('Allstock', '沪股通/深股通/港股通(沪)/港股通(深)-成分股列表', info)
+        print(response.json())
+        assert_data(response, '000000', 'ok')
 
-        paylo = info
-        # print(paylo)
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        # 调用登录接口通过token传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
+        assert response.status_code == 200
+        assert response.json().get("code") == "000000"
+        assert response.json().get("msg") == "ok"
+        # print(response.json())
+        if "data" in response.json():
+            if len(response.json().get("data")) != 0:
+                if response.json().get("data").get("luStockConnect") == True:
+                    logging.info(f"{info}是陆股通")
 
-        # print(token)
-        # print(type(token))
-
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)
-        # print(headers)
-        payload = json.dumps(dict(payload1))
-
-        r = requests.post(url=url, headers=headers, data=payload)
-        # 断言
-        j = r.json()
-        # print(j)
-
-        assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
-        # print(j)
-        if "data" in j:
-            if len(j.get("data")) != 0:
-                if j.get("data").get("luStockConnect") == True:
-                    logging.info(f"{paylo}是陆股通")
-
-                elif j.get("data").get("luStockConnect") == False:
-                    logging.info(f"{paylo}不是陆股通")
+                elif response.json().get("data").get("luStockConnect") == False:
+                    logging.info(f"{info}不是陆股通")
                 else:
                     TypeError("超出判断范围，请正确输入code")

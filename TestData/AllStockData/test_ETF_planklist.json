@@ -73,28 +73,6 @@
     "plateCode": "0006"
   },
   {
-    "sortItem": 6,
-    "ascending": true,
-    "currentPage": 1,
-    "pageSize": 5,
-    "valueFilter": 0,
-    "direction": 0,
-    "lever": 1,
-    "market": 2,
-    "plateCode": "0007"
-  },
-  {
-    "sortItem": 7,
-    "ascending": true,
-    "currentPage": 1,
-    "pageSize": 5,
-    "valueFilter": 0,
-    "direction": 0,
-    "lever": 1,
-    "market": 2,
-    "plateCode": "0008"
-  },
-  {
     "sortItem": 8,
     "ascending": true,
     "currentPage": 1,
@@ -103,7 +81,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0009"
+    "plateCode": "0100"
   },
   {
     "sortItem": 9,
@@ -114,7 +92,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0101"
   },
   {
     "sortItem": 10,
@@ -125,7 +103,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0102"
   },
   {
     "sortItem": 11,
@@ -136,7 +114,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0103"
   },
   {
     "sortItem": 12,
@@ -147,7 +125,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0104"
   },
   {
     "sortItem": 13,
@@ -158,7 +136,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0105"
   },
   {
     "sortItem": 14,
@@ -169,7 +147,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0200"
   },
   {
     "sortItem": 15,
@@ -180,7 +158,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0201"
   },
   {
     "sortItem": 16,
@@ -191,7 +169,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0202"
   },
   {
     "sortItem": 2,
@@ -202,7 +180,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0203"
   },
   {
     "sortItem": 2,
@@ -213,7 +191,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0204"
   },
   {
     "sortItem": 2,
@@ -224,7 +202,7 @@
     "direction": 0,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0205"
   },
   {
     "sortItem": 2,
@@ -235,7 +213,7 @@
     "direction": 1,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0300"
   },
   {
     "sortItem": 2,
@@ -246,7 +224,7 @@
     "direction": 2,
     "lever": 1,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0301"
   },
   {
     "sortItem": 2,
@@ -257,7 +235,7 @@
     "direction": 1,
     "lever": 0,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0302"
   },
   {
     "sortItem": 2,
@@ -268,7 +246,7 @@
     "direction": 1,
     "lever": 2,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0303"
   },
   {
     "sortItem": 2,
@@ -279,7 +257,7 @@
     "direction": 1,
     "lever": 3,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0304"
   },
   {
     "sortItem": 2,
@@ -290,7 +268,7 @@
     "direction": 1,
     "lever": 4,
     "market": 2,
-    "plateCode": "0000"
+    "plateCode": "0305"
   },
   {
     "market": 1
@@ -327,26 +305,6 @@
   },
   {
     "sortItem": 5,
-    "ascending": true,
-    "currentPage": 1,
-    "pageSize": 5,
-    "netAssetValue": 0,
-    "valueFilter": 0,
-    "premiumRate": 0,
-    "market": 1
-  },
-  {
-    "sortItem": 6,
-    "ascending": true,
-    "currentPage": 1,
-    "pageSize": 5,
-    "netAssetValue": 0,
-    "valueFilter": 0,
-    "premiumRate": 0,
-    "market": 1
-  },
-  {
-    "sortItem": 7,
     "ascending": true,
     "currentPage": 1,
     "pageSize": 5,

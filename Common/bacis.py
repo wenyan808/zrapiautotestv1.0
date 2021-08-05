@@ -6,15 +6,19 @@ from glo import JSON, HTTP
 import logging
 
 
-def common(i):
-    http = HTTP
+def common(i, info=""):
     header = {}
     header.update(JSON)
     headers = {}
     headers.update(header)
-    token2, urll, requestmode, paylop = i[3], i[5], i[6], i[7]
-    url = http + urll
-    paylo = eval(paylop)
+
+    if info == "":
+        token2, urll, requestmode, paylop = i[3], i[5], i[6], i[7]
+        paylo = eval(paylop)
+    else:
+        token2, urll, requestmode, paylo = i[3], i[5], i[6], info
+
+    url = HTTP + urll
     sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
     # 调用登录接口通过token传出来
     payload1 = {}
@@ -23,7 +27,6 @@ def common(i):
     if token2 == 1:
         token1 = yamltoken()
         token = {"token": token1}
-        # asdad = {"123": "sd"}
         headers.update(token)
 
     payload = json.dumps(dict(payload1))
@@ -65,5 +68,25 @@ text:{text.encode("utf-8").decode("unicode_escape")}
 # assert code == '000000'
 
 # print(res)
-
+# def common_info(i,info):
+#
+#     headers = {}
+#     headers.update(JSON)
+#     # 拼装参数
+#     token2, http, requestmode, paylop = i[3], i[5], i[6],info
+#     print(info)
+#     url = HTTP + http
+#     sign1 = {"sign": get_sign(paylop)}  # 把参数签名后通过sign1传出来
+#     # 调用登录接口通过token传出来
+#     payload1 = {}
+#     payload1.update(paylop)
+#     payload1.update(sign1)
+#     if token2 == 1:
+#         token1 = yamltoken()
+#         token = {"token": token1}
+#         headers.update(token)
+#     payload = json.dumps(dict(payload1))
+#     response = requests.request(requestmode,url=url, headers=headers, data=payload)
+#     # 断言
+#     return response
 

@@ -1,402 +1,502 @@
 [
   {
-    "ts": "SZ",
-    "code": "399651"
-  },
-  {
-    "ts": "US",
-    "code": "GCP"
-  },
-  {
-    "ts": "US",
-    "code": "DXD"
+    "ts": "HK",
+    "code": "00195",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "00065"
+    "code": "00157",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "27227",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "HYZD"
+    "code": "ATSG",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "13257",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "50450",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "BJ",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "08211",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "11220",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "IPVF=",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "DRUA",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "21082",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "11736",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "13817",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "ARTL",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "67670",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "58784",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "IWF",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "YOU",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "68388",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "58374",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "66552",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "EBS",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "64533",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "CALX",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "66397",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "67091",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "01513",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "SAFM",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "50037",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "NGACU",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "HAUD",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "65092",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "HEI.A",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "ASTE",
+    "dayCount": 3
   },
   {
     "ts": "SZ",
-    "code": "002543"
+    "code": "300497",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "00900",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "00695",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "SFB"
+    "code": "SRS",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "MFAC="
+    "code": "VIEW",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "24271",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "17948",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "51729",
+    "dayCount": 3
   },
   {
     "ts": "SH",
-    "code": "601636"
+    "code": "605336",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "ZUMZ",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "02356"
+    "code": "69461",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "69309",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "GLSI",
+    "dayCount": 3
   },
   {
     "ts": "SH",
-    "code": "600448"
+    "code": "600695",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "UAPR"
-  },
-  {
-    "ts": "SZ",
-    "code": "002374"
+    "code": "IMGN",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "01749"
-  },
-  {
-    "ts": "US",
-    "code": "GAINL"
+    "code": "14871",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "09141"
-  },
-  {
-    "ts": "SZ",
-    "code": "300308"
-  },
-  {
-    "ts": "SZ",
-    "code": "002936"
-  },
-  {
-    "ts": "US",
-    "code": "JAGG"
-  },
-  {
-    "ts": "US",
-    "code": "TX"
-  },
-  {
-    "ts": "US",
-    "code": "NKG"
-  },
-  {
-    "ts": "US",
-    "code": "HYBB"
-  },
-  {
-    "ts": "US",
-    "code": "ALFA"
-  },
-  {
-    "ts": "US",
-    "code": "GREK"
-  },
-  {
-    "ts": "US",
-    "code": "DRH"
-  },
-  {
-    "ts": "US",
-    "code": "ORLA"
-  },
-  {
-    "ts": "US",
-    "code": "ICMB"
-  },
-  {
-    "ts": "US",
-    "code": "ERY"
-  },
-  {
-    "ts": "US",
-    "code": "TRTY"
-  },
-  {
-    "ts": "US",
-    "code": "RTPZ"
-  },
-  {
-    "ts": "SZ",
-    "code": "000409"
-  },
-  {
-    "ts": "US",
-    "code": "FDNI"
-  },
-  {
-    "ts": "US",
-    "code": "MGK"
+    "code": "55982",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "01589"
+    "code": "02892",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "YELP"
+    "code": "VBK",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "DTEA"
+    "code": "RBBN",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "H11123"
+    "code": "02371",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "ARQT",
+    "dayCount": 3
+  },
+  {
+    "ts": "SZ",
+    "code": "002687",
+    "dayCount": 3
   },
   {
     "ts": "SH",
-    "code": "603551"
-  },
-  {
-    "ts": "US",
-    "code": "AVO"
+    "code": "603909",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "08136"
-  },
-  {
-    "ts": "US",
-    "code": "MOS"
-  },
-  {
-    "ts": "US",
-    "code": "RNST"
-  },
-  {
-    "ts": "US",
-    "code": "IYY"
+    "code": "11357",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "01676"
+    "code": "61167",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "06163"
+    "code": "22115",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "SNPR.U"
+    "code": "LATN",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "QMN"
-  },
-  {
-    "ts": "US",
-    "code": "MDCA"
-  },
-  {
-    "ts": "SZ",
-    "code": "399100"
-  },
-  {
-    "ts": "US",
-    "code": "GWRE"
-  },
-  {
-    "ts": "SZ",
-    "code": "300202"
-  },
-  {
-    "ts": "SZ",
-    "code": "002224"
-  },
-  {
-    "ts": "US",
-    "code": "PLRX"
-  },
-  {
-    "ts": "US",
-    "code": "FLUX"
+    "code": "OLO",
+    "dayCount": 3
   },
   {
     "ts": "SH",
-    "code": "600562"
+    "code": "600495",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "08490"
-  },
-  {
-    "ts": "SH",
-    "code": "600038"
-  },
-  {
-    "ts": "SZ",
-    "code": "399358"
+    "code": "66680",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "UROV"
-  },
-  {
-    "ts": "US",
-    "code": "FDRR"
-  },
-  {
-    "ts": "US",
-    "code": "LOPE"
-  },
-  {
-    "ts": "SH",
-    "code": "603956"
-  },
-  {
-    "ts": "US",
-    "code": "PJUN"
-  },
-  {
-    "ts": "US",
-    "code": "UFPT"
-  },
-  {
-    "ts": "US",
-    "code": "IRBT"
-  },
-  {
-    "ts": "US",
-    "code": "JCICU"
-  },
-  {
-    "ts": "SH",
-    "code": "601778"
-  },
-  {
-    "ts": "US",
-    "code": "GNPX"
-  },
-  {
-    "ts": "US",
-    "code": "CNR"
-  },
-  {
-    "ts": "SZ",
-    "code": "300773"
-  },
-  {
-    "ts": "US",
-    "code": "PTSI"
-  },
-  {
-    "ts": "US",
-    "code": "JPME"
-  },
-  {
-    "ts": "SZ",
-    "code": "002925"
-  },
-  {
-    "ts": "US",
-    "code": "RNGR"
-  },
-  {
-    "ts": "SZ",
-    "code": "002397"
+    "code": "BHLB",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "02882"
+    "code": "69690",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "ETR"
-  },
-  {
-    "ts": "SZ",
-    "code": "002077"
-  },
-  {
-    "ts": "SZ",
-    "code": "002491"
+    "code": "SEE",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "PRE-G"
-  },
-  {
-    "ts": "SZ",
-    "code": "300359"
-  },
-  {
-    "ts": "US",
-    "code": "EIX"
-  },
-  {
-    "ts": "US",
-    "code": "QGEN"
-  },
-  {
-    "ts": "US",
-    "code": "LACQ"
-  },
-  {
-    "ts": "SZ",
-    "code": "000033"
-  },
-  {
-    "ts": "US",
-    "code": "IGI"
+    "code": "KOIN",
+    "dayCount": 3
   },
   {
     "ts": "SH",
-    "code": "603085"
-  },
-  {
-    "ts": "SZ",
-    "code": "300938"
-  },
-  {
-    "ts": "SZ",
-    "code": "399397"
-  },
-  {
-    "ts": "US",
-    "code": "NX"
+    "code": "601628",
+    "dayCount": 3
   },
   {
     "ts": "HK",
-    "code": "00222"
+    "code": "19229",
+    "dayCount": 3
   },
   {
-    "ts": "US",
-    "code": "LBRT"
+    "ts": "HK",
+    "code": "52591",
+    "dayCount": 3
   },
   {
-    "ts": "US",
-    "code": "AIH"
+    "ts": "HK",
+    "code": "69040",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "29925",
+    "dayCount": 3
   },
   {
     "ts": "SH",
-    "code": "688330"
+    "code": "600000",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "19980",
+    "dayCount": 3
   },
   {
     "ts": "SZ",
-    "code": "300796"
-  },
-  {
-    "ts": "US",
-    "code": "HYDB"
-  },
-  {
-    "ts": "US",
-    "code": "NTB"
+    "code": "002816",
+    "dayCount": 3
   },
   {
     "ts": "SZ",
-    "code": "000748"
+    "code": "000805",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "19775",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "KOCT"
+    "code": "MUDSU",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "14653",
+    "dayCount": 3
+  },
+  {
+    "ts": "SH",
+    "code": "688551",
+    "dayCount": 3
   },
   {
     "ts": "US",
-    "code": "MCK"
+    "code": "BP",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "29446",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "23294",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "50453",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "51001",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "10242",
+    "dayCount": 3
+  },
+  {
+    "ts": "SZ",
+    "code": "000510",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "65360",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "16561",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "61922",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "IIAC=",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "12879",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "GOAC=",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "SPXS",
+    "dayCount": 3
+  },
+  {
+    "ts": "HK",
+    "code": "54027",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "BDCS",
+    "dayCount": 3
+  },
+  {
+    "ts": "US",
+    "code": "CVS",
+    "dayCount": 3
   }
 ]
