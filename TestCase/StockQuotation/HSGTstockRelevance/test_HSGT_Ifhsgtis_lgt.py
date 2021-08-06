@@ -46,13 +46,12 @@ class TestHSGTIfhsgtis_lgt:
     def test_HSGT_Ifhsgtis_lgt(self, info):
 
         response = zhuorui('Allstock', '判断股票是否是陆股通', info)
-        print(response.json())
         assert_data(response, '000000', 'ok')
 
         assert response.status_code == 200
         assert response.json().get("code") == "000000"
         assert response.json().get("msg") == "ok"
-        # print(response.json())
+
         if "data" in response.json():
             if len(response.json().get("data")) != 0:
                 if response.json().get("data").get("luStockConnect") == True:
