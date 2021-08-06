@@ -82,9 +82,9 @@ def getUserLogincodeToken(phone: str):
     :return: token
     """
     HTTP = http
-    JSON = JSON_dev
+    # JSON = JSON_dev
     headers = {}
-    headers.update(JSON)
+    headers.update(JSON_dev)
     # phone = "13418923886"
     phone = phone
     smsCode = "1"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),

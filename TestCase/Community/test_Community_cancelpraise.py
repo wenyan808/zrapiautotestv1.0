@@ -76,44 +76,47 @@ class TestCommunitycancelpraise():
         )
         y = r.json()
         # print(y)
-        postId = y.get("data").get("postId")
-        # print(postId)
-        body = {'postId': f"{postId}"}
-        sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-        body1 = {}
-        body1.update(body)
-        body1.update(sign1)
-        body1 = json.dumps(dict(body1))
-        postId_praise_url = HTTP + "/as_community/api/praise/v1/add"
-        Requests(self.session).post(
-            url=postId_praise_url, headers=headers, data=body1, title="帖子点赞"
-        )
-        body3 = {'postId': f"{postId}"}
-        sign1 = {"sign": get_sign(body3)}  # 把参数签名后通过sign1传出来
-        body1 = {}
-        body1.update(body3)
-        body1.update(sign1)
-        body2 = json.dumps(dict(body1))
-        cancelpraise_url = HTTP + "/as_community/api/praise/v1/cancel"
-        r = Requests(self.session).post(
-            url=cancelpraise_url, headers=headers, data=body2, title="取消帖子点赞"
-        )
-        # print(r.json())
-        # 删帖
-        delete_url = HTTP + "/as_community/api/post/v1/delete"
+        if "data" in y:
+            postId = y.get("data").get("postId")
+            # print(postId)
+            body = {'postId': f"{postId}"}
+            sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
+            body1 = {}
+            body1.update(body)
+            body1.update(sign1)
+            body1 = json.dumps(dict(body1))
+            postId_praise_url = HTTP + "/as_community/api/praise/v1/add"
+            Requests(self.session).post(
+                url=postId_praise_url, headers=headers, data=body1, title="帖子点赞"
+            )
+            body3 = {'postId': f"{postId}"}
+            sign1 = {"sign": get_sign(body3)}  # 把参数签名后通过sign1传出来
+            body1 = {}
+            body1.update(body3)
+            body1.update(sign1)
+            body2 = json.dumps(dict(body1))
+            cancelpraise_url = HTTP + "/as_community/api/praise/v1/cancel"
+            r = Requests(self.session).post(
+                url=cancelpraise_url, headers=headers, data=body2, title="取消帖子点赞"
+            )
+            # print(r.json())
+            # 删帖
+            delete_url = HTTP + "/as_community/api/post/v1/delete"
 
-        Communitypostdelete(delete_url, headers, body)
-        # 断言
-        assert r.status_code == 200
-        try:
-            assert r.json().get("code") == "000000"
-            assert r.json().get("msg") == "ok"
-        except:
-            raise AssertionError(
-                f"\n请求地址：{url}"
-                f"\nbody参数：{payload}"
-                f"\n请求头部参数：{headers}"
-                f"\n返回数据结果：{r.json()}")
+            Communitypostdelete(delete_url, headers, body)
+            # 断言
+            assert r.status_code == 200
+            try:
+                assert r.json().get("code") == "000000"
+                assert r.json().get("msg") == "ok"
+            except:
+                raise AssertionError(
+                    f"\n请求地址：{url}"
+                    f"\nbody参数：{payload}"
+                    f"\n请求头部参数：{headers}"
+                    f"\n返回数据结果：{r.json()}")
+        else:
+            print(f"无data数据,Error:{y}")
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_cancelcommentpraise(self):
@@ -159,6 +162,8 @@ class TestCommunitycancelpraise():
                     "name": path0,
                     "w": wide,
                     "h": long,
+                    # "w": 700,
+                    # "h": 989,
                     "url": url0
                 }
             ],
@@ -184,7 +189,7 @@ class TestCommunitycancelpraise():
             url=url, headers=headers, data=payload, title="发帖"
         )
         y = r.json()
-        print(y)
+        # print(y)
         if "data" in y:
             postId = y.get("data").get("postId")
             # print(postId)
@@ -264,4 +269,4 @@ class TestCommunitycancelpraise():
                     f"\n请求头部参数：{headers}"
                     f"\n返回数据结果：{r.json()}")
         else:
-            print("无data数据")
+            print(f"无data数据,Error:{y}")

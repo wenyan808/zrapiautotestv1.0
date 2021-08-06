@@ -69,7 +69,7 @@ class TestCommunityPosted:
             postId = j.get("data").get("postId")
             # print(postId)
         else:
-            raise AssertionError(j)
+            raise ValueError(j)
         body = {'postId': f"{postId}"}
         # 删帖社区帖子
         Communitypostdelete(delete_url, headers, body)
