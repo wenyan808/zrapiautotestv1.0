@@ -1,16 +1,10 @@
-import json
-
 import allure
-import pytest
-import requests
+from Common.assertapi import assert_data
+from Common.guide import zhuorui
 from Common.login import login
 from Common.show_sql import MongoDB, showsql
-from Common.sign import get_sign
-from Common.tools.read_write_yaml import yamltoken
-
 from Common.tools.unique_text import get_unique_username
-from glo import JSON, HTTP
-
+from Common.tools.write_xlsx import write_xlsx
 
 # @pytest.mark.skip(reason="状态显示未完成，目前无法运行")
 @allure.feature('选股器')
@@ -18,9 +12,6 @@ class TestStockSelectionDeviceRename:
     @classmethod
     def setup_class(cls) -> None:
         login()
-
-    @allure.story('重命名策略_1-中国香港')
-    def test_StockSelectionDevice_rename01(self):
         # 通过传入数据库的IP地址address，用户名user，密码password，数据库名database连接到后台数据库
         userId = showsql(
             '192.168.1.237', 'root', '123456', "user_account",
@@ -32,39 +23,13 @@ class TestStockSelectionDeviceRename:
         # print(str(userId)[3:-5:])
         _id = str(id[-1].get('_id'))
         # print(_id)
-        url = HTTP + "/as_market/api/stock_selector/v1/tactic/rename"
-        headers = {}
-        headers.update(JSON)
-
-        # 拼装参数
-        name = get_unique_username(1)[0]
-        # print(name)
         paylo = {
             "region": 1,
             "tacticId": f"{_id}",
-            "name": f"{name}"
+            "name": f"{get_unique_username(1)[0]}"
         }
-        # paylo.update(_id)
-        # print(paylo)
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        # 调用登录接口通过token传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
-
-        # print(token)
-        # print(type(token))
-
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)
-        # print(headers)
-        payload = json.dumps(dict(payload1))
-        # print(payload)
-
-        r = requests.post(url=url, headers=headers, data=payload)
-        j = r.json()
-        # print(j)
-        assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
+        write_xlsx("Allstock", 50, 7, str(paylo))
+    @allure.story('重命名策略_1-中国香港')
+    def test_StockSelectionDevice_rename01(self):
+        response = zhuorui('Allstock', '置顶策略_1-中国香港')
+        assert_data(response, '000000', 'ok')
