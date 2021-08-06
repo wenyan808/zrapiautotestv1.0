@@ -45,7 +45,7 @@ class TestHSGTIfhsgtis_lgt:
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_HSGTData/hsgtis_lgt.json"))
     def test_HSGT_Ifhsgtis_lgt(self, info):
 
-        response = zhuorui('Allstock', '沪股通/深股通/港股通(沪)/港股通(深)-成分股列表', info)
+        response = zhuorui('Allstock', '判断股票是否是陆股通', info)
         print(response.json())
         assert_data(response, '000000', 'ok')
 
