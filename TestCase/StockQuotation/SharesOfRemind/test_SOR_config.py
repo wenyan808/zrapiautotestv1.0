@@ -1,20 +1,11 @@
 # test_SOR_config
-import json
-import random
-
 import allure
 import pytest
-import requests
-
+from Common.assertapi import assert_data
+from Common.guide import zhuorui
 from Common.login import login
-from Common.show_sql import showsql
-
-from Common.sign import get_sign
-from Common.tools.read_write_json import get_json, write_json
-
-from Common.tools.read_write_yaml import yamltoken
-from glo import HTTP, JSON, BASE_DIR
-
+from Common.tools.read_write_json import get_json
+from glo import BASE_DIR
 
 # @pytest.mark.skip(reason="调试中")
 @allure.feature('股价提醒')
@@ -34,34 +25,5 @@ class TestSORconfig:
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_SOR_config.json"))
     def test_SOR_config(self, info):
         # pass
-        url = HTTP + "/as_market/api/price_notify/v1/config"
-        headers = {}
-        headers.update(JSON)
-
-        # 拼装参数
-        # paylo = {}
-        paylo = info
-        # print(paylo)
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        # 调用登录接口通过token传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
-
-        # print(token)
-        # print(type(token))
-
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)
-        # print(headers)
-        payload = json.dumps(dict(payload1))
-        # time.sleep(1)
-        r = requests.post(url=url, headers=headers, data=payload)
-        # 断言
-        j = r.json()
-        # print(j)
-
-        assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
+        response = zhuorui('Allstock', '股价提醒配置', info)
+        assert_data(response, '000000', 'ok')

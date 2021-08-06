@@ -1,18 +1,11 @@
 # test_US_F10cashflowlist
-import json
-import logging
-
 import allure
 import pytest
-import requests
-
+from Common.assertapi import assert_data
+from Common.guide import zhuorui
 from Common.login import login
-
-from Common.sign import get_sign
 from Common.tools.read_write_json import get_json
-
-from Common.tools.read_write_yaml import yamltoken
-from glo import HTTP, JSON, BASE_DIR
+from glo import BASE_DIR
 
 
 # @pytest.mark.skip(reason="调试中")
@@ -25,64 +18,30 @@ class TestUSF10profitlist:
     @allure.story('美股F10获取现金流量表详情页信息')
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/USStockData/test_US_F10cashflowlist.json"))
     def test_US_F10cashflowlist(self, info):
-        # pass
-        url = HTTP + "/as_market/api/us/f10/v1/cash_flow_list"
-        headers = {}
-        headers.update(JSON)
 
-        # 拼装参数
+        response = zhuorui('Allstock', '美股F10获取现金流量表详情页信息', info)
+        assert_data(response, '000000', 'ok')
 
-        # paylo = {
-        #     "ts": "US",
-        #     "code": "GOOG",
-        #     "type": 0,
-        #     "pageSize": 15
-        # }
-        paylo = info
-        # print(paylo)
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        # 调用登录接口通过token传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
-
-        # print(token)
-        # print(type(token))
-
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)
-        # print(headers)
-        payload = json.dumps(dict(payload1))
-        # time.sleep(1)
-        r = requests.post(url=url, headers=headers, data=payload)
-        # 断言
-        j = r.json()
-        # print(j)
-
-        assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
-        if "data" in j:
-            if len(j.get("data")) != 0:
-                assert "list" in j.get("data")
-                for i in range(len(j.get("data").get("list"))):
-                    assert j.get("data").get("list")[i].get("currency") == "USD"
-                    assert j.get("data").get("list")[i].get("reportType") == str(info.get("type"))
-                    assert "reportType" in j.get("data").get("list")[i]
-                    assert "date" in j.get("data").get("list")[i]
-                    assert "currency" in j.get("data").get("list")[i]
-        #             assert "businessIncome" in j.get("data").get("list")[i]
-        #             assert "businessIncomeAndExpenses" in j.get("data").get("list")[i]
-        #             assert "pretaxProfit" in j.get("data").get("list")[i]
-        #             assert "incomeTax" in j.get("data").get("list")[i]
-        #             assert "netProfit" in j.get("data").get("list")[i]
-        #             assert "netProfitBelongToShareholdersOfListedCompany" in j.get("data").get("list")[i]
-        #             assert "operatingProfit" in j.get("data").get("list")[i]
-                assert "total" in j.get("data")
-                assert j.get("data").get("pageSize") == info.get("pageSize")
-                assert j.get("data").get("currentPage") == 1
-        #         # print(j.get("data"))
+        if "data" in response.json():
+            if len(response.json().get("data")) != 0:
+                assert "list" in response.json().get("data")
+                for i in range(len(response.json().get("data").get("list"))):
+                    assert response.json().get("data").get("list")[i].get("currency") == "USD"
+                    assert response.json().get("data").get("list")[i].get("reportType") == str(info.get("type"))
+                    assert "reportType" in response.json().get("data").get("list")[i]
+                    assert "date" in response.json().get("data").get("list")[i]
+                    assert "currency" in response.json().get("data").get("list")[i]
+        #             assert "businessIncome" in response.json().get("data").get("list")[i]
+        #             assert "businessIncomeAndExpenses" in response.json().get("data").get("list")[i]
+        #             assert "pretaxProfit" in response.json().get("data").get("list")[i]
+        #             assert "incomeTax" in response.json().get("data").get("list")[i]
+        #             assert "netProfit" in response.json().get("data").get("list")[i]
+        #             assert "netProfitBelongToShareholdersOfListedCompany" in response.json().get("data").get("list")[i]
+        #             assert "operatingProfit" in response.json().get("data").get("list")[i]
+                assert "total" in response.json().get("data")
+                assert response.json().get("data").get("pageSize") == info.get("pageSize")
+                assert response.json().get("data").get("currentPage") == 1
+        #         # print(response.json().get("data"))
         #
         #     else:
         #         logging.info("data是空的集合")

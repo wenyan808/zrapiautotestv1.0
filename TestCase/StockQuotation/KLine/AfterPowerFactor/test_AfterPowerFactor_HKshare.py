@@ -32,41 +32,6 @@ class TestAfterPowerFactor:
     # @pytest.mark.parametrize("_data", get_json(BASE_DIR + r"/TestData/t_stock_search.json"))
     @allure.story('查询最新复权因子_HK个股')
     def test_AfterPowerFactor_HKshare(self):
-        # url = HTTP + "/as_market/api/newest_adj/v1/get"
-        # headers = {}
-        # headers.update(JSON)
-        #
-        # # 拼装参数
-        #
-        # paylo = {
-        #     "ts": _data.get("ts"),
-        #     "code": _data.get("code")
-        # }
-        # # print(paylo)
-        # sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        # # 调用登录接口通过token传出来
-        # payload1 = {}
-        # payload1.update(paylo)
-        # payload1.update(sign1)
-        #
-        # # print(token)
-        # # print(type(token))
-        #
-        # token1 = yamltoken()
-        # token = {"token": token1}
-        # headers.update(token)
-        # # print(headers)
-        # payload = json.dumps(dict(payload1))
-        # if _data.get("type") == 2 and _data.get("ts") == "HK":
-        #     r = Requests(self.session).post(
-        #         url=url, headers=headers, data=payload, title="查询最新复权因子_HK"
-        #     )
-        #     # 断言
-        #     j = r.json()
-        #     # print(j)
-        #     assert r.status_code == 200
-        #     assert j.get("code") == "000000"
-        #     assert j.get("msg") == "ok"
 
         response = zhuorui('k线', '查询最新复权因子_HK个股')
         assert_data(response, '000000', 'ok')
