@@ -1,0 +1,50 @@
+[
+  {
+  },
+  {
+    "zrNo": "10000148"
+  },
+  {
+    "cardName": "任飞"
+  },
+  {
+    "phone": "15816263997"
+  },
+  {
+    "firstSubmitStartTime": 1618553888000
+  },
+  {
+    "firstSubmitEndTime": null
+  },
+  {
+    "latestSubmitStartTime": 1618206470000
+  },
+  {
+    "latestSubmitEndTime": null
+  },
+  {
+    "firstSubmitDuration": 7
+  },
+  {
+    "sort": 1
+  },
+  {
+    "openStatus": [
+      "20"
+    ]
+  },
+  {
+    "zrNo": "60996766",
+    "cardName": "任飞",
+    "phone": "19898989898",
+    "firstSubmitStartTime": 1617763072000,
+    "firstSubmitEndTime": null,
+    "latestSubmitStartTime": 1617763072000,
+    "latestSubmitEndTime": null,
+    "firstSubmitDuration": null,
+    "sort": 1,
+    "openStatus": [
+      "20"
+    ]
+  }
+]

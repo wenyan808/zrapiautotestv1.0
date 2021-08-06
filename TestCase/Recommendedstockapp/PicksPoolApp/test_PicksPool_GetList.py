@@ -1,6 +1,6 @@
 # test_PicksPool_GetList     精选股列表查询         /as_recommend/api/stock_pool/v1/list
 """
-@File  ：test_PicksPool_Indicator.py
+@File  ：test_PicksPool_GetList.py
 @Author: yishouquan
 @Time  : 2020/8/05
 @Desc  :  精选股池指标查询（分析指标、涨幅前三）
