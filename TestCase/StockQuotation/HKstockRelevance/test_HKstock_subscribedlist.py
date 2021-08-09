@@ -15,14 +15,12 @@ class TestHKstocknewstocklist:
 
     @allure.story('新股日历获取可认购列表')
     def test_HKstock_subscribedlist(self):
-        response = zhuorui('港股', '新股日历获取可认购列表')
+        response = zhuorui('港股', 'IPO可认购列表')
         assert_data(response, '000000', 'ok')
-        assert response.status_code == 200
         # print(response.json())
 
     @allure.story('新股日历获取可认购列表_无token')
     def test_HKstock_subscribedlist_notoken(self):
-        response = zhuorui('港股', '新股日历获取可认购列表_无token')
+        response = zhuorui('港股', 'IPO可认购列表_无token')
         assert_data(response, '000000', 'ok')
-        assert response.status_code == 200
         # print(response.json())
