@@ -5,18 +5,35 @@
  """
 import json
 import requests
+import glo
+from Common.get_time_stamp import get_time_stamp13
 from Common.redisfuction import phoneORpwd
 from Common.tools.md5 import get_md5
-from glo import HTTP, BASE_DIR, JSON, phone, pwd, phone2, phoneArea, pwd2
+
+from Common.tools.read_write_yaml import write_yaml, read_yaml
+from glo import HTTP, BASE_DIR, JSON, phone, pwd, phone2, phoneArea
 from Common.sign import get_sign
 
-
 def login():
+    print(glo.logi)
+    if glo.logi == True:
+        write_yaml("login", str(get_time_stamp13()))
+        login_common()
+        glo.logi = False
+    else:
+        if read_yaml("login") + 600000 < get_time_stamp13():
+            login_common()
+            glo.logi = True
+        else:
+            pass
+def login_common():
     # 手机的请求报文
+
     json1 = {
         "phone": phone,
         "loginPassword": get_md5(pwd),
         "phoneArea": phoneArea
+
     }
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)
@@ -25,7 +42,7 @@ def login():
     # 发送post请求
     response_login = requests.post(HTTP + "/as_user/api/user_account/v1/user_login_pwd", headers=headers,json=json1)
 
-    # 当用户登陆的设备和以前不一样,进行验证
+    # 当用户登陆的设备和以前不一样,进行验证z3
     if response_login.json().get("code") == "010007" \
             or response_login.json().get("msg") == "用户登陆的设备和以前不一样":
         # 用户登陆的设备和以前不一样，验证的请求报文
@@ -128,3 +145,4 @@ def login_all(key, value, password, url, file_name):
 # "token_console")
 # print(login_all("phone", "18379204795", "102522ql",
 #                 "http://192.168.1.241/as_user/api/user_account/v1/user_login_pwd", "token"))
+# login_common()

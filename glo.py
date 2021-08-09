@@ -11,6 +11,7 @@ headPhoto = 'http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/' \
             'head_photo/images/2021/01/11/16103477341540274.jpeg'  # 用户头像发生变化，请在这里修改头像地址
 BASE_DIR: Union[bytes, str] = os.path.dirname(os.path.abspath(__file__))
 flag = True
+logi = True # 登录使用
 # 测试环境地址管理：
 HTTP = http = "http://192.168.1.241"
 # http = "http://192.168.1.241"
