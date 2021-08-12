@@ -1,5 +1,6 @@
 # test_US_F10directorbackgroud
 import allure
+import logging
 from Common.assertapi import assert_data
 from Common.guide import zhuorui
 from Common.login import login
@@ -22,10 +23,9 @@ class TestUSF10directorlist:
         write_xlsx("Allstock", 32, 7, str(data))
         response = zhuorui("Allstock", "获取公司高管-背景介绍")
         assert_data(response, '000000', 'ok')
-
-        # if "data" in response.json():
-        #     if len(response.json().get("data")) != 0:
-                # assert "list" in response.json().get("data")
+        if "data" in response.json():
+            if len(response.json().get("data")) != 0:
+                assert response.json().get("data")
                 # for i in range(len(response.json().get("data").get("list"))):
                 #     # assert response.json().get("data").get("list")[i].get("id") == "美元"
                 #     assert "id" in response.json().get("data").get("list")[i]
@@ -38,9 +38,9 @@ class TestUSF10directorlist:
                 # assert response.json().get("data").get("currentPage") == 1
                 # print(response.json().get("data"))
 
-        #     else:
-        #         logging.info("data是空的集合")
-        #
-        # else:
-        #     logging.info("无data数据")
+            else:
+                logging.info("data是空的集合")
+
+        else:
+            logging.info("无data数据")
 
