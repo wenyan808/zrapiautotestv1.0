@@ -7,7 +7,7 @@ def get_float_time_stamp():
     return datetime_now.timestamp()
 
 
-print(int(get_float_time_stamp()))
+# print(int(get_float_time_stamp()))
 
 def get_time_stamp16():
     """获取当前时间转换成16位的时间戳
@@ -146,7 +146,8 @@ def timetostamp13(data: str, format_string='%Y-%m-%d'):
     time_stamp = int(datetime.datetime.timestamp(time_array) * 1000)
     return time_stamp
 
-def getTimeTostamp(day:int):
+
+def getTimeTostamp(day: int):
     """获取指定时间的时间格式转换为13位时间戳
     :param day
     :return:时间戳值
@@ -159,11 +160,42 @@ def getTimeTostamp(day:int):
     data_microsecond = str("%d" % OneMonthAgo.microsecond)[0:3]
     date_stampday = date_stamp + data_microsecond
     return int(date_stampday)
+
+
 # print(getTimeTostamp(30))
 
 def gettoday():
     today = datetime.date.today()
     return today
+
+
+import json
+
+import requests
+
+from Common.sign import get_sign
+
+
+def get_serverinfonow(url: str, headers: dict, newYork: bool = False):
+    """获取服务器当前的时间戳APP(H5)
+
+    :param url:接口地址
+    :param headers:headers请求报文
+    :param newYork:是否获取纽约时间默认不传为false，false-获取当前服务器时间戳，
+    true-获取到的时间戳会根据美东是冬令时还是夏令时-13或-12个小时后的时间戳方便给h5使用
+    :return:
+    """
+    payload = {"newYork": newYork}
+    sign1 = {"sign": get_sign(payload)}  # 把参数签名后通过sign1传出来
+    payload1 = {}
+    payload1.update(payload)
+    payload1.update(sign1)
+
+    data = json.dumps(dict(payload1))
+    # print(data)
+    serverinfonow = requests.session().post(url=url, headers=headers, json=data)
+    # print(serverinfonow.json())
+    return serverinfonow.json()
 
 # if __name__ == '__main__':
 #     a1 = get_time_stamp16()
