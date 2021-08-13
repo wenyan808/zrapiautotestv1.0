@@ -1,9 +1,9 @@
-# test_AccountConsole_AddAnti-money    新增反洗钱    /api/con_open/v1/add_anti_money
+# test_AccountConsole_UpdateAntiMoney          修改反洗钱          /api/con_open/v1/update_anti_money
 """
-@File  ：test_AccountConsole_AddAnti-money.py
+@File  ：test_AccountConsole_UpdateAntiMoney.py
 @Author: yishouquan
-@Time  : 2020/8/04
-@Desc  :  新增反洗钱
+@Time  : 2020/8/11
+@Desc  :  获取反洗钱信息
 """
 import json
 import time
@@ -11,44 +11,45 @@ import time
 import allure
 import pytest
 
-from Common.Accountcommon.getAccountConsoleList import getAccountConsoleList, getAccountConsoleDetail
+from Common.Accountcommon.getAccountConsoleList import getAccountConsoleList, getAntiMoney
 from Common.getConsoleLogin import getConsoleLogin_token
-from Common.get_time_stamp import TimeToStamp13, get_serverinfonow, get_time_stamp13
+from Common.get_time_stamp import get_time_stamp13
 
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.read_write_json import get_json
+from Common.tools.read_json import get_json
 
 from glo import console_HTTP, console_JSON, BASE_DIR, loginAccount_phone
 
 
 # @pytest.mark.skip(reason="调试中 ")
-@allure.feature('新增反洗钱')
-class TestAccountConsoleAddAntimoney():
+@allure.feature('修改反洗钱')
+class TestAccountConsoleUpdateAntiMoney():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
         # login()  # 调用登录接口通过token传出来
-        cls.url = console_HTTP + "/api/con_open/v1/add_anti_money"
+        cls.url = console_HTTP + "/api/con_open/v1/update_anti_money"
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
     @pytest.mark.parametrize('info', get_json(BASE_DIR +
-                                              r"/TestData/AccountConsoledata/test_AccountConsole_AddAnti_money.json"))
-    def test_AccountConsole_AddAnti_money(self, info):
-        # login()  # 调用登录接口通过token传出来
+                                              r"/TestData/AccountConsoledata/test_AccountConsole_UpdateAntiMoney.json"))
+    def test_AccountConsole_UpdateAntiMoney(self, info):
+
         headers = {}
         headers.update(console_JSON)
 
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         # print(headers)
-
+        url = console_HTTP + "/as_market/api/server_info/v1/now"
         supplierType = info.get("supplierType")  # 信息供应商 1.其他
         investigationTime = get_time_stamp13()  # 调查时间(时间戳)
+        # print(investigationTime)
         investigationResultType = info.get("investigationResultType")  # 调查结果 1.Others 2.No Matches
         # 3.All matches resolved 4.Confirm unmatched via phone 5.Confirm matched via phone
         investigationFiles = "[{\"name\": \"文件名称\", \"url\": \"文件url\"}]"  # 调查文件[{"name":"文件名称",   "url":"文件url"}]
@@ -65,8 +66,8 @@ class TestAccountConsoleAddAntimoney():
         openOrderId = getAccountConsoleList(headers, identityTypes, status).get("data").get("list")[0].get(
             "openOrderDTO").get("openOrderId")
         # print(openOrderId)
-        # print(getAccountConsoleDetail(headers, openOrderId))
-        openId = getAccountConsoleDetail(headers, openOrderId).get("data").get("openInfoDTO").get("openId")  # 开户id
+        amlId = getAntiMoney(headers, openOrderId).get("data")[0].get("amlId")  # 反洗钱记录id
+        # print(amlId)
         paylo = {
             "supplierType": supplierType,
             "investigationTime": investigationTime,
@@ -76,8 +77,9 @@ class TestAccountConsoleAddAntimoney():
             "riskLevel": riskLevel,
             "supplierOtherDesc": supplierOtherDesc,
             "investigationResultOtherDesc": investigationResultOtherDesc,
-            "openId": openId
+            "amlId": amlId
         }
+
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
@@ -87,7 +89,7 @@ class TestAccountConsoleAddAntimoney():
         payload = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=self.url, headers=headers, data=payload, title="新增反洗钱"
+            url=self.url, headers=headers, data=payload, title="修改反洗钱"
         )
         j = r.json()
         # print(f"\n请求地址：{self.url}"
@@ -98,20 +100,8 @@ class TestAccountConsoleAddAntimoney():
         try:
             assert j.get("msg") == "ok"
             assert j.get("code") == "000000"
-            # if "data" in j:
-            #     assert j.get("data").get("more") == True or False
-            #     assert "version" in j.get("data")
-            #     assert "timestamp" in j.get("data")
-            #     if "table" in j.get("data"):
-            #         for i in range(len(j.get("data").get("table"))):
-            #             assert "ts" in j.get("data").get("table")[i]
-            #             assert "code" in j.get("data").get("table")[i]
-            #             assert "type" in j.get("data").get("table")[i]
-            #             assert "status" in j.get("data").get("table")[i]
-            #             if "name" in j.get("data").get("table"):
-            #                 assert "zh_CN" in j.get("data").get("table").get("name")
-            #                 assert "zh_TW" in j.get("data").get("table").get("name")
-            #                 assert "en_US" in j.get("data").get("table").get("name")
+
+
         except:
             raise AssertionError(
                 f"\n请求地址：{self.url}"
