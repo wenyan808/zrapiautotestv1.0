@@ -39,3 +39,63 @@ def getAccountConsoleList(headers: dict, identityTypes: list, status: int = None
     j = r.json()
     # print(j)
     return j
+
+
+def getAccountConsoleDetail(headers: dict, openOrderId: str):
+    """开户详情
+
+    :param headers:请求参数带token
+    :param openOrderId:单据Id
+    :return:开户详情json数据
+    """
+    url = console_HTTP + "/api/con_open/v1/detail"
+
+    paylo = {
+        "openOrderId": openOrderId
+    }
+    # print(paylo)
+    sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+    payload1 = {}
+    payload1.update(paylo)
+    payload1.update(sign1)
+
+    payload = json.dumps(dict(payload1))
+
+    r = requests.session().post(
+        url=url, headers=headers, data=payload
+    )
+
+    j = r.json()
+    # print(j)
+    return j
+
+
+
+
+def getAntiMoney(headers: dict, openOrderId: str):
+    """获取反洗钱信息
+
+    :param headers:请求参数带token
+    :param openOrderId:单据Id
+    :return:获取反洗钱信息json数据
+    """
+    url = console_HTTP + "/api/con_open/v1/get_anti_money"
+
+    paylo = {
+        "openOrderId": openOrderId
+    }
+    # print(paylo)
+    sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+    payload1 = {}
+    payload1.update(paylo)
+    payload1.update(sign1)
+
+    payload = json.dumps(dict(payload1))
+
+    r = requests.session().post(
+        url=url, headers=headers, data=payload
+    )
+
+    j = r.json()
+    # print(j)
+    return j
