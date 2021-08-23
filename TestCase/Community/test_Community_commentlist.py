@@ -18,7 +18,7 @@ from Common.show_sql import showsql
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import HTTP, JSON
 
 
@@ -36,9 +36,10 @@ class TestCommunitycommentlist():
     def test_Community_commentlist(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
-        headers = headers
+
 
         token1 = yamltoken()
         token = {"token": token1}

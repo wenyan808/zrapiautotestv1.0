@@ -13,7 +13,7 @@ from Common.sign import get_sign
 
 from Common.requests_library import Requests
 
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 
 from glo import JSON, HTTP
 
@@ -32,7 +32,8 @@ class TestFollowList():
     # @pytest.mark.skip(reason="调试中 ")
     def test_FollowList(self):
         # 拼装参数
-        header = JSON
+        header = {}
+        header.update(JSON)
         headers = {}
         headers.update(header)
         token = {"token": yamltoken()}
@@ -65,16 +66,17 @@ class TestFollowList():
                     '192.168.1.237', 'root', '123456', "user_account",
                     "select user_id from t_user_account where `zr_no`= '48066661';"
                 )
+                for i in range(len(j.get("data"))):
 
-                assert j.get("data")[0].get("userId") == list(list(userId)[0])[0]
-                assert j.get("data")[0].get("headPhoto") == \
-                       "http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/" \
-                       "head_photo/fef4a889f81c4c778afc07b9b15f7e5b/16267765146200448.jpg"
+                    if j.get("data")[i].get("userId") == list(list(userId)[0])[0]:
+                        assert j.get("data")[i].get("headPhoto") == \
+                               "http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/" \
+                               "head_photo/fef4a889f81c4c778afc07b9b15f7e5b/16267765146200448.jpg"
 
-                assert j.get("data")[0].get("nickname") == "卓锐用户48066661"
-                assert j.get("data")[0].get("fansCount") == 1
-                assert j.get("data")[0].get("createTime") == 1626776457000
-                assert j.get("data")[0].get("zrNo") == "48066661"
+                        assert j.get("data")[i].get("nickname") == "卓锐用户48066661"
+                        assert j.get("data")[i].get("fansCount") == 1
+                        assert j.get("data")[i].get("createTime") == 1626776457000
+                        assert j.get("data")[i].get("zrNo") == "48066661"
 
         except:
             raise AssertionError(

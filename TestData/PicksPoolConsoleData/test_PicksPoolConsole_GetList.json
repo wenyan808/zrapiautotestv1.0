@@ -1,0 +1,42 @@
+[
+  {
+    "currentPage": null,
+    "pageSize": null,
+    "keyword": "00123",
+    "sort": 1,
+    "market": 1,
+    "startTime": "2021-07-11 00:00:00",
+    "endTime": "2021-08-10 23:59:59",
+    "operStatus": 2
+  },
+  {
+    "currentPage": null,
+    "pageSize": null,
+    "keyword": "ZM",
+    "sort": 2,
+    "market": 2,
+    "startTime": "2021-07-11 00:00:00",
+    "endTime": "2021-08-10 23:59:59",
+    "operStatus": 1
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "keyword": null,
+    "sort": null,
+    "market": null,
+    "startTime": "2021-07-11 00:00:00",
+    "endTime": "2021-08-10 23:59:59",
+    "operStatus": null
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "keyword": null,
+    "sort": null,
+    "market": null,
+    "startTime": "2021-07-11 00:00:00",
+    "endTime": "2021-08-10 23:59:59",
+    "operStatus": null
+  }
+]

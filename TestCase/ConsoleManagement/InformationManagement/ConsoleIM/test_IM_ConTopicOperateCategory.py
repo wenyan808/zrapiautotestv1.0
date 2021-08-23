@@ -35,7 +35,7 @@ class TestIMConTopicOperateCategory():
     def test_IM_ConTopicOperateCategory(self):
         url = console_HTTP + "/api/con_topic/v1/update"
         header = console_JSON
-        header = header
+
 
         headers = {}
         headers.update(header)

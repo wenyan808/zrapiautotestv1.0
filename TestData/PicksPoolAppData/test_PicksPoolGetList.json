@@ -1,0 +1,80 @@
+[
+  {
+    "currentPage": null,
+    "pageSize": null,
+    "selectedType": null,
+    "sort": null
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "selectedType": null,
+    "sort": null
+  },
+  {
+    "currentPage": null,
+    "pageSize": null,
+    "selectedType": 1,
+    "sort": null
+  },
+  {
+    "currentPage": null,
+    "pageSize": null,
+    "selectedType": 2,
+    "sort": null
+  },
+  {
+    "currentPage": null,
+    "pageSize": null,
+    "selectedType": 3,
+    "sort": null
+  },
+  {
+    "currentPage": null,
+    "pageSize": null,
+    "selectedType": null,
+    "sort": 1
+  },
+  {
+    "currentPage": null,
+    "pageSize": null,
+    "selectedType": null,
+    "sort": 2
+  },
+  {
+    "currentPage": null,
+    "pageSize": null,
+    "selectedType": null,
+    "sort": 3
+  },
+  {
+    "currentPage": null,
+    "pageSize": null,
+    "selectedType": null,
+    "sort": 4
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "selectedType": 1,
+    "sort": 1
+  },
+  {
+    "currentPage": 2,
+    "pageSize": 20,
+    "selectedType": 2,
+    "sort": 2
+  },
+  {
+    "currentPage": 3,
+    "pageSize": 20,
+    "selectedType": 3,
+    "sort": 3
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "selectedType": 1,
+    "sort": 4
+  }
+]

@@ -11,7 +11,7 @@ from Common.show_sql import showsql
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import HTTP, JSON
 
 
@@ -30,7 +30,8 @@ class TestCommunitycommentowner_list():
     def test_Community_owner_list(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/owner_list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
         userId = showsql(
             '192.168.1.237', 'root', '123456', "user_account",
             "select user_id from t_user_account where `zr_no`= '68904140';"
@@ -48,7 +49,7 @@ class TestCommunitycommentowner_list():
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
         token1 = yamltoken()

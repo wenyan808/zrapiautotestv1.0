@@ -2,7 +2,7 @@
 import allure
 from Common.assertapi import assert_data
 from Common.guide import zhuorui
-from Common.login import login
+from Common.login import login, login_common
 
 
 @allure.feature('板快行情')
@@ -10,7 +10,7 @@ class TestClass():
 
     @classmethod
     def setup_class(cls) -> None:
-        login()
+        login_common()
 
     @allure.story('根据市场查询港股股票异动数据')
     def test_listHK(self):

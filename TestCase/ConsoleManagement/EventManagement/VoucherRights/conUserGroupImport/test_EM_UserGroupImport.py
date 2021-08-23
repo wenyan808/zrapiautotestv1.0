@@ -35,7 +35,7 @@ class TestEMUserGroupImport():
         url = console_HTTP + "/api/con_user_group/v1/import"
         url1 = console_HTTP + "/api/con_sts/v1/token"
         header = console_JSON
-        header = header
+
 
         headers = {}
         headers.update(header)

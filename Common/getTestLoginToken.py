@@ -11,14 +11,12 @@ from Common.sign import get_sign
 
 def gettestLoginToken():
     """TEST环境 用户手机号密码登录
-
     :return: 返回登录token
     """
     url = http + "/as_user/api/user_account/v1/user_login_pwd"
     url1 = http + "/as_notification/api/sms/v1/send_code"
     url2 = http + "/as_user/api/user_account/v1/device_next"
     password = get_md5(pwd2)
-
     json1 = {
         "phone": phone2,
         "loginPassword": password,
@@ -26,8 +24,8 @@ def gettestLoginToken():
     }
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)
-    headers = JSON_dev
-
+    headers = {}
+    headers.update(JSON_dev)
     response_login = requests.session().post(url=url, headers=headers,
                                              json=json1)
     # print(response_login.json())
@@ -84,8 +82,9 @@ def getUserLogincodeToken(phone: str):
     :return: token
     """
     HTTP = http
-    JSON = JSON_dev
-    headers = JSON
+    # JSON = JSON_dev
+    headers = {}
+    headers.update(JSON_dev)
     # phone = "13418923886"
     phone = phone
     smsCode = "1"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
@@ -175,7 +174,8 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
     }
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)
-    headers = JSON2
+    headers = {}
+    headers.update(JSON2)
 
     res_login = requests.session().post(url=url, headers=headers,
                                         json=json1)
@@ -230,4 +230,4 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
         return res
 
 
-# print(getlogintoken("15816543400", "zr123456", "86"))
+# print(getlogintoken("15818031100", "zr123456", "86"))

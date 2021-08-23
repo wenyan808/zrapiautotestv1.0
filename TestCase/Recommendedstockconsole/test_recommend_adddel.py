@@ -12,7 +12,9 @@ import requests
 
 from Common.getConsoleLogin import getConsoleLogin_token
 from Common.get_time_stamp import get_time_stamp13
+from Common.login import login
 from Common.sign import get_sign
+from Common.tools.read_write_yaml import yamltoken
 from TestCase.Recommendedstockconsole.recommend_delete import delete1
 from glo import console_JSON, http,JSON
 
@@ -20,6 +22,7 @@ from glo import console_JSON, http,JSON
 class TestRecommendAdd():
     def setup(self):
         # 获取console端token
+        login()
         self.token = getConsoleLogin_token()
     def teardowm(self):
         pass
@@ -49,15 +52,16 @@ class TestRecommendAdd():
         if get_market_status(2) != 8:
             # 新增
             add(payloadUS,self.token)
+            # print(payloadUS)
             # 删除
-            delete1(2,self.token)
+            delete1(0,self.token)
 
 payloadHK = {
     "type": 2,
     "ts": "HK",
     "code": "00175",
     "operationType": 1,
-    "recommendedTime": get_time_stamp13(),
+    "recommendedTime": (int(get_time_stamp13())+120000),
     "recommendedPrice": "601.500",
     "referrerReason": "[{\"type\":\"消息面\",\"list\":[{\"title\":\"市场机会\",\"desc"
                       "\":\"/api/con_stock_recommend/v1/add\"}]}]",
@@ -66,13 +70,13 @@ payloadHK = {
 payloadSH = {
     "type": 2,
     "ts": "SH",
-    "code": "688981",
+    "code": "600031",
     "operationType": 1,
-    "recommendedTime": get_time_stamp13(),
+    "recommendedTime": (int(get_time_stamp13())+120000),
     "recommendedPrice": "57.40",
     "referrerReason": "[{\"type\":\"消息面\",\"list\":[{\"title\":\"市场机会\",\"desc"
                       "\":\"/api/con_stock_recommend/v1/add\"}]}]",
-    "name": "中芯国际"
+    "name": "三一重工"
 }
 
 payloadSZ = {
@@ -80,7 +84,7 @@ payloadSZ = {
     "ts": "SZ",
     "code": "300059",
     "operationType": 1,
-    "recommendedTime": get_time_stamp13(),
+    "recommendedTime": (int(get_time_stamp13())+120000),
     "recommendedPrice": "32.82",
     "referrerReason": "[{\"type\":\"消息面\",\"list\":[{\"title\":\"市场机会\",\"desc"
                       "\":\"/api/con_stock_recommend/v1/add\"}]}]",
@@ -92,7 +96,7 @@ payloadUS = {
     "ts": "US",
     "code": "SNAP",
     "operationType": 1,
-    "recommendedTime": str(int(get_time_stamp13())-43200000),
+    "recommendedTime": str(int(get_time_stamp13())-43200000+120000),
     "recommendedPrice": "77.970",
     "referrerReason": "[{\"type\":\"消息面\",\"list\":[{\"title\":\"市场机会\",\"desc"
                       "\":\"/api/con_stock_recommend/v1/add\"}]}]",
@@ -126,7 +130,9 @@ RESET_BEFORE_OPEN("083000","090000",9,"盘前清零");
 沪深科创板没有盘后竞价时间段，增加了盘后交易时间段 状态码为 10，其他的状态码与上面一致
 AFTER_DISC("150000","153000",10,"科创板盘后交易");
     """
-
+    header = {}
+    header.update(JSON)
+    header.update({"token": yamltoken()})
     response = requests.request("POST", http + "/as_market/api/market_trade_status/v1/get_market_status", headers=JSON, data=json.dumps({"sign": get_sign({})})).json()
     # 1 - HK,2 - US,3 -（SH,SZ)
     if market == 1:

@@ -1,0 +1,53 @@
+[
+  {
+    "zrNo": "80607916",
+    "accType": "C",
+    "clientId": "380607916",
+    "fundAccount": "3080607916",
+    "sureStartTime": "2021-07-14 00:00:00",
+    "sureEndTime": "2021-08-14 00:00:00",
+    "clientType": 1,
+    "currentPage": 1,
+    "pageSize": 20
+  },{
+    "zrNo": "19956392",
+    "accType": "C",
+    "clientId": "199563923356",
+    "fundAccount": "199563923843",
+    "sureStartTime": "2021-07-14 00:00:00",
+    "sureEndTime": "2021-08-14 00:00:00",
+    "clientType": 1,
+    "currentPage": 1,
+    "pageSize": 20
+  },{
+    "zrNo": null,
+    "accType": null,
+    "clientId": null,
+    "fundAccount": null,
+    "sureStartTime": "2021-07-14 00:00:00",
+    "sureEndTime": "2021-08-14 00:00:00",
+    "clientType": 1,
+    "currentPage": null,
+    "pageSize": null
+  },{
+    "zrNo": "80607916",
+    "accType": null,
+    "clientId": null,
+    "fundAccount": null,
+    "sureStartTime": "2021-07-14 00:00:00",
+    "sureEndTime": "2021-08-14 00:00:00",
+    "clientType": 1,
+    "currentPage": 1,
+    "pageSize": 20
+  },{
+    "zrNo": null,
+    "accType": "M",
+    "clientId": null,
+    "fundAccount": null,
+    "sureStartTime": "2021-07-14 00:00:00",
+    "sureEndTime": "2021-08-14 00:00:00",
+    "clientType": 1,
+    "currentPage": 1,
+    "pageSize": 20
+  }
+]

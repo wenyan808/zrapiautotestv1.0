@@ -10,6 +10,7 @@ from Common.getTestLoginToken import gettestLoginToken
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
+from Common.tools.read_write_yaml import yamlconfig
 from TestAssertions.CounterJsonSchemadata.HSCustomerInfo.AuthSchema import authSchema
 
 from glo import http, JSON_dev, user_password, userId2
@@ -30,8 +31,9 @@ class TestHSCustomerInfoAuth():
     # @pytest.mark.skip(reason="调试中 ")
     def test_HSCustomerInfo_Auth(self):
         # 拼装参数
-        headers = JSON_dev
-        headers = headers
+        headers = {}
+        headers.update(JSON_dev)
+
         headers1 = {}
         token = {"token": gettestLoginToken()}
         headers1.update(headers)
@@ -52,7 +54,10 @@ class TestHSCustomerInfoAuth():
 
         k = r_info.json()
         clientId = k.get("data").get("clientId")
-        password = user_password
+        if yamlconfig("flag"):
+            password = "123456"
+        else:
+            password = "111111"
 
         body = {
             "clientId": clientId,

@@ -32,8 +32,9 @@ class TestIMGetTopicApi():
                              get_json(BASE_DIR + r"/TestData/testIMData/test_IM_GetTopicApi.json"))
     def test_IM_GetTopicApi(self, info):
         url = HTTP + "/as_stock_information/api/topic/v1/get"
-        header = JSON
-        header = header
+        header = {}
+        header.update(JSON)
+
 
         paylo = info
         # print(paylo)

@@ -10,6 +10,7 @@ import json
 import allure
 import pytest
 
+from Common.send_code import send_code
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -31,34 +32,28 @@ class TestForgotPasswordCode02():
     # @pytest.mark.skip(reason="调试中 ")
     def test_ForgotPasswordCode02(self):
         # 拼装参数
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         phone = "15816262885"
         password = "zr1234567"
         smsCode = "2"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
         # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
         # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
+        url = HTTP + "/as_notification/api/sms/v1/send_code"
         boby = {
             "phone": phone,
             "countryCode": countryCode,
             "smsCode": smsCode
         }
-        sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(boby)
-        payload1.update(sign1)
-
-        payload = json.dumps(dict(payload1))
-        response_getdata = Requests(self.session).post(
-            url=HTTP + "/as_notification/api/sms/v1/send_code",
-            headers=headers, data=payload, title="发送短信"
-        )
+        """发送短信"""
+        response_getdata = send_code(url, headers, boby)
         if "data" in response_getdata.json():
             verificationCode = response_getdata.json().get("data")
         else:
             verificationCode = "123456"
 
-        url = HTTP + "/as_user/api/user_account/v1/forgot_password_code"
+        url1 = HTTP + "/as_user/api/user_account/v1/forgot_password_code"
         paylo = {
             "newLoginPassword": get_md5(password),
             "verificationCode": verificationCode,
@@ -73,7 +68,7 @@ class TestForgotPasswordCode02():
         payload = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="忘记登录密码-第二步"
+            url=url1, headers=headers, data=payload, title="忘记登录密码-第二步"
         )
 
         j = r.json()
@@ -87,7 +82,7 @@ class TestForgotPasswordCode02():
             assert j.get("code") == "010001"
             assert j.get("msg") == "您输入的验证码不正确"
         # else:
-        #     raise AssertionError(f"\n请求地址：{url}"
+        #     raise AssertionError(f"\n请求地址：{url1}"
         #                          f"\nbody参数：{payload}"
         #                          f"\n请求头部参数：{headers}"
         #                          f"\n返回数据结果：{j}")

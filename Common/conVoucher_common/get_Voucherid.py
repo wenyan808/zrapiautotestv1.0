@@ -43,7 +43,7 @@ def delvoucherId(voucherId: str):
     """
     url1 = console_HTTP + "/api/con_voucher/v1/update"
     header = console_JSON
-    header = header
+
 
     headers = {}
     headers.update(header)

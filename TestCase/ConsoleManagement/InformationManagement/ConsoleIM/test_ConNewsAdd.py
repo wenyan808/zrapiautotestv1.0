@@ -35,7 +35,7 @@ class TestIMConNewsAdd():
         url = console_HTTP + "/api/con_news/v1/add"
         url1 = console_HTTP + "/api/con_sts/v1/token"
         header = console_JSON
-        header = header
+
         headers = {}
         headers.update(header)
         # print(token)

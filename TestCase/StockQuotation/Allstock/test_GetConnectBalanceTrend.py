@@ -1,18 +1,7 @@
 # test_GetConnectBalanceTrend
-import json
-import logging
-
 import allure
-import pytest
-import requests
-
-from Common.get_time_stamp import TimeTostamp
+from Common.guide import zhuorui
 from Common.login import login
-
-from Common.sign import get_sign
-
-from Common.tools.read_yaml import yamltoken
-from glo import HTTP, JSON
 
 
 # @pytest.mark.skip(reason="调试中")
@@ -24,44 +13,17 @@ class TestNowSrverinfo:
 
     @allure.story('查询当天的北向最新资金流动趋势')
     def test_nowSrverinfo(self):
-        # pass
-        url = HTTP + "/as_market/api/connect_balance/v1/get_connect_balance_trend"
-        headers = JSON
+        response = zhuorui("Allstock", "查询当天的北向最新资金流动趋势")
+        # assert_data(response, '000000', 'ok')
 
-        # 拼装参数
-        paylo = {
-            "direction": "NB"
-        }
-        # paylo = info
-        # print(paylo)
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        # 调用登录接口通过token传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
-        headers = headers
-        # print(token)
-        # print(type(token))
-
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)
-        # print(headers)
-        payload = json.dumps(dict(payload1))
-        # time.sleep(1)
-        r = requests.post(url=url, headers=headers, data=payload)
-        # 断言
-        j = r.json()
-        # print(j)
-        assert r.status_code == 200
-        if j.get("code") == "000000":
-            assert j.get("code") == "000000"
-            assert j.get("msg") == "ok"
+        assert response.status_code == 200
+        if response.json().get("code") == "000000":
+            assert response.json().get("code") == "000000"
+            assert response.json().get("msg") == "ok"
             if "data" in j:
                 if len(j.get("data")) != 0:
-                    for i in range(len(j.get("data"))):
-                        assert "time" in j.get("data")[i]
-                        assert "time" in j.get("data")[i]
-                        assert j.get("data")[i].get("direction") == paylo.get("direction")
-                        assert "balanceSZ" in j.get("data")[i]
-                        assert "balanceSH" in j.get("data")[i]
+                    for i in range(len(response.json().get("data"))):
+                        assert "time" in response.json().get("data")[i]
+                        assert "time" in response.json().get("data")[i]
+                        assert "balanceSZ" in response.json().get("data")[i]
+                        assert "balanceSH" in response.json().get("data")[i]

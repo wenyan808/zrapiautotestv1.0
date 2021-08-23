@@ -9,7 +9,7 @@ from Common.sign import get_sign
 
 from Common.requests_library import Requests
 
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 
 from glo import JSON, HTTP
 
@@ -28,7 +28,8 @@ class TestUserMarketAuthInfo():
     # @pytest.mark.skip(reason="调试中 ")
     def test_UserMarketAuthInfo(self):
         # 拼装参数
-        header = JSON
+        header = {}
+        header.update(JSON)
         headers = {}
         headers.update(header)
         token = {"token": yamltoken()}

@@ -31,7 +31,7 @@ class TestHSConMoneyExchangeAuditReject():
     def test_HSConMoneyExchange_AuditReject(self):
         # 拼装参数
         header = console_JSON
-        header = header
+
         headers = {}
         headers.update(header)
 

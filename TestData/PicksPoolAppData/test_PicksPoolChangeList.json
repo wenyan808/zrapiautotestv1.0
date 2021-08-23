@@ -1,0 +1,65 @@
+[
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "market": 1,
+    "date": 1,
+    "operStatus": 1
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "market": 1,
+    "date": 2,
+    "operStatus": 1
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "market": 1,
+    "date": 3,
+    "operStatus": 1
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "market": 1,
+    "date": 4,
+    "operStatus": 1
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "market": 2,
+    "date": 1,
+    "operStatus": 1
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "market": 2,
+    "date": 2,
+    "operStatus": 1
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "market": 2,
+    "date": 3,
+    "operStatus": 1
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "market": 2,
+    "date": 4,
+    "operStatus": 1
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "market": 1,
+    "date": 1,
+    "operStatus": 0
+  }
+]

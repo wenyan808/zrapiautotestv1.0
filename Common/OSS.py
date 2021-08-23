@@ -8,7 +8,7 @@ from Common.Upload.img_file_path import imgURL, fileURL
 from Common.getTestLoginToken import getlogintoken
 from Common.login import login
 from Common.show_sql import showsql
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import BASE_DIR, phone2, HTTP, JSON, phoneArea, pwd, phone
 
 
@@ -28,10 +28,10 @@ def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, ur
     name = Storage_directory + '/' + userId + '/{}'
     oss_img_path = imgURL(name) + img_name
     # print(oss_img_path)
-    url = url
-    header = headers
+    # url = url
+    # header = headers
 
-    rj = getsecurityToken(url, header)
+    rj = getsecurityToken(url, headers)
     # print(rj)
     AccessKeyId = rj.get("accessKeyId")
     # print(AccessKeyId)
@@ -60,6 +60,25 @@ def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, ur
         return jpg_url, oss_img_path
     else:
         print("上传失败")
+
+# login()
+# headers = {}
+# headers.update(JSON)
+#
+# token1 = yamltoken()
+# token = {"token": token1}
+# headers.update(token)  # 将token更新到headers
+# # print(headers)
+# userId1 = showsql(
+#     '192.168.1.237', 'root', '123456', "user_account",
+#     f"select user_id from t_user_account where `zr_no`= '68904140';"
+# )
+# userId = list(list(userId1)[0])[0]
+# img_name = "01.jpg"
+# catalog = r"/Business/Img/community/"
+# url1 = HTTP + "/as_common/api/sts/v1/token"
+# url_path = list(oss_img("community", img_name, userId, catalog, url1, headers))
+# print(url_path)
 
 
 def oss_file(Storage_directory: str, file_name: str, catalog: str, url: str, headers: dict):
@@ -101,7 +120,6 @@ def oss_file(Storage_directory: str, file_name: str, catalog: str, url: str, hea
         # print(file_url)
         return file_url, oss_file_path
 
-
 # print(oss_file("sensitive_word", "敏感词.xlsx"))
 # userId1 = showsql(
 #     '192.168.1.237', 'root', '123456', "user_account",
@@ -110,7 +128,7 @@ def oss_file(Storage_directory: str, file_name: str, catalog: str, url: str, hea
 # userId = list(list(userId1)[0])[0]
 # catalog = r"/Business/Img/community/"
 # url1 = HTTP + "/as_common/api/sts/v1/token"
-# header = JSON
+# header = {} header.update(JSON)
 # login()
 # token1 = yamltoken()
 # token = {"token": token1}

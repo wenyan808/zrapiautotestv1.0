@@ -8,12 +8,12 @@
 import json
 
 import allure
-import pytest
 
+from Common.send_code import send_code
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-
+from Common.redisfuction import deviceOR, phoneOR
 
 from glo import JSON, HTTP, countryCode, phoneArea
 
@@ -31,33 +31,30 @@ class TestForgotPasswordCode01():
     # @pytest.mark.skip(reason="调试中 ")
     def test_ForgotPasswordCode01(self):
         # 拼装参数
-        headers = JSON
-
+        headers = {}
+        headers.update(JSON)
+        # 修改设备号次数
+        deviceOR(2, JSON.get("deviceId"))
         phone = "15816262885"
+        # 修改手机号验证次数
+        phoneOR(2, phoneArea, phone)
         smsCode = "2"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
         # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
         # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
+        url = HTTP + "/as_notification/api/sms/v1/send_code"
         boby = {
             "phone": phone,
             "countryCode": countryCode,
             "smsCode": smsCode
         }
-        sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(boby)
-        payload1.update(sign1)
-
-        payload = json.dumps(dict(payload1))
-        response_getdata = Requests(self.session).post(
-            url=HTTP + "/as_notification/api/sms/v1/send_code",
-            headers=headers, data=payload, title="发送短信"
-        )
+        """发送短信"""
+        response_getdata = send_code(url, headers, boby)
         if "data" in response_getdata.json():
             verificationCode = response_getdata.json().get("data")
         else:
             verificationCode = "123456"
 
-        url = HTTP + "/as_user/api/user_account/v1/forgot_password_code"
+        url1 = HTTP + "/as_user/api/user_account/v1/forgot_password_code"
         paylo = {
             "verificationCode": verificationCode,
             "phone": phone,
@@ -71,7 +68,7 @@ class TestForgotPasswordCode01():
         payload = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="忘记登录密码-第一步"
+            url=url1, headers=headers, data=payload, title="忘记登录密码-第一步"
         )
 
         j = r.json()
@@ -88,7 +85,7 @@ class TestForgotPasswordCode01():
 
         # else:
         #     raise ValueError(
-        #         f"\n请求地址：{url}"
+        #         f"\n请求地址：{url1}"
         #         f"\nbody参数：{payload}"
         #         f"\n请求头部参数：{headers}"
         #         f"\n返回数据结果：{j}")

@@ -33,7 +33,8 @@ class TestRefreshToken():
     # @pytest.mark.skip(reason="调试中 ")
     def test_RefreshToken(self):
         # 拼装参数
-        headers = JSON2
+        headers = {}
+        headers.update(JSON2)
 
         phone = "13321165200"
         # password = "zr123456"

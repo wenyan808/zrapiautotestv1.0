@@ -10,10 +10,10 @@ import json
 import allure
 import pytest
 
+from Common.send_code import send_code
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-
 
 from glo import HTTP, phoneArea, countryCode
 
@@ -45,21 +45,14 @@ class TestDeviceNext():
         smsCode = "6"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
         # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
         # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
+        url = HTTP + "/as_notification/api/sms/v1/send_code"
         boby = {
             "phone": phone,
             "countryCode": countryCode,
             "smsCode": smsCode
         }
-        sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(boby)
-        payload1.update(sign1)
-
-        payload = json.dumps(dict(payload1))
-        response_getdata = Requests(self.session).post(
-            url=HTTP + "/as_notification/api/sms/v1/send_code",
-            headers=headers, data=payload, title="发送短信"
-        )
+        """发送短信"""
+        response_getdata = send_code(url, headers, boby)
         if "data" in response_getdata.json():
             verificationCode = response_getdata.json().get("data")
         else:

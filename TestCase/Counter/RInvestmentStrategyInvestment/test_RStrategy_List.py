@@ -26,8 +26,9 @@ class TestRStrategyList():
     def test_RStrategy_List(self):
         url = http + "/as_trade/api/strategy/v1/list"
         # 拼装参数
-        headers = JSON_dev
-        headers = headers
+        headers = {}
+        headers.update(JSON_dev)
+
         headers1 = {}
         token = {"token": gettestLoginToken()}
         headers1.update(headers)

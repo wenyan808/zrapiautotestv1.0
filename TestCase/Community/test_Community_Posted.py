@@ -12,7 +12,7 @@ from Common.requests_library import Requests
 from Common.show_sql import showsql
 from Common.sign import get_sign
 from Common.tools.read_write_json import get_json
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import HTTP, JSON, BASE_DIR
 
 
@@ -32,7 +32,8 @@ class TestCommunityPosted:
     def test_Community_Posted(self, info):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        header = JSON
+        header = {}
+        header.update(JSON)
 
         # 拼装参数
         paylo = info
@@ -68,7 +69,7 @@ class TestCommunityPosted:
             postId = j.get("data").get("postId")
             # print(postId)
         else:
-            raise AssertionError(j)
+            raise ValueError(j)
         body = {'postId': f"{postId}"}
         # 删帖社区帖子
         Communitypostdelete(delete_url, headers, body)

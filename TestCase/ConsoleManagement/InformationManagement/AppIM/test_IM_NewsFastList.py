@@ -31,7 +31,8 @@ class TestIMNewsFastList():
                              get_json(BASE_DIR + r"/TestData/testIMData/test_IM_NewsFastList.json"))
     def test_IM_NewsFastList(self, info):
         url = HTTP + "/as_stock_information/api/news/v1/fast_list"
-        header = JSON
+        header = {}
+        header.update(JSON)
 
         # 拼装参数
         paylo = info

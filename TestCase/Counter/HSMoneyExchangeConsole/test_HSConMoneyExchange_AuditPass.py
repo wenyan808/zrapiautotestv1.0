@@ -32,7 +32,7 @@ class TestHSConMoneyExchangeAuditPass():
 
         # 拼装参数
         header = console_JSON
-        header = header
+
         headers = {}
         headers.update(header)
 

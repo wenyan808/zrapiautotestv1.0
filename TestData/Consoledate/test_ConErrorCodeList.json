@@ -1,0 +1,60 @@
+[
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "code": null,
+    "zh_CN": null,
+    "operator": null,
+    "variation": null,
+    "deleted": null
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "code": null,
+    "zh_CN": "停市公告库最多只能存100条",
+    "operator": null,
+    "variation": null,
+    "deleted": null
+  },{
+    "currentPage": 1,
+    "pageSize": 20,
+    "code": null,
+    "zh_CN": null,
+    "operator": null,
+    "variation": 0,
+    "deleted": null
+  },{
+    "currentPage": 1,
+    "pageSize": 20,
+    "code": null,
+    "zh_CN": null,
+    "operator": null,
+    "variation": 1,
+    "deleted": null
+  },{
+    "currentPage": 1,
+    "pageSize": 20,
+    "code": null,
+    "zh_CN": null,
+    "operator": null,
+    "variation": null,
+    "deleted": 0
+  },{
+    "currentPage": 1,
+    "pageSize": 20,
+    "code": null,
+    "zh_CN": null,
+    "operator": null,
+    "variation": null,
+    "deleted": 1
+  },{
+    "currentPage": 1,
+    "pageSize": 20,
+    "code": "030219",
+    "zh_CN": "收市後的市場不允許編輯",
+    "operator": "程序",
+    "variation": 0,
+    "deleted": 1
+  }
+]

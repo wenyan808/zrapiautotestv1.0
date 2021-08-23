@@ -33,7 +33,7 @@ class TestIMConTopicAddCategory():
         url = console_HTTP + "/api/con_topic/v1/add_category"
 
         header = console_JSON
-        header = header
+
 
         headers = {}
         headers.update(header)

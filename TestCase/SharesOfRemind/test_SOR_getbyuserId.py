@@ -10,7 +10,7 @@ from Common.login import login
 
 from Common.sign import get_sign
 
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import HTTP, JSON
 
 
@@ -25,7 +25,8 @@ class TestSOGetbyuserId:
     def test_SOR_getbyuserId(self):
         # pass
         url = HTTP + "/as_market/api/price_notify/v1/get_by_userId"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {}
@@ -36,7 +37,7 @@ class TestSOGetbyuserId:
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
 
         token1 = yamltoken()

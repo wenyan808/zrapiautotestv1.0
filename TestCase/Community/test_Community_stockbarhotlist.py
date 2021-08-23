@@ -9,7 +9,7 @@ from Common.login import login
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import HTTP, JSON
 
 
@@ -28,7 +28,8 @@ class TestCommunitycommentstockbarhot_list():
     def test_Community_stockbarhot_list(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/stock_bar/v1/hot_list"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -38,13 +39,15 @@ class TestCommunitycommentstockbarhot_list():
             "publishTime": TimeTostamp(),
             "pageSize": 20
 
+
+
         }
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
         token1 = yamltoken()

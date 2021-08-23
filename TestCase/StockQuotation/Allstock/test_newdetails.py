@@ -15,5 +15,4 @@ class TestBroker:
     @allure.story('查询新闻内容')
     def test_getpricehktype1(self):
         response = zhuorui('个股详情公共接口', '查询新闻内容')
-        # print(response.json())
         assert_data(response, '000000', 'ok')

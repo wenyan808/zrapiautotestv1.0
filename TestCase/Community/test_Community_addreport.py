@@ -17,7 +17,7 @@ from Common.sign import get_sign
 
 from Common.requests_library import Requests
 from Common.tools.read_write_json import write_json
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import HTTP, JSON, BASE_DIR
 
 
@@ -41,8 +41,9 @@ class TestCommunityaddreport():
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_addreport(self):
         url_hostlist = HTTP + "/as_community/api/community/v1/hot_list"
-        headers = JSON
-        headers = headers
+        headers = {}
+        headers.update(JSON)
+
         token1 = yamltoken()
         token = {"token": token1}
         headers.update(token)  # 将token更新到headers

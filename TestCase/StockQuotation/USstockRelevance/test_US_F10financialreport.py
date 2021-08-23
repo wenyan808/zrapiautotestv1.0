@@ -6,11 +6,13 @@ import allure
 import pytest
 import requests
 
+from Common.assertapi import assert_data
+from Common.guide import zhuorui
 from Common.login import login
 
 from Common.sign import get_sign
 
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import HTTP, JSON
 
 
@@ -23,49 +25,18 @@ class TestUSF10dividendlist:
 
     @allure.story('美股F10财报')
     def test_US_financialreport(self):
-        # pass
-        url = HTTP + "/as_market/api/us/f10/v1/financial/report"
-        headers = JSON
+        response = zhuorui("Allstock", "美股F10财报")
+        assert_data(response, '000000', 'ok')
 
-        # 拼装参数
-        paylo = {
-            "ts": "US",
-            "code": "BABA"
-        }
-        # paylo = info
-        # print(paylo)
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        # 调用登录接口通过token传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
-        headers = headers
-        # print(token)
-        # print(type(token))
-
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)
-        # print(headers)
-        payload = json.dumps(dict(payload1))
-        # time.sleep(1)
-        r = requests.post(url=url, headers=headers, data=payload)
-        # 断言
-        j = r.json()
-        # print(j)
-
-        assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
-        if "data" in j:
-            if len(j.get("data")) != 0:
-                assert "mainBusinessReport" in j.get("data")
-                assert "profitDetailUrl" in j.get("data")
-                assert "liabilDetailUrl" in j.get("data")
-                assert "cashFlowDetailUrl" in j.get("data")
-                assert "profitReport" in j.get("data")
-                assert "liabilistyReport" in j.get("data")
-                assert "cashFlowReport" in j.get("data")
+        if "data" in response.json():
+            if len(response.json().get("data")) != 0:
+                assert "mainBusinessReport" in response.json().get("data")
+                assert "profitDetailUrl" in response.json().get("data")
+                assert "liabilDetailUrl" in response.json().get("data")
+                assert "cashFlowDetailUrl" in response.json().get("data")
+                assert "profitReport" in response.json().get("data")
+                assert "liabilistyReport" in response.json().get("data")
+                assert "cashFlowReport" in response.json().get("data")
 
             else:
                 logging.info("data为空，无数据")

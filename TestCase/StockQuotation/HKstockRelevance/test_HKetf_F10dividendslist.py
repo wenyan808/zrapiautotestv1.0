@@ -1,20 +1,13 @@
 # test_HKetf_F10dividendslist
 import json
 import logging
-import random
-
 import allure
 import pytest
-import requests
-
+from Common.assertapi import assert_data
+from Common.guide import zhuorui
 from Common.login import login
-from Common.show_sql import showsql
-
-from Common.sign import get_sign
-from Common.tools.read_write_json import get_json, write_json
-
-from Common.tools.read_yaml import yamltoken
-from glo import HTTP, JSON, BASE_DIR
+from Common.tools.read_write_json import get_json
+from glo import BASE_DIR
 
 
 # @pytest.mark.skip(reason="调试中")
@@ -34,57 +27,34 @@ class TestHKetfF10dividendslist:
     @allure.story('港股ETF分红派息列表')
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_HKetf_F10dividendslist.json"))
     def test_HKetf_F10dividendslist(self, info):
-        # pass
-        url = HTTP + "/as_market/api/etf/f10/v1/dividends/list"
-        headers = JSON
 
-        # 拼装参数
-        # paylo = {}
-        paylo = info
-        # print(paylo)
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        # 调用登录接口通过token传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
-        headers = headers
-        # print(token)
-        # print(type(token))
+        response = zhuorui("Allstock", "港股ETF分红派息列表", info)
+        assert_data(response, '000000', 'ok')
 
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)
-        # print(headers)
-        payload = json.dumps(dict(payload1))
-        # time.sleep(1)
-        r = requests.post(url=url, headers=headers, data=payload)
-        # 断言
-        j = r.json()
-        # print(j)
 
-        assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
-        if "data" in j:
-            if len(j.get("data")) != 0:
-                # for i in range(len( j.get("data"))):
-                assert "list" in j.get("data")
-                assert "total" in j.get("data")
-                assert "pageSize" in j.get("data")
+        assert response.status_code == 200
+        assert response.json().get("code") == "000000"
+        assert response.json().get("msg") == "ok"
+        if "data" in response.json():
+            if len(response.json().get("data")) != 0:
+                # for i in range(len( response.json().get("data"))):
+                assert "list" in response.json().get("data")
+                assert "total" in response.json().get("data")
+                assert "pageSize" in response.json().get("data")
                 if "pageSize" in info:
-                    assert j.get("data").get("pageSize") == info.get("pageSize")
-                assert "currentPage" in j.get("data")
+                    assert response.json().get("data").get("pageSize") == info.get("pageSize")
+                assert "currentPage" in response.json().get("data")
                 if "currentPage" in info:
-                    assert j.get("data").get("currentPage") == info.get("currentPage")
-                if "list" in j.get("data"):
-                    if len(j.get("data").get("list")) != 0:
+                    assert response.json().get("data").get("currentPage") == info.get("currentPage")
+                if "list" in response.json().get("data"):
+                    if len(response.json().get("data").get("list")) != 0:
                         # pass
-                        assert "dividendDate" in j.get("data").get("list")[0]
-                        assert "exDividendDate" in j.get("data").get("list")[0]
-                        assert "allocationScheme" in j.get("data").get("list")[0]
-                        assert "每股分配" in j.get("data").get("list")[0].get("allocationScheme")
+                        assert "dividendDate" in response.json().get("data").get("list")[0]
+                        assert "exDividendDate" in response.json().get("data").get("list")[0]
+                        assert "allocationScheme" in response.json().get("data").get("list")[0]
+                        assert "每股分配" in response.json().get("data").get("list")[0].get("allocationScheme")
                     else:
-                        assert j.get("data").get("list") == []
+                        assert response.json().get("data").get("list") == []
                         logging.info("list为空的list")
 
                 else:

@@ -11,7 +11,7 @@ from Common.login import login
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import HTTP, JSON
 
 
@@ -30,7 +30,8 @@ class TestCommunitycommentpraise():
     def test_Community_postpraise(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -61,7 +62,7 @@ class TestCommunitycommentpraise():
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
         token1 = yamltoken()
@@ -118,7 +119,8 @@ class TestCommunitycommentpraise():
     def test_Community_commentpraise(self):
         login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        headers = JSON
+        headers = {}
+        headers.update(JSON)
 
         # 拼装参数
         paylo = {
@@ -170,7 +172,7 @@ class TestCommunitycommentpraise():
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = headers
+
         # print(token)
         # print(type(token))
         token1 = yamltoken()

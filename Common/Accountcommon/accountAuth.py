@@ -5,7 +5,9 @@ import requests
 from Common.getTestLoginToken import gettestLoginToken, getlogintoken
 
 from Common.sign import get_sign
-from glo import http, JSON_dev, user_password
+from Common.tools.read_write_yaml import yamlconfig
+# from TestCase.UserRelatedapi.redisfuction import deviceOR
+from glo import http, JSON_dev
 
 
 def AccountAuth():
@@ -16,8 +18,9 @@ def AccountAuth():
     url = http + "/as_trade/api/account/v1/auth"
     url1 = http + "/as_trade/api/account/v1/info"
     # 拼装参数
-    headers = JSON_dev
-    headers = headers
+    headers = {}
+    headers.update(JSON_dev)
+
     headers1 = {}
     token = {"token": gettestLoginToken()}
     # print(token)
@@ -40,11 +43,14 @@ def AccountAuth():
     K = r_info.json()
     # print(K)
     clientId = K.get("data").get("clientId")
-    password = user_password
+    # if yamlconfig("flag"):
+    #     password = "123456"
+    # else:
+    #     password = "111111"
 
     body = {
         "clientId": clientId,
-        "password": password
+        "password": "123456"
     }
 
     sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
@@ -53,7 +59,6 @@ def AccountAuth():
     payload1.update(sign1)
 
     payload = json.dumps(dict(payload1))
-
     r_auth = requests.session().post(
         url=url, headers=headers1, data=payload
     )
@@ -79,8 +84,8 @@ def UserLoginAuth(phone: str, password: str, phoneArea: str, authpwd: str):
     url = http + "/as_trade/api/account/v1/auth"
     url1 = http + "/as_trade/api/account/v1/info"
     # 拼装参数
-    headers = JSON_dev
-    headers = headers
+    headers = {}
+    headers.update(JSON_dev)
     headers1 = {}
     token = {"token": getlogintoken(phone, password, phoneArea)}
     # print(token)

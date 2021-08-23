@@ -37,8 +37,9 @@ class TestHSCustomerInfoSetRenewalTime():
         renewalTime = info.get("renewalTime")  # 续约时长，已分钟为单位 0，15，30，60，180
         timeStamp = get_time_stamp13()  # 获取当前时间戳
         # 拼装参数
-        headers = JSON_dev
-        headers = headers
+        headers = {}
+        headers.update(JSON_dev)
+
         headers1 = {}
         token = {"token": gettestLoginToken()}
         headers1.update(headers)

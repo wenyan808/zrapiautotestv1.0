@@ -14,12 +14,13 @@ import pytest
 import glo
 from Common.Community_common.Community_post import Communitypostdelete
 from Common.OSS import oss_img
+from Common.Upload.img_file_path import imgSize
 from Common.login import login
 from Common.show_sql import showsql
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-from Common.tools.read_yaml import yamltoken
+from Common.tools.read_write_yaml import yamltoken
 from glo import HTTP, JSON
 
 
@@ -38,8 +39,8 @@ class TestCommunitycancelpraise():
     def test_Community_cancelpostpraise(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        headers = JSON
-        headers = headers
+        headers = {}
+        headers.update(JSON)
 
         token1 = yamltoken()
         token = {"token": token1}
@@ -75,46 +76,55 @@ class TestCommunitycancelpraise():
         )
         y = r.json()
         # print(y)
-        postId = y.get("data").get("postId")
-        # print(postId)
-        body = {'postId': f"{postId}"}
-        sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-        body1 = {}
-        body1.update(body)
-        body1.update(sign1)
-        body1 = json.dumps(dict(body1))
-        postId_praise_url = HTTP + "/as_community/api/praise/v1/add"
-        Requests(self.session).post(
-            url=postId_praise_url, headers=headers, data=body1, title="帖子点赞"
-        )
-        body3 = {'postId': f"{postId}"}
-        sign1 = {"sign": get_sign(body3)}  # 把参数签名后通过sign1传出来
-        body1 = {}
-        body1.update(body3)
-        body1.update(sign1)
-        body2 = json.dumps(dict(body1))
-        cancelpraise_url = HTTP + "/as_community/api/praise/v1/cancel"
-        r = Requests(self.session).post(
-            url=cancelpraise_url, headers=headers, data=body2, title="取消帖子点赞"
-        )
-        # print(r.json())
-        # 删帖
-        delete_url = HTTP + "/as_community/api/post/v1/delete"
+        if "data" in y:
+            postId = y.get("data").get("postId")
+            # print(postId)
+            body = {'postId': f"{postId}"}
+            sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
+            body1 = {}
+            body1.update(body)
+            body1.update(sign1)
+            body1 = json.dumps(dict(body1))
+            postId_praise_url = HTTP + "/as_community/api/praise/v1/add"
+            Requests(self.session).post(
+                url=postId_praise_url, headers=headers, data=body1, title="帖子点赞"
+            )
+            body3 = {'postId': f"{postId}"}
+            sign1 = {"sign": get_sign(body3)}  # 把参数签名后通过sign1传出来
+            body1 = {}
+            body1.update(body3)
+            body1.update(sign1)
+            body2 = json.dumps(dict(body1))
+            cancelpraise_url = HTTP + "/as_community/api/praise/v1/cancel"
+            r = Requests(self.session).post(
+                url=cancelpraise_url, headers=headers, data=body2, title="取消帖子点赞"
+            )
+            # print(r.json())
+            # 删帖
+            delete_url = HTTP + "/as_community/api/post/v1/delete"
 
-        Communitypostdelete(delete_url, headers, body)
-        # 断言
-        assert r.status_code == 200
-        assert r.json().get("code") == "000000"
-        assert r.json().get("msg") == "ok"
+            Communitypostdelete(delete_url, headers, body)
+            # 断言
+            assert r.status_code == 200
+            try:
+                assert r.json().get("code") == "000000"
+                assert r.json().get("msg") == "ok"
+            except:
+                raise AssertionError(
+                    f"\n请求地址：{url}"
+                    f"\nbody参数：{payload}"
+                    f"\n请求头部参数：{headers}"
+                    f"\n返回数据结果：{r.json()}")
+        else:
+            print(f"无data数据,Error:{y}")
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_cancelcommentpraise(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        headers = JSON
-        headers = headers
-        # print(token)
-        # print(type(token))
+        headers = {}
+        headers.update(JSON)
+
         token1 = yamltoken()
         token = {"token": token1}
         headers.update(token)  # 将token更新到headers
@@ -124,12 +134,15 @@ class TestCommunitycancelpraise():
             f"select user_id from t_user_account where `zr_no`= '68904140';"
         )
         userId = list(list(userId1)[0])[0]
+        img_name = "01.jpg"
         catalog = r"/Business/Img/community/"
         url1 = HTTP + "/as_common/api/sts/v1/token"
-        url_path = list(oss_img("community", "01.jpg", userId, catalog, url1, headers))
+        url_path = list(oss_img("community", img_name, userId, catalog, url1, headers))
         url0 = url_path[0]
         path0 = url_path[-1]
         a0 = "[img:" + path0 + "]"
+        local_img_path = glo.BASE_DIR + catalog + img_name
+        long, wide = imgSize(local_img_path)
 
         paylo = {
             "title": "关系人类永续发展的伟大事业 习近平念兹在兹",
@@ -147,8 +160,10 @@ class TestCommunitycancelpraise():
             "images": [
                 {
                     "name": path0,
-                    "w": 700,
-                    "h": 989,
+                    "w": wide,
+                    "h": long,
+                    # "w": 700,
+                    # "h": 989,
                     "url": url0
                 }
             ],
@@ -175,73 +190,83 @@ class TestCommunitycancelpraise():
         )
         y = r.json()
         # print(y)
-        postId = y.get("data").get("postId")
-        # print(postId)
-        body = {'postId': f"{postId}"}
-        sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-        body1 = {}
-        body1.update(body)
-        body1.update(sign1)
-        body2 = json.dumps(dict(body1))
-        postId_praise_url = HTTP + "/as_community/api/praise/v1/add"
-        Requests(self.session).post(
-            url=postId_praise_url, headers=headers, data=body2, title="帖子点赞"
-        )
-        # body3 = {'postId': f"{postId}"}
-        body2 = {
-            "content": "金山银山就是绿水青山!",
-            "products": [
-                {
-                    "ts": "SH",
-                    "code": "600893",
-                    "name": "航发动力",
-                    "type": "2"
-                }
-            ]
-        }
-        body1 = {}
-        body1.update(body)
-        body1.update(body2)
-        sign1 = {"sign": get_sign(body1)}  # 把参数签名后通过sign1传出来
-        body1.update(sign1)
-        body9 = json.dumps(dict(body1))
-        # print(body)
-        comment_url = HTTP + "/as_community/api/comment/v1/add"
-        # print(comment_url)
-        r = Requests(self.session).post(
-            url=comment_url, headers=headers, data=body9, title="发表评论"
-        )
-        j = r.json()
-        # print(j)
-        commentId = j.get("data").get("commentId")
-        body4 = {'commentId': f"{commentId}"}
-        sign1 = {"sign": get_sign(body4)}  # 把参数签名后通过sign1传出来
-        body1 = {}
-        body1.update(body4)
-        body1.update(sign1)
-        body6 = json.dumps(dict(body1))
-        # print(body)
-        commentId_praise_url = HTTP + "/as_community/api/praise/v1/add"
-        r = Requests(self.session).post(
-            url=commentId_praise_url, headers=headers, data=body6, title="评论点赞"
-        )
-        # body5 = {'postId': f"{postId}"}
-        sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-        body1 = {}
-        body1.update(body)
-        body1.update(sign1)
-        body8 = json.dumps(dict(body1))
-        cancelcommentpraise_url = HTTP + "/as_community/api/praise/v1/cancel"
-        r = Requests(self.session).post(
-            url=cancelcommentpraise_url, headers=headers, data=body8, title="取消评论点赞"
-        )
-        # print(r.json())
-        # 删帖url
-        delete_url = HTTP + "/as_community/api/post/v1/delete"
+        if "data" in y:
+            postId = y.get("data").get("postId")
+            # print(postId)
+            body = {'postId': f"{postId}"}
+            sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
+            body1 = {}
+            body1.update(body)
+            body1.update(sign1)
+            body2 = json.dumps(dict(body1))
+            postId_praise_url = HTTP + "/as_community/api/praise/v1/add"
+            Requests(self.session).post(
+                url=postId_praise_url, headers=headers, data=body2, title="帖子点赞"
+            )
+            # body3 = {'postId': f"{postId}"}
+            body2 = {
+                "content": "金山银山就是绿水青山!",
+                "products": [
+                    {
+                        "ts": "SH",
+                        "code": "600893",
+                        "name": "航发动力",
+                        "type": "2"
+                    }
+                ]
+            }
+            body1 = {}
+            body1.update(body)
+            body1.update(body2)
+            sign1 = {"sign": get_sign(body1)}  # 把参数签名后通过sign1传出来
+            body1.update(sign1)
+            body9 = json.dumps(dict(body1))
+            # print(body)
+            comment_url = HTTP + "/as_community/api/comment/v1/add"
+            # print(comment_url)
+            r = Requests(self.session).post(
+                url=comment_url, headers=headers, data=body9, title="发表评论"
+            )
+            j = r.json()
+            # print(j)
+            commentId = j.get("data").get("commentId")
+            body4 = {'commentId': f"{commentId}"}
+            sign1 = {"sign": get_sign(body4)}  # 把参数签名后通过sign1传出来
+            body1 = {}
+            body1.update(body4)
+            body1.update(sign1)
+            body6 = json.dumps(dict(body1))
+            # print(body)
+            commentId_praise_url = HTTP + "/as_community/api/praise/v1/add"
+            r = Requests(self.session).post(
+                url=commentId_praise_url, headers=headers, data=body6, title="评论点赞"
+            )
+            # body5 = {'postId': f"{postId}"}
+            sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
+            body1 = {}
+            body1.update(body)
+            body1.update(sign1)
+            body8 = json.dumps(dict(body1))
+            cancelcommentpraise_url = HTTP + "/as_community/api/praise/v1/cancel"
+            r = Requests(self.session).post(
+                url=cancelcommentpraise_url, headers=headers, data=body8, title="取消评论点赞"
+            )
+            # print(r.json())
+            # 删帖url
+            delete_url = HTTP + "/as_community/api/post/v1/delete"
 
-        # 删除社区发帖
-        Communitypostdelete(delete_url, headers, body)
-        # 断言
-        assert r.status_code == 200
-        assert r.json().get("code") == "000000"
-        assert r.json().get("msg") == "ok"
+            # 删除社区发帖
+            Communitypostdelete(delete_url, headers, body)
+            # 断言
+            assert r.status_code == 200
+            try:
+                assert r.json().get("code") == "000000"
+                assert r.json().get("msg") == "ok"
+            except:
+                raise AssertionError(
+                    f"\n请求地址：{url}"
+                    f"\nbody参数：{payload}"
+                    f"\n请求头部参数：{headers}"
+                    f"\n返回数据结果：{r.json()}")
+        else:
+            print(f"无data数据,Error:{y}")

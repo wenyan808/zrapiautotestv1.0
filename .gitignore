@@ -60,5 +60,6 @@
 /TestCase/Counter/HSTradingRecord/report/*
 /TestCase/Transaction/report/*
 /TestCase/hotstocks/report/*
+/TestCase/Account/AccountConsole/AccountConsoleAnti-money/report/*
 
 

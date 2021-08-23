@@ -1,43 +1,62 @@
+"""
+
+ :@author 修改人 chenjialuo 2021/8/3 优化密码错误多次，优化return返回的模块化
+
+ """
 import json
-
-import pytest
 import requests
-
+import glo
+from Common.get_time_stamp import get_time_stamp13
+from Common.redisfuction import phoneORpwd
 from Common.tools.md5 import get_md5
-from glo import HTTP, BASE_DIR, JSON, phone, pwd
+
+from Common.tools.read_write_yaml import write_yaml, read_yaml
+from glo import HTTP, BASE_DIR, JSON, phone, pwd, phone2, phoneArea
 from Common.sign import get_sign
 
-
 def login():
-    # print(phone)
-    password = get_md5(pwd)
-    http = HTTP
+    print(glo.logi)
+    if glo.logi == True:
+        write_yaml("login", str(get_time_stamp13()))
+        login_common()
+        glo.logi = False
+    else:
+        if read_yaml("login") + 600000 < get_time_stamp13():
+            login_common()
+            glo.logi = True
+        else:
+            pass
+def login_common():
+    # 手机的请求报文
+
     json1 = {
         "phone": phone,
-        "loginPassword": password,
-        "phoneArea": "86"
+        "loginPassword": get_md5(pwd),
+        "phoneArea": phoneArea
+
     }
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)
-    headers = JSON
-    session = requests.session()
-    response_login = session.post(http + "/as_user/api/user_account/v1/user_login_pwd", headers=headers,
-                                  json=json1)
+    headers = {}
+    headers.update(JSON)
+    # 发送post请求
+    response_login = requests.post(HTTP + "/as_user/api/user_account/v1/user_login_pwd", headers=headers,json=json1)
+
+    # 当用户登陆的设备和以前不一样,进行验证z3
     if response_login.json().get("code") == "010007" \
             or response_login.json().get("msg") == "用户登陆的设备和以前不一样":
-        # pass
+        # 用户登陆的设备和以前不一样，验证的请求报文
         boby = {
-            "phone": phone,
+            "phone": phone2,
             "countryCode": "86"
         }
         sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(boby)
         payload1.update(sign1)
-
         boby = json.dumps(dict(payload1))
-        response_getdata = requests.post(http + "/as_notification/api/sms/v1/send_device_code", headers=headers,
-                                         data=boby)
+        # 发送post请求
+        response_getdata = requests.post(HTTP + "/as_notification/api/sms/v1/send_device_code", headers=headers, data=boby)
         verificationCode = response_getdata.json().get("data")
         data = {
             "phone": phone,
@@ -49,27 +68,41 @@ def login():
         payload1 = {}
         payload1.update(data)
         payload1.update(sign1)
-
         data = json.dumps(dict(payload1))
-        response_gettoken = requests.post(http + "/as_user/api/user_account/v1/device_next", headers=headers,
-                                          data=data)
-        res = response_gettoken.json().get("data").get("token")
-        with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
-            file.write("token: " + res)
-        # return res
+        # 发送post请求
+        response_gettoken = requests.post(HTTP + "/as_user/api/user_account/v1/device_next", headers=headers, data=data)
+        #  return的公用方法
+        returnFunction(response_gettoken)
 
+    # 当账户或密码错误次数较多的时候，链接redis池，修改账户密码错误的次数
+    elif response_login.json().get("code") == "010005"\
+            or response_login.json().get("msg") == "账户或密码错误次数较多，请明日再试":
 
-
+        # 当账户或者密码次数较多的时候，修改账户密码错误次数
+        phoneORpwd(phone)
+        # 发送post请求
+        response_login = requests.post(HTTP + "/as_user/api/user_account/v1/user_login_pwd", headers=headers, json=json1)
+        #  return的公用方法
+        returnFunction(response_login)
 
     else:
-        # pass
-        res = response_login.json().get("data").get("token")
-        with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
-            file.write("token: " + res)
-        # return res
+        #  return的公用方法
+        returnFunction(response_login)
+
+# return的方法
+def returnFunction(response_login):
+    """
+
+    :param response_login: 代表发送请求的值
+
+    """
+    res = response_login.json().get("data").get("token")
+    with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
+        file.write("token: " + res)
+    return response_login.json().get("data").get("userId")
 
 
-# print(login())
+
 
 
 def login_all(key, value, password, url, file_name):
@@ -89,7 +122,8 @@ def login_all(key, value, password, url, file_name):
     #     "osType": "ios",
     #     "osVersion": '13.5.1'
     # }
-    header = JSON
+    header = {}
+    header.update(JSON)
     json = {
         "loginPassword": get_md5(password),
         "phoneArea": "86"
@@ -105,8 +139,10 @@ def login_all(key, value, password, url, file_name):
     res = response_login.json().get("data").get("token")
     with open(BASE_DIR + "/" + file_name + ".yaml", 'w') as file:
         file.write("token: " + res)
-    return response_login.json()
+    return response_login.json().get("data").get("userId")
 
 # login("loginAccount", "test@123.com", "abcd1234567", "http://192.168.1.239:8080/apisC/api/sys_user/v1/login",
-# # "token_console")
-# login_all("phone", "18379204795", "102522ql", "http://192.168.1.241/as_user/api/user_account/v1/user_login_pwd", "token")
+# "token_console")
+# print(login_all("phone", "18379204795", "102522ql",
+#                 "http://192.168.1.241/as_user/api/user_account/v1/user_login_pwd", "token"))
+# login_common()

@@ -102,8 +102,16 @@ class TestHSOrderEntrustWithdraw():
         j = r_data.json()
         # print(j)
         assert r_data.status_code == 200
-        if j.get("code") == "000000":
+        try:
             assert j.get("code") == "000000"
             assert j.get("msg") == "ok"
+        except:
+            assert j.get("code") == "932112"
+            assert j.get("msg") == "当前状态不允许撤单"
         else:
-            raise AssertionError(j)
+            raise AssertionError(
+                f"\n请求地址：{self.url2}"
+                f"\nbody参数：{payload7}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}"
+            )

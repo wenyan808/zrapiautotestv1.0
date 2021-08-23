@@ -34,7 +34,7 @@ class TestIMConTopicDeleteCategory():
     def test_IM_ConTopicDeleteCategory(self):
         url = console_HTTP + "/api/con_topic/v1/delete_category"
         header = console_JSON
-        header = header
+
 
         headers = {}
         headers.update(header)

@@ -27,7 +27,7 @@ def getsecurityToken(url: str, header: dict):
 
 
 # url = "http://192.168.1.241/as_common/api/sts/v1/token"
-# header = JSON
+# header = {} header.update(JSON)
 # # body = {}
 # token = {"token": gettestLoginToken()}
 # header.update(token)

@@ -1,19 +1,13 @@
-import json
+
 import logging
 import random
-
 import allure
 import pytest
-import requests
-
-
+from Common.guide import zhuorui
 from Common.login import login
-
 from Common.show_sql import showsql
-from Common.sign import get_sign
 from Common.tools.read_write_json import write_json, get_json
-from Common.tools.read_yaml import yamltoken
-from glo import BASE_DIR, JSON, HTTP
+from glo import BASE_DIR
 
 
 @allure.feature('拆合股')
@@ -32,41 +26,16 @@ class TestgetStocksplitsH5:
     @allure.story('拆合股H5详情页-HK&US')
     @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/AllStockData/stock_splits.json"))
     def test_getStocksplitsH5_HKandUS(self, info):
-        url = HTTP + "/as_market/api/stock_splits/v1/list"
-        headers = JSON
 
-        # 拼装参数
-
-        paylo = info
-        # print(paylo)
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        # 调用登录接口通过token传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
-        headers = headers
-        # print(token)
-        # print(type(token))
-
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)
-        # print(headers)
-        payload = json.dumps(dict(payload1))
-
-        r = requests.post(url=url, headers=headers, data=payload)
-        # 断言
-        j = r.json()
-        # print(j)
-
-        assert r.status_code == 200
-        assert j.get("code") == "000000"
-        assert j.get("msg") == "ok"
-        if "data" in j:
-            if len(j.get("data")) != 0:
-                for i in range(len(j.get("data"))):
-                    assert "content" in j.get("data")[i]
-                    assert "date" in j.get("data")[i]
+        response = zhuorui("Allstock", "拆合股H5详情页-HK&US", info)
+        assert response.status_code == 200
+        assert response.json().get("code") == "000000"
+        assert response.json().get("msg") == "ok"
+        if "data" in response.json():
+            if len(response.json().get("data")) != 0:
+                for i in range(len(response.json().get("data"))):
+                    assert "content" in response.json().get("data")[i]
+                    assert "date" in response.json().get("data")[i]
 
             else:
                 logging.info("data是空的集合")
