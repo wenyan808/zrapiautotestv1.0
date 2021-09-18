@@ -6,6 +6,7 @@
 @Desc  :  修改手机号-新手机号
 """
 import json
+import logging
 
 import allure
 import pytest
@@ -25,6 +26,8 @@ class TestModifyPhone01():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
+        cls.url = HTTP + "/as_notification/api/sms/v1/send_code"
+        cls.url1 = HTTP + "/as_user/api/user_account/v1/modify_phone_v1"
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
@@ -36,7 +39,6 @@ class TestModifyPhone01():
         headers.update(JSON2)
         phone = "13321165200"
         password = pwd1
-
         headers_token = getlogintoken(phone, password, phoneArea)
         # print(headers_token)
         headers1 = {}
@@ -53,6 +55,41 @@ class TestModifyPhone01():
             "countryCode": countryCode,
             "smsCode": smsCode
         }
+        sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
+        payload1 = {}
+        payload1.update(boby)
+        payload1.update(sign1)
+        payload = json.dumps(dict(payload1))
+        response_getdata = Requests(self.session).post(
+            url=self.url, headers=headers1, data=payload, title="发送短信-当前手机号"
+        )
+        j = response_getdata.json()
+        if "data" in j:
+            paylo = {
+                "verificationCode": j.get("data"),
+                "phone": phone,
+                "phoneArea": phoneArea
+            }
+            sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+            payload1 = {}
+            payload1.update(paylo)
+            payload1.update(sign1)
+            payload = json.dumps(dict(payload1))
+            r1 = Requests(self.session).post(
+                url=self.url1, headers=headers1, data=payload, title="修改手机号-当前使用手机号验证"
+            )
+            j1 = r1.json()
+            # print(j1)
+            assert r1.status_code == 200
+            if j1.get("code") == "000000":
+                assert j1.get("msg") == "ok"
+                if "data" in j1:
+                    assert "businessAccessToken" in j1.get("data")
+
+            else:
+                raise ValueError(f"{j1}")
+        else:
+            logging.info("验证码获取失败")
         """发送短信"""
         response_getdata = send_code(url, headers1, boby)
         verificationCode = response_getdata.json().get("data")

@@ -39,13 +39,11 @@ class TestHSConMoneyExchangeAuditReject():
         headers.update(token)  # 将token更新到headers
         # print(headers)
 
-        toMoneyType = "CNY"  # 目标币种   HKD,USD,CNY
-        createStartTime = TimeTostamp()  # 开始时间(时间戳)
-        createEndTime = get_time_stamp13()  # 截止时间(时间戳)
+        currentPage = 1
         paylo = {
-            "toMoneyType": toMoneyType,
-            "createStartTime": createStartTime,
-            "createEndTime": createEndTime,
+            "currentPage": currentPage,
+            "pageSize": 20,
+            "status": 1,
         }
 
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
@@ -79,7 +77,6 @@ class TestHSConMoneyExchangeAuditReject():
             )
 
             k = r.json()
-            # print(k)
             assert r.status_code == 200
             if k.get("code") == "000000":
                 assert k.get("code") == "000000"
