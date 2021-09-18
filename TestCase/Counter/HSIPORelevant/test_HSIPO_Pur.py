@@ -147,10 +147,10 @@ class TestHSIPOGearList():
                     h = r1.json()
                     # print(h)
                     assert r1.status_code == 200
-                    if h.get("code") == "000000":
+                    try:
                         assert h.get("code") == "000000"
                         assert h.get("msg") == "ok"
-                    else:
+                    except:
                         raise AssertionError(h)
                 else:
                     print("当前可认购IPO未配置单位信息")

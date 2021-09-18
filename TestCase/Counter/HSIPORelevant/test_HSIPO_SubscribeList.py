@@ -5,14 +5,14 @@ import allure
 import pytest
 from jsonschema import validate, draft7_format_checker, SchemaError, ValidationError
 
-from Common.assertapi import assert_data, jsonschema_assert
+from Common.assertapi import jsonschema_assert
 from Common.getTestLoginToken import gettestLoginToken
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
 from TestAssertions.CounterJsonSchemadata.HSIPORelevantSchema.SubscribeListSchema import SubscribeListSchema
 
-from glo import http_dev, JSON_dev, http
+from glo import JSON_dev, http
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -52,9 +52,12 @@ class TestHSIPOSubscribeList():
         )
 
         j = r.json()
+        # print(j)
         assert r.status_code == 200
         if "data" in j:
-            if j.get("code") == "000000":
+            try:
                 jsonschema_assert(j.get("code"), j.get("msg"), j, SubscribeListSchema)
+            except:
+                print("可认购列表为空")
         else:
-            raise AssertionError("可认购列表为空")
+            raise AssertionError(j)

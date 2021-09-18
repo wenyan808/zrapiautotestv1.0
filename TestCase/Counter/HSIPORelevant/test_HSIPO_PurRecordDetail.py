@@ -50,12 +50,12 @@ class TestHSIPOPurRecordDetail():
         j = getinfo.json()
         # print(j)
         assert getinfo.status_code == 200
-        if j.get("code") == "000000":
+        try:
 
             assert j.get("data").get("ts") == body.get("ts")
             assert j.get("data").get("code") == body.get("code")
             jsonschema_assert(j.get("code"), j.get("msg"), j, PurRecordDetailSchema)
-        else:
+        except:
             raise AssertionError(j)
 
 

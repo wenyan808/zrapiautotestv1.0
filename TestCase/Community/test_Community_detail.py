@@ -5,6 +5,7 @@ import time
 import allure
 import pytest
 
+from Business.global_ossurl import oss_appurl
 from Common.Community_common.Community_post import Communitypostdelete
 from Common.OSS import oss_img, oss_file
 from Common.getTestLoginToken import gettestLoginToken, getlogintoken
@@ -47,7 +48,7 @@ class TestCommunitydetail():
         )
         userId = list(list(userId1)[0])[0]
         catalog = r"/Business/Img/community/"
-        url1 = HTTP + "/as_common/api/sts/v1/token"
+        url1 = HTTP + oss_appurl
         url_path = list(oss_img("community", "zhurong.png", userId, catalog, url1, headers))
         # url0 = list(oss_file("community", "zhurong.png", userId, catalog, url1, headers))[0]
         url0 = url_path[0]

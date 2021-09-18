@@ -67,7 +67,7 @@ class TestCommunitycommentmore_list():
         headers.update(token)  # 将token更新到headers
         # print(headers)
         payload = json.dumps(dict(payload1))
-        time.sleep(60.01)
+        # time.sleep(60.01)
 
         r = Requests(self.session).post(
             url=url, headers=headers, data=payload, title="发帖"

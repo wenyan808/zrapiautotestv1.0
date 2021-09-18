@@ -1,0 +1,43 @@
+[
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "fundType": 0,
+    "moneyType": null,
+    "createStartTime": null,
+    "createEndTime": null,
+    "status": null
+  },{
+    "currentPage": 1,
+    "pageSize": 20,
+    "fundType": 1,
+    "moneyType": null,
+    "createStartTime": null,
+    "createEndTime": null,
+    "status": null
+  },{
+    "currentPage": 1,
+    "pageSize": 20,
+    "fundType": 0,
+    "moneyType": "HKD",
+    "createStartTime": null,
+    "createEndTime": null,
+    "status": null
+  },{
+    "currentPage": 1,
+    "pageSize": 20,
+    "fundType": 0,
+    "moneyType": "USD",
+    "createStartTime": null,
+    "createEndTime": null,
+    "status": null
+  },{
+    "currentPage": 1,
+    "pageSize": 20,
+    "fundType": 0,
+    "moneyType": "CNY",
+    "createStartTime": null,
+    "createEndTime": null,
+    "status": null
+  }
+]

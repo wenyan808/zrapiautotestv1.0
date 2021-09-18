@@ -1,0 +1,14 @@
+[
+  {
+    "occurBalance": 10000,
+    "moneyType": "CNY"
+  },
+  {
+    "occurBalance": 10000,
+    "moneyType": "HKD"
+  },
+  {
+    "occurBalance": 10000,
+    "moneyType": "USD"
+  }
+]

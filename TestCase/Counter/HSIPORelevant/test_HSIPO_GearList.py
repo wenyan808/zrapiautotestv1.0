@@ -74,9 +74,9 @@ class TestHSIPOGearList():
                 j = r.json()
                 # print(j)
                 assert r.status_code == 200
-                if j.get("code") == "000000":
+                try:
                     jsonschema_assert(j.get("code"), j.get("msg"), j, GearListSchema)
-                else:
+                except:
                     raise AssertionError(j)
             else:
                 print("IPO可认购列表为空")
