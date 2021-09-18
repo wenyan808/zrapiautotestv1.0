@@ -11,6 +11,7 @@ import time
 import allure
 import pytest
 
+from Business.IdentityInformation import identityTypes
 from Common.Accountcommon.getAccountConsoleList import getAccountConsoleList, getAntiMoney
 from Common.getConsoleLogin import getConsoleLogin_token
 
@@ -46,11 +47,11 @@ class TestAccountConsoleDeleteAntiMoney():
         # print(headers)
 
         phone = loginAccount_phone
-        identityTypes = [1]  # 身份类型 1-大陆居民 2-我是港澳地区居民 3-我是其他地区居民 海外居民，传入2,3
+        # identityTypes = [1]  # 身份类型 1-大陆居民 2-我是港澳地区居民 3-我是其他地区居民 海外居民，传入2,3
         status = 3  # 状态，为空时查询所有数据 1、待客户修改 2、初审列表 3、终审列表 4、已通过 5、已拒绝
         # print(getAccountConsoleList(headers, identityTypes, status, phone))
 
-        openOrderId = getAccountConsoleList(headers, identityTypes, status).get("data").get("list")[0].get(
+        openOrderId = getAccountConsoleList(headers, identityTypes).get("data").get("list")[0].get(
             "openOrderDTO").get("openOrderId")
         # print(openOrderId)
         amlId = getAntiMoney(headers, openOrderId).get("data")[0].get("amlId")  # 反洗钱记录id

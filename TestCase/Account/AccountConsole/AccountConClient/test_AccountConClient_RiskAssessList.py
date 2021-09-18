@@ -2,7 +2,7 @@
 """
 @File  ：test_AccountConClient_RiskAssessList.py
 @Author: yishouquan
-@Time  : 2020/8/11
+@Time  : 2021/9/14
 @Desc  :  投资者风险承受能力测评查询
 """
 import json
@@ -77,7 +77,7 @@ class TestAccountConClientRiskAssessList():
         payload = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=self.url, headers=headers, data=payload, title=""
+            url=self.url, headers=headers, data=payload, title="投资者风险承受能力测评查询"
         )
         j = r.json()
         # print(j)

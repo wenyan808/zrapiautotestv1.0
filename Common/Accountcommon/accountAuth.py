@@ -7,7 +7,7 @@ from Common.getTestLoginToken import gettestLoginToken, getlogintoken
 from Common.sign import get_sign
 from Common.tools.read_write_yaml import yamlconfig
 # from TestCase.UserRelatedapi.redisfuction import deviceOR
-from glo import http, JSON_dev
+from glo import http, JSON_dev, user_password
 
 
 def AccountAuth():
@@ -50,7 +50,7 @@ def AccountAuth():
 
     body = {
         "clientId": clientId,
-        "password": "123456"
+        "password": user_password
     }
 
     sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来

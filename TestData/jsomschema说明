@@ -1,0 +1,249 @@
+#jsonschema官网地址:https://python-jsonschema.readthedocs.io/en/latest/
+目的：
+   我们在接口测试中常会遇到： 被测接口的返回值含有大量key-value节点，且往往有很多value是不固定的，有的是类型不固定、有的是值不固定；
+这样给接口自动化中的断言带来了巨大困扰，本章提到的jsonschema可以冲在断言最前方，当作第一道网来过滤掉大多数问题；只需几行简单声明，助你轻
+松实现接口自动化.
+————————————————
+
+shceme中的类型按照JavaScript编写，下面是javascript和python类型的映射关系。
+javascript              python
+--------------------------------
+string                  string                      对应地址：https://json-schema.org/understanding-json-schema/reference/string.html
+number                  int/float
+object                  dict
+arry                    list
+boolean                 bool
+null                    None
+--------------------------------
+其中2个类型在书写时要注意，不能带双引号：
+1.null
+//错误例子
+{ "type": "null" }
+//正确例子
+{
+"address":null
+}
+
+2.boolean
+//错误例子
+{ "type": "boolean" }
+//正确例子
+{
+"isMan":true,
+"isStudent":false
+}
+-----------
+properties节点——描述可能含有的key，可多不可少
+"properties": {
+    "name": {"type": "string"},
+    "age": {"type": "number"},
+
+-----------
+propertyNames节点——强调的是匹配key的名字，用正则来匹配
+get_propertyNames_demo = {
+	"type": "object",
+	"propertyNames": {
+		"pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+	}
+}
+-----------
+#正则表达式    官网：https://json-schema.org/understanding-json-schema/reference/regular_expressions.html
+在线转换工具   https://c.runoob.com/front-end/854/
+-----------
+dependencies节点——强调依赖关系,举例b依赖于a
+示例：
+get_dependencies_demo = {
+	"type": "object",
+	"dependencies": {
+		"b": ["a"],
+	}
+}
+
+1.允许没a也没b
+示例：
+{
+  "user": "wenjie",
+}
+
+2.必须有a才能有b
+示例：
+{
+  "user": "wenjie",
+  "b": 100,
+  "a": "10100"
+}
+
+3.没有a但出现b是错的
+示例：
+{
+  "user": "wenjie",
+  "b": 100
+}
+
+4.允许有a没有b
+示例：
+{
+  "user": "wenjie",
+  "a": "10000"
+}
+
+如果必须2个都存在呢？下面是a、b相互绑定的写法
+示例：
+get_dependencies_must_demo = {
+	"type": "object",
+	"properties": {
+		"name": {"type": "string"},
+		"a": {"type": "number"},
+		"b": {"type": "string"}
+	},
+	"dependencies": {
+		"b": ["a"],
+		"a": ["b"]
+	}
+}
+
+-----------
+Object (python中dict)
+与python有一点的区别是key只能是字符串
+-----------
+required节点——描述必备的key
+示例：
+get_dependencies_must_demo = {
+	"type": "object",
+	"properties": {
+		"name": {"type": "string"},
+		"a": {"type": "number"},
+		"b": {"type": "string"}
+	},
+	"dependencies": {
+		"b": ["a"],
+		"a": ["b"]
+	}
+}
+-------------
+enum节点作用解析
+示例：
+"street_type": {"type": "string",
+ 						"enum": ["Street", "Avenue", "Boulevard"]
+ 						}
+enum 描述了只允许有3种可能[“Street”, “Avenue”, “Boulevard”]，如果数据不匹配就是错误的
+------------
+其他限制类型参考：
+1.宽松类型：数字    {"type": "number"}
+2.严格类型：整数    {"type": "integer"}
+3.附加验证：倍数    {"type": "number","multipleOf": 10}
+4.附加验证：大于、小于
+匹配目标：包含0和100的    {"type": "number","minimum": 0,"maximum": 100}
+匹配目标：不包含0和100的   {"type": "number","exclusiveMinimum": 0,"exclusiveMaximum": 100}
+也可以组合起来：     {"type": "number","minimum": 0,"exclusiveMaximum": 100}
+
+--------------
+anyOf  满足其中一个类型 就行
+{
+"anyOf": [  # 满足其中一个类型 就行
+    {"type": "string", "minLength": 10, "maxLength": 60},
+    {"type": "number", "minimum": 5.0}
+]
+}
+--------------
+# 能被0.5整除
+{"multipleOf": 0.5}
+# 这里取等，5.0=<price<=99999.0
+{"minimum": 5.0,
+"maximum": 99999.0}
+# 若使用下面这两个关键字则 5.0<price<99999.0
+{"exclusiveMinimum": 5.0,
+"exclusiveMaximum": 99999.0}
+
+--------------
+# 至少一个
+{"miniItems": 1}
+# 最多5个
+{"maxItems": 5}
+# 值为true时，所有元素都具有唯一性时，才能通过校验。
+{"uniqueItems": True}
+# 符合该关键字指定的正则表达式，才算通过校验。
+{"pattern": "^[A-Z]+[a-zA-Z0-9]{12}$"}
+--------------
+# 可以是以下取值：date、date-time（时间格式）、email（邮件格式）、hostname（网站地址格式）、ipv4、ipv6、uri等。
+# 使用format关键字时，在实例化validator时必须给它传format_checker参数，值如：draft7_format_checker, 网址：
+# https://python-jsonschema.readthedocs.io/en/latest/validate/#jsonschema.Draft7Validator
+{"format": "date"}
+
+# 待校验JSON数组第一个元素是string类型，且可接受的最短长度为5个字符，第二个元素是number类型，且可接受的最小值为10
+            # 剩余的其他元素是string类型，且可接受的最短长度为2。
+            "additonalItems": {
+                "type": "string",
+                "miniLength": 2
+            }
+--------------
+
+
+//-- 1. 比如你有一个接口所返回数据的正确的格式是这样的:
+
+{
+"msg":"success", 					//假设success表示接口处理业务正常
+"code":200 							//假设code是201、202、203、204 都表示通讯正常
+}
+
+//-- 2. 那么，针对以上数据格式， 写一份JSON Schema来检查
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [ "msg", "code" ], //required表示数据里必须有这2个字段"msg", "code"
+  "type": "object", 			//这个表示接口返回的整份数据要是一个json对象，几乎是必写的，不用管
+  "properties": {  				//这里写上你要对哪些字段做规则约束， 当然，没有写的字段就不会校验
+    "msg": {
+      "type": "string",			//msg必须是字符串类型
+      "pattern":"/success/"		//正则匹配，msg必须是success这一单词
+    },
+    "code": {
+      "type": "number", 		//code必须是整数类型
+      "minimum": 200,			//code最小是200
+      "maximum": 204			//code最大是204
+    }
+  }
+}
+
+Json Schema中常见关键字有:
+关键字	描述
+$schema	表示该JSON Schema文件遵循的规范和使用的版本，可以不包含，注意：不同版本间不完全兼容
+$id 	当前schema的唯一id标识，一般指向一个自主域名。方便后续引用，可以不包含
+title	为该JSON Schema文件提供一个标题，可不包含
+description	关于该JSON Schema文件的描述信息，可不包含
+type	表示待校验元素的类型，例如，最外层的type表示待校验的是一个JSON对象（object）
+        内层type表示待校验的元素类型有：整数（integer），字符串（string），数字（number），布尔值（boolean）、对象（object）、数组（array）、null
+properties	说明该JSON对象有哪些属性/字段
+enum	枚举类型，比如只能在这几种：[“red”, “amber”, “green”]
+required	必须存在的字段
+minimum	用于约束取值范围，表示取值范围应该大于或等于minimum
+exclusiveMinimum	如果minimum和exclusiveMinimum同时存在，且exclusiveMinimum的值为true，则表示取值范围只能大于minimum
+maximum	用于约束取值范围，表示取值范围应该小于或等于maximum
+exclusiveMaximum	如果maximum和exclusiveMaximum同时存在，且exclusiveMaximum的值为true，则表示取值范围只能小于maximum
+multipleOf	用于约束取值，表示取值必须能够被multipleOf所指定的值整除
+maxLength/minLength	字符串类型数据的最大/最小长度
+dependencies	字段的依赖关系，比如：
+                                {
+                                “type”:“object”,
+                                　“properties”:{
+                                　　 “name”:{“type”:“string”},
+                                　　 “age”:{“type”:“number”}
+                                },
+                                “dependencies”:{ “gender”:[“age”] } }
+                    表示：gender是依赖于age存在的，age字段不存在但存在gender字段是会报错的
+pattern	使用正则表达式约束字符串类型数据，比如：^([0−9]3[0−9]3)?[0-9]{3}-[0-9]{4}$
+multipleOf	倍数，比如{ “type”: “number”, “multipleOf”: 5 }表示：字段必须是5的倍数
+not	取反，比如：{ “not”: { “type”: “string” } }，非字符串
+array	数组
+oneof	满足其中一个，比如：{
+                            “oneOf”: [
+                            　　{ “type”: “number”, “multipleOf”: 5 },
+                            　　{ “type”: “number”, “multipleOf”: 3 }
+                            ]
+                            }
+                    表示要么是5的倍数，要么是3的倍数
+allof	都要满足，用法类似上面的oneof
+uniqueItems	在数组里面的，布尔值，表示数组元素是否唯一
+minProperties/maxProperties	在object里面的，表示object里面的最小/最大的字段个数
+maxItems/minItems	表示数组里面的元素最大/最小个数
+minLength/maxLength	字符串类型数据的最小/最大长度
+————————————————

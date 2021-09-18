@@ -2,7 +2,7 @@
 """
 @File  ：test_AccountConsole_GetOpenLog.py
 @Author: yishouquan
-@Time  : 2020/8/11
+@Time  : 2021/9/14
 @Desc  :  操作记录
 """
 import json
@@ -11,6 +11,7 @@ import time
 import allure
 import pytest
 
+from Business.IdentityInformation import identityTypes, phone6
 from Common.Accountcommon.getAccountConsoleList import getAccountConsoleList
 from Common.getConsoleLogin import getConsoleLogin_token
 
@@ -45,8 +46,8 @@ class TestAccountConsoleGetOpenLog():
         headers.update(token)  # 将token更新到headers
         # print(headers)
 
-        phone = loginAccount_phone
-        identityTypes = [1]  # 身份类型 1-大陆居民 2-我是港澳地区居民 3-我是其他地区居民 海外居民，传入2,3
+        phone = phone6
+        # identityTypes = [1]  # 身份类型 1-大陆居民 2-我是港澳地区居民 3-我是其他地区居民 海外居民，传入2,3
         status = 3  # 状态，为空时查询所有数据 1、待客户修改 2、初审列表 3、终审列表 4、已通过 5、已拒绝
         # print(getAccountConsoleList(headers, identityTypes, status, phone))
 
