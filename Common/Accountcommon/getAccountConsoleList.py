@@ -99,3 +99,30 @@ def getAntiMoney(headers: dict, openOrderId: str):
     j = r.json()
     # print(j)
     return j
+
+
+
+def get_AuditItem(headers: dict):
+    """获取审核项
+
+    :param headers:请求参数带token
+    :return:查询审核项json数据
+    """
+    url = console_HTTP + "/api/con_open/v1/get_audit_item"
+
+    paylo = {}
+    # print(paylo)
+    sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
+    payload1 = {}
+    payload1.update(paylo)
+    payload1.update(sign1)
+
+    payload = json.dumps(dict(payload1))
+
+    r = requests.session().post(
+        url=url, headers=headers, data=payload
+    )
+
+    j = r.json()
+    # print(j)
+    return j

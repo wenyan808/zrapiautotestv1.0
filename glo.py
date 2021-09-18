@@ -1,6 +1,7 @@
 import os
 from typing import Union
 
+from Common.get_uuid import get_uuid
 from Common.glo_pass_word import set_value
 
 set_value("123456")
@@ -16,7 +17,8 @@ logi = True # 登录使用
 HTTP = http = "http://192.168.1.241"
 # http = "http://192.168.1.241"
 
-console_HTTP = "http://192.168.1.239:8080/apisC"
+# console_HTTP = "http://192.168.1.239:8080/apisC"
+console_HTTP = "http://192.168.1.241:1216"
 # 测试环境账户管理：
 loginAccount = "test@123.com"
 password = "abcd1234567"
@@ -86,7 +88,7 @@ phone5 = "15814213200"  # 卓锐登陆的手机号
 console_JSON = {
     "Content-Type": "application/json;charset=UTF-8",
     "Connection": "keep-alive",
-    "traceId": "862c0ed0-5aef-11eb-8806-81a3e151bf57",
+    "traceId": str(get_uuid()),
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                   "AppleWebKit/537.36 (KHTML, like Gecko)"
                   " Chrome/86.0.4240.183 Safari/537.36",
