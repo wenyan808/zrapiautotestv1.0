@@ -1,4 +1,4 @@
-# test_AccountConsole_EndAuditBack    打回初审    /api/con_open/v1/end_audit_back
+# test_AccountConsole_EndAuditPass       审核通过          /api/con_open/v1/end_audit_pass
 import json
 
 import allure
@@ -8,8 +8,6 @@ from Common.Accountcommon.getAccountConsoleList import getAccountConsoleList, ge
 
 from Common.getConsoleLogin import getConsoleLogin_token
 
-
-
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -18,7 +16,7 @@ from glo import console_JSON, console_HTTP, loginAccount_phone, JSON, HTTP
 
 
 # @pytest.mark.skip(reason="调试中 ")
-@allure.feature('开户console终审_打回初审')
+@allure.feature('开户console终审_审核通过')
 class TestAccountConsoleEndAuditBack():
     @classmethod
     def setup_class(cls) -> None:
@@ -29,7 +27,7 @@ class TestAccountConsoleEndAuditBack():
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_AccountConsole_EndAuditBack(self):
-        url1 = console_HTTP + "/api/con_open/v1/end_audit_back"
+        url1 = console_HTTP + "/api/con_open/v1/end_audit_pass"
         # 拼装参数
         headers = console_JSON
         headers = headers
@@ -52,15 +50,11 @@ class TestAccountConsoleEndAuditBack():
                 "openOrderDTO").get("openOrderId")
         # print(getAccountConsoleDetail(headers, openOrderId))
         openId = getAccountConsoleDetail(headers, openOrderId).get("data").get("openInfoDTO").get("openId")  # 开户id
-        auditItemIds = list(get_AuditItem(headers).get("data")[0].get("auditItemId"))
-        remark = "测试00"
-        otherReasons = "测试打回初审"
+        remark = "测试通过"
 
         paylo = {
             "openId": openId,
-            "remark": remark,
-            "auditItemIds": auditItemIds,
-            "otherReasons": otherReasons
+            "remark": remark
         }
 
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
@@ -71,7 +65,7 @@ class TestAccountConsoleEndAuditBack():
         payload = json.dumps(dict(payload1))
 
         r1 = Requests(self.session).post(
-            url=url1, headers=headers, data=payload, title="打回初审"
+            url=url1, headers=headers, data=payload, title="审核通过"
         )
 
         k = r1.json()
@@ -86,31 +80,5 @@ class TestAccountConsoleEndAuditBack():
                 f"\n请求地址：{url1}"
                 f"\nbody参数：{payload}"
                 f"\n请求头部参数：{headers}"
-                f"\n返回数据结果：{k}")
-
-        # url2 = HTTP + "/as_user/api/cn_open/v1/modify_signature"
-        # headers = JSON
-        # headers0 = headers
-        # token = GetLoginAccountToken()
-        # # print(type(token))
-        # token = {"token": token}
-        # headers0.update(token)  # 将token更新到headers
-        # # print(headers)
-        # paylo = {
-        #     "signatureUrl": signatureUrl
-        # }
-        # # print(paylo)
-        # sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        # payload1 = {}
-        # payload1.update(paylo)
-        # payload1.update(sign1)
-        #
-        # payload = json.dumps(dict(payload1))
-        #
-        # r2 = Requests(self.session).post(
-        #     url=url2, headers=headers0, data=payload, title="修改个人签名"
-        # )
-        #
-        # j2 = r2.json()
-        # # print(j2)
-        # modify_submit_audit(headers0)
+                f"\n返回数据结果：{k}"
+            )
