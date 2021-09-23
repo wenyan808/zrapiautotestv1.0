@@ -51,9 +51,14 @@ class TestAccountConsoleGetOpenLog():
         status = 3  # 状态，为空时查询所有数据 1、待客户修改 2、初审列表 3、终审列表 4、已通过 5、已拒绝
         # print(getAccountConsoleList(headers, identityTypes, status, phone))
 
-        openOrderId = getAccountConsoleList(headers, identityTypes, status).get("data").get("list")[0].get(
-            "openOrderDTO").get("openOrderId")
-        # print(openOrderId)
+        get_openOrderId = getAccountConsoleList(headers, identityTypes, status, phone)
+        # print(get_openOrderId)
+        if len(get_openOrderId.get("data").get("list")) != 0:
+            openOrderId = get_openOrderId.get("data").get("list")[0].get("openOrderDTO").get("openOrderId")
+            # print(openOrderId)
+        else:
+            openOrderId = getAccountConsoleList(headers, identityTypes).get("data").get("list")[0].get(
+                "openOrderDTO").get("openOrderId")
 
         paylo = {
             "openOrderId": openOrderId

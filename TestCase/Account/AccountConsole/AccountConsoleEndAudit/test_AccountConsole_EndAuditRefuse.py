@@ -3,7 +3,7 @@ import json
 
 import allure
 
-from Business.IdentityInformation import identityTypes
+from Business.IdentityInformation import identityTypes, phone6
 from Common.Accountcommon.getAccountConsoleList import getAccountConsoleList, getAccountConsoleDetail, get_AuditItem
 
 from Common.getConsoleLogin import getConsoleLogin_token
@@ -12,7 +12,7 @@ from Common.sign import get_sign
 
 from Common.requests_library import Requests
 
-from glo import console_JSON, console_HTTP, loginAccount_phone, JSON, HTTP
+from glo import console_JSON, console_HTTP
 
 
 # @pytest.mark.skip(reason="调试中 ")
@@ -34,13 +34,13 @@ class TestAccountConsoleEndAuditBack():
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         # print(headers)
-        phone = loginAccount_phone
+        phone = phone6
 
         # identityTypes = [1]  # 身份类型 1-大陆居民 2-我是港澳地区居民 3-我是其他地区居民 海外居民，传入2,3
         status = 3  # 状态，为空时查询所有数据 1、待客户修改 2、初审列表 3、终审列表 4、已通过 5、已拒绝
         # print(getAccountConsoleList(headers, identityTypes, status, phone))
         # 获取开户console列表
-        get_openOrderId = getAccountConsoleList(headers, identityTypes, status)
+        get_openOrderId = getAccountConsoleList(headers, identityTypes, status, phone)
         # print(get_openOrderId)
         if len(get_openOrderId.get("data").get("list")) != 0:
             openOrderId = get_openOrderId.get("data").get("list")[0].get("openOrderDTO").get("openOrderId")

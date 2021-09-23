@@ -11,6 +11,7 @@ import json
 import allure
 import pytest
 
+from Business.IdentityInformation import phone6
 from Common.getConsoleLogin import getConsoleLogin_token
 
 from Common.sign import get_sign
@@ -40,7 +41,7 @@ class TestAccountConsoleList():
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         # print(headers)
-        phone = loginAccount_phone
+        phone = phone6
 
         # paylo = {
         #     "phone": phone
@@ -68,27 +69,28 @@ class TestAccountConsoleList():
             if "data" in j:
                 assert "list" in j.get("data")
                 for i in range(len(j.get("data").get("list"))):
-                    assert "userId" in j.get("data").get("list")[i]
-                    assert "openOrderId" in j.get("data").get("list")[i]
-                    assert "submitOpenId" in j.get("data").get("list")[i]
-                    assert "updateTime" in j.get("data").get("list")[i]
-                    assert "cnOpenDTO" in j.get("data").get("list")[i]
-                    assert "userAccountDTO" in j.get("data").get("list")[i]
-                    assert "openOrderDTO" in j.get("data").get("list")[i]
+                    assert "cardNo" in j.get("data").get("list")[i].get("openInfoDTO")
+                    assert "cardName" in j.get("data").get("list")[i].get("openInfoDTO")
+                    assert "cardLastNamePinyin" in j.get("data").get("list")[i].get("openInfoDTO")
+                    assert "cardNamePinyin" in j.get("data").get("list")[i].get("openInfoDTO")
+                    assert "mailbox" in j.get("data").get("list")[i].get("openInfoDTO")
+                    assert "overseasOpenMode" in j.get("data").get("list")[i].get("openInfoDTO")
+                    assert "nationality" in j.get("data").get("list")[i].get("openInfoDTO")
+                    assert "zrNo" in j.get("data").get("list")[i].get("userAccountDTO")
+                    assert "phone" in j.get("data").get("list")[i].get("userAccountDTO")
+                    assert "nickname" in j.get("data").get("list")[i].get("userAccountDTO")
                     assert "status" in j.get("data").get("list")[i]
                     assert "total" in j.get("data")
                     assert "pageSize" in j.get("data")
                     assert "currentPage" in j.get("data")
-                    assert "openStatus" in j.get("data").get("list")[i].get("cnOpenDTO")
-                    assert "overseasOpenMode" in j.get("data").get("list")[i].get("cnOpenDTO")
-                    assert "nationality" in j.get("data").get("list")[i].get("cnOpenDTO")
-                    assert "zrNo" in j.get("data").get("list")[i].get("userAccountDTO")
-                    assert "phone" in j.get("data").get("list")[i].get("userAccountDTO")
-                    assert "nickname" in j.get("data").get("list")[i].get("userAccountDTO")
-                    # assert "firstSubmitTime" in j.get("data").get("list")[i].get("openOrderDTO")
-                    # assert "latestSubmitTime" in j.get("data").get("list")[i].get("openOrderDTO")
-                    # assert "firstSubmitDuration" in j.get("data").get("list")[i].get("openOrderDTO")
-                    # assert "userAccountDTO" in j.get("data").get("list")[i].get("cnOpenDTO")
+                    assert "creator" in j.get("data").get("list")[i].get("openLogDTO")
+                    assert "createTime" in j.get("data").get("list")[i].get("openLogDTO")
+                    # assert "nationality" in j.get("data").get("list")[i].get("openLogDTO")
+
+                    assert "openOrderId" in j.get("data").get("list")[i].get("openOrderDTO")
+                    assert "firstSubmitTime" in j.get("data").get("list")[i].get("openOrderDTO")
+                    assert "latestSubmitTime" in j.get("data").get("list")[i].get("openOrderDTO")
+                    assert "firstSubmitDuration" in j.get("data").get("list")[i].get("openOrderDTO")
 
         else:
             raise AssertionError(j)

@@ -1,7 +1,6 @@
 # test_AccountConsole_ApplyCa               申请ca认证         /api/con_cn_open/v1/apply_ca
 import json
 
-
 import allure
 import pytest
 
@@ -76,8 +75,9 @@ class TestAccountConsoleApplyCa():
             # print(j)
             assert r.status_code == 200
             try:
-                assert j.get("code") == "570705"
-                assert j.get("msg") == "粤港互认验证_通过"
+                assert j.get("code") == "000000"
+                assert j.get("msg") == "ok"
+                assert type(j.get("data").get("result")) == str
             except:
                 raise AssertionError(j)
             # paylo = {

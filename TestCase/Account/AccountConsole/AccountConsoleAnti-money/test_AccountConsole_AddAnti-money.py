@@ -42,7 +42,6 @@ class TestAccountConsoleAddAntimoney():
     @pytest.mark.parametrize('info', get_json(BASE_DIR +
                                               r"/TestData/AccountConsoledata/test_AccountConsole_AddAnti_money.json"))
     def test_AccountConsole_AddAnti_money(self, info):
-        # login()  # 调用登录接口通过token传出来
         headers = {}
         headers.update(console_JSON)
 
@@ -70,7 +69,8 @@ class TestAccountConsoleAddAntimoney():
             openOrderId = get_openOrderId.get("data").get("list")[0].get("openOrderDTO").get("openOrderId")
             # print(openOrderId)
         else:
-            openOrderId = getAccountConsoleList(headers, identityTypes).get("data").get("list")[0].get("openOrderDTO").get("openOrderId")
+            openOrderId = getAccountConsoleList(headers, identityTypes).get("data").get("list")[0].get(
+                "openOrderDTO").get("openOrderId")
         # print(getAccountConsoleDetail(headers, openOrderId))
         openId = getAccountConsoleDetail(headers, openOrderId).get("data").get("openInfoDTO").get("openId")  # 开户id
         url2 = console_HTTP + oss_consoleurl
@@ -79,7 +79,7 @@ class TestAccountConsoleAddAntimoney():
         Files_name = "zhanghupingzheng2.JPG"
         # 将图片上传至oss阿里云中返回url
         Files_url = list(oss_img("open", Files_name, userId, catalog, url2, headers))[-1]
-        investigationFiles = f"[{'name': '{Files_name}', 'url':'{Files_url}'}]"  # 调查文件[{"name":"文件名称",   "url":"文件url"}]
+        investigationFiles = f"[{{'name': '{Files_name}', 'url':'{Files_url}'}}]"  # 调查文件[{"name":"文件名称",   "url":"文件url"}]
         paylo = {
             "supplierType": supplierType,
             "investigationTime": investigationTime,
