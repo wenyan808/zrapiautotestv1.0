@@ -6,7 +6,7 @@ import random
 import allure
 import pytest
 
-from Business.IdentityInformation import phone6, pwd, identityTypes, ownerCardType, cardType
+from Business.IdentityInformation import phone6, pwd, identityTypes, ownerCardType, cardType, witnessSignaturename
 from Business.global_ossurl import oss_appurl
 from Common.OSS import oss_img
 from Common.show_sql import showsql
