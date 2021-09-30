@@ -15,7 +15,7 @@ from Common.requests_library import Requests
 from glo import console_JSON, console_HTTP
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="废弃 ")
 @allure.feature('恒生3.0-货币兑换(console)_通过')
 class TestHSConMoneyExchangeAuditPass():
     @classmethod

@@ -142,10 +142,10 @@ userId = "fa2022cf17064889a6cc7e4dce8c988b"
 
 JSON_dev = {
     "Content-Type": "application/json",
-    "appVersion": '1.0',
-    "deviceId": "29DA6F9A-DD0F-4C03-A3FE-3C0563B7092E",
+    "appVersion": '0.3.5(00013)',
+    "deviceId": "94B2C4F6-B1EB-47D4-BF3F-AED27EB225C0",
     "osType": "ios",
-    "osVersion": '14.4',
+    "osVersion": '14.5.1',
     "lang": "zh_CN"
 }
 consoledev_HTTP = "http://192.168.1.229:8080/apisC"
@@ -163,6 +163,10 @@ consoledev_JSON = {
     "Cache-Control": "no-cache"
 }
 
+"""pre环境的oss变更地址
+私有：https://ossprivatepre.zr66.com
+公有：https://osspublicpre.zr66.com
+"""
 # # 预发布环境https://h5pre.zr66.com/zhuorui_console_pre
 # headPhoto = 'http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/' \
 #             'head_photo/images/2021/01/11/16103477341540274.jpeg'  # 用户头像发生变化，请在这里修改头像地址

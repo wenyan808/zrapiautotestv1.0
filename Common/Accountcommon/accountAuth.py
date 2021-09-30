@@ -3,6 +3,7 @@ import json
 import requests
 
 from Common.getTestLoginToken import gettestLoginToken, getlogintoken
+from Common.get_payload_headers import get_headers, get_payload
 
 from Common.sign import get_sign
 from Common.tools.read_write_yaml import yamlconfig
@@ -18,26 +19,16 @@ def AccountAuth():
     url = http + "/as_trade/api/account/v1/auth"
     url1 = http + "/as_trade/api/account/v1/info"
     # 拼装参数
-    headers = {}
-    headers.update(JSON_dev)
 
-    headers1 = {}
     token = {"token": gettestLoginToken()}
-    # print(token)
-    headers1.update(headers)
-    headers1.update(token)  # 将token更新到headers
+    headers = get_headers(JSON_dev, token)
     # print(headers)
     paylo = {}
 
-    sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-    payload1 = {}
-    payload1.update(paylo)
-    payload1.update(sign1)
-
-    payload2 = json.dumps(dict(payload1))
+    payload1 = get_payload(paylo)
 
     r_info = requests.session().post(
-        url=url1, headers=headers1, data=payload2
+        url=url1, headers=headers, json=payload1
     )
 
     K = r_info.json()
@@ -53,19 +44,14 @@ def AccountAuth():
         "password": user_password
     }
 
-    sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-    payload1 = {}
-    payload1.update(body)
-    payload1.update(sign1)
-
-    payload = json.dumps(dict(payload1))
+    payload = get_payload(body)
     r_auth = requests.session().post(
-        url=url, headers=headers1, data=payload
+        url=url, headers=headers, json=payload
     )
 
     l = r_auth.json()
     # print(l)
-    return l, headers1, http
+    return l, headers, http
 
 
 # print(AccountAuth())
@@ -84,25 +70,15 @@ def UserLoginAuth(phone: str, password: str, phoneArea: str, authpwd: str):
     url = http + "/as_trade/api/account/v1/auth"
     url1 = http + "/as_trade/api/account/v1/info"
     # 拼装参数
-    headers = {}
-    headers.update(JSON_dev)
-    headers1 = {}
     token = {"token": getlogintoken(phone, password, phoneArea)}
-    # print(token)
-    headers1.update(headers)
-    headers1.update(token)  # 将token更新到headers
+    headers1 = get_headers(JSON_dev, token)
     # print(headers)
     paylo = {}
 
-    sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-    payload1 = {}
-    payload1.update(paylo)
-    payload1.update(sign1)
-
-    payload2 = json.dumps(dict(payload1))
+    payload = get_payload(paylo)
 
     r_info = requests.session().post(
-        url=url1, headers=headers1, data=payload2
+        url=url1, headers=headers1, data=payload
     )
 
     K = r_info.json()
@@ -114,12 +90,7 @@ def UserLoginAuth(phone: str, password: str, phoneArea: str, authpwd: str):
         "password": password
     }
 
-    sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-    payload1 = {}
-    payload1.update(body)
-    payload1.update(sign1)
-
-    payload = json.dumps(dict(payload1))
+    payload = get_payload(body)
 
     r_auth = requests.session().post(
         url=url, headers=headers1, data=payload

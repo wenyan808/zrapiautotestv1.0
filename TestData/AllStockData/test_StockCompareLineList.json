@@ -1,0 +1,52 @@
+[
+  {
+    "stocks": [
+      {
+        "ts": "HK",
+        "code": "00700"
+      }
+    ],
+    "lineType": 0,
+    "timeRange": 1
+  },
+  {
+    "stocks": [
+      {
+        "ts": "HK",
+        "code": "00700"
+      }
+    ],
+    "lineType": 1,
+    "timeRange": 1
+  },
+  {
+    "stocks": [
+      {
+        "ts": "HK",
+        "code": "00700"
+      }
+    ],
+    "lineType": 2,
+    "timeRange": 2
+  },
+  {
+    "stocks": [
+      {
+        "ts": "HK",
+        "code": "00700"
+      }
+    ],
+    "lineType": 3,
+    "timeRange": 3
+  },
+  {
+    "stocks": [
+      {
+        "ts": "HK",
+        "code": "00700"
+      }
+    ],
+    "lineType": 4,
+    "timeRange": 4
+  }
+]

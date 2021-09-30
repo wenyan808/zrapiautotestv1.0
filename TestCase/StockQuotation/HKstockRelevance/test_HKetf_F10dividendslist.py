@@ -25,7 +25,7 @@ class TestHKetfF10dividendslist:
         # write_json(BASE_DIR + r" /TestData/test_ETF_F10details.json", ts_code_data)
 
     @allure.story('港股ETF分红派息列表')
-    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/test_HKetf_F10dividendslist.json"))
+    @pytest.mark.parametrize('info', get_json(BASE_DIR + r"/TestData/HKstockData/test_HKetf_F10dividendslist.json"))
     def test_HKetf_F10dividendslist(self, info):
 
         response = zhuorui("Allstock", "港股ETF分红派息列表", info)

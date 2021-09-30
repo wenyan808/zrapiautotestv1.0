@@ -15,6 +15,7 @@ import glo
 from Common.Community_common.Community_post import Communitypostdelete
 from Common.OSS import oss_img
 from Common.Upload.img_file_path import imgSize
+from Common.get_payload_headers import get_headers, get_payload
 from Common.login import login
 from Common.show_sql import showsql
 from Common.sign import get_sign
@@ -31,6 +32,9 @@ class TestCommunitycancelpraise():
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
         login()  # 调用登录接口通过token传出来
+        cls.token1 = yamltoken()
+        cls.token = {"token": cls.token1}
+        cls.headers = get_headers(JSON, cls.token)
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
@@ -39,13 +43,7 @@ class TestCommunitycancelpraise():
     def test_Community_cancelpostpraise(self):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        headers = {}
-        headers.update(JSON)
 
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
         paylo = {
             "title": "停火不足月以色列再袭加沙，脆弱的新政府遇大挑战！",
             "articleType": 2,
@@ -62,17 +60,12 @@ class TestCommunitycancelpraise():
                 }
             ]
         }
-        # print(paylo)
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
 
-        payload = json.dumps(dict(payload1))
-        time.sleep(60.01)
+        payload = get_payload(paylo)
+        # time.sleep(60.01)
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="发帖"
+            url=url, headers=self.headers, data=payload, title="发帖"
         )
         y = r.json()
         # print(y)
@@ -80,30 +73,21 @@ class TestCommunitycancelpraise():
             postId = y.get("data").get("postId")
             # print(postId)
             body = {'postId': f"{postId}"}
-            sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-            body1 = {}
-            body1.update(body)
-            body1.update(sign1)
-            body1 = json.dumps(dict(body1))
+            payload_body = get_payload(body)
             postId_praise_url = HTTP + "/as_community/api/praise/v1/add"
             Requests(self.session).post(
-                url=postId_praise_url, headers=headers, data=body1, title="帖子点赞"
+                url=postId_praise_url, headers=self.headers, data=payload_body, title="帖子点赞"
             )
-            body3 = {'postId': f"{postId}"}
-            sign1 = {"sign": get_sign(body3)}  # 把参数签名后通过sign1传出来
-            body1 = {}
-            body1.update(body3)
-            body1.update(sign1)
-            body2 = json.dumps(dict(body1))
+            payload_body1 = get_payload(body)
             cancelpraise_url = HTTP + "/as_community/api/praise/v1/cancel"
             r = Requests(self.session).post(
-                url=cancelpraise_url, headers=headers, data=body2, title="取消帖子点赞"
+                url=cancelpraise_url, headers=self.headers, data=payload_body1, title="取消帖子点赞"
             )
             # print(r.json())
             # 删帖
             delete_url = HTTP + "/as_community/api/post/v1/delete"
 
-            Communitypostdelete(delete_url, headers, body)
+            Communitypostdelete(delete_url, self.headers, body)
             # 断言
             assert r.status_code == 200
             try:
@@ -113,22 +97,16 @@ class TestCommunitycancelpraise():
                 raise AssertionError(
                     f"\n请求地址：{url}"
                     f"\nbody参数：{payload}"
-                    f"\n请求头部参数：{headers}"
+                    f"\n请求头部参数：{self.headers}"
                     f"\n返回数据结果：{r.json()}")
         else:
             print(f"无data数据,Error:{y}")
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_cancelcommentpraise(self):
-        # login()  # 调用登录接口通过token传出来
+        # 发帖
         url = HTTP + "/as_community/api/post/v1/add"
-        headers = {}
-        headers.update(JSON)
 
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
         userId1 = showsql(
             '192.168.1.237', 'root', '123456', "user_account",
             f"select user_id from t_user_account where `zr_no`= '68904140';"
@@ -137,7 +115,7 @@ class TestCommunitycancelpraise():
         img_name = "01.jpg"
         catalog = r"/Business/Img/community/"
         url1 = HTTP + "/as_common/api/sts/v1/token"
-        url_path = list(oss_img("community", img_name, userId, catalog, url1, headers))
+        url_path = list(oss_img("community", img_name, userId, catalog, url1, self.headers))
         url0 = url_path[0]
         path0 = url_path[-1]
         a0 = "[img:" + path0 + "]"
@@ -177,34 +155,25 @@ class TestCommunitycancelpraise():
             ]
         }
         # print(paylo)
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
+        payload = get_payload(paylo)
 
-        payload = json.dumps(dict(payload1))
-        time.sleep(60.01)
-
-        r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="发帖"
+        r_add = Requests(self.session).post(
+            url=url, headers=self.headers, data=payload, title="发帖"
         )
-        y = r.json()
+        y_add = r_add.json()
         # print(y)
-        if "data" in y:
-            postId = y.get("data").get("postId")
+        if "data" in y_add:
+            # 获取帖子id
+            postId = y_add.get("data").get("postId")
             # print(postId)
             body = {'postId': f"{postId}"}
-            sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-            body1 = {}
-            body1.update(body)
-            body1.update(sign1)
-            body2 = json.dumps(dict(body1))
+            payload_body2 = get_payload(body)
             postId_praise_url = HTTP + "/as_community/api/praise/v1/add"
             Requests(self.session).post(
-                url=postId_praise_url, headers=headers, data=body2, title="帖子点赞"
+                url=postId_praise_url, headers=self.headers, data=payload_body2, title="帖子点赞"
             )
             # body3 = {'postId': f"{postId}"}
-            body2 = {
+            body3 = {
                 "content": "金山银山就是绿水青山!",
                 "products": [
                     {
@@ -215,58 +184,44 @@ class TestCommunitycancelpraise():
                     }
                 ]
             }
-            body1 = {}
-            body1.update(body)
-            body1.update(body2)
-            sign1 = {"sign": get_sign(body1)}  # 把参数签名后通过sign1传出来
-            body1.update(sign1)
-            body9 = json.dumps(dict(body1))
-            # print(body)
+            payload_body9 = get_payload(body3)
+
             comment_url = HTTP + "/as_community/api/comment/v1/add"
             # print(comment_url)
             r = Requests(self.session).post(
-                url=comment_url, headers=headers, data=body9, title="发表评论"
+                url=comment_url, headers=self.headers, data=payload_body9, title="发表评论"
             )
             j = r.json()
-            # print(j)
+            print(j)
             commentId = j.get("data").get("commentId")
-            body4 = {'commentId': f"{commentId}"}
-            sign1 = {"sign": get_sign(body4)}  # 把参数签名后通过sign1传出来
-            body1 = {}
-            body1.update(body4)
-            body1.update(sign1)
-            body6 = json.dumps(dict(body1))
-            # print(body)
+            body5 = {'commentId': f"{commentId}"}
+            payload_body6 = get_payload(body5)
             commentId_praise_url = HTTP + "/as_community/api/praise/v1/add"
-            r = Requests(self.session).post(
-                url=commentId_praise_url, headers=headers, data=body6, title="评论点赞"
+            r_praise = Requests(self.session).post(
+                url=commentId_praise_url, headers=self.headers, data=payload_body6, title="评论点赞"
             )
             # body5 = {'postId': f"{postId}"}
-            sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
-            body1 = {}
-            body1.update(body)
-            body1.update(sign1)
-            body8 = json.dumps(dict(body1))
+            payload_body8 = get_payload(body5)
             cancelcommentpraise_url = HTTP + "/as_community/api/praise/v1/cancel"
-            r = Requests(self.session).post(
-                url=cancelcommentpraise_url, headers=headers, data=body8, title="取消评论点赞"
+            r_cancel_praise = Requests(self.session).post(
+                url=cancelcommentpraise_url, headers=self.headers, data=payload_body8, title="取消评论点赞"
             )
-            # print(r.json())
+            # print(r_cancel_praise.json())
             # 删帖url
             delete_url = HTTP + "/as_community/api/post/v1/delete"
 
             # 删除社区发帖
-            Communitypostdelete(delete_url, headers, body)
+            Communitypostdelete(delete_url, self.headers, body)
             # 断言
-            assert r.status_code == 200
+            assert r_cancel_praise.status_code == 200
             try:
-                assert r.json().get("code") == "000000"
-                assert r.json().get("msg") == "ok"
+                assert r_cancel_praise.json().get("code") == "000000"
+                assert r_cancel_praise.json().get("msg") == "ok"
             except:
                 raise AssertionError(
                     f"\n请求地址：{url}"
                     f"\nbody参数：{payload}"
-                    f"\n请求头部参数：{headers}"
-                    f"\n返回数据结果：{r.json()}")
+                    f"\n请求头部参数：{self.headers}"
+                    f"\n返回数据结果：{r_cancel_praise.json()}")
         else:
-            print(f"无data数据,Error:{y}")
+            print(f"无data数据,Error:{y_add}")

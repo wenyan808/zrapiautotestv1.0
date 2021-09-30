@@ -31,13 +31,12 @@ class TestHSOrderGetHoldList():
                              get_json(BASE_DIR +
                                       r"/TestData/Counterdata/HSOrderdata/"
                                       r"test_HSOrder_GetHoldListdata.json"))
-    def test_HSOrder_GetHoldList(self,info):
-
+    def test_HSOrder_GetHoldList(self, info):
 
         headers = list(AccountAuth())[1]  # 将柜台token赋值到headers
         # print(headers)
         market = info.get("market")
-        paylo = {"market":market}
+        paylo = {"market": market}
 
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
@@ -53,8 +52,8 @@ class TestHSOrderGetHoldList():
         k = r.json()
         # print(k)
         assert r.status_code == 200
-        if k.get("code") == "000000":
+        try:
             assert k.get("code") == "000000"
             assert k.get("msg") == "ok"
-        else:
+        except:
             raise AssertionError(k)

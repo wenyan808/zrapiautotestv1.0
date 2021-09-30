@@ -1,4 +1,4 @@
-# test_HSConMoneyExchange_AuditReject     驳回    /api/con_money_exchange/v1/audit_reject
+# test_HSConMoneyExchange_Audit    货币兑换审核（初审、终审、拒绝、通过）四合一接口    /api/con_money_exchange/v1/audit
 import json
 
 import allure
@@ -7,28 +7,32 @@ import pytest
 from Common.getConsoleLogin import getConsoleLogin_token
 from Common.get_time_stamp import TimeTostamp, get_time_stamp13
 
-
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
+from Common.tools.read_json import get_json
 
-from glo import console_JSON, console_HTTP
+from glo import console_JSON, console_HTTP, BASE_DIR
 
 
-@pytest.mark.skip(reason="废弃 ")
-@allure.feature('恒生3.0-货币兑换(console)_驳回')
-class TestHSConMoneyExchangeAuditReject():
+# @pytest.mark.skip(reason="废弃 ")
+@allure.feature('恒生3.0-货币兑换(console)_货币兑换审核（初审、终审、拒绝、通过）四合一接口')
+class TestHSConMoneyExchangeAudit():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
         cls.url = console_HTTP + "/api/con_money_exchange/v1/list"
-        cls.url1 = console_HTTP + "/api/con_money_exchange/v1/audit_reject"
+        cls.url1 = console_HTTP + "/api/con_money_exchange/v1/audit"
 
     def tearDown(self) -> None:
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    def test_HSConMoneyExchange_AuditReject(self):
+    @pytest.mark.parametrize('info',
+                             get_json(BASE_DIR +
+                                      r"/TestData/Counterdata/HSConMoneyExchange/test_HSHSConMoneyExchange_audit.json"))
+    def test_HSConMoneyExchange_Audit(self, info):
+
         # 拼装参数
         header = console_JSON
 
@@ -58,13 +62,12 @@ class TestHSConMoneyExchangeAuditReject():
         )
 
         j = r_data.json()
-        # print(j)
-        assert j.get("msg") == "ok"
-        assert j.get("code") == "000000"
+        initiateStatus = info.get("initiateStatus")
         if "data" in j and j.get("data").get("list"):
-            exchangeId = j.get("data").get("list")[-1].get("exchangeId")
+            exchangeId = j.get("data").get("list")[initiateStatus-1].get("exchangeId")
             body = {
-                "exchangeId": exchangeId
+                "exchangeId": exchangeId,
+                "initiateStatus": initiateStatus
             }
             sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来
             payload2 = {}
@@ -73,17 +76,17 @@ class TestHSConMoneyExchangeAuditReject():
 
             payload3 = json.dumps(dict(payload2))
             r = Requests(self.session).post(
-                url=self.url1, headers=headers, data=payload3, title="驳回"
+                url=self.url1, headers=headers, data=payload3, title="货币兑换审核（初审、终审、拒绝、通过）四合一接口"
             )
 
             k = r.json()
             assert r.status_code == 200
-            if k.get("code") == "000000":
+            try:
                 assert k.get("code") == "000000"
                 assert k.get("msg") == "ok"
-            else:
+            except:
                 raise AssertionError(
-                    f"\n请求地址：{self.url1}"
+                    f"\n请求地址：{self.url}"
                     f"\nbody参数：{payload}"
                     f"\n请求头部参数：{headers}"
                     f"\n返回数据结果：{j}"

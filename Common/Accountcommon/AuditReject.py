@@ -68,7 +68,7 @@ def end_audit_back(headers: dict, userId: str, auditFails: list, remark: str = N
     return k
 
 
-def apply_ca(userId: str = None, headers: dict = None):
+def apply_ca(openId: str = None, headers: dict = None):
     """申请ca认证
 
     :param userId:用户id
@@ -77,7 +77,7 @@ def apply_ca(userId: str = None, headers: dict = None):
     """
     url1 = console_HTTP + "/api/con_cn_open/v1/apply_ca"
     paylo = {
-        "userId": f"{userId}"
+        "openId": f"{openId}"
     }
 
     sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来

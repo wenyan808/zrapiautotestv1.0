@@ -49,24 +49,50 @@ cardType = "0101"
         澳门(0703)
         其他地区(0704)
 """
+# 内地
 identityTypes = [1]  # 身份类型 1-大陆居民 2-我是港澳地区居民 3-我是其他地区居民 海外居民，传入2,3
 Derivative = "false"  # 是否投资衍生品"false"/"true"
 phoneArea = '86'  # 地区
+nationality = 86  # 国籍   中国内地-86    中国香港-852   中国澳门-853   新加坡-65
+sex = 0  # 用户性别    1-男 0-女
 cardName = '杨梦梅'  # 证件姓名
 cardNo = '430681199305029026'  # 证件号码
 cardLastNamePinyin = 'YANG'  # 证件姓拼音
 cardNamePinyin = 'MENGMEI'  # 证件名拼音
 address = '广东省深圳市南山区科苑路5号科技园工业厂房24栋南段五层西'  # 通讯地址
 homeAddress = ''  # 住宅地址(港澳+其他地区必填)
+homeAddress_img_Name = "homeAddress_img_Name.png"  # 住宅地址证明名称
 # homeAddressUrl = ''  # 住宅地址证明url(港澳+其他地区必填)
 catalog = '/Business/UserFileUp/'  # 住宅地址证明照片的存放路径
-homeAddress_photo = ''  # 住宅地址证明照片名称
+homeAddress_photo = 'homeAddress_img_Name.png'  # 住宅地址证明照片名称
 mailbox = '510210300@qq.com'  # 邮箱
 bankCardNo = '62148578049521431'  # 银行卡号
 bankCardName = 2  # 银行名称
 cardSex = '女'
 cardNation = '汉'
 cardBirth = '1993-05-02'
+# 香港
+# identityTypes = [2]  # 身份类型 1-大陆居民 2-我是港澳地区居民 3-我是其他地区居民 海外居民，传入2,3
+# Derivative = "false"  # 是否投资衍生品"false"/"true"
+# phoneArea = '86'  # 地区
+# nationality = 852  # 国籍   中国内地-86    中国香港-852   中国澳门-853   新加坡-65
+# sex = 1  # 用户性别    1-男 0-女
+# cardName = '龍子鑫'  # 证件姓名
+# cardNo = '561802561970'  # 证件号码
+# cardLastNamePinyin = 'LONG'  # 证件姓拼音
+# cardNamePinyin = 'ZIXIN'  # 证件名拼音
+# address = '广东省深圳市南山区科苑路5号科技园工业厂房24栋南段五层西'  # 通讯地址
+# homeAddress = ''  # 住宅地址(港澳+其他地区必填)
+# homeAddress_img_Name = "homeAddress_img_Name.png"  # 住宅地址证明名称
+# # homeAddressUrl = ''  # 住宅地址证明url(港澳+其他地区必填)
+# catalog = '/Business/UserFileUp/'  # 住宅地址证明照片的存放路径
+# homeAddress_photo = ''  # 住宅地址证明照片名称
+# mailbox = '510210300@qq.com'  # 邮箱
+## bankCardNo = '62148578049521431'  # 银行卡号
+## bankCardName = 2  # 银行名称
+# cardSex = '男'
+## cardNation = '汉'
+# cardBirth = '1975-11-25'
 '''
 BOC(1, '中国银行'),            PINGAG(6, '平安银行'),         MSYH(11, '民生银行'),
 CCB(2, '建设银行'),            CMB(7, '招商银行'),            ZXYH(12, '中信银行'),
@@ -85,6 +111,7 @@ signatureUrl = 'open/images/2021/04/12/16181961029023150.jpeg'
 # cardFrontUrl = 'open/images/2021/04/12/16181956539613025.jpg'
 # cardBackUrl = 'open/images/2021/04/12/16181956602830908.jpg'
 signature_imgname = 'gexinqianm.jpeg'  # 个人签名图片名称
+witnessSignaturename = ''  # 见证人电子签名图片名称(港澳地区+其他地区开户时需要)
 bankCardUrl = None
 
 phone6 = '15814213200'  # 卓锐登陆的手机号
@@ -95,7 +122,7 @@ fsWorkStatus = 1  # 财务状况-工作状态 1-受雇   2-自雇  3-退休 4-�
 fsWorkDesc = None  # 工作状态为其他时详细工作描述
 fsCompanyName = "深圳市卓锐科技有限公司"  # 财务状况-公司名称
 fsPost = 2  # 职位 1-基层员工 2-中层管理人员 3-高级经理/主管 4-总裁/总经理 5-董事/股东 6-其他_说明详细职位
-fsPostOther = None # 职位为其他时的补充
+fsPostOther = None  # 职位为其他时的补充
 fsIndustry = 2  # 行业性质 1-金融类 2-互联网/IT 3-广告传媒 4-商业/贸易 5-加工制造 6-服务行业 7-医药生物 8-教育培训
 # 9-政府机关/事业部 10-学生或待业 11-其他_说明详细行业
 fsIndustryOther = None  # 行业性质为其他时的补充
@@ -119,9 +146,8 @@ investTime = 3  # 预计投资时间 1  5年以上   2  3-5年   3  1-3年    4 
 investAmount = 4  # 预计投资金额   1 500万以上 2 100万-500万 3  100万-50万 4 30万-100万 5 30万内
 investReserveFund = 1  # 您现时的储备资金足够应付多少个月的开支及以面对突如其来的情况？ 1 12个月以上   2 6~12个月   3 3~6个月   4 不足3个月   5 无法应付
 investLossScope = 1  # 您可以接受哪个范围的投资金额潜在损失范围？ 1 75% 以上 2 51% - 75%  3 21% - 50% 4 11% - 20% 5 低于 10%
-
-
-
+# 见证人证件选择(海外开户)
+witnessCardType = "0701"  # 见证人信息 内地(0701) 香港(0702) 澳门(0703) 其他地区(0704)
 # 见证人信息
 witnessCardNo = ''  # 见证人证件号（见证人的证件号和申请人不能一样）
 witnessCardName = ''  # 见证人证件中文姓名（见证人为大陆居民时必填）

@@ -32,27 +32,25 @@ class TestCommunityPosted:
     def test_Community_Posted(self, info):
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
-        header = {}
-        header.update(JSON)
+        headers = {}
+        headers.update(JSON)
+        token1 = yamltoken()
+        token = {"token": token1}
+        headers.update(token)  # 将token更新到headers
+        # print(headers)
 
-        # 拼装参数
         paylo = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = {}
-        headers.update(header)
-        token1 = yamltoken()
-        token = {"token": token1}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
+
         payload = json.dumps(dict(payload1))
 
-        if glo.FALG == False:
-            time.sleep(60.1)
-        glo.FALG = False
+        # if glo.FALG == False:
+        #     time.sleep(60.1)
+        # glo.FALG = False
         if info.get("articleType") == 2:
             title = "发帖(长文)"
         else:
@@ -100,7 +98,7 @@ class TestCommunityPosted:
                     assert "praiseNum" in j.get("data")
                     assert "commentNum" in j.get("data")
                     assert "firstCommentNum" in j.get("data")
-                    assert "praise" in j.get("data")
+                    # assert "praise" in j.get("data")
 
         elif j.get("code") == "460301":
             raise AssertionError("请不要发布重复内容")

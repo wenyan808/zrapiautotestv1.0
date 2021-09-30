@@ -14,6 +14,9 @@ from glo import BASE_DIR, phone2, HTTP, JSON, phoneArea, pwd, phone
 
 def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, url: str, headers: dict):
     """上传图片到OSS()
+    pre环境的oss变更地址
+    私有：https://ossprivatepre.zr66.com
+    公有：https://osspublicpre.zr66.com
     在调用这个方法时，请参照http://192.168.1.203:3001/project/54/interface/api/5072的说明进行参考
     :param Storage_directory:存放目录
     :param img_name: 图片的名字
@@ -83,6 +86,9 @@ def oss_img(Storage_directory: str, img_name: str, userId: str, catalog: str, ur
 
 def oss_file(Storage_directory: str, file_name: str, catalog: str, url: str, headers: dict):
     """上传文件到oss
+    pre环境的oss变更地址
+    私有：https://ossprivatepre.zr66.com
+    公有：https://osspublicpre.zr66.com
     在调用这个方法时，请参照http://192.168.1.203:3001/project/54/interface/api/5072的说明进行参考
     :param Storage_directory:存放目录
     :param file_name: 文件名字

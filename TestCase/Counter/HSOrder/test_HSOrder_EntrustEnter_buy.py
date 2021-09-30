@@ -5,6 +5,7 @@ import allure
 import pytest
 
 from Common.Accountcommon.accountAuth import AccountAuth
+from Common.get_payload_headers import get_payload
 
 from Common.sign import get_sign
 
@@ -15,7 +16,7 @@ from glo import BASE_DIR
 
 
 # @pytest.mark.skip(reason="调试中")
-@allure.feature('柜台app_下单')
+@allure.feature('柜台app_下单(买)')
 class TestHSOrderEntrustEnter():
     @classmethod
     def setup_class(cls) -> None:
@@ -56,15 +57,10 @@ class TestHSOrderEntrustEnter():
                 "type": type1
             }]
         }
-        sign1 = {"sign": get_sign(paylo9)}  # 把参数签名后通过sign1传出来
-        payload8 = {}
-        payload8.update(paylo9)
-        payload8.update(sign1)
-
-        payload9 = json.dumps(dict(payload8))
+        payload9 = get_payload(paylo9)
 
         r_price = Requests(self.session).post(
-            url=url1, headers=headers, data=payload9, title="查询股票价格数据"
+            url=url1, headers=headers, json=payload9, title="查询股票价格数据"
         )
 
         k_price = r_price.json()
@@ -88,16 +84,11 @@ class TestHSOrderEntrustEnter():
             "entrustBs": entrustBs
         }
 
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
-
-        payload2 = json.dumps(dict(payload1))
+        payload2 = get_payload(paylo)
         # print(payload2)
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload2, title="下单"
+            url=url, headers=headers, data=payload2, title="下单(买)"
         )
 
         k = r.json()
