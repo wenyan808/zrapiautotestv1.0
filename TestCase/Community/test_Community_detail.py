@@ -9,6 +9,7 @@ from Business.global_ossurl import oss_appurl
 from Common.Community_common.Community_post import Communitypostdelete
 from Common.OSS import oss_img, oss_file
 from Common.getTestLoginToken import gettestLoginToken, getlogintoken
+from Common.get_payload_headers import get_headers
 from Common.login import login
 
 from Common.show_sql import showsql
@@ -35,12 +36,12 @@ class TestCommunitydetail():
         # login()  # 调用登录接口通过token传出来
         url = HTTP + "/as_community/api/post/v1/add"
 
-        headers = {}
-        headers.update(JSON)
-        # token = {"token": getlogintoken(phone, pwd, phoneArea)}
+        # headers = {}
+        # headers.update(JSON)
+        # # token = {"token": getlogintoken(phone, pwd, phoneArea)}
         token1 = yamltoken()
         token = {"token": token1}
-        headers.update(token)  # 将token更新到headers
+        headers = get_headers(JSON, token)
         # print(headers)
         userId1 = showsql(
             '192.168.1.237', 'root', '123456', "user_account",
@@ -109,7 +110,7 @@ class TestCommunitydetail():
         payload1.update(sign1)
 
         payload = json.dumps(dict(payload1))
-        time.sleep(60.1)
+        # time.sleep(60.1)
 
         r = Requests(self.session).post(
             url=url, headers=headers, data=payload, title="发帖"
@@ -155,10 +156,10 @@ class TestCommunitydetail():
                 assert j.get("data").get("creator").get("userId") == userId
                 assert j.get("data").get("creator").get("nickname") == nickname
                 assert j.get("data").get("creator").get("headPhoto") == headPhoto
-                assert j.get("data").get("creator").get("zrNo") == zrNo
+                assert j.get("data").get("creator").get("zrNo") == j.get("data").get("zrNo") == zrNo
                 assert "praiseNum" in j.get("data")
                 assert "commentNum" in j.get("data")
                 assert "hot" in j.get("data")
-                assert "shield" in j.get("data")
-                assert "delete" in j.get("data")
+                # assert j.get("data").get("images")
+                assert "status" in j.get("data")
                 assert "follow" in j.get("data")
