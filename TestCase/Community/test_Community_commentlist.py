@@ -73,7 +73,6 @@ class TestCommunitycommentlist():
         payload1.update(sign1)
 
         payload = json.dumps(dict(payload1))
-        time.sleep(60.01)
 
         r = Requests(self.session).post(
             url=url, headers=headers, data=payload, title="发帖"
@@ -158,7 +157,7 @@ class TestCommunitycommentlist():
                         assert "code" in h.get("data")[0].get("products")[i]
                         assert "name" in h.get("data")[0].get("products")[i]
                         assert "type" in h.get("data")[0].get("products")[i]
-                    assert "praise" in h.get("data")[0]
+                    # assert "praise" in h.get("data")[0]
                     assert "praiseNum" in h.get("data")[0]
                     assert "commentNum" in h.get("data")[0]
 

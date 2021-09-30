@@ -12,7 +12,7 @@ from Common.requests_library import Requests
 
 
 # @pytest.mark.skip(reason="调试中 ")
-@allure.feature('柜台app_R智投下单')
+@allure.feature('柜台app_用户订阅组合列表')
 class TestRStrategyClientSubscribeList():
     @classmethod
     def setup_class(cls) -> None:
