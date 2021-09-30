@@ -15,7 +15,7 @@ def LiveBodyCount(headers):
     paylo_live_body_count = {}
     payload_live_body_count = get_payload(paylo_live_body_count)
     r_live_body_count = requests.session().post(
-        url=url, headers=headers, data=payload_live_body_count, title="获取活体校验次数"
+        url=url, headers=headers, data=payload_live_body_count
     )
 
     j_live_body_count = r_live_body_count.json()

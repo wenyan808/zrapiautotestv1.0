@@ -1,3 +1,5 @@
+import json
+
 import requests
 
 from Business.IdentityInformation import fsWorkStatus, fsCompanyName, fsWorkDesc, fsPost, fsPostOther, fsIndustry, \
@@ -5,6 +7,7 @@ from Business.IdentityInformation import fsWorkStatus, fsCompanyName, fsWorkDesc
     fsRisk
 from Business.OpenAccount_conmmonPath import path_update_fs
 from Common.get_payload_headers import get_payload
+from Common.sign import get_sign
 
 from glo import HTTP
 
@@ -70,8 +73,12 @@ def UpdateFs(headers):
         "fsFundSource": fsFundSource1,
         "fsFundSourceOther": fsFundSourceOther1
     }
+    sign1 = {"sign": get_sign(paylo_update_fs)}  # 把参数签名后通过sign1传出来
+    payload1 = {}
+    payload1.update(paylo_update_fs)
+    payload1.update(sign1)
 
-    payload_update_fs = get_payload(paylo_update_fs)
+    payload_update_fs = json.dumps(dict(payload1))
 
     r_update_fs = requests.session().post(
         url=url_update_fs, headers=headers, data=payload_update_fs

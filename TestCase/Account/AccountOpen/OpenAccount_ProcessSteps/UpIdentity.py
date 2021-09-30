@@ -67,7 +67,7 @@ def Up_Identity(headers, userId, catalog, url_oss, identityTypes):
     payload_identity = get_payload(paylo_identity)
 
     r_identity = requests.session().post(
-        url=url_identity, headers=headers, data=payload_identity, title="上传身份信息"
+        url=url_identity, headers=headers, data=payload_identity
     )
 
     j_identity = r_identity.json()

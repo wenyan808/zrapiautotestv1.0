@@ -21,6 +21,10 @@ def Up_Signature(headers, userId, catalog, url_oss, witnessSignatureUrl=None):
     url_signature = HTTP + path_signature
     img_name = signature_imgname
     signatureUrl = list(oss_img("open", img_name, userId, catalog, url_oss, headers))[-1]
+    if witnessSignatureUrl==None:
+        witnessSignatureUrl = "None"
+    else:
+        witnessSignatureUrl = witnessSignatureUrl
     paylo_signature = {
         "signatureUrl": signatureUrl,
         "witnessSignatureUrl": witnessSignatureUrl  # 见证人电子签名url(港澳地区+其他地区开户时需要)

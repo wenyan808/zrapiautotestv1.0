@@ -5,7 +5,7 @@ path_select_account = "/as_user/api/open/v1/select_account"
 # 财务状况
 path_update_fs = "/as_user/api/cn_open/v1/update_fs"
 # 投资经验
-path_update_invest = "as_user/api/cn_open/v1/update_invest"
+path_update_invest = "/as_user/api/cn_open/v1/update_invest"
 # 确定评估结果
 path_risk_score_confirm = "/as_user/api/cn_open/v1/risk_score_confirm"
 # 确定评估结果
