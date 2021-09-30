@@ -88,7 +88,7 @@ class TestHSOrderEntrustEnter():
         # print(payload2)
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload2, title="下单(买)"
+            url=url, headers=headers, json=payload2, title="下单(买)"
         )
 
         k = r.json()
@@ -97,7 +97,6 @@ class TestHSOrderEntrustEnter():
         if info.get("assert_type") == "0":
             assert k.get("msg") == "ok"
             assert k.get("code") == "000000"
-
 
         elif info.get("assert_type") == "1":
             # print(k)
@@ -132,4 +131,9 @@ class TestHSOrderEntrustEnter():
         #     assert k.get("msg") == "当前时间不允许此类证券交易"
 
         else:
-            raise AssertionError(k)
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload2}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{k}"
+            )

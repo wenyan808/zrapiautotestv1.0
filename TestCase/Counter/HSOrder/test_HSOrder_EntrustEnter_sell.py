@@ -17,7 +17,7 @@ from glo import BASE_DIR
 
 # @pytest.mark.skip(reason="调试中")
 @allure.feature('柜台app_下单(卖)')
-class TestHSOrderEntrustEnter():
+class TestHSOrderEntrustEntersell():
     @classmethod
     def setup_class(cls) -> None:
         cls.session = Requests().get_session()
@@ -37,7 +37,7 @@ class TestHSOrderEntrustEnter():
     @pytest.mark.parametrize('info',
                              get_json(
                                  BASE_DIR + r"/TestData/Counterdata/HSOrderdata/test_HSOrder_EntrustEnter_sell.json"))
-    def test_HSOrder_EntrustEnter(self, info):
+    def test_HSOrder_EntrustEnter_sell(self, info):
         http = list(AccountAuth())[-1]
         url = http + "/as_trade/api/order/v1/entrust_enter"
         url1 = http + "/as_market/api/stock_price/v1/get_prices"
@@ -78,9 +78,9 @@ class TestHSOrderEntrustEnter():
 
         k_get_hold_list = r_get_hold_list.json()
         # print(k_get_hold_list)
-        ts = k_get_hold_list.get("data").get("holdList")[0].get("ts")
-        code = k_get_hold_list.get("data").get("holdList")[0].get("code")
-        entrustPrice = round(k_price.get("data")[0].get("last"), 3)  # 价格,保留小数点后三位  舍入运算，使用内置的 round(value, ndigits) 函数
+
+        entrustPrice = round(k_price.get("data")[0].get("last"),
+                             3)  # 价格,保留小数点后三位  舍入运算，使用内置的 round(value, ndigits) 函数
         # print(entrustPrice)
 
         entrustProp = "ODD"  # 委托属性，港股支持 LO,ELO 美股和A股支持LO AO("AO", "竞价单"),
@@ -112,4 +112,7 @@ class TestHSOrderEntrustEnter():
             assert k.get("msg") == "ok"
             assert k.get("code") == "000000"
         except:
-            raise AssertionError(k)
+            raise AssertionError(f"\n请求地址：{url}"
+                                 f"\nbody参数：{payload2}"
+                                 f"\n请求头部参数：{headers}"
+                                 f"\n返回数据结果：{k}")

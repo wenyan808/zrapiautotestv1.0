@@ -4,5 +4,16 @@
     "code": "00700",
     "type": 2,
     "market":1
+  },{
+    "ts": "HK",
+    "code": "00055",
+    "type": 2,
+    "market":1
+  },
+  {
+    "ts": "HK",
+    "code": "09618",
+    "type": 2,
+    "market":1
   }
 ]
