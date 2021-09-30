@@ -26,7 +26,7 @@ def BankOcr(headers, userId, catalog, url_oss):
     payload_bank_ocr = get_payload(paylo_bank_ocr)
 
     r_bank_ocr = requests.session().post(
-        url=url_bank_ocr, headers=headers, data=payload_bank_ocr, title="银行卡OCR"
+        url=url_bank_ocr, headers=headers, data=payload_bank_ocr
     )
 
     j_bank_ocr = r_bank_ocr.json()

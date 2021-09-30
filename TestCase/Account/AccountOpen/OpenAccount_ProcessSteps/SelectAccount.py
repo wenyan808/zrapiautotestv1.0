@@ -1,8 +1,11 @@
+import json
+
 import requests
 
 from Business.IdentityInformation import Derivative
 from Business.OpenAccount_conmmonPath import path_select_account
 from Common.get_payload_headers import get_payload
+from Common.sign import get_sign
 from glo import HTTP
 
 
@@ -61,8 +64,12 @@ def Select_account(headers, identityTypes):
         "derivativeInfos": derivativeInfos
 
     }
+    sign1 = {"sign": get_sign(paylo_select_account)}  # 把参数签名后通过sign1传出来
+    payload1 = {}
+    payload1.update(paylo_select_account)
+    payload1.update(sign1)
 
-    payload_select_account = get_payload(paylo_select_account)
+    payload_select_account = json.dumps(dict(payload1))
     r_select_account = requests.session().post(
         url=url_select_account, headers=headers, data=payload_select_account
     )
