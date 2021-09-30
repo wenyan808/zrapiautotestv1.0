@@ -1,0 +1,42 @@
+[
+  {
+   "plateType": 1,
+    "ts": "SH",
+    "code": "600436",
+    "metric": "null",
+    "timeRange": "null",
+    "stockCode": "null"
+  },
+  {
+    "plateType": 2,
+    "ts": "SH",
+    "code": "601888",
+    "metric": 1,
+    "timeRange": 1,
+    "stockCode": "601888"
+  },
+  {
+    "plateType": 1,
+    "ts": "HK",
+    "code": "02359",
+    "metric": 2,
+    "timeRange": 2,
+    "stockCode": "02359"
+  },
+  {
+    "plateType": 1,
+    "ts": "SH",
+    "code": "603026",
+    "metric": 3,
+    "timeRange": 3,
+    "stockCode": "603026"
+  },
+  {
+    "plateType": 2,
+    "ts": "HK",
+    "code": "02359",
+    "metric": 4,
+    "timeRange": 4,
+    "stockCode": "02359"
+  }
+]
