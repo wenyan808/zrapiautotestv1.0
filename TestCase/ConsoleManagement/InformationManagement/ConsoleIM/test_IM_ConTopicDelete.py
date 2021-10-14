@@ -18,7 +18,7 @@ from Common.tools.read_write_json import get_json
 from glo import console_HTTP, BASE_DIR, console_JSON
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="目前关闭，等后期更新维护")
 @allure.feature('资讯console_删除专题')
 class TestIMConTopicDelete():
     @classmethod
@@ -38,7 +38,9 @@ class TestIMConTopicDelete():
         headers.update(header)
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
-        id = get_ConTopicID(headers, 0)
+        title = "自动化测试专题"
+        # 专题id
+        id = get_ConTopicID(headers, title, 0)
 
         paylo = {
             "id": id

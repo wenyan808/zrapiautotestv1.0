@@ -34,8 +34,6 @@ class TestIMConTopicCategoryList():
         url = console_HTTP + "/api/con_topic/v1/category_list"
 
         header = console_JSON
-
-
         headers = {}
         headers.update(header)
 

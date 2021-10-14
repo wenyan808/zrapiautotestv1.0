@@ -18,7 +18,7 @@ from Common.tools.read_write_json import get_json
 from glo import console_HTTP, BASE_DIR, console_JSON
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="目前关闭，等后期打开更新维护 ")
 @allure.feature('资讯console_移除专题分类')
 class TestIMConTopicDeleteCategory():
     @classmethod
@@ -35,7 +35,6 @@ class TestIMConTopicDeleteCategory():
         url = console_HTTP + "/api/con_topic/v1/delete_category"
         header = console_JSON
 
-
         headers = {}
         headers.update(header)
 
@@ -43,7 +42,7 @@ class TestIMConTopicDeleteCategory():
         headers.update(token)  # 将token更新到headers
         # list1 = list(get_ConTopicCategoryId())
         add_category(headers, "自动化测试分类移除")
-        categoryId = get_ConTopicCategoryId(headers, 0)
+        categoryId = get_ConTopicCategoryId(headers, -1)
         paylo = {
             "categoryId": categoryId
         }
