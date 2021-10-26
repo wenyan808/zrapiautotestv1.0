@@ -50,8 +50,8 @@ def login_common():
             or response_login.json().get("msg") == "用户登陆的设备和以前不一样":
         # 用户登陆的设备和以前不一样，验证的请求报文
         boby = {
-            "phone": phone2,
-            "countryCode": "86"
+            "phone": phone,
+            "countryCode": glo.countryCode
         }
         sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
         payload1 = {}
@@ -65,7 +65,7 @@ def login_common():
         data = {
             "phone": phone,
             "verificationCode": verificationCode,
-            "phoneArea": "86"
+            "phoneArea": phoneArea
         }
 
         sign1 = {"sign": get_sign(data)}  # 把参数签名后通过sign1传出来
@@ -129,7 +129,7 @@ def login_all(key, value, password, url, file_name):
     header.update(JSON)
     json = {
         "loginPassword": get_md5(password),
-        "phoneArea": "86"
+        "phoneArea": phoneArea
     }
     loginAccount = {key: value}
     json.update(loginAccount)
@@ -148,4 +148,4 @@ def login_all(key, value, password, url, file_name):
 # "token_console")
 # print(login_all("phone", "18379204795", "102522ql",
 #                 "http://192.168.1.241/as_user/api/user_account/v1/user_login_pwd", "token"))
-# login_common()
+print(login_common())

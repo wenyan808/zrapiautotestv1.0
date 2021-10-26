@@ -12,7 +12,7 @@ headPhoto = 'http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/' \
             'head_photo/images/2021/01/11/16103477341540274.jpeg'  # 用户头像发生变化，请在这里修改头像地址
 BASE_DIR: Union[bytes, str] = os.path.dirname(os.path.abspath(__file__))
 flag = True
-logi = True # 登录使用
+logi = True  # 登录使用
 # 测试环境地址管理：
 HTTP = http = "http://192.168.1.241"
 # http = "http://192.168.1.241"
@@ -99,8 +99,10 @@ console_JSON = {
 
 JSON = {
     "Content-Type": "application/json",
-    "appVersion": '0.1.3',
+    "appVersion": '0.3.5',
     "deviceId": "d41b071ca83ece28",
+    "deviceModel": "vivo+X9i",
+    "deviceName": "vivo+X9i",
     "osType": "android",
     "osVersion": '7.1.2',
     "lang": "zh_CN"
@@ -108,26 +110,34 @@ JSON = {
 
 JSON1 = {
     "Content-Type": "application/json",
-    "appVersion": '0.1.5',
-    "deviceId": "5502AB11-CCDB-4B78-B139-71618170DE9C",
+    "appVersion": '0.3.5',
+    "deviceId": "F5331CA3-834C-455B-A84A-6D1E94B295EE",
+    "deviceModel": "iPhone%2011",
+    "deviceName": "iPhone",
     "osType": "ios",
-    "osVersion": '13.4.1'
+    "osVersion": '14.5.1',
+    "lang": "zh_CN"
 }
 
 JSON2 = {
     "Content-Type": "application/json",
-    "appVersion": '0.2.5',
-    "deviceId": "58CAB9A3-172A-43CB-9750-AAA6E45F2043",
-    "osType": "ios",
-    "osVersion": '14.4',
+    "appVersion": '0.3.5',
+    "deviceId": "e8cf940f5b712be3",
+    "deviceModel": "PBBM30",
+    "deviceName": "OPPO+A5",
+    "osType": "android",
+    "osVersion": '8.1.0',
     "lang": "zh_CN"
 }
 JSON3 = {
     "Content-Type": "application/json",
-    "appVersion": '0.2.0(00004)',
+    "appVersion": '0.3.5',
     "deviceId": "8556915E-DBE1-4476-91DB-CA0119517998",
+    "deviceModel": "iPhone",
+    "deviceName": "iPhone",
     "osType": "ios",
-    "osVersion": '13.5.1'
+    "osVersion": '13.5.1',
+    "lang": "zh_CN"
 }
 
 # 内网开发环境（dev）192.168.1.181（Android）
@@ -143,9 +153,11 @@ userId = "fa2022cf17064889a6cc7e4dce8c988b"
 JSON_dev = {
     "Content-Type": "application/json",
     "appVersion": '0.3.5(00013)',
-    "deviceId": "94B2C4F6-B1EB-47D4-BF3F-AED27EB225C0",
+    "deviceId": "F5331CA3-834C-455B-A84A-6D1E94B295FE",
+    "deviceModel": "iPhone%2012",
+    "deviceName": "%E5%91%A8%E7%85%9C%E7%9A%84iPhone",
     "osType": "ios",
-    "osVersion": '14.5.1',
+    "osVersion": '14.8',
     "lang": "zh_CN"
 }
 consoledev_HTTP = "http://192.168.1.229:8080/apisC"

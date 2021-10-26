@@ -176,6 +176,7 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
     json1.update(sign1)
     headers = {}
     headers.update(JSON2)
+    # headers = JSON2
 
     res_login = requests.session().post(url=url, headers=headers,
                                         json=json1)
