@@ -18,7 +18,7 @@ from Common.tools.read_write_json import get_json
 from glo import console_JSON, console_HTTP, BASE_DIR
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="调试中 ")
 @allure.feature('资讯console_新建修改资讯信息')
 class TestIMConNewsAdd():
     @classmethod
@@ -44,17 +44,16 @@ class TestIMConNewsAdd():
         headers.update(token)  # 将token更新到headers
         # print(headers)
         catalog = "/Business/Img/"
-        tupian_path = f'<img src="{list(oss_file("information", "buffett01.png", catalog, url1, headers))[-1]}"/>'
+        tupian_path = f'<img src="{list(oss_file("information", "zhong30省份2021年前三季度GDP.jpg", catalog, url1, headers))[-1]}"/>'
 
-        title = "2021年巴菲特股东大会直播！"  # 资讯标题
-        content = "众所周知，「股神」巴菲特每年都会为伯克希尔的股东们撰写「致股东的一封信」，这些信件被投资者们称为「投资教科书」。" \
-                  "而每年伯克希尔的股东大会，在投资者心目中则是堪比「投资圈春晚」。\n\n由于疫情的影响，今年伯克希尔的股东大会将再次进行线上直播。" \
-                  "\n\n对此，巴菲特表示，他与查理·芒格都十分开心：得益于线上直播，世界各地的人都可以看到这场股东大会。" \
+        title = "大变局下，中国经济版图的5个变化！"  # 资讯标题
+        content = "中新网客户端北京10月28日电(记者 李金磊)2021年以来，在疫情、汛情等冲击之下，中国经济继续前行。" \
+                  "能源价格猛涨，多地限电限产；楼市降温，多地交易腰斩……大变局之下，前三季度中国经济版图又有哪些变化？" \
                   + tupian_path
 
-        source = "卓锐资讯moomoo自动化测试"  # 资讯来源
+        source = "卓锐资讯转中国新闻网"  # 资讯来源
         tag = 2  # 标签(1,股票2,指数3,基金)
-        code = "002594.SZ"  # 如0700.HK
+        code = "600111.SZ"  # 如0700.HK
         topicIds = 21  # 所属专题id(1,2,3)逗号分割
         isHot = 1  # 是否热门(1-是 0-否)
         types = [0]  # 资讯类型（0,要闻,1港股,2,美股,3快讯,4专题,5异动,6新股,7AI看盘,8新闻,9公告,10评级,11宏观,12推送,13其他）
