@@ -21,7 +21,7 @@ from Common.tools.read_write_yaml import yamltoken
 from glo import HTTP, JSON, phone, phoneArea, pwd, headPhoto, nickname, zrNo
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="调试中 ")
 @allure.feature('社区-获取帖子详情')
 class TestCommunitydetail():
     @classmethod

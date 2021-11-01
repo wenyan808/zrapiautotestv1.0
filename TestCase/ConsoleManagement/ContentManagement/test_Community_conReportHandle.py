@@ -22,7 +22,7 @@ from Common.tools.read_write_json import get_json
 from glo import console_JSON, console_HTTP, BASE_DIR
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="请求地址不存在")
 @allure.feature('社区console_举报处理')
 class TestCommunityConReportHandle():
     @classmethod
@@ -36,8 +36,13 @@ class TestCommunityConReportHandle():
     @pytest.mark.parametrize('info',
                              get_json(BASE_DIR + r"/TestData/test_communitydata/test_Community_conReportHandle.json"))
     def test_Community_conReportHandle(self, info):
-        url = console_HTTP + "/api/con_report/v1/list"
+        url = console_HTTP + "/api/con_community_report/v1/list"
         header = console_JSON
+        headers = {}
+        headers.update(header)
+        token = {"token": getConsoleLogin_token()}
+        headers.update(token)  # 将token更新到headers
+        # print(headers)
 
         # 拼装参数
         paylo = {
@@ -51,15 +56,8 @@ class TestCommunityConReportHandle():
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = {}
-        headers.update(header)
-        # print(token)
-        # print(type(token))
-        token = {"token": getConsoleLogin_token()}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
+
         payload = json.dumps(dict(payload1))
-        # time.sleep(60.01)
 
         r = Requests(self.session).post(
             url=url, headers=headers, data=payload, title="举报列表(帖子,评论,回复)"
@@ -71,17 +69,17 @@ class TestCommunityConReportHandle():
         # f"\nbody参数：{payload}"
         # f"\n请求头部参数：{headers}"
         # f"\n返回数据结果：{j}")
-        handleurl = console_HTTP + "/api/con_report/v1/handle"
+        handleurl = console_HTTP + "/api/con_community_report/v1/handle"
 
         # 拼装参数
         paylohandle = {
             "reportedId": f"{j.get('data').get('list')[0].get('reportedId')}"
         }
         paylo1 = info
+        paylohandle.update(paylo1)
         # print(paylo)
         sign1 = {"sign": get_sign(paylohandle)}  # 把参数签名后通过sign1传出来
         payload1 = {}
-        payload1.update(paylo1)
         payload1.update(paylohandle)
         payload1.update(sign1)
         payload = json.dumps(dict(payload1))

@@ -16,7 +16,7 @@ from Common.tools.read_write_json import get_json
 from glo import console_JSON, console_HTTP, BASE_DIR
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="调试中 ")
 @allure.feature('社区console_取消禁言用户')
 class TestCommunityCancelUserForbid():
     @classmethod
@@ -55,6 +55,7 @@ class TestCommunityCancelUserForbid():
 
         j = r.json()
         # print(j)
+        print(j.get('data').get('list'))
         url_add = console_HTTP + "/api/con_user_forbid/v1/add"
         paylo_add = {
             "userId": f"{j.get('data').get('list')[0].get('userId')}",
@@ -73,10 +74,10 @@ class TestCommunityCancelUserForbid():
         paylo_Cancel = {
             "userId": f"{j.get('data').get('list')[0].get('userId')}"
         }
-        ign1 = {"sign": get_sign(paylo_Cancel)}  # 把参数签名后通过sign1传出来
+        Sign1 = {"sign": get_sign(paylo_Cancel)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo_Cancel)
-        payload1.update(sign1)
+        payload1.update(Sign1)
         payload = json.dumps(dict(payload1))
         r_Cancel = Requests(self.session).post(
             url=url_Cancel, headers=headers, data=payload, title="取消禁言用户"

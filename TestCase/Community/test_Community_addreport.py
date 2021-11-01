@@ -3,7 +3,7 @@
 @File  ：test_Community_addreport.py
 @Author: yishouquan
 @Time  : 2020/7/28
-@Desc  :  app社区_举报
+@Desc  :  app社区_app新增举报
 """
 import json
 import random
@@ -11,6 +11,7 @@ import random
 import allure
 import pytest
 
+from Business.Community_URlPath import URlPath_addreport, URlPath_hostlist
 from Common.login import login
 from Common.show_sql import MongoDBField, showsql
 from Common.sign import get_sign
@@ -21,8 +22,8 @@ from Common.tools.read_write_yaml import yamltoken
 from glo import HTTP, JSON, BASE_DIR
 
 
-# @pytest.mark.skip(reason="调试中 ")
-@allure.feature('社区_举报')
+@pytest.mark.skip(reason="调试中 ")
+@allure.feature('社区_app新增举报')
 class TestCommunityaddreport():
     @classmethod
     def setup_class(cls) -> None:
@@ -40,7 +41,7 @@ class TestCommunityaddreport():
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_Community_addreport(self):
-        url_hostlist = HTTP + "/as_community/api/community/v1/hot_list"
+        url_hostlist = HTTP + URlPath_hostlist
         headers = {}
         headers.update(JSON)
 
@@ -65,13 +66,18 @@ class TestCommunityaddreport():
         # print(j)
         # print(j.get("data")[0].get("postId"))
 
-        url = HTTP + "/as_community/api/report/v1/add"
-
+        url = HTTP + URlPath_addreport
+        contentType = 1
+        reportType = 1
+        reportRemark = "自动化测试举报"
+        images = ""
         paylo = {
 
-            "reportedId": f"{j.get('data')[0].get('postId')}",
-            "reportedType": 6,
-            "type": 1
+            "contentId": f"{j.get('data')[0].get('postId')}",
+            "contentType": contentType,
+            "reportType": reportType,
+            "reportRemark": reportRemark,
+            "images": images
         }
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
@@ -81,7 +87,7 @@ class TestCommunityaddreport():
         payload = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=url, headers=headers, data=payload, title="举报(帖子)"
+            url=url, headers=headers, data=payload, title="app新增举报"
         )
         y = r.json()
         # print(y)
