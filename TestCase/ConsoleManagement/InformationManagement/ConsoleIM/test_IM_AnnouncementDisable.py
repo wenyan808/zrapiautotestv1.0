@@ -17,7 +17,7 @@ from Common.tools.read_write_json import get_json
 from glo import console_JSON, console_HTTP, BASE_DIR
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="调试中 ")
 @allure.feature('资讯console_删除恢复公告')
 class TestIMAnnouncementDisable():
     @classmethod

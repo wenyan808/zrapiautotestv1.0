@@ -18,7 +18,7 @@ from Common.tools.read_write_json import get_json
 from glo import console_HTTP, BASE_DIR, console_JSON
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="调试中 ")
 @allure.feature('资讯console_修改专题')
 class TestIMConTopicUpdate():
     @classmethod

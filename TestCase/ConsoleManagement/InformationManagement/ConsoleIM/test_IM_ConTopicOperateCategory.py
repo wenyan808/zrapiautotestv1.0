@@ -19,7 +19,7 @@ from Common.requests_library import Requests
 from glo import console_HTTP, BASE_DIR, console_JSON
 
 
-# @pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="调试中 ")
 @allure.feature('资讯console_修改专题')
 class TestIMConTopicOperateCategory():
     @classmethod
