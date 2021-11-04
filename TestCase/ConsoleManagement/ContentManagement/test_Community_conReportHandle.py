@@ -68,7 +68,7 @@ class TestCommunityConReportHandle():
         )
 
         j = r.json()
-        print(j)
+        # print(j)
         record_listurl = console_HTTP + "/api/con_community_report/v1/record_list"
 
         # sort = info.get("sort")
@@ -112,7 +112,7 @@ class TestCommunityConReportHandle():
         )
 
         jhandle = r.json()
-        print(jhandle)
+        # print(jhandle)
 
         assert r.status_code == 200
         try:
