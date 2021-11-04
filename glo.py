@@ -99,7 +99,7 @@ console_JSON = {
 
 JSON = {
     "Content-Type": "application/json",
-    "appVersion": '0.3.5',
+    "appVersion": '0.3.6',
     "deviceId": "d41b071ca83ece28",
     "deviceModel": "vivo+X9i",
     "deviceName": "vivo+X9i",
@@ -110,7 +110,7 @@ JSON = {
 
 JSON1 = {
     "Content-Type": "application/json",
-    "appVersion": '0.3.5',
+    "appVersion": '0.3.6',
     "deviceId": "F5331CA3-834C-455B-A84A-6D1E94B295EE",
     "deviceModel": "iPhone%2011",
     "deviceName": "iPhone",
@@ -121,7 +121,7 @@ JSON1 = {
 
 JSON2 = {
     "Content-Type": "application/json",
-    "appVersion": '0.3.5',
+    "appVersion": '0.3.6',
     "deviceId": "e8cf940f5b712be3",
     "deviceModel": "PBBM30",
     "deviceName": "OPPO+A5",
@@ -131,7 +131,7 @@ JSON2 = {
 }
 JSON3 = {
     "Content-Type": "application/json",
-    "appVersion": '0.3.5',
+    "appVersion": '0.3.6',
     "deviceId": "8556915E-DBE1-4476-91DB-CA0119517998",
     "deviceModel": "iPhone",
     "deviceName": "iPhone",
@@ -152,7 +152,7 @@ userId = "fa2022cf17064889a6cc7e4dce8c988b"
 
 JSON_dev = {
     "Content-Type": "application/json",
-    "appVersion": '0.3.5(00013)',
+    "appVersion": '0.3.6',
     "deviceId": "F5331CA3-834C-455B-A84A-6D1E94B295FE",
     "deviceModel": "iPhone%2012",
     "deviceName": "%E5%91%A8%E7%85%9C%E7%9A%84iPhone",

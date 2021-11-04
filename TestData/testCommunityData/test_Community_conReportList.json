@@ -1,70 +1,74 @@
 [
   {
-    "currentPage": 20,
-    "pageSize": 1,
-    "type": 1
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 1,
+    "sort": 1
   },
   {
-    "reportedId": "5fe990af791d040006730367",
-    "updateStartTime": "1609298132",
-    "updateEndTime": "1579662932",
-    "currentPage": 20,
-    "pageSize": 1,
-    "type": 1,
-    "reportedUser": "64754556"
+    "currentPage": 1,
+    "pageSize": 100,
+    "contentType": 2,
+    "sort": 2
   },
   {
-    "reportedId": "5fe990af791d040006730367",
-    "updateStartTime": "1609298132",
-    "updateEndTime": "1579662932",
-    "currentPage": 20,
-    "pageSize": 1,
-    "type": 1,
-    "reportedUser": "64754556"
+    "currentPage": 1,
+    "pageSize": 50,
+    "contentType": 3,
+    "sort": 3
   },
   {
-    "reportedId": "5fe990af791d040006730367",
-    "updateStartTime": "1609298132",
-    "updateEndTime": "1579662932",
-    "currentPage": 20,
-    "pageSize": 1,
-    "type": 1,
-    "reportedUser": "64754556"
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 1,
+    "sort": 2
   },
   {
-    "reportedId": "5fe990af791d040006730367",
-    "currentPage": 20,
-    "pageSize": 1,
-    "type": 1,
-    "reportedUser": "64754556"
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 1,
+    "sort": 3
   },
   {
-    "reportedId": "5fe990af791d040006730367",
-    "currentPage": 20,
-    "pageSize": 1,
-    "type": 1
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 1,
+    "sort": 4
   },
   {
-    "currentPage": 20,
-    "pageSize": 1,
-    "type": 1,
-    "reportedUser": "64754556"
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 2,
+    "sort": 2
   },
   {
-    "updateStartTime": "1609298132",
-    "updateEndTime": "1579662932",
-    "currentPage": 20,
-    "pageSize": 1,
-    "type": 1
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 2,
+    "sort": 3
   },
   {
-    "currentPage": 20,
-    "pageSize": 1,
-    "type": 2
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 2,
+    "sort": 4
   },
   {
-    "currentPage": 20,
-    "pageSize": 1,
-    "type": 3
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 3,
+    "sort": 2
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 3,
+    "sort": 3
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 3,
+    "sort": 4
   }
 ]

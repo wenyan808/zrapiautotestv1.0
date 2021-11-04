@@ -6,7 +6,7 @@ from Common.sign import get_sign
 from glo import console_HTTP
 
 
-def get_ConTopicID(headers: dict, n: int):
+def get_ConTopicID(headers: dict, name: str, n: int):
     """获取专题id
 
     :param headers: 带token的headers参数
@@ -16,6 +16,7 @@ def get_ConTopicID(headers: dict, n: int):
     url2 = console_HTTP + "/api/con_topic/v1/list"
 
     paylo = {
+        "name": name
     }
     sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
     payload1 = {}

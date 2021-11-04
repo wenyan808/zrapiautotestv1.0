@@ -6,7 +6,6 @@ import allure
 import pytest
 
 from Common.getConsoleLogin import getConsoleLogin_token
-from Common.login import login
 
 from Common.sign import get_sign
 
@@ -31,21 +30,19 @@ class TestIMNewsFastList():
                              get_json(BASE_DIR + r"/TestData/testIMData/test_IM_NewsFastList.json"))
     def test_IM_NewsFastList(self, info):
         url = HTTP + "/as_stock_information/api/news/v1/fast_list"
-        header = {}
-        header.update(JSON)
+        headers = {}
+        headers.update(JSON)
+        token = {"token": getConsoleLogin_token()}
+        headers.update(token)  # 将token更新到headers
+        # print(headers)
 
-        # 拼装参数
         paylo = info
         # print(paylo)
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo)
         payload1.update(sign1)
-        headers = {}
-        headers.update(header)
-        token = {"token": getConsoleLogin_token()}
-        headers.update(token)  # 将token更新到headers
-        # print(headers)
+
         payload = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
@@ -61,7 +58,8 @@ class TestIMNewsFastList():
             if len(j.get("data")) != 0:
                 for i in range(len(j.get("data"))):
                     assert "newsId" in j.get("data")[i]
-                    assert "title" in j.get("data")[i]
+                    if "title" in j.get("data")[i]:
+                        assert "title" in j.get("data")[i]
                     assert "content" in j.get("data")[i]
                     if "source" in j.get("data")[i]:
                         logging.info(f"{j.get('data')[i].get('source')}")

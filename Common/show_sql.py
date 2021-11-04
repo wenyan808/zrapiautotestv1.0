@@ -115,8 +115,12 @@ def MongoDBField(address, port, database, surface, args):
 
 
 # print(MongoDBField("192.168.1.237", 27017, "community", "t_report", [{}, {"type": 1}]))
-# ts_code = show_sql('192.168.1.237','root','123456','stock_market',
-#                    "select ts,code from t_stock_search where ts='HK' or ts='SH' or ts='SZ';")
+# ts_code = showsql('192.168.1.237','root','123456','stock_market',
+#                    "select ts,code from t_stock_search;")
+# ts_code = showsql(
+#             "192.168.1.237", "root", "123456", "stock_market",
+#             "select ts,code,type from t_stock_search;"
+#         )
 # print(ts_code)
 # a = showsql(
 #             '192.168.1.237', 'root', '123456', "user_account",

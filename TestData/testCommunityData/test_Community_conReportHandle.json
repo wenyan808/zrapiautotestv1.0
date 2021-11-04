@@ -1,0 +1,83 @@
+[
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 1,
+    "sort": 1,
+    "handleType": 1,
+    "handleRemark": "test"
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 100,
+    "contentType": 2,
+    "sort": 2,
+    "handleType": 1,
+    "handleRemark": "test"
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 1,
+    "sort": 2,
+    "handleType": 1,
+    "handleRemark": "test"
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 1,
+    "sort": 3,
+    "handleType": 1,
+    "handleRemark": "test"
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 1,
+    "sort": 4,
+    "handleType": 1,
+    "handleRemark": "test"
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 2,
+    "sort": 2,
+    "handleType": 1,
+    "handleRemark": "test"
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 2,
+    "sort": 4,
+    "handleType": 1,
+    "handleRemark": "test"
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 1,
+    "sort": 1,
+    "handleType": 2,
+    "handleRemark": "api测试"
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 1,
+    "sort": 1,
+    "handleType": 3,
+    "handleRemark": "api测试api测试"
+  },
+  {
+    "currentPage": 1,
+    "pageSize": 20,
+    "contentType": 1,
+    "sort": 1,
+    "handleType": 4,
+    "handleRemark": "testapi测试"
+  }
+
+]

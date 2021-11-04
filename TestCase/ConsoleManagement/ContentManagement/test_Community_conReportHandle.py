@@ -22,7 +22,7 @@ from Common.tools.read_write_json import get_json
 from glo import console_JSON, console_HTTP, BASE_DIR
 
 
-@pytest.mark.skip(reason="请求地址不存在")
+# @pytest.mark.skip(reason="请求地址不存在")
 @allure.feature('社区console_举报处理')
 class TestCommunityConReportHandle():
     @classmethod
@@ -34,7 +34,7 @@ class TestCommunityConReportHandle():
 
     # @pytest.mark.skip(reason="调试中 ")
     @pytest.mark.parametrize('info',
-                             get_json(BASE_DIR + r"/TestData/test_communitydata/test_Community_conReportHandle.json"))
+                             get_json(BASE_DIR + r"/TestData/testCommunityData/test_Community_conReportHandle.json"))
     def test_Community_conReportHandle(self, info):
         url = console_HTTP + "/api/con_community_report/v1/list"
         header = console_JSON
@@ -43,15 +43,19 @@ class TestCommunityConReportHandle():
         token = {"token": getConsoleLogin_token()}
         headers.update(token)  # 将token更新到headers
         # print(headers)
-
-        # 拼装参数
+        currentPage = info.get("currentPage")
+        pageSize = info.get("pageSize")
+        contentType = info.get("contentType")
+        sort = info.get("sort")
+        handleType = info.get("handleType")
+        handleRemark = info.get("handleRemark")
         paylo = {
-            "currentPage": 20,
-            "pageSize": 1,
-            "type": 1
+            "currentPage": currentPage,
+            "pageSize": pageSize,
+            "contentType": contentType,
+            "sort": sort
         }
-        # paylo = info
-        # print(paylo)
+
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}
         payload1.update(paylo)
@@ -64,16 +68,35 @@ class TestCommunityConReportHandle():
         )
 
         j = r.json()
-        # print(
-        # f"\n请求地址：{url}"
-        # f"\nbody参数：{payload}"
-        # f"\n请求头部参数：{headers}"
-        # f"\n返回数据结果：{j}")
+        print(j)
+        record_listurl = console_HTTP + "/api/con_community_report/v1/record_list"
+
+        # sort = info.get("sort")
+        record_listpaylo = {
+            "currentPage": currentPage,
+            "pageSize": pageSize,
+            "reportId": f"{j.get('data').get('list')[0].get('reportId')}",
+            "sort": sort
+        }
+
+        sign1 = {"sign": get_sign(record_listpaylo)}  # 把参数签名后通过sign1传出来
+        payload1 = {}
+        payload1.update(record_listpaylo)
+        payload1.update(sign1)
+        payload = json.dumps(dict(payload1))
+
+        r = Requests(self.session).post(
+            url=record_listurl, headers=headers, data=payload, title="举报记录"
+        )
+
+        j_list = r.json()
+        # print(j_list)
         handleurl = console_HTTP + "/api/con_community_report/v1/handle"
 
-        # 拼装参数
         paylohandle = {
-            "reportedId": f"{j.get('data').get('list')[0].get('reportedId')}"
+            "reportRecordId": f"{j_list.get('data').get('list')[0].get('reportRecordId')}",
+            "handleType": handleType,
+            "handleRemark": handleRemark
         }
         paylo1 = info
         paylohandle.update(paylo1)
@@ -89,14 +112,20 @@ class TestCommunityConReportHandle():
         )
 
         jhandle = r.json()
-        # print(jhandle)
+        print(jhandle)
 
         assert r.status_code == 200
         try:
-
-            assert jhandle.get("code") == "000000"
-            assert jhandle.get("msg") == "ok"
+            if jhandle.get("code") == "000000":
+                assert jhandle.get("code") == "000000"
+                assert jhandle.get("msg") == "ok"
+            else:
+                assert jhandle.get("msg") == "内容已被处理"
+                assert jhandle.get("code") == "460603"
         except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{jhandle}")
 
-            assert jhandle.get("code") == "460603"
-            assert jhandle.get("msg") == "内容已被处理"

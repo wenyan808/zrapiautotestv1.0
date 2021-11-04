@@ -13,7 +13,7 @@ def get_ConTopicCategoryId(headers: dict, n: int):
     :param n: 下标
     :return: 返回专题id
     """
-    url1 = console_HTTP + "/api/con_topic/v1/list"
+    url1 = console_HTTP + "/api/con_topic/v1/category_list"
 
     paylo = {
     }

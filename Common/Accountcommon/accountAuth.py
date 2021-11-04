@@ -5,8 +5,8 @@ import requests
 from Common.getTestLoginToken import gettestLoginToken, getlogintoken
 from Common.get_payload_headers import get_headers, get_payload
 
-from Common.sign import get_sign
-from Common.tools.read_write_yaml import yamlconfig
+# from Common.sign import get_sign
+# from Common.tools.read_write_yaml import yamlconfig
 # from TestCase.UserRelatedapi.redisfuction import deviceOR
 from glo import http, JSON_dev, user_password
 
@@ -69,19 +69,29 @@ def UserLoginAuth(phone: str, password: str, phoneArea: str, authpwd: str):
     """
     url = http + "/as_trade/api/account/v1/auth"
     url1 = http + "/as_trade/api/account/v1/info"
-    # 拼装参数
+
     token = {"token": getlogintoken(phone, password, phoneArea)}
-    headers1 = get_headers(JSON_dev, token)
-    # print(headers)
+    # print(token)
+    # headers1 = get_headers(JSON_dev, token)
+    headers1 = {}
+    headers1.update(JSON_dev)
+    headers1.update(token)
+    # print(headers1)
     paylo = {}
 
     payload = get_payload(paylo)
 
     r_info = requests.session().post(
-        url=url1, headers=headers1, data=payload
+        url=url1, headers=headers1, json=payload
     )
 
     K = r_info.json()
+    #
+    # print(f"\n请求地址：{url1}"
+    #       f"\nbody参数：{payload}"
+    #       f"\n请求头部参数：{headers1}"
+    #       f"\n返回数据结果：{K}")
+
     clientId = K.get("data").get("clientId")
     password = authpwd
 
@@ -90,12 +100,15 @@ def UserLoginAuth(phone: str, password: str, phoneArea: str, authpwd: str):
         "password": password
     }
 
-    payload = get_payload(body)
+    payload1 = get_payload(body)
 
     r_auth = requests.session().post(
-        url=url, headers=headers1, data=payload
+        url=url, headers=headers1, json=payload1
     )
 
     l = r_auth.json()
-    # print(l)
+    # print(f"\n请求地址：{url}"
+    #       f"\nbody参数：{payload1}"
+    #       f"\n请求头部参数：{headers1}"
+    #       f"\n返回数据结果：{l}")
     return l, headers1, http

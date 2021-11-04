@@ -30,6 +30,7 @@ class TestHSAccountAnalysisStocksIncome():
                                  BASE_DIR + r"/TestData/HSAccountAnalysis/test_HSAccountAnalysis_StocksIncome.json"))
     def test_HSAccountAnalysis_StocksIncome(self, info):
         a = UserLoginAuth("13313313313", "qqq111", phoneArea, "123456")
+        # print(a)
         http = list(a)[-1]
         url = http + "/as_trade/api/analysis/v1/stocks_income"
         headers = list(a)[1]
