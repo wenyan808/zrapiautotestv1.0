@@ -4,11 +4,12 @@ import json
 import allure
 import pytest
 
+from Business.Urlpath.UrlPath_userlogin import UrlPath_send_code, UrlPath_user_login_code
+from Common.register_common import get_registerno
 from Common.send_code import send_code
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
-
 
 from glo import JSON, HTTP, countryCode, phoneArea
 
@@ -25,24 +26,23 @@ class TestUserLoginCode():
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_UserLoginCode(self):
-
-        # 拼装参数
+        # 注册并获取手机号
+        sign_in = list(get_registerno())
+        phone = sign_in[0]
+        # 拼装headers参数
         headers = {}
-        headers.update(JSON)
-        phone = "15816262890"
+        headers.update(sign_in[-1])
+
+        """发送短信"""
         smsCode = "1"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
         # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
         # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
-        url0 = HTTP + "/as_notification/api/sms/v1/send_code"
-        boby = {
-            "phone": phone,
-            "countryCode": countryCode,
-            "smsCode": smsCode
-        }
-        """发送短信"""
-        response_getdata = send_code(url0, headers, boby)
+        url_send_code = HTTP + UrlPath_send_code
+        response_getdata = send_code(url_send_code, headers, phone, smsCode)
+        # 获取短信验证码
         verificationCode = response_getdata.json().get("data")
-        url = HTTP + "/as_user/api/user_account/v1/user_login_code"
+        # 用户验证码登陆
+        url = HTTP + UrlPath_user_login_code
         paylo = {
             "verificationCode": verificationCode,
             "phone": phone,
@@ -62,12 +62,19 @@ class TestUserLoginCode():
         j = r.json()
         # print(j)
         assert r.status_code == 200
-        if j.get("code") == "000000":
+        try:
+            assert j.get("code") == "000000"
             assert j.get("msg") == "ok"
             if "data" in j:
                 assert j.get("data").get("phone") == paylo.get("phone")
                 assert j.get("data").get("phoneArea") == paylo.get("phoneArea")
                 assert "token" in j.get("data")
                 assert "userId" in j.get("data")
-        else:
-            raise ValueError(f"{j}")
+            else:
+                print(j.get("data"))
+        except:
+                raise AssertionError(
+                    f"\n请求地址：{url}"
+                    f"\nbody参数：{payload}"
+                    f"\n请求头部参数：{headers}"
+                    f"\n返回数据结果：{j}")

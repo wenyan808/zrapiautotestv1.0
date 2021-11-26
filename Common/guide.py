@@ -2,10 +2,10 @@ from Common.bacis import common
 from Common.tools.read_xlsx_exampleshuju import shuju
 
 
-def zhuorui(sheet, name,info=""):
+def zhuorui(sheet, name, info=""):
     for i in shuju(sheet):
         if name in i:
-            if info == "" :
+            if info == "":
                 return common(i)
             else:
                 return common(i, info)

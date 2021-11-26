@@ -4,6 +4,7 @@ import json
 import allure
 import pytest
 
+from Business.Urlpath.UrlPath_userlogin import UrlPath_get_by_user_id
 from Common.login import login
 from Common.sign import get_sign
 
@@ -36,7 +37,8 @@ class TestUserGetConsultant():
         headers.update(token)  # 将token更新到headers
         # print(headers)
 
-        url1 = HTTP + "/as_user/api/consultant/v1/get_by_user_id"
+        url1 = HTTP + UrlPath_get_by_user_id
+
         paylo = {}
         sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
         payload1 = {}

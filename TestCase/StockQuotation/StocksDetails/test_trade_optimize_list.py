@@ -6,7 +6,7 @@ from Common.guide import zhuorui
 from Common.login import login
 
 # @allure.feature("查询逐笔成交统计(优化)")
-@pytest.mark.skip(reason="调试中 ")
+@pytest.mark.skip(reason="调试中")
 class TestDetail:
     @classmethod
     def setup_class(cls) -> None:

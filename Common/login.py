@@ -6,6 +6,7 @@
 import json
 import requests
 import glo
+from Business.Urlpath.UrlPath_userlogin import UrlPath_user_login_pwd, UrlPath_send_code, UrlPath_device_next
 from Common.get_time_stamp import get_time_stamp13
 from Common.redisfuction import phoneORpwd
 from Common.tools.md5 import get_md5
@@ -16,7 +17,7 @@ from Common.sign import get_sign
 
 
 def login():
-    print(glo.logi)
+    # print(glo.logi)
     if glo.logi == True:
         write_yaml("login", str(get_time_stamp13()))
         login_common()
@@ -43,7 +44,7 @@ def login_common():
     headers = {}
     headers.update(JSON)
     # 发送post请求
-    response_login = requests.post(HTTP + "/as_user/api/user_account/v1/user_login_pwd", headers=headers, json=json1)
+    response_login = requests.post(HTTP + UrlPath_user_login_pwd, headers=headers, json=json1)
 
     # 当用户登陆的设备和以前不一样,进行验证z3
     if response_login.json().get("code") == "010007" \
@@ -59,7 +60,7 @@ def login_common():
         payload1.update(sign1)
         boby = json.dumps(dict(payload1))
         # 发送post请求
-        response_getdata = requests.post(HTTP + "/as_notification/api/sms/v1/send_device_code", headers=headers,
+        response_getdata = requests.post(HTTP + UrlPath_send_code, headers=headers,
                                          data=boby)
         verificationCode = response_getdata.json().get("data")
         data = {
@@ -74,7 +75,7 @@ def login_common():
         payload1.update(sign1)
         data = json.dumps(dict(payload1))
         # 发送post请求
-        response_gettoken = requests.post(HTTP + "/as_user/api/user_account/v1/device_next", headers=headers, data=data)
+        response_gettoken = requests.post(HTTP + UrlPath_device_next, headers=headers, data=data)
         #  return的公用方法
         returnFunction(response_gettoken)
 
@@ -85,7 +86,7 @@ def login_common():
         # 当账户或者密码次数较多的时候，修改账户密码错误次数
         phoneORpwd(phone)
         # 发送post请求
-        response_login = requests.post(HTTP + "/as_user/api/user_account/v1/user_login_pwd", headers=headers,
+        response_login = requests.post(HTTP + UrlPath_user_login_pwd, headers=headers,
                                        json=json1)
         #  return的公用方法
         returnFunction(response_login)
@@ -144,8 +145,9 @@ def login_all(key, value, password, url, file_name):
         file.write("token: " + res)
     return response_login.json().get("data").get("userId")
 
+
 # login("loginAccount", "test@123.com", "abcd1234567", "http://192.168.1.239:8080/apisC/api/sys_user/v1/login",
 # "token_console")
 # print(login_all("phone", "18379204795", "102522ql",
 #                 "http://192.168.1.241/as_user/api/user_account/v1/user_login_pwd", "token"))
-print(login_common())
+# print(login_common())

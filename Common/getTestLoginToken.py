@@ -4,6 +4,9 @@ import json
 import pytest
 import requests
 
+from Business.Urlpath.UrlPath_userlogin import UrlPath_user_login_pwd, UrlPath_send_code, UrlPath_device_next, \
+    UrlPath_user_login_code, UrlPath_set_login_password
+from Common.send_code import send_code
 from Common.tools.md5 import get_md5
 from glo import http, phone2, pwd2, JSON_dev, HTTP, JSON2, phoneArea, countryCode, BASE_DIR
 from Common.sign import get_sign
@@ -13,9 +16,9 @@ def gettestLoginToken():
     """TEST环境 用户手机号密码登录
     :return: 返回登录token
     """
-    url = http + "/as_user/api/user_account/v1/user_login_pwd"
-    url1 = http + "/as_notification/api/sms/v1/send_code"
-    url2 = http + "/as_user/api/user_account/v1/device_next"
+    url = http + UrlPath_user_login_pwd
+    url_send_code = http + UrlPath_send_code
+    url_device_next = http + UrlPath_device_next
     password = get_md5(pwd2)
     json1 = {
         "phone": phone2,
@@ -35,19 +38,9 @@ def gettestLoginToken():
         smsCode = "6"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
         # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
         # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
-        boby = {
-            "phone": phone2,
-            "countryCode": countryCode,
-            "smsCode": smsCode
-        }
-        sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(boby)
-        payload1.update(sign1)
 
-        boby = json.dumps(dict(payload1))
-        response_getdata = requests.session().post(url=url1, headers=headers,
-                                                   data=boby)
+        """发送短信"""
+        response_getdata = send_code(url_send_code, headers, phone2, smsCode)
 
         verificationCode = response_getdata.json().get("data")
         data = {
@@ -62,7 +55,7 @@ def gettestLoginToken():
         payload1.update(sign1)
 
         data = json.dumps(dict(payload1))
-        response_gettoken = requests.session().post(url=url2, headers=headers,
+        response_gettoken = requests.session().post(url=url_device_next, headers=headers,
                                                     data=data)
 
         res = response_gettoken.json().get("data").get("token")
@@ -82,6 +75,7 @@ def getUserLogincodeToken(phone: str):
     :return: token
     """
     HTTP = http
+    url = HTTP + UrlPath_user_login_code
     # JSON = JSON_dev
     headers = {}
     headers.update(JSON_dev)
@@ -90,23 +84,12 @@ def getUserLogincodeToken(phone: str):
     smsCode = "1"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
     # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
     # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
-    boby = {
-        "phone": phone,
-        "countryCode": countryCode,
-        "smsCode": smsCode
-    }
-    sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
-    payload1 = {}
-    payload1.update(boby)
-    payload1.update(sign1)
 
-    payload = json.dumps(dict(payload1))
-    response_getdata = requests.session().post(
-        url=HTTP + "/as_notification/api/sms/v1/send_code",
-        headers=headers, data=payload
-    )
+    """发送短信"""
+    response_getdata = send_code(HTTP + UrlPath_send_code, headers, phone, smsCode)
+
     verificationCode = response_getdata.json().get("data")
-    url = HTTP + "/as_user/api/user_account/v1/user_login_code"
+
     paylo = {
         "verificationCode": verificationCode,
         "phone": phone,
@@ -130,7 +113,7 @@ def getUserLogincodeToken(phone: str):
         password = "zr123456"
         pwd = get_md5(password)
         businessAccessToken = j.get("data").get("businessAccessToken")
-        url = HTTP + "/as_user/api/user_account/v1/set_login_password"
+        url_setloginpassword = HTTP + UrlPath_set_login_password
         paylo = {
             "loginPassword": pwd,
             "businessAccessToken": businessAccessToken
@@ -143,7 +126,7 @@ def getUserLogincodeToken(phone: str):
         payload = json.dumps(dict(payload1))
 
         response = requests.session().post(
-            url=url, headers=headers, data=payload
+            url=url_setloginpassword, headers=headers, data=payload
         )
         return response.json().get("data").get("token")
 
@@ -162,46 +145,41 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
     :param phoneArea:  地区码
     :return:登录token
     """
-    url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"
-    url1 = HTTP + "/as_notification/api/sms/v1/send_code"
-    url2 = HTTP + "/as_user/api/user_account/v1/device_next"
-
-    pwd = get_md5(password)
+    """接口地址"""
+    url = http + UrlPath_user_login_pwd
+    url_send_code = http + UrlPath_send_code
+    url_device_next = http + UrlPath_device_next
+    """用户使用账号密码登录"""
+    # pwd = get_md5(password)
+    # json参数拼接
     json1 = {
         "phone": phone,
-        "loginPassword": pwd,
+        "loginPassword": get_md5(password),
         "phoneArea": phoneArea
     }
     sign1 = {"sign": get_sign(json1)}
     json1.update(sign1)
+    # headers参数拼接
     headers = {}
     headers.update(JSON_dev)
     # headers = JSON2
-
+    # 用户登录请求
     res_login = requests.session().post(url=url, headers=headers,
                                         json=json1)
     # print(res_login.json())
+    """登录失败，需要设备验证"""
     if res_login.json().get("code") == "010007" \
             or res_login.json().get("msg") == "用户登陆的设备和以前不一样":
         smsCode = "6"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
         # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
         # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
-
-        boby = {
-            "phone": phone,
-            "countryCode": countryCode,
-            "smsCode": smsCode
-        }
-        sign1 = {"sign": get_sign(boby)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(boby)
-        payload1.update(sign1)
-
-        boby = json.dumps(dict(payload1))
-        response_getdata = requests.session().post(url=url1, headers=headers,
-                                                   data=boby)
+        """发送短信"""
+        response_getdata = send_code(url_send_code, headers, phone, smsCode)
         # print(response_getdata.json())
+        """设备验证下一步"""
+        # 获取短信验证码verificationCode
         verificationCode = response_getdata.json().get("data")
+        # data参数拼接
         data = {
             "phone": phone,
             "verificationCode": verificationCode,
@@ -214,9 +192,10 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
         payload1.update(sign1)
 
         data = json.dumps(dict(payload1))
-        response_gettoken = requests.session().post(url=url2, headers=headers,
+        response_gettoken = requests.session().post(url=url_device_next, headers=headers,
                                                     data=data)
         # print(response_gettoken.json())
+        # 获取登录token
         res = res_login.json().get("data").get("token")
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
             file.write("token: " + str(res))
@@ -224,6 +203,7 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
         return res
 
     else:
+        # 如果登陆成功，直接到这里并获取登录token
         res = res_login.json().get("data").get("token")
         with open(BASE_DIR + r'/TestData/token.yaml', 'w') as file:
             file.write("token: " + str(res))
@@ -231,4 +211,5 @@ def getlogintoken(phone: str, password: str, phoneArea: str):
         return res
 
 
-print(getlogintoken("13313313313", "qqq111", "86"))
+# print(getlogintoken("18727087210", "123456789", "86"))
+# print(getlogintoken("15816430500", "zr123456", "86"))

@@ -8,6 +8,7 @@ from Common.get_payload_headers import get_headers, get_payload
 # from Common.sign import get_sign
 # from Common.tools.read_write_yaml import yamlconfig
 # from TestCase.UserRelatedapi.redisfuction import deviceOR
+from Common.tools.get_gmssl import get_sm2
 from glo import http, JSON_dev, user_password
 
 
@@ -41,7 +42,7 @@ def AccountAuth():
 
     body = {
         "clientId": clientId,
-        "password": user_password
+        "password": get_sm2(user_password)
     }
 
     payload = get_payload(body)
@@ -97,7 +98,7 @@ def UserLoginAuth(phone: str, password: str, phoneArea: str, authpwd: str):
 
     body = {
         "clientId": clientId,
-        "password": password
+        "password": get_sm2(password)
     }
 
     payload1 = get_payload(body)

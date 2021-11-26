@@ -11,6 +11,7 @@ import json
 import allure
 import pytest
 
+from Business.Urlpath.UrlPath_userlogin import UrlPath_refresh_token
 from Common.getTestLoginToken import getlogintoken
 from Common.sign import get_sign
 
@@ -46,7 +47,7 @@ class TestRefreshToken():
         token = {"token": headers_token}
         # print(type(token))
         headers1.update(token)  # 将token更新到headers
-        url_token = HTTP + "/as_user/api/user_account/v1/refresh_token"
+        url_token = HTTP + UrlPath_refresh_token
         paylo_token = {}
         sign2 = {"sign": get_sign(paylo_token)}  # 把参数签名后通过sign1传出来
         payload2 = {}

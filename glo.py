@@ -4,15 +4,17 @@ from typing import Union
 from Common.get_uuid import get_uuid
 from Common.glo_pass_word import set_value
 
+flag = True
+logi = True  # 登录使用
 set_value("123456")
+BASE_DIR: Union[bytes, str] = os.path.dirname(os.path.abspath(__file__))
 FALG = True  # 社区，如果为True则不执行time.sleep(),反之则执行
 # headPhoto = "http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/" \
 #             "head_photo/images/2021/01/11/16103477341540274.jpeg"
 headPhoto = 'http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/' \
             'head_photo/images/2021/01/11/16103477341540274.jpeg'  # 用户头像发生变化，请在这里修改头像地址
-BASE_DIR: Union[bytes, str] = os.path.dirname(os.path.abspath(__file__))
-flag = True
-logi = True  # 登录使用
+
+
 # 测试环境地址管理：
 HTTP = http = "http://192.168.1.241"
 # http = "http://192.168.1.241"
@@ -42,7 +44,7 @@ testendpassword = ""
 
 # 测试环境已开户账号管理
 # 登录密码管理
-user_password = passwords2 = passwords3 = passwords4 = passwords5 = "123456"  # 卓锐行情交易密码
+user_password = passwords2 = passwords3 = passwords4 = passwords5 = b"123456"  # 卓锐行情交易密码
 pwd1 = pwd2 = pwd3 = pwd4 = pwd5 = "zr123456"  # login密码(统一密码)
 newPhoneArea = phoneArea = "86"  # 手机号地区
 countryCode = "86"  # 国家码 CH("86", "内地"),HK("852", "香港"),MACAO("853", "澳门"),TAIWAN("886", "台湾"),
@@ -99,7 +101,7 @@ console_JSON = {
 
 JSON = {
     "Content-Type": "application/json",
-    "appVersion": '0.3.6',
+    "appVersion": '0.3.8',
     "deviceId": "d41b071ca83ece28",
     "deviceModel": "vivo+X9i",
     "deviceName": "vivo+X9i",
@@ -110,7 +112,7 @@ JSON = {
 
 JSON1 = {
     "Content-Type": "application/json",
-    "appVersion": '0.3.6',
+    "appVersion": '0.3.8',
     "deviceId": "F5331CA3-834C-455B-A84A-6D1E94B295EE",
     "deviceModel": "iPhone%2011",
     "deviceName": "iPhone",
@@ -121,7 +123,7 @@ JSON1 = {
 
 JSON2 = {
     "Content-Type": "application/json",
-    "appVersion": '0.3.6',
+    "appVersion": '0.3.8',
     "deviceId": "e8cf940f5b712be3",
     "deviceModel": "PBBM30",
     "deviceName": "OPPO+A5",
@@ -131,7 +133,7 @@ JSON2 = {
 }
 JSON3 = {
     "Content-Type": "application/json",
-    "appVersion": '0.3.6',
+    "appVersion": '0.3.8',
     "deviceId": "8556915E-DBE1-4476-91DB-CA0119517998",
     "deviceModel": "iPhone",
     "deviceName": "iPhone",
@@ -152,7 +154,7 @@ userId = "fa2022cf17064889a6cc7e4dce8c988b"
 
 JSON_dev = {
     "Content-Type": "application/json",
-    "appVersion": '0.3.6',
+    "appVersion": '0.3.8',
     "deviceId": "F5331CA3-834C-455B-A84A-6D1E94B295FE",
     "deviceModel": "iPhone%2012",
     "deviceName": "%E5%91%A8%E7%85%9C%E7%9A%84iPhone",

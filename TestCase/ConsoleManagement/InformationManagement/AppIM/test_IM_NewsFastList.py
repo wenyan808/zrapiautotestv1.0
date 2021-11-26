@@ -6,6 +6,7 @@ import allure
 import pytest
 
 from Common.getConsoleLogin import getConsoleLogin_token
+from Common.getTestLoginToken import gettestLoginToken
 
 from Common.sign import get_sign
 
@@ -32,7 +33,7 @@ class TestIMNewsFastList():
         url = HTTP + "/as_stock_information/api/news/v1/fast_list"
         headers = {}
         headers.update(JSON)
-        token = {"token": getConsoleLogin_token()}
+        token = {"token": gettestLoginToken()}
         headers.update(token)  # 将token更新到headers
         # print(headers)
 

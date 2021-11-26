@@ -1,32 +1,2502 @@
 [
   {
+    "ts": "HK",
+    "code": "50195",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "54126",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "69654",
+    "type": 4
+  },
+  {
+    "ts": "SH",
+    "code": "603385",
+    "type": 38
+  },
+  {
     "ts": "US",
-    "code": "AAPL",
+    "code": "RDHL",
+    "type": 20
+  },
+  {
+    "ts": "HK",
+    "code": "51104",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "FPE",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "12399",
+    "type": 111
+  },
+  {
+    "ts": "SH",
+    "code": "600489",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "51316",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "00661",
+    "type": 105
+  },
+  {
+    "ts": "SZ",
+    "code": "300905",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "61653",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "67261",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "20027",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "69962",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "16680",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "CQP",
+    "type": 25
+  },
+  {
+    "ts": "HK",
+    "code": "18092",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "ZOM",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "55817",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "13466",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "67137",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "22886",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "00132",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "20833",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "53231",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "53145",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "HYLS",
+    "type": 30
+  },
+  {
+    "ts": "SZ",
+    "code": "000425",
+    "type": 38
+  },
+  {
+    "ts": "US",
+    "code": "COCP",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "CFV",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "HSIC",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "SRL",
+    "type": 23
+  },
+  {
+    "ts": "HK",
+    "code": "63523",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "SYG",
+    "type": 3
+  },
+  {
+    "ts": "HK",
+    "code": "61864",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "69817",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "54349",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "66911",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "TSC",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "20796",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "62274",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "MDCP",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "27264",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "LYFE",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "61893",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "26790",
+    "type": 111
+  },
+  {
+    "ts": "SH",
+    "code": "601229",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "01680",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "59056",
+    "type": 112
+  },
+  {
+    "ts": "SZ",
+    "code": "002967",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "02788",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "19096",
+    "type": 111
+  },
+  {
+    "ts": "SZ",
+    "code": "002958",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "67719",
+    "type": 112
+  },
+  {
+    "ts": "SZ",
+    "code": "300533",
+    "type": 38
+  },
+  {
+    "ts": "US",
+    "code": "NSS",
+    "type": 26
+  },
+  {
+    "ts": "HK",
+    "code": "50866",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "61481",
+    "type": 4
+  },
+  {
+    "ts": "SZ",
+    "code": "300979",
+    "type": 38
+  },
+  {
+    "ts": "US",
+    "code": "FILL",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "63511",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "00668",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "58340",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "FHN-A",
     "type": 2
   },
   {
     "ts": "HK",
-    "code": "00700",
-    "type": 2
+    "code": "55526",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "17873",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "68084",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "56347",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "AVY",
+    "type": 22
   },
   {
     "ts": "SH",
-    "code": "600436",
+    "code": "600657",
+    "type": 38
+  },
+  {
+    "ts": "US",
+    "code": "QRTBV",
     "type": 2
+  },
+  {
+    "ts": "HK",
+    "code": "18158",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "64203",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "RNET",
+    "type": 2
+  },
+  {
+    "ts": "HK",
+    "code": "64133",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "29951",
+    "type": 111
+  },
+  {
+    "ts": "SH",
+    "code": "603662",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "26378",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "JBHT",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "50743",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "CM",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "01221",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "20343",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "AJX",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "VCKA",
+    "type": 23
+  },
+  {
+    "ts": "HK",
+    "code": "25334",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "NP",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "UNAM",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "GNTX",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "55687",
+    "type": 112
+  },
+  {
+    "ts": "SH",
+    "code": "688622",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "56203",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "08367",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "23656",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "54061",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "51512",
+    "type": 4
   },
   {
     "ts": "SZ",
-    "code": "000333",
-    "type": 2
+    "code": "000636",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "64590",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "53318",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "17256",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "59626",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "03369",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "11945",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "02148",
+    "type": 105
+  },
+  {
+    "ts": "SZ",
+    "code": "300167",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "22556",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "55430",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "53482",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "EWC",
+    "type": 30
+  },
+  {
+    "ts": "US",
+    "code": "BSJT",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "61291",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "68558",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "24510",
+    "type": 111
+  },
+  {
+    "ts": "SZ",
+    "code": "002962",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "01675",
+    "type": 105
+  },
+  {
+    "ts": "US",
+    "code": "SRCL",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "62716",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "68067",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "ALDX",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "JSML",
+    "type": 30
+  },
+  {
+    "ts": "US",
+    "code": "LTHM",
+    "type": 22
+  },
+  {
+    "ts": "SZ",
+    "code": "300967",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "61477",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "02886",
+    "type": 105
   },
   {
     "ts": "SH",
-    "code": "600519",
+    "code": "600231",
+    "type": 38
+  },
+  {
+    "ts": "US",
+    "code": "FELE",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "CBL-D",
     "type": 2
   },
   {
+    "ts": "HK",
+    "code": "66251",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "53861",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "11304",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "63092",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "60481",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "67885",
+    "type": 112
+  },
+  {
+    "ts": "SZ",
+    "code": "301041",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "08249",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "01841",
+    "type": 105
+  },
+  {
+    "ts": "US",
+    "code": "QFIN",
+    "type": 20
+  },
+  {
+    "ts": "HK",
+    "code": "58055",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "53751",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "57527",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "BSCL",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "64051",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "27242",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "09801",
+    "type": 11
+  },
+  {
+    "ts": "HK",
+    "code": "65489",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "CVLT",
+    "type": 22
+  },
+  {
+    "ts": "SZ",
+    "code": "300235",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "52664",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "66985",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "23811",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "03141",
+    "type": 12
+  },
+  {
+    "ts": "HK",
+    "code": "57509",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "SJIV",
+    "type": 27
+  },
+  {
+    "ts": "SZ",
+    "code": "002111",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "56831",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "58136",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "52152",
+    "type": 4
+  },
+  {
+    "ts": "SZ",
+    "code": "300051",
+    "type": 38
+  },
+  {
     "ts": "SH",
-    "code": "600887",
+    "code": "600025",
+    "type": 38
+  },
+  {
+    "ts": "US",
+    "code": "RBBN",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "HBANP",
+    "type": 28
+  },
+  {
+    "ts": "HK",
+    "code": "65885",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "52840",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "12275",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "TXN",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "21172",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "00988",
+    "type": 105
+  },
+  {
+    "ts": "US",
+    "code": "CDZIP",
+    "type": 28
+  },
+  {
+    "ts": "SZ",
+    "code": "000921",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "24987",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "56229",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "69627",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "16350",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "ORRF",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "BGSX=",
+    "type": 27
+  },
+  {
+    "ts": "SH",
+    "code": "605033",
+    "type": 38
+  },
+  {
+    "ts": "SZ",
+    "code": "300286",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "19259",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "PBFX",
+    "type": 25
+  },
+  {
+    "ts": "HK",
+    "code": "61018",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "68092",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "08096",
+    "type": 105
+  },
+  {
+    "ts": "US",
+    "code": "IAUM",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "08053",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "55967",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "MCD",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "59873",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "13089",
+    "type": 111
+  },
+  {
+    "ts": "SH",
+    "code": "600676",
+    "type": 38
+  },
+  {
+    "ts": "US",
+    "code": "STRR",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "68666",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "CPRI",
+    "type": 23
+  },
+  {
+    "ts": "HK",
+    "code": "26054",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "64704",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "54367",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "25556",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "57842",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "29574",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "TFLO",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "25173",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "13870",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "DLTH",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "50258",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "16498",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "20721",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "17635",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "BASI",
     "type": 2
+  },
+  {
+    "ts": "US",
+    "code": "VSPR",
+    "type": 2
+  },
+  {
+    "ts": "US",
+    "code": "FEDX",
+    "type": 30
+  },
+  {
+    "ts": "SZ",
+    "code": "300112",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "60115",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "59588",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "ROIC",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "META",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "53143",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "57027",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "00079",
+    "type": 105
+  },
+  {
+    "ts": "US",
+    "code": "FIVG",
+    "type": 30
+  },
+  {
+    "ts": "SZ",
+    "code": "300935",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "61321",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "63345",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "53769",
+    "type": 4
+  },
+  {
+    "ts": "SZ",
+    "code": "300636",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "69721",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "10258",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "68045",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "15393",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "17444",
+    "type": 111
+  },
+  {
+    "ts": "SH",
+    "code": "603535",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "25015",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "26363",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "FRG",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "18528",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "CGNT",
+    "type": 23
+  },
+  {
+    "ts": "HK",
+    "code": "01317",
+    "type": 105
+  },
+  {
+    "ts": "US",
+    "code": "GAMR",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "24623",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "68952",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "52019",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "54157",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "53003",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "17335",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "16650",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "53800",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "SLQD",
+    "type": 30
+  },
+  {
+    "ts": "SZ",
+    "code": "399382",
+    "type": 67
+  },
+  {
+    "ts": "US",
+    "code": "RYAN",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "DAUD",
+    "type": 2
+  },
+  {
+    "ts": "HK",
+    "code": "22625",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "08195",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "08032",
+    "type": 105
+  },
+  {
+    "ts": "SZ",
+    "code": "002372",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "66530",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "57490",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "16055",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "62980",
+    "type": 112
+  },
+  {
+    "ts": "SH",
+    "code": "688256",
+    "type": 38
+  },
+  {
+    "ts": "US",
+    "code": "RVAC",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "16871",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "RPTX",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "24430",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "26571",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "67363",
+    "type": 4
+  },
+  {
+    "ts": "SZ",
+    "code": "002167",
+    "type": 38
+  },
+  {
+    "ts": "SZ",
+    "code": "000976",
+    "type": 38
+  },
+  {
+    "ts": "US",
+    "code": "OZON",
+    "type": 20
+  },
+  {
+    "ts": "HK",
+    "code": "28997",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "16815",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "HCI",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "TAN",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "56897",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "28875",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "15503",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "HLT",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "OXUSU",
+    "type": 27
+  },
+  {
+    "ts": "HK",
+    "code": "09939",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "01247",
+    "type": 105
+  },
+  {
+    "ts": "US",
+    "code": "CACI",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "IBDP",
+    "type": 30
+  },
+  {
+    "ts": "SZ",
+    "code": "300150",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "57906",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "ECOW",
+    "type": 30
+  },
+  {
+    "ts": "US",
+    "code": "IPV=",
+    "type": 2
+  },
+  {
+    "ts": "HK",
+    "code": "57631",
+    "type": 4
+  },
+  {
+    "ts": "SZ",
+    "code": "002091",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "67348",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "28521",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "68404",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "GATEU",
+    "type": 27
+  },
+  {
+    "ts": "HK",
+    "code": "23220",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "HZON",
+    "type": 23
+  },
+  {
+    "ts": "HK",
+    "code": "63916",
+    "type": 112
+  },
+  {
+    "ts": "SH",
+    "code": "605198",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "56044",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "65001",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "PMAR",
+    "type": 30
+  },
+  {
+    "ts": "US",
+    "code": "ESMT",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "25106",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "TRTX",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "56360",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "54859",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "55715",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "AXO",
+    "type": 2
+  },
+  {
+    "ts": "US",
+    "code": "JAQC",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "WLFC",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "22785",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "58987",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "NFYS=",
+    "type": 27
+  },
+  {
+    "ts": "SH",
+    "code": "605003",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "63346",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "28972",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "22518",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "EBAY",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "25520",
+    "type": 111
+  },
+  {
+    "ts": "SZ",
+    "code": "002209",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "26234",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "ARES-A",
+    "type": 2
+  },
+  {
+    "ts": "HK",
+    "code": "50628",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "09078",
+    "type": 12
+  },
+  {
+    "ts": "US",
+    "code": "HCAQ",
+    "type": 23
+  },
+  {
+    "ts": "US",
+    "code": "AVTE",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "16142",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "FVRR",
+    "type": 23
+  },
+  {
+    "ts": "HK",
+    "code": "63549",
+    "type": 112
+  },
+  {
+    "ts": "SZ",
+    "code": "000608",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "67974",
+    "type": 4
+  },
+  {
+    "ts": "SH",
+    "code": "603378",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "20025",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "50931",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "65362",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "PLYA",
+    "type": 23
+  },
+  {
+    "ts": "HK",
+    "code": "29112",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "00440",
+    "type": 105
+  },
+  {
+    "ts": "US",
+    "code": "NGCA",
+    "type": 23
+  },
+  {
+    "ts": "US",
+    "code": "XDOC",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "24098",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "APTO",
+    "type": 22
+  },
+  {
+    "ts": "SZ",
+    "code": "300245",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "28302",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "22463",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "66617",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "EUSB",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "14707",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "EFT",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "50221",
+    "type": 4
+  },
+  {
+    "ts": "SH",
+    "code": "000075",
+    "type": 97
+  },
+  {
+    "ts": "HK",
+    "code": "23683",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "82805",
+    "type": 11
+  },
+  {
+    "ts": "HK",
+    "code": "15408",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "58682",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "09987",
+    "type": 105
+  },
+  {
+    "ts": "US",
+    "code": "PULM",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "52835",
+    "type": 4
+  },
+  {
+    "ts": "SH",
+    "code": "600477",
+    "type": 38
+  },
+  {
+    "ts": "US",
+    "code": "PRCH",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "22721",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "62867",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "SNV-D",
+    "type": 28
+  },
+  {
+    "ts": "HK",
+    "code": "66870",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "01773",
+    "type": 105
+  },
+  {
+    "ts": "SH",
+    "code": "600928",
+    "type": 38
+  },
+  {
+    "ts": "SZ",
+    "code": "002415",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "58853",
+    "type": 4
+  },
+  {
+    "ts": "SH",
+    "code": "605580",
+    "type": 38
+  },
+  {
+    "ts": "US",
+    "code": "SILX",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "03866",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "51592",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "58451",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "64235",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "55211",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "26852",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "21262",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "09961",
+    "type": 105
+  },
+  {
+    "ts": "SH",
+    "code": "600172",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "53531",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "58531",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "BKMC",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "08429",
+    "type": 105
+  },
+  {
+    "ts": "US",
+    "code": "ESGG",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "58615",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "25243",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "SHBI",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "GETVV",
+    "type": 20
+  },
+  {
+    "ts": "US",
+    "code": "NWE",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "55491",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "STXB",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "24910",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "60395",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "53264",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "WCC-A",
+    "type": 28
+  },
+  {
+    "ts": "US",
+    "code": "RF-E",
+    "type": 28
+  },
+  {
+    "ts": "US",
+    "code": "BRLT",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "CHCI",
+    "type": 22
+  },
+  {
+    "ts": "SZ",
+    "code": "000400",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "24975",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "EVG",
+    "type": 24
+  },
+  {
+    "ts": "HK",
+    "code": "64613",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "28236",
+    "type": 111
+  },
+  {
+    "ts": "SZ",
+    "code": "002322",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "17658",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "54332",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "56655",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "IX",
+    "type": 20
+  },
+  {
+    "ts": "US",
+    "code": "BJUN",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "17507",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "66053",
+    "type": 4
+  },
+  {
+    "ts": "SZ",
+    "code": "002140",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "56470",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "EPU",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "57932",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "RFCI",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "18453",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "GGM",
+    "type": 24
+  },
+  {
+    "ts": "HK",
+    "code": "15390",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "TWNK",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "55977",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "19484",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "29694",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "FEDL",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "62071",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "SVAL",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "17918",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "57226",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "TIOAU",
+    "type": 27
+  },
+  {
+    "ts": "US",
+    "code": "TINVU",
+    "type": 2
+  },
+  {
+    "ts": "HK",
+    "code": "06100",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "50679",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "51980",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "DNUT",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "OAC=",
+    "type": 2
+  },
+  {
+    "ts": "HK",
+    "code": "65123",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "26494",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "63872",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "ARRW",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "50484",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "28800",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "83001",
+    "type": 12
+  },
+  {
+    "ts": "HK",
+    "code": "29370",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "65688",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "FORE",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "AHT-F",
+    "type": 28
+  },
+  {
+    "ts": "HK",
+    "code": "60679",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "AMNB",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "50914",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "24809",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "IEC",
+    "type": 2
+  },
+  {
+    "ts": "US",
+    "code": "OFSSI",
+    "type": 26
+  },
+  {
+    "ts": "HK",
+    "code": "58317",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "UJAN",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "19144",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "11069",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "VPL",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "67075",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "53396",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "16589",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "GNAC",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "67063",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "24164",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "59195",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "PFDR",
+    "type": 23
+  },
+  {
+    "ts": "HK",
+    "code": "29219",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "20588",
+    "type": 111
+  },
+  {
+    "ts": "US",
+    "code": "GNFT",
+    "type": 20
+  },
+  {
+    "ts": "US",
+    "code": "IRNT",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "50223",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "29244",
+    "type": 111
+  },
+  {
+    "ts": "SH",
+    "code": "000050",
+    "type": 97
+  },
+  {
+    "ts": "US",
+    "code": "LXU",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "VBFC",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "VCLO",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "19491",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "56998",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "PAVM",
+    "type": 22
+  },
+  {
+    "ts": "US",
+    "code": "CNET",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "01845",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "15789",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "16175",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "24461",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "01540",
+    "type": 105
+  },
+  {
+    "ts": "US",
+    "code": "ESG",
+    "type": 30
+  },
+  {
+    "ts": "SH",
+    "code": "600397",
+    "type": 38
+  },
+  {
+    "ts": "HK",
+    "code": "55026",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "00196",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "51977",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "28415",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "55418",
+    "type": 4
+  },
+  {
+    "ts": "US",
+    "code": "ACIO",
+    "type": 30
+  },
+  {
+    "ts": "US",
+    "code": "BCE",
+    "type": 22
+  },
+  {
+    "ts": "HK",
+    "code": "60403",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "SRTY",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "67720",
+    "type": 4
+  },
+  {
+    "ts": "HK",
+    "code": "00567",
+    "type": 105
+  },
+  {
+    "ts": "HK",
+    "code": "16059",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "12921",
+    "type": 111
+  },
+  {
+    "ts": "HK",
+    "code": "62028",
+    "type": 112
+  },
+  {
+    "ts": "US",
+    "code": "ERUS",
+    "type": 30
+  },
+  {
+    "ts": "HK",
+    "code": "61444",
+    "type": 112
+  },
+  {
+    "ts": "HK",
+    "code": "53728",
+    "type": 112
   }
 ]

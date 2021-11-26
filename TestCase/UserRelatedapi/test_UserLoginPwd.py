@@ -4,6 +4,8 @@ import json
 import allure
 import pytest
 
+from Business.Urlpath.UrlPath_userlogin import UrlPath_user_login_pwd
+from Common.register_common import get_registerno
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
@@ -25,13 +27,18 @@ class TestUserLoginPwd():
 
     # @pytest.mark.skip(reason="调试中 ")
     def test_UserLoginPwd(self):
-        # 拼装参数
+        # 用户密码登录url
+        url = HTTP + UrlPath_user_login_pwd
+        # 注册并获取手机号
+        sign_in = list(get_registerno())
+        phone = sign_in[0]
+        # 拼装headers参数
         headers = {}
-        headers.update(JSON)
+        headers.update(sign_in[-1])
 
-        phone = "13321165200"
+        # phone = "13321165200"
         password = pwd1
-        url = HTTP + "/as_user/api/user_account/v1/user_login_pwd"
+
         paylo = {
             "loginPassword": get_md5(password),
             "phone": phone,
@@ -51,12 +58,17 @@ class TestUserLoginPwd():
         j = r.json()
         # print(j)
         assert r.status_code == 200
-        if j.get("code") == "000000":
+        try:
+            assert j.get("code") == "000000"
             assert j.get("msg") == "ok"
             if "data" in j:
                 assert j.get("data").get("phone") == paylo.get("phone")
                 assert j.get("data").get("phoneArea") == paylo.get("phoneArea")
                 assert "token" in j.get("data")
                 assert "userId" in j.get("data")
-        else:
-            raise ValueError(f"{j}")
+        except:
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}")
