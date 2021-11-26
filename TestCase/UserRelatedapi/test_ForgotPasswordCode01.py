@@ -9,6 +9,7 @@ import json
 
 import allure
 
+from Business.Urlpath.UrlPath_userlogin import UrlPath_send_code, UrlPath_forgot_password_code
 from Common.send_code import send_code
 from Common.sign import get_sign
 
@@ -41,20 +42,15 @@ class TestForgotPasswordCode01():
         smsCode = "2"  # /*** 登录*/LOGIN("1"),/*** 忘记密码*/FORGET("2"),/*** 更换手机号-旧手机号*/PHONE_OLD("3"),
         # /*** 更换手机号-新手机号*/PHONE_NEW("4"),/*** 修改密码*/UPDATE_PASSWORD("5"),/*** 设备认证*/DEVICE("6"),
         # /*** 绑定第三方登录短信验证*/BIND_DEVICE("7");
-        url = HTTP + "/as_notification/api/sms/v1/send_code"
-        boby = {
-            "phone": phone,
-            "countryCode": countryCode,
-            "smsCode": smsCode
-        }
+        url_send_code = HTTP + UrlPath_send_code
         """发送短信"""
-        response_getdata = send_code(url, headers, boby)
+        response_getdata = send_code(url_send_code, headers, phone, smsCode)
         if "data" in response_getdata.json():
             verificationCode = response_getdata.json().get("data")
         else:
             verificationCode = "123456"
 
-        url1 = HTTP + "/as_user/api/user_account/v1/forgot_password_code"
+        url_forgot_password_code = HTTP + UrlPath_forgot_password_code
         paylo = {
             "verificationCode": verificationCode,
             "phone": phone,
@@ -68,7 +64,7 @@ class TestForgotPasswordCode01():
         payload = json.dumps(dict(payload1))
 
         r = Requests(self.session).post(
-            url=url1, headers=headers, data=payload, title="忘记登录密码-第一步"
+            url=url_forgot_password_code, headers=headers, data=payload, title="忘记登录密码-第一步"
         )
 
         j = r.json()
