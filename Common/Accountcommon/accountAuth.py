@@ -5,10 +5,9 @@ import requests
 from Common.getTestLoginToken import gettestLoginToken, getlogintoken
 from Common.get_payload_headers import get_headers, get_payload
 
-# from Common.sign import get_sign
-# from Common.tools.read_write_yaml import yamlconfig
-# from TestCase.UserRelatedapi.redisfuction import deviceOR
+from Common.sign import get_sign
 from Common.tools.get_gmssl import get_sm2
+
 from glo import http, JSON_dev, user_password
 
 
@@ -20,7 +19,6 @@ def AccountAuth():
     url = http + "/as_trade/api/account/v1/auth"
     url1 = http + "/as_trade/api/account/v1/info"
     # 拼装参数
-
     token = {"token": gettestLoginToken()}
     headers = get_headers(JSON_dev, token)
     # print(headers)
@@ -46,6 +44,8 @@ def AccountAuth():
     }
 
     payload = get_payload(body)
+
+    # print(payload)
     r_auth = requests.session().post(
         url=url, headers=headers, json=payload
     )
