@@ -43,16 +43,19 @@ class TestHSChuRuJinFundWithdraw():
         withdrawType = info.get("withdrawType")  # 出金方式 1-普通出金 2-银证转账
         occurBalance = info.get("occurBalance")  # 提款金额
         moneyType = info.get("moneyType")  # 货币类型 HKD/USD/CNY
-
+        print(get_fund_withdraw(http, headers))
         if len(get_fund_withdraw(http, headers).get("data")) != 0:
             clientBankId = get_fund_withdraw(http, headers).get("data")[0].get("id")  # 用户绑定银行账户id
+            print(clientBankId)
         else:
+            # 为空则新增银行卡
             img_name3 = "zhanghupingzheng.jpg"
             img_name4 = "zhanghupingzheng2.JPG"
             catalog = "/Business/UserFileUp/"
             b1_imgurl = list(oss_img("open", img_name3, userId, catalog, url2, headers))[-1]
             b2_imgurl = list(oss_img("open", img_name4, userId, catalog, url2, headers))[-1]
             bankAccountDocument = f"{b1_imgurl}|{b2_imgurl}"  # 上传银行账户凭证url 多张图片以|分隔
+            # 获取银行id
             bindBankId = get_fund_withdraw(http, headers).get("data")[0].get("bindBankId")
             # 新增银行卡
             add_save_bank(http, headers, bankAccountDocument, bindBankId, 0, 0)
@@ -83,7 +86,10 @@ class TestHSChuRuJinFundWithdraw():
 
         j = r.json()
 
-        # print(j)
+        print(f"\n请求地址：{url}"
+                f"\nbody参数：{payload2}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}")
         assert r.status_code == 200
         try:
             assert j.get("msg") == 'ok'

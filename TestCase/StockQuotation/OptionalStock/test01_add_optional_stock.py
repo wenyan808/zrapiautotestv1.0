@@ -50,7 +50,7 @@ class TestAddOptionalStock:
     @allure.story('添加自选股_HK大盘')
     def test_add_HK(self):
         response = zhuorui('自选股', '添加自选股_HK大盘')
-        print(response.json())
+        # print(response.json())
         assert_data(response, '000000', 'ok')
 
     @allure.story('添加自选股_HK个股')

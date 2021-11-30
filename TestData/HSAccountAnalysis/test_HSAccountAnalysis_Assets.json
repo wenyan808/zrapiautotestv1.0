@@ -1,50 +1,8 @@
 [
   {
     "startDate": "2021-01-01",
-    "endDate": "2021-05-17",
+    "endDate": "2021-11-30",
     "market": 1,
     "moneyType": "HKD"
-  },
-  {
-    "startDate": "2021-01-01",
-    "endDate": "2021-05-17",
-    "market": 2,
-    "moneyType": "USD"
-  },
-  {
-    "startDate": "2021-01-01",
-    "endDate": "2021-05-17",
-    "market": 3,
-    "moneyType": "CNY"
-  },
-  {
-    "startDate": "2021-01-01",
-    "endDate": "2021-05-17",
-    "market": null,
-    "moneyType": "CNY"
-  },
-  {
-    "startDate": "2021-01-01",
-    "endDate": null,
-    "market": 3,
-    "moneyType": "CNY"
-  },
-  {
-    "startDate": null,
-    "endDate": null,
-    "market": 1,
-    "moneyType": "HKD"
-  },
-  {
-    "startDate": "2021-01-01",
-    "endDate": "2021-05-17",
-    "market": null,
-    "moneyType": "HKD"
-  },
-  {
-    "startDate": "2021-01-01",
-    "endDate": "2021-05-17",
-    "market": null,
-    "moneyType": "USD"
   }
 ]

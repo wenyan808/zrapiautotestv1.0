@@ -35,10 +35,11 @@ class TestHSAccountAnalysisAssets():
     @pytest.mark.parametrize('info',
                              get_json(BASE_DIR + r"/TestData/HSAccountAnalysis/test_HSAccountAnalysis_Assets.json"))
     def test_HSAccountAnalysis_Assets(self, info):
-        http = list(AccountAuth())[-1]
+        Auth_list = list(AccountAuth())
+        http = Auth_list[-1]
         url = http + "/as_trade/api/analysis/v1/assets"
         # 拼装参数
-        headers = list(AccountAuth())[1]
+        headers = Auth_list[1]
         if info.get("startDate") == None and info.get("endDate") == None:
             market = info.get("market")  # 市场类型，（1-港 2-美 3-A，不传查询综合账户分析）
             moneyType = info.get(
@@ -101,8 +102,9 @@ class TestHSAccountAnalysisAssets():
         # print(j)
         assert r_info.status_code == 200
         try:
-            assert j.get("code") == "000000"
             assert j.get("msg") == 'ok'
+            assert j.get("code") == "000000"
+
         except:
             raise AssertionError(
                 f"\n请求地址：{url}"

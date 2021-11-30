@@ -14,7 +14,6 @@ FALG = True  # 社区，如果为True则不执行time.sleep(),反之则执行
 headPhoto = 'http://zhuorui-public-test.oss-cn-shenzhen.aliyuncs.com/' \
             'head_photo/images/2021/01/11/16103477341540274.jpeg'  # 用户头像发生变化，请在这里修改头像地址
 
-
 # 测试环境地址管理：
 HTTP = http = "http://192.168.1.241"
 # http = "http://192.168.1.241"
@@ -60,7 +59,7 @@ nickname1 = '卓锐测试一号'  # 卓锐用户昵称
 userId1 = "f3d9c946caf842fdbddd1c748ce7163a"
 
 # 手机号2用于公用的登录认证
-phone2 = "15816263996"  # login手机号
+phone2 = "15816268899"  # login手机号
 # pwd2 = "zr123456"  # login密码
 clientId2 = "3090959308"
 # passwords2 = "123456"  # 卓锐行情交易密码
@@ -187,16 +186,23 @@ consoledev_JSON = {
 # # 预发布环境地址管理：
 # HTTP = "https://ngpre.zr66.com"
 # http = "https://ngpre.zr66.com"
-#
+# # 预发布环境地址管理：
 # console_HTTP = "https://h5pre.zr66.com/zhuorui_console_pre"
-# # 预发布环境账户管理：
+# # 预发布环境登录交易密码管理：
+# login_password = pwd = pwd1 = pwd2 = pwd3 = pwd4 = "zr123456"
+# # 预发布环境行情交易密码管理：
+# market_passwords = user_password = passwords2 = passwords3 = passwords4 = b"123456"  # 卓锐行情交易密码
+# # 预发布环境console账户管理：
 # loginAccount = "yishouquan"
 # password = "abcd123456"
-# # 预发布环境未开户帐号（手机号密码管理）：
-# phone = "15816261688"  # 手机号
-# pwd = "zr123456"  # 密码
-# zrNo = '51576693'  # 卓锐号
-# nickname = '卓锐用户51576693'  # 卓锐用户昵称
+# # 预发布环境国家/地区管理
+# countryCode = "86"
+# phoneArea = "86"
+# # 预发布环境帐号管理（手机号密码管理）：
+# phone = "13794816115"  # 手机号
+# # pwd = "zr123456"  # 密码
+# zrNo = '32552983'  # 卓锐号
+# nickname = '钟大链'  # 卓锐用户昵称
 #
 # # 预发布环境开户登录账号（修改）
 # loginAccount_phone = ""
@@ -213,7 +219,7 @@ consoledev_JSON = {
 # # 预发布环境已开户账号管理
 # # 手机号1用于变更（修改）密码   警告不要乱动
 # phone1 = "15989434843"  # login手机号
-# pwd1 = "zr123456"  # login密码
+# # pwd1 = "zr123456"  # login密码
 # clientId1 = "4082562186"
 # # passwords1 = "123456"  # 卓锐行情交易密码（已变）  密码已经放入json文件中 test_HSCustomerInfo_ChangeTradePwddata.json
 # zrNo1 = '82562186'  # 卓锐号
@@ -222,25 +228,25 @@ consoledev_JSON = {
 #
 # # 手机号2用于公用的登录认证
 # phone2 = "18379204795"  # login手机号
-# pwd2 = "zr123456"  # login密码
+# # pwd2 = "zr123456"  # login密码
 # clientId2 = "4091705632"
-# passwords2 = "123456"  # 卓锐行情交易密码
+# # passwords2 = "123456"  # 卓锐行情交易密码
 # zrNo2 = '91705632'  # 卓锐号
 # nickname2 = '卓锐测试二号'  # 卓锐用户昵称
 # userId2 = "2be061d66c8f4a699519140f58a98232"
 #
 # phone3 = "13714248993"  # login手机号
-# pwd3 = "zr123456"  # login密码
+# # pwd3 = "zr123456"  # login密码
 # clientId3 = "4098897306"
-# passwords3 = "123456"  # 卓锐行情交易密码
+# # passwords3 = "123456"  # 卓锐行情交易密码
 # zrNo3 = '98897306'  # 卓锐号
 # nickname3 = '卓锐测试三号'  # 卓锐用户昵称
 # userId3 = "ae7b4b5f2af74ec492eeb4ed9de2ea67"
 #
 # phone4 = "13570475245"  # login手机号
-# pwd4 = "zr123456"  # login密码
+# # pwd4 = "zr123456"  # login密码
 # clientId4 = "4022920974"
-# passwords4 = "123456"  # 卓锐行情交易密码
+# # passwords4 = "123456"  # 卓锐行情交易密码
 # zrNo4 = '22920974'  # 卓锐号
 # nickname4 = '卓锐测试四号'  # 卓锐用户昵称
 # userId4 = "51537871e9f74855b03a22896cd92da0"
@@ -249,3 +255,5 @@ consoledev_JSON = {
 # # 15989434843  zr123456  123456
 # # 13570475245  zr123456  123456
 # # 13713719888  zr123456  123456
+# # 15116262464  zr123456  123456
+# # 13794816115  zr123456  123456

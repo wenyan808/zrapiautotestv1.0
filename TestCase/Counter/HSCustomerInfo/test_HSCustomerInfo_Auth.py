@@ -10,6 +10,7 @@ from Common.getTestLoginToken import gettestLoginToken
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
+from Common.tools.get_gmssl import get_sm2
 from Common.tools.read_write_yaml import yamlconfig
 from TestAssertions.CounterJsonSchemadata.HSCustomerInfo.AuthSchema import authSchema
 
@@ -55,13 +56,13 @@ class TestHSCustomerInfoAuth():
         k = r_info.json()
         clientId = k.get("data").get("clientId")
         if yamlconfig("flag"):
-            password = "123456"
+            password = b"123456"
         else:
-            password = "111111"
+            password = b"111111"
 
         body = {
             "clientId": clientId,
-            "password": password
+            "password": get_sm2(password)
         }
 
         sign1 = {"sign": get_sign(body)}  # 把参数签名后通过sign1传出来

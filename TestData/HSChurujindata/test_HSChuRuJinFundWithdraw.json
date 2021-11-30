@@ -1,25 +1,32 @@
-[{
-  "withdrawType": 1,
-"occurBalance": 10000,
-  "moneyType": "HKD"
-},{
-  "withdrawType": 1,
-"occurBalance": 10000,
-  "moneyType": "USD"
-},{
-  "withdrawType": 1,
-"occurBalance": 10000,
-  "moneyType": "CNY"
-},{
-  "withdrawType": 2,
-"occurBalance": 10000,
-  "moneyType": "HKD"
-},{
-  "withdrawType": 2,
-"occurBalance": 10000,
-  "moneyType": "USD"
-},{
-  "withdrawType": 2,
-"occurBalance": 10000,
-  "moneyType": "CNY"
-}]
+[
+  {
+    "withdrawType": 1,
+    "occurBalance": 10000,
+    "moneyType": "HKD"
+  },
+  {
+    "withdrawType": 1,
+    "occurBalance": 10000,
+    "moneyType": "USD"
+  },
+  {
+    "withdrawType": 1,
+    "occurBalance": 10000,
+    "moneyType": "CNY"
+  },
+  {
+    "withdrawType": 2,
+    "occurBalance": 10000,
+    "moneyType": "HKD"
+  },
+  {
+    "withdrawType": 2,
+    "occurBalance": 10000,
+    "moneyType": "USD"
+  },
+  {
+    "withdrawType": 2,
+    "occurBalance": 10000,
+    "moneyType": "CNY"
+  }
+]
