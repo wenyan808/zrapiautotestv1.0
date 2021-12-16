@@ -1,23 +1,27 @@
 # test_HSChuRuJin_FundDeposit      存入资金    /as_trade/api/fund/v1/deposit
 import json
+import random
 
 import allure
 import pytest
 
+from Business.Urlpath.UrlPath_AccountCounter import UrlPath_fund_deposit, UrlPath_remit_bank_list
 from Business.global_ossurl import oss_appurl
 from Common.Accountcommon.accountAuth import AccountAuth
 from Common.HSchurujincommon.get_Fund_Account import get_fund_account
+from Common.HSchurujincommon.get_Fund_Withdraw import get_remit_bank_list
 from Common.OSS import oss_img
 from Common.getTestLoginToken import gettestLoginToken
 from Common.sign import get_sign
 
 from Common.requests_library import Requests
+from Common.tools.read_json import get_json
 
-from glo import JSON_dev
+from glo import JSON_dev, BASE_DIR
 
 
 # @pytest.mark.skip(reason="调试中 ")
-@allure.feature('柜台app_资金存取')
+@allure.feature('柜台app_存入资金')
 class TestHSChuRuJinFundDeposit():
     @classmethod
     def setup_class(cls) -> None:
@@ -27,36 +31,27 @@ class TestHSChuRuJinFundDeposit():
         Requests(self.session).close_session()
 
     # @pytest.mark.skip(reason="调试中 ")
-    def test_HSChuRuJinFundDeposit(self):
-        login_list =list(AccountAuth())
+    @pytest.mark.parametrize('info',
+                             get_json(BASE_DIR + r"/TestData/HSChurujindata/test_HSChuRuJinFundDeposit.json"))
+    def test_HSChuRuJinFundDeposit(self, info):
+        login_list = list(AccountAuth())
         http = login_list[-1]
         headers = login_list[1]
-        url = http + "/as_trade/api/remit_bank/v1/list"
-
-        paylo = {}
-
-        sign1 = {"sign": get_sign(paylo)}  # 把参数签名后通过sign1传出来
-        payload1 = {}
-        payload1.update(paylo)
-        payload1.update(sign1)
-
-        payload2 = json.dumps(dict(payload1))
-
-        r_info = Requests(self.session).post(
-            url=url, headers=headers, data=payload2, title="交易入金汇款银行查询"
-        )
-
-        k = r_info.json()
-        # print(k)
-        url1 = http + "/as_trade/api/fund/v1/deposit"
+        # url_remit_bank_list = http + UrlPath_remit_bank_list
+        url_fund_deposit = http + UrlPath_fund_deposit
         url2 = http + oss_appurl
-        transferType = "1"  # 转账方式 1-网银汇款 2-ATM转账 3-柜台汇款
-        occurBalance = 50000  # 存入资金
-        moneyType = "CNY"  # 币种类别:HKD,CNY,USD
+        """交易入金汇款银行查询"""
+        k = get_remit_bank_list(http, headers)
+
+        transferType = info.get("transferType")  # 转账方式 1-网银汇款 2-ATM转账 3-柜台汇款 4-支票 5-FPS转数快
+        occurBalance = random.randint(10000, 10000000)  # 存入资金 (随机取1000到1亿间的整数)
+        moneyType = info.get("moneyType")  # 币种类别:HKD,CNY,USD
+
         bankId = k.get("data")[0].get("id")  # 银行id
         # print(bankId)
-        if bankId == None:
-            bankId = "11113"
+        # 如果转账方式为FPS转数快时，bankId取返回数据data列表下标为1的id
+        if transferType == 5:
+            bankId = k.get("data")[1].get("id")
         userId = login_list[0].get("data").get("userId")
         img_name = "huikuanpingzheng.png"
         img_name2 = "huikuanpingzheng2.jpg"
@@ -92,7 +87,7 @@ class TestHSChuRuJinFundDeposit():
 
         payload3 = json.dumps(dict(payload1))
         r = Requests(self.session).post(
-            url=url1, headers=headers2, data=payload3, title="资金存取"
+            url=url_fund_deposit, headers=headers2, data=payload3, title="资金存取"
         )
 
         j = r.json()

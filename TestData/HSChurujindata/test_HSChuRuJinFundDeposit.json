@@ -1,0 +1,61 @@
+[
+  {
+    "moneyType": "HKD",
+    "transferType": "1"
+  },
+  {
+    "moneyType": "HKD",
+    "transferType": "2"
+  },
+  {
+    "moneyType": "HKD",
+    "transferType": "3"
+  },
+  {
+    "moneyType": "HKD",
+    "transferType": "4"
+  },
+  {
+    "moneyType": "HKD",
+    "transferType": "5"
+  },
+  {
+    "moneyType": "CNY",
+    "transferType": "1"
+  },
+  {
+    "moneyType": "CNY",
+    "transferType": "2"
+  },
+  {
+    "moneyType": "CNY",
+    "transferType": "3"
+  },
+  {
+    "moneyType": "CNY",
+    "transferType": "4"
+  },
+  {
+    "moneyType": "CNY",
+    "transferType": "5"
+  },{
+    "moneyType": "USD",
+    "transferType": "1"
+  },
+  {
+    "moneyType": "USD",
+    "transferType": "2"
+  },
+  {
+    "moneyType": "USD",
+    "transferType": "3"
+  },
+  {
+    "moneyType": "USD",
+    "transferType": "4"
+  },
+  {
+    "moneyType": "USD",
+    "transferType": "5"
+  }
+]

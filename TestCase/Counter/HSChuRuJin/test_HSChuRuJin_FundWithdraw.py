@@ -8,7 +8,7 @@ from Business.global_ossurl import oss_appurl
 from Common.Accountcommon.accountAuth import AccountAuth
 from Common.HSchurujincommon.add_save_bank import add_save_bank
 from Common.HSchurujincommon.get_Fund_Account import get_fund_account
-from Common.HSchurujincommon.get_Fund_Withdraw import get_fund_withdraw
+from Common.HSchurujincommon.get_Fund_Withdraw import get_fund_withdraw, get_remit_bank_list
 from Common.OSS import oss_img
 
 from Common.sign import get_sign
@@ -43,10 +43,10 @@ class TestHSChuRuJinFundWithdraw():
         withdrawType = info.get("withdrawType")  # 出金方式 1-普通出金 2-银证转账
         occurBalance = info.get("occurBalance")  # 提款金额
         moneyType = info.get("moneyType")  # 货币类型 HKD/USD/CNY
-        print(get_fund_withdraw(http, headers))
-        if len(get_fund_withdraw(http, headers).get("data")) != 0:
-            clientBankId = get_fund_withdraw(http, headers).get("data")[0].get("id")  # 用户绑定银行账户id
-            print(clientBankId)
+        # print(get_remit_bank_list(http, headers))
+        if len(get_remit_bank_list(http, headers).get("data")) != 0:
+            clientBankId = get_remit_bank_list(http, headers).get("data")[0].get("id")  # 银行id
+            # print(clientBankId)
         else:
             # 为空则新增银行卡
             img_name3 = "zhanghupingzheng.jpg"
@@ -86,13 +86,17 @@ class TestHSChuRuJinFundWithdraw():
 
         j = r.json()
 
-        print(f"\n请求地址：{url}"
-                f"\nbody参数：{payload2}"
-                f"\n请求头部参数：{headers}"
-                f"\n返回数据结果：{j}")
+        # print(f"\n请求地址：{url}"
+        #         f"\nbody参数：{payload2}"
+        #         f"\n请求头部参数：{headers}"
+        #         f"\n返回数据结果：{j}")
         assert r.status_code == 200
         try:
             assert j.get("msg") == 'ok'
             assert j.get("code") == "000000"
         except:
-            raise AssertionError(j)
+            raise AssertionError(
+                f"\n请求地址：{url}"
+                f"\nbody参数：{payload2}"
+                f"\n请求头部参数：{headers}"
+                f"\n返回数据结果：{j}")
