@@ -43,7 +43,7 @@ testendpassword = ""
 
 # 测试环境已开户账号管理
 # 登录密码管理
-user_password = passwords2 = passwords3 = passwords4 = passwords5 = b"123456"  # 卓锐行情交易密码
+user_password = passwords3 = passwords4 = passwords5 = b"123456"  # 卓锐行情交易密码
 pwd1 = pwd2 = pwd3 = pwd4 = pwd5 = "zr123456"  # login密码(统一密码)
 newPhoneArea = phoneArea = "86"  # 手机号地区
 countryCode = "86"  # 国家码 CH("86", "内地"),HK("852", "香港"),MACAO("853", "澳门"),TAIWAN("886", "台湾"),
@@ -62,7 +62,7 @@ userId1 = "f3d9c946caf842fdbddd1c748ce7163a"
 phone2 = "15816268899"  # login手机号
 # pwd2 = "zr123456"  # login密码
 clientId2 = "3090959308"
-# passwords2 = "123456"  # 卓锐行情交易密码
+passwords2 = b"369258"  # 卓锐行情交易密码
 zrNo2 = '90959308'  # 卓锐号
 nickname2 = '卓锐测试二号'  # 卓锐用户昵称
 userId2 = "e17f8fd374334995ac02df1ad6cc7872"
@@ -187,7 +187,7 @@ consoledev_JSON = {
 # HTTP = "https://ngpre.zr66.com"
 # http = "https://ngpre.zr66.com"
 # # 预发布环境地址管理：
-# console_HTTP = "https://h5pre.zr66.com/zhuorui_console_pre"
+# console_HTTP = "https://h5pre.zr66.com/apisC"
 # # 预发布环境登录交易密码管理：
 # login_password = pwd = pwd1 = pwd2 = pwd3 = pwd4 = "zr123456"
 # # 预发布环境行情交易密码管理：
